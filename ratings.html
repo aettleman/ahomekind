@@ -31,7 +31,9 @@
 
 <main class="wrap">
   <h1 style="text-align:left; font-size:22px; margin-top:30px;">home kind ratings</h1>
-  <p>Brands I've actually looked into, rated honestly, updated when things change.</p>
+  <p>Brands I've actually looked into, rated honestly, updated when things change.</p> <div style="margin: 24px 0;">
+  <input type="text" id="ratingSearch" placeholder="search a brand..." style="width:100%; padding:12px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:14px; color:#3d4a3a;">
+</div>
 
   <p class="section-label">beauty &amp; skincare</p>
 <div class="card">
@@ -148,7 +150,15 @@
   <p>PETA certified cruelty-free. Owned by Unilever, not a cruelty-free company. Mostly vegan, but not confirmed across every product.</p>
 </div>
 
-</main>
+<script>
+document.getElementById('ratingSearch').addEventListener('input', function(e){
+  var q = e.target.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(function(card){
+    var name = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = name.includes(q) ? '' : 'none';
+  });
+});
+</script> </main>
 <div class="newsletter">
   <p class="label3">stay in the loop</p>
   <p class="sub2">swaps and reviews, sent occasionally</p>
