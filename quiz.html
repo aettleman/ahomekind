@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Do We Start? — a home kind</title>
+<meta name="description" content="A 30-second quiz to find your best cruelty-free and vegan starting point.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.quiz-opt:hover, .quiz-opt:active { background:#6f8768 !important; border-color:#6f8768 !important; }
+.quiz-opt:hover div, .quiz-opt:active div { color:#ece5d5 !important; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+<circle cx="20" cy="20" r="19" stroke="#6f8768" stroke-width="1"/>
+<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" stroke="#6f8768" stroke-width="1.2" fill="none"/>
+<path d="M20 30 L20 12" stroke="#6f8768" stroke-width="1"/>
+</svg>
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="about.html">about</a>
+<a href="start-here.html">start here</a>
+<a href="journal/">journal</a>
+<a href="brand-check.html">brand check</a>
+<a href="shop.html">shop</a>
+<a href="quiz.html">quiz</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">where do we start?</h1>
+<p>Three questions, zero effort, and a decent chance you're already doing one of these without realising it.</p>
+
+<div id="quiz-app"></div>
+</main>
+<script>
+var questions = [
+{q: "what are we tackling first?", options: [
+{label: "beauty & skincare", icon: "\uD83D\uDC84", value: "beauty"},
+{label: "food & kitchen", icon: "\uD83E\uDD57", value: "food"},
+{label: "household & cleaning", icon: "\uD83E\uDDFD", value: "household"},
+{label: "genuinely no idea", icon: "\uD83E\uDD37", value: "unsure"}]},
+{q: "how dramatic are we feeling today?", options: [
+{label: "baby steps, please", icon: "\uD83D\uDC23", value: "small"},
+{label: "steady and sensible", icon: "\uD83C\uDF31", value: "medium"},
+{label: "burn it all down, start fresh", icon: "\uD83D\uDD25", value: "large"}]},
+{q: "the deciding factor?", options: [
+{label: "won't break the bank", icon: "\uD83D\uDCB7", value: "budget"},
+{label: "in shops I already go to", icon: "\uD83D\uDED2", value: "accessible"},
+{label: "the good stuff, no compromises", icon: "\u2728", value: "quality"}]}
+];
+var answers = {};
+var current = 0;
+var results = {
+beauty: {title: "beauty & skincare",
+text: "Good instinct. This is the easiest category by a mile, no one's hair actually needed a rabbit's sacrifice.",
+picks: [{name: "e.l.f. Cosmetics", note: "budget-friendly, fully vegan and cruelty-free"},
+{name: "Faith in Nature", note: "widely available in UK supermarkets"},
+{name: "B. by Superdrug", note: "100% vegan own-brand, easy to find"}]},
+food: {title: "food & kitchen",
+text: "The big one, and the most personal. This isn't a compromise diet, there's a genuine abundance once you look past the processed junk. Start with what you already cook often.",
+picks: [{name: "check the Start Here page", note: "food swaps depend on how you already eat, worth reading properly"}]},
+household: {title: "household & cleaning",
+text: "The most overlooked category, and weirdly the easiest one to fully sort out in a single supermarket trip.",
+picks: [{name: "Astonish", note: "UK-made, fully certified cruelty-free and vegan"},
+{name: "The Pink Stuff", note: "Leaping Bunny certified worldwide"},
+{name: "Method or Ecover", note: "cruelty-free themselves, check the parent company note on the brand check page"}]},
+unsure: {title: "beauty & skincare",
+text: "Fair enough, no idea is a valid answer. Start with beauty and skincare anyway, easiest win going.",
+picks: [{name: "e.l.f. Cosmetics", note: "budget-friendly, fully vegan and cruelty-free"},
+{name: "Faith in Nature", note: "widely available in UK supermarkets"}]}
+};
+function render() {
+var app = document.getElementById('quiz-app');
+if (current < questions.length) {
+var q = questions[current];
+var html = '<h3 style="text-align:center; margin-bottom:24px; font-size:18px;">' + q.q + '</h3>';
+html += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">';
+q.options.forEach(function(opt) {
+html += '<div class="quiz-opt" data-value="' + opt.value + '" style="cursor:pointer; background:#ece5d5; border:1.5px solid #cfc4a9; border-radius:12px; padding:24px 12px; text-align:center; transition:0.15s;">';
+html += '<div style="font-size:32px; margin-bottom:10px;">' + opt.icon + '</div>';
+html += '<div style="font-size:13px; color:#3d4a3a; letter-spacing:0.3px; line-height:1.4;">' + opt.label + '</div>';
+html += '</div>';
+});
+html += '</div>';
+app.innerHTML = html;
+document.querySelectorAll('.quiz-opt').forEach(function(btn) {
+btn.addEventListener('click', function() {
+answers[current] = this.getAttribute('data-value');
+current++;
+render();
+});
+});
+} else {
+var category = answers[0] === 'unsure' ? 'unsure' : answers[0];
+var result = results[category];
+var html = '<div class="card" style="border-color:#6f8768;">';
+html += '<p class="rating">&#127807; your starting point</p>';
+html += '<h3 style="font-size:18px;">' + result.title + '</h3>';
+html += '<p style="margin-bottom:16px;">' + result.text + '</p>';
+result.picks.forEach(function(p) {
+html += '<p style="margin-bottom:8px;"><strong style="color:#3d4a3a;">' + p.name + '</strong><br>' + p.note + '</p>';
+});
+html += '<div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">';
+html += '<a href="brand-check.html" class="btn">see the full brand check</a>';
+html += '<a href="start-here.html" class="btn">start here guide</a>';
+html += '</div></div>';
+html += '<p style="margin-top:20px;"><a href="quiz.html">start over &rarr;</a></p>';
+app.innerHTML = html;
+}
+}
+render();
+</script>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">swaps and reviews, sent occasionally</p>
+<span class="btn">join the list</span>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
+</body>
+</html>
