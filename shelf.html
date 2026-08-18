@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shelf Scan — a home kind</title>
+<meta name="description" content="Photograph a whole supermarket shelf and see which brands are worth picking up.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.drop { border:1.5px dashed #cfc4a9; border-radius:14px; padding:36px 20px; text-align:center; background:#ece5d5; margin-bottom:16px; }
+.big-btn { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+#preview { max-width:100%; border-radius:12px; margin-bottom:16px; display:none; }
+.bar { height:6px; background:#dcd3c0; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
+.bar span { display:block; height:100%; width:0%; background:#6f8768; transition:width 0.3s; }
+.hit { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
+.hit.good { background:#e6efe3; border:1px solid #6f8768; }
+.hit.warn { background:#f6ecd9; border:1px solid #d9b06e; }
+.hit.check { background:#ece5d5; border:1px solid #cfc4a9; }
+.hit h3 { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+<circle cx="20" cy="20" r="19" stroke="#6f8768" stroke-width="1"/>
+<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" stroke="#6f8768" stroke-width="1.2" fill="none"/>
+<path d="M20 30 L20 12" stroke="#6f8768" stroke-width="1"/>
+</svg>
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="about.html">about</a>
+<a href="start-here.html">start here</a>
+<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="what-testing-means.html">what testing means</a>
+<a href="money.html">who gets your money</a>
+<a href="impact.html">your impact</a>
+</span></span>
+<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-check.html">brand check</a>
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="quiz.html">take the quiz</a>
+</span></span>
+<a href="journal/">journal</a>
+<a href="shop.html">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">scan a whole shelf</h1>
+<p>Barcodes are one at a time. This reads the whole shelf at once. Take a photo down the aisle and it will tell you which brands in shot are worth picking up, before you have touched anything.</p>
+
+<div class="drop" id="drop">
+<img id="preview" alt="your shelf photo">
+<p style="margin-bottom:16px; font-size:14px;">take a photo of the shelf, or pick one from your camera roll</p>
+<label class="big-btn" for="file">choose a photo</label>
+<input type="file" id="file" accept="image/*" capture="environment" style="display:none;">
+</div>
+
+<button class="big-btn" id="go" style="display:none; width:100%;">read the shelf</button>
+
+<div class="bar" id="bar"><span id="barfill"></span></div>
+<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+<div id="results"></div>
+
+<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">This reads text off the packaging in your photo, so it works best on a straight-on, well-lit shot where the brand names are legible. Fancy fonts, glare and awkward angles will trip it up. It only finds brands already on my <a href="brand-check.html">brand check</a> list, so a blank result usually means I have not covered those brands yet rather than that they are bad. Nothing leaves your phone, the reading happens in your browser.</p>
+</main>
+<script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+var BRANDS = [
+{terms:["elf","e.l.f"], name:"e.l.f. Cosmetics", tier:"good", note:"Independently owned, PETA and Vegan Society certified."},
+{terms:["faith in nature","faith"], name:"Faith in Nature", tier:"good", note:"Leaping Bunny certified, budget-friendly."},
+{terms:["byoma"], name:"BYOMA", tier:"good", note:"Leaping Bunny certified."},
+{terms:["barry m","barrym"], name:"Barry M", tier:"good", note:"100% vegan since 2020, no testing parent company."},
+{terms:["astonish"], name:"Astonish", tier:"good", note:"Cruelty Free International approved, Vegan Society certified."},
+{terms:["pink stuff"], name:"The Pink Stuff", tier:"good", note:"Leaping Bunny certified worldwide."},
+{terms:["superdrug"], name:"Superdrug own brand", tier:"check", note:"Leaping Bunny approved. Vegan status varies by product."},
+{terms:["aldi"], name:"Aldi", tier:"check", note:"Leaping Bunny certified own-brand ranges."},
+{terms:["lidl","formil"], name:"Lidl", tier:"check", note:"Leaping Bunny certified since 2022."},
+{terms:["co-op","coop"], name:"Co-op", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{terms:["sainsbury"], name:"Sainsbury's", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{terms:["morrisons"], name:"Morrisons", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{terms:["waitrose"], name:"Waitrose", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{terms:["rimmel"], name:"Rimmel", tier:"warn", note:"Leaping Bunny certified itself, but owned by Coty. Only Kind and Free is fully vegan."},
+{terms:["garnier"], name:"Garnier", tier:"warn", note:"Leaping Bunny certified. Owned by L'Oreal. Some haircare contains honey."},
+{terms:["no7","no.7"], name:"No7", tier:"warn", note:"Cruelty-free, owned by Walgreens Boots Alliance. Not fully vegan."},
+{terms:["simple"], name:"Simple", tier:"warn", note:"PETA certified cruelty-free. Owned by Unilever."},
+{terms:["method"], name:"Method", tier:"warn", note:"Leaping Bunny certified and vegan, but owned by SC Johnson."},
+{terms:["ecover"], name:"Ecover", tier:"warn", note:"Cruelty-free and vegan. Also owned by SC Johnson."}
+];
+
+function el(id){ return document.getElementById(id); }
+function setStatus(t){ el('status').textContent = t; }
+
+var imgData = null;
+
+el('file').addEventListener('change', function(e){
+var f = e.target.files[0];
+if(!f) return;
+var reader = new FileReader();
+reader.onload = function(ev){
+imgData = ev.target.result;
+var p = el('preview');
+p.src = imgData;
+p.style.display = 'block';
+el('go').style.display = 'block';
+setStatus('');
+el('results').innerHTML = '';
+};
+reader.readAsDataURL(f);
+});
+el('go').addEventListener('click', function(){
+if(!imgData) return;
+if(typeof Tesseract === 'undefined'){
+setStatus('The text reader did not load. Try refreshing, or use the barcode scanner instead.');
+return;
+}
+el('go').style.display = 'none';
+el('bar').style.display = 'block';
+setStatus('Reading the shelf...');
+
+Tesseract.recognize(imgData, 'eng', {
+logger: function(m){
+if(m.status === 'recognizing text'){
+el('barfill').style.width = Math.round(m.progress * 100) + '%';
+}
+}
+}).then(function(res){
+el('bar').style.display = 'none';
+el('go').style.display = 'block';
+el('go').textContent = 'read it again';
+var text = (res.data.text || '').toLowerCase().replace(/[^a-z0-9\.\- ]/g, ' ');
+var found = [];
+BRANDS.forEach(function(b){
+for(var i=0;i<b.terms.length;i++){
+if(text.indexOf(b.terms[i]) !== -1){ found.push(b); return; }
+}
+});
+render(found, res.data.text || '');
+}).catch(function(){
+el('bar').style.display = 'none';
+el('go').style.display = 'block';
+setStatus('Could not read that image. A closer, straighter photo usually helps.');
+});
+});
+
+function render(found, raw){
+var out = '';
+if(found.length){
+setStatus('Found ' + found.length + (found.length === 1 ? ' brand' : ' brands') + ' I know.');
+var order = {good:0, check:1, warn:2};
+found.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
+found.forEach(function(b){
+var head = b.tier === 'good' ? '&#127807; worth picking up' : (b.tier === 'warn' ? '&#9888;&#65039; worth a disclaimer' : '&#128048; cruelty-free, check the product');
+out += '<div class="hit ' + b.tier + '">';
+out += '<p style="font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;">' + head + '</p>';
+out += '<h3>' + b.name + '</h3>';
+out += '<p style="margin-bottom:0; font-size:14px;">' + b.note + '</p>';
+out += '</div>';
+});
+} else {
+setStatus('');
+out += '<div class="hit check"><h3>nothing I recognise in that shot</h3>';
+out += '<p style="margin-bottom:8px; font-size:14px;">Either the brands on that shelf are not on my list yet, or the photo was too blurry or angled to read. Worth trying a straighter, closer shot.</p>';
+out += '<p style="margin-bottom:0; font-size:14px;">You can also <a href="scan.html">scan a single barcode</a> instead, which is far more reliable.</p></div>';
+}
+if(raw.trim().length > 3){
+out += '<details style="margin-top:8px;"><summary style="cursor:pointer; font-size:13px; color:#8a8672; padding:10px 0;">what it actually read</summary>';
+out += '<p style="font-size:12.5px; color:#8a8672; white-space:pre-wrap; line-height:1.7;">' + raw.replace(/</g,'&lt;').substring(0,900) + '</p></details>';
+}
+el('results').innerHTML = out;
+}
+</script>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">swaps and reviews, sent occasionally</p>
+<span class="btn">join the list</span>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
+</body>
+</html>
