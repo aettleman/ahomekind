@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Difference Does It Actually Make? — a home kind</title>
+<meta name="description" content="An honest calculator for the impact of eating fewer animal products, using conservative UK figures.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.slider-row { margin-bottom:26px; }
+.slider-row label { display:block; font-size:13px; color:#5c5c4f; margin-bottom:10px; letter-spacing:0.3px; }
+input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
+.slider-val { font-family:'Cormorant Garamond',serif; font-size:26px; color:#3d4a3a; }
+.results { background:#3d4a3a; border-radius:12px; padding:28px 24px; margin:26px 0; text-align:center; }
+.big-num { font-family:'Cormorant Garamond',serif; font-size:46px; color:#e6d4a8; line-height:1.1; }
+.big-lbl { color:#c9d1c3; font-size:13px; letter-spacing:1px; margin-bottom:22px; }
+.sub-num { font-family:'Cormorant Garamond',serif; font-size:26px; color:#f4efe2; }
+.sub-lbl { color:#a9c2ab; font-size:12px; letter-spacing:0.5px; margin-bottom:16px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+<circle cx="20" cy="20" r="19" stroke="#6f8768" stroke-width="1"/>
+<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" stroke="#6f8768" stroke-width="1.2" fill="none"/>
+<path d="M20 30 L20 12" stroke="#6f8768" stroke-width="1"/>
+</svg>
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="about.html">about</a>
+<a href="what-testing-means.html">why it matters</a>
+<a href="start-here.html">start here</a>
+<a href="journal/">journal</a>
+<a href="brand-check.html">brand check</a>
+<a href="scan.html">scan</a>
+<a href="impact.html">impact</a>
+<a href="shop.html">shop</a>
+<a href="quiz.html">quiz</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">what difference does it actually make?</h1>
+<p>One person changing what they buy can feel like shouting into a hurricane. Here is the arithmetic, using the most conservative figures I could find rather than the most dramatic ones.</p>
+
+<div class="slider-row" style="margin-top:30px;">
+<label>days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
+<input type="range" id="days" min="0" max="7" step="1" value="3">
+</div>
+
+<div class="slider-row">
+<label>for how many years: <span class="slider-val" id="yearsVal">1</span></label>
+<input type="range" id="years" min="1" max="60" step="1" value="1">
+</div>
+
+<div class="results">
+<div class="big-num" id="animals">7</div>
+<div class="big-lbl">land animals not farmed for you</div>
+<div class="sub-num" id="footprint">31%</div>
+<div class="sub-lbl">smaller food carbon footprint</div>
+<div class="sub-num" id="land">33%</div>
+<div class="sub-lbl">less farmland needed to feed you</div>
+</div>
+
+<p id="framing" style="font-size:15px; line-height:1.9;"></p>
+</main>
+<div class="wrap">
+<p class="section-label">where these numbers come from</p>
+
+<p>You will see "going vegan saves 365 animals a year" all over the internet. I have not used it. It leans on generous assumptions about fish and small sea creatures, and I would rather give you a number that holds up when someone challenges it.</p>
+
+<p><strong>Land animals.</strong> 1.20 billion animals were slaughtered in the UK in 2023, which works out at roughly 17.4 per person per year. That is the figure I have scaled here. It is almost entirely chickens, because chickens are small and people eat a lot of them.</p>
+
+<p><strong>Carbon and land.</strong> From Poore and Nemecek's 2018 study in <em>Science</em>, still the largest analysis of its kind: a fully plant-based diet cuts food-related emissions by around 73% and the farmland needed to feed you by around 76%. I have scaled those proportionally to the days you picked.</p>
+
+<p><strong>Fish are not counted.</strong> Not because they do not matter, but because nobody can honestly tell you how many individual fish are behind a portion. Estimates range from dozens to hundreds. Adding a made-up number would make everything else here less trustworthy. The real figure is higher than what you see above.</p>
+
+<p><strong>This is an average, not a receipt.</strong> It assumes your plant-based days replace a typical UK diet. Yours might be heavier or lighter on meat, so treat it as a rough shape rather than a precise count.</p>
+
+<p class="section-label">the honest bit about supply and demand</p>
+
+<p>Strictly, one person not buying a chicken does not mean one fewer chicken is farmed. Supermarkets order on forecasts, and there is slack in the system. Economists who have looked at this reckon the effect is real but less than one-to-one, somewhere in the region of 0.3 to 0.7 of an animal per animal not bought.</p>
+
+<p>I have not applied that discount above, because the honest answer is that nobody knows the exact multiplier and the range is wide. But you should know it exists. Your effect is real. It is also indirect, and slower than you would like.</p>
+
+<p>What is direct is this: you stop paying for it. Whatever the supply chain does next, your money is no longer in it.</p>
+
+<p style="margin-top:30px;"><a href="brand-check.html" class="btn">check a brand</a></p>
+</div>
+
+<script>
+var ANIMALS_PER_YEAR = 17.4;
+var MAX_CARBON_CUT = 73;
+var MAX_LAND_CUT = 76;
+
+function el(id){ return document.getElementById(id); }
+
+function update(){
+var days = parseInt(el('days').value, 10);
+var years = parseInt(el('years').value, 10);
+var frac = days / 7;
+
+el('daysVal').textContent = days;
+el('yearsVal').textContent = years;
+
+var animals = ANIMALS_PER_YEAR * frac * years;
+var shown = animals < 10 ? (Math.round(animals * 10) / 10) : Math.round(animals);
+el('animals').textContent = shown.toLocaleString();
+
+el('footprint').textContent = Math.round(MAX_CARBON_CUT * frac) + '%';
+el('land').textContent = Math.round(MAX_LAND_CUT * frac) + '%';
+
+var f = '';
+if(days === 0){
+f = 'Nothing changes at zero. Which is fine, nobody is standing over you. Move the slider and see what one day a week does.';
+} else if(days === 7){
+f = 'Fully plant-based. Over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + Math.round(animals) + ' animals that were never farmed for you, and roughly three quarters off the carbon and land your food demands.';
+} else if(days <= 2){
+f = 'Even at ' + days + (days === 1 ? ' day' : ' days') + ' a week, that is ' + shown + ' animals over ' + years + (years === 1 ? ' year' : ' years') + '. Not nothing. Not a hurricane either. Just a real number that was not there before.';
+} else {
+f = days + ' days a week comes to roughly ' + shown + ' animals over ' + years + (years === 1 ? ' year' : ' years') + ', and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint. No overhaul required, no label needed.';
+}
+el('framing').textContent = f;
+}
+
+el('days').addEventListener('input', update);
+el('years').addEventListener('input', update);
+update();
+</script>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">swaps and reviews, sent occasionally</p>
+<span class="btn">join the list</span>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
+</body>
+</html>
