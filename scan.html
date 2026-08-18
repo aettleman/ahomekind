@@ -206,5 +206,40 @@ el('stopBtn').addEventListener('click', stopCamera);
 <span class="btn">join the list</span>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
+<script>
+(function(){
+var originalRender = render;
+function esc(s){ return encodeURIComponent(s); }
+function sourceBlock(brandName){
+var b = (brandName || '').split(',')[0].trim();
+var q = esc(b);
+var h = '<div class="card" style="border-color:#8ba284;">';
+if(b){
+h += '<h3>check ' + b + ' elsewhere</h3>';
+h += '<p style="margin-bottom:14px;">These are the people who do this properly. One tap each, already searching for this brand.</p>';
+h += '<p style="margin-bottom:8px;"><a href="https://crueltyfree.peta.org/?s=' + q + '" target="_blank" rel="noopener">PETA Beauty Without Bunnies &rarr;</a></p>';
+h += '<p style="margin-bottom:8px;"><a href="https://www.leapingbunny.org/?s=' + q + '" target="_blank" rel="noopener">Leaping Bunny &rarr;</a></p>';
+h += '<p style="margin-bottom:8px;"><a href="https://crueltyfreeinternational.org/?s=' + q + '" target="_blank" rel="noopener">Cruelty Free International &rarr;</a></p>';
+h += '<p style="margin-bottom:8px;"><a href="https://www.duckduckgo.com/?q=site%3Acrueltyfreekitty.com+' + q + '" target="_blank" rel="noopener">Cruelty Free Kitty &rarr;</a></p>';
+h += '<p style="margin-bottom:14px;"><a href="https://www.duckduckgo.com/?q=site%3Aethicalelephant.com+' + q + '" target="_blank" rel="noopener">Ethical Elephant &rarr;</a></p>';
+h += '<p style="margin-bottom:0; font-size:13px;"><a href="mailto:hello@ahomekind.com?subject=' + esc('Please check: ' + b) + '&body=' + esc('Found this while scanning. Worth adding to the brand check?') + '">Tell me to research this one &rarr;</a></p>';
+} else {
+h += '<h3>nothing found for that barcode</h3>';
+h += '<p style="margin-bottom:8px;">Nobody has added this product to the open database yet, so I do not even know the brand. Type the brand name into one of these instead:</p>';
+h += '<p style="margin-bottom:8px;"><a href="https://crueltyfree.peta.org/" target="_blank" rel="noopener">PETA Beauty Without Bunnies &rarr;</a></p>';
+h += '<p style="margin-bottom:8px;"><a href="https://www.leapingbunny.org/" target="_blank" rel="noopener">Leaping Bunny &rarr;</a></p>';
+h += '<p style="margin-bottom:0;"><a href="https://crueltyfreeinternational.org/" target="_blank" rel="noopener">Cruelty Free International &rarr;</a></p>';
+}
+h += '</div>';
+return h;
+}
+render = function(product, code){
+originalRender(product, code);
+var brandText = (product && product.brands) || '';
+var el = document.getElementById('result');
+el.innerHTML = el.innerHTML + sourceBlock(brandText);
+};
+})();
+</script>
 </body>
 </html>
