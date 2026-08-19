@@ -93,6 +93,16 @@
 <p>Leaping Bunny approved across the board. Not every own-brand product is vegan, so check the label or look for the vegan logo. B. above is the fully vegan line specifically.</p>
 </div>
 
+<div class="card">
+<p class="rating">&#127807; fully cruelty-free &amp; vegan</p>
+<h3>Baylis &amp; Harding</h3>
+<p>PETA certified cruelty-free. Not Leaping Bunny certified. Only some products are vegan, not the full range.</p>
+</div>
+<div class="card">
+<p class="rating">&#127807; fully cruelty-free &amp; vegan</p>
+<h3>Smol</h3>
+<p>Brand confirms no animal testing and no animal ingredients, listed on PETA's cruelty-free database.</p>
+</div>
 <p class="section-label warn">worth a disclaimer &mdash; beauty &amp; haircare</p>
 <div class="card warn">
 <p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p>
@@ -113,6 +123,16 @@
 <p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p>
 <h3>Simple</h3>
 <p>PETA certified cruelty-free. Owned by Unilever, not a cruelty-free company. Mostly vegan, but not confirmed across every product.</p>
+</div>
+<div class="card warn">
+<p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p>
+<h3>The Ordinary</h3>
+<p>DECIEM, the brand that owns The Ordinary, is cruelty-free and vegan. Owned by Est&eacute;e Lauder, which is not a cruelty-free company.</p>
+</div>
+<div class="card warn">
+<p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p>
+<h3>Drunk Elephant</h3>
+<p>Owned by Shiseido, which is not a cruelty-free company.</p>
 </div>
 <p class="section-label">household &amp; cleaning</p>
 <div class="card">
@@ -138,6 +158,21 @@
 <p>Cruelty-free, vegan. Also owned by SC Johnson, same disclaimer as Method.</p>
 </div>
 
+<div class="card">
+<p class="rating">&#127807; fully cruelty-free &amp; vegan</p>
+<h3>Bio-D</h3>
+<p>Vegan Society and Cruelty Free International certified.</p>
+</div>
+<div class="card">
+<p class="rating">&#127807; fully cruelty-free &amp; vegan</p>
+<h3>Zoflora</h3>
+<p>UK, brand confirms no animal testing and no animal-derived ingredients.</p>
+</div>
+<div class="card">
+<p class="rating">&#127807; fully cruelty-free &amp; vegan</p>
+<h3>Miniml</h3>
+<p>Cruelty Free International and Vegan Society certified, Ethical Consumer Best Buy.</p>
+</div>
 <p class="section-label">supermarket own brand</p>
 <div class="card">
 <p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p>
@@ -185,6 +220,7 @@
 <div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>Coty</h3><div class="chipwrap"><span class="chip2">Max Factor</span><span class="chip2">Clairol</span></div><p style="margin-bottom:0;">Coty confirms animal testing for regulatory compliance in certain markets. Rimmel (rated separately above) shares this same parent.</p></div>
 <div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>Colgate-Palmolive</h3><div class="chipwrap"><span class="chip2">Colgate</span><span class="chip2">Palmolive</span><span class="chip2">Sanex</span></div><p style="margin-bottom:0;">PETA lists Colgate-Palmolive as &quot;working toward regulatory change&quot; &mdash; which means testing is still happening now, not that it's stopped.</p></div>
 <div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>Johnson &amp; Johnson</h3><div class="chipwrap"><span class="chip2">Johnson&#39;s</span><span class="chip2">Aveeno</span><span class="chip2">Neutrogena</span><span class="chip2">Listerine</span><span class="chip2">Clean &amp; Clear</span><span class="chip2">T/Gel</span></div><p style="margin-bottom:0;">J&amp;J confirms animal testing occurs where required by law in certain markets. All of the above are J&amp;J brands.</p></div>
+<div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>L&#39;Occitane Group</h3><div class="chipwrap"><span class="chip2">Elemis</span></div><p style="margin-bottom:0;">Elemis tests on animals directly to sell in markets like mainland China, and is not certified by Leaping Bunny or PETA. Its parent company, L'Occitane, is also not cruelty-free.</p></div>
 <p id="noResults" style="display:none; text-align:center; color:#7a7561; font-size:14px; padding:24px 0;">Nothing here yet for that one. Doesn't mean it's bad, just means I haven't checked it.</p>
 
 <p style="margin-top:36px; font-size:13px; color:#7a7561; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>. Certification lapses without much announcement, so if something looks out of date, it might be. Tell me and I'll recheck it.</p>
@@ -194,7 +230,7 @@ document.getElementById('ratingSearch').addEventListener('input', function(e){
 var q = e.target.value.toLowerCase();
 var anyVisible = false;
 document.querySelectorAll('.card').forEach(function(card){
-var name = card.textContent.toLowerCase();
+var name = card.querySelector('h3').textContent.toLowerCase();
 var match = name.indexOf(q) !== -1;
 card.style.display = match ? '' : 'none';
 if (match) { anyVisible = true; }
