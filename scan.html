@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scan a Barcode — a home kind</title>
+<meta name="description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+#reader { width:100%; max-width:420px; margin:0 auto 18px; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+#reader video { width:100% !important; height:auto !important; display:block; }
+.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
+.manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.verdict { border-radius:12px; padding:22px; margin-bottom:16px; }
+.v-good { background:#e6efe3; border:1px solid #6f8768; }
+.v-warn { background:#f6ecd9; border:1px solid #d9b06e; }
+.v-bad { background:#f3e2df; border:1px solid #a5453d; }
+.v-unknown { background:#ece5d5; border:1px solid #cfc4a9; }
+.v-title { font-family:'Cormorant Garamond',serif; font-size:19px; letter-spacing:1.5px; text-transform:uppercase; color:#3d4a3a; margin-bottom:6px; }
+.chip { display:inline-block; font-size:11px; letter-spacing:0.5px; padding:6px 12px; border-radius:20px; margin:0 6px 6px 0; background:#ece5d5; border:0.5px solid #cfc4a9; color:#5c5c4f; }
+.chip.yes { background:#dbe8d7; border-color:#6f8768; color:#33502f; }
+.chip.no { background:#f3ded9; border-color:#c98a3a; color:#8a4a2a; }
+.srclink { display:block; padding:12px 0; border-bottom:0.5px solid #e0d8c4; font-size:14px; }
+.srclink:last-of-type { border-bottom:none; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+<circle cx="20" cy="20" r="19" stroke="#6f8768" stroke-width="1"/>
+<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" stroke="#6f8768" stroke-width="1.2" fill="none"/>
+<path d="M20 30 L20 12" stroke="#6f8768" stroke-width="1"/>
+</svg>
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="about.html">about</a>
+<a href="start-here.html">start here</a>
+<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="what-testing-means.html">what testing means</a>
+<a href="money.html">who gets your money</a>
+<a href="impact.html">your impact</a>
+</span></span>
+<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-check.html">brand check</a>
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="quiz.html">take the quiz</a>
+</span></span>
+<a href="journal/">journal</a>
+<a href="shop.html">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">scan a barcode</h1>
+<p>Standing in the aisle with something in your hand? Point your camera at the barcode and I'll tell you what I know, then point you at the people who know the rest.</p>
+
+<div id="reader"></div>
+<button class="big-btn" id="startBtn">start camera</button>
+<button class="big-btn alt" id="stopBtn" style="display:none;">stop camera</button>
+
+<p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
+<div class="manual">
+<input type="text" id="manualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
+<button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="lookupBtn">check</button>
+</div>
+
+<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
+<div id="results"></div>
+
+<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">Product data comes from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>. The cruelty-free verdict comes from my own <a href="brand-check.html">brand check</a> list.</p>
+</main>
+<script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+<script>
+var BRANDS = [
+{match:["e.l.f","elf cosmetics"], name:"e.l.f. Cosmetics", tier:"good", note:"Independently owned, PETA and Vegan Society certified."},
+{match:["faith in nature"], name:"Faith in Nature", tier:"good", note:"Leaping Bunny certified, budget-friendly."},
+{match:["byoma"], name:"BYOMA", tier:"good", note:"Leaping Bunny certified."},
+{match:["barry m"], name:"Barry M", tier:"good", note:"100% vegan since 2020, no testing parent company."},
+{match:["astonish"], name:"Astonish", tier:"good", note:"Cruelty Free International approved, Vegan Society certified."},
+{match:["pink stuff"], name:"The Pink Stuff", tier:"good", note:"Leaping Bunny certified worldwide."},
+{match:["b. by superdrug"], name:"B. by Superdrug", tier:"good", note:"100% vegan, cruelty-free own-brand line."},
+{match:["bio-d","biod"], name:"Bio-D", tier:"good", note:"Vegan Society and Cruelty Free International certified."},
+{match:["zoflora"], name:"Zoflora", tier:"good", note:"Brand confirms no animal testing and no animal-derived ingredients."},
+{match:["miniml"], name:"Miniml", tier:"good", note:"Cruelty Free International and Vegan Society certified."},
+{match:["smol"], name:"Smol", tier:"good", note:"Confirms no animal testing, listed on PETA cruelty-free database."},
+{match:["baylis"], name:"Baylis & Harding", tier:"good", note:"PETA certified cruelty-free."},
+{match:["superdrug"], name:"Superdrug own brand", tier:"check", note:"Leaping Bunny approved. Vegan status varies by product."},
+{match:["aldi"], name:"Aldi", tier:"check", note:"Leaping Bunny certified own-brand ranges."},
+{match:["lidl","formil"], name:"Lidl", tier:"check", note:"Leaping Bunny certified since 2022."},
+{match:["co-op","coop"], name:"Co-op", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{match:["sainsbury"], name:"Sainsburys", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{match:["morrisons"], name:"Morrisons", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{match:["waitrose"], name:"Waitrose", tier:"check", note:"Leaping Bunny certified own-brand range."},
+{match:["rimmel"], name:"Rimmel", tier:"warn", note:"Leaping Bunny certified itself, owned by Coty."},
+{match:["garnier"], name:"Garnier", tier:"warn", note:"Leaping Bunny certified, owned by LOreal."},
+{match:["no7","no.7"], name:"No7", tier:"warn", note:"Cruelty-free, owned by Walgreens Boots Alliance."},
+{match:["simple"], name:"Simple", tier:"warn", note:"PETA certified, owned by Unilever."},
+{match:["the ordinary"], name:"The Ordinary", tier:"warn", note:"Cruelty-free itself, owned by Estee Lauder."},
+{match:["drunk elephant"], name:"Drunk Elephant", tier:"warn", note:"Owned by Shiseido, not cruelty-free."},
+{match:["method"], name:"Method", tier:"warn", note:"Leaping Bunny certified, owned by SC Johnson."},
+{match:["ecover"], name:"Ecover", tier:"warn", note:"Cruelty-free, owned by SC Johnson."},
+{match:["elemis"], name:"Elemis", tier:"bad", note:"Tests on animals directly, owned by LOccitane, also not cruelty-free."},
+{match:["ariel"], name:"Ariel (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["daz"], name:"Daz (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["fairy"], name:"Fairy (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["flash"], name:"Flash (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["lenor"], name:"Lenor (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["aussie"], name:"Aussie (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["gillette"], name:"Gillette (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["venus"], name:"Venus (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["head & shoulders","head and shoulders"], name:"Head & Shoulders (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["herbal essences"], name:"Herbal Essences (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["oral-b","oral b"], name:"Oral-B (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["pantene"], name:"Pantene (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["always"], name:"Always (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["tampax"], name:"Tampax (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["febreze"], name:"Febreze (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["viakal"], name:"Viakal (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
+{match:["dove"], name:"Dove (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["vaseline"], name:"Vaseline (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["persil"], name:"Persil (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["comfort"], name:"Comfort (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["surf"], name:"Surf (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["cif"], name:"Cif (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["domestos"], name:"Domestos (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["lynx"], name:"Lynx (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["tresemme"], name:"TRESemme (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["radox"], name:"Radox (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["axe"], name:"Axe (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["sure"], name:"Sure (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring animal testing."},
+{match:["nivea"], name:"Nivea (Beiersdorf)", tier:"bad", note:"Tests where required by law. Vegan labelling only means no animal ingredients."},
+{match:["dettol"], name:"Dettol (Reckitt)", tier:"bad", note:"Reckitt confirms testing for regulatory compliance."},
+{match:["vanish"], name:"Vanish (Reckitt)", tier:"bad", note:"Reckitt confirms testing for regulatory compliance."},
+{match:["cillit bang"], name:"Cillit Bang (Reckitt)", tier:"bad", note:"Reckitt confirms testing for regulatory compliance."},
+{match:["finish"], name:"Finish (Reckitt)", tier:"bad", note:"Reckitt confirms testing for regulatory compliance."},
+{match:["mr muscle"], name:"Mr Muscle (SC Johnson)", tier:"bad", note:"SC Johnson tests where legally required."},
+{match:["glade"], name:"Glade (SC Johnson)", tier:"bad", note:"SC Johnson tests where legally required."},
+{match:["pledge"], name:"Pledge (SC Johnson)", tier:"bad", note:"SC Johnson tests where legally required."},
+{match:["maybelline"], name:"Maybelline (LOreal)", tier:"bad", note:"LOreal sells into markets requiring animal testing."},
+{match:["nyx"], name:"NYX (LOreal)", tier:"bad", note:"LOreal sells into markets requiring animal testing."},
+{match:["redken"], name:"Redken (LOreal)", tier:"bad", note:"LOreal sells into markets requiring animal testing."},
+{match:["max factor"], name:"Max Factor (Coty)", tier:"bad", note:"Coty confirms testing for regulatory compliance."},
+{match:["clairol"], name:"Clairol (Coty)", tier:"bad", note:"Coty confirms testing for regulatory compliance."},
+{match:["colgate"], name:"Colgate", tier:"bad", note:"Colgate-Palmolive still testing, PETA says only working toward change."},
+{match:["palmolive"], name:"Palmolive", tier:"bad", note:"Colgate-Palmolive still testing, PETA says only working toward change."},
+{match:["sanex"], name:"Sanex (Colgate-Palmolive)", tier:"bad", note:"Still testing, PETA says only working toward change."},
+{match:["johnsons baby","johnson s"], name:"Johnsons (J&J)", tier:"bad", note:"J&J confirms testing where required by law."},
+{match:["aveeno"], name:"Aveeno (J&J)", tier:"bad", note:"J&J confirms testing where required by law."},
+{match:["neutrogena"], name:"Neutrogena (J&J)", tier:"bad", note:"J&J confirms testing where required by law."},
+{match:["listerine"], name:"Listerine (J&J)", tier:"bad", note:"J&J confirms testing where required by law."}
+];
+
+var LABEL_MAP = [
+{keys:["cruelty-free","leaping-bunny"], label:"certified cruelty-free"},
+{keys:["vegan"], label:"certified vegan"},
+{keys:["fairtrade","fair-trade"], label:"Fairtrade"},
+{keys:["organic"], label:"organic"},
+{keys:["palm-oil-free"], label:"palm oil free"},
+{keys:["recyclable","recycled"], label:"recyclable packaging"}
+];
+function el(id){ return document.getElementById(id); }
+function setStatus(t){ el("status").textContent = t; }
+function findBrand(text){
+if(!text) return null;
+var t = text.toLowerCase();
+for(var i=0;i<BRANDS.length;i++){
+for(var j=0;j<BRANDS[i].match.length;j++){
+if(t.indexOf(BRANDS[i].match[j]) !== -1) return BRANDS[i];
+}
+}
+return null;
+}
+function sourceBlock(brandText){
+var b = (brandText || "").split(",")[0].trim();
+var q = encodeURIComponent(b);
+var h = "<div class=\"card\" style=\"border-color:#8ba284;\">";
+if(b){
+h += "<h3>check " + b + " elsewhere</h3>";
+h += "<p style=\"margin-bottom:8px;\">Sources that cover far more brands than I do:</p>";
+h += "<a class=\"srclink\" href=\"https://crueltyfree.peta.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">PETA Beauty Without Bunnies &rarr;</a>";
+h += "<a class=\"srclink\" href=\"https://www.leapingbunny.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny &rarr;</a>";
+h += "<a class=\"srclink\" href=\"https://crueltyfreeinternational.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">Cruelty Free International &rarr;</a>";
+h += "<p style=\"margin:14px 0 0; font-size:13px;\"><a href=\"mailto:hello@ahomekind.com?subject=" + encodeURIComponent("Please check: " + b) + "\">Tell me to research this one &rarr;</a></p>";
+} else {
+h += "<h3>check it elsewhere</h3>";
+h += "<p style=\"margin-bottom:0;\">Not in the open database yet. Try <a href=\"https://crueltyfree.peta.org/\" target=\"_blank\" rel=\"noopener\">PETA</a> or <a href=\"https://www.leapingbunny.org/\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a> directly.</p>";
+}
+h += "</div>";
+return h;
+}
+function render(product, code){
+var out = "";
+var name = (product && (product.product_name || product.generic_name)) || "";
+var brandText = (product && product.brands) || "";
+var brand = findBrand(brandText) || findBrand(name);
+if(brand){
+var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
+var head = brand.tier === "good" ? "&#127807; on the good list" : (brand.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (brand.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
+out += "<div class=\"verdict " + cls + "\"><div class=\"v-title\">" + head + "</div>";
+out += "<p style=\"margin-bottom:6px;\"><strong>" + brand.name + "</strong></p>";
+out += "<p style=\"margin-bottom:0; font-size:14px;\">" + brand.note + "</p></div>";
+} else {
+out += "<div class=\"verdict v-unknown\"><div class=\"v-title\">not on my list yet</div>";
+out += "<p style=\"margin-bottom:0; font-size:14px;\">I have not checked this one myself.</p></div>";
+}
+if(product){
+out += "<div class=\"card\">";
+if(name) out += "<h3>" + name + "</h3>";
+if(brandText) out += "<p style=\"margin-bottom:12px;\">" + brandText + "</p>";
+var chips = "";
+var an = (product.ingredients_analysis_tags || []).join(" ");
+if(an.indexOf("en:vegan") !== -1 && an.indexOf("non-vegan") === -1) chips += "<span class=\"chip yes\">vegan ingredients</span>";
+else if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">contains animal ingredients</span>";
+var labels = (product.labels_tags || []).join(" ");
+LABEL_MAP.forEach(function(L){
+for(var k=0;k<L.keys.length;k++){
+if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.label + "</span>"; return; }
+}
+});
+out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
+out += "</div>";
+}
+out += sourceBlock(brandText);
+el("results").innerHTML = out;
+}
+function lookup(code){
+code = (code || "").replace(/[^0-9]/g,"");
+if(code.length < 6){ setStatus("That does not look like a barcode."); return; }
+setStatus("Looking up " + code + "...");
+el("results").innerHTML = "";
+fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
+.then(function(r){ return r.json(); })
+.then(function(d){ setStatus(""); render(d && d.status === 1 ? d.product : null, code); })
+.catch(function(){ setStatus(""); el("results").innerHTML = "<div class=\"card\"><p style=\"margin-bottom:0;\">Could not reach the product database.</p></div>"; });
+}
+el("lookupBtn").addEventListener("click", function(){ lookup(el("manualCode").value); });
+el("manualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookup(el("manualCode").value); });
+var codeReader = null;
+function stopCamera(){
+if(codeReader){ try { codeReader.reset(); } catch(e){} }
+el("startBtn").style.display = "block";
+el("stopBtn").style.display = "none";
+setStatus("");
+}
+el("startBtn").addEventListener("click", function(){
+if(typeof ZXing === "undefined"){
+setStatus("Camera scanning did not load. Type the numbers instead.");
+return;
+}
+setStatus("Asking for camera permission...");
+try {
+codeReader = new ZXing.BrowserMultiFormatReader();
+codeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "reader", function(result, err){
+if(result){
+if(navigator.vibrate) navigator.vibrate(60);
+stopCamera();
+lookup(result.getText());
+}
+}).then(function(){
+setStatus("Point at a barcode.");
+el("startBtn").style.display = "none";
+el("stopBtn").style.display = "block";
+}).catch(function(){
+setStatus("Could not open the camera. Type the numbers instead.");
+});
+} catch(e){
+setStatus("Camera scanning is not available here.");
+}
+});
+el("stopBtn").addEventListener("click", stopCamera);
+</script>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">swaps and reviews, sent occasionally</p>
+<span class="btn">join the list</span>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
+</body>
+</html>
