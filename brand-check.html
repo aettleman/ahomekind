@@ -194,7 +194,7 @@ document.getElementById('ratingSearch').addEventListener('input', function(e){
 var q = e.target.value.toLowerCase();
 var anyVisible = false;
 document.querySelectorAll('.card').forEach(function(card){
-var name = card.querySelector('h3').textContent.toLowerCase();
+var name = card.textContent.toLowerCase();
 var match = name.indexOf(q) !== -1;
 card.style.display = match ? '' : 'none';
 if (match) { anyVisible = true; }
