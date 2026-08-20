@@ -222,6 +222,7 @@ el("bar").style.display = "block";
 setStatus("Reading the shelf...");
 Tesseract.recognize(imgData, "eng", {
   tessedit_pageseg_mode: "11",
+  tessedit_pageseg_mode: "11",
 logger: function(m){
 if(m.status === "recognizing text"){
 el("barfill").style.width = Math.round(m.progress * 100) + "%";
