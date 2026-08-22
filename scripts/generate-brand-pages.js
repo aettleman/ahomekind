@@ -1,3 +1,4 @@
+92
 // generate-brand-pages.js
 // Reads data/brands.json and generates one static, SEO-friendly page per brand
 // at brands/[slug]/index.html, plus a sitemap.xml listing every URL.
