@@ -215,4 +215,28 @@ nav.main-nav .caret { font-size:8px; margin-left:4px; vertical-align:middle; }
 @media (max-width: 700px) {
   nav.main-nav { gap:10px; }
   nav.main-nav .dd-m { left:auto; right:0; transform:none; min-width:170px; }
+
+
+  /* ===== BRAND PAGES ===== */
+  .brand-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+  .brand-header { margin-bottom: 2rem; border-bottom: 2px solid #2a5d3f; padding-bottom: 1rem; }
+  .brand-header h1 { margin: 0 0 1rem 0; font-size: 2.5rem; }
+  .brand-meta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .tier-badge { padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+  .tier-good { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+  .tier-check { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+  .tier-warn { background-color: #ffe4c4; color: #cc5200; border: 1px solid #ffb347; }
+  .tier-bad { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+  .vegan-badge { background-color: #90EE90; color: #1a4620; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; }
+  .parent-company { font-size: 0.95rem; color: #666; font-style: italic; }
+  .brand-content { margin: 2rem 0; }
+  .brand-note { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: #333; }
+  .evidence-section, .products-section, .alternatives-section, .related-section, .links-section { margin: 1.5rem 0; padding: 1rem; background-color: #f9f9f9; border-left: 4px solid #2a5d3f; border-radius: 4px; }
+  .evidence-section h3, .products-section h3, .alternatives-section h3, .related-section h3, .links-section h3 { margin-top: 0; color: #2a5d3f; }
+  .evidence-list, .products-list, .alternatives-list, .related-brands, .links-list { list-style: disc; margin-left: 1.5rem; }
+  .evidence-list li, .products-list li, .alternatives-list li, .links-list li { margin: 0.5rem 0; }
+  .back-link { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd; }
+  .back-link a { color: #2a5d3f; text-decoration: none; font-weight: 600; }
+  .back-link a:hover { text-decoration: underline; }
+  @media (max-width: 768px) { .brand-container { padding: 1rem; } .brand-header h1 { font-size: 1.8rem; } .brand-meta { flex-direction: column; align-items: flex-start; } }
 }
