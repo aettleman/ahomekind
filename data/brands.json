@@ -270,9 +270,9 @@
 "note": "NYX is cruelty-free certified, but its parent company L'Oréal is not. NYX maintains independent cruelty-free status.",    "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
-    "products": [{"name": "NYX Vegan Collection (UK)", "url": "https://www.nyxcosmetics.co.uk/en_GB/makeup/new-launches/vegan"}],
-    "alternatives": [["e-l-f-cosmetics", "barry-m", "b-by-superdrug"]
-    "links": []
+    "products": ["A selection of vegan-friendly formulas - look for the vegan callout on product pages."],
+        "alternatives": ["e.l.f. cosmetics", "Barry M", "B. by Superdrug"]
+    "links":[{"url": "https://www.nyxcosmetics.co.uk/en_GB/makeup/new-launches/vegan", "label": "NYX Vegan Collection (UK)"}]]
   },
   {
     "slug": "bondi-sands",
