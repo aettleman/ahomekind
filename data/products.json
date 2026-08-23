@@ -9,7 +9,8 @@
     "affiliateUrl": "https://link.amazon/B0fPFTOF6",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "Gives you that false-lash volume without smudging or flaking, thanks to an hourglass-shaped brush with intertwined bristles."
+    "blurb": "Gives you that false-lash volume without smudging or flaking, thanks to an hourglass-shaped brush with intertwined bristles.",
+    "image": "https://m.media-amazon.com/images/I/61bXTk4cTsL._AC_SX522_.jpg"
   },
   {
     "id": "barry-m-glow-blur",
@@ -21,7 +22,8 @@
     "affiliateUrl": "https://link.amazon/B0bHxEd33",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A 4-in-1 lightweight formula that primes, evens, highlights and glows, with hyaluronic acid, shea butter and vitamin C."
+    "blurb": "A 4-in-1 lightweight formula that primes, evens, highlights and glows, with hyaluronic acid, shea butter and vitamin C.",
+    "image": "https://m.media-amazon.com/images/I/61hIIsD3esL._AC_SX522_.jpg"
   },
   {
     "id": "rare-beauty-lip-oil",
@@ -33,7 +35,8 @@
     "affiliateUrl": "https://link.amazon/B0cs4yKte",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A moisturising, sheer-coverage lip oil with sunflower seed and jojoba seed oil for a soft, glossy finish."
+    "blurb": "A moisturising, sheer-coverage lip oil with sunflower seed and jojoba seed oil for a soft, glossy finish.",
+    "image": "https://m.media-amazon.com/images/I/414KzR83fdL._AC_SX522_.jpg"
   },
   {
     "id": "elf-power-grip-primer",
@@ -45,7 +48,8 @@
     "affiliateUrl": "https://link.amazon/B00dFT7bs",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A cult-favourite gel primer that grips makeup in place all day while hydrating skin underneath."
+    "blurb": "A cult-favourite gel primer that grips makeup in place all day while hydrating skin underneath.",
+    "image": "https://m.media-amazon.com/images/I/61FfGNgMGsL._AC_SX522_.jpg"
   },
   {
     "id": "body-shop-camomile-cleansing-butter",
@@ -57,7 +61,8 @@
     "affiliateUrl": "https://link.amazon/B01Wgcckd",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A creamy balm cleanser that melts away makeup and impurities, leaving skin soft rather than stripped."
+    "blurb": "A creamy balm cleanser that melts away makeup and impurities, leaving skin soft rather than stripped.",
+    "image": "https://m.media-amazon.com/images/I/714scDQSfHL._AC_SX522_.jpg"
   },
   {
     "id": "mad-hippie-retinol-serum",
@@ -69,7 +74,8 @@
     "affiliateUrl": "https://link.amazon/B0gvID8j3",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A gentler vegan retinol serum with antioxidants, aimed at smoothing texture without the usual irritation."
+    "blurb": "A gentler vegan retinol serum with antioxidants, aimed at smoothing texture without the usual irritation.",
+    "image": "https://m.media-amazon.com/images/I/61aNGA3l0zL._AC_SY879_.jpg"
   },
   {
     "id": "astonish-kitchen-cleaner",
@@ -81,7 +87,8 @@
     "affiliateUrl": "https://link.amazon/B06N2aen6",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A budget-friendly, cruelty-free kitchen spray that cuts through grease with a zesty lemon scent."
+    "blurb": "A budget-friendly, cruelty-free kitchen spray that cuts through grease with a zesty lemon scent.",
+    "image": "https://m.media-amazon.com/images/I/61Uk8cLKXPL._AC_SX679_.jpg"
   },
   {
     "id": "faith-in-nature-rosemary-shampoo",
@@ -93,7 +100,8 @@
     "affiliateUrl": "https://link.amazon/B04vIcMg6",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "A big-value litre bottle of natural, cruelty-free shampoo - handy for regular use without the plastic waste of small bottles."
+    "blurb": "A big-value litre bottle of natural, cruelty-free shampoo - handy for regular use without the plastic waste of small bottles.",
+    "image": "https://m.media-amazon.com/images/I/61icyzdQKiL._AC_SX522_.jpg"
   },
   {
     "id": "faith-in-nature-coconut-conditioner",
@@ -105,7 +113,8 @@
     "affiliateUrl": "https://link.amazon/B0bcTlrKF",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "An organic, cruelty-free conditioner that softens hair without weighing it down."
+    "blurb": "An organic, cruelty-free conditioner that softens hair without weighing it down.",
+    "image": "https://m.media-amazon.com/images/I/71DZ8B1Zl1L._AC_SX522_.jpg"
   },
   {
     "id": "dr-bronners-citrus-soap",
@@ -117,6 +126,7 @@
     "affiliateUrl": "https://link.amazon/B09vyJWPc",
     "vegan": true,
     "crueltyFree": true,
-    "blurb": "An 18-in-1 castile soap that works as body wash, dish soap and pretty much everything else, from a single bottle."
+    "blurb": "An 18-in-1 castile soap that works as body wash, dish soap and pretty much everything else, from a single bottle.",
+    "image": "https://m.media-amazon.com/images/I/71hAgqAlMtL._AC_SY879_.jpg"
   }
 ]
