@@ -133,18 +133,24 @@ function renderBrandPage(brand) {
   lines.push(parentLine);
   lines.push('</div>');
   lines.push('');
-  lines.push('<div style="margin-top:32px;">');
-  lines.push(renderSection('products checked', brand.products, 'We haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet &mdash; check back soon.'));
-  lines.push('</div>');
-  lines.push('');
-  lines.push('<div style="margin-top:24px;">');
-  lines.push(renderSection('cruelty-free alternatives', brand.alternatives, 'We\'re still building out alternatives for this brand.'));
-  lines.push('</div>');
-  lines.push('');
   lines.push('<div style="margin-top:24px;">');
   lines.push(renderLinks(brand.links));
   lines.push('</div>');
   lines.push('');
+
+  lines.push('<div style="margin-top:32px;">');
+  lines.push(renderSection('products checked', brand.products, 'We haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet &mdash; check back soon.'));
+  lines.push('</div>');
+  lines.push('');
+
+  if (brand.tier !== 'good') {
+  lines.push('<div style="margin-top:24px;">');
+    lines.push(renderSection('cruelty-free alternatives', brand.alternatives, 'We\'re still building out alternatives for this brand.'));
+    lines.push('</div>');
+    lines.push('');
+  }
+
+  
   lines.push('<div style="margin-top:36px; padding:18px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; font-size:13px; color:#7a7561;">');
   lines.push('Spotted something out of date? <a href="mailto:sup@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">let me know</a>.');
   lines.push('</div>');
