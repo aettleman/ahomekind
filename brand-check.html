@@ -77,11 +77,15 @@
 <div class="card"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3>The Inkey List</h3><p>Leaping Bunny certified, mostly vegan.</p></div>
 <div class="card"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3>Green People</h3><p>PETA certified cruelty-free, UK.</p></div>
 <div class="card"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3>Superdrug Pro Care</h3><p>Superdrug's own cruelty-free range, vegan products marked individually.</p></div>
+<div class="card"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3>The Body Shop</h3><p>Leaping Bunny &amp; PETA certified cruelty-free. No longer fully vegan as of 2026 &mdash; check individual products.</p></div>
+<div class="card"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3>Dr Bronner's</h3><p>Leaping Bunny &amp; PETA certified cruelty-free. Vegan except lip/body balms (beeswax).</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>MUA</h3><p>PETA and Cruelty Free International certified, 100% vegan.</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Fussy</h3><p>Leaping Bunny certified, vegan, independent brand.</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Glaze</h3><p>PETA certified, vegan, independent brand.</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Kingfisher</h3><p>Cruelty-free, vegan, independent. PETA-listed.</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Bleach London</h3><p>PETA-approved, 100% vegan since 2017.</p></div>
+<div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Rare Beauty</h3><p>PETA and Leaping Bunny certified, 100% vegan.</p></div>
+<div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Mad Hippie</h3><p>PETA certified cruelty-free, 100% vegan skincare.</p></div>
 <p class="section-label warn">worth a disclaimer &mdash; beauty &amp; haircare</p>
 <div class="card warn"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3>NYX</h3><p>PETA certified cruelty-free, owned by L'Or&eacute;al.</p></div>
 <div class="card warn"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3>Bondi Sands</h3><p>PETA certified cruelty-free, owned by Kao.</p></div>
@@ -183,10 +187,10 @@
 
 <script>
 document.getElementById('ratingSearch').addEventListener('input', function(e){
-var q = e.target.value.toLowerCase();
+var q = e.target.value.toLowerCase().replace(/[^a-z0-9]/g, '');
 var anyVisible = false;
 document.querySelectorAll('.card').forEach(function(card){
-var name = card.textContent.toLowerCase();
+var name = card.textContent.toLowerCase().replace(/[^a-z0-9]/g, '');
 var match = name.indexOf(q) !== -1;
 card.style.display = match ? '' : 'none';
 if (match) { anyVisible = true; }
