@@ -1233,5 +1233,53 @@
     "products": [],
     "alternatives": [],
     "links": []
+  },
+  {
+    "slug": "rare-beauty",
+    "name": "Rare Beauty",
+    "tier": "good",
+    "note": "PETA and Leaping Bunny certified, 100% vegan.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": []
+  },
+  {
+    "slug": "mad-hippie",
+    "name": "Mad Hippie",
+    "tier": "good",
+    "note": "PETA certified cruelty-free, 100% vegan skincare.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": []
+  },
+  {
+    "slug": "the-body-shop",
+    "name": "The Body Shop",
+    "tier": "warn",
+    "note": "Leaping Bunny and PETA certified cruelty-free. No longer fully vegan as of 2026 - the brand quietly dropped its 100% vegan claim after new ownership; check individual products.",
+    "parentCompany": "Aurea Group",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": []
+  },
+  {
+    "slug": "dr-bronners",
+    "name": "Dr Bronner's",
+    "tier": "warn",
+    "note": "Leaping Bunny and PETA certified cruelty-free. Vegan except lip and body balms, which contain beeswax.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": []
   }
 ]
