@@ -240,3 +240,26 @@ nav.main-nav .caret { font-size:8px; margin-left:4px; vertical-align:middle; }
   .back-link a:hover { text-decoration: underline; }
   @media (max-width: 768px) { .brand-container { padding: 1rem; } .brand-header h1 { font-size: 1.8rem; } .brand-meta { flex-direction: column; align-items: flex-start; } }
 }
+
+
+/* mobile header/nav stacking fix */
+@media (max-width: 700px) {
+  header.site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 14px;
+  }
+  .logo { flex-shrink: 0; }
+  .logo span { white-space: nowrap; }
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 100%;
+  }
+}
+
+/* product cards with image, stack on narrow screens */
+.product-row { display: flex; gap: 16px; align-items: flex-start; }
+@media (max-width: 480px) {
+  .product-row { flex-direction: column; align-items: center; text-align: center; }
+}
