@@ -21,7 +21,7 @@ dds.forEach(function(dd){ dd.classList.remove('open'); });
 // folder depth.
 var current = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
 function isActive(paths){
-return paths.some(function(p){ return current === p || current.indexOf(p) === 0; });
+return paths.indexOf(current) !== -1;
 }
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
