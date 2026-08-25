@@ -30,7 +30,7 @@
 .rcard-name-wrap { flex:1; min-width:0; }
 .rcard-name { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; line-height:1.25; }
 .rcard-name a { color:inherit; }
-.rcard-headline { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; margin-top:2px; }
+.rcard-headline { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#5c5c4f; margin-top:2px; }
 .rcard-price { flex-shrink:0; padding:2px 10px; background:#e6d4a8; border-radius:12px; font-size:11.5px; color:#3d4a3a; margin-top:2px; }
 .rstatus-row { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
 .rstatus { flex:1; min-width:130px; border-radius:10px; padding:10px 14px; background:rgba(255,255,255,0.55); }
@@ -48,6 +48,7 @@
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
@@ -60,7 +61,7 @@
 </a>
 <nav class="main-nav">
 <a href="start-here.html">start here</a>
-<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">check<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="brand-check.html">brand check</a>
 <a href="scan.html">scan a barcode</a>
@@ -69,7 +70,7 @@
 </span></span>
 <a href="shop.html">shop</a>
 <a href="journal/">journal</a>
-<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">why it matters<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="what-testing-means.html">what testing means</a>
 <a href="money.html">who gets your money</a>
@@ -80,11 +81,12 @@
 </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">brand check</h1>
 <p>Search a brand and see where it stands &mdash; cruelty-free, vegan, or neither.</p>
 
 <div style="margin: 24px 0;">
+<label for="ratingSearch" class="visually-hidden">Search a brand</label>
 <input type="text" id="ratingSearch" placeholder="search a brand, e.g. Dove, L'Or&eacute;al, Faith in Nature..." style="width:100%; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:10px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; box-shadow:0 2px 8px rgba(61,74,58,0.06);">
 </div>
 
@@ -339,7 +341,7 @@ document.getElementById('noResults').style.display = (anyVisible || q === '') ? 
 <p class="nf-msg" id="nf-msg-2" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a></footer>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
 <script src="js/nav.js?v=20260901"></script>
 <script src="js/newsletter.js"></script>
 </body>

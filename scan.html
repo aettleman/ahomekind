@@ -44,7 +44,7 @@
 .v-bad .rcard-badge { background:#a5453d; }
 .v-unknown .rcard-badge { background:#8a8672; }
 .rcard-name { font-family:'Cormorant Garamond',serif; font-size:21px; color:#3d4a3a; line-height:1.2; }
-.rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a7561; margin-top:2px; }
+.rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#5c5c4f; margin-top:2px; }
 .rstatus-row { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
 .rstatus { flex:1; min-width:130px; border-radius:10px; padding:12px 14px; background:rgba(255,255,255,0.55); }
 .rstatus-label { font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#5c5c4f; margin-bottom:4px; }
@@ -79,6 +79,7 @@
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
@@ -91,7 +92,7 @@
 </a>
 <nav class="main-nav">
 <a href="start-here.html">start here</a>
-<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">check<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="brand-check.html">brand check</a>
 <a href="scan.html">scan a barcode</a>
@@ -100,7 +101,7 @@
 </span></span>
 <a href="shop.html">shop</a>
 <a href="journal/">journal</a>
-<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">why it matters<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="what-testing-means.html">what testing means</a>
 <a href="money.html">who gets your money</a>
@@ -111,7 +112,7 @@
 </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">scan a barcode</h1>
 <p>Standing in the aisle with something in your hand? Point your camera at the barcode and I'll tell you what I know, then point you at the people who know the rest.</p>
 
@@ -136,6 +137,7 @@
 
 <p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
 <div class="manual">
+<label for="manualCode" class="visually-hidden">Barcode number</label>
 <input type="text" id="manualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
 <button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="lookupBtn">check</button>
 </div>
@@ -370,6 +372,7 @@ return out;
 function brandSearchWidget(){
 var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";
 out += "<div class=\"manual\" style=\"margin:0 0 8px;\">";
+out += "<label for=\"manualBrand\" class=\"visually-hidden\">Brand name</label>";
 out += "<input type=\"text\" id=\"manualBrand\" placeholder=\"e.g. Superdrug, Garnier, Dove...\">";
 out += "<button class=\"big-btn\" style=\"width:auto; margin:0; padding:14px 20px;\" id=\"brandLookupBtn\">check</button>";
 out += "</div>";
@@ -498,7 +501,7 @@ el("stopBtn").addEventListener("click", stopCamera);
 <p class="nf-msg" id="nf-msg-11" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a></footer>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
 <script src="js/nav.js?v=20260901"></script>
 <script src="js/newsletter.js"></script>
 <script>

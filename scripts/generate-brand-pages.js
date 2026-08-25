@@ -96,6 +96,7 @@ function renderBrandPage(brand) {
   lines.push('</style>');
   lines.push('</head>');
   lines.push('<body>');
+  lines.push('<a href="#main" class="skip-link">skip to content</a>');
   lines.push('<header class="site-header">');
   lines.push('<div class="wrap">');
   lines.push('<a href="../../index.html" class="logo">');
@@ -108,7 +109,7 @@ function renderBrandPage(brand) {
   lines.push('</a>');
   lines.push('<nav class="main-nav">');
   lines.push('<a href="../../start-here.html">start here</a>');
-  lines.push('<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>');
+  lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">check<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../brand-check.html">brand check</a>');
   lines.push('<a href="../../scan.html">scan a barcode</a>');
@@ -117,7 +118,7 @@ function renderBrandPage(brand) {
   lines.push('</span></span>');
   lines.push('<a href="../../shop.html">shop</a>');
   lines.push('<a href="../../journal/">journal</a>');
-  lines.push('<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>');
+  lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">why it matters<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../what-testing-means.html">what testing means</a>');
   lines.push('<a href="../../money.html">who gets your money</a>');
@@ -128,7 +129,7 @@ function renderBrandPage(brand) {
   lines.push('</div>');
   lines.push('</header>');
   lines.push('');
-  lines.push('<main class="wrap">');
+  lines.push('<main class="wrap" id="main">');
   lines.push('<p style="font-size:12px; margin-top:24px;"><a href="../../brand-check.html">&larr; back to brand check</a></p>');
   lines.push('');
   const priceBadge = brand.price ? ('<span style="display:inline-block; margin-left:10px; padding:2px 9px; background:#e6d4a8; border-radius:12px; font-size:12px; color:#3d4a3a; vertical-align:middle;">' + escapeHtml(brand.price) + '</span>') : '';
@@ -185,7 +186,7 @@ function renderBrandPage(brand) {
   lines.push('<p class="nf-msg" id="nf-msg-' + brand.slug + '" role="status" aria-live="polite"></p>');
   lines.push('</form>');
   lines.push('</div>');
-  lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a></footer>');
+  lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
   lines.push('<script src="../../js/nav.js?v=20260901"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');

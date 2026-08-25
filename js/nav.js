@@ -11,19 +11,32 @@ navigator.serviceWorker.register('/sw.js').catch(function(){});
 
 document.addEventListener('DOMContentLoaded', function(){
 var dds = document.querySelectorAll('nav.main-nav .dd');
+function setOpen(dd, open){
+dd.classList.toggle('open', open);
+dd.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
 dds.forEach(function(dd){
 var toggle = function(e){
 if(e.target.closest('.dd-m')) return;
 e.preventDefault();
 var wasOpen = dd.classList.contains('open');
-dds.forEach(function(other){ other.classList.remove('open'); });
-if(!wasOpen){ dd.classList.add('open'); }
+dds.forEach(function(other){ setOpen(other, false); });
+if(!wasOpen){ setOpen(dd, true); }
 };
 dd.addEventListener('click', toggle);
+// Enter/Space activate it like a real button, since it's a span with role="button".
+dd.addEventListener('keydown', function(e){
+if(e.key === 'Enter' || e.key === ' '){ toggle(e); }
+});
 });
 document.addEventListener('click', function(e){
 if(!e.target.closest('nav.main-nav .dd')){
-dds.forEach(function(dd){ dd.classList.remove('open'); });
+dds.forEach(function(dd){ setOpen(dd, false); });
+}
+});
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape'){
+dds.forEach(function(dd){ setOpen(dd, false); });
 }
 });
 
@@ -64,6 +77,9 @@ document.body.appendChild(bn);
 var sheet = document.createElement('div');
 sheet.className = 'bn-sheet';
 sheet.id = 'bn-sheet';
+sheet.setAttribute('role', 'dialog');
+sheet.setAttribute('aria-modal', 'true');
+sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
 '<a href="/quiz.html">take the quiz</a>' +
@@ -79,9 +95,24 @@ document.body.appendChild(sheet);
 
 var moreBtn = document.getElementById('bn-more-btn');
 var closeBtn = document.getElementById('bn-sheet-close');
-function openSheet(){ sheet.classList.add('open'); document.body.classList.add('bn-sheet-lock'); }
-function closeSheet(){ sheet.classList.remove('open'); document.body.classList.remove('bn-sheet-lock'); }
+moreBtn.setAttribute('aria-haspopup', 'true');
+moreBtn.setAttribute('aria-expanded', 'false');
+function openSheet(){
+sheet.classList.add('open');
+document.body.classList.add('bn-sheet-lock');
+moreBtn.setAttribute('aria-expanded', 'true');
+closeBtn.focus(); // move focus into the sheet, since it behaves like a modal dialog
+}
+function closeSheet(){
+sheet.classList.remove('open');
+document.body.classList.remove('bn-sheet-lock');
+moreBtn.setAttribute('aria-expanded', 'false');
+moreBtn.focus(); // return focus to where it came from
+}
 moreBtn.addEventListener('click', openSheet);
 closeBtn.addEventListener('click', closeSheet);
 sheet.addEventListener('click', function(e){ if(e.target === sheet) closeSheet(); });
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape' && sheet.classList.contains('open')){ closeSheet(); }
+});
 });

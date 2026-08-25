@@ -247,6 +247,40 @@ p { margin-bottom: 18px; font-size: 15px; }
   white-space: nowrap;
 }
 
+/* Visible keyboard focus everywhere -- several interactive elements on
+   the site (nav dropdown triggers, bottom-nav items, buttons) suppress
+   the browser default outline for a cleaner mouse-click look, which
+   otherwise leaves keyboard users with no visible focus indicator at
+   all. :focus-visible only shows this for keyboard/assistive-tech
+   focus, never for a mouse click, so it doesn't change the site's look
+   for anyone clicking around. */
+a:focus-visible, button:focus-visible, input:focus-visible,
+textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #4d6b4f;
+  outline-offset: 2px;
+}
+
+/* Skip-to-content link -- present on every page (added by the same
+   site-wide pass as the manifest tags), invisible until a keyboard user
+   tabs to it, so it doesn't affect the visual design at all otherwise. */
+.skip-link {
+  position: absolute;
+  top: -48px; left: 8px;
+  background: #3d4a3a;
+  color: #f4efe2;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 footer.site-footer {
   text-align: center;
   padding: 24px;
