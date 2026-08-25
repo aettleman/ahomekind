@@ -8,8 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.hero-img { width:100%; max-height:340px; object-fit:cover; object-position:left center; display:block; }
-@media(max-width:700px){ .hero-img { max-height:200px; } }
+.hero-banner { width:100%; background:#efe7d0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.hero-banner img { display:block; max-width:100%; width:auto; height:auto; max-height:320px; margin:0 auto; }
+@media(max-width:700px){ .hero-banner img { max-height:190px; } }
 </style>
 </head>
 <body>
@@ -42,13 +43,13 @@
 <a href="./about.html">about</a>
 </nav>
 </header>
-<img src="IMG_8501.PNG" alt="A rabbit inspecting a product — unimpressed" style="width:100%;max-height:360px;object-fit:cover;object-position:left center;display:block;">
+<div class="hero-banner"><img src="IMG_8501-crop.png" alt="A rabbit inspecting a product — unimpressed"></div>
 
 
 <div style="background:#3d4a3a; padding:66px 24px 58px; text-align:center;">
 <p style="color:#d9c99a; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:22px;">cruelty-free &middot; vegan</p>
 <h1 style="color:#f4efe2; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:38px; line-height:1.32; letter-spacing:0.4px; text-transform:none; margin-bottom:20px;">your shampoo didn't<br>need to be tested<br>on a <em style="font-style:italic; color:#e6d4a8;">rabbit</em>.</h1>
-<p style="color:#c9d1c3; font-size:14.5px; line-height:1.95; max-width:450px; margin:0 auto 30px;">Rabbits, beagles, mice, monkeys, pigs, sheep, birds, guinea pigs, rats, cats, and many more non-human animals are used in testing. Animal testing is banned in some countries, but it's still routine and still legal across much of the world. Here's what to buy instead.</p>
+<p style="color:#c9d1c3; font-size:14.5px; line-height:1.95; max-width:450px; margin:0 auto 30px;">Rabbits and beagles are still bred for laboratories today. It's legal in most of the world. Here's what to buy instead.</p>
 <a href="brand-check.html" style="display:inline-block; background:#e6d4a8; color:#3d4a3a; font-weight:600; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:14px 28px; border-radius:3px; text-decoration:none;">browse the brand check</a>
 <p style="margin-top:28px; color:#8ba284; font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:3px; text-transform:uppercase;">a home kind is the right kind</p>
 </div>
@@ -76,7 +77,7 @@
 </div>
 </div>
 
-<img src="IMG_8501.PNG" alt="A rabbit inspecting a product, unimpressed" style="width:100%;max-height:380px;object-fit:cover;object-position:left bottom;display:block;">
+<div class="hero-banner"><img src="IMG_8501-crop.png" alt="A rabbit inspecting a product, unimpressed"></div>
 <main class="wrap">
 <p class="section-label">from the journal</p>
 <div class="card">
@@ -88,7 +89,7 @@
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
 <p class="sub2">swaps and reviews, sent occasionally</p>
-<span class="btn">join the list</span>
+<a href="mailto:hello@ahomekind.com?subject=Join%20the%20list&amp;body=Add%20me%20to%20the%20list!" class="btn" style="text-decoration:none;">join the list</a>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>
 <script src="js/nav.js"></script>

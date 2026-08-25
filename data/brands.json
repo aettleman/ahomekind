@@ -436,7 +436,7 @@
     "name": "Garnier",
     "tier": "warn",
     "note": "Leaping Bunny certified, owned by L'Oréal.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -1135,7 +1135,7 @@
     "name": "Maybelline",
     "tier": "bad",
     "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -1147,7 +1147,7 @@
     "name": "Redken",
     "tier": "bad",
     "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -1389,5 +1389,18 @@
         "label": "Shop: 18-in-1 Citrus Orange Castile Soap (paid link)"
       }
     ]
+  },
+  {
+    "slug": "l-oreal",
+    "name": "L'Oréal",
+    "tier": "bad",
+    "note": "The world's largest cosmetics company. L'Oréal itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. It's also the parent company of Maybelline, Garnier, Redken, NYX, Kiehl's, Lancôme, and dozens more.",
+    "parentCompany": null,
+    "isParentCompany": true,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": []
   }
 ]

@@ -98,14 +98,7 @@ function renderBrandPage(brand) {
   lines.push('<span>a home kind</span>');
   lines.push('</a>');
   lines.push('<nav class="main-nav">');
-  lines.push('<a href="../../about.html">about</a>');
   lines.push('<a href="../../start-here.html">start here</a>');
-  lines.push('<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>');
-  lines.push('<span class="dd-m">');
-  lines.push('<a href="../../what-testing-means.html">what testing means</a>');
-  lines.push('<a href="../../money.html">who gets your money</a>');
-  lines.push('<a href="../../impact.html">your impact</a>');
-  lines.push('</span></span>');
   lines.push('<span class="dd" tabindex="0">check<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../brand-check.html">brand check</a>');
@@ -113,8 +106,15 @@ function renderBrandPage(brand) {
   lines.push('<a href="../../shelf.html">scan a shelf</a>');
   lines.push('<a href="../../quiz.html">take the quiz</a>');
   lines.push('</span></span>');
-  lines.push('<a href="../../journal/">journal</a>');
   lines.push('<a href="../../shop.html">shop</a>');
+  lines.push('<a href="../../journal/">journal</a>');
+  lines.push('<span class="dd" tabindex="0">why it matters<span class="caret">&#9660;</span>');
+  lines.push('<span class="dd-m">');
+  lines.push('<a href="../../what-testing-means.html">what testing means</a>');
+  lines.push('<a href="../../money.html">who gets your money</a>');
+  lines.push('<a href="../../impact.html">your impact</a>');
+  lines.push('</span></span>');
+  lines.push('<a href="../../about.html">about</a>');
   lines.push('</nav>');
   lines.push('</div>');
   lines.push('</header>');
@@ -139,27 +139,27 @@ function renderBrandPage(brand) {
   lines.push('');
 
   lines.push('<div style="margin-top:32px;">');
-  lines.push(renderSection('products checked', brand.products, 'We haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet &mdash; check back soon.'));
+  lines.push(renderSection('products checked', brand.products, 'I haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet &mdash; check back soon.'));
   lines.push('</div>');
   lines.push('');
 
   if (brand.tier !== 'good') {
   lines.push('<div style="margin-top:24px;">');
-    lines.push(renderSection('cruelty-free alternatives', brand.alternatives, 'We\'re still building out alternatives for this brand.'));
+    lines.push(renderSection('cruelty-free alternatives', brand.alternatives, 'I\'m still building out alternatives for this brand.'));
     lines.push('</div>');
     lines.push('');
   }
 
   
   lines.push('<div style="margin-top:36px; padding:18px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; font-size:13px; color:#7a7561;">');
-  lines.push('Spotted something out of date? <a href="mailto:sup@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">let me know</a>.');
+  lines.push('Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">let me know</a>.');
   lines.push('</div>');
   lines.push('</main>');
   lines.push('');
   lines.push('<div class="newsletter">');
   lines.push('<p class="label3">stay in the loop</p>');
   lines.push('<p class="sub2">swaps and reviews, sent occasionally</p>');
-  lines.push('<span class="btn">join the list</span>');
+  lines.push('<a href="mailto:hello@ahomekind.com?subject=Join%20the%20list&amp;body=Add%20me%20to%20the%20list!" class="btn" style="text-decoration:none;">join the list</a>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026</footer>');
   lines.push('<script src="../../js/nav.js"></' + 'script>');
