@@ -64,6 +64,9 @@ function renderBrandPage(brand) {
     : brand.vegan === 'partial' ? 'vegan status varies by product'
     : 'vegan status not yet confirmed';
   const parentLine = brand.parentCompany ? ('<p><strong>parent company:</strong> ' + escapeHtml(brand.parentCompany) + '</p>') : '';
+  const veganButNotCrueltyFreeWarning = (brand.tier === 'bad' && (brand.vegan === 'partial' || brand.vegan === 'full'))
+    ? '<div style="margin-top:16px; padding:14px 16px; background:#f3e2df; border:0.5px solid #d9b9b3; border-radius:8px; font-size:13.5px; color:#7a4640; line-height:1.7;"><strong>a vegan label here doesn\'t make it cruelty-free.</strong> ' + escapeHtml(brand.name) + ' isn\'t on the cruelty-free list because of the company\'s wider testing policy, not because of what\'s in any one product. Buying a vegan-labelled item from them still puts money behind a company that tests on animals elsewhere in its business.</div>'
+    : '';
 
   const lines = [];
   lines.push('<!DOCTYPE html>');
@@ -134,6 +137,7 @@ function renderBrandPage(brand) {
   lines.push('<p><strong>vegan status:</strong> ' + veganLine + '</p>');
   lines.push(parentLine);
   lines.push('</div>');
+  lines.push(veganButNotCrueltyFreeWarning);
   lines.push('');
   lines.push('<div style="margin-top:24px;">');
   lines.push(renderLinks(brand.links));

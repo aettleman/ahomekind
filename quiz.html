@@ -239,7 +239,10 @@ function resolveCategories() {
 
 function getRecommendations() {
   var cats = resolveCategories();
-  var pool = BRANDS.filter(function(b) { return matchesCategory(b, cats); });
+  // Never recommend a "bad" (tests-on-animals) tier brand, no matter how the
+  // fallback/broadening logic below plays out — a vegan-labelled product from
+  // a company that still tests on animals elsewhere isn't a genuine pick.
+  var pool = BRANDS.filter(function(b) { return matchesCategory(b, cats) && b.tier !== 'bad'; });
 
   // Prefer cruelty-free ("good") tier first.
   var good = pool.filter(function(b) { return b.tier === 'good'; });
