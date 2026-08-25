@@ -10,6 +10,35 @@
 <style>
 .card.bad { border-color:#a5453d; background:#f3e2df; }
 .rating.bad { color:#8a332c; }
+.v-good { background:#e6efe3; border:1px solid #6f8768; }
+.v-warn { background:#f6ecd9; border:1px solid #d9b06e; }
+.v-bad { background:#f3e2df; border:1px solid #a5453d; }
+.v-unknown { background:#ece5d5; border:1px solid #cfc4a9; }
+.rcard { border-radius:16px; padding:22px 22px 20px; margin-bottom:14px; }
+.rcard-top { display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
+.rcard-badge { flex-shrink:0; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:#f4efe2; background:#6f8768; }
+.v-good .rcard-badge { background:#4d6b4f; }
+.v-warn .rcard-badge { background:#c99a45; }
+.v-bad .rcard-badge { background:#a5453d; }
+.v-unknown .rcard-badge { background:#8a8672; }
+.rcard-name-wrap { flex:1; min-width:0; }
+.rcard-name { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; line-height:1.25; }
+.rcard-name a { color:inherit; }
+.rcard-headline { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; margin-top:2px; }
+.rcard-price { flex-shrink:0; padding:2px 10px; background:#e6d4a8; border-radius:12px; font-size:11.5px; color:#3d4a3a; margin-top:2px; }
+.rstatus-row { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+.rstatus { flex:1; min-width:130px; border-radius:10px; padding:10px 14px; background:rgba(255,255,255,0.55); }
+.rstatus-label { font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#5c5c4f; margin-bottom:3px; }
+.rstatus-value { font-size:14px; font-weight:700; display:flex; align-items:center; gap:6px; }
+.rstatus-value.yes { color:#33502f; }
+.rstatus-value.no { color:#8a332c; }
+.rstatus-value.maybe { color:#8a6a2a; }
+.rstatus-value.na { color:#7a7561; }
+.rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; list-style:revert; }
+.rcard-details summary:hover { color:#3d4a3a; }
+.rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
+#browseAllBtn { display:block; width:100%; padding:14px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin-bottom:28px; }
+#browseAllBtn:hover { background:#e2d9bd; }
 </style>
 </head>
 <body>
@@ -47,10 +76,10 @@
 
 <main class="wrap">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">brand check</h1>
-<p>Type a brand in and see where it stands.</p>
+<p>Search a brand and see where it stands &mdash; cruelty-free, vegan, or neither.</p>
 
 <div style="margin: 24px 0;">
-<input type="text" id="ratingSearch" placeholder="search a brand..." style="width:100%; padding:12px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:14px; color:#3d4a3a;">
+<input type="text" id="ratingSearch" placeholder="search a brand, e.g. Dove, L'Or&eacute;al, Faith in Nature..." style="width:100%; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:10px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; box-shadow:0 2px 8px rgba(61,74,58,0.06);">
 </div>
 
 <div style="background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:18px 20px; margin-bottom:28px;">
@@ -59,7 +88,9 @@
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#c98a3a;">&#9888;&#65039; parent company doesn't match</strong></p>
 <p style="font-size:13px; margin-bottom:0;"><strong style="color:#8a332c;">&#10060; tested on animals</strong></p>
 </div>
-<p style="font-size:12.5px; color:#7a7561; margin:-18px 0 28px;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
+<p style="font-size:12.5px; color:#7a7561; margin:-18px 0 20px;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
+<button type="button" id="browseAllBtn">browse all brands</button>
+<div id="allBrands" style="display:none;">
 <p class="section-label">beauty &amp; skincare</p>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>e.l.f. cosmetics</h3><p>Independently owned, PETA and Vegan Society certified.</p></div>
 <div class="card"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Faith in Nature</h3><p>UK, Leaping Bunny certified, budget-friendly.</p></div>
@@ -194,6 +225,7 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>Elemis</h3><p>Tests on animals directly, owned by L'Occitane, also not cruelty-free.</p></div>
 <div class="card bad"><p class="rating bad">&#10060; tested on animals</p><h3>TENA</h3><p>Owned by Essity, whose own policy confirms testing where legally required, including China and Brazil.</p></div>
 <p id="noResults" style="display:none; text-align:center; color:#7a7561; font-size:14px; padding:24px 0;">Nothing here yet for that one.</p>
+</div>
 
 <p style="margin-top:36px; font-size:13px; color:#7a7561; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
 
@@ -203,35 +235,84 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 
 <script>
 var priceMap = {"e.l.f. cosmetics":"£","Faith in Nature":"£","BYOMA":"££","Barry M":"£","B. by Superdrug":"£","Baylis & Harding":"£","Original Source":"£","Noughty":"££","Umberto Giannini":"££","OceanSaver":"££","Fabulosa":"£","Superdrug own brand (wider range)":"£","Imperial Leather":"£","Carex":"£","The Inkey List":"££","Green People":"££","Superdrug Pro Care":"£","MUA":"£","Fussy":"££","Glaze":"££","Kingfisher":"££","Bleach London":"££","NYX":"£","Bondi Sands":"££","Bulldog":"££","TRESemmé":"££","Lynx":"£","Aussie":"£","Wild":"££","Rimmel":"£","Garnier":"£","No7":"££","Simple":"£","Dove":"£","Herbal Essences":"£","REN":"£££","The Ordinary":"££","Drunk Elephant":"£££","Astonish":"£","The Pink Stuff":"£","Bio-D":"£","Zoflora":"£","Miniml":"££","Smol":"££","Method":"££","Ecover":"££","Aldi":"£","Lidl":"£","Co-op":"££","Sainsbury's":"££","Morrisons":"£","Waitrose":"£££","Marks & Spencer":"£££","Ariel":"££","Bold":"£","Daz":"£","Fairy":"£","Flash":"£","Lenor":"££","Gillette":"££","Venus":"££","Head & Shoulders":"£","Oral-B":"££","Pantene":"£","Always":"£","Tampax":"£","Febreze":"££","Viakal":"£","Satin Care":"£","Vaseline":"£","Sure":"£","Persil":"££","Comfort":"£","Surf":"£","Cif":"£","Domestos":"£","Radox":"£","Axe":"£","Bedhead":"££","Nivea":"££","Dettol":"££","Vanish":"££","Cillit Bang":"£","Finish":"££","Mr Muscle":"£","Glade":"£","Pledge":"£","Maybelline":"£","Redken":"£££","Max Factor":"£","Clairol":"£","Colgate":"£","Palmolive":"£","Sanex":"£","Johnson's":"£","Aveeno":"££","Neutrogena":"£","Listerine":"£","OGX":"££","Clean & Clear":"£","T/Gel":"££","Elemis":"££££","TENA":"££","Rare Beauty":"£££","Mad Hippie":"££","The Body Shop":"££","Dr Bronner's":"££","L'Oréal":"££","Peace With The Wild":"££","Dr Organic":"£","Gutology":"££","Biomed":"££","Waken":"££","Superdrug own-brand (dental range)":"£","Aquafresh":"£","Sensodyne":"££"};
-document.querySelectorAll('.card').forEach(function(card){
-var h3 = card.querySelector('h3');
-var rating = card.querySelector('.rating');
-if (!h3 || !rating) return;
-var name = h3.textContent.trim();
-var price = priceMap[name];
-if (price) {
-var badge = document.createElement('span');
-badge.textContent = price;
-badge.setAttribute('style', 'display:inline-block; margin-left:8px; padding:1px 8px; background:#e6d4a8; border-radius:12px; font-size:11.5px; color:#3d4a3a; vertical-align:middle;');
-rating.appendChild(badge);
-}
-});
 function normalizeSearch(s){
 return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
 }
-document.getElementById('ratingSearch').addEventListener('input', function(e){
+
+// Rebuild each hand-written .card into the same result-card look used on
+// the scanner (badge + name, side-by-side cruelty-free/vegan status,
+// price, and the fuller explanation tucked behind a "why" disclosure).
+document.querySelectorAll('main .card').forEach(function(card){
+var ratingEl = card.querySelector('.rating');
+var h3 = card.querySelector('h3');
+var noteEl = card.querySelector('p:not(.rating)');
+if (!ratingEl || !h3) return;
+
+var name = h3.textContent.trim();
+card.dataset.searchName = normalizeSearch(name);
+var nameHTML = h3.innerHTML;
+var noteHTML = noteEl ? noteEl.innerHTML : '';
+var noteLower = (noteEl ? noteEl.textContent : '').toLowerCase();
+
+var tierClass = ratingEl.classList.contains('bad') ? 'v-bad' :
+ratingEl.classList.contains('warn') ? 'v-warn' :
+ratingEl.classList.contains('neutral') ? 'v-unknown' : 'v-good';
+
+var cfValue, cfClass;
+if (tierClass === 'v-good' || tierClass === 'v-unknown') { cfValue = '&#10003; yes'; cfClass = 'yes'; }
+else if (tierClass === 'v-warn') { cfValue = '&#9998; mostly'; cfClass = 'maybe'; }
+else { cfValue = '&#10007; no'; cfClass = 'no'; }
+
+var veganValue, veganClass;
+if (noteLower.indexOf('100% vegan') !== -1 || noteLower.indexOf('fully vegan') !== -1) { veganValue = '&#10003; fully vegan'; veganClass = 'yes'; }
+else if (noteLower.indexOf('vegan') !== -1) { veganValue = '&#9998; check product'; veganClass = 'maybe'; }
+else { veganValue = 'not stated'; veganClass = 'na'; }
+
+var headline = ratingEl.textContent.trim();
+var sp = headline.indexOf(' ');
+if (sp !== -1) { headline = headline.slice(sp + 1); }
+
+var initial = (name.replace(/[^A-Za-z0-9]/g, '').charAt(0) || '?').toUpperCase();
+var price = priceMap[name];
+
+var html = '<div class="rcard-top">';
+html += '<div class="rcard-badge" aria-hidden="true">' + initial + '</div>';
+html += '<div class="rcard-name-wrap"><div class="rcard-name">' + nameHTML + '</div><div class="rcard-headline">' + headline + '</div></div>';
+if (price) { html += '<span class="rcard-price">' + price + '</span>'; }
+html += '</div>';
+html += '<div class="rstatus-row">';
+html += '<div class="rstatus"><div class="rstatus-label">cruelty-free</div><div class="rstatus-value ' + cfClass + '">' + cfValue + '</div></div>';
+html += '<div class="rstatus"><div class="rstatus-label">vegan</div><div class="rstatus-value ' + veganClass + '">' + veganValue + '</div></div>';
+html += '</div>';
+if (noteHTML) { html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p></details>'; }
+
+card.className = 'card rcard ' + tierClass;
+card.innerHTML = html;
+});
+
+var searchInput = document.getElementById('ratingSearch');
+var browseBtn = document.getElementById('browseAllBtn');
+var allBrands = document.getElementById('allBrands');
+browseBtn.addEventListener('click', function(){
+allBrands.style.display = 'block';
+browseBtn.style.display = 'none';
+});
+searchInput.addEventListener('input', function(e){
 var q = normalizeSearch(e.target.value);
+if (q !== '' && allBrands.style.display === 'none') {
+allBrands.style.display = 'block';
+browseBtn.style.display = 'none';
+}
 var anyVisible = false;
-document.querySelectorAll('.card').forEach(function(card){
-var name = normalizeSearch(card.textContent);
-var match = name.indexOf(q) !== -1;
+document.querySelectorAll('main .card').forEach(function(card){
+var match = (card.dataset.searchName || '').indexOf(q) !== -1;
 card.style.display = match ? '' : 'none';
 if (match) { anyVisible = true; }
 });
 document.querySelectorAll('.section-label').forEach(function(lbl){
 lbl.style.display = q === '' ? '' : 'none';
 });
-document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block';
 });
 </script>
 </main>
