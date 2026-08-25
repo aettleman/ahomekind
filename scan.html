@@ -102,8 +102,9 @@ var BRANDS = [
 {match:["morrisons"], name:"Morrisons", tier:"check", note:"Leaping Bunny certified own-brand range."},
 {match:["waitrose"], name:"Waitrose", tier:"check", note:"Leaping Bunny certified own-brand range."},
 {match:["rimmel"], name:"Rimmel", tier:"warn", note:"Leaping Bunny certified itself, owned by Coty."},
+{match:["l'oreal","loreal"], name:"L'Oréal", tier:"bad", note:"The world's largest cosmetics company. Sells into mainland China, where animal testing can still be legally required, and has lobbied against a full EU testing ban. Parent company of Maybelline, Garnier, Redken, NYX and more."},
 {match:["garnier"], name:"Garnier", tier:"warn", note:"Leaping Bunny certified, owned by LOreal."},
-{match:["no7","no.7"], name:"No7", tier:"warn", note:"Cruelty-free, owned by Walgreens Boots Alliance."},
+{match:["no7","no.7","no 7","number 7","number seven","boots"], name:"No7 / Boots own brand", tier:"warn", note:"No7 is cruelty-free itself, owned by Walgreens Boots Alliance. Wider Boots-branded ranges vary &mdash; check the specific product where possible."},
 {match:["simple"], name:"Simple", tier:"warn", note:"PETA certified, owned by Unilever."},
 {match:["the ordinary"], name:"The Ordinary", tier:"warn", note:"Cruelty-free itself, owned by Estee Lauder."},
 {match:["drunk elephant"], name:"Drunk Elephant", tier:"warn", note:"Owned by Shiseido, not cruelty-free."},
@@ -185,12 +186,15 @@ var LABEL_MAP = [
 ];
 function el(id){ return document.getElementById(id); }
 function setStatus(t){ el("status").textContent = t; }
+function normalizeSearch(s){
+return String(s || "").normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
 function findBrand(text){
-if(!text) return null;
-var t = text.toLowerCase();
+var t = normalizeSearch(text);
+if(!t) return null;
 for(var i=0;i<BRANDS.length;i++){
 for(var j=0;j<BRANDS[i].match.length;j++){
-if(t.indexOf(BRANDS[i].match[j]) !== -1) return BRANDS[i];
+if(t.indexOf(normalizeSearch(BRANDS[i].match[j])) !== -1) return BRANDS[i];
 }
 }
 return null;
@@ -252,7 +256,7 @@ if(brand){
 out += verdictHTML(brand);
 } else {
 out += "<div class=\"verdict v-unknown\"><div class=\"v-title\">not on my list yet</div>";
-out += "<p style=\"margin-bottom:0; font-size:14px;\">I have not checked this one myself.</p>";
+out += "<p style=\"margin-bottom:0; font-size:14px;\">The public barcode database doesn't have every product &mdash; own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered.</p>";
 out += brandSearchWidget();
 out += "</div>";
 }
