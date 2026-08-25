@@ -267,8 +267,8 @@
   {
     "slug": "imperial-leather",
     "name": "Imperial Leather",
-    "tier": "check",
-    "note": "Owned by PZ Cussons, PETA certified cruelty-free.",
+    "tier": "warn",
+    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified at time of writing.",
     "parentCompany": "PZ Cussons",
     "vegan": "partial",
     "evidence": "",
@@ -284,8 +284,8 @@
   {
     "slug": "carex",
     "name": "Carex",
-    "tier": "check",
-    "note": "Owned by PZ Cussons, PETA certified cruelty-free.",
+    "tier": "warn",
+    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified at time of writing. Carex's own FAQ says its washes/gels/sprays are vegan, but that's a self-declared, uncertified claim too.",
     "parentCompany": "PZ Cussons",
     "vegan": "unknown",
     "evidence": "",
