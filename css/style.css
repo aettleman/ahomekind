@@ -256,6 +256,102 @@ footer.site-footer {
   background: #dcd3c0;
 }
 
+/* App-style bottom navigation (mobile only) */
+.bottom-nav {
+  display: none;
+}
+@media (max-width: 760px) {
+  body { padding-bottom: 74px; }
+  .bottom-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: #f4efe2;
+    border-top: 0.5px solid #cfc4a9;
+    padding: 8px 6px calc(8px + env(safe-area-inset-bottom, 0px));
+    z-index: 500;
+  }
+}
+.bn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #7a7561;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.bn-icon { font-size: 18px; line-height: 1; }
+.bn-label { font-size: 10px; letter-spacing: 0.3px; text-transform: uppercase; }
+.bn-item.active { color: #3d4a3a; font-weight: 600; }
+.bn-scan {
+  margin-top: -22px;
+}
+.bn-scan-circle {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: #4d6b4f;
+  color: #f4efe2;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(61,74,58,0.28);
+  border: 3px solid #f4efe2;
+}
+.bn-scan .bn-label { color: #3d4a3a; font-weight: 700; }
+
+.bn-sheet {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(45,54,42,0.42);
+  z-index: 600;
+}
+.bn-sheet.open { display: block; }
+.bn-sheet-inner {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: #fffdf8;
+  border-radius: 18px 18px 0 0;
+  padding: 22px 24px calc(28px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 72vh;
+  overflow-y: auto;
+}
+.bn-sheet-inner a {
+  color: #3d4a3a;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  padding: 13px 4px;
+  border-bottom: 0.5px solid #ece5d5;
+}
+.bn-sheet-close {
+  margin-top: 14px;
+  background: #ece5d5;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5c5c4f;
+  cursor: pointer;
+}
+body.bn-sheet-lock { overflow: hidden; }
+@media (min-width: 761px) {
+  .bn-sheet { display: none !important; }
+}
+
 @media (max-width: 600px) {
   h1 { font-size: 21px; letter-spacing: 2.5px; }
   nav.main-nav { gap: 12px; font-size: 10px; }
