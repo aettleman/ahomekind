@@ -78,6 +78,12 @@
 <div id="results"></div>
 
 <p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">Product data comes from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>. The cruelty-free verdict comes from my own <a href="brand-check.html">brand check</a> list.</p>
+
+<div class="card" style="margin-top:24px;" id="standing-report-card">
+<h3 style="margin-bottom:6px;">know something a scan won't tell me?</h3>
+<p style="margin-bottom:0;">Whether you just scanned something or not, if you know a brand or product's cruelty-free/vegan status &mdash; or want me to look one up &mdash; let me know here.</p>
+<div id="standing-report-widget"></div>
+</div>
 </main>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 <script>
@@ -210,37 +216,39 @@ return null;
 function escapeAttr(s){
 return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;");
 }
-function reportWidget(prefillName){
+function reportWidget(prefillName, idPrefix){
+var p = idPrefix || "rpt";
 var h = "<div style=\"margin-top:16px; padding-top:16px; border-top:0.5px solid #cfc4a9;\">";
 h += "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:8px;\">know something about this one?</p>";
-h += "<input type=\"text\" id=\"rpt-name\" placeholder=\"brand or product\" value=\"" + escapeAttr(prefillName) + "\" style=\"width:100%; box-sizing:border-box; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; margin-bottom:10px;\">";
+h += "<input type=\"text\" id=\"" + p + "-name\" placeholder=\"brand or product\" value=\"" + escapeAttr(prefillName) + "\" style=\"width:100%; box-sizing:border-box; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; margin-bottom:10px;\">";
 h += "<div style=\"font-size:13.5px; line-height:2;\">";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-lb\"> has the Leaping Bunny logo</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-peta\"> has the PETA logo</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-cfi\"> certified by Cruelty Free International</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-vs\"> has a vegan logo (Vegan Society or similar)</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-other\"> I know it's cruelty-free/vegan another way</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"rpt-unsure\"> not sure &mdash; please look into it</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-lb\"> has the Leaping Bunny logo</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-peta\"> has the PETA logo</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-cfi\"> certified by Cruelty Free International</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-vs\"> has a vegan logo (Vegan Society or similar)</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-other\"> I know it's cruelty-free/vegan another way</label>";
+h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-unsure\"> not sure &mdash; please look into it</label>";
 h += "</div>";
-h += "<textarea id=\"rpt-notes\" placeholder=\"anything else &mdash; where you saw it, a link, etc.\" style=\"width:100%; box-sizing:border-box; margin-top:10px; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; min-height:60px; resize:vertical;\"></textarea>";
-h += "<button class=\"big-btn\" style=\"width:auto; margin:10px 0 0; padding:12px 20px;\" id=\"rpt-btn\">send this to me</button>";
+h += "<textarea id=\"" + p + "-notes\" placeholder=\"anything else &mdash; where you saw it, a link, etc.\" style=\"width:100%; box-sizing:border-box; margin-top:10px; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; min-height:60px; resize:vertical;\"></textarea>";
+h += "<button class=\"big-btn\" style=\"width:auto; margin:10px 0 0; padding:12px 20px;\" id=\"" + p + "-btn\">send this to me</button>";
 h += "<p style=\"font-size:12px; color:#8a8672; margin-top:8px;\">This opens your email app with the details filled in, addressed to me. Got a photo of the logo or packaging? Attach it before you hit send &mdash; that helps a lot.</p>";
 h += "</div>";
 return h;
 }
-function wireReportWidget(){
-var btn = el("rpt-btn");
+function wireReportWidget(idPrefix){
+var p = idPrefix || "rpt";
+var btn = el(p + "-btn");
 if(!btn) return;
 btn.addEventListener("click", function(){
-var name = el("rpt-name").value.trim() || "unknown product";
+var name = el(p + "-name").value.trim() || "unknown product";
 var checks = [];
-if(el("rpt-lb").checked) checks.push("Leaping Bunny logo");
-if(el("rpt-peta").checked) checks.push("PETA logo");
-if(el("rpt-cfi").checked) checks.push("Cruelty Free International certified");
-if(el("rpt-vs").checked) checks.push("Vegan logo (Vegan Society or similar)");
-if(el("rpt-other").checked) checks.push("Cruelty-free/vegan by another source");
-if(el("rpt-unsure").checked) checks.push("Not sure — asking me to look into it");
-var notes = el("rpt-notes").value.trim();
+if(el(p + "-lb").checked) checks.push("Leaping Bunny logo");
+if(el(p + "-peta").checked) checks.push("PETA logo");
+if(el(p + "-cfi").checked) checks.push("Cruelty Free International certified");
+if(el(p + "-vs").checked) checks.push("Vegan logo (Vegan Society or similar)");
+if(el(p + "-other").checked) checks.push("Cruelty-free/vegan by another source");
+if(el(p + "-unsure").checked) checks.push("Not sure — asking me to look into it");
+var notes = el(p + "-notes").value.trim();
 var body = "Product/brand: " + name + "\n\n";
 body += "What they've noticed:\n" + (checks.length ? checks.map(function(c){ return "- " + c; }).join("\n") : "(nothing ticked)") + "\n\n";
 body += "Notes: " + (notes || "(none)") + "\n\n";
@@ -344,6 +352,11 @@ setStatus("");
 el("results").innerHTML = "<div class=\"verdict v-unknown\"><div class=\"v-title\">could not reach the product database</div>" + brandSearchWidget() + "</div>";
 wireBrandLookup();
 });
+}
+var standingWidgetEl = el("standing-report-widget");
+if(standingWidgetEl){
+standingWidgetEl.innerHTML = reportWidget("", "srpt");
+wireReportWidget("srpt");
 }
 el("lookupBtn").addEventListener("click", function(){ lookup(el("manualCode").value); });
 el("manualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookup(el("manualCode").value); });
