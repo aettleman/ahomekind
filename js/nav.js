@@ -19,9 +19,19 @@ dds.forEach(function(dd){ dd.classList.remove('open'); });
 // App-style bottom nav (mobile only) -- injected here so it applies site-wide
 // without editing every page. Uses root-relative paths so it works at any
 // folder depth.
-var current = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '/');
+// Cloudflare serves clean URLs (e.g. "/scan" instead of "/scan.html"), so the
+// live pathname often has no ".html" on it even though our links do. Strip
+// ".html"/"index" and any trailing slash from both sides before comparing,
+// so active-tab detection works whether or not the extension is present.
+function normalizePath(p){
+p = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+if (p.length > 1) p = p.replace(/\/$/, '');
+if (p === '') p = '/';
+return p;
+}
+var current = normalizePath(window.location.pathname);
 function isActive(paths){
-return paths.indexOf(current) !== -1;
+return paths.some(function(p){ return normalizePath(p) === current; });
 }
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);

@@ -83,7 +83,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260827">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260901">');
   lines.push('<style>');
   lines.push('.card.bad { border-color:#a5453d; background:#f3e2df; }');
   lines.push('.rating.bad { color:#8a332c; }');
@@ -180,7 +180,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260827"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260901"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
