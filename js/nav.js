@@ -9,6 +9,47 @@ navigator.serviceWorker.register('/sw.js').catch(function(){});
 });
 }
 
+// Small, contextual "buy me a coffee" float. Pages call
+// window.ahkShowKofiFloat() only after something genuinely useful has
+// just happened (a scan verdict, a brand-check match) -- never on load,
+// and never more than once per page. The footer link stays the
+// permanent, non-contextual way to find it.
+(function(){
+var KOFI_DISMISS_KEY = 'ahk-kofi-dismissed';
+var shown = false;
+window.ahkShowKofiFloat = function(){
+if (shown) return;
+try { if (localStorage.getItem(KOFI_DISMISS_KEY) === '1') return; } catch(e){}
+shown = true;
+var run = function(){
+var el = document.createElement('a');
+el.href = 'https://ko-fi.com/ahomekind';
+el.target = '_blank';
+el.rel = 'noopener';
+el.className = 'kofi-float';
+el.setAttribute('aria-label', 'Support a home kind on Ko-fi (opens in a new tab)');
+el.innerHTML = '<span class="kofi-float-icon" aria-hidden="true">&#9749;</span><span>buy me a coffee</span><span class="kofi-float-x" role="button" tabindex="0" aria-label="dismiss">&times;</span>';
+document.body.appendChild(el);
+requestAnimationFrame(function(){ el.classList.add('show'); });
+var dismiss = function(e){
+e.preventDefault();
+e.stopPropagation();
+el.classList.remove('show');
+setTimeout(function(){ el.remove(); }, 280);
+try { localStorage.setItem(KOFI_DISMISS_KEY, '1'); } catch(e2){}
+};
+var x = el.querySelector('.kofi-float-x');
+x.addEventListener('click', dismiss);
+x.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ dismiss(e); } });
+};
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', run);
+} else {
+run();
+}
+};
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
 var dds = document.querySelectorAll('nav.main-nav .dd');
 function setOpen(dd, open){
