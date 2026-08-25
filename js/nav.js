@@ -50,6 +50,30 @@ run();
 };
 })();
 
+// Subtle scroll-reveal for the homepage service cards. Progressive
+// enhancement only: .home-card has no opacity/transform in the base CSS,
+// so if this never runs (no JS, old browser, reduced motion) the cards
+// are simply visible the whole time, exactly as before this was added.
+document.addEventListener('DOMContentLoaded', function(){
+var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var revealables = document.querySelectorAll('.home-card');
+if (!reduceMotion && revealables.length && 'IntersectionObserver' in window) {
+var io = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if (entry.isIntersecting) {
+entry.target.classList.remove('reveal-pre');
+entry.target.classList.add('reveal-in');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: 0.15 });
+revealables.forEach(function(el){
+el.classList.add('reveal-pre');
+io.observe(el);
+});
+}
+});
+
 document.addEventListener('DOMContentLoaded', function(){
 var dds = document.querySelectorAll('nav.main-nav .dd');
 function setOpen(dd, open){

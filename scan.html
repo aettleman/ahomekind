@@ -6,7 +6,7 @@
 <title>Scan a Barcode — a home kind</title>
 <meta name="description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260902">
+<link rel="stylesheet" href="css/style.css?v=20260903">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -257,7 +257,7 @@ var LABEL_MAP = [
 {keys:["recyclable","recycled"], label:"recyclable packaging"}
 ];
 function el(id){ return document.getElementById(id); }
-function setStatus(t){ el("status").textContent = t; }
+function setStatus(t, loading){ var s = el("status"); s.textContent = t; s.classList.toggle("status-loading", !!loading); }
 var NUMBER_WORDS = {
 zero:"0", one:"1", two:"2", three:"3", four:"4", five:"5", six:"6", seven:"7",
 eight:"8", nine:"9", ten:"10", eleven:"11", twelve:"12", thirteen:"13",
@@ -431,7 +431,7 @@ wireReportWidget();
 function lookup(code){
 code = (code || "").replace(/[^0-9]/g,"");
 if(code.length < 6){ setStatus("That does not look like a barcode."); return; }
-setStatus("looking it up&hellip;");
+setStatus("looking it up&hellip;", true);
 el("results").innerHTML = "";
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
 .then(function(r){ return r.json(); })
@@ -461,7 +461,7 @@ if(typeof ZXing === "undefined"){
 setStatus("Camera scanning did not load. Type the numbers instead.");
 return;
 }
-setStatus("Asking for camera permission...");
+setStatus("Asking for camera permission...", true);
 try {
 codeReader = new ZXing.BrowserMultiFormatReader();
 codeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "reader", function(result, err){
@@ -502,7 +502,7 @@ el("stopBtn").addEventListener("click", stopCamera);
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260902"></script>
+<script src="js/nav.js?v=20260903"></script>
 <script src="js/newsletter.js"></script>
 <script>
 // "Add to home screen" -- shown only when it's actually possible (or, on
