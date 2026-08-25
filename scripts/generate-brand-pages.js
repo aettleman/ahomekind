@@ -159,7 +159,8 @@ function renderBrandPage(brand) {
   lines.push('<div class="newsletter">');
   lines.push('<p class="label3">stay in the loop</p>');
   lines.push('<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds &mdash; no inbox spam, unsubscribe whenever you like.</p>');
-  lines.push('<form class="newsletter-form" id="nf-' + brand.slug + '" action="https://buttondown.email/api/emails/embed-subscribe/PLACEHOLDER-USERNAME" method="post" target="_blank" novalidate>');
+  lines.push('<form class="newsletter-form" id="nf-' + brand.slug + '" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>');
+  lines.push('<input type="hidden" value="1" name="embed">');
   lines.push('<div class="nf-row">');
   lines.push('<label for="nf-email-' + brand.slug + '" class="visually-hidden">Email address</label>');
   lines.push('<input type="email" id="nf-email-' + brand.slug + '" name="email" placeholder="you@example.com" autocomplete="email" required>');

@@ -39,16 +39,6 @@
         return;
       }
 
-      if (form.action.indexOf('PLACEHOLDER-USERNAME') !== -1) {
-        // Provider not connected yet — don't submit to a dead endpoint.
-        e.preventDefault();
-        if (msg) {
-          msg.className = 'nf-msg nf-error';
-          msg.textContent = 'Sign-up isn\'t connected yet — check back soon.';
-        }
-        return;
-      }
-
       // Valid: let the form submit to the provider (opens in a new tab),
       // and show an optimistic success message here.
       if (msg) {
