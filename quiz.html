@@ -343,8 +343,7 @@ function renderResults() {
     html += '<span class="rec-badge">' + (b.price || '') + '</span>';
     html += '</span></div>';
     html += '<p class="rec-why">' + whyBits.join(', ') + '.</p>';
-    html += '<div class="rec-links"><a href="brands/' + b.slug + '/">full brand check &rarr;</a>';
-    if (b.link) { html += '<a href="' + b.link + '" target="_blank" rel="noopener">shop this &rarr;</a>'; }
+    html += '<div class="rec-links"><a href="brands/' + b.slug + '/">see ' + b.name + ' &amp; shop options &rarr;</a>';
     html += '</div></div>';
   });
 
