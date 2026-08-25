@@ -25,6 +25,29 @@
 .chip.no { background:#f3ded9; border-color:#c98a3a; color:#8a4a2a; }
 .srclink { display:block; padding:12px 0; border-bottom:0.5px solid #e0d8c4; font-size:14px; }
 .srclink:last-of-type { border-bottom:none; }
+
+/* Redesigned scan result card */
+.result-in { animation:resultIn 0.32s ease both; }
+@keyframes resultIn { from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+@media(prefers-reduced-motion: reduce){ .result-in { animation:none; } }
+.rcard { border-radius:16px; padding:26px 24px; margin-bottom:16px; }
+.rcard-top { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.rcard-badge { flex-shrink:0; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#f4efe2; background:#6f8768; }
+.v-good .rcard-badge { background:#4d6b4f; }
+.v-warn .rcard-badge { background:#c99a45; }
+.v-bad .rcard-badge { background:#a5453d; }
+.v-unknown .rcard-badge { background:#8a8672; }
+.rcard-name { font-family:'Cormorant Garamond',serif; font-size:21px; color:#3d4a3a; line-height:1.2; }
+.rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a7561; margin-top:2px; }
+.rstatus-row { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+.rstatus { flex:1; min-width:130px; border-radius:10px; padding:12px 14px; background:rgba(255,255,255,0.55); }
+.rstatus-label { font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#5c5c4f; margin-bottom:4px; }
+.rstatus-value { font-size:15px; font-weight:700; display:flex; align-items:center; gap:6px; }
+.rstatus-value.yes { color:#33502f; }
+.rstatus-value.no { color:#8a332c; }
+.rstatus-value.maybe { color:#8a6a2a; }
+.rstatus-value.na { color:#7a7561; }
+.rcard-note { font-size:14px; line-height:1.7; color:#3d4a3a; margin:0; }
 </style>
 </head>
 <body>
@@ -75,7 +98,7 @@
 </div>
 
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
-<div id="results"></div>
+<div id="results" aria-live="polite"></div>
 
 <p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">Product data comes from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>. The cruelty-free verdict comes from my own <a href="brand-check.html">brand check</a> list.</p>
 
@@ -276,10 +299,29 @@ return h;
 }
 function verdictHTML(brand){
 var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
-var head = brand.tier === "good" ? "&#127807; on the good list" : (brand.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (brand.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
-var out = "<div class=\"verdict " + cls + "\"><div class=\"v-title\">" + head + "</div>";
-out += "<p style=\"margin-bottom:6px;\"><strong>" + brand.name + "</strong></p>";
-out += "<p style=\"margin-bottom:0; font-size:14px;\">" + brand.note + "</p></div>";
+var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : "cruelty-free, check the product"));
+var initial = (brand.name || "?").replace(/[^A-Za-z0-9]/g, "").charAt(0).toUpperCase() || "?";
+
+var cfValue, cfClass;
+if(brand.tier === "good"){ cfValue = "&#10003; yes"; cfClass = "yes"; }
+else if(brand.tier === "warn" || brand.tier === "check"){ cfValue = "&#9998; mostly"; cfClass = "maybe"; }
+else if(brand.tier === "bad"){ cfValue = "&#10007; no"; cfClass = "no"; }
+else { cfValue = "? unclear"; cfClass = "na"; }
+
+var noteLower = (brand.note || "").toLowerCase();
+var veganValue, veganClass;
+if(noteLower.indexOf("100% vegan") !== -1 || noteLower.indexOf("fully vegan") !== -1){ veganValue = "&#10003; fully vegan"; veganClass = "yes"; }
+else if(noteLower.indexOf("vegan") !== -1){ veganValue = "&#9998; check product"; veganClass = "maybe"; }
+else { veganValue = "not stated"; veganClass = "na"; }
+
+var out = "<div class=\"rcard " + cls + "\">";
+out += "<div class=\"rcard-top\"><div class=\"rcard-badge\" aria-hidden=\"true\">" + initial + "</div><div><div class=\"rcard-name\">" + brand.name + "</div><div class=\"rcard-headline\">" + headline + "</div></div></div>";
+out += "<div class=\"rstatus-row\">";
+out += "<div class=\"rstatus\"><div class=\"rstatus-label\">cruelty-free</div><div class=\"rstatus-value " + cfClass + "\">" + cfValue + "</div></div>";
+out += "<div class=\"rstatus\"><div class=\"rstatus-label\">vegan</div><div class=\"rstatus-value " + veganClass + "\">" + veganValue + "</div></div>";
+out += "</div>";
+out += "<p class=\"rcard-note\">" + brand.note + "</p>";
+out += "</div>";
 return out;
 }
 function brandSearchWidget(){
@@ -312,8 +354,9 @@ var brand = findBrand(brandText) || findBrand(name);
 if(brand){
 out += verdictHTML(brand);
 } else {
-out += "<div class=\"verdict v-unknown\"><div class=\"v-title\">not on my list yet</div>";
-out += "<p style=\"margin-bottom:0; font-size:14px;\">The public barcode database doesn't have every product &mdash; own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered.</p>";
+out += "<div class=\"rcard v-unknown\">";
+out += "<div class=\"rcard-top\"><div class=\"rcard-badge\" aria-hidden=\"true\">?</div><div><div class=\"rcard-name\">not on my list yet</div><div class=\"rcard-headline\">let's try another way</div></div></div>";
+out += "<p class=\"rcard-note\">The public barcode database doesn't have every product &mdash; own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered.</p>";
 out += brandSearchWidget();
 out += "</div>";
 }
@@ -335,21 +378,21 @@ out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 out += "</div>";
 }
 out += sourceBlock(brandText);
-el("results").innerHTML = out;
+el("results").innerHTML = "<div class=\"result-in\">" + out + "</div>";
 if(!brand) wireBrandLookup();
 wireReportWidget();
 }
 function lookup(code){
 code = (code || "").replace(/[^0-9]/g,"");
 if(code.length < 6){ setStatus("That does not look like a barcode."); return; }
-setStatus("Looking up " + code + "...");
+setStatus("looking it up&hellip;");
 el("results").innerHTML = "";
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
 .then(function(r){ return r.json(); })
 .then(function(d){ setStatus(""); render(d && d.status === 1 ? d.product : null, code); })
 .catch(function(){
 setStatus("");
-el("results").innerHTML = "<div class=\"verdict v-unknown\"><div class=\"v-title\">could not reach the product database</div>" + brandSearchWidget() + "</div>";
+el("results").innerHTML = "<div class=\"result-in\"><div class=\"verdict v-unknown\"><div class=\"v-title\">could not reach the product database</div>" + brandSearchWidget() + "</div></div>";
 wireBrandLookup();
 });
 }
