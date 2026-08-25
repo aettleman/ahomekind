@@ -23,17 +23,19 @@ var current = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\
 function isActive(paths){
 return paths.some(function(p){ return current === p || current.indexOf(p) === 0; });
 }
+function bnItem(href, icon, label, key){
+var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
+return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : '') + (active ? ' active' : '') + '">' +
+'<span class="bn-icon-wrap"><span class="bn-icon">' + icon + '</span></span>' +
+'<span class="bn-label">' + label + '</span></a>';
+}
 var bn = document.createElement('div');
 bn.className = 'bottom-nav';
 bn.innerHTML =
-'<a href="/index.html" class="bn-item' + (isActive(['/', '/index.html']) ? ' active' : '') + '">' +
-'<span class="bn-icon">&#8962;</span><span class="bn-label">Home</span></a>' +
-'<a href="/scan.html" class="bn-item bn-scan' + (isActive(['/scan.html']) ? ' active' : '') + '">' +
-'<span class="bn-scan-circle">&#128247;</span><span class="bn-label">Scan</span></a>' +
-'<a href="/brand-check.html" class="bn-item' + (isActive(['/brand-check.html']) ? ' active' : '') + '">' +
-'<span class="bn-icon">&#128269;</span><span class="bn-label">Check</span></a>' +
-'<a href="/shop.html" class="bn-item' + (isActive(['/shop.html']) ? ' active' : '') + '">' +
-'<span class="bn-icon">&#128717;</span><span class="bn-label">Shop</span></a>' +
+bnItem('/index.html', '&#8962;', 'Home', 'home') +
+bnItem('/scan.html', '&#128247;', 'Scan', 'scan') +
+bnItem('/brand-check.html', '&#128269;', 'Check', 'check') +
+bnItem('/shop.html', '&#128717;', 'Shop', 'shop') +
 '<button type="button" class="bn-item bn-more" id="bn-more-btn">' +
 '<span class="bn-icon">&#8942;</span><span class="bn-label">More</span></button>';
 document.body.appendChild(bn);
