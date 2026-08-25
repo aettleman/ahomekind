@@ -210,10 +210,13 @@ p { margin-bottom: 18px; font-size: 15px; }
 }
 .newsletter-form input[type="email"].nf-invalid { border-color: #d99a8a; }
 .newsletter-form .btn {
-  border: none;
+  background: transparent;
+  border: 0.5px solid #8ba284;
+  color: #ece5d5;
   cursor: pointer;
   font-family: 'Karla', sans-serif;
 }
+.newsletter-form .btn:hover { background: #8ba284; color: #3d4a3a; }
 .newsletter-form .nf-consent {
   display: flex;
   align-items: flex-start;
