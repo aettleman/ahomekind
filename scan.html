@@ -186,8 +186,16 @@ var LABEL_MAP = [
 ];
 function el(id){ return document.getElementById(id); }
 function setStatus(t){ el("status").textContent = t; }
+var NUMBER_WORDS = {
+zero:"0", one:"1", two:"2", three:"3", four:"4", five:"5", six:"6", seven:"7",
+eight:"8", nine:"9", ten:"10", eleven:"11", twelve:"12", thirteen:"13",
+fourteen:"14", fifteen:"15", sixteen:"16", seventeen:"17", eighteen:"18",
+nineteen:"19", twenty:"20"
+};
 function normalizeSearch(s){
-return String(s || "").normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+var t = String(s || "").normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+t = t.replace(/\b[a-z]+\b/g, function(word){ return NUMBER_WORDS[word] || word; });
+return t.replace(/[^a-z0-9]/g, '');
 }
 function findBrand(text){
 var t = normalizeSearch(text);
