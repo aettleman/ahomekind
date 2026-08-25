@@ -18,6 +18,10 @@
         "url": "https://www.amazon.co.uk/dp/B09XMYFTB7?tag=ahomekind-21",
         "label": "Shop: Power Grip Primer (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
     ]
   },
   {
@@ -39,6 +43,11 @@
         "url": "https://www.amazon.co.uk/dp/B00GY7D13G?tag=ahomekind-21",
         "label": "Shop: Organic Coconut Conditioner (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "haircare",
+      "body-shower"
     ]
   },
   {
@@ -60,6 +69,10 @@
         "url": "https://www.amazon.co.uk/dp/B0BJ74DJXG?tag=ahomekind-21",
         "label": "Shop: Moisturising Gel Cream (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "skincare"
     ]
   },
   {
@@ -81,6 +94,10 @@
         "url": "https://www.amazon.co.uk/dp/B00WS9PKC4?tag=ahomekind-21",
         "label": "Shop: Flawless Concealer, Nude (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
     ]
   },
   {
@@ -93,7 +110,13 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "baylis-and-harding",
@@ -105,7 +128,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "original-source",
@@ -117,7 +144,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "noughty",
@@ -134,6 +165,10 @@
         "url": "https://www.amazon.co.uk/dp/B073P9VN6C?tag=ahomekind-21",
         "label": "Shop: To The Rescue Shampoo (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "haircare"
     ]
   },
   {
@@ -151,6 +186,10 @@
         "url": "https://www.amazon.co.uk/dp/B0FK5QGKY1?tag=ahomekind-21",
         "label": "Shop: Curl Jelly (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "haircare"
     ]
   },
   {
@@ -168,6 +207,10 @@
         "url": "https://www.amazon.co.uk/dp/B0GXC2NQW2?tag=ahomekind-21",
         "label": "Shop: Laundry Detergent Capsules (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "household-cleaning"
     ]
   },
   {
@@ -185,6 +228,10 @@
         "url": "https://www.amazon.co.uk/dp/B09X1PCRLT?tag=ahomekind-21",
         "label": "Shop: 4 in 1 Concentrated Disinfectant (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "household-cleaning"
     ]
   },
   {
@@ -197,7 +244,13 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "imperial-leather",
@@ -209,7 +262,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "carex",
@@ -221,7 +278,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "the-inkey-list",
@@ -233,7 +294,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "green-people",
@@ -245,7 +310,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "superdrug-pro-care",
@@ -257,7 +327,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ]
   },
   {
     "slug": "mua",
@@ -274,6 +348,10 @@
         "url": "https://www.amazon.co.uk/dp/B0F8C3XLJM?tag=ahomekind-21",
         "label": "Shop: 5 Shade Eyeshadow Palette, Bronzed (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
     ]
   },
   {
@@ -286,7 +364,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "glaze",
@@ -298,19 +380,27 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "kingfisher",
     "name": "Kingfisher",
     "tier": "good",
-    "note": "Cruelty-free, vegan, independent. PETA-listed.",
+    "note": "Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formulas as a small number of variants may differ.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
   },
   {
     "slug": "bleach-london",
@@ -322,7 +412,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "nyx",
@@ -345,6 +439,10 @@
         "url": "https://www.nyxcosmetics.com/featured/vegan-makeup/",
         "label": "NYX Vegan Collection "
       }
+    ],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
     ]
   },
   {
@@ -357,7 +455,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "makeup-beauty",
+      "body-shower"
+    ]
   },
   {
     "slug": "bulldog",
@@ -369,7 +472,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "tresemm",
@@ -381,7 +489,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "lynx",
@@ -393,7 +505,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "aussie",
@@ -405,7 +521,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "wild",
@@ -417,7 +537,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "rimmel",
@@ -429,7 +553,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ]
   },
   {
     "slug": "garnier",
@@ -441,7 +569,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare",
+      "haircare"
+    ]
   },
   {
     "slug": "no7",
@@ -453,7 +586,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ]
   },
   {
     "slug": "simple",
@@ -465,7 +603,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "dove",
@@ -477,7 +619,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower",
+      "skincare"
+    ]
   },
   {
     "slug": "herbal-essences",
@@ -489,7 +636,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "ren",
@@ -501,7 +652,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "the-ordinary",
@@ -513,7 +668,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "drunk-elephant",
@@ -525,7 +684,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "astonish",
@@ -542,6 +705,10 @@
         "url": "https://www.amazon.co.uk/dp/B004RUHWOG?tag=ahomekind-21",
         "label": "Shop: Kitchen Cleaner, Zesty Lemon (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "household-cleaning"
     ]
   },
   {
@@ -559,6 +726,10 @@
         "url": "https://www.amazon.co.uk/dp/B09T9DVDD5?tag=ahomekind-21",
         "label": "Shop: Miracle Cleaning Paste (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "household-cleaning"
     ]
   },
   {
@@ -571,7 +742,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "zoflora",
@@ -588,6 +764,10 @@
         "url": "https://www.amazon.co.uk/dp/B07SBZ3L81?tag=ahomekind-21",
         "label": "Shop: Linen Fresh Disinfectant Spray (paid link)"
       }
+    ],
+    "price": "£",
+    "category": [
+      "household-cleaning"
     ]
   },
   {
@@ -600,7 +780,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "smol",
@@ -612,7 +797,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "method",
@@ -624,7 +814,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "ecover",
@@ -636,7 +830,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "aldi",
@@ -648,7 +847,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "lidl",
@@ -660,7 +864,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "co-op",
@@ -672,7 +881,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "sainsbury-s",
@@ -684,7 +898,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "morrisons",
@@ -696,7 +915,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "waitrose",
@@ -708,7 +932,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£££",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "marks-and-spencer",
@@ -720,7 +949,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£££",
+    "category": [
+      "household-cleaning",
+      "food-kitchen"
+    ]
   },
   {
     "slug": "ariel",
@@ -732,7 +966,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "bold",
@@ -744,7 +983,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "daz",
@@ -756,7 +1000,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "fairy",
@@ -768,7 +1017,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "flash",
@@ -780,7 +1034,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "lenor",
@@ -792,7 +1050,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "gillette",
@@ -804,7 +1067,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "venus",
@@ -816,7 +1083,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "head-and-shoulders",
@@ -828,19 +1099,27 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "oral-b",
     "name": "Oral-B",
     "tier": "bad",
-    "note": "Owned by Procter & Gamble, who test where legally required.",
+    "note": "Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Oral-B financially supports P&G as a company — that isn't the same as saying this specific toothbrush or toothpaste was itself tested on animals.",
     "parentCompany": "Procter & Gamble",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
   },
   {
     "slug": "pantene",
@@ -852,7 +1131,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "always",
@@ -864,7 +1147,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "period-menstrual",
+      "body-shower"
+    ]
   },
   {
     "slug": "tampax",
@@ -876,7 +1164,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "period-menstrual",
+      "body-shower"
+    ]
   },
   {
     "slug": "febreze",
@@ -888,7 +1181,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "viakal",
@@ -900,7 +1197,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "satin-care",
@@ -912,7 +1213,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "period-menstrual",
+      "body-shower"
+    ]
   },
   {
     "slug": "vaseline",
@@ -924,7 +1230,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "sure",
@@ -936,7 +1247,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "persil",
@@ -948,7 +1263,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "comfort",
@@ -960,7 +1280,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "surf",
@@ -972,7 +1297,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "cif",
@@ -984,7 +1314,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "domestos",
@@ -996,7 +1330,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "radox",
@@ -1008,7 +1346,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "axe",
@@ -1020,7 +1362,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "bedhead",
@@ -1032,7 +1378,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "nivea",
@@ -1044,7 +1394,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower",
+      "skincare"
+    ]
   },
   {
     "slug": "dettol",
@@ -1056,7 +1411,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "vanish",
@@ -1068,7 +1427,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ]
   },
   {
     "slug": "cillit-bang",
@@ -1080,7 +1444,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "finish",
@@ -1092,7 +1460,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "mr-muscle",
@@ -1104,7 +1476,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "glade",
@@ -1116,7 +1492,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "pledge",
@@ -1128,7 +1508,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ]
   },
   {
     "slug": "maybelline",
@@ -1140,7 +1524,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ]
   },
   {
     "slug": "redken",
@@ -1152,7 +1540,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "max-factor",
@@ -1164,7 +1556,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ]
   },
   {
     "slug": "clairol",
@@ -1176,19 +1572,27 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "colgate",
     "name": "Colgate",
     "tier": "bad",
-    "note": "Colgate-Palmolive still testing, PETA lists them as working toward change.",
+    "note": "Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company — this isn't a claim that a specific tube of toothpaste was itself tested on an animal.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ]
   },
   {
     "slug": "palmolive",
@@ -1200,7 +1604,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "sanex",
@@ -1212,7 +1620,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "johnson-s",
@@ -1224,7 +1636,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "aveeno",
@@ -1236,7 +1653,12 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
   },
   {
     "slug": "neutrogena",
@@ -1248,7 +1670,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "listerine",
@@ -1260,7 +1686,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ]
   },
   {
     "slug": "ogx",
@@ -1272,7 +1702,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "clean-and-clear",
@@ -1284,7 +1718,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "t-gel",
@@ -1296,7 +1734,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ]
   },
   {
     "slug": "elemis",
@@ -1308,7 +1750,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££££",
+    "category": [
+      "skincare"
+    ]
   },
   {
     "slug": "tena",
@@ -1320,7 +1766,11 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "rare-beauty",
@@ -1337,6 +1787,10 @@
         "url": "https://www.amazon.co.uk/dp/B0C1CHNC53?tag=ahomekind-21",
         "label": "Shop: Tinted Lip Oil (paid link)"
       }
+    ],
+    "price": "£££",
+    "category": [
+      "makeup-beauty"
     ]
   },
   {
@@ -1354,6 +1808,10 @@
         "url": "https://www.amazon.co.uk/dp/B00S8Q2O2A?tag=ahomekind-21",
         "label": "Shop: Super A Retinol Serum (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "skincare"
     ]
   },
   {
@@ -1371,6 +1829,12 @@
         "url": "https://www.amazon.co.uk/dp/B0BWF68GN1?tag=ahomekind-21",
         "label": "Shop: Camomile Makeup Cleansing Butter (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "skincare",
+      "body-shower",
+      "makeup-beauty"
     ]
   },
   {
@@ -1388,6 +1852,11 @@
         "url": "https://www.amazon.co.uk/dp/B001A15MI8?tag=ahomekind-21",
         "label": "Shop: 18-in-1 Citrus Orange Castile Soap (paid link)"
       }
+    ],
+    "price": "££",
+    "category": [
+      "body-shower",
+      "household-cleaning"
     ]
   },
   {
@@ -1401,6 +1870,141 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": []
+    "links": [],
+    "price": "££",
+    "category": [
+      "makeup-beauty",
+      "haircare",
+      "skincare"
+    ]
+  },
+  {
+    "slug": "peace-with-the-wild",
+    "name": "Peace With The Wild",
+    "tier": "good",
+    "note": "Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself — it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "dr-organic",
+    "name": "Dr Organic",
+    "tier": "good",
+    "note": "Certified cruelty-free (Leaping Bunny / Cruelty Free International); check individual product vegan status as not every item in the range is vegan.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare",
+      "body-shower"
+    ]
+  },
+  {
+    "slug": "gutology",
+    "name": "Gutology",
+    "tier": "warn",
+    "note": "Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "biomed",
+    "name": "Biomed",
+    "tier": "warn",
+    "note": "Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "waken",
+    "name": "Waken",
+    "tier": "warn",
+    "note": "Independent UK brand marketed as vegan and cruelty-free. Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "superdrug-own-brand-dental",
+    "name": "Superdrug own-brand (dental range)",
+    "tier": "good",
+    "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer — this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "aquafresh",
+    "name": "Aquafresh",
+    "tier": "bad",
+    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
+    "parentCompany": "Haleon",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ]
+  },
+  {
+    "slug": "sensodyne",
+    "name": "Sensodyne",
+    "tier": "bad",
+    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Sensodyne financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
+    "parentCompany": "Haleon",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "dental"
+    ]
   }
 ]

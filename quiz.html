@@ -10,6 +10,17 @@
 <style>
 .quiz-opt:hover, .quiz-opt:active { background:#6f8768 !important; border-color:#6f8768 !important; }
 .quiz-opt:hover div, .quiz-opt:active div { color:#ece5d5 !important; }
+.quiz-opt.wide { grid-column: 1 / -1; }
+.quiz-sub { font-size:11.5px; color:#7a7561; margin-top:4px; }
+.quiz-opt:hover .quiz-sub, .quiz-opt:active .quiz-sub { color:#ece5d5 !important; }
+.quiz-progress { text-align:center; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#8ba284; margin-bottom:14px; }
+.rec-card { background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:18px 20px; margin-bottom:14px; }
+.rec-top { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+.rec-name { font-family:'Cormorant Garamond', serif; font-size:20px; color:#3d4a3a; }
+.rec-badges { display:flex; gap:6px; flex-wrap:wrap; }
+.rec-badge { font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:2px 9px; border-radius:10px; background:#e6d4a8; color:#3d4a3a; }
+.rec-why { font-size:13px; color:#6b6653; margin-top:8px; }
+.rec-links { margin-top:10px; display:flex; gap:14px; flex-wrap:wrap; font-size:12.5px; }
 </style>
 </head>
 <body>
@@ -46,86 +57,306 @@
 
 <main class="wrap">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">where do I start?</h1>
-<p>Three questions, zero effort, and a decent chance you're already doing one of these without realising it.</p>
+<p>Three questions. Thirty seconds. Let's make this stupidly easy.</p>
 
 <div id="quiz-app"></div>
 </main>
 <script>
+// Minimal snapshot of data/brands.json, kept in sync manually whenever the dataset changes.
+// Embedded (rather than fetched) so the quiz works identically from a local file:// open
+// and from the live site, matching how brand-check.html embeds its own price/rating data inline.
+var BRANDS = [{"slug": "e-l-f-cosmetics", "name": "e.l.f. cosmetics", "tier": "good", "vegan": "partial", "price": "£", "category": ["makeup-beauty"], "link": "https://www.amazon.co.uk/dp/B09XMXCXG2?tag=ahomekind-21"}, {"slug": "faith-in-nature", "name": "Faith in Nature", "tier": "good", "vegan": "unknown", "price": "£", "category": ["haircare", "body-shower"], "link": "https://www.amazon.co.uk/dp/B0DGQK4XZN?tag=ahomekind-21"}, {"slug": "byoma", "name": "BYOMA", "tier": "good", "vegan": "unknown", "price": "££", "category": ["skincare"], "link": "https://www.amazon.co.uk/dp/B0C7C88ZSK?tag=ahomekind-21"}, {"slug": "barry-m", "name": "Barry M", "tier": "good", "vegan": "full", "price": "£", "category": ["makeup-beauty"], "link": "https://www.amazon.co.uk/dp/B0FM4JY5DC?tag=ahomekind-21"}, {"slug": "b-by-superdrug", "name": "B. by Superdrug", "tier": "good", "vegan": "full", "price": "£", "category": ["makeup-beauty", "skincare", "body-shower"], "link": null}, {"slug": "baylis-and-harding", "name": "Baylis & Harding", "tier": "good", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "original-source", "name": "Original Source", "tier": "good", "vegan": "partial", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "noughty", "name": "Noughty", "tier": "good", "vegan": "partial", "price": "££", "category": ["haircare"], "link": "https://www.amazon.co.uk/dp/B073P9VN6C?tag=ahomekind-21"}, {"slug": "umberto-giannini", "name": "Umberto Giannini", "tier": "good", "vegan": "partial", "price": "££", "category": ["haircare"], "link": "https://www.amazon.co.uk/dp/B0FK5QGKY1?tag=ahomekind-21"}, {"slug": "oceansaver", "name": "OceanSaver", "tier": "good", "vegan": "partial", "price": "££", "category": ["household-cleaning"], "link": "https://www.amazon.co.uk/dp/B0GXC2NQW2?tag=ahomekind-21"}, {"slug": "fabulosa", "name": "Fabulosa", "tier": "good", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": "https://www.amazon.co.uk/dp/B09X1PCRLT?tag=ahomekind-21"}, {"slug": "superdrug-own-brand-wider-range", "name": "Superdrug own brand (wider range)", "tier": "check", "vegan": "unknown", "price": "£", "category": ["makeup-beauty", "skincare", "body-shower"], "link": null}, {"slug": "imperial-leather", "name": "Imperial Leather", "tier": "check", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "carex", "name": "Carex", "tier": "check", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "the-inkey-list", "name": "The Inkey List", "tier": "check", "vegan": "partial", "price": "££", "category": ["skincare"], "link": null}, {"slug": "green-people", "name": "Green People", "tier": "check", "vegan": "unknown", "price": "££", "category": ["skincare", "body-shower"], "link": null}, {"slug": "superdrug-pro-care", "name": "Superdrug Pro Care", "tier": "check", "vegan": "partial", "price": "£", "category": ["dental"], "link": null}, {"slug": "mua", "name": "MUA", "tier": "good", "vegan": "full", "price": "£", "category": ["makeup-beauty"], "link": "https://www.amazon.co.uk/dp/B0F8C3XLJM?tag=ahomekind-21"}, {"slug": "fussy", "name": "Fussy", "tier": "good", "vegan": "partial", "price": "££", "category": ["body-shower"], "link": null}, {"slug": "glaze", "name": "Glaze", "tier": "good", "vegan": "partial", "price": "££", "category": ["haircare"], "link": null}, {"slug": "kingfisher", "name": "Kingfisher", "tier": "good", "vegan": "partial", "price": "££", "category": ["dental"], "link": null}, {"slug": "bleach-london", "name": "Bleach London", "tier": "good", "vegan": "full", "price": "££", "category": ["haircare"], "link": null}, {"slug": "nyx", "name": "NYX", "tier": "warn", "vegan": "partial", "price": "£", "category": ["makeup-beauty"], "link": "https://www.nyxcosmetics.com/featured/vegan-makeup/"}, {"slug": "bondi-sands", "name": "Bondi Sands", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["makeup-beauty", "body-shower"], "link": null}, {"slug": "bulldog", "name": "Bulldog", "tier": "warn", "vegan": "full", "price": "££", "category": ["skincare", "body-shower"], "link": null}, {"slug": "tresemm", "name": "TRESemmé", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["haircare"], "link": null}, {"slug": "lynx", "name": "Lynx", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "aussie", "name": "Aussie", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["haircare"], "link": null}, {"slug": "wild", "name": "Wild", "tier": "warn", "vegan": "partial", "price": "££", "category": ["body-shower"], "link": null}, {"slug": "rimmel", "name": "Rimmel", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["makeup-beauty"], "link": null}, {"slug": "garnier", "name": "Garnier", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["skincare", "haircare"], "link": null}, {"slug": "no7", "name": "No7", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["skincare", "makeup-beauty"], "link": null}, {"slug": "simple", "name": "Simple", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["skincare"], "link": null}, {"slug": "dove", "name": "Dove", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["body-shower", "skincare"], "link": null}, {"slug": "herbal-essences", "name": "Herbal Essences", "tier": "warn", "vegan": "unknown", "price": "£", "category": ["haircare"], "link": null}, {"slug": "ren", "name": "REN", "tier": "warn", "vegan": "unknown", "price": "£££", "category": ["skincare"], "link": null}, {"slug": "the-ordinary", "name": "The Ordinary", "tier": "warn", "vegan": "partial", "price": "££", "category": ["skincare"], "link": null}, {"slug": "drunk-elephant", "name": "Drunk Elephant", "tier": "warn", "vegan": "unknown", "price": "£££", "category": ["skincare"], "link": null}, {"slug": "astonish", "name": "Astonish", "tier": "good", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": "https://www.amazon.co.uk/dp/B004RUHWOG?tag=ahomekind-21"}, {"slug": "the-pink-stuff", "name": "The Pink Stuff", "tier": "good", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": "https://www.amazon.co.uk/dp/B09T9DVDD5?tag=ahomekind-21"}, {"slug": "bio-d", "name": "Bio-D", "tier": "good", "vegan": "partial", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "zoflora", "name": "Zoflora", "tier": "good", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": "https://www.amazon.co.uk/dp/B07SBZ3L81?tag=ahomekind-21"}, {"slug": "miniml", "name": "Miniml", "tier": "good", "vegan": "partial", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "smol", "name": "Smol", "tier": "good", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "method", "name": "Method", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["household-cleaning"], "link": null}, {"slug": "ecover", "name": "Ecover", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "aldi", "name": "Aldi", "tier": "check", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "lidl", "name": "Lidl", "tier": "check", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "co-op", "name": "Co-op", "tier": "check", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "sainsbury-s", "name": "Sainsbury's", "tier": "check", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "morrisons", "name": "Morrisons", "tier": "check", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "waitrose", "name": "Waitrose", "tier": "check", "vegan": "unknown", "price": "£££", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "marks-and-spencer", "name": "Marks & Spencer", "tier": "check", "vegan": "unknown", "price": "£££", "category": ["household-cleaning", "food-kitchen"], "link": null}, {"slug": "ariel", "name": "Ariel", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "bold", "name": "Bold", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "daz", "name": "Daz", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "fairy", "name": "Fairy", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "flash", "name": "Flash", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "lenor", "name": "Lenor", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "gillette", "name": "Gillette", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["body-shower"], "link": null}, {"slug": "venus", "name": "Venus", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["body-shower"], "link": null}, {"slug": "head-and-shoulders", "name": "Head & Shoulders", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["haircare"], "link": null}, {"slug": "oral-b", "name": "Oral-B", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["dental"], "link": null}, {"slug": "pantene", "name": "Pantene", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["haircare"], "link": null}, {"slug": "always", "name": "Always", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["period-menstrual", "body-shower"], "link": null}, {"slug": "tampax", "name": "Tampax", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["period-menstrual", "body-shower"], "link": null}, {"slug": "febreze", "name": "Febreze", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning"], "link": null}, {"slug": "viakal", "name": "Viakal", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "satin-care", "name": "Satin Care", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["period-menstrual", "body-shower"], "link": null}, {"slug": "vaseline", "name": "Vaseline", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["skincare", "body-shower"], "link": null}, {"slug": "sure", "name": "Sure", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "persil", "name": "Persil", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "comfort", "name": "Comfort", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "surf", "name": "Surf", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "cif", "name": "Cif", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "domestos", "name": "Domestos", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "radox", "name": "Radox", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "axe", "name": "Axe", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "bedhead", "name": "Bedhead", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["haircare"], "link": null}, {"slug": "nivea", "name": "Nivea", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["body-shower", "skincare"], "link": null}, {"slug": "dettol", "name": "Dettol", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning"], "link": null}, {"slug": "vanish", "name": "Vanish", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning", "laundry"], "link": null}, {"slug": "cillit-bang", "name": "Cillit Bang", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "finish", "name": "Finish", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["household-cleaning"], "link": null}, {"slug": "mr-muscle", "name": "Mr Muscle", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "glade", "name": "Glade", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "pledge", "name": "Pledge", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["household-cleaning"], "link": null}, {"slug": "maybelline", "name": "Maybelline", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["makeup-beauty"], "link": null}, {"slug": "redken", "name": "Redken", "tier": "bad", "vegan": "unknown", "price": "£££", "category": ["haircare"], "link": null}, {"slug": "max-factor", "name": "Max Factor", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["makeup-beauty"], "link": null}, {"slug": "clairol", "name": "Clairol", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["haircare"], "link": null}, {"slug": "colgate", "name": "Colgate", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["dental"], "link": null}, {"slug": "palmolive", "name": "Palmolive", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "sanex", "name": "Sanex", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["body-shower"], "link": null}, {"slug": "johnson-s", "name": "Johnson's", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["skincare", "body-shower"], "link": null}, {"slug": "aveeno", "name": "Aveeno", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["skincare", "body-shower"], "link": null}, {"slug": "neutrogena", "name": "Neutrogena", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["skincare"], "link": null}, {"slug": "listerine", "name": "Listerine", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["dental"], "link": null}, {"slug": "ogx", "name": "OGX", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["haircare"], "link": null}, {"slug": "clean-and-clear", "name": "Clean & Clear", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["skincare"], "link": null}, {"slug": "t-gel", "name": "T/Gel", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["haircare"], "link": null}, {"slug": "elemis", "name": "Elemis", "tier": "bad", "vegan": "unknown", "price": "££££", "category": ["skincare"], "link": null}, {"slug": "tena", "name": "TENA", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["body-shower"], "link": null}, {"slug": "rare-beauty", "name": "Rare Beauty", "tier": "good", "vegan": "full", "price": "£££", "category": ["makeup-beauty"], "link": "https://www.amazon.co.uk/dp/B0C1CHNC53?tag=ahomekind-21"}, {"slug": "mad-hippie", "name": "Mad Hippie", "tier": "good", "vegan": "full", "price": "££", "category": ["skincare"], "link": "https://www.amazon.co.uk/dp/B00S8Q2O2A?tag=ahomekind-21"}, {"slug": "the-body-shop", "name": "The Body Shop", "tier": "warn", "vegan": "partial", "price": "££", "category": ["skincare", "body-shower", "makeup-beauty"], "link": "https://www.amazon.co.uk/dp/B0BWF68GN1?tag=ahomekind-21"}, {"slug": "dr-bronners", "name": "Dr Bronner's", "tier": "warn", "vegan": "partial", "price": "££", "category": ["body-shower", "household-cleaning"], "link": "https://www.amazon.co.uk/dp/B001A15MI8?tag=ahomekind-21"}, {"slug": "l-oreal", "name": "L'Oréal", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["makeup-beauty", "haircare", "skincare"], "link": null}, {"slug": "peace-with-the-wild", "name": "Peace With The Wild", "tier": "good", "vegan": "partial", "price": "££", "category": ["dental"], "link": null}, {"slug": "dr-organic", "name": "Dr Organic", "tier": "good", "vegan": "partial", "price": "£", "category": ["skincare", "body-shower"], "link": null}, {"slug": "gutology", "name": "Gutology", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["dental"], "link": null}, {"slug": "biomed", "name": "Biomed", "tier": "warn", "vegan": "unknown", "price": "££", "category": ["dental"], "link": null}, {"slug": "waken", "name": "Waken", "tier": "warn", "vegan": "partial", "price": "££", "category": ["dental"], "link": null}, {"slug": "superdrug-own-brand-dental", "name": "Superdrug own-brand (dental range)", "tier": "good", "vegan": "partial", "price": "£", "category": ["dental"], "link": null}, {"slug": "aquafresh", "name": "Aquafresh", "tier": "bad", "vegan": "unknown", "price": "£", "category": ["dental"], "link": null}, {"slug": "sensodyne", "name": "Sensodyne", "tier": "bad", "vegan": "unknown", "price": "££", "category": ["dental"], "link": null}];
+
+var TIER_LABEL = { good: "cruelty-free", check: "worth a closer look", warn: "caution &mdash; check", bad: "tested on animals" };
+var SUPERMARKET_SLUGS = ["aldi","lidl","co-op","sainsbury-s","morrisons","waitrose","marks-and-spencer"];
+
 var questions = [
-{q: "what are we tackling first?", options: [
-{label: "beauty & skincare", icon: "\uD83D\uDC84", value: "beauty"},
-{label: "food & kitchen", icon: "\uD83E\uDD57", value: "food"},
-{label: "household & cleaning", icon: "\uD83E\uDDFD", value: "household"},
-{label: "genuinely no idea", icon: "\uD83E\uDD37", value: "unsure"}]},
-{q: "how dramatic are we feeling today?", options: [
-{label: "baby steps, please", icon: "\uD83D\uDC23", value: "small"},
-{label: "steady and sensible", icon: "\uD83C\uDF31", value: "medium"},
-{label: "burn it all down, start fresh", icon: "\uD83D\uDD25", value: "large"}]},
-{q: "the deciding factor?", options: [
-{label: "won't break the bank", icon: "\uD83D\uDCB7", value: "budget"},
-{label: "in shops I already go to", icon: "\uD83D\uDED2", value: "accessible"},
-{label: "the good stuff, no compromises", icon: "\u2728", value: "quality"}]}
+{
+  key: 'q1',
+  q: "what are we sorting first?",
+  options: [
+    { label: "makeup & beauty", icon: "💄", value: "makeup-beauty" },
+    { label: "skincare", icon: "✨", value: "skincare" },
+    { label: "haircare", icon: "💇‍♀️", value: "haircare" },
+    { label: "household & cleaning", sub: "the stuff you use to clean your home", icon: "🧽", value: "household-cleaning" },
+    { label: "food & kitchen", icon: "🥗", value: "food-kitchen" },
+    { label: "honestly no idea", icon: "🤷", value: "unsure" }
+  ]
+},
+{
+  key: 'q2',
+  q: "what exactly are we changing?",
+  dependsOn: 'q1',
+  branches: {
+    'makeup-beauty': [
+      { label: "makeup", icon: "💄", value: "makeup-beauty" },
+      { label: "skincare", icon: "✨", value: "skincare" },
+      { label: "body & shower", icon: "🫙", value: "body-shower" },
+      { label: "dental", icon: "🦷", value: "dental" },
+      { label: "a bit of everything", icon: "🌀", value: "mixed-beauty" }
+    ],
+    'skincare': [
+      { label: "face skincare", icon: "✨", value: "skincare" },
+      { label: "body & shower", icon: "🫙", value: "body-shower" },
+      { label: "a bit of everything", icon: "🌀", value: "mixed-beauty" }
+    ],
+    'haircare': [
+      { label: "shampoo & conditioner", icon: "🧴", value: "haircare" },
+      { label: "styling products", icon: "💇", value: "haircare" },
+      { label: "a bit of everything", icon: "🌀", value: "mixed-beauty" }
+    ],
+    'household-cleaning': [
+      { label: "laundry", icon: "🧺", value: "laundry" },
+      { label: "general cleaning & surfaces", icon: "🧽", value: "household-cleaning" },
+      { label: "both", icon: "🌀", value: "mixed-household" }
+    ],
+    'food-kitchen': [
+      { label: "just starting to think about it", icon: "🌱", value: "food-light" },
+      { label: "ready to try meat-free swaps", icon: "🥗", value: "food-ready" }
+    ],
+    'unsure': [
+      { label: "let's start with the easiest wins", icon: "✨", value: "mixed-beauty" }
+    ]
+  }
+},
+{
+  key: 'q3',
+  q: "how dramatic are we feeling today?",
+  options: [
+    { label: "baby steps", icon: "🐣", value: "small" },
+    { label: "steady and sensible", icon: "🌱", value: "medium" },
+    { label: "burn it all down", icon: "🔥", value: "large" }
+  ]
+},
+{
+  key: 'q4',
+  q: "okay, what's the dealbreaker?",
+  options: [
+    { label: "don't make me skint", icon: "💷", value: "budget" },
+    { label: "I want it where I already shop", icon: "🛒", value: "accessible" },
+    { label: "I want the good stuff", icon: "✨", value: "quality" },
+    { label: "I care most about the ethics", icon: "🌱", value: "ethics" }
+  ]
+},
+{
+  key: 'q5',
+  q: "how much do you know already?",
+  options: [
+    { label: "completely new", icon: "🐣", value: "new" },
+    { label: "know the basics", icon: "🌱", value: "basics" },
+    { label: "already check brands", icon: "🔎", value: "advanced" },
+    { label: "no idea", icon: "🤷‍♀️", value: "noidea" }
+  ]
+}
 ];
+
 var answers = {};
 var current = 0;
-var results = {
-beauty: {title: "beauty & skincare",
-text: "Good instinct. This is the easiest category by a mile, no one's hair actually needed a rabbit's sacrifice.",
-picks: [{name: "e.l.f. Cosmetics", note: "budget-friendly, fully vegan and cruelty-free"},
-{name: "Faith in Nature", note: "widely available in UK supermarkets"},
-{name: "B. by Superdrug", note: "100% vegan own-brand, easy to find"}]},
-food: {title: "food & kitchen",
-text: "The big one, and the most personal. This isn't a compromise diet, there's a genuine abundance once you look past the processed junk. Start with what you already cook often.",
-picks: [{name: "check the Start Here page", note: "food swaps depend on how you already eat, worth reading properly"}]},
-household: {title: "household & cleaning",
-text: "The most overlooked category, and weirdly the easiest one to fully sort out in a single supermarket trip.",
-picks: [{name: "Astonish", note: "UK-made, fully certified cruelty-free and vegan"},
-{name: "The Pink Stuff", note: "Leaping Bunny certified worldwide"},
-{name: "Method or Ecover", note: "cruelty-free themselves, check the parent company note on the brand check page"}]},
-unsure: {title: "beauty & skincare",
-text: "Fair enough, no idea is a valid answer. Start with beauty and skincare anyway, easiest win going.",
-picks: [{name: "e.l.f. Cosmetics", note: "budget-friendly, fully vegan and cruelty-free"},
-{name: "Faith in Nature", note: "widely available in UK supermarkets"}]}
-};
+
+function activeQuestions() {
+  // Q2 is skipped entirely for the food/unsure paths after resolving its branch,
+  // and Q1==unsure jumps straight to the simplified branch then continues.
+  return questions;
+}
+
+function currentQuestion() {
+  var q = questions[current];
+  if (q.branches) {
+    var branchKey = answers[q.dependsOn];
+    var opts = q.branches[branchKey] || q.branches['unsure'];
+    return { q: q.q, options: opts, key: q.key };
+  }
+  return q;
+}
+
 function render() {
-var app = document.getElementById('quiz-app');
-if (current < questions.length) {
-var q = questions[current];
-var html = '<h3 style="text-align:center; margin-bottom:24px; font-size:18px;">' + q.q + '</h3>';
-html += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">';
-q.options.forEach(function(opt) {
-html += '<div class="quiz-opt" data-value="' + opt.value + '" style="cursor:pointer; background:#ece5d5; border:1.5px solid #cfc4a9; border-radius:12px; padding:24px 12px; text-align:center; transition:0.15s;">';
-html += '<div style="font-size:32px; margin-bottom:10px;">' + opt.icon + '</div>';
-html += '<div style="font-size:13px; color:#3d4a3a; letter-spacing:0.3px; line-height:1.4;">' + opt.label + '</div>';
-html += '</div>';
-});
-html += '</div>';
-app.innerHTML = html;
-document.querySelectorAll('.quiz-opt').forEach(function(btn) {
-btn.addEventListener('click', function() {
-answers[current] = this.getAttribute('data-value');
-current++;
-render();
-});
-});
-} else {
-var category = answers[0] === 'unsure' ? 'unsure' : answers[0];
-var result = results[category];
-var html = '<div class="card" style="border-color:#6f8768;">';
-html += '<p class="rating">&#127807; your starting point</p>';
-html += '<h3 style="font-size:18px;">' + result.title + '</h3>';
-html += '<p style="margin-bottom:16px;">' + result.text + '</p>';
-result.picks.forEach(function(p) {
-html += '<p style="margin-bottom:8px;"><strong style="color:#3d4a3a;">' + p.name + '</strong><br>' + p.note + '</p>';
-});
-html += '<div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">';
-html += '<a href="brand-check.html" class="btn">see the full brand check</a>';
-html += '<a href="start-here.html" class="btn">start here guide</a>';
-html += '</div></div>';
-html += '<p style="margin-top:20px;"><a href="quiz.html">start over &rarr;</a></p>';
-app.innerHTML = html;
+  var app = document.getElementById('quiz-app');
+  if (current < questions.length) {
+    var q = currentQuestion();
+    var html = '<p class="quiz-progress">question ' + (current + 1) + ' of ' + questions.length + '</p>';
+    html += '<h3 style="text-align:center; margin-bottom:24px; font-size:18px;">' + q.q + '</h3>';
+    html += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">';
+    q.options.forEach(function(opt) {
+      var wide = q.options.length % 2 !== 0 && q.options[q.options.length - 1] === opt ? ' wide' : '';
+      html += '<div class="quiz-opt' + wide + '" data-value="' + opt.value + '" style="cursor:pointer; background:#ece5d5; border:1.5px solid #cfc4a9; border-radius:12px; padding:22px 12px; text-align:center; transition:0.15s;">';
+      html += '<div style="font-size:30px; margin-bottom:8px;">' + opt.icon + '</div>';
+      html += '<div style="font-size:13px; color:#3d4a3a; letter-spacing:0.3px; line-height:1.4;">' + opt.label + '</div>';
+      if (opt.sub) { html += '<div class="quiz-sub">' + opt.sub + '</div>'; }
+      html += '</div>';
+    });
+    html += '</div>';
+    if (current > 0) {
+      html += '<p style="margin-top:18px; text-align:center;"><a href="#" id="quizBack" style="font-size:12px; color:#8ba284;">&larr; back</a></p>';
+    }
+    app.innerHTML = html;
+    document.querySelectorAll('.quiz-opt').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var key = questions[current].key;
+        answers[key] = this.getAttribute('data-value');
+        current++;
+        render();
+        window.scrollTo({ top: document.getElementById('quiz-app').offsetTop - 90, behavior: 'smooth' });
+      });
+    });
+    var back = document.getElementById('quizBack');
+    if (back) {
+      back.addEventListener('click', function(e) {
+        e.preventDefault();
+        current--;
+        render();
+      });
+    }
+  } else {
+    renderResults();
+  }
 }
+
+function matchesCategory(brand, cats) {
+  return cats.some(function(c) { return brand.category.indexOf(c) !== -1; });
 }
+
+function isEthical(brand) {
+  return brand.tier === 'good' && (brand.vegan === 'full' || brand.vegan === 'yes');
+}
+
+function isSupermarketish(brand) {
+  return SUPERMARKET_SLUGS.indexOf(brand.slug) !== -1;
+}
+
+function priceRank(p) { return { '£': 1, '££': 2, '£££': 3, '££££': 4 }[p] || 2; }
+
+// Resolves the answers into the set of brand categories the result should filter on.
+function resolveCategories() {
+  var q2 = answers.q2;
+  var map = {
+    'mixed-beauty': ['makeup-beauty', 'skincare', 'body-shower', 'dental'],
+    'mixed-household': ['household-cleaning', 'laundry']
+  };
+  if (map[q2]) { return map[q2]; }
+  if (q2) { return [q2]; }
+  return [answers.q1];
+}
+
+function getRecommendations() {
+  var cats = resolveCategories();
+  var pool = BRANDS.filter(function(b) { return matchesCategory(b, cats); });
+
+  // Prefer cruelty-free ("good") tier first.
+  var good = pool.filter(function(b) { return b.tier === 'good'; });
+  var working = good.length ? good.slice() : pool.slice();
+
+  var dealbreaker = answers.q4;
+  var why = [];
+
+  if (dealbreaker === 'ethics') {
+    var ethical = working.filter(isEthical);
+    if (ethical.length >= 3) { working = ethical; why.push('fully vegan and cruelty-free'); }
+    else { why.push('cruelty-free'); }
+  } else if (dealbreaker === 'budget') {
+    var budget = working.filter(function(b) { return b.price === '£'; });
+    if (budget.length >= 3) { working = budget; why.push('budget-friendly'); }
+    else { why.push('cruelty-free'); }
+  } else if (dealbreaker === 'quality') {
+    var premium = working.filter(function(b) { return priceRank(b.price) >= 3; });
+    if (premium.length >= 3) { working = premium; why.push('a step up in quality'); }
+    else { why.push('cruelty-free'); }
+  } else if (dealbreaker === 'accessible') {
+    var accessible = working.filter(isSupermarketish);
+    if (accessible.length >= 3) { working = accessible; why.push('easy to find where you already shop'); }
+    else { why.push('cruelty-free'); }
+  } else {
+    why.push('cruelty-free');
+  }
+
+  // Never show fewer than 3 if the category alone had >= 3 matches; broaden gracefully.
+  if (working.length < 3 && pool.length >= 3) { working = good.length >= 3 ? good : pool; }
+  if (working.length < 3) { working = pool; }
+
+  var picks = working.slice(0, 6);
+  if (picks.length < 3 && picks.length < pool.length) {
+    // widen category slightly as a last resort: bring in "check" tier too
+    var wider = pool.filter(function(b) { return picks.indexOf(b) === -1; });
+    picks = picks.concat(wider).slice(0, Math.max(3, picks.length));
+  }
+
+  return { picks: picks, why: why, cats: cats };
+}
+
+function categoryLabel(c) {
+  var labels = {
+    'makeup-beauty': 'makeup & beauty',
+    'skincare': 'skincare',
+    'body-shower': 'body & shower',
+    'dental': 'dental',
+    'haircare': 'haircare',
+    'household-cleaning': 'household & cleaning',
+    'laundry': 'laundry',
+    'food-kitchen': 'food & kitchen',
+    'period-menstrual': 'period care'
+  };
+  return labels[c] || c;
+}
+
+function renderResults() {
+  var app = document.getElementById('quiz-app');
+
+  // Food paths route straight to food.html rather than a brand list.
+  if (answers.q2 === 'food-light' || answers.q2 === 'food-ready' || answers.q1 === 'food-kitchen') {
+    var foodHtml = '<div class="card" style="border-color:#6f8768;">';
+    foodHtml += '<p class="rating">&#127807; your kinder starting point</p>';
+    foodHtml += '<h3 style="font-size:18px;">food &amp; kitchen</h3>';
+    foodHtml += '<p style="margin-bottom:16px;">' + (answers.q2 === 'food-ready'
+      ? "Sounds like you're ready to actually try some swaps. Good news: there's a genuine abundance once you look past the processed stuff."
+      : "Totally fine to just be thinking about it. No pressure, no deadline, just a place to start when you're ready.") + '</p>';
+    foodHtml += '<p><a href="food.html" class="btn">go to food &amp; kitchen &rarr;</a></p>';
+    foodHtml += '</div>';
+    foodHtml += '<p style="margin-top:20px;"><a href="quiz.html">start over &rarr;</a> &middot; <a href="brand-check.html">full brand check</a></p>';
+    app.innerHTML = foodHtml;
+    return;
+  }
+
+  var result = getRecommendations();
+  var beginner = (answers.q5 === 'new' || answers.q5 === 'noidea');
+  var catLabels = result.cats.map(categoryLabel).join(' / ');
+
+  var html = '<div class="card" style="border-color:#6f8768;">';
+  html += '<p class="rating">&#127807; your kinder starting point</p>';
+  html += '<h3 style="font-size:18px;">' + catLabels + '</h3>';
+
+  var intro = "Based on what you told us, here's where we'd start: " + catLabels + '.';
+  if (answers.q4 === 'ethics') { intro += " We've leaned toward fully vegan, cruelty-free picks since ethics is what matters most to you."; }
+  else if (answers.q4 === 'budget') { intro += " We've kept these budget-friendly, since that's the priority."; }
+  else if (answers.q4 === 'quality') { intro += " We've leaned toward the higher-end picks since you want the good stuff."; }
+  else if (answers.q4 === 'accessible') { intro += " We've tried to prioritise names you can pick up where you already shop."; }
+  if (beginner) { intro += " Since you're just getting started: \"cruelty-free\" means not tested on animals, \"vegan\" means no animal-derived ingredients at all &mdash; a brand can be one without the other."; }
+  html += '<p style="margin-bottom:18px;">' + intro + '</p>';
+
+  result.picks.forEach(function(b) {
+    var veganLabel = { full: 'fully vegan', partial: 'partly vegan', unknown: 'vegan status unclear', yes: 'fully vegan', no: 'not vegan' }[b.vegan] || b.vegan;
+    var tierLabel = TIER_LABEL[b.tier] || b.tier;
+    var whyBits = result.why.slice();
+    whyBits.push('matches your ' + categoryLabel(answers.q1 || result.cats[0]) + ' pick');
+    html += '<div class="rec-card">';
+    html += '<div class="rec-top"><span class="rec-name">' + b.name + '</span><span class="rec-badges">';
+    html += '<span class="rec-badge">' + tierLabel + '</span>';
+    html += '<span class="rec-badge">' + veganLabel + '</span>';
+    html += '<span class="rec-badge">' + (b.price || '') + '</span>';
+    html += '</span></div>';
+    html += '<p class="rec-why">' + whyBits.join(', ') + '.</p>';
+    html += '<div class="rec-links"><a href="brands/' + b.slug + '/">full brand check &rarr;</a>';
+    if (b.link) { html += '<a href="' + b.link + '" target="_blank" rel="noopener">shop this &rarr;</a>'; }
+    html += '</div></div>';
+  });
+
+  html += '<div class="card" style="margin-top:8px; background:#e6d4a8; border-color:#e6d4a8;">';
+  html += '<p style="margin:0; font-size:13.5px; color:#3d4a3a;"><strong>start here:</strong> don\'t replace everything at once. Start with one product when it runs out, not your whole bathroom cabinet today.</p>';
+  html += '</div>';
+
+  html += '</div>';
+  html += '<p style="margin-top:20px; display:flex; gap:16px; flex-wrap:wrap;"><a href="quiz.html">start over &rarr;</a> <a href="brand-check.html">full brand check &rarr;</a> <a href="food.html">food &amp; kitchen &rarr;</a></p>';
+  app.innerHTML = html;
+}
+
 render();
 </script>
 

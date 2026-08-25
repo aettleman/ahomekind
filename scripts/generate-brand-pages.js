@@ -122,8 +122,10 @@ function renderBrandPage(brand) {
   lines.push('<main class="wrap">');
   lines.push('<p style="font-size:12px; margin-top:24px;"><a href="../../brand-check.html">&larr; back to brand check</a></p>');
   lines.push('');
+  const priceBadge = brand.price ? ('<span style="display:inline-block; margin-left:10px; padding:2px 9px; background:#e6d4a8; border-radius:12px; font-size:12px; color:#3d4a3a; vertical-align:middle;">' + escapeHtml(brand.price) + '</span>') : '';
+
   lines.push('<div class="card ' + tier.className + '" style="margin-top:16px;">');
-  lines.push('<p class="rating ' + tier.ratingClass + '">' + tier.emoji + ' ' + tier.label + '</p>');
+  lines.push('<p class="rating ' + tier.ratingClass + '">' + tier.emoji + ' ' + tier.label + priceBadge + '</p>');
   lines.push('<h1 style="font-size:26px; margin:6px 0 14px;">' + escapeHtml(brand.name) + '</h1>');
   lines.push('<p style="font-size:15px; line-height:1.8;">' + escapeHtml(brand.note) + '</p>');
   lines.push('</div>');
