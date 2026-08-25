@@ -73,7 +73,7 @@ function renderBrandPage(brand) {
   lines.push('<html lang="en">');
   lines.push('<head>');
   lines.push('<meta charset="UTF-8">');
-  lines.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+  lines.push('<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">');
   lines.push('<title>' + escapeHtml(title) + '</title>');
   lines.push('<meta name="description" content="' + description + '">');
   lines.push('<link rel="canonical" href="' + canonical + '">');
@@ -84,6 +84,12 @@ function renderBrandPage(brand) {
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
   lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260901">');
+  lines.push('<link rel="manifest" href="../../manifest.json">');
+  lines.push('<meta name="theme-color" content="#3d4a3a">');
+  lines.push('<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">');
+  lines.push('<meta name="apple-mobile-web-app-capable" content="yes">');
+  lines.push('<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">');
+  lines.push('<meta name="apple-mobile-web-app-title" content="A Home Kind">');
   lines.push('<style>');
   lines.push('.card.bad { border-color:#a5453d; background:#f3e2df; }');
   lines.push('.rating.bad { color:#8a332c; }');

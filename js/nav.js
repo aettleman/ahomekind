@@ -1,3 +1,14 @@
+// Register the service worker site-wide so the app shell (styling, this
+// script, icons) loads instantly and offline visits get a proper "you're
+// offline" screen instead of a browser error. See sw.js for what this
+// does and, just as importantly, what it deliberately doesn't do (the
+// scanner itself still needs a live connection).
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function(){
+navigator.serviceWorker.register('/sw.js').catch(function(){});
+});
+}
+
 document.addEventListener('DOMContentLoaded', function(){
 var dds = document.querySelectorAll('nav.main-nav .dd');
 dds.forEach(function(dd){
