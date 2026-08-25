@@ -213,17 +213,46 @@ h += "<p style=\"margin-bottom:0;\">Not in the open database yet. Try <a href=\"
 h += "</div>";
 return h;
 }
+function verdictHTML(brand){
+var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
+var head = brand.tier === "good" ? "&#127807; on the good list" : (brand.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (brand.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
+var out = "<div class=\"verdict " + cls + "\"><div class=\"v-title\">" + head + "</div>";
+out += "<p style=\"margin-bottom:6px;\"><strong>" + brand.name + "</strong></p>";
+out += "<p style=\"margin-bottom:0; font-size:14px;\">" + brand.note + "</p></div>";
+return out;
+}
+function brandLookupBlock(){
+var out = "<div class=\"card\" style=\"margin-top:0;\">";
+out += "<h3 style=\"margin-bottom:8px;\">not sure it's covered? try the brand name</h3>";
+out += "<p style=\"font-size:13.5px; margin-bottom:12px;\">The public barcode database doesn't have every product &mdash; own-brand and retailer ranges especially. If you know the brand printed on the pack, type it in and I'll check it against my own list directly.</p>";
+out += "<div class=\"manual\" style=\"margin:0 0 8px;\">";
+out += "<input type=\"text\" id=\"manualBrand\" placeholder=\"e.g. Superdrug, Garnier, Dove...\">";
+out += "<button class=\"big-btn\" style=\"width:auto; margin:0; padding:14px 20px;\" id=\"brandLookupBtn\">check</button>";
+out += "</div>";
+out += "<div id=\"brandResult\"></div>";
+out += "</div>";
+return out;
+}
+function wireBrandLookup(){
+var input = el("manualBrand");
+var btn = el("brandLookupBtn");
+if(!input || !btn) return;
+function run(){
+var brand = findBrand(input.value);
+el("brandResult").innerHTML = brand
+? verdictHTML(brand)
+: "<p style=\"font-size:13.5px; color:#7a7561; margin:8px 0 0;\">Not on my list yet either &mdash; try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+}
+btn.addEventListener("click", run);
+input.addEventListener("keydown", function(e){ if(e.key === "Enter") run(); });
+}
 function render(product, code){
 var out = "";
 var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = findBrand(brandText) || findBrand(name);
 if(brand){
-var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
-var head = brand.tier === "good" ? "&#127807; on the good list" : (brand.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (brand.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
-out += "<div class=\"verdict " + cls + "\"><div class=\"v-title\">" + head + "</div>";
-out += "<p style=\"margin-bottom:6px;\"><strong>" + brand.name + "</strong></p>";
-out += "<p style=\"margin-bottom:0; font-size:14px;\">" + brand.note + "</p></div>";
+out += verdictHTML(brand);
 } else {
 out += "<div class=\"verdict v-unknown\"><div class=\"v-title\">not on my list yet</div>";
 out += "<p style=\"margin-bottom:0; font-size:14px;\">I have not checked this one myself.</p></div>";
@@ -246,7 +275,9 @@ out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 out += "</div>";
 }
 out += sourceBlock(brandText);
+if(!brand) out += brandLookupBlock();
 el("results").innerHTML = out;
+if(!brand) wireBrandLookup();
 }
 function lookup(code){
 code = (code || "").replace(/[^0-9]/g,"");
@@ -256,7 +287,11 @@ el("results").innerHTML = "";
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
 .then(function(r){ return r.json(); })
 .then(function(d){ setStatus(""); render(d && d.status === 1 ? d.product : null, code); })
-.catch(function(){ setStatus(""); el("results").innerHTML = "<div class=\"card\"><p style=\"margin-bottom:0;\">Could not reach the product database.</p></div>"; });
+.catch(function(){
+setStatus("");
+el("results").innerHTML = "<div class=\"card\"><p style=\"margin-bottom:0;\">Could not reach the product database.</p></div>" + brandLookupBlock();
+wireBrandLookup();
+});
 }
 el("lookupBtn").addEventListener("click", function(){ lookup(el("manualCode").value); });
 el("manualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookup(el("manualCode").value); });
@@ -313,7 +348,6 @@ el("stopBtn").addEventListener("click", stopCamera);
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a></footer>
-<script src="js/nav.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/newsletter.js"></script>
 </body>
