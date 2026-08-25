@@ -5,7 +5,7 @@
     "tier": "good",
     "note": "Independently owned, PETA and Vegan Society certified.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -22,7 +22,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "faith-in-nature",
@@ -30,7 +31,7 @@
     "tier": "good",
     "note": "UK, Leaping Bunny certified, budget-friendly.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -48,7 +49,8 @@
     "category": [
       "haircare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "byoma",
@@ -56,7 +58,7 @@
     "tier": "good",
     "note": "UK, Leaping Bunny certified.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -73,7 +75,8 @@
     "price": "££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "barry-m",
@@ -81,7 +84,7 @@
     "tier": "good",
     "note": "UK, 100% vegan since 2020.",
     "parentCompany": null,
-    "vegan": "full",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -98,7 +101,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "b-by-superdrug",
@@ -116,7 +120,8 @@
       "makeup-beauty",
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "baylis-and-harding",
@@ -124,7 +129,7 @@
     "tier": "good",
     "note": "PETA certified cruelty-free.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -132,7 +137,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "original-source",
@@ -148,7 +154,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "noughty",
@@ -156,7 +163,7 @@
     "tier": "good",
     "note": "Leaping Bunny certified, vegan, independent.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -169,7 +176,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "umberto-giannini",
@@ -177,7 +185,7 @@
     "tier": "good",
     "note": "Markets itself vegan and cruelty-free.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -190,7 +198,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "oceansaver",
@@ -211,15 +220,16 @@
     "price": "££",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "fabulosa",
     "name": "Fabulosa",
     "tier": "good",
-    "note": "Endorsed by Naturewatch Foundation's Compassionate Shopping Guide.",
+    "note": "Company states all products are 100% vegan with no animal-derived ingredients, and none are tested on animals anywhere. Endorsed by Naturewatch Foundation's Compassionate Shopping Guide.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -232,7 +242,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "superdrug-own-brand-wider-range",
@@ -240,7 +251,7 @@
     "tier": "check",
     "note": "Leaping Bunny approved.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -250,7 +261,8 @@
       "makeup-beauty",
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "imperial-leather",
@@ -258,7 +270,7 @@
     "tier": "check",
     "note": "Owned by PZ Cussons, PETA certified cruelty-free.",
     "parentCompany": "PZ Cussons",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -266,7 +278,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "carex",
@@ -282,7 +295,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "the-inkey-list",
@@ -298,7 +312,8 @@
     "price": "££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "green-people",
@@ -306,7 +321,7 @@
     "tier": "check",
     "note": "PETA certified cruelty-free, UK.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -315,7 +330,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "superdrug-pro-care",
@@ -323,7 +339,7 @@
     "tier": "check",
     "note": "Superdrug's own cruelty-free range, vegan products marked individually.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -331,7 +347,8 @@
     "price": "£",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "mua",
@@ -352,7 +369,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "fussy",
@@ -360,7 +378,7 @@
     "tier": "good",
     "note": "Leaping Bunny certified, vegan, independent brand.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -368,7 +386,8 @@
     "price": "££",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "glaze",
@@ -376,7 +395,7 @@
     "tier": "good",
     "note": "PETA certified, vegan, independent brand.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -384,7 +403,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "kingfisher",
@@ -400,7 +420,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "bleach-london",
@@ -416,7 +437,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "nyx",
@@ -443,7 +465,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "bondi-sands",
@@ -451,7 +474,7 @@
     "tier": "warn",
     "note": "PETA certified cruelty-free, owned by Kao.",
     "parentCompany": "Kao",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -460,7 +483,8 @@
     "category": [
       "makeup-beauty",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "bulldog",
@@ -468,7 +492,7 @@
     "tier": "warn",
     "note": "Leaping Bunny certified, 100% vegan, owned by Edgewell.",
     "parentCompany": "Edgewell",
-    "vegan": "full",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -477,7 +501,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "tresemm",
@@ -485,7 +510,7 @@
     "tier": "warn",
     "note": "PETA certified cruelty-free since 2021, owned by Unilever.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -493,7 +518,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "lynx",
@@ -509,7 +535,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "aussie",
@@ -525,7 +552,8 @@
     "price": "£",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "wild",
@@ -533,7 +561,7 @@
     "tier": "warn",
     "note": "Cruelty-free and vegan itself, acquired by Unilever in April 2025.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -541,7 +569,8 @@
     "price": "££",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "rimmel",
@@ -549,7 +578,7 @@
     "tier": "warn",
     "note": "Leaping Bunny certified itself, owned by Coty.",
     "parentCompany": "Coty",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -557,7 +586,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "garnier",
@@ -565,7 +595,7 @@
     "tier": "warn",
     "note": "Leaping Bunny certified, owned by L'Oréal.",
     "parentCompany": "L'Oréal",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -574,7 +604,8 @@
     "category": [
       "skincare",
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "no7",
@@ -582,7 +613,7 @@
     "tier": "warn",
     "note": "Cruelty-free, owned by Walgreens Boots Alliance.",
     "parentCompany": "Walgreens Boots Alliance",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -591,7 +622,8 @@
     "category": [
       "skincare",
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "simple",
@@ -599,7 +631,7 @@
     "tier": "warn",
     "note": "PETA certified, owned by Unilever.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -607,7 +639,8 @@
     "price": "£",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "dove",
@@ -615,7 +648,7 @@
     "tier": "warn",
     "note": "PETA certified since 2018, owned by Unilever.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -624,7 +657,8 @@
     "category": [
       "body-shower",
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "herbal-essences",
@@ -632,7 +666,7 @@
     "tier": "warn",
     "note": "PETA certified, owned by P&G.",
     "parentCompany": "P&G",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -640,7 +674,8 @@
     "price": "£",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "ren",
@@ -648,7 +683,7 @@
     "tier": "warn",
     "note": "PETA certified cruelty-free, owned by Unilever.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -656,7 +691,8 @@
     "price": "£££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "the-ordinary",
@@ -664,7 +700,7 @@
     "tier": "warn",
     "note": "DECIEM is cruelty-free and vegan. Owned by Estée Lauder.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -672,7 +708,8 @@
     "price": "££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "drunk-elephant",
@@ -680,7 +717,7 @@
     "tier": "warn",
     "note": "Owned by Shiseido, not cruelty-free.",
     "parentCompany": "Shiseido",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -688,15 +725,16 @@
     "price": "£££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "astonish",
     "name": "Astonish",
     "tier": "good",
-    "note": "UK-manufactured, Cruelty Free International approved.",
+    "note": "UK-manufactured, Leaping Bunny and PETA certified cruelty-free, and states its full range is vegan.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -709,15 +747,16 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "the-pink-stuff",
     "name": "The Pink Stuff",
     "tier": "good",
-    "note": "Leaping Bunny certified worldwide.",
+    "note": "Leaping Bunny certified worldwide, and states its range is vegan (recognised by the Vegan Society).",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -730,7 +769,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "bio-d",
@@ -738,7 +778,7 @@
     "tier": "good",
     "note": "Vegan Society and Cruelty Free International certified.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -747,7 +787,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "zoflora",
@@ -768,7 +809,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "miniml",
@@ -776,7 +818,7 @@
     "tier": "good",
     "note": "Cruelty Free International and Vegan Society certified.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -785,7 +827,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "smol",
@@ -802,7 +845,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "method",
@@ -818,7 +862,8 @@
     "price": "££",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "ecover",
@@ -826,7 +871,7 @@
     "tier": "warn",
     "note": "Cruelty-free, owned by SC Johnson.",
     "parentCompany": "SC Johnson",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -835,7 +880,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "aldi",
@@ -843,7 +889,7 @@
     "tier": "check",
     "note": "Leaping Bunny certified own-brand ranges.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -852,7 +898,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "lidl",
@@ -860,7 +907,7 @@
     "tier": "check",
     "note": "Leaping Bunny certified since 2022.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -869,7 +916,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "co-op",
@@ -886,15 +934,16 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "sainsbury-s",
     "name": "Sainsbury's",
     "tier": "check",
-    "note": "Leaping Bunny certified own-brand range.",
+    "note": "Leaping Bunny certified own-brand range; own-brand beauty line has expanded to a large fully vegan makeup range.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -903,7 +952,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "morrisons",
@@ -911,7 +961,7 @@
     "tier": "check",
     "note": "Leaping Bunny certified own-brand range.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -920,7 +970,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "waitrose",
@@ -937,7 +988,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "marks-and-spencer",
@@ -945,7 +997,7 @@
     "tier": "check",
     "note": "Leaping Bunny certified own-brand range.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -954,7 +1006,8 @@
     "category": [
       "household-cleaning",
       "food-kitchen"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "ariel",
@@ -962,7 +1015,7 @@
     "tier": "bad",
     "note": "Owned by Procter & Gamble, who test where legally required.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -971,7 +1024,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "bold",
@@ -988,7 +1042,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "daz",
@@ -1005,7 +1060,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "fairy",
@@ -1022,7 +1078,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "flash",
@@ -1038,7 +1095,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "lenor",
@@ -1055,7 +1113,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "gillette",
@@ -1063,7 +1122,7 @@
     "tier": "bad",
     "note": "Owned by Procter & Gamble, who test where legally required.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1071,7 +1130,8 @@
     "price": "££",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "venus",
@@ -1079,7 +1139,7 @@
     "tier": "bad",
     "note": "Owned by Procter & Gamble, who test where legally required.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1087,7 +1147,8 @@
     "price": "££",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "head-and-shoulders",
@@ -1103,7 +1164,8 @@
     "price": "£",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "oral-b",
@@ -1111,7 +1173,7 @@
     "tier": "bad",
     "note": "Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Oral-B financially supports P&G as a company — that isn't the same as saying this specific toothbrush or toothpaste was itself tested on animals.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1119,7 +1181,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "pantene",
@@ -1127,7 +1190,7 @@
     "tier": "bad",
     "note": "Owned by Procter & Gamble, who test where legally required.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1135,7 +1198,8 @@
     "price": "£",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "always",
@@ -1152,7 +1216,8 @@
     "category": [
       "period-menstrual",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "tampax",
@@ -1169,7 +1234,8 @@
     "category": [
       "period-menstrual",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "febreze",
@@ -1185,7 +1251,8 @@
     "price": "££",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "viakal",
@@ -1201,7 +1268,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "satin-care",
@@ -1218,7 +1286,8 @@
     "category": [
       "period-menstrual",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "vaseline",
@@ -1226,7 +1295,7 @@
     "tier": "bad",
     "note": "Owned by Unilever, who sell into markets requiring animal testing.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1235,7 +1304,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "sure",
@@ -1251,7 +1321,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "persil",
@@ -1268,7 +1339,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "comfort",
@@ -1285,7 +1357,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "surf",
@@ -1302,7 +1375,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "cif",
@@ -1318,7 +1392,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "domestos",
@@ -1334,7 +1409,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "radox",
@@ -1350,7 +1426,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "axe",
@@ -1366,7 +1443,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "bedhead",
@@ -1374,7 +1452,7 @@
     "tier": "bad",
     "note": "Owned by Unilever, who sell into markets requiring animal testing.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1382,7 +1460,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "nivea",
@@ -1399,7 +1478,8 @@
     "category": [
       "body-shower",
       "skincare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "dettol",
@@ -1415,7 +1495,8 @@
     "price": "££",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "vanish",
@@ -1423,7 +1504,7 @@
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
     "parentCompany": "Reckitt",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1432,7 +1513,8 @@
     "category": [
       "household-cleaning",
       "laundry"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "cillit-bang",
@@ -1440,7 +1522,7 @@
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
     "parentCompany": "Reckitt",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1448,7 +1530,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "finish",
@@ -1464,7 +1547,8 @@
     "price": "££",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "mr-muscle",
@@ -1480,7 +1564,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "glade",
@@ -1496,7 +1581,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "pledge",
@@ -1512,7 +1598,8 @@
     "price": "£",
     "category": [
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "maybelline",
@@ -1520,7 +1607,7 @@
     "tier": "bad",
     "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
     "parentCompany": "L'Oréal",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1528,7 +1615,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "redken",
@@ -1536,7 +1624,7 @@
     "tier": "bad",
     "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
     "parentCompany": "L'Oréal",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1544,7 +1632,8 @@
     "price": "£££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "max-factor",
@@ -1552,7 +1641,7 @@
     "tier": "bad",
     "note": "Owned by Coty, who test for regulatory compliance.",
     "parentCompany": "Coty",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1560,7 +1649,8 @@
     "price": "£",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "clairol",
@@ -1568,7 +1658,7 @@
     "tier": "bad",
     "note": "Owned by Coty, who test for regulatory compliance.",
     "parentCompany": "Coty",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1576,7 +1666,8 @@
     "price": "£",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "colgate",
@@ -1584,7 +1675,7 @@
     "tier": "bad",
     "note": "Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company — this isn't a claim that a specific tube of toothpaste was itself tested on an animal.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1592,7 +1683,8 @@
     "price": "£",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "palmolive",
@@ -1600,7 +1692,7 @@
     "tier": "bad",
     "note": "Colgate-Palmolive still testing, PETA lists them as working toward change.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1608,7 +1700,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "sanex",
@@ -1616,7 +1709,7 @@
     "tier": "bad",
     "note": "Colgate-Palmolive still testing, PETA lists them as working toward change.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1624,7 +1717,8 @@
     "price": "£",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "johnson-s",
@@ -1641,7 +1735,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "aveeno",
@@ -1649,7 +1744,7 @@
     "tier": "bad",
     "note": "Owned by Johnson & Johnson, who test where required by law.",
     "parentCompany": "Johnson & Johnson",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1658,7 +1753,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "neutrogena",
@@ -1666,7 +1762,7 @@
     "tier": "bad",
     "note": "Owned by Johnson & Johnson, who test where required by law.",
     "parentCompany": "Johnson & Johnson",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1674,7 +1770,8 @@
     "price": "£",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "listerine",
@@ -1682,7 +1779,7 @@
     "tier": "bad",
     "note": "Owned by Johnson & Johnson, who test where required by law.",
     "parentCompany": "Johnson & Johnson",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1690,7 +1787,8 @@
     "price": "£",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "ogx",
@@ -1698,7 +1796,7 @@
     "tier": "bad",
     "note": "Owned by J&J/Kenvue, sells in mainland China, tests where legally required.",
     "parentCompany": "J&J/Kenvue",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1706,7 +1804,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "clean-and-clear",
@@ -1722,7 +1821,8 @@
     "price": "£",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "t-gel",
@@ -1738,7 +1838,8 @@
     "price": "££",
     "category": [
       "haircare"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "elemis",
@@ -1746,7 +1847,7 @@
     "tier": "bad",
     "note": "Tests on animals directly, owned by L'Occitane, also not cruelty-free.",
     "parentCompany": "L'Occitane",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1754,7 +1855,8 @@
     "price": "££££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "tena",
@@ -1770,7 +1872,8 @@
     "price": "££",
     "category": [
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "rare-beauty",
@@ -1778,7 +1881,7 @@
     "tier": "good",
     "note": "PETA and Leaping Bunny certified, 100% vegan.",
     "parentCompany": null,
-    "vegan": "full",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1791,7 +1894,8 @@
     "price": "£££",
     "category": [
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "mad-hippie",
@@ -1812,7 +1916,8 @@
     "price": "££",
     "category": [
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "the-body-shop",
@@ -1835,7 +1940,8 @@
       "skincare",
       "body-shower",
       "makeup-beauty"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "dr-bronners",
@@ -1843,7 +1949,7 @@
     "tier": "warn",
     "note": "Leaping Bunny and PETA certified cruelty-free. Vegan except lip and body balms, which contain beeswax.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1857,7 +1963,8 @@
     "category": [
       "body-shower",
       "household-cleaning"
-    ]
+    ],
+    "veganConfidence": "high"
   },
   {
     "slug": "l-oreal",
@@ -1866,7 +1973,7 @@
     "note": "The world's largest cosmetics company. L'Oréal itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. It's also the parent company of Maybelline, Garnier, Redken, NYX, Kiehl's, Lancôme, and dozens more.",
     "parentCompany": null,
     "isParentCompany": true,
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1876,7 +1983,8 @@
       "makeup-beauty",
       "haircare",
       "skincare"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "peace-with-the-wild",
@@ -1892,7 +2000,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "dr-organic",
@@ -1909,7 +2018,8 @@
     "category": [
       "skincare",
       "body-shower"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "gutology",
@@ -1925,7 +2035,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "biomed",
@@ -1941,7 +2052,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "waken",
@@ -1949,7 +2061,7 @@
     "tier": "warn",
     "note": "Independent UK brand marketed as vegan and cruelty-free. Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1957,7 +2069,8 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "low"
   },
   {
     "slug": "superdrug-own-brand-dental",
@@ -1973,7 +2086,8 @@
     "price": "£",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "aquafresh",
@@ -1981,7 +2095,7 @@
     "tier": "bad",
     "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
     "parentCompany": "Haleon",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1989,7 +2103,8 @@
     "price": "£",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "medium"
   },
   {
     "slug": "sensodyne",
@@ -1997,7 +2112,7 @@
     "tier": "bad",
     "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Sensodyne financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
     "parentCompany": "Haleon",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -2005,6 +2120,7 @@
     "price": "££",
     "category": [
       "dental"
-    ]
+    ],
+    "veganConfidence": "medium"
   }
 ]
