@@ -136,6 +136,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button class="big-btn" id="startBtn">scan a product</button>
 <button class="big-btn alt" id="stopBtn" style="display:none;">stop camera</button>
 <button type="button" class="big-btn alt" id="torchBtn" style="display:none;">&#128161; turn flash on</button>
+<p id="torchHint" style="display:none; text-align:center; font-size:12.5px; color:#8a8672; margin:-4px 0 10px;">Too dark? iPhones don't let websites control the flash &mdash; turn your flashlight on from Control Center, then come back and scan.</p>
 
 <p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
 <div class="manual">
@@ -465,11 +466,15 @@ var video = el("reader");
 var stream = video && video.srcObject;
 return stream ? stream.getVideoTracks()[0] : null;
 }
+var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent || "") || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 function setupTorchButton(){
 var track = getVideoTrack();
 var torchBtn = el("torchBtn");
-if(!track || typeof track.getCapabilities !== "function"){
+var torchHint = el("torchHint");
 torchBtn.style.display = "none";
+torchHint.style.display = "none";
+if(!track || typeof track.getCapabilities !== "function"){
+if(isIOS) torchHint.style.display = "block";
 return;
 }
 var caps;
@@ -478,8 +483,8 @@ if(caps && caps.torch){
 torchOn = false;
 torchBtn.innerHTML = "&#128161; turn flash on";
 torchBtn.style.display = "block";
-} else {
-torchBtn.style.display = "none";
+} else if(isIOS){
+torchHint.style.display = "block";
 }
 }
 function toggleTorch(){
@@ -499,6 +504,7 @@ if(codeReader){ try { codeReader.reset(); } catch(e){} }
 el("startBtn").style.display = "block";
 el("stopBtn").style.display = "none";
 el("torchBtn").style.display = "none";
+el("torchHint").style.display = "none";
 torchOn = false;
 setStatus("");
 }
