@@ -135,6 +135,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <video id="reader" muted playsinline></video>
 <button class="big-btn" id="startBtn">scan a product</button>
 <button class="big-btn alt" id="stopBtn" style="display:none;">stop camera</button>
+<button type="button" class="big-btn alt" id="torchBtn" style="display:none;">&#128161; turn flash on</button>
 
 <p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
 <div class="manual">
@@ -453,10 +454,52 @@ wireReportWidget("srpt");
 el("lookupBtn").addEventListener("click", function(){ lookup(el("manualCode").value); });
 el("manualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookup(el("manualCode").value); });
 var codeReader = null;
+var torchOn = false;
+
+// Flash/torch toggle. Only Chrome-family browsers on Android currently
+// expose torch control to web pages -- iOS Safari does not let a website
+// touch the flash at all, even though native apps can -- so the button
+// stays hidden unless the camera track itself reports torch support.
+function getVideoTrack(){
+var video = el("reader");
+var stream = video && video.srcObject;
+return stream ? stream.getVideoTracks()[0] : null;
+}
+function setupTorchButton(){
+var track = getVideoTrack();
+var torchBtn = el("torchBtn");
+if(!track || typeof track.getCapabilities !== "function"){
+torchBtn.style.display = "none";
+return;
+}
+var caps;
+try { caps = track.getCapabilities(); } catch(e){ caps = null; }
+if(caps && caps.torch){
+torchOn = false;
+torchBtn.innerHTML = "&#128161; turn flash on";
+torchBtn.style.display = "block";
+} else {
+torchBtn.style.display = "none";
+}
+}
+function toggleTorch(){
+var track = getVideoTrack();
+if(!track) return;
+torchOn = !torchOn;
+track.applyConstraints({ advanced: [{ torch: torchOn }] }).then(function(){
+el("torchBtn").innerHTML = torchOn ? "&#128161; turn flash off" : "&#128161; turn flash on";
+}).catch(function(){
+setStatus("Couldn't switch the flash on this device.");
+});
+}
+el("torchBtn").addEventListener("click", toggleTorch);
+
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
 el("startBtn").style.display = "block";
 el("stopBtn").style.display = "none";
+el("torchBtn").style.display = "none";
+torchOn = false;
 setStatus("");
 }
 el("startBtn").addEventListener("click", function(){
@@ -477,6 +520,7 @@ lookup(result.getText());
 setStatus("Point at a barcode.");
 el("startBtn").style.display = "none";
 el("stopBtn").style.display = "block";
+setupTorchButton();
 }).catch(function(){
 setStatus("Could not open the camera. Type the numbers instead.");
 });
