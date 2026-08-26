@@ -363,66 +363,78 @@ showCategory(tile.getAttribute('data-cat'));
 });
 }
 
+buildCategoryGrid();
+
+var filterPills = document.querySelectorAll('.filter-pill');
+var activeFilter = 'all';
+var activeCategory = null;
+
+function cardMatchesFilter(card, filterKey) {
+if (filterKey === 'cf-vegan') return card.dataset.cf === 'yes' && card.dataset.vegan === 'yes';
+if (filterKey === 'cf') return card.dataset.cf === 'yes';
+return true;
+}
+
+function setActivePills() {
+filterPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === activeFilter); });
+}
+
+// Shows the category grid itself -- only reachable when nothing else is
+// narrowing the list (no category picked, no filter applied).
 function showCategoryGrid() {
 searchInput.value = '';
 categoryGrid.style.display = 'block';
 allBrands.style.display = 'none';
 categoryBack.style.display = 'none';
 browseBtn.style.display = 'none';
+activeCategory = null;
 activeFilter = 'all';
-document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === 'all'); });
+setActivePills();
 }
 
-function showCategory(key) {
+// Renders #allBrands filtered by whichever of activeCategory/activeFilter
+// are currently set -- a category and a filter can both be active at once,
+// so clicking a filter pill while browsing "household & cleaning" narrows
+// within that category instead of jumping back out to everything.
+function renderBrandList() {
 categoryGrid.style.display = 'none';
 allBrands.style.display = 'block';
-categoryBack.style.display = 'block';
-activeFilter = 'all';
-document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
-document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lbl.style.display = 'none'; });
-var anyVisible = false;
-allCards.forEach(function(card) {
-var match = cardCategories(card).indexOf(key) !== -1;
-card.style.display = match ? '' : 'none';
-if (match) {
-anyVisible = true;
-card.classList.remove('card-reveal');
-void card.offsetWidth;
-card.classList.add('card-reveal');
-}
-});
-document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
-window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
-}
-
-buildCategoryGrid();
-
-var filterPills = document.querySelectorAll('.filter-pill');
-var activeFilter = 'all';
-function applyFilter(key) {
-activeFilter = key;
-filterPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === key); });
-if (key === 'all') { showCategoryGrid(); return; }
-searchInput.value = '';
-categoryGrid.style.display = 'none';
-categoryBack.style.display = 'none';
-allBrands.style.display = 'block';
+categoryBack.style.display = activeCategory ? 'block' : 'none';
 browseBtn.style.display = 'none';
 document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lbl.style.display = 'none'; });
 var anyVisible = false;
-allCards.forEach(function(card){
-var match = key === 'cf-vegan' ? (card.dataset.cf === 'yes' && card.dataset.vegan === 'yes') : (card.dataset.cf === 'yes');
+allCards.forEach(function(card) {
+var inCategory = !activeCategory || cardCategories(card).indexOf(activeCategory) !== -1;
+var match = inCategory && cardMatchesFilter(card, activeFilter);
+var wasHidden = card.style.display === 'none';
 card.style.display = match ? '' : 'none';
 if (match) {
 anyVisible = true;
+if (wasHidden) {
 card.classList.remove('card-reveal');
 void card.offsetWidth;
 card.classList.add('card-reveal');
+}
 }
 });
 document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
 window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
 }
+
+function showCategory(key) {
+activeCategory = key;
+activeFilter = 'all';
+setActivePills();
+renderBrandList();
+}
+
+function applyFilter(key) {
+activeFilter = key;
+setActivePills();
+if (key === 'all' && !activeCategory) { showCategoryGrid(); return; }
+renderBrandList();
+}
+
 filterPills.forEach(function(p){
 p.addEventListener('click', function(){ applyFilter(p.getAttribute('data-filter')); });
 });
@@ -442,6 +454,7 @@ categoryBack.style.display = 'none';
 allBrands.style.display = 'block';
 browseBtn.style.display = 'none';
 activeFilter = 'all';
+activeCategory = null;
 document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
 } else {
 showCategoryGrid();
