@@ -17,10 +17,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-#reader { width:100%; max-width:420px; margin:0 auto 18px; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+.camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
+#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
 #reader { object-fit:cover; }
 .big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px; border:none; border-radius:6px; cursor:pointer; }
 .big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+
+/* Camera controls float directly on the video feed itself, right where
+   your eye already is while lining up a barcode, instead of living below
+   the fold where a tall portrait camera preview pushes them out of view. */
+.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; pointer-events:none; }
+.camera-controls button { pointer-events:auto; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button:hover { background:rgba(20,24,18,0.78); }
+#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
 .manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
 .manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
 .verdict { border-radius:12px; padding:22px; margin-bottom:16px; }
@@ -132,11 +141,15 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
 </div>
 
+<div class="camera-wrap">
 <video id="reader" muted playsinline></video>
+<p id="torchHint" style="display:none;">Too dark? iPhones don't let websites control the flash &mdash; turn your flashlight on from Control Center, then come back and scan.</p>
+<div id="cameraControls" class="camera-controls" style="display:none;">
+<button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
+<button type="button" id="stopBtn">&#10005; stop</button>
+</div>
+</div>
 <button class="big-btn" id="startBtn">scan a product</button>
-<button class="big-btn alt" id="stopBtn" style="display:none;">stop camera</button>
-<button type="button" class="big-btn alt" id="torchBtn" style="display:none;">&#128161; turn flash on</button>
-<p id="torchHint" style="display:none; text-align:center; font-size:12.5px; color:#8a8672; margin:-4px 0 10px;">Too dark? iPhones don't let websites control the flash &mdash; turn your flashlight on from Control Center, then come back and scan.</p>
 
 <p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
 <div class="manual">
@@ -481,8 +494,8 @@ var caps;
 try { caps = track.getCapabilities(); } catch(e){ caps = null; }
 if(caps && caps.torch){
 torchOn = false;
-torchBtn.innerHTML = "&#128161; turn flash on";
-torchBtn.style.display = "block";
+torchBtn.innerHTML = "&#128161; flash on";
+torchBtn.style.display = "inline-block";
 } else if(isIOS){
 torchHint.style.display = "block";
 }
@@ -492,7 +505,7 @@ var track = getVideoTrack();
 if(!track) return;
 torchOn = !torchOn;
 track.applyConstraints({ advanced: [{ torch: torchOn }] }).then(function(){
-el("torchBtn").innerHTML = torchOn ? "&#128161; turn flash off" : "&#128161; turn flash on";
+el("torchBtn").innerHTML = torchOn ? "&#128161; flash off" : "&#128161; flash on";
 }).catch(function(){
 setStatus("Couldn't switch the flash on this device.");
 });
@@ -502,7 +515,7 @@ el("torchBtn").addEventListener("click", toggleTorch);
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
 el("startBtn").style.display = "block";
-el("stopBtn").style.display = "none";
+el("cameraControls").style.display = "none";
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
 torchOn = false;
@@ -525,7 +538,7 @@ lookup(result.getText());
 }).then(function(){
 setStatus("Point at a barcode.");
 el("startBtn").style.display = "none";
-el("stopBtn").style.display = "block";
+el("cameraControls").style.display = "flex";
 setupTorchButton();
 }).catch(function(){
 setStatus("Could not open the camera. Type the numbers instead.");
