@@ -103,11 +103,7 @@ function renderBrandPage(brand) {
   lines.push('<header class="site-header">');
   lines.push('<div class="wrap">');
   lines.push('<a href="../../index.html" class="logo">');
-  lines.push('<svg width="26" height="26" viewBox="0 0 40 40" fill="none">');
-  lines.push('<circle cx="20" cy="20" r="19" stroke="#6f8768" stroke-width="1"/>');
-  lines.push('<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" stroke="#6f8768" stroke-width="1.2" fill="none"/>');
-  lines.push('<path d="M20 30 L20 12" stroke="#6f8768" stroke-width="1"/>');
-  lines.push('</svg>');
+  lines.push('<img src="../../icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">');
   lines.push('<span>a home kind</span>');
   lines.push('</a>');
   lines.push('<nav class="main-nav">');
