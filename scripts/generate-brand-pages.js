@@ -86,6 +86,9 @@ function renderBrandPage(brand) {
   lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260906">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
+  lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
+  lines.push('<link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon-32.png">');
+  lines.push('<link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon-16.png">');
   lines.push('<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">');
   lines.push('<meta name="apple-mobile-web-app-capable" content="yes">');
   lines.push('<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">');
