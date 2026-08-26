@@ -141,9 +141,9 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
 </div>
 
-<div class="camera-wrap">
+<div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
-<p id="torchHint" style="display:none;">Too dark? iPhones don't let websites control the flash &mdash; turn your flashlight on from Control Center, then come back and scan.</p>
+<p id="torchHint" style="display:none;">Too dark? This device won't let me switch the flash on from here &mdash; try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div id="cameraControls" class="camera-controls" style="display:none;">
 <button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="stopBtn">&#10005; stop</button>
@@ -479,7 +479,6 @@ var video = el("reader");
 var stream = video && video.srcObject;
 return stream ? stream.getVideoTracks()[0] : null;
 }
-var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent || "") || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 function setupTorchButton(){
 var track = getVideoTrack();
 var torchBtn = el("torchBtn");
@@ -487,7 +486,7 @@ var torchHint = el("torchHint");
 torchBtn.style.display = "none";
 torchHint.style.display = "none";
 if(!track || typeof track.getCapabilities !== "function"){
-if(isIOS) torchHint.style.display = "block";
+torchHint.style.display = "block";
 return;
 }
 var caps;
@@ -496,7 +495,7 @@ if(caps && caps.torch){
 torchOn = false;
 torchBtn.innerHTML = "&#128161; flash on";
 torchBtn.style.display = "inline-block";
-} else if(isIOS){
+} else {
 torchHint.style.display = "block";
 }
 }
@@ -515,6 +514,7 @@ el("torchBtn").addEventListener("click", toggleTorch);
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
 el("startBtn").style.display = "block";
+el("cameraWrap").style.display = "none";
 el("cameraControls").style.display = "none";
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
@@ -538,6 +538,7 @@ lookup(result.getText());
 }).then(function(){
 setStatus("Point at a barcode.");
 el("startBtn").style.display = "none";
+el("cameraWrap").style.display = "block";
 el("cameraControls").style.display = "flex";
 setupTorchButton();
 }).catch(function(){
