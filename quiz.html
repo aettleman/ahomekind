@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Where Do We Start? — a home kind</title>
+<title>Where Do You Start? — a home kind</title>
 <meta name="description" content="A 30-second quiz to find your best cruelty-free and vegan starting point.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260904">
@@ -79,7 +79,7 @@ var SUPERMARKET_SLUGS = ["aldi","lidl","co-op","sainsbury-s","morrisons","waitro
 var questions = [
 {
   key: 'q1',
-  q: "what are we sorting first?",
+  q: "what are you sorting first?",
   options: [
     { label: "makeup & beauty", icon: "💄", value: "makeup-beauty" },
     { label: "skincare", icon: "✨", value: "skincare" },
@@ -91,7 +91,7 @@ var questions = [
 },
 {
   key: 'q2',
-  q: "what exactly are we changing?",
+  q: "what exactly are you changing?",
   dependsOn: 'q1',
   branches: {
     'makeup-beauty': [
@@ -127,7 +127,7 @@ var questions = [
 },
 {
   key: 'q3',
-  q: "how dramatic are we feeling today?",
+  q: "how dramatic are you feeling today?",
   options: [
     { label: "baby steps", icon: "🐣", value: "small" },
     { label: "steady and sensible", icon: "🌱", value: "medium" },
@@ -332,11 +332,11 @@ function renderResults() {
   html += '<p class="rating">&#127807; your kinder starting point</p>';
   html += '<h3 style="font-size:18px;">' + catLabels + '</h3>';
 
-  var intro = "Based on what you told us, here's where we'd start: " + catLabels + '.';
-  if (answers.q4 === 'ethics') { intro += " We've leaned toward fully vegan, cruelty-free picks since ethics is what matters most to you."; }
-  else if (answers.q4 === 'budget') { intro += " We've kept these budget-friendly, since that's the priority."; }
-  else if (answers.q4 === 'quality') { intro += " We've leaned toward the higher-end picks since you want the good stuff."; }
-  else if (answers.q4 === 'accessible') { intro += " We've tried to prioritise names you can pick up where you already shop."; }
+  var intro = "Based on what you told me, here's where I'd start: " + catLabels + '.';
+  if (answers.q4 === 'ethics') { intro += " I've leaned toward fully vegan, cruelty-free picks since ethics is what matters most to you."; }
+  else if (answers.q4 === 'budget') { intro += " I've kept these budget-friendly, since that's the priority."; }
+  else if (answers.q4 === 'quality') { intro += " I've leaned toward the higher-end picks since you want the good stuff."; }
+  else if (answers.q4 === 'accessible') { intro += " I've tried to prioritise names you can pick up where you already shop."; }
   if (beginner) { intro += " Since you're just getting started: \"cruelty-free\" means not tested on animals, \"vegan\" means no animal-derived ingredients at all &mdash; a brand can be one without the other."; }
   html += '<p style="margin-bottom:18px;">' + intro + '</p>';
 
