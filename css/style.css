@@ -568,6 +568,7 @@ body { animation: pageFadeIn 0.22s ease; }
 }
 .home-card:active { transform: translateY(-4px) scale(0.97); }
 .home-card.cat-tile { background: #eef1e6; border-color: #d7ceb0; }
+.home-card.cat-tile .home-card-title { text-transform: lowercase; }
 .home-card.cat-tile:hover, .home-card.cat-tile:focus-visible { background: #e5ebdb; }
 .filter-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; }
 .filter-pill { background: #f4efe2; border: 0.5px solid #cfc4a9; border-radius: 30px; padding: 10px 18px; font-size: 12.5px; letter-spacing: 0.3px; color: #5c5c4f; cursor: pointer; transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease; font-family: 'Karla', sans-serif; }
@@ -585,8 +586,10 @@ body { animation: pageFadeIn 0.22s ease; }
    scrolled to. Progressive enhancement -- nav.js adds .reveal-pre right
    before observing, so with JS off or IntersectionObserver unsupported
    these stay exactly as visible as before. */
-.home-card.reveal-pre { opacity: 0; transform: translateY(14px); }
-.home-card.reveal-in { opacity: 1; transform: none; transition: opacity 0.45s ease, transform 0.45s ease; }
+.home-card.reveal-pre { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.home-card.reveal-pre.reveal-in { opacity: 1; transform: none; }
+/* reveal-in is stripped by nav.js once the transition finishes, so it never
+   lingers to fight the hover/active transform rules above. */
 
 /* Pulsing "still working" cue for brief loading states (e.g. the scanner
    looking a barcode up). */

@@ -61,9 +61,15 @@ if (!reduceMotion && revealables.length && 'IntersectionObserver' in window) {
 var io = new IntersectionObserver(function(entries){
 entries.forEach(function(entry){
 if (entry.isIntersecting) {
-entry.target.classList.remove('reveal-pre');
-entry.target.classList.add('reveal-in');
-io.unobserve(entry.target);
+var el = entry.target;
+el.classList.remove('reveal-pre');
+el.classList.add('reveal-in');
+io.unobserve(el);
+// Once the reveal transition has played, drop reveal-in too -- otherwise
+// its "transform: none" rule ties in specificity with :hover/:active and,
+// being declared later in the stylesheet, permanently cancels the tile's
+// hover-lift and tap-bounce animations.
+window.setTimeout(function(){ el.classList.remove('reveal-in'); }, 500);
 }
 });
 }, { threshold: 0.15 });
