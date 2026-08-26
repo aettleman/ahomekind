@@ -63,6 +63,10 @@
    scanner opens straight into a focused, full-screen tool. */
 @media (display-mode: standalone) {
 .site-header { display:none; }
+/* With the header gone there's nothing to absorb the top safe area, so
+   the page content itself needs the padding -- otherwise the heading
+   sits behind the notch/Dynamic Island and status bar on iPhone. */
+main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 }
 
 /* "Add to home screen" -- small, dismissible, brand-voiced. Hidden by
