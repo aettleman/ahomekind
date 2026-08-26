@@ -409,11 +409,11 @@ if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 btn.addEventListener("click", run);
 input.addEventListener("keydown", function(e){ if(e.key === "Enter") run(); });
 }
-function render(product, code){
+function render(product, code, knownBrand){
 var out = "";
 var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
-var brand = findBrand(brandText) || findBrand(name);
+var brand = knownBrand || findBrand(brandText) || findBrand(name);
 if(brand){
 out += verdictHTML(brand);
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
@@ -446,11 +446,26 @@ el("results").innerHTML = "<div class=\"result-in\">" + out + "</div>";
 if(!brand) wireBrandLookup();
 wireReportWidget();
 }
+// My own hand-checked barcode -> brand lookups, kept in data/barcodes.json.
+// Own-brand supermarket/pharmacy products especially are patchy or missing
+// in the public Open Food/Beauty Facts database, so this local list is
+// checked first and, when it has an entry, skips the external API
+// entirely -- meaning the verdict is instant and doesn't depend on a
+// third party ever having heard of the product.
+var LOCAL_BARCODES_PROMISE = fetch("data/barcodes.json").then(function(r){ return r.json(); }).catch(function(){ return {}; });
+
 function lookup(code){
 code = (code || "").replace(/[^0-9]/g,"");
 if(code.length < 6){ setStatus("That does not look like a barcode."); return; }
 setStatus("looking it up&hellip;", true);
 el("results").innerHTML = "";
+LOCAL_BARCODES_PROMISE.then(function(localBarcodes){
+var local = localBarcodes && localBarcodes[code];
+if(local){
+setStatus("");
+render({ product_name: local.product || "", brands: local.brand || "" }, code, { name: local.brand, tier: local.tier, note: local.note });
+return;
+}
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
 .then(function(r){ return r.json(); })
 .then(function(d){ setStatus(""); render(d && d.status === 1 ? d.product : null, code); })
@@ -458,6 +473,7 @@ fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_
 setStatus("");
 el("results").innerHTML = "<div class=\"result-in\"><div class=\"verdict v-unknown\"><div class=\"v-title\">could not reach the product database</div>" + brandSearchWidget() + "</div></div>";
 wireBrandLookup();
+});
 });
 }
 var standingWidgetEl = el("standing-report-widget");

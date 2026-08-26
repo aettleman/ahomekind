@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>add a barcode &mdash; a home kind</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260906">
+<link rel="icon" href="favicon.ico" sizes="any">
+<meta name="theme-color" content="#3d4a3a">
+<style>
+.camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
+#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+#reader { object-fit:cover; }
+.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; pointer-events:none; }
+.camera-controls button { pointer-events:auto; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button:hover { background:rgba(20,24,18,0.78); }
+#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
+
+.field { margin-bottom:14px; }
+.field label { display:block; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
+.field input, .field select, .field textarea { width:100%; box-sizing:border-box; padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:8px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.field textarea { min-height:70px; resize:vertical; }
+.field .hint { font-size:12px; color:#8a8672; margin-top:5px; line-height:1.5; }
+
+.batch-row { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:0.5px solid #e0d8c4; }
+.batch-row:last-child { border-bottom:none; }
+.batch-row-body { flex:1; min-width:0; }
+.batch-row-top { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
+.batch-tier { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; padding:3px 9px; border-radius:20px; }
+.batch-tier.good { background:#dbe8d7; color:#33502f; }
+.batch-tier.check { background:#ece5d5; color:#5c5c4f; }
+.batch-tier.warn { background:#f6ecd9; color:#8a6a2a; }
+.batch-tier.bad { background:#f3e2df; color:#8a332c; }
+.batch-remove { flex-shrink:0; background:none; border:none; color:#a5453d; font-size:20px; line-height:1; cursor:pointer; padding:2px 6px; }
+#batchExport { width:100%; box-sizing:border-box; min-height:140px; font-family:monospace; font-size:12px; padding:12px; border:0.5px solid #cfc4a9; border-radius:8px; background:#ece5d5; color:#3d4a3a; }
+#copyMsg { font-size:12.5px; color:#4d6b4f; margin-top:8px; min-height:16px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+</div>
+</header>
+
+<main class="wrap" id="main">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">add a barcode</h1>
+<p>Private tool, not linked anywhere on the site &mdash; scan a barcode, fill in what you already know from the packaging, and it queues up below. When you're done for the day, copy the batch and send it over so it can be merged into the checker.</p>
+
+<div class="camera-wrap" id="cameraWrap" style="display:none;">
+<video id="reader" muted playsinline></video>
+<p id="torchHint" style="display:none;">This device won't let me switch the flash on from here &mdash; try turning your flashlight on from Control Center instead, then come back and scan.</p>
+<div id="cameraControls" class="camera-controls" style="display:none;">
+<button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
+<button type="button" id="stopBtn">&#10005; stop</button>
+</div>
+</div>
+<button class="big-btn" id="startBtn">scan a barcode</button>
+<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
+
+<div class="card" style="margin-top:8px;">
+<div class="field">
+<label for="f-barcode">barcode number</label>
+<input type="text" id="f-barcode" inputmode="numeric" placeholder="scan above, or type it in">
+</div>
+<div class="field">
+<label for="f-product">product name</label>
+<input type="text" id="f-product" placeholder="e.g. Superdrug Pro Care Sensitive Facial Wipes x25">
+</div>
+<div class="field">
+<label for="f-brand">brand</label>
+<input type="text" id="f-brand" list="brand-list" placeholder="e.g. Superdrug own brand">
+<datalist id="brand-list"></datalist>
+</div>
+<div class="field">
+<label for="f-tier">status</label>
+<select id="f-tier">
+<option value="good">&#127807; fully cruelty-free &amp; vegan</option>
+<option value="check" selected>&#128048; cruelty-free, check vegan status</option>
+<option value="warn">&#9888;&#65039; worth a disclaimer (parent tests, unverified claim, etc.)</option>
+<option value="bad">&#10060; tested on animals</option>
+</select>
+</div>
+<div class="field">
+<label for="f-note">note</label>
+<textarea id="f-note" placeholder="e.g. Certified cruelty-free and certified vegan, per the packaging."></textarea>
+<p class="hint">Mention the word "vegan" if it applies &mdash; write "100% vegan" or "fully vegan" if it's fully certified, otherwise just "vegan" is read as check-per-product. This note becomes the card's explanation, so it's fine to write it exactly as you'd want a visitor to read it.</p>
+</div>
+<button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
+<p id="addMsg" style="font-size:13px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+</div>
+
+<h2 style="font-size:16px; margin-top:32px;">this batch (<span id="batchCount">0</span>)</h2>
+<div id="batchList" class="card" style="display:none;"></div>
+<p id="batchEmpty" style="color:#8a8672; font-size:13.5px;">Nothing queued yet.</p>
+
+<div id="exportSection" style="display:none; margin-top:20px;">
+<button type="button" class="big-btn alt" id="copyBtn" style="max-width:none;">copy batch as JSON</button>
+<p id="copyMsg"></p>
+<textarea id="batchExport" readonly></textarea>
+<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message or file and send it over &mdash; it merges straight into <code>data/barcodes.json</code> and every barcode in it works instantly on the scanner from then on.</p>
+<button type="button" class="big-btn alt" id="clearBtn" style="max-width:none; margin-top:6px; border-color:#a5453d; color:#8a332c;">clear this batch</button>
+</div>
+</main>
+
+<script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+<script>
+function el(id){ return document.getElementById(id); }
+function setStatus(t, loading){ var s = el("status"); s.textContent = t; s.classList.toggle("status-loading", !!loading); }
+
+// Populate the brand datalist from the site's existing brand list, purely
+// so names stay consistent with what's already on brand-check (e.g.
+// "Superdrug own brand" spelled the same way every time) -- free typing
+// still works fine for a brand that isn't in there yet.
+fetch("data/brands.json").then(function(r){ return r.json(); }).then(function(brands){
+var dl = el("brand-list");
+var seen = {};
+(brands || []).forEach(function(b){
+var name = b.name || b.brand;
+if(!name || seen[name]) return;
+seen[name] = true;
+var opt = document.createElement("option");
+opt.value = name;
+dl.appendChild(opt);
+});
+}).catch(function(){});
+
+var STORE_KEY = "ahk-admin-barcode-batch";
+function loadBatch(){
+try { return JSON.parse(localStorage.getItem(STORE_KEY) || "[]"); } catch(e){ return []; }
+}
+function saveBatch(batch){
+try { localStorage.setItem(STORE_KEY, JSON.stringify(batch)); } catch(e){}
+}
+var batch = loadBatch();
+var TIER_LABEL = { good: "fully cruelty-free & vegan", check: "cruelty-free, check vegan", warn: "worth a disclaimer", bad: "tested on animals" };
+
+function renderBatch(){
+el("batchCount").textContent = batch.length;
+var listEl = el("batchList");
+var emptyEl = el("batchEmpty");
+var exportEl = el("exportSection");
+if(!batch.length){
+listEl.style.display = "none";
+emptyEl.style.display = "block";
+exportEl.style.display = "none";
+return;
+}
+emptyEl.style.display = "none";
+listEl.style.display = "block";
+exportEl.style.display = "block";
+var html = "";
+batch.forEach(function(item, i){
+html += "<div class=\"batch-row\"><div class=\"batch-row-body\">";
+html += "<div class=\"batch-row-top\"><strong>" + (item.brand || "(no brand)") + "</strong><span class=\"batch-tier " + item.tier + "\">" + TIER_LABEL[item.tier] + "</span></div>";
+html += "<div style=\"font-size:13px; color:#5c5c4f;\">" + (item.product || "") + " &middot; " + item.barcode + "</div>";
+if(item.note) html += "<div style=\"font-size:12.5px; color:#7a7561; margin-top:4px;\">" + item.note + "</div>";
+html += "</div><button type=\"button\" class=\"batch-remove\" data-i=\"" + i + "\" aria-label=\"remove\">&times;</button></div>";
+});
+listEl.innerHTML = html;
+listEl.querySelectorAll(".batch-remove").forEach(function(btn){
+btn.addEventListener("click", function(){
+batch.splice(parseInt(btn.getAttribute("data-i"), 10), 1);
+saveBatch(batch);
+renderBatch();
+});
+});
+var out = {};
+batch.forEach(function(item){ out[item.barcode] = { brand: item.brand, product: item.product, tier: item.tier, note: item.note }; });
+el("batchExport").value = JSON.stringify(out, null, 2);
+}
+renderBatch();
+
+el("addBtn").addEventListener("click", function(){
+var barcode = (el("f-barcode").value || "").replace(/[^0-9]/g, "");
+var brand = el("f-brand").value.trim();
+var product = el("f-product").value.trim();
+var tier = el("f-tier").value;
+var note = el("f-note").value.trim();
+var msg = el("addMsg");
+if(barcode.length < 6){ msg.style.color = "#8a332c"; msg.textContent = "That barcode doesn't look right -- check the digits."; return; }
+if(!brand){ msg.style.color = "#8a332c"; msg.textContent = "Add a brand name before queuing this one."; return; }
+batch.push({ barcode: barcode, brand: brand, product: product, tier: tier, note: note });
+saveBatch(batch);
+renderBatch();
+msg.style.color = "#4d6b4f";
+msg.textContent = "Added. Scan the next one when you're ready.";
+el("f-barcode").value = "";
+el("f-product").value = "";
+el("f-brand").value = "";
+el("f-note").value = "";
+el("f-tier").value = "check";
+el("f-barcode").focus();
+});
+
+el("copyBtn").addEventListener("click", function(){
+var text = el("batchExport").value;
+var msg = el("copyMsg");
+if(navigator.clipboard && navigator.clipboard.writeText){
+navigator.clipboard.writeText(text).then(function(){
+msg.textContent = "Copied -- paste it into a message whenever you're ready.";
+}).catch(function(){
+msg.textContent = "Couldn't copy automatically -- select the text below and copy it manually.";
+});
+} else {
+el("batchExport").select();
+msg.textContent = "Select the text below and copy it manually.";
+}
+});
+el("clearBtn").addEventListener("click", function(){
+if(!window.confirm("Clear the whole batch? Only do this once you've sent it over.")) return;
+batch = [];
+saveBatch(batch);
+renderBatch();
+});
+
+// Camera: reuses the same scan.html pattern, but a successful decode just
+// fills the barcode field and stops -- it never tries to look anything up,
+// since the whole point here is capturing brands the public database
+// doesn't know about yet.
+var codeReader = null;
+var torchOn = false;
+function getVideoTrack(){
+var video = el("reader");
+var stream = video && video.srcObject;
+return stream ? stream.getVideoTracks()[0] : null;
+}
+function setupTorchButton(){
+var track = getVideoTrack();
+var torchBtn = el("torchBtn");
+var torchHint = el("torchHint");
+torchBtn.style.display = "none";
+torchHint.style.display = "none";
+if(!track || typeof track.getCapabilities !== "function"){ torchHint.style.display = "block"; return; }
+var caps;
+try { caps = track.getCapabilities(); } catch(e){ caps = null; }
+if(caps && caps.torch){
+torchOn = false;
+torchBtn.innerHTML = "&#128161; flash on";
+torchBtn.style.display = "inline-block";
+} else {
+torchHint.style.display = "block";
+}
+}
+function toggleTorch(){
+var track = getVideoTrack();
+if(!track) return;
+torchOn = !torchOn;
+track.applyConstraints({ advanced: [{ torch: torchOn }] }).then(function(){
+el("torchBtn").innerHTML = torchOn ? "&#128161; flash off" : "&#128161; flash on";
+}).catch(function(){ setStatus("Couldn't switch the flash on this device."); });
+}
+el("torchBtn").addEventListener("click", toggleTorch);
+function stopCamera(){
+if(codeReader){ try { codeReader.reset(); } catch(e){} }
+el("startBtn").style.display = "block";
+el("cameraWrap").style.display = "none";
+el("cameraControls").style.display = "none";
+el("torchBtn").style.display = "none";
+el("torchHint").style.display = "none";
+torchOn = false;
+setStatus("");
+}
+el("startBtn").addEventListener("click", function(){
+if(typeof ZXing === "undefined"){ setStatus("Camera scanning did not load -- type the barcode instead."); return; }
+setStatus("Asking for camera permission...", true);
+try {
+codeReader = new ZXing.BrowserMultiFormatReader();
+codeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "reader", function(result, err){
+if(result){
+if(navigator.vibrate) navigator.vibrate(60);
+el("f-barcode").value = result.getText().replace(/[^0-9]/g, "");
+stopCamera();
+el("f-product").focus();
+}
+}).then(function(){
+setStatus("Point at a barcode.");
+el("startBtn").style.display = "none";
+el("cameraWrap").style.display = "block";
+el("cameraControls").style.display = "flex";
+setupTorchButton();
+}).catch(function(){
+setStatus("Could not open the camera -- type the barcode instead.");
+});
+} catch(e){
+setStatus("Camera scanning is not available here.");
+}
+});
+el("stopBtn").addEventListener("click", stopCamera);
+</script>
+</body>
+</html>
