@@ -83,7 +83,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260903">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260904">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">');
