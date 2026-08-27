@@ -53,16 +53,18 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">add a barcode</h1>
-<p>Private tool, not linked anywhere on the site &mdash; scan a barcode, fill in what you already know from the packaging, and it queues up below. When you're done for the day, copy the batch and send it over so it can be merged into the checker.</p>
+<p>Private tool, not linked anywhere on the site &mdash; scan a barcode, snap a photo of the front of the pack, and it queues up below with nothing to type. When you're done for the day, copy the batch and send it over with the photos so it can be merged into the checker.</p>
 
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
 <p id="torchHint" style="display:none;">This device won't let me switch the flash on from here &mdash; try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div id="cameraControls" class="camera-controls" style="display:none;">
+<button type="button" id="captureBtn">&#128247; photo</button>
 <button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="stopBtn">&#10005; stop</button>
 </div>
 </div>
+<canvas id="captureCanvas" style="display:none;"></canvas>
 <button class="big-btn" id="startBtn">scan a barcode</button>
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
 
@@ -71,12 +73,18 @@
 <label for="f-barcode">barcode number</label>
 <input type="text" id="f-barcode" inputmode="numeric" placeholder="scan above, or type it in">
 </div>
+<div class="field" id="photoPreviewWrap" style="display:none;">
+<label>product photo</label>
+<img id="photoPreview" alt="" style="max-width:160px; border-radius:8px; display:block; border:0.5px solid #cfc4a9;">
+<button type="button" id="retakeBtn" class="big-btn alt" style="max-width:160px; margin-top:8px; padding:8px; font-size:11px;">retake</button>
+</div>
+<p class="hint" id="noPhotoHint">No photo yet &mdash; scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack. (Typing the name/brand below still works too, if you'd rather.)</p>
 <div class="field">
-<label for="f-product">product name</label>
+<label for="f-product">product name <span style="text-transform:none;">(optional if you took a photo)</span></label>
 <input type="text" id="f-product" placeholder="e.g. Superdrug Pro Care Sensitive Facial Wipes x25">
 </div>
 <div class="field">
-<label for="f-brand">brand</label>
+<label for="f-brand">brand <span style="text-transform:none;">(optional if you took a photo)</span></label>
 <input type="text" id="f-brand" list="brand-list" placeholder="e.g. Superdrug own brand">
 <datalist id="brand-list"></datalist>
 </div>
@@ -106,8 +114,18 @@
 <button type="button" class="big-btn alt" id="copyBtn" style="max-width:none;">copy batch as JSON</button>
 <p id="copyMsg"></p>
 <textarea id="batchExport" readonly></textarea>
-<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message or file and send it over &mdash; it merges straight into <code>data/barcodes.json</code> and every barcode in it works instantly on the scanner from then on.</p>
-<button type="button" class="big-btn alt" id="clearBtn" style="max-width:none; margin-top:6px; border-color:#a5453d; color:#8a332c;">clear this batch</button>
+<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too &mdash; each one's filename is its barcode, so they'll match up automatically.</p>
+
+<div id="photoShareWrap" style="display:none; margin-top:14px;">
+<button type="button" class="big-btn alt" id="sharePhotosBtn" style="max-width:none;">share photos (<span id="photoCount">0</span>)</button>
+<p id="shareMsg" style="font-size:12.5px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+<div id="photoFallback" style="display:none;">
+<p class="hint">Your browser can't share several photos at once here &mdash; long-press (or tap) each one below to save it, then send them all together.</p>
+<div id="photoFallbackGrid" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+</div>
+</div>
+
+<button type="button" class="big-btn alt" id="clearBtn" style="max-width:none; margin-top:14px; border-color:#a5453d; color:#8a332c;">clear this batch</button>
 </div>
 </main>
 
@@ -159,8 +177,12 @@ listEl.style.display = "block";
 exportEl.style.display = "block";
 var html = "";
 batch.forEach(function(item, i){
-html += "<div class=\"batch-row\"><div class=\"batch-row-body\">";
-html += "<div class=\"batch-row-top\"><strong>" + (item.brand || "(no brand)") + "</strong><span class=\"batch-tier " + item.tier + "\">" + TIER_LABEL[item.tier] + "</span></div>";
+html += "<div class=\"batch-row\">";
+if(item.photo){
+html += "<img src=\"" + item.photo + "\" alt=\"\" style=\"width:52px; height:52px; object-fit:cover; border-radius:8px; flex-shrink:0;\">";
+}
+html += "<div class=\"batch-row-body\">";
+html += "<div class=\"batch-row-top\"><strong>" + (item.brand || (item.photo ? "(from photo)" : "(no brand)")) + "</strong><span class=\"batch-tier " + item.tier + "\">" + TIER_LABEL[item.tier] + "</span></div>";
 html += "<div style=\"font-size:13px; color:#5c5c4f;\">" + (item.product || "") + " &middot; " + item.barcode + "</div>";
 if(item.note) html += "<div style=\"font-size:12.5px; color:#7a7561; margin-top:4px;\">" + item.note + "</div>";
 html += "</div><button type=\"button\" class=\"batch-remove\" data-i=\"" + i + "\" aria-label=\"remove\">&times;</button></div>";
@@ -176,8 +198,19 @@ renderBatch();
 var out = {};
 batch.forEach(function(item){ out[item.barcode] = { brand: item.brand, product: item.product, tier: item.tier, note: item.note }; });
 el("batchExport").value = JSON.stringify(out, null, 2);
+
+var withPhotos = batch.filter(function(item){ return !!item.photo; });
+var shareWrap = el("photoShareWrap");
+if(withPhotos.length){
+shareWrap.style.display = "block";
+el("photoCount").textContent = withPhotos.length;
+} else {
+shareWrap.style.display = "none";
+}
 }
 renderBatch();
+
+var pendingPhoto = null;
 
 el("addBtn").addEventListener("click", function(){
 var barcode = (el("f-barcode").value || "").replace(/[^0-9]/g, "");
@@ -187,8 +220,8 @@ var tier = el("f-tier").value;
 var note = el("f-note").value.trim();
 var msg = el("addMsg");
 if(barcode.length < 6){ msg.style.color = "#8a332c"; msg.textContent = "That barcode doesn't look right -- check the digits."; return; }
-if(!brand){ msg.style.color = "#8a332c"; msg.textContent = "Add a brand name before queuing this one."; return; }
-batch.push({ barcode: barcode, brand: brand, product: product, tier: tier, note: note });
+if(!brand && !product && !pendingPhoto){ msg.style.color = "#8a332c"; msg.textContent = "Take a photo of the pack, or type a brand/product, before queuing this one."; return; }
+batch.push({ barcode: barcode, brand: brand, product: product, tier: tier, note: note, photo: pendingPhoto });
 saveBatch(batch);
 renderBatch();
 msg.style.color = "#4d6b4f";
@@ -198,7 +231,52 @@ el("f-product").value = "";
 el("f-brand").value = "";
 el("f-note").value = "";
 el("f-tier").value = "check";
+pendingPhoto = null;
+el("photoPreviewWrap").style.display = "none";
+el("noPhotoHint").style.display = "block";
 el("f-barcode").focus();
+});
+
+function dataUrlToFile(dataUrl, filename){
+var arr = dataUrl.split(",");
+var mimeMatch = arr[0].match(/:(.*?);/);
+var mime = mimeMatch ? mimeMatch[1] : "image/jpeg";
+var bstr = atob(arr[1]);
+var n = bstr.length;
+var u8 = new Uint8Array(n);
+while(n--){ u8[n] = bstr.charCodeAt(n); }
+return new File([u8], filename, { type: mime });
+}
+
+el("sharePhotosBtn").addEventListener("click", function(){
+var withPhotos = batch.filter(function(item){ return !!item.photo; });
+var shareMsg = el("shareMsg");
+var fallback = el("photoFallback");
+var grid = el("photoFallbackGrid");
+if(!withPhotos.length){ shareMsg.textContent = "No photos in this batch yet."; return; }
+var files = withPhotos.map(function(item){ return dataUrlToFile(item.photo, item.barcode + ".jpg"); });
+if(navigator.canShare && navigator.canShare({ files: files })){
+navigator.share({ files: files, title: "a home kind -- product photos" }).then(function(){
+shareMsg.textContent = "Shared. Send those over alongside the JSON above.";
+}).catch(function(){
+shareMsg.textContent = "";
+});
+} else {
+shareMsg.textContent = "";
+fallback.style.display = "block";
+grid.innerHTML = "";
+withPhotos.forEach(function(item){
+var a = document.createElement("a");
+a.href = item.photo;
+a.download = item.barcode + ".jpg";
+var img = document.createElement("img");
+img.src = item.photo;
+img.alt = item.barcode;
+img.style.cssText = "width:70px; height:70px; object-fit:cover; border-radius:8px; border:0.5px solid #cfc4a9;";
+a.appendChild(img);
+grid.appendChild(a);
+});
+}
 });
 
 el("copyBtn").addEventListener("click", function(){
@@ -267,19 +345,22 @@ el("cameraControls").style.display = "none";
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
 torchOn = false;
+barcodeCaptured = false;
 setStatus("");
 }
-el("startBtn").addEventListener("click", function(){
+var barcodeCaptured = false;
+function startCamera(){
 if(typeof ZXing === "undefined"){ setStatus("Camera scanning did not load -- type the barcode instead."); return; }
 setStatus("Asking for camera permission...", true);
+barcodeCaptured = false;
 try {
 codeReader = new ZXing.BrowserMultiFormatReader();
 codeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "reader", function(result, err){
-if(result){
+if(result && !barcodeCaptured){
+barcodeCaptured = true;
 if(navigator.vibrate) navigator.vibrate(60);
 el("f-barcode").value = result.getText().replace(/[^0-9]/g, "");
-stopCamera();
-el("f-product").focus();
+setStatus("Got the barcode. Now turn the pack around and tap \"photo\".");
 }
 }).then(function(){
 setStatus("Point at a barcode.");
@@ -293,8 +374,33 @@ setStatus("Could not open the camera -- type the barcode instead.");
 } catch(e){
 setStatus("Camera scanning is not available here.");
 }
-});
+}
+el("startBtn").addEventListener("click", startCamera);
 el("stopBtn").addEventListener("click", stopCamera);
+
+el("captureBtn").addEventListener("click", function(){
+var video = el("reader");
+var w = video.videoWidth, h = video.videoHeight;
+if(!w || !h){ setStatus("Camera's not ready yet -- give it a second and try again."); return; }
+var canvas = el("captureCanvas");
+var scale = Math.min(1, 640 / w);
+canvas.width = Math.round(w * scale);
+canvas.height = Math.round(h * scale);
+canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+pendingPhoto = canvas.toDataURL("image/jpeg", 0.72);
+el("photoPreview").src = pendingPhoto;
+el("photoPreviewWrap").style.display = "block";
+el("noPhotoHint").style.display = "none";
+if(navigator.vibrate) navigator.vibrate(40);
+stopCamera();
+el("f-tier").focus();
+});
+el("retakeBtn").addEventListener("click", function(){
+pendingPhoto = null;
+el("photoPreviewWrap").style.display = "none";
+el("noPhotoHint").style.display = "block";
+startCamera();
+});
 </script>
 </body>
 </html>
