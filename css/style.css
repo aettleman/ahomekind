@@ -1,11 +1,18 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body { overflow-x: hidden; }
+
 body {
   background: #dcd3c0;
   font-family: 'Karla', sans-serif;
   color: #5c5c4f;
   line-height: 1.9;
 }
+
+/* Keeps a drag on a slider thumb from being read as a page-swipe on
+   touch devices -- without this, dragging the impact-page sliders can
+   pan the whole page sideways instead of just moving the slider. */
+input[type=range] { touch-action: none; }
 
 a { color: #4d6b4f; text-decoration: none; }
 a:hover { color: #3d4a3a; }

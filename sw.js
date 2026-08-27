@@ -14,8 +14,8 @@
 var CACHE_VERSION = 'ahk-shell-v2';
 var SHELL_URLS = [
 '/offline.html',
-'/css/style.css?v=20260906',
-'/js/nav.js?v=20260906',
+'/css/style.css?v=20260907',
+'/js/nav.js?v=20260907',
 '/manifest.json',
 '/icons/icon-192.png',
 '/icons/icon-512.png',
