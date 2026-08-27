@@ -67,6 +67,30 @@
 .rstatus-value.na { color:#7a7561; }
 .rcard-note { font-size:14px; line-height:1.7; color:#3d4a3a; margin:0; }
 
+/* Kind Swaps + Cruelty Freebies -- see js/swap.js for the logic. Styled
+   to sit quietly alongside the verdict card above it, not compete with
+   it: same radius/border language as .card, no new colour of its own. */
+#swapSection { margin-top:4px; }
+.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-kicker { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:12px; }
+.kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
+.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
+.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
+.kswap-alt-note { font-size:13px; line-height:1.6; color:#5c5c4f; margin-bottom:12px; }
+.kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#6f8768; }
+.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#3d5a3f; }
+.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:26px 22px; }
+.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
+.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #cfc4a9; }
+.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:22px 20px; text-align:center; }
+.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
+
 /* When launched as an installed app, drop the full site header --
    the bottom nav already covers getting anywhere else -- so the
    scanner opens straight into a focused, full-screen tool. */
@@ -402,8 +426,9 @@ if(!input || !btn) return;
 function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
-? verdictHTML(brand)
+? verdictHTML(brand) + (brand.tier !== "good" ? "<div id=\"swapSection2\"></div>" : "")
 : "<p style=\"font-size:13.5px; color:#7a7561; margin:8px 0 0;\">Not on my list yet either &mdash; try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 }
 btn.addEventListener("click", run);
@@ -416,6 +441,7 @@ var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
 if(brand){
 out += verdictHTML(brand);
+if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 } else {
 out += "<div class=\"rcard v-unknown\">";
@@ -443,6 +469,7 @@ out += "</div>";
 }
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + out + "</div>";
+if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
 }
@@ -647,5 +674,6 @@ show();
 }
 })();
 </script>
+<script src="js/swap.js?v=1"></script>
 </body>
 </html>
