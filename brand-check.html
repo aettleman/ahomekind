@@ -377,7 +377,7 @@ var activeCategory = null;
 
 function cardMatchesFilter(card, filterKey) {
 if (filterKey === 'cf-vegan') return card.dataset.cf === 'yes' && card.dataset.vegan === 'yes';
-if (filterKey === 'cf') return card.dataset.cf === 'yes';
+if (filterKey === 'cf') return card.dataset.cf === 'yes' && card.dataset.vegan !== 'yes';
 return true;
 }
 
