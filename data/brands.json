@@ -2122,5 +2122,142 @@
       "dental"
     ],
     "veganConfidence": "medium"
+  },
+  {
+    "slug": "sally-hansen",
+    "name": "Sally Hansen",
+    "tier": "bad",
+    "note": "Owned by Coty, who sell into markets such as mainland China where animal testing can still be legally required, and haven't committed to ending animal testing across the whole business.",
+    "parentCompany": "Coty",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "collection",
+    "name": "Collection",
+    "tier": "check",
+    "note": "Collection says it doesn't test on animals itself and doesn't sell where testing is required by law, though it isn't Leaping Bunny or PETA certified. It's only made new products vegan since 2020, so vegan status varies by product — check the label.",
+    "parentCompany": "Meiyume",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "wilkinson-sword",
+    "name": "Wilkinson Sword",
+    "tier": "bad",
+    "note": "Owned by Edgewell Personal Care, who test on animals where it's legally required rather than refusing to sell in those markets.",
+    "parentCompany": "Edgewell",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bic",
+    "name": "Bic",
+    "tier": "bad",
+    "note": "Bic tests on animals — directly, through its suppliers, or by selling into markets that require it.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "clinique",
+    "name": "Clinique",
+    "tier": "bad",
+    "note": "Owned by Estée Lauder, and sells into mainland China, where animal testing can still be legally required for imported cosmetics — the company allows this rather than refusing that market.",
+    "parentCompany": "Estée Lauder",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "olay",
+    "name": "Olay",
+    "tier": "bad",
+    "note": "Owned by Procter & Gamble, who sell into markets such as mainland China where animal testing can still be legally required, and have not committed to ending animal testing across the whole business.",
+    "parentCompany": "Procter & Gamble",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "carmex",
+    "name": "Carmex",
+    "tier": "check",
+    "note": "Carmex says it has never tested on animals. It isn't vegan though — the balm itself contains beeswax and lanolin.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "air-wick",
+    "name": "Air Wick",
+    "tier": "bad",
+    "note": "Owned by Reckitt — the same parent company as Dettol — who test for regulatory compliance rather than refusing markets that require it.",
+    "parentCompany": "Reckitt",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low"
   }
 ]
