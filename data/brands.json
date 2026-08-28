@@ -19,7 +19,7 @@
         "label": "Shop: Power Grip Primer (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -45,7 +45,7 @@
         "label": "Shop: Organic Coconut Conditioner (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare",
       "body-shower"
@@ -72,7 +72,7 @@
         "label": "Shop: Moisturising Gel Cream (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare"
     ],
@@ -98,7 +98,7 @@
         "label": "Shop: Flawless Concealer, Nude (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -115,7 +115,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty",
       "skincare",
@@ -134,7 +134,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -151,7 +151,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -173,7 +173,7 @@
         "label": "Shop: To The Rescue Shampoo (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -195,7 +195,7 @@
         "label": "Shop: Curl Jelly (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -217,7 +217,7 @@
         "label": "Shop: Laundry Detergent Capsules (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -239,7 +239,7 @@
         "label": "Shop: 4 in 1 Concentrated Disinfectant (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -256,7 +256,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty",
       "skincare",
@@ -268,14 +268,14 @@
     "slug": "imperial-leather",
     "name": "Imperial Leather",
     "tier": "warn",
-    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelty Free International \u2014 treat the cruelty-free claim as unverified at time of writing.",
+    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified at time of writing.",
     "parentCompany": "PZ Cussons",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -285,14 +285,14 @@
     "slug": "carex",
     "name": "Carex",
     "tier": "warn",
-    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free International \u2014 treat the cruelty-free claim as unverified at time of writing. Carex's own FAQ says its washes/gels/sprays are vegan, but that's a self-declared, uncertified claim too.",
+    "note": "Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified at time of writing. Carex's own FAQ says its washes/gels/sprays are vegan, but that's a self-declared, uncertified claim too.",
     "parentCompany": "PZ Cussons",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -309,7 +309,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare"
     ],
@@ -326,7 +326,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "body-shower"
@@ -344,7 +344,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "dental"
     ],
@@ -366,7 +366,7 @@
         "label": "Shop: 5 Shade Eyeshadow Palette, Bronzed (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -383,7 +383,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -400,7 +400,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -417,7 +417,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -434,7 +434,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -444,7 +444,7 @@
     "slug": "nyx",
     "name": "NYX",
     "tier": "warn",
-    "note": "NYX is cruelty-free certified, but its parent company L'Or\u00e9al is not. NYX maintains independent cruelty-free status.",
+    "note": "NYX is cruelty-free certified, but its parent company L'Oréal is not. NYX maintains independent cruelty-free status.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -462,7 +462,7 @@
         "label": "NYX Vegan Collection "
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -479,7 +479,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "makeup-beauty",
       "body-shower"
@@ -497,7 +497,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "body-shower"
@@ -506,7 +506,7 @@
   },
   {
     "slug": "tresemm",
-    "name": "TRESemm\u00e9",
+    "name": "TRESemmé",
     "tier": "warn",
     "note": "PETA certified cruelty-free since 2021, owned by Unilever.",
     "parentCompany": "Unilever",
@@ -515,7 +515,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -532,7 +532,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -549,7 +549,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare"
     ],
@@ -566,7 +566,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -583,7 +583,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -593,14 +593,14 @@
     "slug": "garnier",
     "name": "Garnier",
     "tier": "warn",
-    "note": "Leaping Bunny certified, owned by L'Or\u00e9al.",
-    "parentCompany": "L'Or\u00e9al",
+    "note": "Leaping Bunny certified, owned by L'Oréal.",
+    "parentCompany": "L'Oréal",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare",
       "haircare"
@@ -618,7 +618,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "makeup-beauty"
@@ -636,7 +636,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -653,7 +653,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower",
       "skincare"
@@ -671,7 +671,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare"
     ],
@@ -688,7 +688,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "skincare"
     ],
@@ -698,14 +698,14 @@
     "slug": "the-ordinary",
     "name": "The Ordinary",
     "tier": "warn",
-    "note": "DECIEM is cruelty-free and vegan. Owned by Est\u00e9e Lauder.",
+    "note": "DECIEM is cruelty-free and vegan. Owned by Estée Lauder.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare"
     ],
@@ -722,7 +722,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "skincare"
     ],
@@ -744,7 +744,7 @@
         "label": "Shop: Kitchen Cleaner, Zesty Lemon (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -766,7 +766,7 @@
         "label": "Shop: Miracle Cleaning Paste (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -783,7 +783,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -806,7 +806,7 @@
         "label": "Shop: Linen Fresh Disinfectant Spray (paid link)"
       }
     ],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -823,7 +823,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -841,7 +841,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -859,7 +859,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -876,7 +876,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -894,7 +894,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -912,7 +912,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -930,7 +930,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -948,7 +948,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -966,7 +966,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -984,7 +984,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -1002,7 +1002,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "household-cleaning",
       "food-kitchen"
@@ -1020,7 +1020,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1038,7 +1038,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1056,7 +1056,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1074,7 +1074,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1092,7 +1092,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1109,7 +1109,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1127,7 +1127,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -1144,7 +1144,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -1161,7 +1161,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare"
     ],
@@ -1171,14 +1171,14 @@
     "slug": "oral-b",
     "name": "Oral-B",
     "tier": "bad",
-    "note": "Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Oral-B financially supports P&G as a company \u2014 that isn't the same as saying this specific toothbrush or toothpaste was itself tested on animals.",
+    "note": "Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Oral-B financially supports P&G as a company — that isn't the same as saying this specific toothbrush or toothpaste was itself tested on animals.",
     "parentCompany": "Procter & Gamble",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -1195,7 +1195,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare"
     ],
@@ -1212,7 +1212,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "period-menstrual",
       "body-shower"
@@ -1230,7 +1230,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "period-menstrual",
       "body-shower"
@@ -1248,7 +1248,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -1265,7 +1265,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1282,7 +1282,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "period-menstrual",
       "body-shower"
@@ -1300,7 +1300,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare",
       "body-shower"
@@ -1318,7 +1318,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -1335,7 +1335,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1353,7 +1353,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1371,7 +1371,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1389,7 +1389,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1406,7 +1406,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1423,7 +1423,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -1440,7 +1440,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -1457,7 +1457,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -1474,7 +1474,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower",
       "skincare"
@@ -1492,7 +1492,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -1509,7 +1509,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "laundry"
@@ -1527,7 +1527,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1544,7 +1544,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -1561,7 +1561,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1578,7 +1578,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1595,7 +1595,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -1605,14 +1605,14 @@
     "slug": "maybelline",
     "name": "Maybelline",
     "tier": "bad",
-    "note": "Owned by L'Or\u00e9al, who sell into markets requiring animal testing.",
-    "parentCompany": "L'Or\u00e9al",
+    "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
+    "parentCompany": "L'Oréal",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -1622,14 +1622,14 @@
     "slug": "redken",
     "name": "Redken",
     "tier": "bad",
-    "note": "Owned by L'Or\u00e9al, who sell into markets requiring animal testing.",
-    "parentCompany": "L'Or\u00e9al",
+    "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
+    "parentCompany": "L'Oréal",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "haircare"
     ],
@@ -1646,7 +1646,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -1663,7 +1663,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare"
     ],
@@ -1673,14 +1673,14 @@
     "slug": "colgate",
     "name": "Colgate",
     "tier": "bad",
-    "note": "Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company \u2014 this isn't a claim that a specific tube of toothpaste was itself tested on an animal.",
+    "note": "Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company — this isn't a claim that a specific tube of toothpaste was itself tested on an animal.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "dental"
     ],
@@ -1697,7 +1697,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -1714,7 +1714,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -1731,7 +1731,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare",
       "body-shower"
@@ -1749,7 +1749,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "body-shower"
@@ -1767,7 +1767,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -1784,7 +1784,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "dental"
     ],
@@ -1801,7 +1801,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -1818,7 +1818,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -1835,7 +1835,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare"
     ],
@@ -1852,7 +1852,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3\u00a3",
+    "price": "££££",
     "category": [
       "skincare"
     ],
@@ -1869,7 +1869,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -1891,7 +1891,7 @@
         "label": "Shop: Tinted Lip Oil (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "makeup-beauty"
     ],
@@ -1913,7 +1913,7 @@
         "label": "Shop: Super A Retinol Serum (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare"
     ],
@@ -1935,7 +1935,7 @@
         "label": "Shop: Camomile Makeup Cleansing Butter (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "body-shower",
@@ -1959,7 +1959,7 @@
         "label": "Shop: 18-in-1 Citrus Orange Castile Soap (paid link)"
       }
     ],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower",
       "household-cleaning"
@@ -1968,9 +1968,9 @@
   },
   {
     "slug": "l-oreal",
-    "name": "L'Or\u00e9al",
+    "name": "L'Oréal",
     "tier": "bad",
-    "note": "The world's largest cosmetics company. L'Or\u00e9al itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. It's also the parent company of Maybelline, Garnier, Redken, NYX, Kiehl's, Lanc\u00f4me, and dozens more.",
+    "note": "The world's largest cosmetics company. L'Oréal itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. It's also the parent company of Maybelline, Garnier, Redken, NYX, Kiehl's, Lancôme, and dozens more.",
     "parentCompany": null,
     "isParentCompany": true,
     "vegan": "partial",
@@ -1978,7 +1978,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "makeup-beauty",
       "haircare",
@@ -1990,14 +1990,14 @@
     "slug": "peace-with-the-wild",
     "name": "Peace With The Wild",
     "tier": "good",
-    "note": "Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself \u2014 it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.",
+    "note": "Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself — it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -2014,7 +2014,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare",
       "body-shower"
@@ -2032,7 +2032,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -2049,7 +2049,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -2066,7 +2066,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -2076,14 +2076,14 @@
     "slug": "superdrug-own-brand-dental",
     "name": "Superdrug own-brand (dental range)",
     "tier": "good",
-    "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer \u2014 this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.",
+    "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer — this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "dental"
     ],
@@ -2093,14 +2093,14 @@
     "slug": "aquafresh",
     "name": "Aquafresh",
     "tier": "bad",
-    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company \u2014 that isn't the same as saying this specific tube was itself tested on animals.",
+    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
     "parentCompany": "Haleon",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "dental"
     ],
@@ -2110,14 +2110,14 @@
     "slug": "sensodyne",
     "name": "Sensodyne",
     "tier": "bad",
-    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Sensodyne financially supports Haleon as a company \u2014 that isn't the same as saying this specific tube was itself tested on animals.",
+    "note": "Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Sensodyne financially supports Haleon as a company — that isn't the same as saying this specific tube was itself tested on animals.",
     "parentCompany": "Haleon",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "dental"
     ],
@@ -2134,7 +2134,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -2144,14 +2144,14 @@
     "slug": "collection",
     "name": "Collection",
     "tier": "check",
-    "note": "Collection says it doesn't test on animals itself and doesn't sell where testing is required by law, though it isn't Leaping Bunny or PETA certified. It's only made new products vegan since 2020, so vegan status varies by product \u2014 check the label.",
+    "note": "Collection says it doesn't test on animals itself and doesn't sell where testing is required by law, though it isn't Leaping Bunny or PETA certified. It's only made new products vegan since 2020, so vegan status varies by product — check the label.",
     "parentCompany": "Meiyume",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "makeup-beauty"
     ],
@@ -2168,7 +2168,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "body-shower"
     ],
@@ -2178,14 +2178,14 @@
     "slug": "bic",
     "name": "Bic",
     "tier": "bad",
-    "note": "Bic tests on animals \u2014 directly, through its suppliers, or by selling into markets that require it.",
+    "note": "Bic tests on animals — directly, through its suppliers, or by selling into markets that require it.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -2195,14 +2195,14 @@
     "slug": "clinique",
     "name": "Clinique",
     "tier": "bad",
-    "note": "Owned by Est\u00e9e Lauder, and sells into mainland China, where animal testing can still be legally required for imported cosmetics \u2014 the company allows this rather than refusing that market.",
-    "parentCompany": "Est\u00e9e Lauder",
+    "note": "Owned by Estée Lauder, and sells into mainland China, where animal testing can still be legally required for imported cosmetics — the company allows this rather than refusing that market.",
+    "parentCompany": "Estée Lauder",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "skincare",
       "makeup-beauty"
@@ -2220,7 +2220,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare"
     ],
@@ -2230,14 +2230,14 @@
     "slug": "carmex",
     "name": "Carmex",
     "tier": "check",
-    "note": "Carmex says it has never tested on animals. It isn't vegan though \u2014 the balm itself contains beeswax and lanolin.",
+    "note": "Carmex says it has never tested on animals. It isn't vegan though — the balm itself contains beeswax and lanolin.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -2247,14 +2247,14 @@
     "slug": "air-wick",
     "name": "Air Wick",
     "tier": "bad",
-    "note": "Owned by Reckitt \u2014 the same parent company as Dettol \u2014 who test for regulatory compliance rather than refusing markets that require it.",
+    "note": "Owned by Reckitt — the same parent company as Dettol — who test for regulatory compliance rather than refusing markets that require it.",
     "parentCompany": "Reckitt",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "household-cleaning"
     ],
@@ -2264,14 +2264,14 @@
     "slug": "cerave",
     "name": "CeraVe",
     "tier": "bad",
-    "note": "Owned by L'Or\u00e9al, and sold in mainland China, where animal testing can still be legally required for imported cosmetics. It also isn't vegan \u2014 some products use animal-derived ingredients.",
-    "parentCompany": "L'Or\u00e9al",
+    "note": "Owned by L'Oréal, and sold in mainland China, where animal testing can still be legally required for imported cosmetics. It also isn't vegan — some products use animal-derived ingredients.",
+    "parentCompany": "L'Oréal",
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -2281,14 +2281,14 @@
     "slug": "got2b",
     "name": "got2b",
     "tier": "bad",
-    "note": "Owned by Henkel, who test on animals \u2014 directly, through suppliers, or by selling into markets that require it.",
+    "note": "Owned by Henkel, who test on animals — directly, through suppliers, or by selling into markets that require it.",
     "parentCompany": "Henkel",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "haircare",
       "makeup-beauty"
@@ -2306,7 +2306,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare",
       "haircare",
@@ -2325,7 +2325,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "makeup-beauty",
       "skincare"
@@ -2343,7 +2343,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning",
       "body-shower"
@@ -2361,7 +2361,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "haircare",
       "body-shower"
@@ -2379,7 +2379,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "household-cleaning"
     ],
@@ -2396,7 +2396,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "body-shower"
     ],
@@ -2413,7 +2413,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3",
+    "price": "£",
     "category": [
       "skincare"
     ],
@@ -2430,7 +2430,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3",
+    "price": "££",
     "category": [
       "skincare",
       "body-shower"
@@ -2448,10 +2448,350 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "\u00a3\u00a3\u00a3",
+    "price": "£££",
     "category": [
       "skincare"
     ],
     "veganConfidence": "medium"
+  },
+  {
+    "slug": "natracare",
+    "name": "Natracare",
+    "tier": "good",
+    "note": "Vegetarian Society Vegan Approved and PETA Business Friend -- completely cruelty-free and vegan period care.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "period-menstrual"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "totm",
+    "name": "TOTM",
+    "tier": "good",
+    "note": "PETA certified cruelty-free and vegan organic period care, B Corp certified.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "period-menstrual"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "dame",
+    "name": "DAME",
+    "tier": "good",
+    "note": "Certified Vegan and B Corp certified reusable period care.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "period-menstrual"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "revolution-beauty",
+    "name": "Revolution Beauty",
+    "tier": "check",
+    "note": "PETA certified cruelty-free, and around three-quarters of the range is vegan and growing -- check the individual product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "w7-cosmetics",
+    "name": "W7 Cosmetics",
+    "tier": "check",
+    "note": "PETA certified cruelty-free, with a dedicated vegan range -- check the individual product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "technic-cosmetics",
+    "name": "Technic Cosmetics",
+    "tier": "check",
+    "note": "PETA certified cruelty-free, with vegan-friendly ranges -- check the individual product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "wet-n-wild",
+    "name": "Wet n Wild",
+    "tier": "check",
+    "note": "PETA certified cruelty-free, doesn't sell where testing is required by law, but not every product is vegan.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "essence",
+    "name": "essence",
+    "tier": "check",
+    "note": "Cruelty-free, including in mainland China, but not every product is vegan -- around 50 lines are marked vegan individually.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "catrice",
+    "name": "Catrice",
+    "tier": "check",
+    "note": "Cruelty-free, but not every product is vegan -- check the individual product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "sleek-makeup",
+    "name": "Sleek MakeUP",
+    "tier": "warn",
+    "note": "Cruelty-free itself, but owned by Walgreens Boots Alliance, who do test on animals, and doesn't currently offer vegan products.",
+    "parentCompany": "Walgreens Boots Alliance",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "st-ives",
+    "name": "St Ives",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free and mostly vegan itself, but owned by Unilever, who do test on animals.",
+    "parentCompany": "Unilever",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "soap-glory",
+    "name": "Soap & Glory",
+    "tier": "warn",
+    "note": "Leaping Bunny certified cruelty-free itself, but owned by Walgreens Boots Alliance, who do test on animals. Vegan status varies by product.",
+    "parentCompany": "Walgreens Boots Alliance",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "covergirl",
+    "name": "CoverGirl",
+    "tier": "warn",
+    "note": "Leaping Bunny certified cruelty-free itself, but owned by Coty, who do test on animals. Not every product is vegan.",
+    "parentCompany": "Coty",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "batiste",
+    "name": "Batiste",
+    "tier": "bad",
+    "note": "Owned by Church & Dwight, who test on animals -- directly, through suppliers, or by selling where it's required.",
+    "parentCompany": "Church & Dwight",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "john-frieda",
+    "name": "John Frieda",
+    "tier": "bad",
+    "note": "Owned by Kao Corporation, and sells into mainland China where animal testing can still be legally required.",
+    "parentCompany": "Kao Corporation",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "cetaphil",
+    "name": "Cetaphil",
+    "tier": "bad",
+    "note": "Owned by Galderma, who submit Cetaphil for animal testing to sell in mainland China.",
+    "parentCompany": "Galderma",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bourjois",
+    "name": "Bourjois",
+    "tier": "bad",
+    "note": "Owned by Coty, who sell into markets such as mainland China where animal testing can still be legally required.",
+    "parentCompany": "Coty",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "la-roche-posay",
+    "name": "La Roche-Posay",
+    "tier": "bad",
+    "note": "Owned by L'Oréal, and sells into mainland China where animal testing can still be legally required.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "vichy",
+    "name": "Vichy",
+    "tier": "bad",
+    "note": "Owned by L'Oréal, and sells into mainland China where animal testing can still be legally required.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "schwarzkopf",
+    "name": "Schwarzkopf",
+    "tier": "bad",
+    "note": "Owned by Henkel, who test on animals -- directly, through suppliers, or by selling where it's required.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
   }
 ]
