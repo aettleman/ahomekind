@@ -295,7 +295,7 @@ else if (tierClass === 'v-warn') { cfValue = '&#9998; mostly'; cfClass = 'maybe'
 else { cfValue = '&#10007; no'; cfClass = 'no'; }
 
 var veganValue, veganClass;
-if (noteLower.indexOf('100% vegan') !== -1 || noteLower.indexOf('fully vegan') !== -1) { veganValue = '&#10003; fully vegan'; veganClass = 'yes'; }
+if (tierClass === 'v-good' || noteLower.indexOf('100% vegan') !== -1 || noteLower.indexOf('fully vegan') !== -1) { veganValue = '&#10003; fully vegan'; veganClass = 'yes'; }
 else if (noteLower.indexOf('vegan') !== -1) { veganValue = '&#9998; check product'; veganClass = 'maybe'; }
 else { veganValue = 'not stated'; veganClass = 'na'; }
 
