@@ -421,6 +421,64 @@ h += reportWidget(b);
 h += "</div>";
 return h;
 }
+function findBrandExact(name){
+var n = normalizeSearch(name);
+if(!n) return null;
+for(var i=0;i<BRANDS.length;i++){
+if(normalizeSearch(BRANDS[i].name) === n) return BRANDS[i];
+}
+return null;
+}
+function shareUrlForBrand(brand){
+return location.origin + location.pathname + "?brand=" + encodeURIComponent(brand.name);
+}
+function copyToClipboard(text){
+if(navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text);
+var ta = document.createElement("textarea");
+ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+document.body.appendChild(ta); ta.focus(); ta.select();
+try { document.execCommand("copy"); } catch(e){}
+document.body.removeChild(ta);
+return Promise.resolve();
+}
+// Two share actions live under every result: share this specific verdict
+// (a link back to this same brand, so whoever opens it sees the result
+// without scanning anything themselves), or share A Home Kind generally.
+// Uses the native share sheet where it's available (most phones) and
+// falls back to copying the link on desktop.
+function shareWidget(idPrefix){
+var p = idPrefix;
+var h = "<div class=\"share-row\" style=\"display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;\">";
+h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-result\">share this result</button>";
+h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-site\">share a home kind</button>";
+h += "</div>";
+h += "<p id=\"" + p + "-share-msg\" style=\"font-size:12.5px; color:#7a7561; margin:8px 0 0; min-height:16px;\"></p>";
+return h;
+}
+function wireShareWidget(idPrefix, brand){
+var p = idPrefix;
+var msgEl = el(p + "-share-msg");
+function doShare(shareData){
+if(navigator.share){
+navigator.share(shareData).catch(function(){});
+} else {
+copyToClipboard(shareData.url).then(function(){
+if(msgEl) msgEl.textContent = "link copied — paste it anywhere";
+});
+}
+}
+var resultBtn = el(p + "-share-result");
+if(resultBtn) resultBtn.addEventListener("click", function(){
+var text = brand.tier === "good"
+? brand.name + " is cruelty-free and vegan-friendly — I checked with A Home Kind."
+: "Here's what I found checking " + brand.name + " with A Home Kind.";
+doShare({ title: "A Home Kind", text: text, url: shareUrlForBrand(brand) });
+});
+var siteBtn = el(p + "-share-site");
+if(siteBtn) siteBtn.addEventListener("click", function(){
+doShare({ title: "A Home Kind", text: "A Home Kind — scan a product, know it's cruelty-free and vegan.", url: location.origin + "/" });
+});
+}
 function verdictHTML(brand){
 var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
 var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : "cruelty-free, check the product"));
@@ -465,9 +523,10 @@ if(!input || !btn) return;
 function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
-? verdictHTML(brand) + (brand.tier !== "good" ? "<div id=\"swapSection2\"></div>" : "")
+? verdictHTML(brand) + (brand.tier !== "good" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
 : "<p style=\"font-size:13.5px; color:#7a7561; margin:8px 0 0;\">Not on my list yet either &mdash; try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
 if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
+if(brand) wireShareWidget("share2", brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 }
 btn.addEventListener("click", run);
@@ -481,6 +540,7 @@ var brand = knownBrand || findBrand(brandText) || findBrand(name);
 if(brand){
 out += verdictHTML(brand);
 if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
+out += shareWidget("share1");
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 } else {
 out += "<div class=\"rcard v-unknown\">";
@@ -509,6 +569,7 @@ out += "</div>";
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + out + "</div>";
 if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
+if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
 }
@@ -631,6 +692,28 @@ setStatus("Camera scanning is not available here.");
 }
 });
 el("stopBtn").addEventListener("click", stopCamera);
+
+// If this page was opened via a shared "share this result" link
+// (scan.html?brand=Name), show that brand's verdict straight away
+// instead of waiting for a scan -- no camera or lookup needed.
+(function(){
+try {
+var sharedName = new URLSearchParams(location.search).get("brand");
+if(!sharedName) return;
+var brand = findBrandExact(sharedName) || findBrand(sharedName);
+if(!brand) return;
+var out = "<div class=\"result-in\">";
+out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:10px;\">shared result</p>";
+out += verdictHTML(brand);
+if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
+out += shareWidget("share1");
+out += "</div>";
+el("results").innerHTML = out;
+if(brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
+wireShareWidget("share1", brand);
+if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
+} catch(e){}
+})();
 </script>
 
 <div class="newsletter">
