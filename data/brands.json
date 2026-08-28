@@ -2294,5 +2294,164 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low"
+  },
+  {
+    "slug": "sukin",
+    "name": "Sukin",
+    "tier": "good",
+    "note": "Leaping Bunny certified and 100% vegan -- Australian, independent, sold in Superdrug and Holland & Barrett.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3",
+    "category": [
+      "skincare",
+      "haircare",
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "phb-ethical-beauty",
+    "name": "PHB Ethical Beauty",
+    "tier": "good",
+    "note": "Cruelty Free International, PETA and Vegan Society certified -- every product is 100% vegan.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "attitude",
+    "name": "Attitude",
+    "tier": "good",
+    "note": "PETA certified cruelty-free and 100% vegan, independently owned -- household and personal care, sold via Ocado and Holland & Barrett.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3",
+    "category": [
+      "household-cleaning",
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "ethique",
+    "name": "Ethique",
+    "tier": "good",
+    "note": "Leaping Bunny certified and 100% vegan, plastic-free solid bars -- sold in Holland & Barrett and online.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3",
+    "category": [
+      "haircare",
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "delphis-eco",
+    "name": "Delphis Eco",
+    "tier": "good",
+    "note": "Never tested on animals and 100% vegan -- independent, B-Corp certified household cleaning range, sold via Ocado and independent stores.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "salt-of-the-earth",
+    "name": "Salt of the Earth",
+    "tier": "good",
+    "note": "Vegan Society and Leaping Bunny approved -- UK-made natural deodorants, sold in Holland & Barrett and Boots.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "hurraw",
+    "name": "Hurraw!",
+    "tier": "good",
+    "note": "Choose Cruelty-Free, Leaping Bunny and PETA certified -- 100% vegan lip balms, sold in Holland & Barrett and online.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "beauty-kitchen",
+    "name": "Beauty Kitchen",
+    "tier": "check",
+    "note": "Cruelty-free and B-Corp certified, but only some products are vegan-certified -- check the individual product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "suki",
+    "name": "Suki",
+    "tier": "check",
+    "note": "Leaping Bunny and PETA certified cruelty-free, but not fully vegan -- some products contain animal-derived ingredients.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "\u00a3\u00a3\u00a3",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium"
   }
 ]
