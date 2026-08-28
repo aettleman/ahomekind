@@ -171,7 +171,7 @@
 <div class="card warn" data-category="household"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3>Ecover</h3><p>Cruelty-free, owned by SC Johnson.</p></div>
 
 <p class="section-label">dental &amp; oral care</p>
-<div style="background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5c5c4f; line-height:1.8;">
+<div id="dentalDisclaimer" style="display:none; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5c5c4f; line-height:1.8;">
 Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a company that isn't cruelty-free still financially supports that company &mdash; even though these are non-edible, everyday items. That's a different claim from saying any specific product was itself personally tested on an animal: it's about where your money goes, not a claim about that individual item's testing history.
 </div>
 <div class="card" data-category="mouth-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3>Peace With The Wild</h3><p>A curated cruelty-free retailer, not a toothpaste manufacturer itself &mdash; stocks independently vetted cruelty-free and vegan dental and personal care products. Check each product it lists for its own certification.</p></div>
@@ -296,7 +296,14 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <script>
 var priceMap = {"e.l.f. cosmetics":"£","Faith in Nature":"£","BYOMA":"££","Barry M":"£","B. by Superdrug":"£","Baylis & Harding":"£","Original Source":"£","Noughty":"££","Umberto Giannini":"££","OceanSaver":"££","Fabulosa":"£","Superdrug own brand (wider range)":"£","Imperial Leather":"£","Carex":"£","The Inkey List":"££","Green People":"££","Superdrug Pro Care":"£","MUA":"£","Fussy":"££","Glaze":"££","Kingfisher":"££","Bleach London":"££","NYX":"£","Bondi Sands":"££","Bulldog":"££","TRESemmé":"££","Lynx":"£","Aussie":"£","Wild":"££","Rimmel":"£","Garnier":"£","No7":"££","Simple":"£","Dove":"£","Herbal Essences":"£","REN":"£££","The Ordinary":"££","Drunk Elephant":"£££","Astonish":"£","The Pink Stuff":"£","Bio-D":"£","Zoflora":"£","Miniml":"££","Smol":"££","Method":"££","Ecover":"££","Aldi":"£","Lidl":"£","Co-op":"££","Sainsbury's":"££","Morrisons":"£","Waitrose":"£££","Marks & Spencer":"£££","Ariel":"££","Bold":"£","Daz":"£","Fairy":"£","Flash":"£","Lenor":"££","Gillette":"££","Venus":"££","Head & Shoulders":"£","Oral-B":"££","Pantene":"£","Always":"£","Tampax":"£","Febreze":"££","Viakal":"£","Satin Care":"£","Vaseline":"£","Sure":"£","Persil":"££","Comfort":"£","Surf":"£","Cif":"£","Domestos":"£","Radox":"£","Axe":"£","Bedhead":"££","Nivea":"££","Dettol":"££","Vanish":"££","Cillit Bang":"£","Finish":"££","Mr Muscle":"£","Glade":"£","Pledge":"£","Maybelline":"£","Redken":"£££","Max Factor":"£","Clairol":"£","Colgate":"£","Palmolive":"£","Sanex":"£","Johnson's":"£","Aveeno":"££","Neutrogena":"£","Listerine":"£","OGX":"££","Clean & Clear":"£","T/Gel":"££","Elemis":"££££","TENA":"££","Rare Beauty":"£££","Mad Hippie":"££","The Body Shop":"££","Dr Bronner's":"££","L'Oréal":"££","Peace With The Wild":"££","Dr Organic":"£","Gutology":"££","Biomed":"££","Waken":"££","Superdrug own-brand (dental range)":"£","Aquafresh":"£","Sensodyne":"££","Sally Hansen":"£","Collection":"£","Wilkinson Sword":"££","Bic":"£","Clinique":"£££","Olay":"££","Carmex":"£","Air Wick":"£","CeraVe":"£","got2b":"£","Sukin":"£","PHB Ethical Beauty":"££","Attitude":"££","Ethique":"££","Delphis Eco":"££","Salt of the Earth":"£","Hurraw!":"£","Beauty Kitchen":"££","Suki":"£££","Natracare":"££","TOTM":"££","DAME":"£££","Revolution Beauty":"£","W7 Cosmetics":"£","Technic Cosmetics":"£","Wet n Wild":"£","essence":"£","Catrice":"£","Sleek MakeUP":"£","St Ives":"£","Soap & Glory":"££","CoverGirl":"£","Batiste":"£","John Frieda":"££","Cetaphil":"££","Bourjois":"£","La Roche-Posay":"£££","Vichy":"£££","Schwarzkopf":"££"};
 function normalizeSearch(s){
-return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+// Brand names sometimes shorten "and" to "n" (Wet n Wild, Soap & Glory
+// written as "Soap n Glory" by some people, etc). Canonicalise "and"/"&"
+// to "n" *before* stripping spaces and punctuation, so a search for
+// either form finds the brand regardless of which one it's stored as.
+return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+.replace(/&/g, ' and ')
+.replace(/\band\b/g, 'n')
+.replace(/[^a-z0-9]/g, '');
 }
 
 // Rebuild each hand-written .card into the same result-card look used on
@@ -425,6 +432,8 @@ browseBtn.style.display = 'none';
 activeCategory = null;
 activeFilter = 'all';
 setActivePills();
+var dentalDisclaimer = document.getElementById('dentalDisclaimer');
+if (dentalDisclaimer) dentalDisclaimer.style.display = 'none';
 }
 
 // Renders #allBrands filtered by whichever of activeCategory/activeFilter
@@ -437,6 +446,11 @@ allBrands.style.display = 'block';
 categoryBack.style.display = activeCategory ? 'block' : 'none';
 browseBtn.style.display = 'none';
 document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lbl.style.display = 'none'; });
+// The dental disclaimer only makes sense when you're actually looking
+// at mouth-care products -- otherwise it just sits there out of context
+// above whatever else you've searched or browsed to.
+var dentalDisclaimer = document.getElementById('dentalDisclaimer');
+if (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care') ? 'block' : 'none';
 var anyVisible = false;
 allCards.forEach(function(card) {
 var inCategory = !activeCategory || cardCategories(card).indexOf(activeCategory) !== -1;
@@ -491,6 +505,8 @@ browseBtn.style.display = 'none';
 activeFilter = 'all';
 activeCategory = null;
 document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
+var searchDentalDisclaimer = document.getElementById('dentalDisclaimer');
+if (searchDentalDisclaimer) searchDentalDisclaimer.style.display = 'none';
 } else {
 showCategoryGrid();
 return;
