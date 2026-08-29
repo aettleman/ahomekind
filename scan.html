@@ -504,9 +504,13 @@ var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" :
 var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : "cruelty-free, check the product"));
 var initial = (brand.name || "?").replace(/[^A-Za-z0-9]/g, "").charAt(0).toUpperCase() || "?";
 
+// "check" means the brand itself IS certified/confirmed cruelty-free --
+// it's only the vegan status that varies by product -- so cruelty-free
+// reads "yes" there, same as "good". Only "warn" (cruelty-free itself
+// but the parent company isn't, or an unverified claim) gets "mostly".
 var cfValue, cfClass;
-if(brand.tier === "good"){ cfValue = "&#10003; yes"; cfClass = "yes"; }
-else if(brand.tier === "warn" || brand.tier === "check"){ cfValue = "&#9998; mostly"; cfClass = "maybe"; }
+if(brand.tier === "good" || brand.tier === "check"){ cfValue = "&#10003; yes"; cfClass = "yes"; }
+else if(brand.tier === "warn"){ cfValue = "&#9998; mostly"; cfClass = "maybe"; }
 else if(brand.tier === "bad"){ cfValue = "&#10007; no"; cfClass = "no"; }
 else { cfValue = "? unclear"; cfClass = "na"; }
 
