@@ -357,6 +357,67 @@ out += "<p style=\"margin-bottom:0; font-size:14px;\">You can also <a href=\"sca
 }
 el("results").innerHTML = out;
 }
+// Photographed packaging reads far more reliably once it's grayscale, has
+// its contrast stretched to use the full range, and is a decent size --
+// raw colour photos (especially slightly small or low-contrast ones) are
+// where Tesseract quietly misses text that looks perfectly clear to a
+// person. This runs before every read, on a copy, so the preview photo
+// itself is untouched.
+function preprocessForOCR(dataUrl, callback){
+var img = new Image();
+img.onload = function(){
+var maxSide = 2000;
+var longSide = Math.max(img.width, img.height);
+var scale = longSide < maxSide ? Math.min(2, maxSide / longSide) : (maxSide / longSide);
+var w = Math.max(1, Math.round(img.width * scale));
+var h = Math.max(1, Math.round(img.height * scale));
+var c = document.createElement("canvas");
+c.width = w; c.height = h;
+var ctx = c.getContext("2d");
+ctx.drawImage(img, 0, 0, w, h);
+var imageData;
+try { imageData = ctx.getImageData(0, 0, w, h); } catch(e){ callback(dataUrl); return; }
+var d = imageData.data;
+var min = 255, max = 0;
+var gray = new Uint8ClampedArray(d.length / 4);
+for(var i = 0, p = 0; i < d.length; i += 4, p++){
+var g = d[i] * 0.299 + d[i+1] * 0.587 + d[i+2] * 0.114;
+gray[p] = g;
+if(g < min) min = g;
+if(g > max) max = g;
+}
+var range = Math.max(1, max - min);
+for(var i = 0, p = 0; i < d.length; i += 4, p++){
+var v = Math.round((gray[p] - min) * 255 / range);
+d[i] = d[i+1] = d[i+2] = v;
+}
+ctx.putImageData(imageData, 0, 0);
+callback(c.toDataURL("image/png"));
+};
+img.onerror = function(){ callback(dataUrl); };
+img.src = dataUrl;
+}
+
+// The OCR pass is rarely word-perfect -- a letter drops, a space merges
+// two words, a line breaks mid-brand-name -- so matching on one exact
+// unbroken phrase misses brands that are genuinely in the photo. This
+// checks three ways before giving up: the phrase as read, the same
+// phrase with all spacing removed (catches "originalsource"), and, for
+// multi-word names, whether each significant word turned up somewhere
+// in the text even if the OCR separated or reordered them.
+function normalizeOCR(t){
+return (t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+}
+function termMatches(term, text, compact){
+var t = term.toLowerCase();
+if(text.indexOf(t) !== -1) return true;
+var compactTerm = t.replace(/[^a-z0-9]/g, "");
+if(compactTerm.length >= 4 && compact.indexOf(compactTerm) !== -1) return true;
+var words = t.split(" ").filter(function(w){ return w.length >= 4; });
+if(words.length >= 2 && words.every(function(w){ return text.indexOf(w) !== -1; })) return true;
+return false;
+}
+
 el("go").addEventListener("click", function(){
 if(!imgData) return;
 if(typeof Tesseract === "undefined"){
@@ -366,9 +427,10 @@ return;
 el("go").style.display = "none";
 el("bar").style.display = "block";
 setStatus("Reading the shelf...");
-Tesseract.recognize(imgData, "eng", {
+preprocessForOCR(imgData, function(processedData){
+Tesseract.recognize(processedData, "eng", {
   tessedit_pageseg_mode: "11",
-  tessedit_pageseg_mode: "11",
+  preserve_interword_spaces: "1",
 logger: function(m){
 if(m.status === "recognizing text"){
 el("barfill").style.width = Math.round(m.progress * 100) + "%";
@@ -378,11 +440,12 @@ el("barfill").style.width = Math.round(m.progress * 100) + "%";
 el("bar").style.display = "none";
 el("go").style.display = "block";
 el("go").textContent = "read it again";
-var text = (res.data.text || "").toLowerCase().replace(/[^a-z0-9. -]/g, " ");
+var text = normalizeOCR(res.data.text);
+var compact = text.replace(/\s+/g, "");
 var found = [];
 BRANDS.forEach(function(b){
 for(var i=0;i<b.terms.length;i++){
-if(text.indexOf(b.terms[i]) !== -1){ found.push(b); return; }
+if(termMatches(b.terms[i], text, compact)){ found.push(b); return; }
 }
 });
 render(found, res.data.text || "");
@@ -390,6 +453,7 @@ render(found, res.data.text || "");
 el("bar").style.display = "none";
 el("go").style.display = "block";
 setStatus("Could not read that image. A closer, straighter photo usually helps.");
+});
 });
 });
 </script>
