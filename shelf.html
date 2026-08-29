@@ -29,6 +29,21 @@
 .hit.bad { background:#f3e2df; border:1px solid #a5453d; }
 .hit.check { background:#ece5d5; border:1px solid #cfc4a9; }
 .hit h3 { margin-bottom:6px; }
+
+/* Live shelf camera: a viewfinder with a guide frame and a running tip
+   line, so you know where to point and when the shot is actually good
+   enough to read, instead of guessing after the fact. */
+.camera-wrap { position:relative; max-width:420px; margin:0 auto 14px; border-radius:14px; overflow:hidden; background:#20261d; display:none; }
+#shelfVideo { width:100%; aspect-ratio:3/4; display:block; object-fit:cover; background:#20261d; }
+.shelf-guide { position:absolute; top:16%; left:8%; right:8%; bottom:32%; border:2px dashed rgba(244,239,226,0.85); border-radius:10px; pointer-events:none; }
+.shelf-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#f4efe2; background:rgba(20,24,18,0.72); padding:5px 10px; border-radius:20px; }
+.shelf-tip { position:absolute; left:10px; right:10px; bottom:70px; text-align:center; font-size:12.5px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:8px 10px; transition:background 0.2s ease; }
+.shelf-tip.good { background:rgba(77,107,79,0.85); }
+.shelf-tip.warn { background:rgba(158,90,42,0.8); }
+.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; }
+.camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
+.camera-controls button:hover { filter:brightness(1.08); }
 </style>
 </head>
 <body>
@@ -61,13 +76,25 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">scan a whole shelf</h1>
-<p>Barcodes are one at a time. This reads the whole shelf at once. Take a photo down the aisle and it will tell you which brands in shot are worth picking up.</p>
+<p>Barcodes are one at a time. This reads the whole shelf at once. Line up the shelf in the box below, or choose a photo, and I'll tell you which brands in shot are worth picking up.</p>
 
-<div class="drop" id="drop">
+<div class="camera-wrap" id="shelfCameraWrap">
+<video id="shelfVideo" muted playsinline autoplay></video>
+<div class="shelf-guide"><span class="shelf-guide-label">fill this box</span></div>
+<p class="shelf-tip" id="shelfTip">finding your camera&hellip;</p>
+<div class="camera-controls">
+<button type="button" id="shelfCancel">choose a photo instead</button>
+<button type="button" class="snap" id="shelfSnap">snap photo</button>
+</div>
+</div>
+<canvas id="shelfSample" width="120" height="90" style="display:none;"></canvas>
+
+<div class="drop" id="drop" style="display:none;">
 <img id="preview" alt="your shelf photo">
 <p style="margin-bottom:16px; font-size:14px;">take a photo of the shelf, or pick one from your camera roll</p>
 <label class="big-btn" for="file">choose a photo</label>
 <input type="file" id="file" accept="image/*" capture="environment" style="display:none;">
+<button type="button" class="big-btn alt" id="backToCamera" style="margin-top:8px; display:none;">try the live camera instead</button>
 </div>
 
 <button class="big-btn" id="go" style="display:none; width:100%;">read the shelf</button>
@@ -76,7 +103,7 @@
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
 <div id="results"></div>
 
-<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">Works best on a straight-on, well-lit shot where brand names are legible. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
+<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
 </main>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
@@ -186,6 +213,113 @@ if(t.indexOf(BRANDS[i].terms[j]) !== -1) return BRANDS[i];
 return null;
 }
 var imgData = null;
+
+// Live camera guidance: while the viewfinder is open, sample the frame
+// every half second to gauge brightness (too dark to read) and how much
+// has changed since the last sample (a rough stand-in for camera shake,
+// since a steady shot changes little frame to frame). This is what
+// answers "where do I point, when do I snap" instead of leaving that
+// to guesswork.
+var shelfStream = null;
+var shelfTimer = null;
+var lastFrameData = null;
+
+function setShelfTip(text, cls){
+var tip = el("shelfTip");
+if(!tip) return;
+tip.textContent = text;
+tip.className = "shelf-tip" + (cls ? " " + cls : "");
+}
+
+function sampleShelfFrame(){
+var video = el("shelfVideo");
+if(!video || !video.videoWidth) return;
+var c = el("shelfSample");
+var ctx = c.getContext("2d");
+ctx.drawImage(video, 0, 0, c.width, c.height);
+var data;
+try { data = ctx.getImageData(0, 0, c.width, c.height).data; } catch(e){ return; }
+var sum = 0, count = data.length / 4;
+for(var i = 0; i < data.length; i += 4){
+sum += data[i] * 0.299 + data[i+1] * 0.587 + data[i+2] * 0.114;
+}
+var brightness = sum / count;
+var moveScore = 0;
+if(lastFrameData){
+var diff = 0;
+for(var j = 0; j < data.length; j += 4){ diff += Math.abs(data[j] - lastFrameData[j]); }
+moveScore = diff / count;
+}
+lastFrameData = data;
+if(brightness < 55){
+setShelfTip("a bit dark, try to find better light", "warn");
+} else if(lastFrameData && moveScore > 16){
+setShelfTip("hold steady, straight-on to the shelf", "warn");
+} else {
+setShelfTip("looks good, fill the box then snap", "good");
+}
+}
+
+function stopShelfCamera(){
+if(shelfTimer){ clearInterval(shelfTimer); shelfTimer = null; }
+if(shelfStream){ shelfStream.getTracks().forEach(function(t){ t.stop(); }); shelfStream = null; }
+lastFrameData = null;
+el("shelfCameraWrap").style.display = "none";
+}
+
+function showFilePicker(msg){
+stopShelfCamera();
+el("drop").style.display = "block";
+el("backToCamera").style.display = (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) ? "inline-block" : "none";
+if(msg) setStatus(msg);
+}
+
+function startShelfCamera(){
+if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+showFilePicker();
+return;
+}
+el("drop").style.display = "none";
+el("shelfCameraWrap").style.display = "block";
+setShelfTip("finding your camera…");
+navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream){
+shelfStream = stream;
+var video = el("shelfVideo");
+video.srcObject = stream;
+video.play().catch(function(){});
+setShelfTip("point at the shelf, fill the box");
+shelfTimer = setInterval(sampleShelfFrame, 500);
+}).catch(function(){
+showFilePicker("Could not open the camera, choose a photo instead.");
+});
+}
+
+el("shelfSnap").addEventListener("click", function(){
+var video = el("shelfVideo");
+if(!video.videoWidth) return;
+var c = document.createElement("canvas");
+var maxW = 1280;
+var scale = Math.min(1, maxW / video.videoWidth);
+c.width = Math.round(video.videoWidth * scale);
+c.height = Math.round(video.videoHeight * scale);
+c.getContext("2d").drawImage(video, 0, 0, c.width, c.height);
+imgData = c.toDataURL("image/jpeg", 0.85);
+stopShelfCamera();
+var p = el("preview");
+p.src = imgData;
+p.style.display = "block";
+el("drop").style.display = "block";
+el("backToCamera").style.display = "inline-block";
+el("go").style.display = "block";
+setStatus("");
+el("results").innerHTML = "";
+});
+
+el("shelfCancel").addEventListener("click", function(){ showFilePicker(); });
+el("backToCamera").addEventListener("click", function(){ startShelfCamera(); });
+
+startShelfCamera();
+
 el("file").addEventListener("change", function(e){
 var f = e.target.files[0];
 if(!f) return;
