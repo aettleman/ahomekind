@@ -153,6 +153,7 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
+'<a href="/shelf.html">scan a shelf</a>' +
 '<a href="/quiz.html">take the quiz</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/what-testing-means.html">what testing means</a>' +
