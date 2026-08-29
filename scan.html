@@ -116,6 +116,25 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 #addHome-btn:hover { background:#3d5a3f; }
 #addHome-dismiss { flex-shrink:0; background:none; border:none; color:#8a8672; font-size:18px; line-height:1; cursor:pointer; padding:2px 4px; }
 #addHome-steps { font-size:12.5px; color:#5c5c4f; line-height:1.6; margin-top:2px; }
+
+/* Scan page hierarchy: the scanner itself should be the first thing
+   anyone lands on, so the heading is bigger/tighter than the site
+   default and everything else steps back to make room for it. */
+.scan-h1 { text-align:center; font-size:28px; margin:22px 0 8px; }
+@media (max-width:480px){ .scan-h1 { font-size:25px; margin-top:16px; } }
+.scan-sub { text-align:center; max-width:360px; margin:0 auto 22px; font-size:15px; line-height:1.6; }
+.manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:16px 0 10px; }
+
+/* Anything below this point (home-screen install, how-this-works, the
+   report form) is a secondary feature -- present, but visually quieter
+   than the scan/manual-entry flow above it. */
+.secondary-block { margin-top:26px; padding-top:22px; border-top:0.5px solid #dcd3c0; }
+.secondary-label { font-family:'Cormorant Garamond',serif; font-size:16.5px; color:#3d4a3a; margin-bottom:6px; }
+.secondary-sub { font-size:13px; color:#5c5c4f; line-height:1.6; margin-bottom:0; }
+.quiet-details { margin-top:26px; padding-top:18px; border-top:0.5px solid #dcd3c0; }
+.quiet-details summary { cursor:pointer; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#8a8672; list-style:revert; }
+.quiet-details summary:hover { color:#3d4a3a; }
+.quiet-details p { font-size:12.5px; color:#8a8672; line-height:1.9; margin:12px 0 0; }
 </style>
 </head>
 <body>
@@ -147,23 +166,8 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </header>
 
 <main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">scan a barcode</h1>
-<p>Standing in the aisle with something in your hand? Point your camera at the barcode and I'll tell you what I know, then point you at the people who know the rest.</p>
-
-<div id="addHome">
-<div id="addHome-icon" aria-hidden="true">
-<svg width="18" height="18" viewBox="0 0 40 40" fill="none">
-<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" fill="#f4efe2"/>
-<path d="M20 30 L20 12" stroke="#f4efe2" stroke-width="1.6"/>
-</svg>
-</div>
-<div id="addHome-body">
-<div id="addHome-title">keep a home kind close by</div>
-<div id="addHome-text" class="addhome-sub">Add the scanner to your home screen so it's one tap away, right when you're stood in the aisle.</div>
-<button type="button" id="addHome-btn">add to home screen</button>
-</div>
-<button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
-</div>
+<h1 class="scan-h1">scan a barcode</h1>
+<p class="scan-sub">Point your camera at a product and I'll tell you what I know.</p>
 
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
@@ -175,7 +179,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 <button class="big-btn" id="startBtn">scan a product</button>
 
-<p style="text-align:center; font-size:12px; color:#8a8672; margin:14px 0 10px;">or type the numbers under the barcode</p>
+<p class="manual-lead">can't scan it? enter the barcode manually</p>
 <div class="manual">
 <label for="manualCode" class="visually-hidden">Barcode number</label>
 <input type="text" id="manualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
@@ -185,11 +189,29 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
 
-<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">Product data comes from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>. The cruelty-free verdict comes from my own <a href="brand-check.html">brand check</a> list.</p>
+<div id="addHome">
+<div id="addHome-icon" aria-hidden="true">
+<svg width="18" height="18" viewBox="0 0 40 40" fill="none">
+<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" fill="#f4efe2"/>
+<path d="M20 30 L20 12" stroke="#f4efe2" stroke-width="1.6"/>
+</svg>
+</div>
+<div id="addHome-body">
+<div id="addHome-title">keep a home kind close by</div>
+<div id="addHome-text" class="addhome-sub">Add it to your home screen so you can scan products whenever you're shopping.</div>
+<button type="button" id="addHome-btn">add to home screen</button>
+</div>
+<button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
+</div>
 
-<div class="card" style="margin-top:24px;" id="standing-report-card">
-<h3 style="margin-bottom:6px;">know something a scan won't tell me?</h3>
-<p style="margin-bottom:0;">Whether you just scanned something or not, if you know a brand or product's cruelty-free/vegan status &mdash; or want me to look one up &mdash; let me know here.</p>
+<details class="quiet-details">
+<summary>how this works / about the results</summary>
+<p>Product data comes from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> and <a href="https://world.openbeautyfacts.org" target="_blank" rel="noopener">Open Beauty Facts</a>. The cruelty-free verdict comes from my own <a href="brand-check.html">brand check</a> list.</p>
+</details>
+
+<div class="secondary-block" id="standing-report-card">
+<p class="secondary-label">know something a scan won't tell me?</p>
+<p class="secondary-sub">Whether you just scanned something or not, if you know a brand or product's cruelty-free/vegan status &mdash; or want me to look one up &mdash; let me know here.</p>
 <div id="standing-report-widget"></div>
 </div>
 </main>
@@ -788,7 +810,7 @@ if (isIOS) {
 var stepText = isSafari
 ? 'Tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.'
 : 'Open your browser\'s menu, then look for <strong>Add to Home Screen</strong> (sometimes under a share icon).';
-document.getElementById('addHome-text').innerHTML = 'Add the scanner to your home screen so it\'s one tap away, right when you\'re stood in the aisle. ' + stepText;
+document.getElementById('addHome-text').innerHTML = 'Add it to your home screen so you can scan products whenever you\'re shopping. ' + stepText;
 var btn = document.getElementById('addHome-btn');
 btn.textContent = 'got it';
 btn.addEventListener('click', dismiss);
