@@ -41,6 +41,14 @@
 .chip { display:inline-block; font-size:11px; letter-spacing:0.5px; padding:6px 12px; border-radius:20px; margin:0 6px 6px 0; background:#ece5d5; border:0.5px solid #cfc4a9; color:#5c5c4f; }
 .chip.yes { background:#dbe8d7; border-color:#6f8768; color:#33502f; }
 .chip.no { background:#f3ded9; border-color:#c98a3a; color:#8a4a2a; }
+.ingredient-watch { margin-top:12px; padding-top:12px; border-top:0.5px solid #e0d8c4; }
+.iw-title { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#8a8672; margin-bottom:8px; }
+.iw-row { border-radius:8px; padding:9px 12px; margin-bottom:6px; font-size:13px; line-height:1.5; }
+.iw-row:last-child { margin-bottom:0; }
+.iw-name { display:block; font-weight:600; color:#3d4a3a; margin-bottom:2px; }
+.iw-note { color:#5c5c4f; }
+.iw-animal { background:#f3e2df; border:1px solid #d9a89f; }
+.iw-ambiguous { background:#f6ecd9; border:1px solid #dfc491; }
 .srclink { display:block; padding:12px 0; border-bottom:0.5px solid #e0d8c4; font-size:14px; }
 .srclink:last-of-type { border-bottom:none; }
 
@@ -614,6 +622,7 @@ if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.l
 }
 });
 out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
+if(product.ingredients_text) out += "<div id=\"ingredientWatch\"></div>";
 out += "</div>";
 }
 out += sourceBlock(brandText);
@@ -622,6 +631,42 @@ if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSect
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
+if(product && product.ingredients_text) renderIngredientWatch(product.ingredients_text, "ingredientWatch");
+}
+
+// Checks a product's actual ingredients list (as text, straight from Open
+// Food/Beauty Facts -- no OCR guessing needed since this comes through as
+// real text) against a glossary of animal-derived and commonly-ambiguous
+// ingredients. This is a layer below the brand-level verdict: a genuinely
+// certified cruelty-free brand can still have one product with, say,
+// carmine or lanolin in it, and that's worth surfacing on its own.
+var INGREDIENTS_PROMISE = fetch("data/ingredients.json").then(function(r){ return r.json(); }).catch(function(){ return []; });
+function findIngredientMatches(text, glossary){
+var t = (text || "").toLowerCase();
+var found = [];
+glossary.forEach(function(entry){
+for(var i=0;i<entry.terms.length;i++){
+if(t.indexOf(entry.terms[i]) !== -1){ found.push(entry); return; }
+}
+});
+return found;
+}
+function renderIngredientWatch(ingredientsText, targetId){
+INGREDIENTS_PROMISE.then(function(glossary){
+var target = el(targetId);
+if(!target) return;
+var matches = findIngredientMatches(ingredientsText, glossary);
+if(!matches.length) return;
+var animal = matches.filter(function(m){ return m.type === "animal"; });
+var ambiguous = matches.filter(function(m){ return m.type === "ambiguous"; });
+var html = "<div class=\"ingredient-watch\">";
+html += "<p class=\"iw-title\">ingredient watch</p>";
+animal.concat(ambiguous).forEach(function(m){
+html += "<div class=\"iw-row iw-" + m.type + "\"><span class=\"iw-name\">" + m.name + "</span><span class=\"iw-note\">" + m.note + "</span></div>";
+});
+html += "</div>";
+target.innerHTML = html;
+});
 }
 // My own hand-checked barcode -> brand lookups, kept in data/barcodes.json.
 // Own-brand supermarket/pharmacy products especially are patchy or missing
