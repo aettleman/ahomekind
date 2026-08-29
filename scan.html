@@ -210,8 +210,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </details>
 
 <div class="secondary-block" id="standing-report-card">
-<p class="secondary-label">know something the scan doesn't?</p>
-<p class="secondary-sub">Whether you just scanned something or not, if you know a brand or product's cruelty-free or vegan status, or want me to look one up, let me know in the form below.</p>
 <div id="standing-report-widget"></div>
 </div>
 </main>
@@ -388,7 +386,7 @@ return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split(
 function reportWidget(prefillName, idPrefix){
 var p = idPrefix || "rpt";
 var h = "<div style=\"margin-top:16px; padding-top:16px; border-top:0.5px solid #cfc4a9;\">";
-h += "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:8px;\">know something about this one?</p>";
+h += "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:8px;\">know something the scan doesn't? let me know below.</p>";
 h += "<input type=\"text\" id=\"" + p + "-name\" placeholder=\"brand or product\" value=\"" + escapeAttr(prefillName) + "\" style=\"width:100%; box-sizing:border-box; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; margin-bottom:10px;\">";
 h += "<div style=\"font-size:13.5px; line-height:2;\">";
 h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-lb\"> has the Leaping Bunny logo</label>";
