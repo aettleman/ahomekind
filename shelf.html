@@ -83,6 +83,7 @@
 <div class="shelf-guide"><span class="shelf-guide-label">fill this box</span></div>
 <p class="shelf-tip" id="shelfTip">finding your camera&hellip;</p>
 <div class="camera-controls">
+<button type="button" id="shelfTorchBtn" style="display:none;">&#128161;</button>
 <button type="button" id="shelfCancel">choose a photo instead</button>
 <button type="button" class="snap" id="shelfSnap">snap photo</button>
 </div>
@@ -223,6 +224,30 @@ var imgData = null;
 var shelfStream = null;
 var shelfTimer = null;
 var lastFrameData = null;
+var shelfTorchOn = false;
+
+// Flash/torch toggle, same idea as the barcode scanner's: only
+// Chrome-family browsers on Android currently expose it to web pages, so
+// the button stays hidden unless the camera track itself reports support.
+function setupShelfTorchButton(){
+var btn = el("shelfTorchBtn");
+btn.style.display = "none";
+var track = shelfStream ? shelfStream.getVideoTracks()[0] : null;
+if(!track || typeof track.getCapabilities !== "function") return;
+var caps;
+try { caps = track.getCapabilities(); } catch(e){ caps = null; }
+if(caps && caps.torch){
+shelfTorchOn = false;
+btn.style.display = "inline-block";
+}
+}
+function toggleShelfTorch(){
+var track = shelfStream ? shelfStream.getVideoTracks()[0] : null;
+if(!track) return;
+shelfTorchOn = !shelfTorchOn;
+track.applyConstraints({ advanced: [{ torch: shelfTorchOn }] }).catch(function(){});
+}
+el("shelfTorchBtn").addEventListener("click", toggleShelfTorch);
 
 function setShelfTip(text, cls){
 var tip = el("shelfTip");
@@ -264,6 +289,8 @@ function stopShelfCamera(){
 if(shelfTimer){ clearInterval(shelfTimer); shelfTimer = null; }
 if(shelfStream){ shelfStream.getTracks().forEach(function(t){ t.stop(); }); shelfStream = null; }
 lastFrameData = null;
+shelfTorchOn = false;
+el("shelfTorchBtn").style.display = "none";
 el("shelfCameraWrap").style.display = "none";
 }
 
@@ -288,6 +315,7 @@ var video = el("shelfVideo");
 video.srcObject = stream;
 video.play().catch(function(){});
 setShelfTip("point at the shelf, fill the box");
+setupShelfTorchButton();
 shelfTimer = setInterval(sampleShelfFrame, 500);
 }).catch(function(){
 showFilePicker("Could not open the camera, choose a photo instead.");
