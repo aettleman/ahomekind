@@ -2793,5 +2793,178 @@
       "haircare"
     ],
     "veganConfidence": "low"
+  },
+  {
+    "slug": "avon",
+    "name": "Avon",
+    "tier": "bad",
+    "note": "Not certified. Avon says it complies with animal-testing laws in markets that require it, including mainland China.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "the-natural-deodorant-co",
+    "name": "The Natural Deodorant Co",
+    "tier": "good",
+    "note": "Cruelty Free International certified, 100% vegan, independent UK brand.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "Cruelty Free International listing",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "little-soap-company",
+    "name": "Little Soap Company",
+    "tier": "good",
+    "note": "Leaping Bunny and Vegan Society certified, B Corp, independent UK brand.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "Leaping Bunny, Vegan Society trademark",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "gruum",
+    "name": "gruum",
+    "tier": "warn",
+    "note": "Cruelty-free and vegan claims are self-declared and not independently verified against a recognised certifier at time of writing.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "veet",
+    "name": "Veet",
+    "tier": "bad",
+    "note": "Owned by Reckitt, who PETA confirms test on animals.",
+    "parentCompany": "Reckitt",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "solait-by-superdrug",
+    "name": "Solait (Superdrug)",
+    "tier": "check",
+    "note": "Superdrug's own suncare range, covered by Superdrug's Leaping Bunny-certified own-brand policy. Vegan status varies by product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "dr-jart-plus",
+    "name": "Dr. Jart+",
+    "tier": "bad",
+    "note": "Owned by Estée Lauder, sells in mainland China where testing can be required.",
+    "parentCompany": "Estée Lauder",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "vo5",
+    "name": "VO5",
+    "tier": "bad",
+    "note": "Owned by Unilever, who test on animals.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "arkive",
+    "name": "Arkive Headcare",
+    "tier": "good",
+    "note": "Leaping Bunny certified, 100% vegan, independent brand founded by Adam Reed.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "Cruelty Free International listing",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "high"
+  },
+  {
+    "slug": "habi",
+    "name": "Habi",
+    "tier": "warn",
+    "note": "Boots' own wellness and skincare range. Boots says it's vegan and cruelty-free, but claims are self-declared and not independently verified against a recognised certifier at time of writing.",
+    "parentCompany": "Boots",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low"
   }
 ]
