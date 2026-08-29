@@ -2797,11 +2797,11 @@
   {
     "slug": "avon",
     "name": "Avon",
-    "tier": "bad",
-    "note": "Not certified. Avon says it complies with animal-testing laws in markets that require it, including mainland China.",
+    "tier": "good",
+    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon says its products are vegan, though this isn't independently certified.",
     "parentCompany": null,
-    "vegan": "partial",
-    "evidence": "",
+    "vegan": "full",
+    "evidence": "Cruelty Free International (Leaping Bunny) approved brand listing",
     "products": [],
     "alternatives": [],
     "links": [],
@@ -2811,7 +2811,7 @@
       "skincare",
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "medium"
   },
   {
     "slug": "the-natural-deodorant-co",
