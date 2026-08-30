@@ -20,7 +20,9 @@
 .camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
 #reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
 #reader { object-fit:cover; }
-.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:2px; text-transform:uppercase; padding:26px 16px; border:none; border-radius:14px; cursor:pointer; }
+.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 16px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:2.5px; text-transform:uppercase; padding:40px 16px; border:none; border-radius:22px; cursor:pointer; box-shadow:0 10px 26px rgba(61,74,58,0.28); transition:transform 0.15s ease, box-shadow 0.15s ease; }
+.big-btn:active { transform:scale(0.98); box-shadow:0 6px 16px rgba(61,74,58,0.24); }
+@media(prefers-reduced-motion: reduce){ .big-btn { transition:none; } }
 .big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
 
 /* Camera controls float directly on the video feed itself, right where
