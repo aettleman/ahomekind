@@ -112,22 +112,22 @@
 main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 }
 
-/* "Add to home screen" -- a small floating pill, matching the Ko-fi
-   float elsewhere on the site, rather than a card in the page flow.
-   Hidden by default; JS reveals it only when installing is actually
-   possible (or, on iOS, since every iOS browser can add to the home
-   screen via its own Share sheet) and the person hasn't dismissed it
-   before. Sits bottom-left so it never collides with the Ko-fi float
-   (bottom-right) or the mobile bottom-nav underneath both. */
-#addHome { position:fixed; left:16px; bottom:24px; z-index:400; display:none; align-items:center; gap:8px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.3px; padding:12px 14px; border-radius:30px; box-shadow:0 8px 22px rgba(45,54,42,0.28); max-width:min(88vw, 320px); cursor:pointer; }
+/* "Add to home screen" -- a speech-bubble tip sitting in the normal
+   page flow just under the heading, with a small pointer tail so it
+   reads as a gentle one-time nudge rather than a popup. Scrolls away
+   with the page like any other content. Hidden by default; JS reveals
+   it only when installing is actually possible (or, on iOS, since
+   every iOS browser can add to the home screen via its own Share
+   sheet) and the person hasn't dismissed it before. */
+#addHome { position:relative; display:none; align-items:flex-start; gap:10px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.2px; padding:14px 16px; border-radius:16px; max-width:420px; margin:0 auto 20px; cursor:pointer; }
 #addHome.show { display:flex; }
-#addHome-icon { flex-shrink:0; width:16px; height:16px; display:flex; align-items:center; justify-content:center; }
+#addHome::after { content:""; position:absolute; top:-8px; left:32px; width:16px; height:16px; background:#4d6b4f; clip-path:polygon(0% 100%, 100% 100%, 50% 0%); }
+#addHome-icon { flex-shrink:0; width:16px; height:16px; display:flex; align-items:center; justify-content:center; margin-top:1px; }
 #addHome-body { flex:1; min-width:0; }
-#addHome-text { line-height:1.35; }
+#addHome-text { line-height:1.45; }
 #addHome-text strong { font-weight:700; }
-#addHome-dismiss { flex-shrink:0; background:rgba(244,239,226,0.16); border:none; color:#f4efe2; width:18px; height:18px; border-radius:50%; font-size:13px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:2px; }
+#addHome-dismiss { flex-shrink:0; background:rgba(244,239,226,0.16); border:none; color:#f4efe2; width:20px; height:20px; border-radius:50%; font-size:14px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:2px; }
 #addHome-dismiss:hover { background:rgba(244,239,226,0.28); }
-@media(max-width:760px){ #addHome { bottom:90px; } }
 
 /* Scan page hierarchy: the scanner itself should be the first thing
    anyone lands on, so the heading is bigger/tighter than the site
@@ -197,6 +197,19 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 scan a barcode</h1>
 <p class="scan-sub">Point your camera at the product's barcode and I'll tell you what I know.</p>
 
+<div id="addHome">
+<span id="addHome-icon" aria-hidden="true">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+<path d="M12 3v12M12 3l-4 4M12 3l4 4" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span>
+<span id="addHome-body">
+<span id="addHome-text">add me to your home screen</span>
+</span>
+<button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
+</div>
+
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
 <p id="torchHint" style="display:none;">Too dark? This device won't let me switch the flash on from here &mdash; try turning your flashlight on from Control Center instead, then come back and scan.</p>
@@ -217,19 +230,6 @@ scan a barcode</h1>
 
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
-
-<div id="addHome">
-<span id="addHome-icon" aria-hidden="true">
-<svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-<path d="M12 3v12M12 3l-4 4M12 3l4 4" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</span>
-<span id="addHome-body">
-<span id="addHome-text">add me to your home screen</span>
-</span>
-<button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
-</div>
 
 <details class="quiet-details">
 <summary>how this works / about the results</summary>
