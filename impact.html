@@ -6,7 +6,7 @@
 <title>What Difference Does It Actually Make? — a home kind</title>
 <meta name="description" content="An honest calculator for the impact of eating fewer animal products, using conservative UK figures.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260907">
+<link rel="stylesheet" href="css/style.css?v=20260908">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -26,6 +26,23 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 .big-lbl { color:#c9d1c3; font-size:13px; letter-spacing:1px; margin-bottom:22px; }
 .sub-num { font-family:'Cormorant Garamond',serif; font-size:26px; color:#f4efe2; }
 .sub-lbl { color:#a9c2ab; font-size:12px; letter-spacing:0.5px; margin-bottom:16px; }
+
+/* Preset picker -- a quick "how do you eat now" starting point so the
+   calculator gives someone a real number in one tap, before they ever
+   touch a slider. Picking a preset just sets the sliders to sensible
+   values; the sliders underneath still work exactly as before for
+   anyone who wants to fine-tune. */
+.preset-row { display:flex; gap:8px; flex-wrap:wrap; margin:22px 0 6px; }
+.preset-btn { flex:1; min-width:120px; background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:10px; padding:12px 10px; font-family:'Karla',sans-serif; font-size:12px; letter-spacing:0.3px; color:#3d4a3a; cursor:pointer; text-align:center; }
+.preset-btn:hover { background:#ece5d5; }
+.preset-btn.active { background:#4d6b4f; border-color:#4d6b4f; color:#f4efe2; font-weight:600; }
+.preset-note { text-align:center; font-size:11.5px; color:#8a8672; margin-bottom:6px; }
+
+/* Shareable result card -- lets someone screenshot their own number
+   rather than just reading it, the same "make it yours" instinct behind
+   the Kind Swaps freebie unlock elsewhere on the site. */
+.share-result-btn { display:block; width:100%; max-width:300px; margin:18px auto 0; background:transparent; color:#c9d1c3; border:1px solid #6f8768; border-radius:30px; padding:12px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; }
+.share-result-btn:hover { background:rgba(244,239,226,0.08); }
 </style>
 </head>
 <body>
@@ -44,12 +61,12 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <a href="start-here.html">start here</a>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
+<a href="impact.html">your impact</a>
 <a href="quiz.html">take the quiz</a>
 <a href="shelf.html">scan a shelf</a>
 <a href="journal/">journal</a>
 <a href="what-testing-means.html">what testing means</a>
 <a href="money.html">who gets your money</a>
-<a href="impact.html">your impact</a>
 <a href="about.html">about</a>
 </span></span>
 </nav>
@@ -60,7 +77,16 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">what difference does it actually make?</h1>
 <p>One person changing what they buy can feel like shouting into a hurricane. Here is the arithmetic for the non-human animals involved, using the most conservative figures I could find rather than the most dramatic ones.</p>
 
-<div class="slider-row" style="margin-top:30px;">
+<p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
+<div class="preset-row">
+<button type="button" class="preset-btn" data-days="1" data-years="1">mostly meat<br>(1 day)</button>
+<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian<br>(3 days)</button>
+<button type="button" class="preset-btn" data-days="5" data-years="1">mostly plant-based<br>(5 days)</button>
+<button type="button" class="preset-btn" data-days="7" data-years="1">fully plant-based<br>(7 days)</button>
+</div>
+<p class="preset-note">or fine-tune it exactly with the sliders below</p>
+
+<div class="slider-row" style="margin-top:22px;">
 <label>days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
 <input type="range" id="days" min="0" max="7" step="1" value="3">
 </div>
@@ -80,6 +106,8 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 </div>
 
 <p id="framing" style="font-size:15px; line-height:1.9;"></p>
+<button type="button" class="share-result-btn" id="shareResultBtn">share my number</button>
+<p id="shareMsg" role="status" aria-live="polite" style="text-align:center; font-size:12px; color:#a9c2ab; margin-top:10px;"></p>
 </main>
 <div class="wrap">
 <p class="section-label">where these numbers come from</p>
@@ -148,6 +176,35 @@ el('framing').textContent = f;
 
 el('days').addEventListener('input', update);
 el('years').addEventListener('input', update);
+
+var presetBtns = document.querySelectorAll('.preset-btn');
+presetBtns.forEach(function(btn){
+btn.addEventListener('click', function(){
+el('days').value = btn.getAttribute('data-days');
+el('years').value = btn.getAttribute('data-years');
+presetBtns.forEach(function(b){ b.classList.remove('active'); });
+btn.classList.add('active');
+update();
+});
+});
+
+var shareBtn = el('shareResultBtn');
+var shareMsg = el('shareMsg');
+if(shareBtn) shareBtn.addEventListener('click', function(){
+var days = el('days').value;
+var years = el('years').value;
+var animals = el('animals').textContent;
+var text = 'Eating plant-based ' + days + ' day' + (days == 1 ? '' : 's') + ' a week for ' + years + ' year' + (years == 1 ? '' : 's') + ' means ' + animals + ' animals not farmed for me. I checked my own number with A Home Kind.';
+var shareData = { title: 'A Home Kind — your impact', text: text, url: location.origin + '/impact.html' };
+if(navigator.share){
+navigator.share(shareData).catch(function(){});
+} else if(navigator.clipboard && navigator.clipboard.writeText){
+navigator.clipboard.writeText(text + ' ' + shareData.url).then(function(){
+if(shareMsg) shareMsg.textContent = 'copied — paste it anywhere';
+}).catch(function(){});
+}
+});
+
 update();
 </script>
 
@@ -169,7 +226,7 @@ update();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260908"></script>
+<script src="js/nav.js?v=20260909"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>

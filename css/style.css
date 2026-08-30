@@ -66,6 +66,18 @@ nav.main-nav { display: flex; gap: 20px; font-size: 11px; color: #5c6b57; letter
 nav.main-nav a { color: #5c6b57; }
 nav.main-nav a:hover { color: #3d4a3a; }
 
+/* In-app browser notice -- shown on the two camera-dependent pages
+   (scan.html, shelf.html) when we detect Instagram's/Facebook's own
+   in-app WebView, since that browser routinely blocks or half-supports
+   camera access and native file pickers, and the fix (open in a real
+   browser) is on the visitor's end, not something the page can work
+   around. See js/nav.js for the detection + injection logic. */
+.ig-banner { display: flex; align-items: center; gap: 12px; background: #fbeedc; border-bottom: 0.5px solid #c98a3a; padding: 12px 20px; padding-top: calc(12px + env(safe-area-inset-top, 0px)); }
+.ig-banner-text { flex: 1; font-size: 13px; line-height: 1.6; color: #6b4b1f; }
+.ig-banner-text strong { color: #4d3413; }
+.ig-banner-close { flex-shrink: 0; background: none; border: none; color: #8a6a2a; font-size: 20px; line-height: 1; cursor: pointer; padding: 4px; }
+.ig-banner-close:hover { color: #4d3413; }
+
 /* hero */
 .hero { padding: 60px 24px; text-align: center; background: #ece5d5; }
 .eyebrow {

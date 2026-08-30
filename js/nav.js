@@ -80,6 +80,41 @@ io.observe(el);
 }
 });
 
+// Instagram's/Facebook's in-app browser (the WebView those apps open
+// links in, rather than a real browser) routinely blocks or half-supports
+// camera access and native file pickers -- exactly the symptoms reported
+// on the barcode/shelf scanners. There's nothing the page can do to fix
+// that browser; the real fix is opening the link in Safari/Chrome instead,
+// so this just tells people how, on the two pages where it actually
+// matters. Shown once per browser session (not permanently dismissed)
+// since it's genuinely useful information every time someone lands here
+// from an in-app link.
+document.addEventListener('DOMContentLoaded', function(){
+var CAMERA_PAGES = ['/scan.html', '/shelf.html'];
+var IG_DISMISS_KEY = 'ahk-ig-banner-dismissed';
+function isInAppBrowser(){
+var ua = navigator.userAgent || navigator.vendor || '';
+return /Instagram|FBAN|FBAV/i.test(ua);
+}
+function onCameraPage(){
+var p = window.location.pathname.replace(/\/$/, '') || '/';
+return CAMERA_PAGES.some(function(cp){ return p === cp || p === cp.replace(/\.html$/, ''); });
+}
+if (onCameraPage() && isInAppBrowser()) {
+try { if (sessionStorage.getItem(IG_DISMISS_KEY) === '1') return; } catch(e){}
+var banner = document.createElement('div');
+banner.className = 'ig-banner';
+banner.innerHTML =
+'<span class="ig-banner-text"><strong>Camera not opening?</strong> You\'re viewing this inside Instagram\'s browser, which often blocks it. Tap the &bull;&bull;&bull; menu (top right) and choose &ldquo;open in browser&rdquo; for scanning to work.</span>' +
+'<button type="button" class="ig-banner-close" aria-label="dismiss">&times;</button>';
+document.body.insertBefore(banner, document.body.firstChild);
+banner.querySelector('.ig-banner-close').addEventListener('click', function(){
+banner.remove();
+try { sessionStorage.setItem(IG_DISMISS_KEY, '1'); } catch(e2){}
+});
+}
+});
+
 document.addEventListener('DOMContentLoaded', function(){
 var dds = document.querySelectorAll('nav.main-nav .dd');
 function setOpen(dd, open){
@@ -153,12 +188,12 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
+'<a href="/impact.html">your impact</a>' +
 '<a href="/shelf.html">scan a shelf</a>' +
 '<a href="/quiz.html">take the quiz</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/what-testing-means.html">what testing means</a>' +
 '<a href="/money.html">who gets your money</a>' +
-'<a href="/impact.html">your impact</a>' +
 '<a href="/start-here.html">start here</a>' +
 '<a href="/about.html">about</a>' +
 '<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +

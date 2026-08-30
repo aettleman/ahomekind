@@ -6,7 +6,7 @@
 <title>a home kind — cruelty-free, vegan living</title>
 <meta name="description" content="Cruelty-free and vegan swaps, honest brand checks, and a starter guide, without the lectures.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260907">
+<link rel="stylesheet" href="css/style.css?v=20260908">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -27,6 +27,15 @@
 .scan-hero-icon svg circle, .scan-hero-icon svg rect, .scan-hero-icon svg path { stroke:#3d4a3a; }
 .scan-hero-sub { color:#c9d1c3; font-size:13px; margin:18px 0 0; }
 @media(prefers-reduced-motion: reduce){ .scan-hero-btn { transition:none; } }
+.impact-teaser { display:block; background:#e6efe3; border-top:0.5px solid #b9c7ae; border-bottom:0.5px solid #b9c7ae; text-decoration:none; transition:background 0.18s ease; }
+.impact-teaser:hover, .impact-teaser:focus-visible { background:#dbe8d6; }
+.impact-teaser-inner { max-width:460px; margin:0 auto; padding:34px 24px; text-align:center; }
+.impact-teaser-kicker { color:#4d6b4f; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px; }
+.impact-teaser-num { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:44px; color:#3d4a3a; line-height:1; margin-bottom:12px; }
+.impact-teaser-num span { color:#3d4a3a; }
+.impact-teaser-sub { color:#5c6b57; font-size:13.5px; line-height:1.8; margin-bottom:20px; }
+.impact-teaser-cta { display:inline-block; background:#4d6b4f; color:#f4efe2; font-weight:600; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:13px 26px; border-radius:30px; }
+.impact-teaser:hover .impact-teaser-cta { background:#3d5a3f; }
 .rabbit-caption { text-align:center; font-family:'Dancing Script',cursive; font-weight:600; font-size:21px; line-height:1.2; color:#a4894f; background:#efe7d0; margin:0; padding:2px 24px 22px; }
 @media(max-width:480px){ .rabbit-caption { font-size:17px; padding:2px 16px 20px; } }
 </style>
@@ -47,12 +56,12 @@
 <a href="start-here.html">start here</a>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
+<a href="impact.html">your impact</a>
 <a href="quiz.html">take the quiz</a>
 <a href="shelf.html">scan a shelf</a>
 <a href="journal/">journal</a>
 <a href="what-testing-means.html">what testing means</a>
 <a href="money.html">who gets your money</a>
-<a href="impact.html">your impact</a>
 <a href="about.html">about</a>
 </span></span>
 </nav>
@@ -107,6 +116,15 @@
 </div>
 </div>
 
+<a href="impact.html" class="impact-teaser">
+<div class="impact-teaser-inner">
+<p class="impact-teaser-kicker">your impact, calculated</p>
+<p class="impact-teaser-num"><span id="impactTeaserNum">7</span> animals</p>
+<p class="impact-teaser-sub">not farmed for you, over a year, eating plant-based just 3 days a week &mdash; based on conservative UK figures. See your own number.</p>
+<span class="impact-teaser-cta">try the calculator</span>
+</div>
+</a>
+
 <div class="hero-banner"><img src="IMG_8501-crop.jpg" alt="A rabbit inspecting a product, unimpressed" loading="lazy" width="1296" height="576"></div>
 <p class="rabbit-caption">a home kind is the right kind</p>
 <main class="wrap" id="main">
@@ -134,7 +152,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260908"></script>
+<script src="js/nav.js?v=20260909"></script>
 <script src="js/newsletter.js"></script>
 
 <!-- Begin TradeTracker SuperTag Code -->
