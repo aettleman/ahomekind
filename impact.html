@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>What Difference Does It Actually Make? — a home kind</title>
+<title>What Difference Does It Actually Make? - a home kind</title>
 <meta name="description" content="An honest calculator for the impact of eating fewer animal products, using conservative UK figures.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260908">
@@ -137,7 +137,7 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 
 <p>Everything above is about food specifically. If the numbers made you curious rather than defensive, the honest next step isn't a lecture, it's a starting point: <a href="https://www.peta.org/lifestyle/food/free-vegan-starter-kit/" target="_blank" rel="noopener">PETA's free vegan starter kit</a> has recipes, meal plans and tips to make the first weeks easier. Or read a little more on the <a href="food.html">food &amp; kitchen page</a> here first.</p>
 
-<p>And if food isn't where you want to start at all, that's fine too &mdash; <a href="brand-check.html">brand check</a> and the <a href="quiz.html">quiz</a> cover the cosmetics and household side, no kitchen changes required.</p>
+<p>And if food isn't where you want to start at all, that's fine too - <a href="brand-check.html">brand check</a> and the <a href="quiz.html">quiz</a> cover the cosmetics and household side, no kitchen changes required.</p>
 </div>
 
 <script>
@@ -196,12 +196,12 @@ var days = el('days').value;
 var years = el('years').value;
 var animals = el('animals').textContent;
 var text = 'Eating plant-based ' + days + ' day' + (days == 1 ? '' : 's') + ' a week for ' + years + ' year' + (years == 1 ? '' : 's') + ' means ' + animals + ' animals not farmed for me. I checked my own number with A Home Kind.';
-var shareData = { title: 'A Home Kind — your impact', text: text, url: location.origin + '/impact.html' };
+var shareData = { title: 'A Home Kind - your impact', text: text, url: location.origin + '/impact.html' };
 if(navigator.share){
 navigator.share(shareData).catch(function(){});
 } else if(navigator.clipboard && navigator.clipboard.writeText){
 navigator.clipboard.writeText(text + ' ' + shareData.url).then(function(){
-if(shareMsg) shareMsg.textContent = 'copied — paste it anywhere';
+if(shareMsg) shareMsg.textContent = 'copied - paste it anywhere';
 }).catch(function(){});
 }
 });
@@ -211,7 +211,7 @@ update();
 
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
-<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds &mdash; no inbox spam, unsubscribe whenever you like.</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
 <form class="newsletter-form" id="nf-7" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
 <input type="hidden" value="1" name="embed">
 <div class="nf-row">

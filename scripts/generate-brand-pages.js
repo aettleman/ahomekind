@@ -35,7 +35,7 @@ function escapeHtml(str) {
 }
 
 function pageTitle(brand) {
-  return 'Is ' + brand.name + ' Cruelty-Free? \u2014 a home kind';
+  return 'Is ' + brand.name + ' Cruelty-Free? - a home kind';
 }
 
 function pageDescription(brand) {
@@ -62,9 +62,13 @@ function renderBrandPage(brand) {
   const description = pageDescription(brand);
   const canonical = SITE_URL + '/brands/' + brand.slug;
   const veganLine = brand.vegan === 'full' ? '100% vegan'
-    : brand.vegan === 'partial' ? 'vegan status varies by product'
-    : 'vegan status not yet confirmed';
-  const parentLine = brand.parentCompany ? ('<p><strong>parent company:</strong> ' + escapeHtml(brand.parentCompany) + '</p>') : '';
+    : brand.vegan === 'partial' ? 'varies by product'
+    : 'not yet confirmed';
+  const veganPillClass = brand.vegan === 'full' ? 'vegan-yes'
+    : brand.vegan === 'partial' ? 'vegan-partial'
+    : 'vegan-unknown';
+  const parentPillClass = brand.tier === 'bad' ? 'parent-bad' : 'parent-neutral';
+  const parentLine = brand.parentCompany ? ('<span class="status-pill ' + parentPillClass + '"><span class="status-pill-label">parent company</span> ' + escapeHtml(brand.parentCompany) + '</span>') : '';
   const veganButNotCrueltyFreeWarning = (brand.tier === 'bad' && (brand.vegan === 'partial' || brand.vegan === 'full'))
     ? '<div style="margin-top:16px; padding:14px 16px; background:#f3e2df; border:0.5px solid #d9b9b3; border-radius:8px; font-size:13.5px; color:#7a4640; line-height:1.7;"><strong>a vegan label here doesn\'t make it cruelty-free.</strong> ' + escapeHtml(brand.name) + ' isn\'t on the cruelty-free list because of the company\'s wider testing policy, not because of what\'s in any one product. Buying a vegan-labelled item from them still puts money behind a company that tests on animals elsewhere in its business.</div>'
     : '';
@@ -139,8 +143,8 @@ function renderBrandPage(brand) {
   lines.push('<p style="font-size:15px; line-height:1.8;">' + escapeHtml(brand.note) + '</p>');
   lines.push('</div>');
   lines.push('');
-  lines.push('<div style="margin-top:24px; display:flex; gap:24px; flex-wrap:wrap; font-size:13.5px; color:#5c5c4f;">');
-  lines.push('<p><strong>vegan status:</strong> ' + veganLine + '</p>');
+  lines.push('<div class="status-facts">');
+  lines.push('<span class="status-pill ' + veganPillClass + '"><span class="status-pill-label">vegan status</span> ' + veganLine + '</span>');
   lines.push(parentLine);
   lines.push('</div>');
   lines.push(veganButNotCrueltyFreeWarning);
@@ -151,7 +155,7 @@ function renderBrandPage(brand) {
   lines.push('');
 
   lines.push('<div style="margin-top:32px;">');
-  lines.push(renderSection('products checked', brand.products, 'I haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet &mdash; check back soon.'));
+  lines.push(renderSection('products checked', brand.products, 'I haven\'t listed specific products for ' + escapeHtml(brand.name) + ' yet - check back soon.'));
   lines.push('</div>');
   lines.push('');
 
@@ -170,7 +174,7 @@ function renderBrandPage(brand) {
   lines.push('');
   lines.push('<div class="newsletter">');
   lines.push('<p class="label3">stay in the loop</p>');
-  lines.push('<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds &mdash; no inbox spam, unsubscribe whenever you like.</p>');
+  lines.push('<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>');
   lines.push('<form class="newsletter-form" id="nf-' + brand.slug + '" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>');
   lines.push('<input type="hidden" value="1" name="embed">');
   lines.push('<div class="nf-row">');

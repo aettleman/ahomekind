@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Shelf Scan — a home kind</title>
+<title>Shelf Scan - a home kind</title>
 <meta name="description" content="Photograph a whole supermarket shelf and see which brands are worth picking up.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260908">
@@ -184,8 +184,8 @@ var BRANDS = [
 {terms:["noughty"], name:"Noughty", tier:"good", note:"Leaping Bunny certified, vegan."},
 {terms:["umberto giannini"], name:"Umberto Giannini", tier:"good", note:"Markets itself vegan and cruelty-free."},
 {terms:["oceansaver"], name:"OceanSaver", tier:"good", note:"Vegan and cruelty-free per Ethical Elephant."},
-{terms:["imperial leather"], name:"Imperial Leather", tier:"warn", note:"Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified."},
-{terms:["carex"], name:"Carex", tier:"warn", note:"Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free International — treat the cruelty-free claim as unverified. Vegan claims are self-declared, not certified."},
+{terms:["imperial leather"], name:"Imperial Leather", tier:"warn", note:"Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelty Free International - treat the cruelty-free claim as unverified."},
+{terms:["carex"], name:"Carex", tier:"warn", note:"Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free International - treat the cruelty-free claim as unverified. Vegan claims are self-declared, not certified."},
 {terms:["inkey list"], name:"The Inkey List", tier:"check", note:"Leaping Bunny certified, mostly vegan."},
 {terms:["vaseline"], name:"Vaseline (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring testing."},
 {terms:["persil"], name:"Persil (Unilever)", tier:"bad", note:"Unilever still sells into markets requiring testing."},
@@ -354,7 +354,7 @@ return c.toDataURL("image/jpeg", 0.82);
 function renderLiveResults(){
 var list = Object.keys(liveFound).map(function(k){ return liveFound[k]; });
 var out = "<p style=\"text-align:center; color:#8a8672; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
-(list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far &mdash; keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
+(list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far - keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
 "</p>";
 if(list.length){
 var order = {good:0, check:1, warn:2, bad:3};
@@ -620,7 +620,7 @@ setStatus("Could not read that image. A closer, straighter photo usually helps."
 
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
-<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds &mdash; no inbox spam, unsubscribe whenever you like.</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
 <form class="newsletter-form" id="nf-9" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
 <input type="hidden" value="1" name="embed">
 <div class="nf-row">

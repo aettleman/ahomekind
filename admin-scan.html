@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>add a barcode &mdash; a home kind</title>
+<title>add a barcode - a home kind</title>
 <meta name="robots" content="noindex, nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260908">
@@ -54,11 +54,11 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">add a barcode</h1>
-<p>Private tool, not linked anywhere on the site &mdash; scan a barcode, snap a photo of the front of the pack, and it queues up below with nothing to type. When you're done for the day, copy the batch and send it over with the photos so it can be merged into the checker.</p>
+<p>Private tool, not linked anywhere on the site - scan a barcode, snap a photo of the front of the pack, and it queues up below with nothing to type. When you're done for the day, copy the batch and send it over with the photos so it can be merged into the checker.</p>
 
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
-<p id="torchHint" style="display:none;">This device won't let me switch the flash on from here &mdash; try turning your flashlight on from Control Center instead, then come back and scan.</p>
+<p id="torchHint" style="display:none;">This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div id="cameraControls" class="camera-controls" style="display:none;">
 <button type="button" id="captureBtn">&#128247; photo</button>
 <button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
@@ -79,7 +79,7 @@
 <img id="photoPreview" alt="" style="max-width:160px; border-radius:8px; display:block; border:0.5px solid #cfc4a9;">
 <button type="button" id="retakeBtn" class="big-btn alt" style="max-width:160px; margin-top:8px; padding:8px; font-size:11px;">retake</button>
 </div>
-<p class="hint" id="noPhotoHint">No photo yet &mdash; scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack. (Typing the name/brand below still works too, if you'd rather.)</p>
+<p class="hint" id="noPhotoHint">No photo yet - scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack. (Typing the name/brand below still works too, if you'd rather.)</p>
 <div class="field">
 <label for="f-product">product name <span style="text-transform:none;">(optional if you took a photo)</span></label>
 <input type="text" id="f-product" placeholder="e.g. Superdrug Pro Care Sensitive Facial Wipes x25">
@@ -102,7 +102,7 @@
 <div class="field">
 <label for="f-note">note</label>
 <textarea id="f-note" placeholder="e.g. Certified cruelty-free and certified vegan, per the packaging."></textarea>
-<p class="hint">Mention the word "vegan" if it applies &mdash; write "100% vegan" or "fully vegan" if it's fully certified, otherwise just "vegan" is read as check-per-product. This note becomes the card's explanation, so it's fine to write it exactly as you'd want a visitor to read it.</p>
+<p class="hint">Mention the word "vegan" if it applies - write "100% vegan" or "fully vegan" if it's fully certified, otherwise just "vegan" is read as check-per-product. This note becomes the card's explanation, so it's fine to write it exactly as you'd want a visitor to read it.</p>
 </div>
 <button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
 <p id="addMsg" style="font-size:13px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
@@ -116,13 +116,13 @@
 <button type="button" class="big-btn alt" id="copyBtn" style="max-width:none;">copy batch as JSON</button>
 <p id="copyMsg"></p>
 <textarea id="batchExport" readonly></textarea>
-<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too &mdash; each one's filename is its barcode, so they'll match up automatically.</p>
+<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too - each one's filename is its barcode, so they'll match up automatically.</p>
 
 <div id="photoShareWrap" style="display:none; margin-top:14px;">
 <button type="button" class="big-btn alt" id="sharePhotosBtn" style="max-width:none;">share photos (<span id="photoCount">0</span>)</button>
 <p id="shareMsg" style="font-size:12.5px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
 <div id="photoFallback" style="display:none;">
-<p class="hint">Your browser can't share several photos at once here &mdash; long-press (or tap) each one below to save it, then send them all together.</p>
+<p class="hint">Your browser can't share several photos at once here - long-press (or tap) each one below to save it, then send them all together.</p>
 <div id="photoFallbackGrid" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
 </div>
 </div>

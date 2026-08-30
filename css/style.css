@@ -183,6 +183,24 @@ main { padding: 50px 0 70px; }
 .section-label.warn { color: #c98a3a; }
 p { margin-bottom: 18px; font-size: 15px; }
 
+/* Brand-page status badges -- "vegan status" and "parent company" used
+   to sit as plain bold-labelled text; these give each fact its own
+   pill so the two read as distinct, scannable statuses rather than a
+   line of body copy. Colour carries meaning: green for a confirmed
+   good vegan status, amber for a mixed/partial one, red for anything
+   worth being cautious about (status unconfirmed, or a parent company
+   that tests on animals). Parent company itself is a neutral blue/
+   purple pill unless that parent is the reason the brand isn't
+   cruelty-free, in which case it switches to the same red. */
+.status-facts { display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; }
+.status-pill { display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:20px; font-size:12.5px; line-height:1.3; }
+.status-pill-label { font-size:10px; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+.status-pill.vegan-yes { background:#dbe8d7; color:#33502f; }
+.status-pill.vegan-partial { background:#f6ecd9; color:#8a6a2a; }
+.status-pill.vegan-unknown { background:#f3ded9; color:#8a4a2a; }
+.status-pill.parent-neutral { background:#e3ddf0; color:#4a3d70; }
+.status-pill.parent-bad { background:#f3e2df; color:#8a332c; }
+
 /* cards */
 .card {
   background: #ece5d5;
