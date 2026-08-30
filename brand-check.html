@@ -48,6 +48,8 @@
 .rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
 #browseAllBtn { display:block; width:100%; padding:14px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin-bottom:28px; }
 #browseAllBtn:hover { background:#e2d9bd; }
+.key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
+.key-details summary:hover { color:#3d4a3a; }
 </style>
 </head>
 <body>
@@ -87,14 +89,16 @@
 <input type="text" id="ratingSearch" placeholder="search a brand, e.g. Dove, L'Or&eacute;al, Faith in Nature..." style="width:100%; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:10px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; box-shadow:0 2px 8px rgba(61,74,58,0.06);">
 </div>
 
-<div style="background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:18px 20px; margin-bottom:28px;">
-<p class="section-label" style="margin-top:0; margin-bottom:14px;">key &mdash; what the symbols mean</p>
+<details class="key-details" style="margin-bottom:20px;">
+<summary>key &mdash; what the symbols and price badges mean</summary>
+<div style="background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:18px 20px; margin-top:10px;">
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#4d6b4f;">&#127807; fully cruelty-free &amp; vegan</strong></p>
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#6f8768;">&#128048; cruelty-free, check vegan status</strong></p>
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#c98a3a;">&#9888;&#65039; parent company tests on animals</strong></p>
-<p style="font-size:13px; margin-bottom:0;"><strong style="color:#8a332c;">&#10060; tested on animals</strong></p>
+<p style="font-size:13px; margin-bottom:14px;"><strong style="color:#8a332c;">&#10060; tested on animals</strong></p>
+<p style="font-size:12.5px; color:#7a7561; margin:0;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
 </div>
-<p style="font-size:12.5px; color:#7a7561; margin:-18px 0 20px;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
+</details>
 
 <div class="filter-pills" id="filterPills">
 <button type="button" class="filter-pill active" data-filter="all">all brands</button>
@@ -539,6 +543,9 @@ document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){
 lbl.style.display = 'none';
 });
 document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block';
+if (anyVisible) {
+window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
+}
 if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 });
 </script>

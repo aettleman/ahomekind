@@ -535,7 +535,7 @@ doShare({ title: "A Home Kind", text: "A Home Kind — scan a product, know it's
 }
 function verdictHTML(brand){
 var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
-var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : "cruelty-free, check the product"));
+var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : (brand.tier === "unknown" ? "status not yet confirmed" : "cruelty-free, check the product")));
 var initial = (brand.name || "?").replace(/[^A-Za-z0-9]/g, "").charAt(0).toUpperCase() || "?";
 
 // "check" means the brand itself IS certified/confirmed cruelty-free --

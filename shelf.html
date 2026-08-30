@@ -306,7 +306,7 @@ setShelfTip("a bit dark, try to find better light", "warn");
 } else if(lastFrameData && moveScore > 16){
 setShelfTip("hold steady, straight-on to the shelf", "warn");
 } else {
-setShelfTip("looks good, fill the box then snap", "good");
+setShelfTip(liveScanActive ? "looks good, fill the box" : "looks good, fill the box then snap", "good");
 }
 }
 
@@ -358,7 +358,7 @@ if(list.length){
 var order = {good:0, check:1, warn:2, bad:3};
 list.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
 list.forEach(function(b){
-var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
+var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
 out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
@@ -500,7 +500,7 @@ setStatus("Found " + found.length + (found.length === 1 ? " brand" : " brands") 
 var order = {good:0, check:1, warn:2, bad:3};
 found.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
 found.forEach(function(b){
-var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
+var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
 out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
