@@ -40,7 +40,11 @@
 .shelf-tip { position:absolute; left:10px; right:10px; bottom:70px; text-align:center; font-size:12.5px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:8px 10px; transition:background 0.2s ease; }
 .shelf-tip.good { background:rgba(77,107,79,0.85); }
 .shelf-tip.warn { background:rgba(158,90,42,0.8); }
-.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; }
+.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:0 10px; }
+#liveScanBtn.on { background:#a5453d; border-color:#a5453d; }
+.live-pulse { display:inline-block; width:7px; height:7px; border-radius:50%; background:#c9433a; margin-right:6px; animation:livePulse 1.2s ease-in-out infinite; }
+@keyframes livePulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+@media(prefers-reduced-motion: reduce){ .live-pulse { animation:none; } }
 .camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
 .camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
 .camera-controls button:hover { filter:brightness(1.08); }
@@ -84,6 +88,7 @@
 <p class="shelf-tip" id="shelfTip">finding your camera&hellip;</p>
 <div class="camera-controls">
 <button type="button" id="shelfTorchBtn" style="display:none;">&#128161;</button>
+<button type="button" id="liveScanBtn">start live scan</button>
 <button type="button" id="shelfCancel">choose a photo instead</button>
 <button type="button" class="snap" id="shelfSnap">snap photo</button>
 </div>
@@ -286,6 +291,7 @@ setShelfTip("looks good, fill the box then snap", "good");
 }
 
 function stopShelfCamera(){
+stopLiveScan();
 if(shelfTimer){ clearInterval(shelfTimer); shelfTimer = null; }
 if(shelfStream){ shelfStream.getTracks().forEach(function(t){ t.stop(); }); shelfStream = null; }
 lastFrameData = null;
@@ -300,6 +306,108 @@ el("drop").style.display = "block";
 el("backToCamera").style.display = (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) ? "inline-block" : "none";
 if(msg) setStatus(msg);
 }
+
+// Live scan: rather than one photo, keep the camera open and quietly
+// re-read whatever's in the guide box every second or so while you pan
+// down the shelf, folding newly-recognised brands into a running list.
+// True frame-by-frame AR isn't realistic with an in-browser text reader
+// (each pass takes a real moment on a phone), so this is the honest
+// version of that idea: continuous, not instant, and it tells you so.
+var liveScanActive = false;
+var liveScanBusy = false;
+var liveFound = {};
+
+function captureShelfFrame(maxW){
+var video = el("shelfVideo");
+if(!video || !video.videoWidth) return null;
+var c = document.createElement("canvas");
+var scale = Math.min(1, maxW / video.videoWidth);
+c.width = Math.round(video.videoWidth * scale);
+c.height = Math.round(video.videoHeight * scale);
+c.getContext("2d").drawImage(video, 0, 0, c.width, c.height);
+return c.toDataURL("image/jpeg", 0.82);
+}
+
+function renderLiveResults(){
+var list = Object.keys(liveFound).map(function(k){ return liveFound[k]; });
+var out = "<p style=\"text-align:center; color:#8a8672; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
+(list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far &mdash; keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
+"</p>";
+if(list.length){
+var order = {good:0, check:1, warn:2, bad:3};
+list.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
+list.forEach(function(b){
+var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : "&#128048; cruelty-free, check the product"));
+out += "<div class=\"hit " + b.tier + "\">";
+out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
+out += "<h3>" + b.name + "</h3>";
+out += "<p style=\"margin-bottom:0; font-size:14px;\">" + b.note + "</p>";
+out += "</div>";
+});
+}
+el("results").innerHTML = out;
+}
+
+function runLiveScanPass(){
+if(!liveScanActive || liveScanBusy) return;
+var frame = captureShelfFrame(1000);
+if(!frame){
+if(liveScanActive) setTimeout(runLiveScanPass, 500);
+return;
+}
+liveScanBusy = true;
+if(typeof Tesseract === "undefined"){ liveScanBusy = false; return; }
+preprocessForOCR(frame, function(processed){
+Tesseract.recognize(processed, "eng", {
+tessedit_pageseg_mode: "11",
+preserve_interword_spaces: "1"
+}).then(function(res){
+var text = normalizeOCR(res.data.text);
+var compact = text.replace(/\s+/g, "");
+var changed = false;
+BRANDS.forEach(function(b){
+if(liveFound[b.name]) return;
+for(var i=0;i<b.terms.length;i++){
+if(termMatches(b.terms[i], text, compact)){ liveFound[b.name] = b; changed = true; break; }
+}
+});
+if(changed || !Object.keys(liveFound).length) renderLiveResults();
+}).catch(function(){}).then(function(){
+liveScanBusy = false;
+if(liveScanActive) setTimeout(runLiveScanPass, 650);
+});
+});
+}
+
+function startLiveScan(){
+if(!shelfStream) return;
+if(typeof Tesseract === "undefined"){
+setStatus("The text reader did not load. Try the barcode scanner instead.");
+return;
+}
+liveScanActive = true;
+liveFound = {};
+el("shelfSnap").style.display = "none";
+el("shelfCancel").style.display = "none";
+el("liveScanBtn").textContent = "stop live scan";
+el("liveScanBtn").classList.add("on");
+renderLiveResults();
+runLiveScanPass();
+}
+
+function stopLiveScan(){
+if(!liveScanActive){ return; }
+liveScanActive = false;
+liveFound = {};
+var snap = el("shelfSnap"), cancel = el("shelfCancel"), btn = el("liveScanBtn");
+if(snap) snap.style.display = "";
+if(cancel) cancel.style.display = "";
+if(btn){ btn.textContent = "start live scan"; btn.classList.remove("on"); }
+}
+
+el("liveScanBtn").addEventListener("click", function(){
+if(liveScanActive) stopLiveScan(); else startLiveScan();
+});
 
 function startShelfCamera(){
 if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
