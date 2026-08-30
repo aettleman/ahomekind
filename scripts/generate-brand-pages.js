@@ -115,12 +115,13 @@ function renderBrandPage(brand) {
   lines.push('<a href="../../start-here.html">start here</a>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
+  lines.push('<a href="../../instead-of.html">popular swaps</a>');
+  lines.push('<a href="../../impact.html">your impact</a>');
   lines.push('<a href="../../quiz.html">take the quiz</a>');
   lines.push('<a href="../../shelf.html">scan a shelf</a>');
   lines.push('<a href="../../journal/">journal</a>');
   lines.push('<a href="../../what-testing-means.html">what testing means</a>');
   lines.push('<a href="../../money.html">who gets your money</a>');
-  lines.push('<a href="../../impact.html">your impact</a>');
   lines.push('<a href="../../about.html">about</a>');
   lines.push('</span></span>');
   lines.push('</nav>');
@@ -195,7 +196,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'brand-check.html', 'scan.html', 'shelf.html', 'quiz.html', 'shop.html', 'journal/'];
+  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'instead-of.html', 'brand-check.html', 'scan.html', 'shelf.html', 'quiz.html', 'shop.html', 'journal/'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');

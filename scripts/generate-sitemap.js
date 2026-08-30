@@ -31,7 +31,8 @@ const staticPages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
   { url: '/brand-check', priority: '0.9', changefreq: 'weekly' },
   { url: '/scan', priority: '0.8', changefreq: 'monthly' },
-  { url: '/shelf', priority: '0.8', changefreq: 'monthly' }
+  { url: '/shelf', priority: '0.8', changefreq: 'monthly' },
+  { url: '/instead-of', priority: '0.7', changefreq: 'monthly' }
   ];
 
 staticPages.forEach(page => {

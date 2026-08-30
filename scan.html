@@ -112,20 +112,22 @@
 main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 }
 
-/* "Add to home screen" -- small, dismissible, brand-voiced. Hidden by
-   default; JS reveals it only when installing is actually possible
-   (or, on iOS, when Safari's manual steps apply) and the person
-   hasn't dismissed it before. */
-#addHome { display:none; background:#eef1e9; border:0.5px solid #b9c7ae; border-radius:14px; padding:18px 20px; margin:0 0 22px; }
-#addHome.show { display:flex; gap:14px; align-items:flex-start; }
-#addHome-icon { flex-shrink:0; width:38px; height:38px; border-radius:10px; background:#3d4a3a; display:flex; align-items:center; justify-content:center; }
+/* "Add to home screen" -- a small floating pill, matching the Ko-fi
+   float elsewhere on the site, rather than a card in the page flow.
+   Hidden by default; JS reveals it only when installing is actually
+   possible (or, on iOS, since every iOS browser can add to the home
+   screen via its own Share sheet) and the person hasn't dismissed it
+   before. Sits bottom-left so it never collides with the Ko-fi float
+   (bottom-right) or the mobile bottom-nav underneath both. */
+#addHome { position:fixed; left:16px; bottom:24px; z-index:400; display:none; align-items:center; gap:8px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.3px; padding:12px 14px; border-radius:30px; box-shadow:0 8px 22px rgba(45,54,42,0.28); max-width:min(88vw, 320px); cursor:pointer; }
+#addHome.show { display:flex; }
+#addHome-icon { flex-shrink:0; width:16px; height:16px; display:flex; align-items:center; justify-content:center; }
 #addHome-body { flex:1; min-width:0; }
-#addHome-title { font-family:'Cormorant Garamond',serif; font-size:16.5px; color:#3d4a3a; margin-bottom:4px; }
-.addhome-sub { font-size:13px; color:#5c5c4f; line-height:1.6; margin-bottom:10px; }
-#addHome-btn { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; padding:10px 18px; border:none; border-radius:20px; cursor:pointer; }
-#addHome-btn:hover { background:#3d5a3f; }
-#addHome-dismiss { flex-shrink:0; background:none; border:none; color:#8a8672; font-size:18px; line-height:1; cursor:pointer; padding:2px 4px; }
-#addHome-steps { font-size:12.5px; color:#5c5c4f; line-height:1.6; margin-top:2px; }
+#addHome-text { line-height:1.35; }
+#addHome-text strong { font-weight:700; }
+#addHome-dismiss { flex-shrink:0; background:rgba(244,239,226,0.16); border:none; color:#f4efe2; width:18px; height:18px; border-radius:50%; font-size:13px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:2px; }
+#addHome-dismiss:hover { background:rgba(244,239,226,0.28); }
+@media(max-width:760px){ #addHome { bottom:90px; } }
 
 /* Scan page hierarchy: the scanner itself should be the first thing
    anyone lands on, so the heading is bigger/tighter than the site
@@ -167,6 +169,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <a href="start-here.html">start here</a>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
+<a href="instead-of.html">popular swaps</a>
 <a href="impact.html">your impact</a>
 <a href="quiz.html">take the quiz</a>
 <a href="shelf.html">scan a shelf</a>
@@ -216,17 +219,15 @@ scan a barcode</h1>
 <div id="results" aria-live="polite"></div>
 
 <div id="addHome">
-<div id="addHome-icon" aria-hidden="true">
-<svg width="18" height="18" viewBox="0 0 40 40" fill="none">
-<path d="M20 30 C20 30 12 24 12 16 C16 16 20 19 20 24 C20 19 24 16 28 16 C28 24 20 30 20 30 Z" fill="#f4efe2"/>
-<path d="M20 30 L20 12" stroke="#f4efe2" stroke-width="1.6"/>
+<span id="addHome-icon" aria-hidden="true">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+<path d="M12 3v12M12 3l-4 4M12 3l4 4" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-</div>
-<div id="addHome-body">
-<div id="addHome-title">keep a home kind close by</div>
-<div id="addHome-text" class="addhome-sub">Add it to your home screen so you can scan products whenever you're shopping.</div>
-<button type="button" id="addHome-btn">add to home screen</button>
-</div>
+</span>
+<span id="addHome-body">
+<span id="addHome-text">add me to your home screen</span>
+</span>
 <button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
 </div>
 
@@ -856,39 +857,33 @@ function dismiss(){
 banner.className = '';
 try { localStorage.setItem(DISMISS_KEY, '1'); } catch (e) {}
 }
-document.getElementById('addHome-dismiss').addEventListener('click', dismiss);
+document.getElementById('addHome-dismiss').addEventListener('click', function(e){
+e.stopPropagation();
+dismiss();
+});
 
 var ua = navigator.userAgent || '';
 var isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-var isSafari = isIOS && /safari/i.test(ua) && !/crios|fxios|edgios/i.test(ua);
 
 var deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', function(e){
 e.preventDefault();
 deferredPrompt = e;
+banner.addEventListener('click', function(){
+if (!deferredPrompt) return;
+deferredPrompt.prompt();
+deferredPrompt.userChoice.then(function(){ deferredPrompt = null; dismiss(); });
+});
 show();
 });
 
-document.getElementById('addHome-btn').addEventListener('click', function(){
-if (deferredPrompt) {
-deferredPrompt.prompt();
-deferredPrompt.userChoice.then(function(){ deferredPrompt = null; dismiss(); });
-}
-});
-
 if (isIOS) {
-// No beforeinstallprompt on any iOS browser -- they're all WebKit under
-// the hood, whatever the app icon says -- so show manual steps instead,
-// and swap the button for a plain acknowledgement. Safari's icon is a
-// Share square; other iOS browsers vary, so keep the wording generic
-// rather than naming a specific icon.
-var stepText = isSafari
-? 'Tap <strong>Share</strong>, then <strong>Add to Home Screen</strong>.'
-: 'Open your browser\'s menu, then look for <strong>Add to Home Screen</strong> (sometimes under a share icon).';
-document.getElementById('addHome-text').innerHTML = 'Add it to your home screen so you can scan products whenever you\'re shopping. ' + stepText;
-var btn = document.getElementById('addHome-btn');
-btn.textContent = 'got it';
-btn.addEventListener('click', dismiss);
+// Every iOS browser (Safari, Chrome, Firefox, Edge) is WebKit under the
+// hood and adds to the home screen the same way, through the OS's own
+// Share sheet -- so one short instruction covers all of them, tapping
+// the pill just dismisses it since there's no in-page action to trigger.
+document.getElementById('addHome-text').innerHTML = 'tap <strong>share</strong> &rarr; add to home screen';
+banner.addEventListener('click', dismiss);
 show();
 }
 })();
