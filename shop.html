@@ -146,12 +146,15 @@ showCategory(tile.getAttribute("data-cat"));
 });
 }
 
+var GROUP_KEYS = { "beauty": ["skincare", "makeup", "haircare"] };
+
 function showCategory(key){
+var keys = GROUP_KEYS[key] || [key];
 categoryGrid.style.display = "none";
 categoryBack.style.display = "block";
 shopProducts.style.display = "block";
 allItems.forEach(function(item){
-item.style.display = item.getAttribute("data-category") === key ? "" : "none";
+item.style.display = keys.indexOf(item.getAttribute("data-category")) !== -1 ? "" : "none";
 });
 window.scrollTo({ top: shopProducts.offsetTop - 90, behavior: "smooth" });
 }
@@ -164,6 +167,9 @@ shopProducts.style.display = "none";
 
 categoryBackLink.addEventListener("click", function(e){ e.preventDefault(); showGrid(); });
 buildGrid();
+
+var urlCat = new URLSearchParams(window.location.search).get("category");
+if (urlCat) showCategory(urlCat);
 })();
 </script>
 </body>

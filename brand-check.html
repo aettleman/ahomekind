@@ -50,6 +50,27 @@
 #browseAllBtn:hover { background:#e2d9bd; }
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
+.rcard-swap-cta { display:block; margin:14px 0 0; padding:10px 16px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.8px; text-transform:uppercase; border-radius:30px; text-align:center; text-decoration:none; }
+.rcard-swap-cta:hover { background:#3d5a3f; }
+.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-kicker { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:12px; }
+.kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
+.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
+.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
+.kswap-alt-note { font-size:13px; line-height:1.6; color:#5c5c4f; margin-bottom:12px; }
+.kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#6f8768; }
+.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#3d5a3f; }
+.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:26px 22px; }
+.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
+.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #cfc4a9; }
+.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:22px 20px; text-align:center; }
+.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
 </style>
 </head>
 <body>
@@ -307,6 +328,7 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <a href="mailto:hello@ahomekind.com?subject=something%20wrong%20on%20brand%20check" style="display:inline-block; padding:12px 24px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; color:#3d4a3a; font-size:12px; letter-spacing:1px; text-transform:uppercase;">spotted something wrong? let me know: hello@ahomekind.com</a>
 </div>
 
+<script src="js/swap.js?v=1"></script>
 <script>
 var priceMap = {"e.l.f. cosmetics":"£","Faith in Nature":"£","BYOMA":"££","Barry M":"£","B. by Superdrug":"£","Baylis & Harding":"£","Original Source":"£","Noughty":"££","Umberto Giannini":"££","OceanSaver":"££","Fabulosa":"£","Superdrug own brand (wider range)":"£","Imperial Leather":"£","Carex":"£","The Inkey List":"££","Green People":"££","Superdrug Pro Care":"£","MUA":"£","Fussy":"££","Glaze":"££","Kingfisher":"££","Bleach London":"££","NYX":"£","Bondi Sands":"££","Bulldog":"££","TRESemmé":"££","Lynx":"£","Aussie":"£","Wild":"££","Rimmel":"£","Garnier":"£","No7":"££","Simple":"£","Dove":"£","Herbal Essences":"£","REN":"£££","The Ordinary":"££","Drunk Elephant":"£££","Astonish":"£","The Pink Stuff":"£","Bio-D":"£","Zoflora":"£","Miniml":"££","Smol":"££","Method":"££","Ecover":"££","Aldi":"£","Lidl":"£","Co-op":"££","Sainsbury's":"££","Morrisons":"£","Waitrose":"£££","Marks & Spencer":"£££","Ariel":"££","Bold":"£","Daz":"£","Fairy":"£","Flash":"£","Lenor":"££","Gillette":"££","Venus":"££","Head & Shoulders":"£","Oral-B":"££","Pantene":"£","Always":"£","Tampax":"£","Febreze":"££","Viakal":"£","Satin Care":"£","Vaseline":"£","Sure":"£","Persil":"££","Comfort":"£","Surf":"£","Cif":"£","Domestos":"£","Radox":"£","Axe":"£","Bedhead":"££","Nivea":"££","Dettol":"££","Vanish":"££","Cillit Bang":"£","Finish":"££","Mr Muscle":"£","Glade":"£","Pledge":"£","Maybelline":"£","Redken":"£££","Max Factor":"£","Clairol":"£","Colgate":"£","Palmolive":"£","Sanex":"£","Johnson's":"£","Aveeno":"££","Neutrogena":"£","Listerine":"£","OGX":"££","Clean & Clear":"£","T/Gel":"££","Elemis":"££££","TENA":"££","Rare Beauty":"£££","Mad Hippie":"££","The Body Shop":"££","Dr Bronner's":"££","L'Oréal":"££","Peace With The Wild":"££","Dr Organic":"£","Gutology":"££","Biomed":"££","Waken":"££","Superdrug own-brand (dental range)":"£","Aquafresh":"£","Sensodyne":"££","Sally Hansen":"£","Collection":"£","Wilkinson Sword":"££","Bic":"£","Clinique":"£££","Olay":"££","Carmex":"£","Air Wick":"£","CeraVe":"£","got2b":"£","Sukin":"£","PHB Ethical Beauty":"££","Attitude":"££","Ethique":"££","Delphis Eco":"££","Salt of the Earth":"£","Hurraw!":"£","Beauty Kitchen":"££","Suki":"£££","Natracare":"££","TOTM":"££","DAME":"£££","Revolution Beauty":"£","W7 Cosmetics":"£","Technic Cosmetics":"£","Wet n Wild":"£","essence":"£","Catrice":"£","Sleek MakeUP":"£","St Ives":"£","Soap & Glory":"££","CoverGirl":"£","Batiste":"£","John Frieda":"££","Cetaphil":"££","Bourjois":"£","La Roche-Posay":"£££","Vichy":"£££","Schwarzkopf":"££","Avon":"£","The Natural Deodorant Co":"££","Little Soap Company":"££","gruum":"££","Veet":"£","Solait (Superdrug)":"£","Dr. Jart+":"£££","VO5":"£","Arkive Headcare":"£££","Habi":"££"};
 function normalizeSearch(s){
@@ -367,10 +389,22 @@ html += '<div class="rstatus"><div class="rstatus-label">vegan</div><div class="
 html += '</div>';
 if (noteHTML) { html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p></details>'; }
 
+var tierValue = tierClass === 'v-bad' ? 'bad' : tierClass === 'v-warn' ? 'warn' : tierClass === 'v-unknown' ? 'unknown' : 'good';
+if (tierValue !== 'good') {
+var swapSlotId = 'kswap-' + normalizeSearch(name).replace(/[^a-z0-9]/g, '') + '-' + Math.random().toString(36).slice(2, 7);
+html += '<a href="scan.html" class="rcard-swap-cta">let me help you find an alternative now</a>';
+html += '<div id="' + swapSlotId + '" class="rcard-swap-slot"></div>';
+}
+
 card.className = 'card rcard ' + tierClass;
 card.innerHTML = html;
 card.dataset.cf = cfClass;
 card.dataset.vegan = veganClass;
+
+if (tierValue !== 'good') {
+var slotEl = card.querySelector('.rcard-swap-slot');
+if (slotEl && window.AHKSwap) AHKSwap.render(slotEl, { name: name, tier: tierValue });
+}
 });
 
 // Categories to browse by. "food" and "clothing" have no brands tagged
