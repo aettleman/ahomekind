@@ -40,14 +40,23 @@
 .shelf-tip { position:absolute; left:10px; right:10px; bottom:70px; text-align:center; font-size:12.5px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:8px 10px; transition:background 0.2s ease; }
 .shelf-tip.good { background:rgba(77,107,79,0.85); }
 .shelf-tip.warn { background:rgba(158,90,42,0.8); }
-.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:0 10px; }
-#liveScanBtn.on { background:#a5453d; border-color:#a5453d; }
 .live-pulse { display:inline-block; width:7px; height:7px; border-radius:50%; background:#c9433a; margin-right:6px; animation:livePulse 1.2s ease-in-out infinite; }
 @keyframes livePulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
 @media(prefers-reduced-motion: reduce){ .live-pulse { animation:none; } }
-.camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
-.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
-.camera-controls button:hover { filter:brightness(1.08); }
+
+/* Everything the camera needs used to float on top of the video itself --
+   four buttons stacked over a live feed got crowded fast. Now the video
+   only carries the guide box and the running tip, and every control lives
+   in its own clear group underneath. */
+.shelf-controls { max-width:420px; margin:0 auto 16px; display:none; }
+.shelf-controls .big-btn { margin-bottom:12px; }
+.live-scan-card { border:1px solid #6f8768; border-radius:12px; padding:14px 16px; margin-bottom:12px; text-align:center; background:#eef1e9; }
+.live-scan-toggle { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; padding:10px 22px; border:none; border-radius:24px; cursor:pointer; margin-bottom:8px; }
+.live-scan-toggle.on { background:#a5453d; }
+.live-scan-caption { font-size:12px; color:#5c5c4f; line-height:1.5; margin:0; }
+.shelf-controls-row { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+.shelf-controls-row button { background:transparent; border:1px solid #cfc4a9; border-radius:24px; padding:9px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; color:#3d4a3a; cursor:pointer; }
+.shelf-controls-row button:hover { background:#ece5d5; }
 </style>
 </head>
 <body>
@@ -86,14 +95,20 @@
 <video id="shelfVideo" muted playsinline autoplay></video>
 <div class="shelf-guide"><span class="shelf-guide-label">fill this box</span></div>
 <p class="shelf-tip" id="shelfTip">finding your camera&hellip;</p>
-<div class="camera-controls">
-<button type="button" id="shelfTorchBtn" style="display:none;">&#128161;</button>
-<button type="button" id="liveScanBtn">start live scan</button>
-<button type="button" id="shelfCancel">choose a photo instead</button>
-<button type="button" class="snap" id="shelfSnap">snap photo</button>
-</div>
 </div>
 <canvas id="shelfSample" width="120" height="90" style="display:none;"></canvas>
+
+<div class="shelf-controls" id="shelfControls">
+<button type="button" class="big-btn" id="shelfSnap">snap photo</button>
+<div class="live-scan-card">
+<button type="button" id="liveScanBtn" class="live-scan-toggle">start live scan</button>
+<p class="live-scan-caption">keeps reading as you pan the shelf, so matches appear live instead of one photo at a time.</p>
+</div>
+<div class="shelf-controls-row">
+<button type="button" id="shelfTorchBtn" style="display:none;">&#128161; flash</button>
+<button type="button" id="shelfCancel">choose a photo instead</button>
+</div>
+</div>
 
 <div class="drop" id="drop" style="display:none;">
 <img id="preview" alt="your shelf photo">
@@ -298,6 +313,7 @@ lastFrameData = null;
 shelfTorchOn = false;
 el("shelfTorchBtn").style.display = "none";
 el("shelfCameraWrap").style.display = "none";
+el("shelfControls").style.display = "none";
 }
 
 function showFilePicker(msg){
@@ -416,6 +432,7 @@ return;
 }
 el("drop").style.display = "none";
 el("shelfCameraWrap").style.display = "block";
+el("shelfControls").style.display = "block";
 setShelfTip("finding your camera…");
 navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream){
 shelfStream = stream;
