@@ -188,14 +188,16 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
-'<a href="/instead-of.html">popular swaps</a>' +
-'<a href="/impact.html">your impact</a>' +
 '<a href="/shelf.html">scan a shelf</a>' +
+'<a href="/start-here.html">start here</a>' +
 '<a href="/quiz.html">take the quiz</a>' +
-'<a href="/journal/">journal</a>' +
+'<a href="/impact.html">your impact</a>' +
 '<a href="/what-testing-means.html">what testing means</a>' +
 '<a href="/money.html">who gets your money</a>' +
-'<a href="/start-here.html">start here</a>' +
+'<a href="/instead-of.html">popular swaps</a>' +
+'<a href="/food.html">food &amp; kitchen</a>' +
+'<a href="/fashion.html">fashion &amp; accessories</a>' +
+'<a href="/journal/">journal</a>' +
 '<a href="/about.html">about</a>' +
 '<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +
 '</div>';
