@@ -52,6 +52,30 @@
     return freebiesPromise;
   }
 
+  // Hand-curated, verified ingredient-level comparisons between a
+  // specific "from" brand and a specific "to" alternative -- see
+  // data/comparisons.json. Deliberately NOT auto-generated from raw
+  // ingredient lists: whether two products actually do the same job is
+  // a judgement call (an anti-dandruff active vs. a moisture treatment
+  // aren't interchangeable just because both are "shampoo"), so every
+  // entry here has been checked by hand before it's shown as fact.
+  var comparisonsPromise = null;
+  function loadComparisons(basePath){
+    if(!comparisonsPromise){
+      comparisonsPromise = fetch((basePath || "") + "data/comparisons.json")
+        .then(function(r){ return r.json(); })
+        .catch(function(){ return []; });
+    }
+    return comparisonsPromise;
+  }
+  function findComparison(comparisons, fromSlug, toSlug){
+    if(!fromSlug || !toSlug) return null;
+    for(var i=0;i<comparisons.length;i++){
+      if(comparisons[i].from === fromSlug && comparisons[i].to === toSlug) return comparisons[i];
+    }
+    return null;
+  }
+
   function findRecord(brands, name){
     var n = normalize(name);
     if(!n) return null;
@@ -90,9 +114,10 @@
           (b.category || []).some(function(c){ return record.category.indexOf(c) !== -1; });
       });
       // high vegan confidence and cheaper first, otherwise keep list order
-      var order = { high: 0, medium: 1, low: 2, undefined: 3 };
+      var order = { high: 0, medium: 1, low: 2 };
+      function rank(b){ return order.hasOwnProperty(b.veganConfidence) ? order[b.veganConfidence] : 3; }
       pool.sort(function(a, b){
-        var byVegan = (order[a.veganConfidence] || 3) - (order[b.veganConfidence] || 3);
+        var byVegan = rank(a) - rank(b);
         if(byVegan !== 0) return byVegan;
         return (a.price || "").length - (b.price || "").length;
       });
@@ -146,12 +171,38 @@
       "</div>";
   }
 
-  function altCardHTML(alt){
+  // The "worried it won't work the same?" section under an alternative:
+  // a real, verified comparison when one exists (data/comparisons.json),
+  // otherwise an honest general reassurance line -- never a fabricated
+  // ingredient claim -- plus a way to help build the real comparison.
+  function comparisonHTML(fromBrand, alt, comparison){
+    var mailBody = "From brand: " + fromBrand.name + "\n" +
+      "Alternative: " + alt.name + "\n\n" +
+      "I'd like to compare these two properly, but don't have verified ingredient data for one or both yet.\n\n" +
+      "If you can, please attach:\n- a clear photo of the full ingredients list for " + fromBrand.name + " (the specific product you use)\n- a clear photo of the full ingredients list for " + alt.name + " (or the barcode, if you've already got it)\n\nAnything else you know about either product:\n";
+    var mailHref = "mailto:hello@ahomekind.com?subject=" + encodeURIComponent("Ingredient comparison: " + fromBrand.name + " vs " + alt.name) + "&body=" + encodeURIComponent(mailBody);
+    if(comparison){
+      return "" +
+        "<div class=\"kswap-compare kswap-compare-verified\">" +
+        "<p class=\"kswap-compare-title\">how they actually compare</p>" +
+        "<p class=\"kswap-compare-body\">" + comparison.note + "</p>" +
+        "</div>";
+    }
+    return "" +
+      "<div class=\"kswap-compare\">" +
+      "<p class=\"kswap-compare-title\">worried it won't work the same?</p>" +
+      "<p class=\"kswap-compare-body\">That's a completely fair thing to wonder before switching something that already works for you. I haven't done a verified ingredient-by-ingredient comparison for this exact pair yet, but both are made to do the same job -- there's no reason a cruelty-free version can't perform just as well.</p>" +
+      "<a href=\"" + mailHref + "\" class=\"kswap-compare-link\">help me compare these properly &rarr;</a>" +
+      "</div>";
+  }
+
+  function altCardHTML(alt, fromBrand, comparison){
     var href = alt.slug ? "brands/" + alt.slug + "/index.html" : "#";
     return "" +
       "<div class=\"kswap-alt-card\" data-name=\"" + alt.name.replace(/\"/g, "&quot;") + "\">" +
       "<p class=\"kswap-alt-name\">" + alt.name + "</p>" +
       (alt.note ? "<p class=\"kswap-alt-note\">" + alt.note + "</p>" : "") +
+      (fromBrand ? comparisonHTML(fromBrand, alt, comparison) : "") +
       "<div class=\"kswap-alt-actions\">" +
       "<a href=\"" + href + "\" class=\"kswap-alt-link\">why this one</a>" +
       "<button type=\"button\" class=\"kswap-swap-btn\">I made the swap</button>" +
@@ -175,7 +226,8 @@
     if(brandLike.tier === "good") { containerEl.innerHTML = ""; return; }
     var basePath = (opts && opts.basePath) || "";
     containerEl.innerHTML = "<p class=\"kswap-loading\">looking for something kinder&hellip;</p>";
-    loadBrands(basePath).then(function(brands){
+    Promise.all([loadBrands(basePath), loadComparisons(basePath)]).then(function(results){
+      var brands = results[0], comparisons = results[1];
       var record = brandLike.slug ? brandLike : findRecord(brands, brandLike.name);
       var alts = record ? findAlternatives(brands, record, 3) : [];
       if(!alts.length){
@@ -183,7 +235,10 @@
         return;
       }
       var html = "<p class=\"kswap-kicker\">looking for something kinder?</p>";
-      html += "<div class=\"kswap-alts\">" + alts.map(altCardHTML).join("") + "</div>";
+      html += "<div class=\"kswap-alts\">" + alts.map(function(alt){
+        var comparison = record ? findComparison(comparisons, record.slug, alt.slug) : null;
+        return altCardHTML(alt, record, comparison);
+      }).join("") + "</div>";
       containerEl.innerHTML = html;
       containerEl.querySelectorAll(".kswap-swap-btn").forEach(function(btn){
         btn.addEventListener("click", function(){
