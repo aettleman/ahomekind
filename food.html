@@ -29,6 +29,16 @@
 .iw-key .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; }
 .iw-key .dot.animal { background:#d9a89f; }
 .iw-key .dot.ambiguous { background:#dfc491; }
+.iw-why { margin-top:8px; }
+.iw-why summary { cursor:pointer; font-size:11.5px; letter-spacing:0.6px; text-transform:uppercase; color:#8a4a2a; font-weight:600; }
+.iw-why summary:hover { color:#5c2c17; }
+.iw-why p { font-size:13px; line-height:1.7; color:#5c5c4f; margin:10px 0 0; }
+.iw-why .iw-sources { font-size:11.5px; margin-top:8px; }
+.iw-why .iw-sources a { color:#8a4a2a; }
+.ingredient-watch { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:12px; }
+.iw-row { margin-bottom:0; }
+.pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid #6f8768; padding:4px 0 4px 20px; margin:26px 0; }
+.food-intro::first-letter { font-family:'Cormorant Garamond',serif; font-size:52px; line-height:0.8; float:left; padding:6px 8px 0 0; color:#4d6b4f; }
 </style>
 </head>
 <body>
@@ -71,7 +81,9 @@
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">food &amp; kitchen</h1>
 
-<p>This site is mostly about what's on the shelf next to the food - cosmetics, cleaning products, toiletries. But food is part of the same picture. Animal agriculture and animal testing aren't the same industry, but they share a root: how much weight we give to an animal's experience when it's inconvenient to us. If brand-checking your bathroom cabinet has got you thinking about the kitchen too, this is a gentle place to start - not a diet plan, just a next step if you want one.</p>
+<p class="food-intro">This site is mostly about what's on the shelf next to the food - cosmetics, cleaning products, toiletries. But food is part of the same picture. Animal agriculture and animal testing aren't the same industry, but they share a root: how much weight we give to an animal's experience when it's inconvenient to us. If brand-checking your bathroom cabinet has got you thinking about the kitchen too, this is a gentle place to start - not a diet plan, just a next step if you want one.</p>
+
+<p class="pull-quote">"Is it vegan?" and "was it produced with better welfare?" are two different questions. This page is mostly about the first one.</p>
 
 <p class="section-label" style="margin-top:30px;">cruelty-free vs vegan, for food</p>
 <p>With cosmetics, cruelty-free is mostly about animal testing, and vegan is about ingredients. Food doesn't really have an animal-testing angle, so I think of it as two separate questions instead.</p>
@@ -80,10 +92,8 @@
 
 <p class="section-label" style="margin-top:30px;">hidden animal ingredients to watch for</p>
 <p>Some of these are always animal-derived. Others genuinely could go either way and the label won't always say, so I've marked those honestly rather than guessing.</p>
-<div class="card" style="margin-top:14px;">
 <div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
 <div id="foodIngredientList" class="ingredient-watch"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
-</div>
 
 <p class="section-label" style="margin-top:30px;">easy swaps, no pressure</p>
 <p>You don't have to overhaul everything at once. If you're just starting to look at dairy, eggs or gelatine-based sweets, here are a few gentle starting points.</p>
@@ -130,7 +140,15 @@ fetch("data/food-ingredients.json").then(function(r){ return r.json(); }).then(f
 var el = document.getElementById("foodIngredientList");
 var html = "";
 (list || []).forEach(function(item){
-html += "<div class=\"iw-row iw-" + item.type + "\"><span class=\"iw-name\">" + item.name + "</span><span class=\"iw-note\">" + item.note + "</span></div>";
+html += "<div class=\"iw-row iw-" + item.type + "\"><span class=\"iw-name\">" + item.name + "</span><span class=\"iw-note\">" + item.note + "</span>";
+if(item.detail){
+html += "<details class=\"iw-why\"><summary>why isn't this vegan?</summary><p>" + item.detail + "</p>";
+if(item.sources && item.sources.length){
+html += "<p class=\"iw-sources\">" + item.sources.map(function(s){ return "<a href=\"" + s.url + "\" target=\"_blank\" rel=\"noopener\">" + s.label + "</a>"; }).join(" &middot; ") + "</p>";
+}
+html += "</details>";
+}
+html += "</div>";
 });
 el.innerHTML = html || "<p style=\"color:#8a8672; font-size:13px;\">Couldn't load the list right now.</p>";
 }).catch(function(){
