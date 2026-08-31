@@ -79,13 +79,18 @@
 <img id="photoPreview" alt="" style="max-width:160px; border-radius:8px; display:block; border:0.5px solid #cfc4a9;">
 <button type="button" id="retakeBtn" class="big-btn alt" style="max-width:160px; margin-top:8px; padding:8px; font-size:11px;">retake</button>
 </div>
-<p class="hint" id="noPhotoHint">No photo yet - scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack. (Typing the name/brand below still works too, if you'd rather.)</p>
+<p class="hint" id="noPhotoHint">No photo yet - scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack.</p>
+<button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
+<p id="addMsg" style="font-size:13px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+<details style="margin-top:16px;">
+<summary style="cursor:pointer; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8a8672;">know the name or status already? (optional)</summary>
+<div style="margin-top:12px;">
 <div class="field">
-<label for="f-product">product name <span style="text-transform:none;">(optional if you took a photo)</span></label>
+<label for="f-product">product name</label>
 <input type="text" id="f-product" placeholder="e.g. Superdrug Pro Care Sensitive Facial Wipes x25">
 </div>
 <div class="field">
-<label for="f-brand">brand <span style="text-transform:none;">(optional if you took a photo)</span></label>
+<label for="f-brand">brand</label>
 <input type="text" id="f-brand" list="brand-list" placeholder="e.g. Superdrug own brand">
 <datalist id="brand-list"></datalist>
 </div>
@@ -93,19 +98,20 @@
 <label for="f-tier">status</label>
 <select id="f-tier">
 <option value="good">&#127807; fully cruelty-free &amp; vegan</option>
-<option value="check" selected>&#128048; cruelty-free, check vegan status</option>
+<option value="check">&#128048; cruelty-free, check vegan status</option>
 <option value="warn">&#9888;&#65039; worth a disclaimer (parent tests, unverified claim, etc.)</option>
 <option value="bad">&#10060; tested on animals</option>
-<option value="unknown">&#10067; status not known yet</option>
+<option value="unknown" selected>&#10067; status not known yet</option>
 </select>
+<p class="hint">Leave this as "not known yet" unless you can see a certification logo on the pack, or you're sure it's tested on animals. I'll work the rest out when I go through the batch.</p>
 </div>
 <div class="field">
 <label for="f-note">note</label>
-<textarea id="f-note" placeholder="e.g. Certified cruelty-free and certified vegan, per the packaging."></textarea>
-<p class="hint">Mention the word "vegan" if it applies - write "100% vegan" or "fully vegan" if it's fully certified, otherwise just "vegan" is read as check-per-product. This note becomes the card's explanation, so it's fine to write it exactly as you'd want a visitor to read it.</p>
+<textarea id="f-note" placeholder="anything worth mentioning, in your own words"></textarea>
+<p class="hint">Only fill this in if something's worth flagging - a certification you spotted, or anything else. Leave it blank otherwise, I'll write it up properly from the photo.</p>
 </div>
-<button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
-<p id="addMsg" style="font-size:13px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+</div>
+</details>
 </div>
 
 <h2 style="font-size:16px; margin-top:32px;">this batch (<span id="batchCount">0</span>)</h2>
@@ -232,7 +238,7 @@ el("f-barcode").value = "";
 el("f-product").value = "";
 el("f-brand").value = "";
 el("f-note").value = "";
-el("f-tier").value = "check";
+el("f-tier").value = "unknown";
 pendingPhoto = null;
 el("photoPreviewWrap").style.display = "none";
 el("noPhotoHint").style.display = "block";
@@ -395,7 +401,7 @@ el("photoPreviewWrap").style.display = "block";
 el("noPhotoHint").style.display = "none";
 if(navigator.vibrate) navigator.vibrate(40);
 stopCamera();
-el("f-tier").focus();
+el("addBtn").focus();
 });
 el("retakeBtn").addEventListener("click", function(){
 pendingPhoto = null;
