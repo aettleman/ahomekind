@@ -598,12 +598,17 @@ var out = "";
 var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
+var identified = !!(name || brandText);
 if(brand){
 out += verdictHTML(brand);
 if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
-} else {
+} else if(!identified){
+// Truly nothing came back -- no product identified at all, so this
+// is the only case that should lead with the "not on my list yet"
+// card. When the product WAS identified (below), that card would
+// wrongly read as a total dead end even though we do have a result.
 out += "<div class=\"rcard v-unknown\">";
 out += "<div class=\"rcard-top\"><div class=\"rcard-badge\" aria-hidden=\"true\">?</div><div><div class=\"rcard-name\">not on my list yet</div><div class=\"rcard-headline\">let's try another way</div></div></div>";
 out += "<p class=\"rcard-note\">The public barcode database doesn't have every product - own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered.</p>";
@@ -626,6 +631,17 @@ if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.l
 });
 out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 if(product.ingredients_text) out += "<div id=\"ingredientWatch\"></div>";
+out += "</div>";
+}
+if(!brand && identified){
+// The product itself was identified, just not its cruelty-free
+// status -- a softer, secondary note rather than the big "not on
+// my list" card, and it sits after the product info instead of
+// before it.
+out += "<div class=\"card\">";
+out += "<p class=\"section-label\" style=\"margin-top:0;\">cruelty-free status</p>";
+out += "<p style=\"font-size:13.5px; color:#5c5c4f; margin-bottom:14px;\">I don't have this brand in my cruelty-free list yet, so I can't give a verdict on it.</p>";
+out += brandSearchWidget();
 out += "</div>";
 }
 out += sourceBlock(brandText);
