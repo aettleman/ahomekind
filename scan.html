@@ -774,15 +774,64 @@ setStatus("Couldn't switch the flash on this device.");
 }
 el("torchBtn").addEventListener("click", toggleTorch);
 
+var barcodeCaptured = false;
+var rotateTimer = null;
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
+if(rotateTimer){ clearInterval(rotateTimer); rotateTimer = null; }
 el("startBtn").style.display = "block";
 el("cameraWrap").style.display = "none";
 el("cameraControls").style.display = "none";
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
 torchOn = false;
+barcodeCaptured = false;
 setStatus("");
+}
+function onBarcodeDecoded(text){
+if(barcodeCaptured) return;
+barcodeCaptured = true;
+if(navigator.vibrate) navigator.vibrate(60);
+stopCamera();
+lookup(text);
+}
+// A barcode held sideways or upside down often isn't read by the
+// continuous live scan below, since that only ever looks at the frame
+// the way the camera sees it. As a fallback, every couple of seconds
+// this grabs the current frame and tries it rotated 90/180/270 degrees
+// too, so it still catches a barcode held at an angle without needing
+// the whole flow to slow down for the common case.
+function rotatedCanvas(source, deg){
+var w = source.videoWidth || source.width, h = source.videoHeight || source.height;
+var rc = document.createElement("canvas");
+if(deg === 90 || deg === 270){ rc.width = h; rc.height = w; } else { rc.width = w; rc.height = h; }
+var ctx = rc.getContext("2d");
+ctx.translate(rc.width / 2, rc.height / 2);
+ctx.rotate(deg * Math.PI / 180);
+ctx.drawImage(source, -w / 2, -h / 2);
+return rc;
+}
+function tryRotatedDecode(){
+if(barcodeCaptured) return;
+var video = el("reader");
+if(!video.videoWidth) return;
+var angles = [90, 180, 270];
+var i = 0;
+function attempt(){
+if(barcodeCaptured || i >= angles.length) return;
+var rc = rotatedCanvas(video, angles[i]);
+var img = new Image();
+img.onload = function(){
+var result = null;
+try { result = codeReader.decode(img); } catch(e){}
+if(result && !barcodeCaptured){ onBarcodeDecoded(result.getText()); return; }
+i++;
+attempt();
+};
+img.onerror = function(){ i++; attempt(); };
+img.src = rc.toDataURL("image/png");
+}
+attempt();
 }
 el("startBtn").addEventListener("click", function(){
 if(typeof ZXing === "undefined"){
@@ -790,20 +839,20 @@ setStatus("Camera scanning did not load. Type the numbers instead.");
 return;
 }
 setStatus("Asking for camera permission...", true);
+barcodeCaptured = false;
 try {
-codeReader = new ZXing.BrowserMultiFormatReader();
+var hints = new Map();
+hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
+codeReader = new ZXing.BrowserMultiFormatReader(hints);
 codeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "reader", function(result, err){
-if(result){
-if(navigator.vibrate) navigator.vibrate(60);
-stopCamera();
-lookup(result.getText());
-}
+if(result){ onBarcodeDecoded(result.getText()); }
 }).then(function(){
 setStatus("Point at a barcode.");
 el("startBtn").style.display = "none";
 el("cameraWrap").style.display = "block";
 el("cameraControls").style.display = "flex";
 setupTorchButton();
+rotateTimer = setInterval(tryRotatedDecode, 2500);
 }).catch(function(){
 setStatus("Could not open the camera. Type the numbers instead.");
 });
