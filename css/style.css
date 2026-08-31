@@ -485,6 +485,8 @@ nav.main-nav .dd:hover .dd-m, nav.main-nav .dd:focus-within .dd-m, nav.main-nav 
 nav.main-nav .dd-m a { display:block; padding:10px 18px; font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase; color:#5c6b57; white-space:nowrap; }
 nav.main-nav .dd-m a:hover { background:#dcd3c0; color:#3d4a3a; }
 nav.main-nav .caret { font-size:8px; margin-left:4px; vertical-align:middle; }
+nav.main-nav .nav-shop-btn { background:#4d6b4f; color:#f4efe2; padding:8px 18px; border-radius:20px; }
+nav.main-nav .nav-shop-btn:hover { background:#3d5940; color:#f4efe2; }
 
 @media (max-width: 700px) {
   nav.main-nav { gap:10px; }

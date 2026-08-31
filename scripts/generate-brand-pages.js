@@ -113,13 +113,12 @@ function renderBrandPage(brand) {
   lines.push('</a>');
   lines.push('<nav class="main-nav">');
   lines.push('<a href="../../index.html">home</a>');
+  lines.push('<a href="../../brand-check.html">brand check</a>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../scan.html">scan a barcode</a>');
   lines.push('<a href="../../shelf.html">scan a shelf</a>');
   lines.push('</span></span>');
-  lines.push('<a href="../../brand-check.html">check</a>');
-  lines.push('<a href="../../shop.html">shop</a>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../start-here.html">start here</a>');
@@ -136,6 +135,7 @@ function renderBrandPage(brand) {
   lines.push('<a href="../../journal/">journal</a>');
   lines.push('<a href="../../about.html">about</a>');
   lines.push('</span></span>');
+  lines.push('<a href="../../shop.html" class="nav-shop-btn">shop</a>');
   lines.push('</nav>');
   lines.push('</div>');
   lines.push('</header>');
