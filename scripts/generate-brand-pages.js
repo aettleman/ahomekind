@@ -200,7 +200,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'instead-of.html', 'brand-check.html', 'scan.html', 'shelf.html', 'quiz.html', 'shop.html', 'journal/'];
+  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'instead-of.html', 'brand-check.html', 'scan.html', 'shelf.html', 'quiz.html', 'shop.html', 'journal/', 'food.html', 'fashion.html'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');
@@ -230,7 +230,7 @@ function main() {
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap(brands), 'utf8');
 
   console.log('Done. ' + created + ' pages created, ' + updated + ' pages updated, ' + brands.length + ' total brands.');
-  console.log('sitemap.xml written with ' + (brands.length + 12) + ' URLs.');
+  console.log('sitemap.xml written with ' + (brands.length + 14) + ' URLs.');
 }
 
 main();
