@@ -89,10 +89,9 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 
 <p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="1" data-years="1">mostly meat</button>
-<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian</button>
-<button type="button" class="preset-btn" data-days="5" data-years="1">mostly plant-based</button>
-<button type="button" class="preset-btn" data-days="7" data-years="1">fully plant-based</button>
+<button type="button" class="preset-btn" data-days="1" data-years="1" data-cat="meat eater">meat eater</button>
+<button type="button" class="preset-btn active" data-days="4" data-years="1" data-cat="flexitarian">flexitarian</button>
+<button type="button" class="preset-btn" data-days="7" data-years="1" data-cat="plant based">plant based</button>
 </div>
 <p class="preset-note">or fine-tune it exactly with the sliders below</p>
 
@@ -156,12 +155,7 @@ var MAX_LAND_CUT = 76;
 
 function el(id){ return document.getElementById(id); }
 
-function categoryFor(days){
-if(days <= 1) return 'mostly meat';
-if(days <= 3) return 'flexitarian';
-if(days <= 5) return 'mostly plant-based';
-return 'fully plant-based';
-}
+var currentCategory = 'flexitarian';
 
 function update(){
 var days = parseInt(el('days').value, 10);
@@ -170,7 +164,7 @@ var frac = days / 7;
 
 el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
-el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + categoryFor(days) + ': ';
+el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + currentCategory + ': ';
 
 var animals = ANIMALS_PER_YEAR * frac * years;
 var shown = animals < 10 ? (Math.round(animals * 10) / 10) : Math.round(animals);
@@ -200,6 +194,7 @@ presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
 el('days').value = btn.getAttribute('data-days');
 el('years').value = btn.getAttribute('data-years');
+currentCategory = btn.getAttribute('data-cat');
 presetBtns.forEach(function(b){ b.classList.remove('active'); });
 btn.classList.add('active');
 update();
