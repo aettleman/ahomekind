@@ -89,15 +89,15 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 
 <p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="1" data-years="1" data-cat="meat eater">meat eater</button>
-<button type="button" class="preset-btn active" data-days="4" data-years="1" data-cat="flexitarian">flexitarian</button>
-<button type="button" class="preset-btn" data-days="7" data-years="1" data-cat="plant based">plant based</button>
+<button type="button" class="preset-btn" data-days="1" data-min="0" data-max="2" data-years="1" data-cat="meat eater">meat eater</button>
+<button type="button" class="preset-btn active" data-days="4" data-min="2" data-max="5" data-years="1" data-cat="flexitarian">flexitarian</button>
+<button type="button" class="preset-btn" data-days="7" data-min="5" data-max="7" data-years="1" data-cat="plant based">plant based</button>
 </div>
-<p class="preset-note">or fine-tune it exactly with the sliders below</p>
+<p class="preset-note" id="rangeNote">or fine-tune it exactly with the sliders below</p>
 
 <div class="slider-row" style="margin-top:22px;">
 <label id="daysLabel">days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
-<input type="range" id="days" min="0" max="7" step="1" value="3">
+<input type="range" id="days" min="2" max="5" step="1" value="4">
 </div>
 
 <div class="slider-row">
@@ -108,6 +108,8 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <div class="results">
 <div class="big-num" id="animals">7</div>
 <div class="big-lbl">land animals not farmed for you</div>
+<div class="sub-num" id="stillFarmed">10</div>
+<div class="sub-lbl">still farmed for you at this rate</div>
 <div class="sub-num" id="footprint">31%</div>
 <div class="sub-lbl">smaller food carbon footprint</div>
 <div class="sub-num" id="land">33%</div>
@@ -157,6 +159,10 @@ function el(id){ return document.getElementById(id); }
 
 var currentCategory = 'flexitarian';
 
+function fmt(n){
+return n < 10 ? (Math.round(n * 10) / 10) : Math.round(n);
+}
+
 function update(){
 var days = parseInt(el('days').value, 10);
 var years = parseInt(el('years').value, 10);
@@ -166,24 +172,44 @@ el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
 el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + currentCategory + ': ';
 
-var animals = ANIMALS_PER_YEAR * frac * years;
-var shown = animals < 10 ? (Math.round(animals * 10) / 10) : Math.round(animals);
-el('animals').textContent = shown.toLocaleString();
+var animalsSaved = ANIMALS_PER_YEAR * frac * years;
+var animalsStill = ANIMALS_PER_YEAR * (1 - frac) * years;
+var shownSaved = fmt(animalsSaved);
+var shownStill = fmt(animalsStill);
+el('animals').textContent = shownSaved.toLocaleString();
+el('stillFarmed').textContent = shownStill.toLocaleString();
 
 el('footprint').textContent = Math.round(MAX_CARBON_CUT * frac) + '%';
 el('land').textContent = Math.round(MAX_LAND_CUT * frac) + '%';
 
 var f = '';
 if(days === 0){
-f = 'Nothing changes at zero. Which is fine, nobody is standing over you. Move the slider and see what one day a week does.';
+f = 'At zero plant-based days, that is roughly ' + shownStill + ' animals farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none of them spared. Nobody is standing over you, though. Move the slider and see what one day a week does.';
 } else if(days === 7){
-f = 'Fully plant-based. Over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + Math.round(animals) + ' animals that were never farmed for you, and roughly three quarters off the carbon and land your food demands.';
+f = 'Fully plant-based. Over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + shownSaved + ' animals that were never farmed for you, none still farmed, and roughly three quarters off the carbon and land your food demands.';
 } else if(days <= 2){
-f = 'Even at ' + days + (days === 1 ? ' day' : ' days') + ' a week, that is ' + shown + ' animals over ' + years + (years === 1 ? ' year' : ' years') + '. Not nothing. Not a hurricane either. Just a real number that was not there before.';
+f = 'Even at ' + days + (days === 1 ? ' day' : ' days') + ' a week, that is ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', though roughly ' + shownStill + ' are still farmed for you at this rate. Not nothing. Not a hurricane either. Just a real number that was not there before.';
 } else {
-f = days + ' days a week comes to roughly ' + shown + ' animals over ' + years + (years === 1 ? ' year' : ' years') + ', and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint. No overhaul required, no label needed.';
+f = days + ' days a week comes to roughly ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', against about ' + shownStill + ' still farmed for you, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint. No overhaul required, no label needed.';
 }
 el('framing').textContent = f;
+}
+
+var CATEGORY_RANGE = {
+'meat eater': { min: 0, max: 2 },
+'flexitarian': { min: 2, max: 5 },
+'plant based': { min: 5, max: 7 }
+};
+
+function applyRange(cat){
+var r = CATEGORY_RANGE[cat];
+if(!r) return;
+var daysInput = el('days');
+daysInput.min = r.min;
+daysInput.max = r.max;
+var v = parseInt(daysInput.value, 10);
+if(v < r.min) daysInput.value = r.min;
+if(v > r.max) daysInput.value = r.max;
 }
 
 el('days').addEventListener('input', update);
@@ -192,14 +218,19 @@ el('years').addEventListener('input', update);
 var presetBtns = document.querySelectorAll('.preset-btn');
 presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
+currentCategory = btn.getAttribute('data-cat');
+el('days').min = btn.getAttribute('data-min');
+el('days').max = btn.getAttribute('data-max');
 el('days').value = btn.getAttribute('data-days');
 el('years').value = btn.getAttribute('data-years');
-currentCategory = btn.getAttribute('data-cat');
 presetBtns.forEach(function(b){ b.classList.remove('active'); });
 btn.classList.add('active');
 update();
 });
 });
+
+applyRange(currentCategory);
+update();
 
 var shareBtn = el('shareResultBtn');
 var shareMsg = el('shareMsg');
