@@ -226,3 +226,139 @@ document.addEventListener('keydown', function(e){
 if(e.key === 'Escape' && sheet.classList.contains('open')){ closeSheet(); }
 });
 });
+
+// Ambient impact counter, in-flow, just above the footer on every page
+// except impact.html (which already has the full, dismissible version).
+// Same rate/source as js/impact-counter.js: 83 billion land animals
+// slaughtered for meat globally in 2022 (UN FAO via Our World in Data),
+// spread evenly across the year. This one never overlays the page and
+// is never dismissed -- it's meant to be a quiet, constant fact of the
+// site's footer, not an interruption.
+document.addEventListener('DOMContentLoaded', function(){
+var path = window.location.pathname;
+if (/impact\.html$/.test(path)) return; // already has the full counter
+var footer = document.querySelector('footer.site-footer');
+if (!footer) return;
+var RATE_PER_SECOND = 83000000000 / (365.25 * 24 * 3600);
+var wrap = document.createElement('div');
+wrap.className = 'ambient-counter';
+wrap.setAttribute('role', 'status');
+wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
+wrap.innerHTML =
+'<div class="ambient-counter-inner">' +
+'<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
+'<p class="ambient-counter-label">land animals killed for meat worldwide, since this page loaded &middot; <a href="/impact.html">see the full picture</a></p>' +
+'</div>';
+footer.parentNode.insertBefore(wrap, footer);
+var numEl = wrap.querySelector('#ambientCounterNum');
+var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion) {
+// Still an honest, real number -- just not animated: a running count
+// for the time an average visitor spends on a page (roughly a minute).
+numEl.textContent = Math.floor(60 * RATE_PER_SECOND).toLocaleString();
+return;
+}
+var start = performance.now();
+function tick(){
+var elapsedSeconds = (performance.now() - start) / 1000;
+numEl.textContent = Math.floor(elapsedSeconds * RATE_PER_SECOND).toLocaleString();
+requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+});
+
+// Myth vs reality flip cards -- homepage only, built from a container
+// div id="mythGrid" left empty in the markup. Click, tap or Enter/Space
+// flips a card between the common belief and the fuller truth. Kept as
+// plain, sourceable statements -- nothing here is a "gotcha", just the
+// more complete version of something a lot of people have heard.
+document.addEventListener('DOMContentLoaded', function(){
+var grid = document.getElementById('mythGrid');
+if (!grid) return;
+var MYTHS = [
+{
+myth: '"Cruelty-free" means a product was never tested on animals, full stop.',
+reality: 'Usually it just means the finished product wasn’t tested by that brand. The individual ingredients, or the wider parent company, can still be tested elsewhere, especially if the brand also sells in mainland China, where animal testing on cosmetics can be legally required. That’s why a certification (Leaping Bunny, PETA, Cruelty Free International) matters more than the words on the label.'
+},
+{
+myth: 'Vegan and cruelty-free are basically the same thing.',
+reality: 'They’re answering two different questions. Vegan means no animal-derived ingredients, cruelty-free means not tested on animals. A product can be vegan and still tested on animals, or cruelty-free and still contain things like beeswax, lanolin or carmine. Checking one tells you nothing about the other.'
+},
+{
+myth: 'Leather is just a by-product of the meat industry, so it doesn’t really add to the harm.',
+reality: 'For cattle it’s more accurately a co-product: the hide is sold alongside the meat and adds to what the animal is worth, which supports the overall economics of slaughter. For some animals, like exotic reptiles or certain cattle raised specifically for premium hides, leather is the primary product and meat is the secondary one.'
+},
+{
+myth: '"Natural" or "organic" on the label means it’s cruelty-free.',
+reality: 'Natural and organic describe where the ingredients came from, not whether the finished product or its ingredients were tested on animals, or whether the company sells somewhere that requires it. They’re unrelated claims. The only reliable way to know is a genuine third-party certification.'
+},
+{
+myth: 'If it’s legal to sell here, it can’t have been tested on animals.',
+reality: 'The UK and EU ban animal testing on finished cosmetics and most ingredients sold here. But a brand that also sells in a country with its own testing requirements can still commission tests on the same formula for that market, and the UK/EU ban doesn’t stop that happening elsewhere.'
+},
+{
+myth: 'Unless I go fully vegan and cruelty-free overnight, it doesn’t really make a difference.',
+reality: 'Every swap is a real, cumulative reduction, not an all-or-nothing switch. Cutting meat a few days a week or swapping a couple of bathroom products both add up over a year, in ways you can actually see for yourself on the impact calculator. Perfection was never the bar.'
+}
+];
+var html = '';
+MYTHS.forEach(function(m, i){
+html += '<div class="flip-card">' +
+'<button type="button" class="flip-card-btn" id="mythCard' + i + '" aria-label="Flip to see the reality">' +
+'<div class="flip-card-inner">' +
+'<div class="flip-front"><p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap to see the reality &rarr;</p></div>' +
+'<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint">tap to flip back</p></div>' +
+'</div>' +
+'</button>' +
+'</div>';
+});
+grid.innerHTML = html;
+grid.querySelectorAll('.flip-card').forEach(function(card){
+var btn = card.querySelector('.flip-card-btn');
+btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
+});
+});
+
+// "One small swap" -- a single instead-of/try pair on the homepage,
+// picked from the day of the year so it's stable for the whole visit
+// and changes daily rather than reshuffling on every reload. Pairs are
+// the same ones already verified on instead-of.html and brand-check,
+// nothing new is claimed here.
+document.addEventListener('DOMContentLoaded', function(){
+var el = document.getElementById('swapOfDay');
+if (!el) return;
+var SWAPS = [
+{ insteadName: 'Head &amp; Shoulders', insteadHref: '/brands/head-and-shoulders/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who test where legally required.', tryName: 'Noughty', tryHref: '/brands/noughty/index.html', tryNote: 'Leaping Bunny certified, vegan, independent.' },
+{ insteadName: 'Pantene', insteadHref: '/brands/pantene/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who test where legally required.', tryName: 'Umberto Giannini', tryHref: '/brands/umberto-giannini/index.html', tryNote: 'PETA certified cruelty-free, 100% vegan.' },
+{ insteadName: "L'Oréal", insteadHref: '/brands/l-oreal/index.html', insteadNote: 'The world’s largest cosmetics company, sells into mainland China where testing can be required.', tryName: 'Faith in Nature', tryHref: '/brands/faith-in-nature/index.html', tryNote: 'UK, Leaping Bunny certified, budget-friendly.' },
+{ insteadName: 'Maybelline', insteadHref: '/brands/maybelline/index.html', insteadNote: 'Owned by L’Oréal, who sell into markets requiring animal testing.', tryName: 'e.l.f. Cosmetics', tryHref: '/brands/e-l-f-cosmetics/index.html', tryNote: 'Independently owned, PETA and Vegan Society certified.' },
+{ insteadName: 'Vaseline', insteadHref: '/brands/vaseline/index.html', insteadNote: 'Owned by Unilever, who sell into markets requiring animal testing.', tryName: 'Hurraw!', tryHref: '/brands/hurraw/index.html', tryNote: 'Choose Cruelty-Free, Leaping Bunny and PETA certified, 100% vegan lip balms, sold in Holland &amp; Barrett.' },
+{ insteadName: 'Nivea', insteadHref: '/brands/nivea/index.html', insteadNote: 'Owned by Beiersdorf, who test where required by law.', tryName: 'Dr Organic', tryHref: '/brands/dr-organic/index.html', tryNote: 'Certified cruelty-free (Leaping Bunny / Cruelty Free International).' },
+{ insteadName: 'CeraVe', insteadHref: '/brands/cerave/index.html', insteadNote: 'Owned by L’Oréal, sold in mainland China where testing can be required, and not fully vegan either.', tryName: 'BYOMA', tryHref: '/brands/byoma/index.html', tryNote: 'UK, Leaping Bunny certified – similar ceramide-focused formulas.' },
+{ insteadName: 'Olay', insteadHref: '/brands/olay/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who sell into markets requiring animal testing.', tryName: 'Sukin', tryHref: '/brands/sukin/index.html', tryNote: 'Leaping Bunny certified and 100% vegan.' },
+{ insteadName: 'Axe', insteadHref: '/brands/axe/index.html', insteadNote: 'Owned by Unilever, who sell into markets requiring animal testing.', tryName: 'The Natural Deodorant Co', tryHref: '/brands/the-natural-deodorant-co/index.html', tryNote: 'Cruelty Free International certified, 100% vegan, independent UK brand.' },
+{ insteadName: 'Sure', insteadHref: '/brands/sure/index.html', insteadNote: 'Owned by Unilever, who sell into markets requiring animal testing.', tryName: 'Salt of the Earth', tryHref: '/brands/salt-of-the-earth/index.html', tryNote: 'Vegan Society and Leaping Bunny approved, sold in Holland &amp; Barrett and Boots.' },
+{ insteadName: 'Always', insteadHref: '/brands/always/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who test where legally required.', tryName: 'Natracare', tryHref: '/brands/natracare/index.html', tryNote: 'Vegetarian Society Vegan Approved and PETA Business Friend.' },
+{ insteadName: 'Tampax', insteadHref: '/brands/tampax/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who test where legally required.', tryName: 'TOTM', tryHref: '/brands/totm/index.html', tryNote: 'PETA certified cruelty-free and vegan organic period care, B Corp certified.' },
+{ insteadName: 'Colgate', insteadHref: '/brands/colgate/index.html', insteadNote: 'Parent company Colgate-Palmolive sells in mainland China and hasn’t adopted a full end to animal testing globally.', tryName: 'Kingfisher', tryHref: '/brands/kingfisher/index.html', tryNote: 'Cruelty-free and BUAV/Vegan Society certified in the UK, independent brand.' },
+{ insteadName: 'Fairy', insteadHref: '/brands/fairy/index.html', insteadNote: 'Owned by Procter &amp; Gamble, who test where legally required.', tryName: 'Bio-D', tryHref: '/brands/bio-d/index.html', tryNote: 'Vegan Society and Cruelty Free International certified.' },
+{ insteadName: 'Persil', insteadHref: '/brands/persil/index.html', insteadNote: 'Owned by Unilever, who sell into markets requiring animal testing.', tryName: 'Smol', tryHref: '/brands/smol/index.html', tryNote: 'Confirms no animal testing, listed on PETA’s database.' },
+{ insteadName: 'Domestos', insteadHref: '/brands/domestos/index.html', insteadNote: 'Owned by Unilever, who sell into markets requiring animal testing.', tryName: 'Zoflora', tryHref: '/brands/zoflora/index.html', tryNote: 'Confirms no animal testing.' }
+];
+var now = new Date();
+var startOfYear = new Date(now.getFullYear(), 0, 0);
+var dayOfYear = Math.floor((now - startOfYear) / 86400000);
+var pick = SWAPS[dayOfYear % SWAPS.length];
+el.innerHTML =
+'<p class="swap-of-day-kicker" style="color:#4d6b4f; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">one small swap</p>' +
+'<h2 class="myth-heading" style="font-size:24px;">today’s swap, made for you</h2>' +
+'<p class="myth-sub" style="margin-bottom:0;">A different genuine, certified alternative each day, straight from the brand check &mdash; no need to change everything at once.</p>' +
+'<div class="swap-of-day-card">' +
+'<div class="swap-of-day-row">' +
+'<div class="swap-of-day-side"><p class="swap-label instead">instead of</p><p class="swap-name"><a href="' + pick.insteadHref + '">' + pick.insteadName + '</a></p><p class="swap-note">' + pick.insteadNote + '</p></div>' +
+'<span class="swap-of-day-arrow" aria-hidden="true">&#8594;</span>' +
+'<div class="swap-of-day-side"><p class="swap-label try">try</p><p class="swap-name"><a href="' + pick.tryHref + '">' + pick.tryName + '</a></p><p class="swap-note">' + pick.tryNote + '</p></div>' +
+'</div>' +
+'</div>' +
+'<p style="margin-top:22px;"><a href="/instead-of.html" class="btn">see more swaps</a></p>';
+});
