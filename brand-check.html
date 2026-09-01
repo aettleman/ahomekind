@@ -51,7 +51,13 @@
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
-.kswap-kicker { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:12px; }
+.kswap-details { margin-top:20px; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:11px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary::-webkit-details-marker { display:none; }
+.kswap-summary::before { content:"\1F343"; font-size:13px; }
+.kswap-summary:hover { background:#e2d9bd; }
+.kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
+.kswap-details-body { padding-top:16px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
 .kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
 .kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
@@ -426,7 +432,13 @@ html += '<div class="rstatus-row">';
 html += '<div class="rstatus"><div class="rstatus-label">cruelty-free</div><div class="rstatus-value ' + cfClass + '">' + cfValue + '</div></div>';
 html += '<div class="rstatus"><div class="rstatus-label">vegan</div><div class="rstatus-value ' + veganClass + '">' + veganValue + '</div></div>';
 html += '</div>';
-if (noteHTML) { html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p></details>'; }
+if (noteHTML) {
+html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p>';
+if (tierClass === 'v-bad') {
+html += '<p class="rcard-note">What "tested on animals" actually means, most commonly: a substance placed directly onto the eye of a conscious rabbit, restrained so it can\'t move, its eyelids held open so it can\'t blink the substance away, then observed for up to fourteen days for redness, swelling, ulceration, bleeding and, in some cases, blindness. Often without pain relief. <a href="what-testing-means.html">read more about what testing means &rarr;</a></p>';
+}
+html += '</details>';
+}
 
 var tierValue = tierClass === 'v-bad' ? 'bad' : tierClass === 'v-warn' ? 'warn' : tierClass === 'v-unknown' ? 'unknown' : 'good';
 if (tierValue !== 'good') {

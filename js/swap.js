@@ -230,16 +230,19 @@
       var brands = results[0], comparisons = results[1];
       var record = brandLike.slug ? brandLike : findRecord(brands, brandLike.name);
       var alts = record ? findAlternatives(brands, record, 3) : [];
+      // Collapsed by default behind a button-styled summary -- this sits
+      // right under the "why" disclosure on brand-check, so it needs its
+      // own clear space and shouldn't force itself on anyone who just
+      // wanted the why explanation and nothing else.
       if(!alts.length){
-        containerEl.innerHTML = noAlternativeHTML();
+        containerEl.innerHTML = "<details class=\"kswap-details\"><summary class=\"kswap-summary\">looking for something kinder?</summary><div class=\"kswap-details-body\">" + noAlternativeHTML() + "</div></details>";
         return;
       }
-      var html = "<p class=\"kswap-kicker\">looking for something kinder?</p>";
-      html += "<div class=\"kswap-alts\">" + alts.map(function(alt){
+      var altsHtml = "<div class=\"kswap-alts\">" + alts.map(function(alt){
         var comparison = record ? findComparison(comparisons, record.slug, alt.slug) : null;
         return altCardHTML(alt, record, comparison);
       }).join("") + "</div>";
-      containerEl.innerHTML = html;
+      containerEl.innerHTML = "<details class=\"kswap-details\"><summary class=\"kswap-summary\">looking for something kinder?</summary><div class=\"kswap-details-body\">" + altsHtml + "</div></details>";
       containerEl.querySelectorAll(".kswap-swap-btn").forEach(function(btn){
         btn.addEventListener("click", function(){
           var card = btn.closest(".kswap-alt-card");

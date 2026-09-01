@@ -82,7 +82,13 @@
    it: same radius/border language as .card, no new colour of its own. */
 #swapSection { margin-top:4px; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
-.kswap-kicker { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:12px; }
+.kswap-details { margin-top:20px; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:11px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary::-webkit-details-marker { display:none; }
+.kswap-summary::before { content:"\1F343"; font-size:13px; }
+.kswap-summary:hover { background:#e2d9bd; }
+.kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
+.kswap-details-body { padding-top:16px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
 .kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
 .kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
