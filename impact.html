@@ -89,15 +89,15 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 
 <p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="1" data-min="0" data-max="2" data-years="1" data-cat="meat eater">meat eater</button>
-<button type="button" class="preset-btn active" data-days="4" data-min="2" data-max="5" data-years="1" data-cat="flexitarian">flexitarian</button>
-<button type="button" class="preset-btn" data-days="7" data-min="5" data-max="7" data-years="1" data-cat="plant based">plant based</button>
+<button type="button" class="preset-btn" data-days="0" data-years="1" data-cat="meat eater">meat eater</button>
+<button type="button" class="preset-btn active" data-days="3" data-years="1" data-cat="flexitarian">flexitarian</button>
+<button type="button" class="preset-btn" data-days="7" data-years="1" data-cat="plant based">plant based</button>
 </div>
-<p class="preset-note" id="rangeNote">or fine-tune it exactly with the sliders below</p>
+<p class="preset-note">or fine-tune it exactly with the sliders below - the category above is just your starting point, drag freely</p>
 
 <div class="slider-row" style="margin-top:22px;">
 <label id="daysLabel">days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
-<input type="range" id="days" min="2" max="5" step="1" value="4">
+<input type="range" id="days" min="0" max="7" step="1" value="3">
 </div>
 
 <div class="slider-row">
@@ -195,22 +195,6 @@ f = days + ' days a week comes to roughly ' + shownSaved + ' animals spared over
 el('framing').textContent = f;
 }
 
-var CATEGORY_RANGE = {
-'meat eater': { min: 0, max: 2 },
-'flexitarian': { min: 2, max: 5 },
-'plant based': { min: 5, max: 7 }
-};
-
-function applyRange(cat){
-var r = CATEGORY_RANGE[cat];
-if(!r) return;
-var daysInput = el('days');
-daysInput.min = r.min;
-daysInput.max = r.max;
-var v = parseInt(daysInput.value, 10);
-if(v < r.min) daysInput.value = r.min;
-if(v > r.max) daysInput.value = r.max;
-}
 
 el('days').addEventListener('input', update);
 el('years').addEventListener('input', update);
@@ -219,8 +203,6 @@ var presetBtns = document.querySelectorAll('.preset-btn');
 presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
 currentCategory = btn.getAttribute('data-cat');
-el('days').min = btn.getAttribute('data-min');
-el('days').max = btn.getAttribute('data-max');
 el('days').value = btn.getAttribute('data-days');
 el('years').value = btn.getAttribute('data-years');
 presetBtns.forEach(function(b){ b.classList.remove('active'); });
@@ -229,7 +211,6 @@ update();
 });
 });
 
-applyRange(currentCategory);
 update();
 
 var shareBtn = el('shareResultBtn');
