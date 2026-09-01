@@ -367,6 +367,15 @@ footer.site-footer {
     padding: 8px 6px calc(8px + env(safe-area-inset-bottom, 0px));
     z-index: 500;
   }
+  /* The header's full desktop dropdown nav (Scan/Convince Me/Explore
+     More, each with its own hover/tap menu) has nowhere near enough
+     width on a phone -- it wraps into a cramped multi-row header and
+     its dropdowns, anchored to whichever item triggered them, can run
+     past the edge of the screen. Every one of those links already
+     lives in the bottom "more" sheet (see js/nav.js), a full-width
+     panel built for a small screen, so the header nav is just hidden
+     here rather than squeezed in twice. */
+  header.site-header nav.main-nav { display: none; }
 }
 .bn-item {
   display: flex;
