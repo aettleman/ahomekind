@@ -779,3 +779,28 @@ body { animation: pageFadeIn 0.22s ease; }
 .swap-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #3d4a3a; margin-bottom: 4px; }
 .swap-name a { color: inherit; }
 .swap-note { font-size: 12.5px; line-height: 1.65; color: #5c5c4f; }
+
+/* Shop page: tab bar + clean product grid (replaced the big category
+   tiles, which weren't landing well in any of the colours tried). */
+.shop-tabbar { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 4px 0 28px; border-bottom: 1px solid #dcd2b8; padding-bottom: 16px; }
+.shop-tab { background: none; border: none; font-family: 'Karla', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; color: #8a8672; padding: 6px 2px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; }
+.shop-tab:hover { color: #3d4a3a; }
+.shop-tab.active { color: #3d4a3a; border-bottom-color: #4d6b4f; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
+.pcard { background: #fff; border: 0.5px solid #e2d9c4; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; }
+.pcard-imgwrap { background: #faf7ef; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; height: 120px; }
+.pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
+.pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
+.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: #4d6b4f; background: #e6efe3; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; }
+.pcard h3 { font-family: 'Karla', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
+.pcard h3 a { color: inherit; text-decoration: none; }
+.pcard h3 a:hover { text-decoration: underline; }
+.pcard-brand { font-size: 11.5px; color: #8a8672; margin: 0 0 12px; }
+.pcard .btn { margin-top: auto; text-align: center; }
+.pcard-soon { opacity: 0.7; }
+.pcard-soon h3 { font-style: italic; font-weight: 600; }
+.pgrid-empty { text-align: center; color: #8a8672; font-size: 13px; padding: 30px 0; }
+@media (max-width: 480px) {
+  .shop-tabbar { gap: 6px 16px; }
+  .pgrid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
