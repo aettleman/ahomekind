@@ -83,20 +83,21 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 </header>
 
 <main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">what difference does it actually make?</h1>
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">your impact</h1>
+<p style="font-size:14px; color:#5c5c4f; margin-top:2px;">what difference does it actually make?</p>
 <p>One person changing what they buy can feel like shouting into a hurricane. Here is the arithmetic for the non-human animals involved, using the most conservative figures I could find rather than the most dramatic ones.</p>
 
 <p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="1" data-years="1">mostly meat<br>(1 day)</button>
-<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian<br>(3 days)</button>
-<button type="button" class="preset-btn" data-days="5" data-years="1">mostly plant-based<br>(5 days)</button>
-<button type="button" class="preset-btn" data-days="7" data-years="1">fully plant-based<br>(7 days)</button>
+<button type="button" class="preset-btn" data-days="1" data-years="1">mostly meat</button>
+<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian</button>
+<button type="button" class="preset-btn" data-days="5" data-years="1">mostly plant-based</button>
+<button type="button" class="preset-btn" data-days="7" data-years="1">fully plant-based</button>
 </div>
 <p class="preset-note">or fine-tune it exactly with the sliders below</p>
 
 <div class="slider-row" style="margin-top:22px;">
-<label>days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
+<label id="daysLabel">days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
 <input type="range" id="days" min="0" max="7" step="1" value="3">
 </div>
 
@@ -155,6 +156,13 @@ var MAX_LAND_CUT = 76;
 
 function el(id){ return document.getElementById(id); }
 
+function categoryFor(days){
+if(days <= 1) return 'mostly meat';
+if(days <= 3) return 'flexitarian';
+if(days <= 5) return 'mostly plant-based';
+return 'fully plant-based';
+}
+
 function update(){
 var days = parseInt(el('days').value, 10);
 var years = parseInt(el('years').value, 10);
@@ -162,6 +170,7 @@ var frac = days / 7;
 
 el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
+el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + categoryFor(days) + ': ';
 
 var animals = ANIMALS_PER_YEAR * frac * years;
 var shown = animals < 10 ? (Math.round(animals * 10) / 10) : Math.round(animals);
