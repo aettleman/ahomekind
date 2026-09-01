@@ -142,6 +142,14 @@
 <button type="button" class="filter-pill" data-filter="cf">&#128048; cruelty-free, vegan varies</button>
 </div>
 
+<p class="preset-note" style="margin:14px 0 8px;">or narrow by certification specifically</p>
+<div class="filter-pills" id="certPills">
+<button type="button" class="filter-pill active" data-cert-filter="all">any certification</button>
+<button type="button" class="filter-pill" data-cert-filter="vegan-society">Vegan Society certified</button>
+<button type="button" class="filter-pill" data-cert-filter="leaping-bunny">Leaping Bunny / Cruelty Free International</button>
+<button type="button" class="filter-pill" data-cert-filter="peta">PETA certified</button>
+</div>
+
 <button type="button" id="browseAllBtn">browse all brands</button>
 
 <div id="categoryGrid" style="display:none; margin-bottom:28px;">
@@ -386,6 +394,24 @@ if (tierClass === 'v-good' || noteLower.indexOf('100% vegan') !== -1 || noteLowe
 else if (noteLower.indexOf('vegan') !== -1) { veganValue = '&#9998; check product'; veganClass = 'maybe'; }
 else { veganValue = 'not stated'; veganClass = 'na'; }
 
+// Certification tags, detected from the note text itself so this stays
+// truthful: a brand only gets tagged here if its note actually names a
+// real third-party certifier, never from a self-declared claim. Leaping
+// Bunny and Cruelty Free International are the same standard (CFI runs
+// Leaping Bunny in the UK/Europe), so they share one filter bucket.
+var certs = [];
+if (/\bvegan society\b/.test(noteLower)) certs.push('vegan-society');
+if (/\bleaping bunny\b/.test(noteLower) || /\bcruelty free international\b/.test(noteLower)) certs.push('leaping-bunny');
+if (/\bpeta\b/.test(noteLower)) certs.push('peta');
+// A note can name a certifier while explaining a brand ISN'T certified by
+// it (e.g. "no independent listing with PETA", "not independently
+// verified against a recognised certifier") -- catch those phrasings and
+// drop the tag rather than falsely marking the brand as certified.
+if (/no independent listing/.test(noteLower) || /not\s[^.]*certified/.test(noteLower) || /confirms?\s+tests?\s+on\s+animals/.test(noteLower) || /working toward change/.test(noteLower) || /not independently verified/.test(noteLower)) {
+certs = [];
+}
+card.dataset.cert = certs.join(' ');
+
 var headline = ratingEl.textContent.trim();
 var sp = headline.indexOf(' ');
 if (sp !== -1) { headline = headline.slice(sp + 1); }
@@ -470,8 +496,10 @@ showCategory(tile.getAttribute('data-cat'));
 
 buildCategoryGrid();
 
-var filterPills = document.querySelectorAll('.filter-pill');
+var filterPills = document.querySelectorAll('#filterPills .filter-pill');
+var certPills = document.querySelectorAll('#certPills .filter-pill');
 var activeFilter = 'all';
+var activeCert = 'all';
 var activeCategory = null;
 
 function cardMatchesFilter(card, filterKey) {
@@ -480,8 +508,14 @@ if (filterKey === 'cf') return card.dataset.cf === 'yes' && card.dataset.vegan !
 return true;
 }
 
+function cardMatchesCert(card, certKey) {
+if (certKey === 'all') return true;
+return (card.dataset.cert || '').split(' ').indexOf(certKey) !== -1;
+}
+
 function setActivePills() {
 filterPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === activeFilter); });
+certPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-cert-filter') === activeCert); });
 }
 
 // Shows the category grid itself -- only reachable when nothing else is
@@ -494,6 +528,7 @@ categoryBack.style.display = 'none';
 browseBtn.style.display = 'none';
 activeCategory = null;
 activeFilter = 'all';
+activeCert = 'all';
 setActivePills();
 var dentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (dentalDisclaimer) dentalDisclaimer.style.display = 'none';
@@ -517,7 +552,7 @@ if (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mout
 var anyVisible = false;
 allCards.forEach(function(card) {
 var inCategory = !activeCategory || cardCategories(card).indexOf(activeCategory) !== -1;
-var match = inCategory && cardMatchesFilter(card, activeFilter);
+var match = inCategory && cardMatchesFilter(card, activeFilter) && cardMatchesCert(card, activeCert);
 var wasHidden = card.style.display === 'none';
 card.style.display = match ? '' : 'none';
 if (match) {
@@ -543,12 +578,23 @@ renderBrandList();
 function applyFilter(key) {
 activeFilter = key;
 setActivePills();
-if (key === 'all' && !activeCategory) { showCategoryGrid(); return; }
+if (key === 'all' && activeCert === 'all' && !activeCategory) { showCategoryGrid(); return; }
+renderBrandList();
+}
+
+function applyCertFilter(key) {
+activeCert = key;
+setActivePills();
+if (key === 'all' && activeFilter === 'all' && !activeCategory) { showCategoryGrid(); return; }
 renderBrandList();
 }
 
 filterPills.forEach(function(p){
 p.addEventListener('click', function(){ applyFilter(p.getAttribute('data-filter')); });
+});
+
+certPills.forEach(function(p){
+p.addEventListener('click', function(){ applyCertFilter(p.getAttribute('data-cert-filter')); });
 });
 
 browseBtn.addEventListener('click', function(){
@@ -566,6 +612,7 @@ categoryBack.style.display = 'none';
 allBrands.style.display = 'block';
 browseBtn.style.display = 'none';
 activeFilter = 'all';
+activeCert = 'all';
 activeCategory = null;
 document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
 var searchDentalDisclaimer = document.getElementById('dentalDisclaimer');
