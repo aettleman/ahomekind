@@ -161,18 +161,25 @@ function fmt(n){
 return n < 10 ? (Math.round(n * 10) / 10) : Math.round(n);
 }
 
+function categoryFor(days){
+if(days <= 2) return 'meat eater';
+if(days <= 4) return 'flexitarian';
+return 'plant based';
+}
+
 function update(){
 var days = parseInt(el('days').value, 10);
 var years = parseInt(el('years').value, 10);
 var frac = days / 7;
+var cat = categoryFor(days);
 
 el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
-el('daysLabel').childNodes[0].nodeValue = 'days a week you eat plant-based: ';
+el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + cat + ': ';
 
 var presetBtns2 = document.querySelectorAll('.preset-btn');
 presetBtns2.forEach(function(b){
-b.classList.toggle('active', parseInt(b.getAttribute('data-days'), 10) === days);
+b.classList.toggle('active', b.textContent === cat);
 });
 
 var animalsSaved = ANIMALS_PER_YEAR * frac * years;
