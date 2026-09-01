@@ -26,6 +26,10 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 .big-lbl { color:#c9d1c3; font-size:13px; letter-spacing:1px; margin-bottom:22px; }
 .sub-num { font-family:'Cormorant Garamond',serif; font-size:26px; color:#f4efe2; }
 .sub-lbl { color:#a9c2ab; font-size:12px; letter-spacing:0.5px; margin-bottom:16px; }
+.big-num.warn-num { color:#e2a184; }
+.sub-num.good-num { color:#bcd6ae; }
+input[type=range]:disabled { opacity:0.45; }
+.preset-btn:disabled { opacity:0.5; cursor:default; }
 
 /* Preset picker -- a quick "how do you eat now" starting point so the
    calculator gives someone a real number in one tap, before they ever
@@ -93,7 +97,7 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <button type="button" class="preset-btn active" data-cat="flexitarian">flexitarian</button>
 <button type="button" class="preset-btn" data-cat="plant based">plant based</button>
 </div>
-<p class="preset-note">now use the slider to say how many days a week that actually looks like - the two are independent, so a flexitarian who's plant-based every day, or a meat eater trying a few plant-based days, both work fine here</p>
+<p class="preset-note" id="sliderHint">now use the slider to say how many days a week that actually looks like - the two are independent, so a flexitarian who's plant-based every day, or a meat eater trying a few plant-based days, both work fine here</p>
 
 <div class="slider-row" style="margin-top:22px;">
 <label id="daysLabel">as a <span id="catWord">flexitarian</span>, you eat plant-based <span class="slider-val" id="daysVal">3</span> days a week</label>
@@ -106,10 +110,10 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 </div>
 
 <div class="results">
-<div class="big-num" id="animals">7</div>
-<div class="big-lbl">land animals not farmed for you</div>
-<div class="sub-num" id="stillFarmed">10</div>
-<div class="sub-lbl">still farmed for you at this rate</div>
+<div class="big-num" id="stillFarmed">10</div>
+<div class="big-lbl">still farmed for you at this rate</div>
+<div class="sub-num" id="animals">7</div>
+<div class="sub-lbl">land animals not farmed for you</div>
 <div class="sub-num" id="footprint">31%</div>
 <div class="sub-lbl">smaller food carbon footprint</div>
 <div class="sub-num" id="land">33%</div>
@@ -178,6 +182,8 @@ var shownSaved = fmt(animalsSaved);
 var shownStill = fmt(animalsStill);
 el('animals').textContent = shownSaved.toLocaleString();
 el('stillFarmed').textContent = shownStill.toLocaleString();
+el('stillFarmed').classList.toggle('warn-num', animalsStill > 0);
+el('animals').classList.toggle('good-num', animalsSaved > 0);
 
 el('footprint').textContent = Math.round(MAX_CARBON_CUT * frac) + '%';
 el('land').textContent = Math.round(MAX_LAND_CUT * frac) + '%';
@@ -186,13 +192,13 @@ var catSentence = currentCategory === 'plant based' ? 'plant-based eater' : curr
 var asA = 'As a ' + catSentence + ', ';
 var f = '';
 if(days === 0){
-f = asA + 'eating zero plant-based days a week means roughly ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none spared. Nobody is standing over you, though. Move the slider and see what one day a week does.';
+f = asA + 'right now roughly ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none spared at zero plant-based days a week. Nobody is standing over you, though. Move the slider and see what one day a week does.';
 } else if(days === 7){
-f = asA + 'eating fully plant-based every day, over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + shownSaved + ' animals that were never farmed for you, none still farmed, and roughly three quarters off the carbon and land your food demands.';
+f = asA + 'eating fully plant-based every day, over ' + years + (years === 1 ? ' year' : ' years') + ' that is none still farmed for you, and around ' + shownSaved + ' animals that were never farmed for you, plus roughly three quarters off the carbon and land your food demands.';
 } else if(days <= 2){
-f = asA + 'even at ' + days + (days === 1 ? ' day' : ' days') + ' a week plant-based, that is ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', though roughly ' + shownStill + ' are still farmed for you at this rate. Not nothing. Not a hurricane either. Just a real number that was not there before.';
+f = asA + 'roughly ' + shownStill + ' animals are still farmed for you at this rate over ' + years + (years === 1 ? ' year' : ' years') + ', even though ' + days + (days === 1 ? ' day' : ' days') + ' a week plant-based already spares ' + shownSaved + '. Not nothing. Not a hurricane either. Just a real number that was not there before.';
 } else {
-f = asA + days + ' days a week plant-based comes to roughly ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', against about ' + shownStill + ' still farmed for you, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint.';
+f = asA + 'about ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ' at this rate, against roughly ' + shownSaved + ' spared thanks to ' + days + ' days a week plant-based, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint.';
 }
 el('framing').textContent = f;
 }
@@ -202,11 +208,22 @@ el('days').addEventListener('input', update);
 el('years').addEventListener('input', update);
 
 var presetBtns = document.querySelectorAll('.preset-btn');
+var lastDays = el('days').value;
 presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
 currentCategory = btn.getAttribute('data-cat');
 presetBtns.forEach(function(b){ b.classList.remove('active'); });
 btn.classList.add('active');
+if(currentCategory === 'plant based'){
+lastDays = el('days').value;
+el('days').value = 7;
+el('days').disabled = true;
+el('sliderHint').textContent = 'plant-based means every day by definition, so this one is fixed at 7 - pick meat eater or flexitarian to fine-tune with the slider';
+} else {
+el('days').disabled = false;
+if(el('days').value == 7){ el('days').value = lastDays; }
+el('sliderHint').textContent = "now use the slider to say how many days a week that actually looks like - the two are independent, so a flexitarian who's plant-based every day, or a meat eater trying a few plant-based days, both work fine here";
+}
 update();
 });
 });
