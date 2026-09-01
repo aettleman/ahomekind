@@ -87,16 +87,16 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <p style="font-size:14px; color:#5c5c4f; margin-top:2px;">what difference does it actually make?</p>
 <p>One person changing what they buy can feel like shouting into a hurricane. Here is the arithmetic for the non-human animals involved, using the most conservative figures I could find rather than the most dramatic ones.</p>
 
-<p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to jump to a starting point</p>
+<p class="preset-note" style="margin-top:26px;">how would you describe how you eat?</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="0" data-years="1">meat eater</button>
-<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian</button>
-<button type="button" class="preset-btn" data-days="7" data-years="1">plant based</button>
+<button type="button" class="preset-btn" data-cat="meat eater">meat eater</button>
+<button type="button" class="preset-btn active" data-cat="flexitarian">flexitarian</button>
+<button type="button" class="preset-btn" data-cat="plant based">plant based</button>
 </div>
-<p class="preset-note">the slider below is what actually drives the numbers - move it any time and the label and results update to match</p>
+<p class="preset-note">now use the slider to say how many days a week that actually looks like - the two are independent, so a flexitarian who's plant-based every day, or a meat eater trying a few plant-based days, both work fine here</p>
 
 <div class="slider-row" style="margin-top:22px;">
-<label id="daysLabel">days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
+<label id="daysLabel">as a <span id="catWord">flexitarian</span>, you eat plant-based <span class="slider-val" id="daysVal">3</span> days a week</label>
 <input type="range" id="days" min="0" max="7" step="1" value="3">
 </div>
 
@@ -161,26 +161,16 @@ function fmt(n){
 return n < 10 ? (Math.round(n * 10) / 10) : Math.round(n);
 }
 
-function categoryFor(days){
-if(days <= 2) return 'meat eater';
-if(days <= 4) return 'flexitarian';
-return 'plant based';
-}
+var currentCategory = 'flexitarian';
 
 function update(){
 var days = parseInt(el('days').value, 10);
 var years = parseInt(el('years').value, 10);
 var frac = days / 7;
-var cat = categoryFor(days);
 
 el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
-el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + cat + ': ';
-
-var presetBtns2 = document.querySelectorAll('.preset-btn');
-presetBtns2.forEach(function(b){
-b.classList.toggle('active', b.textContent === cat);
-});
+el('catWord').textContent = currentCategory === 'plant based' ? 'plant-based eater' : currentCategory;
 
 var animalsSaved = ANIMALS_PER_YEAR * frac * years;
 var animalsStill = ANIMALS_PER_YEAR * (1 - frac) * years;
@@ -192,15 +182,17 @@ el('stillFarmed').textContent = shownStill.toLocaleString();
 el('footprint').textContent = Math.round(MAX_CARBON_CUT * frac) + '%';
 el('land').textContent = Math.round(MAX_LAND_CUT * frac) + '%';
 
+var catSentence = currentCategory === 'plant based' ? 'plant-based eater' : currentCategory;
+var asA = 'As a ' + catSentence + ', ';
 var f = '';
 if(days === 0){
-f = 'At zero plant-based days, that is roughly ' + shownStill + ' animals farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none of them spared. Nobody is standing over you, though. Move the slider and see what one day a week does.';
+f = asA + 'eating zero plant-based days a week means roughly ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none spared. Nobody is standing over you, though. Move the slider and see what one day a week does.';
 } else if(days === 7){
-f = 'Fully plant-based. Over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + shownSaved + ' animals that were never farmed for you, none still farmed, and roughly three quarters off the carbon and land your food demands.';
+f = asA + 'eating fully plant-based every day, over ' + years + (years === 1 ? ' year' : ' years') + ' that is around ' + shownSaved + ' animals that were never farmed for you, none still farmed, and roughly three quarters off the carbon and land your food demands.';
 } else if(days <= 2){
-f = 'Even at ' + days + (days === 1 ? ' day' : ' days') + ' a week, that is ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', though roughly ' + shownStill + ' are still farmed for you at this rate. Not nothing. Not a hurricane either. Just a real number that was not there before.';
+f = asA + 'even at ' + days + (days === 1 ? ' day' : ' days') + ' a week plant-based, that is ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', though roughly ' + shownStill + ' are still farmed for you at this rate. Not nothing. Not a hurricane either. Just a real number that was not there before.';
 } else {
-f = days + ' days a week comes to roughly ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', against about ' + shownStill + ' still farmed for you, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint. No overhaul required, no label needed.';
+f = asA + days + ' days a week plant-based comes to roughly ' + shownSaved + ' animals spared over ' + years + (years === 1 ? ' year' : ' years') + ', against about ' + shownStill + ' still farmed for you, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint.';
 }
 el('framing').textContent = f;
 }
@@ -212,8 +204,9 @@ el('years').addEventListener('input', update);
 var presetBtns = document.querySelectorAll('.preset-btn');
 presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
-el('days').value = btn.getAttribute('data-days');
-el('years').value = btn.getAttribute('data-years');
+currentCategory = btn.getAttribute('data-cat');
+presetBtns.forEach(function(b){ b.classList.remove('active'); });
+btn.classList.add('active');
 update();
 });
 });
