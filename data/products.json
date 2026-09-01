@@ -10,7 +10,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "Gives you that false-lash volume without smudging or flaking, thanks to an hourglass-shaped brush with intertwined bristles.",
-    "image": "https://m.media-amazon.com/images/I/61bXTk4cTsL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61bXTk4cTsL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "barry-m-glow-blur",
@@ -23,7 +27,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A 4-in-1 lightweight formula that primes, evens, highlights and glows, with hyaluronic acid, shea butter and vitamin C.",
-    "image": "https://m.media-amazon.com/images/I/61hIIsD3esL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61hIIsD3esL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "rare-beauty-lip-oil",
@@ -36,7 +44,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A moisturising, sheer-coverage lip oil with sunflower seed and jojoba seed oil for a soft, glossy finish.",
-    "image": "https://m.media-amazon.com/images/I/414KzR83fdL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/414KzR83fdL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "elf-power-grip-primer",
@@ -49,7 +61,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A cult-favourite gel primer that grips makeup in place all day while hydrating skin underneath.",
-    "image": "https://m.media-amazon.com/images/I/61FfGNgMGsL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61FfGNgMGsL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "body-shop-camomile-cleansing-butter",
@@ -62,7 +78,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A creamy balm cleanser that melts away makeup and impurities, leaving skin soft rather than stripped.",
-    "image": "https://m.media-amazon.com/images/I/714scDQSfHL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/714scDQSfHL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "mad-hippie-retinol-serum",
@@ -75,7 +95,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A gentler vegan retinol serum with antioxidants, aimed at smoothing texture without the usual irritation.",
-    "image": "https://m.media-amazon.com/images/I/61aNGA3l0zL._AC_SY879_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61aNGA3l0zL._AC_SY879_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "astonish-kitchen-cleaner",
@@ -88,7 +112,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A budget-friendly, cruelty-free kitchen spray that cuts through grease with a zesty lemon scent.",
-    "image": "https://m.media-amazon.com/images/I/61Uk8cLKXPL._AC_SX679_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61Uk8cLKXPL._AC_SX679_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "faith-in-nature-rosemary-shampoo",
@@ -101,7 +129,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "A big-value litre bottle of natural, cruelty-free shampoo - handy for regular use without the plastic waste of small bottles.",
-    "image": "https://m.media-amazon.com/images/I/61icyzdQKiL._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/61icyzdQKiL._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "faith-in-nature-coconut-conditioner",
@@ -114,7 +146,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "An organic, cruelty-free conditioner that softens hair without weighing it down.",
-    "image": "https://m.media-amazon.com/images/I/71DZ8B1Zl1L._AC_SX522_.jpg"
+    "image": "https://m.media-amazon.com/images/I/71DZ8B1Zl1L._AC_SX522_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "dr-bronners-citrus-soap",
@@ -127,7 +163,11 @@
     "vegan": true,
     "crueltyFree": true,
     "blurb": "An 18-in-1 castile soap that works as body wash, dish soap and pretty much everything else, from a single bottle.",
-    "image": "https://m.media-amazon.com/images/I/71hAgqAlMtL._AC_SY879_.jpg"
+    "image": "https://m.media-amazon.com/images/I/71hAgqAlMtL._AC_SY879_.jpg",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "byoma-hydrating-serum",
@@ -140,7 +180,11 @@
     "crueltyFree": true,
     "blurb": "A lightweight tri-ceramide serum that boosts moisture and helps repair the skin barrier.",
     "image": "https://m.media-amazon.com/images/I/61H92Cxm-1L._AC_SX522_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B0C7C88ZSK?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B0C7C88ZSK?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "byoma-moisturising-gel-cream",
@@ -153,7 +197,11 @@
     "crueltyFree": true,
     "blurb": "An oil-free daily moisturiser with niacinamide, suited to all skin types.",
     "image": "https://m.media-amazon.com/images/I/51fB0sD2g2L._AC_SX522_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B0BJ74DJXG?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B0BJ74DJXG?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "mua-eyeshadow-palette-bronzed",
@@ -166,7 +214,11 @@
     "crueltyFree": true,
     "blurb": "Five blendable matte and shimmer bronze shades for easy day-to-night eye looks.",
     "image": "https://m.media-amazon.com/images/I/61VCXn7n63L._AC_SX522_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B0F8C3XLJM?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B0F8C3XLJM?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "barry-m-flawless-concealer",
@@ -179,7 +231,11 @@
     "crueltyFree": true,
     "blurb": "A light-reflecting concealer that covers without settling into fine lines.",
     "image": "https://m.media-amazon.com/images/I/71Y03SpndyL._AC_SY879_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B00WS9PKC4?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B00WS9PKC4?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "noughty-to-the-rescue-shampoo",
@@ -192,7 +248,11 @@
     "crueltyFree": true,
     "blurb": "A 97% natural, moisture-boosting shampoo for dry or damaged hair.",
     "image": "https://m.media-amazon.com/images/I/61fyXOsNc8L._AC_SX522_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B073P9VN6C?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B073P9VN6C?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "umberto-giannini-curl-jelly",
@@ -205,7 +265,11 @@
     "crueltyFree": true,
     "blurb": "A scrunching jelly that fights frizz and defines curls and waves.",
     "image": "https://m.media-amazon.com/images/I/61LFM5o7mzL._AC_SX522_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B0FK5QGKY1?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B0FK5QGKY1?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "pink-stuff-miracle-paste",
@@ -218,7 +282,11 @@
     "crueltyFree": true,
     "blurb": "The viral multi-surface paste that tackles grime on ovens, pans and bathrooms alike.",
     "image": "https://m.media-amazon.com/images/I/71hBaplUezL._AC_SX679_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B09T9DVDD5?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B09T9DVDD5?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "oceansaver-laundry-capsules",
@@ -231,7 +299,11 @@
     "crueltyFree": true,
     "blurb": "Plastic-free, biodegradable laundry capsules that still pack a proper stain-fighting punch.",
     "image": "https://m.media-amazon.com/images/I/711URLVv+uL._AC_SX679_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B0GXC2NQW2?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B0GXC2NQW2?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "fabulosa-4in1-disinfectant",
@@ -244,7 +316,11 @@
     "crueltyFree": true,
     "blurb": "A concentrated antibacterial disinfectant that goes a long way for the price.",
     "image": "https://m.media-amazon.com/images/I/71myUrb5dCL._AC_SX679_PIbundle-6,TopRight,0,0_SH20_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B09X1PCRLT?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B09X1PCRLT?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   },
   {
     "id": "zoflora-linen-fresh-disinfectant",
@@ -257,6 +333,10 @@
     "crueltyFree": true,
     "blurb": "A ready-to-use multipurpose disinfectant spray that kills 99.9% of germs.",
     "image": "https://m.media-amazon.com/images/I/51pH491LzuL._AC_SX679_.jpg",
-    "affiliateUrl": "https://www.amazon.co.uk/dp/B07SBZ3L81?tag=ahomekind-21"
+    "affiliateUrl": "https://www.amazon.co.uk/dp/B07SBZ3L81?tag=ahomekind-21",
+    "retailer": "Amazon UK",
+    "network": "amazon-associates",
+    "dateAdded": "2026-09-01",
+    "active": true
   }
 ]
