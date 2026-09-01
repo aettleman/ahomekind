@@ -87,13 +87,13 @@ input[type=range] { width:100%; accent-color:#4d6b4f; height:28px; }
 <p style="font-size:14px; color:#5c5c4f; margin-top:2px;">what difference does it actually make?</p>
 <p>One person changing what they buy can feel like shouting into a hurricane. Here is the arithmetic for the non-human animals involved, using the most conservative figures I could find rather than the most dramatic ones.</p>
 
-<p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to get started</p>
+<p class="preset-note" style="margin-top:26px;">how do you eat now? pick one to jump to a starting point</p>
 <div class="preset-row">
-<button type="button" class="preset-btn" data-days="0" data-years="1" data-cat="meat eater">meat eater</button>
-<button type="button" class="preset-btn active" data-days="3" data-years="1" data-cat="flexitarian">flexitarian</button>
-<button type="button" class="preset-btn" data-days="7" data-years="1" data-cat="plant based">plant based</button>
+<button type="button" class="preset-btn" data-days="0" data-years="1">meat eater</button>
+<button type="button" class="preset-btn active" data-days="3" data-years="1">flexitarian</button>
+<button type="button" class="preset-btn" data-days="7" data-years="1">plant based</button>
 </div>
-<p class="preset-note">or fine-tune it exactly with the sliders below - the category above is just your starting point, drag freely</p>
+<p class="preset-note">the slider below is what actually drives the numbers - move it any time and the label and results update to match</p>
 
 <div class="slider-row" style="margin-top:22px;">
 <label id="daysLabel">days a week you eat plant-based: <span class="slider-val" id="daysVal">3</span></label>
@@ -157,8 +157,6 @@ var MAX_LAND_CUT = 76;
 
 function el(id){ return document.getElementById(id); }
 
-var currentCategory = 'flexitarian';
-
 function fmt(n){
 return n < 10 ? (Math.round(n * 10) / 10) : Math.round(n);
 }
@@ -170,7 +168,12 @@ var frac = days / 7;
 
 el('daysVal').textContent = days;
 el('yearsVal').textContent = years;
-el('daysLabel').childNodes[0].nodeValue = 'days a week you eat ' + currentCategory + ': ';
+el('daysLabel').childNodes[0].nodeValue = 'days a week you eat plant-based: ';
+
+var presetBtns2 = document.querySelectorAll('.preset-btn');
+presetBtns2.forEach(function(b){
+b.classList.toggle('active', parseInt(b.getAttribute('data-days'), 10) === days);
+});
 
 var animalsSaved = ANIMALS_PER_YEAR * frac * years;
 var animalsStill = ANIMALS_PER_YEAR * (1 - frac) * years;
@@ -202,11 +205,8 @@ el('years').addEventListener('input', update);
 var presetBtns = document.querySelectorAll('.preset-btn');
 presetBtns.forEach(function(btn){
 btn.addEventListener('click', function(){
-currentCategory = btn.getAttribute('data-cat');
 el('days').value = btn.getAttribute('data-days');
 el('years').value = btn.getAttribute('data-years');
-presetBtns.forEach(function(b){ b.classList.remove('active'); });
-btn.classList.add('active');
 update();
 });
 });
