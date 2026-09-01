@@ -30,6 +30,46 @@
 .hit.check { background:#ece5d5; border:1px solid #cfc4a9; }
 .hit h3 { margin-bottom:6px; }
 
+/* Kind Swaps -- same shared widget/logic as scan.html and brand-check.html
+   (see js/swap.js), just not previously wired up here. Styled to sit
+   quietly inside each brand's own result card rather than as a separate
+   block, since a shelf photo can turn up several brands at once. */
+.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-details { margin-top:14px; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:9px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary::-webkit-details-marker { display:none; }
+.kswap-summary::before { content:"\1F343"; font-size:12px; }
+.kswap-summary:hover { background:#e2d9bd; }
+.kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
+.kswap-details-body { padding-top:14px; }
+.kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:12px; }
+.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:14px 16px; background:#fff; }
+.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:4px; }
+.kswap-alt-note { font-size:12.5px; line-height:1.6; color:#5c5c4f; margin-bottom:10px; }
+.kswap-compare { margin:4px 0 10px; padding:10px 12px; border-radius:10px; background:#f4efe2; border:0.5px solid #dcd2b8; }
+.kswap-compare-title { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
+.kswap-compare-body { font-size:12px; line-height:1.6; color:#5c5c4f; margin-bottom:0; }
+.kswap-compare-verified { background:#e6efe3; border-color:#b9c7ae; }
+.kswap-compare-verified .kswap-compare-title { color:#4d6b4f; }
+.kswap-compare-link { display:inline-block; margin-top:8px; font-size:11.5px; font-weight:600; color:#4d6b4f; }
+.kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.kswap-alt-link { font-size:11.5px; letter-spacing:0.5px; color:#6f8768; }
+.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; text-transform:uppercase; padding:9px 14px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#3d5a3f; }
+.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:22px 18px; }
+.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:14px; }
+.kswap-freebie-card { margin-top:16px; padding-top:16px; border-top:0.5px solid #cfc4a9; }
+.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:15px; color:#3d4a3a; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:18px 16px; text-align:center; }
+.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:8px; }
+.kswap-none-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:14px; }
+.kswap-affiliate-row { margin:10px 0 0; padding-top:10px; border-top:0.5px dashed #dcd2b8; }
+.kswap-shop-link { display:block; font-family:'Karla',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; color:#4d6b4f; text-decoration:none; }
+.kswap-shop-link:hover { text-decoration:underline; }
+.kswap-affiliate-note { display:block; font-size:10px; color:#a39d87; letter-spacing:0.2px; margin-top:3px; }
+
 /* Live shelf camera: a viewfinder with a guide frame and a running tip
    line, so you know where to point and when the shot is actually good
    enough to read, instead of guessing after the fact. */
@@ -141,6 +181,7 @@
 <p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
 </main>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="js/swap.js?v=1"></script>
 <script>
 var BRANDS = [
 {terms:["elf","e.l.f"], name:"e.l.f. Cosmetics", tier:"good", note:"Independently owned, PETA and Vegan Society certified."},
@@ -509,12 +550,15 @@ if(found.length){
 setStatus("Found " + found.length + (found.length === 1 ? " brand" : " brands") + " I know.");
 var order = {good:0, check:1, warn:2, bad:3};
 found.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
-found.forEach(function(b){
+var swapTargets = [];
+found.forEach(function(b, i){
 var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
+var swapId = "shelfSwap" + i;
 out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
 out += "<p style=\"margin-bottom:0; font-size:14px;\">" + b.note + "</p>";
+if(b.tier !== "good"){ out += "<div id=\"" + swapId + "\" style=\"margin-top:14px;\"></div>"; swapTargets.push({ id: swapId, brand: b }); }
 out += "</div>";
 });
 } else {
@@ -524,6 +568,9 @@ out += "<p style=\"margin-bottom:8px; font-size:14px;\">Either the brands are no
 out += "<p style=\"margin-bottom:0; font-size:14px;\">You can also <a href=\"scan.html\">scan a single barcode</a> instead.</p></div>";
 }
 el("results").innerHTML = out;
+if(swapTargets && window.AHKSwap){
+swapTargets.forEach(function(t){ AHKSwap.render(el(t.id), { name: t.brand.name, tier: t.brand.tier }); });
+}
 }
 // Photographed packaging reads far more reliably once it's grayscale, has
 // its contrast stretched to use the full range, and is a decent size --

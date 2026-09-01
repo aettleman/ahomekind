@@ -196,6 +196,33 @@
       "</div>";
   }
 
+  // Picks the alternative's affiliate link, where one genuinely exists.
+  // Reads straight off the brand record's own "links" array in
+  // data/brands.json (the same field the brand pages already render under
+  // "sources & links") -- nothing here invents a link or a relationship.
+  // A link only counts if it's explicitly flagged affiliate:true and
+  // hasn't been switched off with active:false, so removing or pausing
+  // one later is a one-line data edit, not a code change.
+  function pickAffiliateLink(alt){
+    if(!alt || !alt.links) return null;
+    for(var i=0;i<alt.links.length;i++){
+      var l = alt.links[i];
+      if(l && l.affiliate && l.active !== false && l.url) return l;
+    }
+    return null;
+  }
+
+  function affiliateRowHTML(alt){
+    var link = pickAffiliateLink(alt);
+    if(!link) return "";
+    var retailer = link.retailer || "the retailer";
+    return "" +
+      "<p class=\"kswap-affiliate-row\">" +
+      "<a href=\"" + link.url + "\" class=\"kswap-shop-link\" target=\"_blank\" rel=\"nofollow sponsored noopener\">shop " + alt.name + " on " + retailer + " &rarr;</a>" +
+      "<span class=\"kswap-affiliate-note\">affiliate link &mdash; a small commission may support A Home Kind, at no extra cost to you</span>" +
+      "</p>";
+  }
+
   function altCardHTML(alt, fromBrand, comparison){
     var href = alt.slug ? "brands/" + alt.slug + "/index.html" : "#";
     return "" +
@@ -206,7 +233,9 @@
       "<div class=\"kswap-alt-actions\">" +
       "<a href=\"" + href + "\" class=\"kswap-alt-link\">why this one</a>" +
       "<button type=\"button\" class=\"kswap-swap-btn\">I made the swap</button>" +
-      "</div></div>";
+      "</div>" +
+      affiliateRowHTML(alt) +
+      "</div>";
   }
 
   function noAlternativeHTML(){
@@ -263,5 +292,5 @@
     });
   }
 
-  window.AHKSwap = { render: render, findAlternatives: findAlternatives, findRecord: findRecord };
+  window.AHKSwap = { render: render, findAlternatives: findAlternatives, findRecord: findRecord, pickAffiliateLink: pickAffiliateLink };
 })();
