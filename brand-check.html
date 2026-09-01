@@ -50,8 +50,6 @@
 #browseAllBtn:hover { background:#e2d9bd; }
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
-.rcard-swap-cta { display:block; margin:14px 0 0; padding:10px 16px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.8px; text-transform:uppercase; border-radius:30px; text-align:center; text-decoration:none; }
-.rcard-swap-cta:hover { background:#3d5a3f; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
 .kswap-kicker { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:12px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
@@ -433,7 +431,6 @@ if (noteHTML) { html += '<details class="rcard-details"><summary>why</summary><p
 var tierValue = tierClass === 'v-bad' ? 'bad' : tierClass === 'v-warn' ? 'warn' : tierClass === 'v-unknown' ? 'unknown' : 'good';
 if (tierValue !== 'good') {
 var swapSlotId = 'kswap-' + normalizeSearch(name).replace(/[^a-z0-9]/g, '') + '-' + Math.random().toString(36).slice(2, 7);
-html += '<a href="scan.html" class="rcard-swap-cta">let me help you find an alternative now</a>';
 html += '<div id="' + swapSlotId + '" class="rcard-swap-slot"></div>';
 }
 
