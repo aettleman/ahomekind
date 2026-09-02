@@ -3227,5 +3227,288 @@
     ],
     "veganConfidence": "low",
     "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "harpic",
+    "name": "Harpic",
+    "tier": "bad",
+    "note": "Owned by Reckitt, who sell into markets requiring animal testing.",
+    "parentCompany": "Reckitt",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "toilet-duck",
+    "name": "Toilet Duck",
+    "tier": "bad",
+    "note": "Owned by SC Johnson, who sell into markets requiring animal testing.",
+    "parentCompany": "SC Johnson",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "right-guard",
+    "name": "Right Guard",
+    "tier": "unverified",
+    "note": "As of 2026-09-02, ownership has changed hands (formerly Henkel, now reported under Thriving Brands) and no animal-testing policy or certification could be confirmed either way.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "old-spice",
+    "name": "Old Spice",
+    "tier": "bad",
+    "note": "Owned by Procter & Gamble, who sell into markets requiring animal testing.",
+    "parentCompany": "Procter & Gamble",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "macleans",
+    "name": "Macleans",
+    "tier": "bad",
+    "note": "Owned by Haleon (spun off from GSK), who sell into markets requiring animal testing.",
+    "parentCompany": "Haleon",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "corsodyl",
+    "name": "Corsodyl",
+    "tier": "bad",
+    "note": "Owned by Haleon (spun off from GSK), who sell into markets requiring animal testing.",
+    "parentCompany": "Haleon",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "dental"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "piz-buin",
+    "name": "Piz Buin",
+    "tier": "unverified",
+    "note": "As of 2026-09-02, now owned by Sarantis Group after a change in ownership - no animal-testing policy or certification confirmed either way.",
+    "parentCompany": "Sarantis Group",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "hawaiian-tropic",
+    "name": "Hawaiian Tropic",
+    "tier": "unverified",
+    "note": "Owned by Edgewell Personal Care. As of 2026-09-02, no animal-testing policy specific to Chinese market sales could be confirmed from a primary source, so treated as unverified rather than bad.",
+    "parentCompany": "Edgewell Personal Care",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "riemann-p20",
+    "name": "Riemann P20",
+    "tier": "unverified",
+    "note": "As of 2026-09-02, current ownership could not be reliably confirmed from a primary source, so no animal-testing policy could be checked either way.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "vosene",
+    "name": "Vosene",
+    "tier": "unverified",
+    "note": "Owned by Thornton & Ross (part of STADA). As of 2026-09-02, no animal-testing policy or China market exposure could be confirmed from a primary source.",
+    "parentCompany": "STADA (Thornton & Ross)",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "alberto-balsam",
+    "name": "Alberto Balsam",
+    "tier": "unverified",
+    "note": "Owned by McBride plc, same parent as Bloo. As of 2026-09-02, no animal-testing policy or certification was found either way.",
+    "parentCompany": "McBride plc",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "charles-worthington",
+    "name": "Charles Worthington",
+    "tier": "unverified",
+    "note": "As of 2026-09-02, current ownership is unclear from available sources (previously linked to PZ Cussons, more recently reported under Beautology) - no animal-testing policy or certification confirmed.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "timotei",
+    "name": "Timotei",
+    "tier": "bad",
+    "note": "Owned by Unilever. Unlike some Unilever brands (Dove, TRESemmé), Timotei is not on PETA's list of certified cruelty-free brands.",
+    "parentCompany": "Unilever",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "elvive",
+    "name": "Elvive",
+    "tier": "bad",
+    "note": "Owned by L'Oréal, who sell into markets requiring animal testing.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "e45",
+    "name": "E45",
+    "tier": "unverified",
+    "note": "Owned by Karo Pharma / Karo Healthcare (bought from Reckitt in 2021-22). As of 2026-09-02, no animal-testing policy or China market exposure could be confirmed from a primary source.",
+    "parentCompany": "Karo Pharma",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "lush",
+    "name": "Lush",
+    "tier": "good",
+    "note": "Independently owned, PETA-certified cruelty-free, no animal testing anywhere in the supply chain.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "skincare",
+      "makeup-beauty",
+      "haircare",
+      "body-shower"
+    ],
+    "veganConfidence": "low"
   }
 ]
