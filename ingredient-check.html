@@ -87,7 +87,7 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">check the ingredients</h1>
-<p>A cruelty-free certified brand can still sell a product that isn't vegan. Photograph the ingredients list on the back of the pack and I'll tell you exactly which animal-derived ingredients are in it - named plainly, not hidden behind an INCI name.</p>
+<p>A cruelty-free certified brand can still sell a product that isn't vegan. The <a href="scan.html">barcode scanner</a> already checks this automatically when the product database has an ingredients list on file - this page is for everything else: use it when a barcode comes back with no ingredients data, or when you'd rather just photograph what's in your hand. Either way, whatever turns up is named plainly - not left as an INCI name you'd have to look up yourself.</p>
 
 <div class="drop" id="drop">
 <img id="preview" alt="your ingredients list photo">
@@ -136,7 +136,10 @@ return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split(
 var imgData = null;
 var DICT = [];
 
-fetch("data/animal-ingredients.json").then(function(r){ return r.json(); }).then(function(d){ DICT = d || []; }).catch(function(){ DICT = []; });
+// Same glossary the barcode scanner's "ingredient watch" uses (see
+// scan.html) - one dictionary, so a term added or corrected there
+// automatically improves this page too, and vice versa.
+fetch("data/ingredients.json").then(function(r){ return r.json(); }).then(function(d){ DICT = d || []; }).catch(function(){ DICT = []; });
 
 el("file").addEventListener("change", function(e){
 var f = e.target.files && e.target.files[0];
@@ -219,8 +222,8 @@ return found;
 }
 
 function renderVerdict(found){
-var always = found.filter(function(f){ return f.certainty === "always"; });
-var sometimes = found.filter(function(f){ return f.certainty === "sometimes"; });
+var always = found.filter(function(f){ return f.type === "animal"; });
+var sometimes = found.filter(function(f){ return f.type === "ambiguous"; });
 if(always.length){
 return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ".</p></div>";
 }
@@ -235,10 +238,11 @@ var html = renderVerdict(found);
 if(found.length){
 html += "<div class=\"ing-list\">";
 found.forEach(function(f){
-var badge = f.certainty === "always" ? "always animal-derived" : "sometimes animal-derived";
-html += "<div class=\"ing-hit " + f.certainty + "\">";
-html += "<p class=\"ing-name\">" + escapeHtml(f.name) + "<span class=\"ing-badge " + f.certainty + "\">" + badge + "</span></p>";
-html += "<p class=\"ing-origin\">" + escapeHtml(f.origin) + "</p>";
+var cls = f.type === "animal" ? "always" : "sometimes";
+var badge = f.type === "animal" ? "always animal-derived" : "sometimes animal-derived";
+html += "<div class=\"ing-hit " + cls + "\">";
+html += "<p class=\"ing-name\">" + escapeHtml(f.name) + "<span class=\"ing-badge " + cls + "\">" + badge + "</span></p>";
+html += "<p class=\"ing-origin\">" + escapeHtml(f.note) + "</p>";
 html += "</div>";
 });
 html += "</div>";
