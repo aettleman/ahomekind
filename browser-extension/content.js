@@ -116,14 +116,34 @@
     anchor.parentNode.insertBefore(badge, anchor.nextSibling);
   }
 
+  // TEMPORARY: traces every step to the page console so a stuck badge can
+  // be diagnosed from what's actually happening rather than guessed at.
+  // Remove once the extension is confirmed working reliably.
+  function log() {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift("[AHK]");
+    console.log.apply(console, args);
+  }
+
   function checkAndRender() {
     var conf = SELECTORS[location.hostname];
-    if (!isProductPage(conf)) return; // search results, category pages, basket, etc. -- not our business
+    if (!isProductPage(conf)) {
+      log("skip: not a recognised product page for", location.hostname, location.pathname);
+      return;
+    }
     var text = getPageText(conf);
     var anchor = getAnchor(conf);
-    if (!text || text.length < 3 || !anchor) return; // couldn't confidently find the product title
+    if (!text || text.length < 3 || !anchor) {
+      log("skip: title/anchor not confidently found", { text: text, hasAnchor: !!anchor });
+      return;
+    }
+    log("checking text:", text);
     chrome.runtime.sendMessage({ type: "ahk-check-brand", text: text }, function (response) {
-      if (chrome.runtime.lastError) return; // extension context gone (page navigated away, etc.)
+      if (chrome.runtime.lastError) {
+        log("sendMessage failed:", chrome.runtime.lastError.message);
+        return;
+      }
+      log("response:", response);
       if (response && response.match) insertBadge(response.match, anchor);
     });
   }

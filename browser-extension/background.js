@@ -118,6 +118,9 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
       chrome.storage.local.get(CACHE_KEY).then(function (data) {
         const index = data[CACHE_KEY] || [];
         const match = findBrandMatch(msg.text, index);
+        // TEMPORARY: trace to the background console while diagnosing a
+        // reported no-badge case. Remove once confirmed working reliably.
+        console.log("[AHK] check-brand", { text: msg.text, indexSize: index.length, match: match });
         sendResponse({ match: match });
       });
     });
