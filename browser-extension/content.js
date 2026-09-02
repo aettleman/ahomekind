@@ -26,9 +26,12 @@
 
   // Per-site: a regex the URL path must match for this to be treated as a
   // single product page at all (as opposed to search results, a category
-  // listing, the basket, etc.), plus how to find the product title text
-  // and which element to anchor the badge near (usually just above the
-  // buy box).
+  // listing, the basket, etc.), plus where to read the product title text
+  // from and two separate places to put a badge: right by the title
+  // (where it's seen straight away) and right by the buy button (a second
+  // reminder at the actual moment of deciding to buy, since that's often
+  // a scroll away from the title on a long product page). Both are
+  // optional -- if only one is found, the badge just appears there.
   //
   // Earlier versions of this fell back to <title> and <body> when a
   // selector didn't match, on the theory that "less precisely placed" is
@@ -38,29 +41,38 @@
   // literally "Amazon.co.uk : dove" -- matched the Dove brand, and then
   // fell back to inserting the badge at the top of <body>, where it
   // landed wedged into the basket sidebar looking broken. Rule now: no
-  // confirmed product page and no confirmed title/anchor element means
-  // no badge, full stop -- wrong silence beats wrong badge in the wrong
-  // place.
+  // confirmed product page and no confirmed anchor element means no
+  // badge there, full stop -- wrong silence beats wrong badge in the
+  // wrong place.
+  //
+  // The buyAnchor selectors are the least tested part of this file --
+  // they're a reasonable guess at each site's "add to basket" button, not
+  // confirmed against a live page the way the Amazon ones are. See the
+  // README.
   var SELECTORS = {
     "www.amazon.co.uk": {
       productPath: /\/(dp|gp\/product)\//,
       title: "#productTitle",
-      anchor: "#addToCart, #buybox, #productTitle",
+      titleAnchor: "#productTitle",
+      buyAnchor: "#addToCart, #buybox",
     },
     "www.boots.com": {
       productPath: /\/p\//,
       title: ".product-title, [data-test='product-title']",
-      anchor: ".product-title, [data-test='product-title']",
+      titleAnchor: ".product-title, [data-test='product-title']",
+      buyAnchor: "[data-test='add-to-basket'], .add-to-basket, button[name='add-to-basket']",
     },
     "www.superdrug.com": {
       productPath: /\/p\//,
       title: ".pdp-title, [data-testid='product-title']",
-      anchor: ".pdp-title, [data-testid='product-title']",
+      titleAnchor: ".pdp-title, [data-testid='product-title']",
+      buyAnchor: "[data-testid='add-to-basket-button'], .add-to-basket",
     },
     "www.ocado.com": {
       productPath: /\/products\//,
       title: "[data-testid='product-title']",
-      anchor: "[data-testid='product-title']",
+      titleAnchor: "[data-testid='product-title']",
+      buyAnchor: "[data-testid='add-to-trolley-button'], .bl-add-to-trolley__button",
     },
   };
 
@@ -82,14 +94,11 @@
     return titleEl ? titleEl.textContent.trim() : "";
   }
 
-  function getAnchor(conf) {
-    return firstMatch(conf.anchor);
-  }
-
-  function buildBadge(match) {
+  function buildBadge(match, locationKey) {
     var meta = TIER_META[match.tier] || TIER_META.check;
     var wrap = document.createElement("div");
     wrap.className = "ahk-badge " + meta.cls;
+    wrap.setAttribute("data-ahk-loc", locationKey);
     wrap.innerHTML =
       '<span class="ahk-badge-emoji" aria-hidden="true">' + meta.emoji + "</span>" +
       '<span class="ahk-badge-text"><strong>' + escapeHtml(match.name) + "</strong> — " + escapeHtml(meta.label) + "</span>" +
@@ -109,10 +118,13 @@
       .split(">").join("&gt;");
   }
 
-  function insertBadge(match, anchor) {
-    if (document.querySelector(".ahk-badge")) return; // already shown for this page
+  // locationKey distinguishes the two badge spots ("title", "buy") so each
+  // is inserted at most once even though checkAndRender runs several
+  // times as a page finishes loading.
+  function insertBadge(match, anchor, locationKey) {
     if (!anchor || !anchor.parentNode) return; // nowhere sensible to put it -- skip rather than guess
-    var badge = buildBadge(match);
+    if (anchor.parentNode.querySelector('.ahk-badge[data-ahk-loc="' + locationKey + '"]')) return;
+    var badge = buildBadge(match, locationKey);
     anchor.parentNode.insertBefore(badge, anchor.nextSibling);
   }
 
@@ -120,11 +132,19 @@
     var conf = SELECTORS[location.hostname];
     if (!isProductPage(conf)) return; // search results, category pages, basket, etc. -- not our business
     var text = getPageText(conf);
-    var anchor = getAnchor(conf);
-    if (!text || text.length < 3 || !anchor) return; // couldn't confidently find the product title
+    var titleAnchor = firstMatch(conf.titleAnchor);
+    var buyAnchor = firstMatch(conf.buyAnchor);
+    if (!text || text.length < 3 || (!titleAnchor && !buyAnchor)) return; // couldn't confidently find the product
     chrome.runtime.sendMessage({ type: "ahk-check-brand", text: text }, function (response) {
       if (chrome.runtime.lastError) return; // background service worker asleep/unreachable
-      if (response && response.match) insertBadge(response.match, anchor);
+      if (!response || !response.match) return;
+      // Both are shown when both are found -- one right where the title is
+      // seen straight away, one right by the buy button for a reminder at
+      // the actual moment of deciding to buy. If the buy button and the
+      // title happen to be the very same element (unlikely, but cheap to
+      // guard against), only show it once.
+      if (titleAnchor) insertBadge(response.match, titleAnchor, "title");
+      if (buyAnchor && buyAnchor !== titleAnchor) insertBadge(response.match, buyAnchor, "buy");
     });
   }
 
@@ -142,8 +162,7 @@
   new MutationObserver(function () {
     if (location.href !== lastUrl) {
       lastUrl = location.href;
-      var existing = document.querySelector(".ahk-badge");
-      if (existing) existing.remove();
+      document.querySelectorAll(".ahk-badge").forEach(function (el) { el.remove(); });
       setTimeout(checkAndRender, 600);
     }
   }).observe(document.body, { childList: true, subtree: true });

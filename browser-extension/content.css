@@ -6,8 +6,9 @@
 .ahk-badge {
   all: initial;
   display: flex !important;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 4px 8px;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 14px;
@@ -16,7 +17,20 @@
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid transparent;
-  max-width: 480px;
+  /* Fills whatever column it's dropped into (a wide product-title area on
+     one site, a narrow buy-box sidebar on another) rather than assuming a
+     fixed width -- flex-wrap above lets the text and buttons drop to a
+     second line instead of overflowing a narrow column. */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* The badge by the buy button often sits in a narrower column than the one
+   by the title (e.g. Amazon's right-hand buy-box sidebar) -- tighten up
+   spacing there rather than letting a 4-word phrase wrap onto three lines. */
+.ahk-badge[data-ahk-loc="buy"] {
+  font-size: 13px;
+  padding: 8px 10px;
 }
 
 .ahk-badge * {

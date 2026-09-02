@@ -16,7 +16,15 @@ up here automatically (the cache refreshes once a day).
   badge (🍃 cruelty-free & vegan / 🐰 cruelty-free, check vegan status /
   ⚠️ parent company isn't cruelty-free / ❌ tested on animals / 🔍 not
   certified, no evidence either way) with a link through to the full brand
-  page and a dismiss button.
+  page and a dismiss button. It shows up to twice: right by the product
+  title (seen straight away) and again right by the "add to basket" button
+  (a second reminder right at the moment of actually buying, since on a
+  long product page that's often a scroll away from the title). If only
+  one of those two spots can be confidently found on a given page, it
+  shows there instead of skipping entirely.
+- The badge's width adapts to whatever column it's placed in — a wide
+  space next to the title, or a narrower sidebar next to the buy button —
+  rather than assuming a fixed size, so it doesn't overflow either spot.
 - The toolbar icon shows how many brands are loaded and when the list last
   refreshed, with a manual refresh button.
 
@@ -25,17 +33,19 @@ up here automatically (the cache refreshes once a day).
 - It is **not published to the Chrome Web Store** — it has to be loaded
   manually (see below), which also means Chrome will show an "unpacked
   extension" warning. That's expected for a build at this stage.
-- The CSS selectors used to find the product title/price area on each
-  retailer's page, and the URL pattern used to decide "is this actually a
-  single product page" (in `content.js`), are a **first-pass guess**,
-  written without being able to browse the live sites from where this was
-  built. Amazon's has been confirmed against a real product page; Boots,
-  Superdrug and Ocado's product-page URL patterns (`/p/` and `/products/`)
-  are an educated guess and haven't been checked against live pages yet.
-  They're the standard patterns those sites have used, but retailers change
-  their markup without warning — if the badge doesn't show up on a page it
-  should, that's the most likely reason. Treat this as a starting point that
-  needs a real run against live pages before relying on it day to day.
+- The CSS selectors used to find the product title and "add to basket"
+  button on each retailer's page, and the URL pattern used to decide "is
+  this actually a single product page" (in `content.js`), are a
+  **first-pass guess**, written without being able to browse the live
+  sites from where this was built. Amazon's title/product-page detection
+  has been confirmed against a real product page; the "add to basket"
+  button selector for Amazon, and everything for Boots, Superdrug and
+  Ocado, is an educated guess and hasn't been checked against live pages
+  yet. They're the standard patterns those sites have used, but retailers
+  change their markup without warning — if a badge doesn't show up in one
+  of its two spots (or at all) on a page it should, that's the most likely
+  reason. Treat this as a starting point that needs a real run against
+  live pages before relying on it day to day.
 - Brand matching is name-based (whole-word match against the product title),
   so it can miss brands that only appear in the product description, or
   occasionally mis-fire on a brand name that's also an ordinary word — it
