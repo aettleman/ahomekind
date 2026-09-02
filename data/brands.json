@@ -3138,5 +3138,94 @@
       "body-shower"
     ],
     "veganConfidence": "low"
+  },
+  {
+    "slug": "ambi-pur",
+    "name": "Ambi Pur",
+    "tier": "bad",
+    "note": "Owned by Procter & Gamble, same policy and certification status as Febreze.",
+    "parentCompany": "Procter & Gamble",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bloo",
+    "name": "Bloo",
+    "tier": "unverified",
+    "note": "Owned by Robert McBride / McBride plc. As of 2026-09-02, no animal-testing policy, certification, or evidence either way was found for this brand or its parent.",
+    "parentCompany": "McBride plc",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "cristalinas",
+    "name": "Cristalinas",
+    "tier": "unverified",
+    "note": "Independent Spanish home-fragrance company. As of 2026-09-02, no animal-testing policy or certification was found either way.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "pacific-wax-co",
+    "name": "Pacific Wax Co.",
+    "tier": "unverified",
+    "note": "As of 2026-09-02, this company couldn't be reliably identified among several similarly-named candle makers, so no ownership, policy, or certification could be confirmed either way.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
+  },
+  {
+    "slug": "yankee-candle",
+    "name": "Yankee Candle",
+    "tier": "unverified",
+    "note": "Owned by Newell Brands. As of 2026-09-02, widely-shared 'cruelty-free' claims trace to social media rather than any real certifier, and no Leaping Bunny/CFI/PETA listing was found - so treated as unverified rather than good or bad.",
+    "parentCompany": "Newell Brands",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "dateChecked": "2026-09-02"
   }
 ]

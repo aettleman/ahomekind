@@ -22,6 +22,7 @@ const TIER_META = {
   check: { emoji: '&#128048;', label: 'cruelty-free, check vegan status per product', className: '', ratingClass: 'neutral' },
   warn:  { emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t', className: 'warn', ratingClass: 'warn' },
   bad:   { emoji: '&#10060;', label: 'tested on animals', className: 'bad', ratingClass: 'bad' },
+  unverified: { emoji: '&#128269;', label: 'not certified - no evidence either way', className: '', ratingClass: 'neutral' },
   unknown: { emoji: '&#10067;', label: 'status not known yet', className: '', ratingClass: 'neutral' }
 };
 

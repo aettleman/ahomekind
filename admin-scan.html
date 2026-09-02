@@ -35,6 +35,7 @@
 .batch-tier.check { background:#ece5d5; color:#5c5c4f; }
 .batch-tier.warn { background:#f6ecd9; color:#8a6a2a; }
 .batch-tier.bad { background:#f3e2df; color:#8a332c; }
+.batch-tier.unverified { background:#e4e0d4; color:#6b6656; }
 .batch-tier.unknown { background:#e4e0d4; color:#6b6656; }
 .batch-remove { flex-shrink:0; background:none; border:none; color:#a5453d; font-size:20px; line-height:1; cursor:pointer; padding:2px 6px; }
 #batchExport { width:100%; box-sizing:border-box; min-height:140px; font-family:monospace; font-size:12px; padding:12px; border:0.5px solid #cfc4a9; border-radius:8px; background:#ece5d5; color:#3d4a3a; }
@@ -102,6 +103,7 @@
 <option value="check">&#128048; cruelty-free, check vegan status</option>
 <option value="warn">&#9888;&#65039; worth a disclaimer (parent tests, unverified claim, etc.)</option>
 <option value="bad">&#10060; tested on animals</option>
+<option value="unverified">&#128269; no certification, no evidence either way</option>
 <option value="unknown" selected>&#10067; status not known yet</option>
 </select>
 <p class="hint">Leave this as "not known yet" unless you can see a certification logo on the pack, or you're sure it's tested on animals. I'll work the rest out when I go through the batch.</p>
@@ -239,7 +241,7 @@ function saveBatch(batch){
 try { localStorage.setItem(STORE_KEY, JSON.stringify(batch)); } catch(e){}
 }
 var batch = loadBatch();
-var TIER_LABEL = { good: "fully cruelty-free & vegan", check: "cruelty-free, check vegan", warn: "worth a disclaimer", bad: "tested on animals", unknown: "status not known yet" };
+var TIER_LABEL = { good: "fully cruelty-free & vegan", check: "cruelty-free, check vegan", warn: "worth a disclaimer", bad: "tested on animals", unverified: "no certification, no evidence either way", unknown: "status not known yet" };
 
 function renderBatch(){
 el("batchCount").textContent = batch.length;

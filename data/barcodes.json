@@ -16,5 +16,101 @@
     "product": "Deodorant",
     "tier": "bad",
     "note": ""
+  },
+  "5063843001837": {
+    "brand": "Air Wick",
+    "product": "Essential Mist diffuser, Warm Mulled Wine",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204413885": {
+    "brand": "Glade",
+    "product": "Twinkling Apple & Cinnamon automatic spray, Duo Pack",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204157468": {
+    "brand": "Glade",
+    "product": "Exotic Tropical Blossoms automatic spray",
+    "tier": "bad",
+    "note": ""
+  },
+  "8006530380485": {
+    "brand": "Febreze",
+    "product": "Bin Freshener Cotton Fresh, refill pack",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204447491": {
+    "brand": "Glade",
+    "product": "ONE Frosted Floral Cherries (limited edition, sense & spray)",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204448818": {
+    "brand": "Glade",
+    "product": "ONE Pure Clean Linen refillable room spray",
+    "tier": "bad",
+    "note": ""
+  },
+  "5059001021724": {
+    "brand": "Air Wick",
+    "product": "Cherry Blossom & Raspberry refill",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204539752": {
+    "brand": "Glade",
+    "product": "gel, Relaxing Zen",
+    "tier": "bad",
+    "note": "Barcode confirmed visible in photo."
+  },
+  "50204649": {
+    "brand": "Glade",
+    "product": "gel, Lavender",
+    "tier": "bad",
+    "note": "Barcode confirmed visible in photo."
+  },
+  "5038581168838": {
+    "brand": "Yankee Candle",
+    "product": "Home Inspiration, Zesty Margarita",
+    "tier": "unverified",
+    "note": ""
+  },
+  "5000325056275": {
+    "brand": "Bloo",
+    "product": "Power Active Fruitiopia toilet block",
+    "tier": "unverified",
+    "note": ""
+  },
+  "8904332621716": {
+    "brand": "Pacific Wax Co.",
+    "product": "Ice Cream Sundae candle",
+    "tier": "unverified",
+    "note": ""
+  },
+  "8436618361608": {
+    "brand": "Cristalinas",
+    "product": "Pet Collection reed diffuser",
+    "tier": "unverified",
+    "note": ""
+  },
+  "5000204415537": {
+    "brand": "Glade",
+    "product": "Twinkling Apple & Cinnamon candle",
+    "tier": "bad",
+    "note": ""
+  },
+  "8006530052856": {
+    "brand": "Ambi Pur",
+    "product": "Bathroom, Apple Satinwood",
+    "tier": "bad",
+    "note": ""
+  },
+  "5000204410815": {
+    "brand": "Glade",
+    "product": "Sweet Chocolate Treat plug-in refill",
+    "tier": "bad",
+    "note": ""
   }
 }
