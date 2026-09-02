@@ -24,26 +24,43 @@
     unverified: { emoji: "🔍", label: "not certified - no evidence either way", cls: "ahk-unverified" },
   };
 
-  // Per-site: how to find the product title text, and which element to
-  // anchor the badge near (usually just above the buy box). Falls back
-  // to <title> and <body> if a selector doesn't match on a given page --
-  // meaning it still works, just less precisely placed.
+  // Per-site: a regex the URL path must match for this to be treated as a
+  // single product page at all (as opposed to search results, a category
+  // listing, the basket, etc.), plus how to find the product title text
+  // and which element to anchor the badge near (usually just above the
+  // buy box).
+  //
+  // Earlier versions of this fell back to <title> and <body> when a
+  // selector didn't match, on the theory that "less precisely placed" is
+  // better than nothing. In practice that backfired badly: on an Amazon
+  // *search results* page for "dove", none of the product selectors
+  // matched, so it fell back to the page's <title> tag -- which is
+  // literally "Amazon.co.uk : dove" -- matched the Dove brand, and then
+  // fell back to inserting the badge at the top of <body>, where it
+  // landed wedged into the basket sidebar looking broken. Rule now: no
+  // confirmed product page and no confirmed title/anchor element means
+  // no badge, full stop -- wrong silence beats wrong badge in the wrong
+  // place.
   var SELECTORS = {
     "www.amazon.co.uk": {
-      title: "#productTitle, #title",
+      productPath: /\/(dp|gp\/product)\//,
+      title: "#productTitle",
       anchor: "#addToCart, #buybox, #productTitle",
     },
     "www.boots.com": {
-      title: "h1, .product-title, [data-test='product-title']",
-      anchor: "h1, .product-title, [data-test='product-title']",
+      productPath: /\/p\//,
+      title: ".product-title, [data-test='product-title']",
+      anchor: ".product-title, [data-test='product-title']",
     },
     "www.superdrug.com": {
-      title: "h1, .pdp-title, [data-testid='product-title']",
-      anchor: "h1, .pdp-title, [data-testid='product-title']",
+      productPath: /\/p\//,
+      title: ".pdp-title, [data-testid='product-title']",
+      anchor: ".pdp-title, [data-testid='product-title']",
     },
     "www.ocado.com": {
-      title: "h1, [data-testid='product-title']",
-      anchor: "h1, [data-testid='product-title']",
+      productPath: /\/products\//,
+      title: "[data-testid='product-title']",
+      anchor: "[data-testid='product-title']",
     },
   };
 
@@ -56,17 +73,17 @@
     return null;
   }
 
-  function getPageText() {
-    var conf = SELECTORS[location.hostname];
-    var titleEl = conf ? firstMatch(conf.title) : null;
-    var text = titleEl ? titleEl.textContent : document.title;
-    return (text || "").trim();
+  function isProductPage(conf) {
+    return !!conf && conf.productPath.test(location.pathname);
   }
 
-  function getAnchor() {
-    var conf = SELECTORS[location.hostname];
-    var el = conf ? firstMatch(conf.anchor) : null;
-    return el || document.querySelector("h1") || document.body;
+  function getPageText(conf) {
+    var titleEl = firstMatch(conf.title);
+    return titleEl ? titleEl.textContent.trim() : "";
+  }
+
+  function getAnchor(conf) {
+    return firstMatch(conf.anchor);
   }
 
   function buildBadge(match) {
@@ -92,23 +109,22 @@
       .split(">").join("&gt;");
   }
 
-  function insertBadge(match) {
+  function insertBadge(match, anchor) {
     if (document.querySelector(".ahk-badge")) return; // already shown for this page
-    var anchor = getAnchor();
+    if (!anchor || !anchor.parentNode) return; // nowhere sensible to put it -- skip rather than guess
     var badge = buildBadge(match);
-    if (anchor && anchor.parentNode) {
-      anchor.parentNode.insertBefore(badge, anchor.nextSibling);
-    } else {
-      document.body.insertBefore(badge, document.body.firstChild);
-    }
+    anchor.parentNode.insertBefore(badge, anchor.nextSibling);
   }
 
   function checkAndRender() {
-    var text = getPageText();
-    if (!text || text.length < 3) return;
+    var conf = SELECTORS[location.hostname];
+    if (!isProductPage(conf)) return; // search results, category pages, basket, etc. -- not our business
+    var text = getPageText(conf);
+    var anchor = getAnchor(conf);
+    if (!text || text.length < 3 || !anchor) return; // couldn't confidently find the product title
     chrome.runtime.sendMessage({ type: "ahk-check-brand", text: text }, function (response) {
       if (chrome.runtime.lastError) return; // extension context gone (page navigated away, etc.)
-      if (response && response.match) insertBadge(response.match);
+      if (response && response.match) insertBadge(response.match, anchor);
     });
   }
 

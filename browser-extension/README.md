@@ -26,9 +26,13 @@ up here automatically (the cache refreshes once a day).
   manually (see below), which also means Chrome will show an "unpacked
   extension" warning. That's expected for a build at this stage.
 - The CSS selectors used to find the product title/price area on each
-  retailer's page (in `content.js`) are a **first-pass guess**, written
-  without being able to browse the live sites from where this was built.
-  They're the standard selectors those sites have used, but retailers change
+  retailer's page, and the URL pattern used to decide "is this actually a
+  single product page" (in `content.js`), are a **first-pass guess**,
+  written without being able to browse the live sites from where this was
+  built. Amazon's has been confirmed against a real product page; Boots,
+  Superdrug and Ocado's product-page URL patterns (`/p/` and `/products/`)
+  are an educated guess and haven't been checked against live pages yet.
+  They're the standard patterns those sites have used, but retailers change
   their markup without warning — if the badge doesn't show up on a page it
   should, that's the most likely reason. Treat this as a starting point that
   needs a real run against live pages before relying on it day to day.
