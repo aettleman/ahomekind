@@ -56,6 +56,16 @@ up here automatically (the cache refreshes once a day).
 5. Click the toolbar icon any time to see how many brands are loaded and
    force a refresh.
 
+## If the badge just stops appearing out of nowhere
+
+Before assuming something's broken, try this first: go to `chrome://extensions`
+and click the reload icon on the "A Home Kind" card. In developer-mode
+("unpacked") extensions, Chrome's background service worker can go to sleep
+after sitting idle and occasionally doesn't wake itself back up cleanly to
+answer a message — a manual reload fixes it. This is a known rough edge of
+running an extension this way rather than a published one, not something
+specific to this extension's code.
+
 ## Reporting a site that's stopped working
 
 If a retailer redesigns their product page and the badge stops appearing,
