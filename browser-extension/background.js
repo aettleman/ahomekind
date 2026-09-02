@@ -15,6 +15,27 @@ function normalize(s) {
   return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
 }
 
+// Brand names in brands.json are often the full company name ("e.l.f.
+// cosmetics", "Charles Worthington London") but product titles on retailer
+// pages almost always drop the generic trailing word ("e.l.f. Power Grip
+// Primer..."). Without accounting for that, matching against the full name
+// alone misses most real product pages for exactly the brands most worth
+// flagging. This strips one trailing generic word, when there's enough of
+// the name left over that doing so still won't cause false positives.
+var GENERIC_SUFFIXES = [
+  "cosmetics", "cosmetic", "beauty", "skincare", "haircare", "care",
+  "london", "group", "laboratories", "labs", "company", "co",
+];
+
+function shortNameFor(normalizedName) {
+  const words = normalizedName.split(" ");
+  if (words.length < 2) return null;
+  const last = words[words.length - 1];
+  if (GENERIC_SUFFIXES.indexOf(last) === -1) return null;
+  const short = words.slice(0, -1).join(" ");
+  return short.length >= 3 ? short : null;
+}
+
 // Builds a lookup index once per fetch rather than re-normalizing every
 // brand name on every single page-text check -- pages get checked a lot
 // as someone browses, the brand list only changes once a day.
@@ -22,12 +43,14 @@ function buildIndex(brands) {
   return (brands || [])
     .filter(function (b) { return b && b.name && b.slug; })
     .map(function (b) {
+      const normalizedName = normalize(b.name);
       return {
         slug: b.slug,
         name: b.name,
         tier: b.tier,
         note: b.note || "",
-        normalizedName: normalize(b.name),
+        normalizedName: normalizedName,
+        shortName: shortNameFor(normalizedName),
       };
     })
     // Longest name first, so "Superdrug Pro Care" gets first refusal
@@ -57,20 +80,30 @@ async function refreshCache(force) {
   }
 }
 
+function wholeWordPattern(normalizedTerm) {
+  return new RegExp("(^|\\s)" + normalizedTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(\\s|$)");
+}
+
 // Matching is deliberately conservative: a brand name has to appear as
 // whole words in the page text (not just as a substring, which is how
 // "Dove" would wrongly match "Dovetail" or "Dove Cottage"), and very
 // short names (<4 characters) are skipped entirely -- too many false
 // positives on retail pages full of unrelated words for too little
-// payoff. Returns the single longest/most specific match, or null.
+// payoff. Tries the full brand name first, then its "short name" (the
+// name with a trailing generic word like "cosmetics" dropped) since most
+// product titles use the shorter form. Returns the single longest/most
+// specific match, or null.
 function findBrandMatch(pageText, index) {
   const text = normalize(pageText);
   if (!text) return null;
   for (let i = 0; i < index.length; i++) {
     const entry = index[i];
-    if (entry.normalizedName.length < 4) continue;
-    const pattern = new RegExp("(^|\\s)" + entry.normalizedName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(\\s|$)");
-    if (pattern.test(text)) return entry;
+    if (entry.normalizedName.length >= 4 && wholeWordPattern(entry.normalizedName).test(text)) {
+      return entry;
+    }
+    if (entry.shortName && entry.shortName.length >= 4 && wholeWordPattern(entry.shortName).test(text)) {
+      return entry;
+    }
   }
   return null;
 }
