@@ -599,7 +599,9 @@ renderBrandList();
 function applyCertFilter(key) {
 activeCert = key;
 setActivePills();
-if (key === 'all' && activeFilter === 'all' && !activeCategory) { showCategoryGrid(); return; }
+// Unlike applyFilter, clearing a certification filter should never bounce
+// back to the category tiles -- "any certification" is just removing a
+// narrowing on the list you're already looking at, not a "go home" action.
 renderBrandList();
 }
 
