@@ -3086,5 +3086,57 @@
       "skincare"
     ],
     "veganConfidence": "low"
+  },
+  {
+    "slug": "treaclemoon",
+    "name": "Treaclemoon",
+    "tier": "check",
+    "note": "Listed on PETA's Beauty Without Bunnies (self-declared assurance, not an independently audited certifier like Leaping Bunny). No vegan certification found.",
+    "parentCompany": "Vendoleo",
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "daise",
+    "name": "Daise",
+    "tier": "check",
+    "note": "Appears on Cruelty Free International's approved-brands listing, but I could not independently re-verify the live certification text — worth a manual check of crueltyfreeinternational.org before treating as fully confirmed. Not vegan-certified; some products contain animal-derived ingredients.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mitchum",
+    "name": "Mitchum",
+    "tier": "bad",
+    "note": "Owned by Revlon Consumer Products, which tests on animals where legally required, including in mainland China. Not Leaping Bunny/CFI/PETA listed.",
+    "parentCompany": "Revlon",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low"
   }
 ]

@@ -1,1 +1,20 @@
-{}
+{
+  "5060152820623": {
+    "brand": "Treaclemoon",
+    "product": "Body wash / shower gel",
+    "tier": "check",
+    "note": ""
+  },
+  "4895248005308": {
+    "brand": "Daise",
+    "product": "Beauty product",
+    "tier": "check",
+    "note": ""
+  },
+  "5051389044920": {
+    "brand": "Mitchum",
+    "product": "Deodorant",
+    "tier": "bad",
+    "note": ""
+  }
+}
