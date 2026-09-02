@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ingredient Check - a home kind</title>
+<meta name="description" content="Photograph an ingredients list and see exactly which animal-derived ingredients are in it, named plainly.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260908">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.drop { border:1.5px dashed #cfc4a9; border-radius:14px; padding:36px 20px; text-align:center; background:#ece5d5; margin-bottom:16px; }
+.big-btn { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+#preview { max-width:100%; border-radius:12px; margin-bottom:16px; display:none; }
+.bar { height:6px; background:#dcd3c0; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
+.bar span { display:block; height:100%; width:0%; background:#6f8768; transition:width 0.3s; }
+
+/* Overall verdict banner -- the one thing someone standing in an aisle
+   actually needs at a glance, before they read the ingredient-by-
+   ingredient breakdown underneath. */
+.verdict { border-radius:14px; padding:20px; margin-bottom:18px; text-align:center; }
+.verdict.bad { background:#f3e2df; border:1px solid #a5453d; }
+.verdict.warn { background:#f6ecd9; border:1px solid #d9b06e; }
+.verdict.good { background:#e6efe3; border:1px solid #6f8768; }
+.verdict-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:6px; }
+.verdict-body { font-size:13.5px; line-height:1.6; color:#5c5c4f; }
+
+.ing-hit { border-radius:12px; padding:16px 18px; margin-bottom:10px; background:#fff; border:0.5px solid #cfc4a9; }
+.ing-hit.always { border-left:4px solid #a5453d; }
+.ing-hit.sometimes { border-left:4px solid #d9b06e; }
+.ing-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
+.ing-badge { display:inline-block; font-size:10px; letter-spacing:0.8px; text-transform:uppercase; padding:3px 9px; border-radius:20px; margin-left:8px; vertical-align:middle; position:relative; top:-2px; }
+.ing-badge.always { background:#f3e2df; color:#8a332c; }
+.ing-badge.sometimes { background:#f6ecd9; color:#8a6a2a; }
+.ing-origin { font-size:13px; line-height:1.6; color:#5c5c4f; }
+.ing-raw { font-size:12px; color:#8a8672; margin-top:16px; padding-top:14px; border-top:0.5px solid #dcd2b8; }
+.ing-raw summary { cursor:pointer; font-weight:600; color:#5c5c4f; }
+.ing-raw pre { white-space:pre-wrap; word-break:break-word; margin-top:8px; font-family:inherit; font-size:12px; color:#8a8672; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="ingredient-check.html">check ingredients</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="start-here.html">start here</a>
+<a href="quiz.html">take the quiz</a>
+<a href="impact.html">your impact</a>
+<a href="what-testing-means.html">what testing means</a>
+<a href="money.html">who gets your money</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="instead-of.html">popular swaps</a>
+<a href="food.html">food &amp; kitchen</a>
+<a href="fashion.html">fashion &amp; accessories</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap" id="main">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">check the ingredients</h1>
+<p>A cruelty-free certified brand can still sell a product that isn't vegan. Photograph the ingredients list on the back of the pack and I'll tell you exactly which animal-derived ingredients are in it - named plainly, not hidden behind an INCI name.</p>
+
+<div class="drop" id="drop">
+<img id="preview" alt="your ingredients list photo">
+<p style="margin-bottom:16px; font-size:14px;">take a photo of the ingredients list, or pick one from your camera roll</p>
+<label class="big-btn" for="file">choose a photo</label>
+<input type="file" id="file" accept="image/*" capture="environment" style="display:none;">
+</div>
+
+<button class="big-btn" id="go" style="display:none; width:100%;">read the ingredients</button>
+
+<div class="bar" id="bar"><span id="barfill"></span></div>
+<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+<div id="results"></div>
+
+<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: fill the frame with just the ingredients text, hold the phone straight-on rather than at an angle, and make sure there's no glare across the panel. This only recognises ingredient names already in my dictionary and can miss things a photo reads badly - it's a helpful first pass, not a guarantee, and it's not a substitute for a brand's own vegan claim. "Fragrance"/"parfum" can legally hide undisclosed ingredients that no OCR tool can see. Nothing leaves your phone - the reading happens in your browser.</p>
+</main>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-ic" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-ic" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-ic" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-ic" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-ic" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
+<script src="./js/nav.js?v=20260909"></script>
+<script src="js/newsletter.js"></script>
+<script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+(function(){
+function el(id){ return document.getElementById(id); }
+function escapeHtml(s){
+return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;").split("'").join("&#x27;");
+}
+
+var imgData = null;
+var DICT = [];
+
+fetch("data/animal-ingredients.json").then(function(r){ return r.json(); }).then(function(d){ DICT = d || []; }).catch(function(){ DICT = []; });
+
+el("file").addEventListener("change", function(e){
+var f = e.target.files && e.target.files[0];
+if(!f) return;
+var reader = new FileReader();
+reader.onload = function(ev){
+imgData = ev.target.result;
+el("preview").src = imgData;
+el("preview").style.display = "block";
+el("go").style.display = "block";
+el("results").innerHTML = "";
+el("status").textContent = "";
+};
+reader.readAsDataURL(f);
+});
+
+// Same greyscale-normalise pass used by the shelf scanner -- OCR reads
+// a flat, contrasty image far more reliably than a photo with real-world
+// lighting/shadow variation across the label.
+function preprocessForOCR(dataUrl, callback){
+var img = new Image();
+img.onload = function(){
+var c = document.createElement("canvas");
+c.width = img.width; c.height = img.height;
+var ctx = c.getContext("2d");
+ctx.drawImage(img, 0, 0);
+var imageData;
+try { imageData = ctx.getImageData(0, 0, c.width, c.height); }
+catch(e){ callback(dataUrl); return; }
+var d = imageData.data;
+var gray = new Uint8ClampedArray(d.length / 4);
+var min = 255, max = 0;
+for(var i = 0, p = 0; i < d.length; i += 4, p++){
+var g = Math.round(0.299*d[i] + 0.587*d[i+1] + 0.114*d[i+2]);
+gray[p] = g;
+if(g < min) min = g;
+if(g > max) max = g;
+}
+var range = Math.max(1, max - min);
+for(var j = 0, q = 0; j < d.length; j += 4, q++){
+var v = Math.round((gray[q] - min) * 255 / range);
+d[j] = d[j+1] = d[j+2] = v;
+}
+ctx.putImageData(imageData, 0, 0);
+callback(c.toDataURL("image/png"));
+};
+img.onerror = function(){ callback(dataUrl); };
+img.src = dataUrl;
+}
+
+function normalizeOCR(t){
+return (t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+}
+
+// Same three-way match as the shelf scanner's brand matching: the term
+// as read, the same term with spacing stripped (catches "hydrolyzed
+// collagen" read as "hydrolyzedcollagen"), and, for multi-word terms,
+// whether every significant word turned up somewhere even if OCR
+// separated or reordered them.
+function termMatches(term, text, compact){
+var t = term.toLowerCase();
+if(text.indexOf(t) !== -1) return true;
+var compactTerm = t.replace(/[^a-z0-9]/g, "");
+if(compactTerm.length >= 5 && compact.indexOf(compactTerm) !== -1) return true;
+var words = t.split(" ").filter(function(w){ return w.length >= 4; });
+if(words.length >= 2 && words.every(function(w){ return text.indexOf(w) !== -1; })) return true;
+return false;
+}
+
+function findIngredients(rawText){
+var text = normalizeOCR(rawText);
+var compact = text.replace(/\s+/g, "");
+var found = [];
+DICT.forEach(function(entry){
+for(var i = 0; i < entry.terms.length; i++){
+if(termMatches(entry.terms[i], text, compact)){ found.push(entry); return; }
+}
+});
+return found;
+}
+
+function renderVerdict(found){
+var always = found.filter(function(f){ return f.certainty === "always"; });
+var sometimes = found.filter(function(f){ return f.certainty === "sometimes"; });
+if(always.length){
+return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ".</p></div>";
+}
+if(sometimes.length){
+return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vegan</p><p class=\"verdict-body\">Contains ingredients that are sometimes animal-derived and sometimes plant-based - see below, and check the brand's own vegan claim if it doesn't say.</p></div>";
+}
+return "<div class=\"verdict good\"><p class=\"verdict-title\">No animal-derived ingredients recognised</p><p class=\"verdict-body\">Nothing in my dictionary turned up - but this checks against a list, not against every ingredient that exists, and can't see inside an unspecified \"fragrance\". Not a guarantee.</p></div>";
+}
+
+function render(found, rawText){
+var html = renderVerdict(found);
+if(found.length){
+html += "<div class=\"ing-list\">";
+found.forEach(function(f){
+var badge = f.certainty === "always" ? "always animal-derived" : "sometimes animal-derived";
+html += "<div class=\"ing-hit " + f.certainty + "\">";
+html += "<p class=\"ing-name\">" + escapeHtml(f.name) + "<span class=\"ing-badge " + f.certainty + "\">" + badge + "</span></p>";
+html += "<p class=\"ing-origin\">" + escapeHtml(f.origin) + "</p>";
+html += "</div>";
+});
+html += "</div>";
+}
+html += "<details class=\"ing-raw\"><summary>what I actually read from the photo</summary><pre>" + escapeHtml(rawText || "(nothing readable)") + "</pre></details>";
+el("results").innerHTML = html;
+}
+
+el("go").addEventListener("click", function(){
+if(!imgData) return;
+if(typeof Tesseract === "undefined"){
+el("status").textContent = "The text reader did not load - check your connection and try again.";
+return;
+}
+el("go").style.display = "none";
+el("bar").style.display = "block";
+el("status").textContent = "Reading the ingredients...";
+el("results").innerHTML = "";
+preprocessForOCR(imgData, function(processedData){
+Tesseract.recognize(processedData, "eng", {
+  tessedit_pageseg_mode: "6",
+  preserve_interword_spaces: "1",
+logger: function(m){
+if(m.status === "recognizing text"){
+el("barfill").style.width = Math.round(m.progress * 100) + "%";
+}
+}
+}).then(function(res){
+el("bar").style.display = "none";
+el("go").style.display = "block";
+el("go").textContent = "read it again";
+el("status").textContent = "";
+var found = findIngredients(res.data.text || "");
+render(found, res.data.text || "");
+}).catch(function(){
+el("bar").style.display = "none";
+el("go").style.display = "block";
+el("status").textContent = "Could not read that image. A closer, straighter photo of just the ingredients text usually helps.";
+});
+});
+});
+})();
+</script>
+</body>
+</html>

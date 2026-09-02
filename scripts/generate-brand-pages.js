@@ -119,6 +119,7 @@ function renderBrandPage(brand) {
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../scan.html">scan a barcode</a>');
   lines.push('<a href="../../shelf.html">scan a shelf</a>');
+  lines.push('<a href="../../ingredient-check.html">check ingredients</a>');
   lines.push('</span></span>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
@@ -209,7 +210,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'instead-of.html', 'brand-check.html', 'scan.html', 'shelf.html', 'quiz.html', 'shop.html', 'journal/', 'food.html', 'fashion.html'];
+  const staticPages = ['', 'about.html', 'start-here.html', 'what-testing-means.html', 'money.html', 'impact.html', 'instead-of.html', 'brand-check.html', 'scan.html', 'shelf.html', 'ingredient-check.html', 'quiz.html', 'shop.html', 'journal/', 'food.html', 'fashion.html'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');

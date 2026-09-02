@@ -1,0 +1,206 @@
+[
+  {
+    "terms": ["gelatin", "gelatine", "gelatina"],
+    "name": "Gelatin",
+    "origin": "Made by boiling the skin, bones and connective tissue of cattle or pigs.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["carmine", "cochineal", "natural red 4", "ci 75470", "e120", "e 120"],
+    "name": "Carmine (Cochineal)",
+    "origin": "A red dye made by crushing cochineal beetles.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["lanolin", "wool wax", "wool fat", "lanolin alcohol"],
+    "name": "Lanolin",
+    "origin": "Grease extracted from sheep's wool.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["beeswax", "cera alba", "bees wax"],
+    "name": "Beeswax",
+    "origin": "Wax secreted by honeybees to build their honeycomb.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["honey", "mel"],
+    "name": "Honey",
+    "origin": "Made by bees from flower nectar - not vegan, even though many vegans still eat it varies by belief; this site treats it as animal-derived.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["shellac", "ci 91100"],
+    "name": "Shellac",
+    "origin": "A resin secreted by the female lac beetle.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["casein", "caseinate", "sodium caseinate", "potassium caseinate", "milk protein"],
+    "name": "Casein",
+    "origin": "A protein extracted from cow's milk.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["whey", "whey protein", "lactoserum"],
+    "name": "Whey",
+    "origin": "A by-product of cow's milk left over from cheesemaking.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["collagen", "hydrolyzed collagen", "hydrolysed collagen"],
+    "name": "Collagen",
+    "origin": "A protein taken from animal skin, bones, tendons or connective tissue (usually cattle, pigs or fish).",
+    "certainty": "always"
+  },
+  {
+    "terms": ["keratin", "hydrolyzed keratin", "hydrolysed keratin"],
+    "name": "Keratin",
+    "origin": "A protein taken from animal hair, horns, feathers or hooves.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["elastin", "hydrolyzed elastin"],
+    "name": "Elastin",
+    "origin": "A protein taken from the neck ligaments and aortas of cattle.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["tallow", "beef tallow", "sodium tallowate", "tallow acid", "tallow glycerides"],
+    "name": "Tallow",
+    "origin": "Rendered fat from cattle or sheep.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["lard", "sodium lardate"],
+    "name": "Lard",
+    "origin": "Rendered fat from pigs.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["squalene"],
+    "name": "Squalene",
+    "origin": "Traditionally extracted from shark liver oil. (\"Squalane\" and \"phytosqualane\" are usually plant-derived instead - see the note below if that's what you scanned.)",
+    "certainty": "always"
+  },
+  {
+    "terms": ["guanine", "ci 75170", "pearl essence"],
+    "name": "Guanine (Pearl Essence)",
+    "origin": "A shimmer additive scraped from fish scales.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["glycerin", "glycerine", "glycerol"],
+    "name": "Glycerin",
+    "origin": "Usually made from plant oils today, but can also be rendered from animal fat - the label alone can't tell you which, so this brand's own vegan claim is what to check.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["stearic acid", "stearate", "sodium stearate", "magnesium stearate", "zinc stearate"],
+    "name": "Stearic Acid",
+    "origin": "Usually made from palm or soy oil today, but historically and sometimes still rendered from cattle or pig fat - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["cetyl alcohol", "cetearyl alcohol", "stearyl alcohol"],
+    "name": "Cetyl/Stearyl Alcohol",
+    "origin": "Usually made from plant oils (coconut/palm) today, but can be made from spermaceti (whale oil) or other animal fats - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["oleic acid", "sodium oleate"],
+    "name": "Oleic Acid",
+    "origin": "Usually from plant oils today, but can be rendered from animal fat - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["lecithin"],
+    "name": "Lecithin",
+    "origin": "Usually from soy or sunflower today, but can also come from egg yolk - check the brand's vegan claim if it doesn't specify \"soy lecithin\" or \"sunflower lecithin\".",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["vitamin d3", "cholecalciferol"],
+    "name": "Vitamin D3",
+    "origin": "Usually made from lanolin (sheep's wool grease) or fish oil. (\"Vitamin D2\"/ergocalciferol is plant-derived instead.)",
+    "certainty": "always"
+  },
+  {
+    "terms": ["retinol", "retinyl palmitate"],
+    "name": "Retinol",
+    "origin": "Can be synthesised or sourced from animal liver/fish oil - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["silk", "silk powder", "silk amino acids", "hydrolyzed silk", "sericin"],
+    "name": "Silk",
+    "origin": "Made from the cocoons of silkworms.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["allantoin"],
+    "name": "Allantoin",
+    "origin": "Usually synthesised or from comfrey plants today, but can be extracted from cattle urine - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["chitosan", "chitin"],
+    "name": "Chitosan",
+    "origin": "Usually made from shellfish shells (crab, shrimp, lobster).",
+    "certainty": "always"
+  },
+  {
+    "terms": ["hyaluronic acid", "sodium hyaluronate"],
+    "name": "Hyaluronic Acid",
+    "origin": "Modern versions are usually fermented (vegan), but older/cheaper versions can be extracted from rooster combs or animal connective tissue - check the brand's vegan claim.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["ambergris", "ambrein"],
+    "name": "Ambergris",
+    "origin": "A waxy substance from sperm whale intestines, used in perfume.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["musk", "civet", "civet oil"],
+    "name": "Musk/Civet",
+    "origin": "Traditionally taken from the scent glands of musk deer or civet cats - modern fragrance almost always uses synthetic substitutes, but check if unspecified.",
+    "certainty": "sometimes"
+  },
+  {
+    "terms": ["egg", "egg white", "albumen", "ovalbumin"],
+    "name": "Egg",
+    "origin": "Made from chicken eggs.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["milk", "milk protein", "goat milk", "sheep milk"],
+    "name": "Milk",
+    "origin": "From cows, goats or sheep.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["propolis"],
+    "name": "Propolis",
+    "origin": "A resin-like substance bees make from plant sap and their own secretions.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["royal jelly"],
+    "name": "Royal Jelly",
+    "origin": "A secretion produced by worker honeybees to feed larvae and the queen.",
+    "certainty": "always"
+  },
+  {
+    "terms": ["carminic acid"],
+    "name": "Carminic Acid",
+    "origin": "The colour compound extracted from cochineal beetles (same source as carmine).",
+    "certainty": "always"
+  },
+  {
+    "terms": ["spermaceti", "cetyl palmitate"],
+    "name": "Spermaceti",
+    "origin": "Waxy oil found in the head cavities of sperm whales. (Now largely banned/replaced, but still worth flagging if the label uses the old name.)",
+    "certainty": "always"
+  }
+]
