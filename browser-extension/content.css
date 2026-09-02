@@ -1,0 +1,98 @@
+/* Badge injected onto retailer product pages by content.js.
+   Colours mirror the tier classes used on ahomekind.com itself
+   (see shelf.html's .hit.good/.warn/.bad/.check for the source palette),
+   so the verdict looks the same wherever someone sees it. */
+
+.ahk-badge {
+  all: initial;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  max-width: 480px;
+}
+
+.ahk-badge * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.ahk-badge-emoji {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ahk-badge-text {
+  flex: 1;
+  color: inherit;
+}
+
+.ahk-badge-text strong {
+  font-weight: 600;
+}
+
+.ahk-badge-link {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.ahk-badge-close {
+  all: unset;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 2px;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.ahk-badge-close:hover {
+  opacity: 1;
+}
+
+/* good - cruelty-free & vegan */
+.ahk-badge.ahk-good {
+  background: #e6efe3;
+  border-color: #c3d6bd;
+  color: #3f5a3a;
+}
+
+/* check - cruelty-free, vegan status needs checking */
+.ahk-badge.ahk-check {
+  background: #ece5d5;
+  border-color: #d6cbb0;
+  color: #6b6656;
+}
+
+/* warn - brand itself is fine, parent company isn't */
+.ahk-badge.ahk-warn {
+  background: #f6ecd9;
+  border-color: #e7d3a3;
+  color: #8a6a2a;
+}
+
+/* bad - tested on animals */
+.ahk-badge.ahk-bad {
+  background: #f3e2df;
+  border-color: #e3bdb6;
+  color: #8a332c;
+}
+
+/* unverified - not certified, but no evidence either way */
+.ahk-badge.ahk-unverified {
+  background: #ece5d5;
+  border-color: #d6cbb0;
+  color: #6b6656;
+}

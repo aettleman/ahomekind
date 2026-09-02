@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "A Home Kind - Cruelty-Free Check",
+  "version": "0.1.0",
+  "description": "Quietly checks whether the brand you're looking at is cruelty-free, while you shop on Amazon, Boots, Superdrug or Ocado.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://ahomekind.com/*",
+    "https://www.amazon.co.uk/*",
+    "https://www.boots.com/*",
+    "https://www.superdrug.com/*",
+    "https://www.ocado.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.co.uk/*",
+        "https://www.boots.com/*",
+        "https://www.superdrug.com/*",
+        "https://www.ocado.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
