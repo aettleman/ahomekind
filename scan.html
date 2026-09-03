@@ -218,7 +218,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <rect x="22.5" y="2" width="2" height="22" fill="#3d4a3a"/>
 </svg>
 scan a barcode</h1>
-<p class="scan-sub">Point your camera at any barcode, food, drink, cosmetics, household, anything with one, and I'll tell you what I know.</p>
+<p class="scan-sub">Point your camera at any barcode, food, drink, cosmetics, household, anything with one, and I'll tell you what I know. Don't have a barcode to hand, or want to check what's actually in it? Use the <a href="ingredient-check.html">ingredient checker</a> instead.</p>
 
 <div id="addHome">
 <span id="addHome-icon" aria-hidden="true">
@@ -634,7 +634,7 @@ if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 // wrongly read as a total dead end even though we do have a result.
 out += "<div class=\"rcard v-unknown\">";
 out += "<div class=\"rcard-top\"><div class=\"rcard-badge\" aria-hidden=\"true\">?</div><div><div class=\"rcard-name\">not on my list yet</div><div class=\"rcard-headline\">let's try another way</div></div></div>";
-out += "<p class=\"rcard-note\">The public barcode database doesn't have every product - own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered.</p>";
+out += "<p class=\"rcard-note\">The public barcode database doesn't have every product - own-brand and retailer ranges especially. That doesn't mean the brand itself isn't covered. Got the packet in your hand? You can also <a href=\"ingredient-check.html\">photograph the ingredients list</a> instead and I'll read it directly, no barcode needed.</p>";
 out += brandSearchWidget();
 out += "</div>";
 }
@@ -663,7 +663,7 @@ if(!brand && identified){
 // before it.
 out += "<div class=\"card\">";
 out += "<p class=\"section-label\" style=\"margin-top:0;\">cruelty-free status</p>";
-out += "<p style=\"font-size:13.5px; color:#5c5c4f; margin-bottom:14px;\">I don't have this brand in my cruelty-free list yet, so I can't give a verdict on it.</p>";
+out += "<p style=\"font-size:13.5px; color:#5c5c4f; margin-bottom:14px;\">I don't have this brand in my cruelty-free list yet, so I can't give a verdict on it. You can also <a href=\"ingredient-check.html\">photograph the ingredients list</a> to check what's actually in it.</p>";
 out += brandSearchWidget();
 out += "</div>";
 }
