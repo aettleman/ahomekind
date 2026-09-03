@@ -19,6 +19,11 @@
 <style>
 .hero-img { width:100%; max-height:340px; object-fit:cover; object-position:center; display:block; }
 @media(max-width:700px){ .hero-img { max-height:200px; } }
+.test-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin:22px 0 30px; }
+.stat-chip-row { display:flex; flex-wrap:wrap; gap:14px; margin:22px 0 8px; }
+.stat-chip { flex:1 1 130px; background:#fff; border:0.5px solid #dcd2b8; border-radius:14px; padding:16px 14px; text-align:center; }
+.stat-chip .stat-num { font-family:'Cormorant Garamond',serif; font-size:26px; color:#3d4a3a; display:block; line-height:1.1; }
+.stat-chip .stat-label { font-size:10.5px; letter-spacing:0.5px; color:#5c5c4f; margin-top:6px; display:block; }
 </style>
 </head>
 <body>
@@ -71,19 +76,35 @@
 
 <p class="section-label">the tests themselves</p>
 
-<p><strong>The Draize test</strong> is the one most people have heard of without knowing the name. A substance is placed directly onto the eye of a conscious rabbit. The rabbit is restrained so it can't move; its eyelids are held open so it can't blink the substance away. It's then observed for up to fourteen days and scored for redness, swelling, ulceration, bleeding and, in some cases, blindness. Often without pain relief.</p>
+<p>Tap a card for the fuller detail. Nothing graphic, just the mechanics most people never get told.</p>
 
-<p>Rabbits are used for this partly because they produce very few tears, so whatever is put in their eye stays there. Albino rabbits specifically, because there's no pigment to obscure the damage, which makes it easier to score.</p>
-
-<p>There's a skin version too. The fur is shaved off, the substance goes on, and the resulting reaction is measured.</p>
-
-<p><strong>Lethal dose testing</strong> does what the name says. Animals are forced to swallow, inhale or be injected with a substance to find the dose at which half of them die. The measurement <em>is</em> the death rate.</p>
-
-<p><strong>Longer studies</strong> test for things like cancer, genetic damage, and harm to developing foetuses. A single carcinogenicity study can use around 400 animals.</p>
-
-<p>Almost all of them are killed at the end, so their organs can be examined. That isn't a failure of the process. It's the process.</p>
-
-<p>Most of them won't live long enough to see their first birthday.</p>
+<div class="test-grid" id="testGrid"></div>
+<script>
+(function(){
+var tests = [
+{ name: 'the Draize eye test', front: 'A substance is placed directly into a conscious rabbit’s eye.', back: 'The rabbit is restrained so it can’t move; its eyelids are held open so it can’t blink the substance away. It’s observed for up to fourteen days and scored for redness, swelling, ulceration, bleeding and, in some cases, blindness — often without pain relief. Rabbits are used partly because they produce very few tears, so whatever’s put in stays there. Albino rabbits specifically, because there’s no pigment to obscure the damage.' },
+{ name: 'the skin test', front: 'Fur is shaved off, a substance is applied, and the reaction is measured.', back: 'The same restraint and lack of pain relief applies as the eye test — it’s the same category of procedure, just on skin instead of eyes. Reactions scored include redness, swelling and corrosion.' },
+{ name: 'lethal dose testing', front: 'Animals are dosed until half of them die.', back: 'Animals are forced to swallow, inhale or be injected with a substance to find the dose at which half of them die. The measurement is the death rate itself — that’s not a side effect of the test, it’s what’s being measured.' },
+{ name: 'longer studies', front: 'Testing for cancer, genetic damage, and harm to unborn young.', back: 'A single carcinogenicity study can use around 400 animals. Almost all of them are killed at the end so their organs can be examined — that isn’t a failure of the process, it’s the process. Most won’t live long enough to see their first birthday.' }
+];
+var grid = document.getElementById('testGrid');
+var html = '';
+for (var i=0;i<tests.length;i++){
+var t = tests[i];
+html += '<div class="flip-card">' +
+'<button type="button" class="flip-card-btn" id="testCard'+i+'" aria-label="Flip to see the detail">' +
+'<div class="flip-card-inner">' +
+'<div class="flip-front"><p class="flip-label">'+t.name+'</p><p class="flip-text">'+t.front+'</p><p class="flip-hint">tap for the detail &rarr;</p></div>' +
+'<div class="flip-back"><p class="flip-label">'+t.name+'</p><p class="flip-text">'+t.back+'</p><p class="flip-hint">tap to flip back</p></div>' +
+'</div></button></div>';
+}
+grid.innerHTML = html;
+grid.querySelectorAll('.flip-card').forEach(function(card){
+var btn = card.querySelector('.flip-card-btn');
+btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
+});
+})();
+</script>
 
 <p class="section-label">why beagles</p>
 
@@ -105,13 +126,17 @@
 
 <p class="section-label">the scale of it, in the UK</p>
 
-<p>Numbers can't do what a Draize test description does, but they're worth having, because they stop this being an abstract argument. According to the UK Home Office's own <a href="https://www.gov.uk/government/statistics/scientific-procedures-on-living-animals-great-britain-2025" target="_blank" rel="noopener">Statistics of Scientific Procedures on Living Animals, Great Britain, 2025</a>, there were 2.54 million procedures on animals in Great Britain in 2025, down from 2.64 million the year before.</p>
+<p>Numbers can't do what a Draize test description does, but they're worth having, because they stop this being an abstract argument. Here's the UK Home Office's own <a href="https://www.gov.uk/government/statistics/scientific-procedures-on-living-animals-great-britain-2025" target="_blank" rel="noopener">Statistics of Scientific Procedures on Living Animals, Great Britain, 2025</a>.</p>
 
-<p>That 2.54 million splits into two quite different categories. 1.32 million (52%) were "experimental procedures" - an animal used in an actual test or study. The other 1.22 million (48%) were "creation and breeding of genetically altered animals" - a separate category covering animals bred with a specific genetic modification, not animals used in a test for a specific experiment that day.</p>
+<div class="stat-chip-row">
+<div class="stat-chip"><span class="stat-num">2.54m</span><span class="stat-label">procedures on animals in Great Britain, 2025</span></div>
+<div class="stat-chip"><span class="stat-num">52%</span><span class="stat-label">were actual tests or studies (the rest is breeding)</span></div>
+<div class="stat-chip"><span class="stat-num">56%</span><span class="stat-label">of experimental animals were mice</span></div>
+</div>
 
-<p>Of the 1.32 million experimental procedures specifically, the species breakdown was: mice 56%, fish 16%, birds 10%, rats 9%, specially protected species (dogs, cats, horses, non-human primates) 1%, and other species 8%. That breakdown applies only to the experimental-procedures figure - not to the full 2.54 million total, which also includes breeding.</p>
+<p>That 2.54 million splits into two quite different categories: 1.32 million (52%) were "experimental procedures" - an animal used in an actual test or study - and the other 1.22 million (48%) were "creation and breeding of genetically altered animals," which is a separate category, not animals used in a test that day.</p>
 
-<p>One more distinction worth holding onto: "procedures" isn't the same as "animals." A single animal can be counted more than once if it's used in multiple procedures, so the true number of individual animals behind these figures is somewhat lower than the procedure count above - the Home Office data doesn't give a single clean "total animals" figure, so I won't invent one here.</p>
+<p>Of the 1.32 million experimental procedures, the species breakdown was mice 56%, fish 16%, birds 10%, rats 9%, specially protected species (dogs, cats, horses, non-human primates) 1%, and other species 8%. One distinction worth holding onto: "procedures" isn't the same as "animals" - a single animal can be counted more than once if it's used in multiple procedures, so the true number of individual animals is somewhat lower than the procedure count above. The Home Office data doesn't give a single clean "total animals" figure, so I won't invent one here.</p>
 
 <p class="section-label">the scale of it, globally</p>
 
