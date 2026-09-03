@@ -557,7 +557,7 @@ out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
 out += "<p style=\"margin-bottom:0; font-size:14px;\">" + b.note + "</p>";
-if(b.tier !== "good"){ out += "<div id=\"" + swapId + "\" style=\"margin-top:14px;\"></div>"; swapTargets.push({ id: swapId, brand: b }); }
+if(b.tier !== "good" && b.tier !== "check"){ out += "<div id=\"" + swapId + "\" style=\"margin-top:14px;\"></div>"; swapTargets.push({ id: swapId, brand: b }); }
 out += "</div>";
 });
 } else {

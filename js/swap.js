@@ -249,10 +249,17 @@
 
   // Renders the whole "looking for something kinder?" flow into
   // containerEl for the given brand-like object ({name, tier, slug?}).
-  // Does nothing if the brand is already on the good list.
+  // Does nothing once the brand itself is already certified cruelty-free --
+  // that's "good" (fully vegan too) and "check" (certified cruelty-free,
+  // vegan status just varies by product). brand-check.html calls this same
+  // function with its own tier vocabulary, where "unknown" is exactly the
+  // "check" case above (see its ratingClass -> tierClass mapping), so it's
+  // included here too. A "kinder swap" prompt doesn't make sense on top of
+  // a brand that's already cruelty-free; the only open question there is a
+  // vegan one, not a cruelty one.
   function render(containerEl, brandLike, opts){
     if(!containerEl || !brandLike) return;
-    if(brandLike.tier === "good") { containerEl.innerHTML = ""; return; }
+    if(brandLike.tier === "good" || brandLike.tier === "check" || brandLike.tier === "unknown") { containerEl.innerHTML = ""; return; }
     var basePath = (opts && opts.basePath) || "";
     containerEl.innerHTML = "<p class=\"kswap-loading\">looking for something kinder&hellip;</p>";
     Promise.all([loadBrands(basePath), loadComparisons(basePath)]).then(function(results){

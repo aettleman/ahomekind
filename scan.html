@@ -607,9 +607,9 @@ if(!input || !btn) return;
 function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
-? verdictHTML(brand) + (brand.tier !== "good" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
+? verdictHTML(brand) + (brand.tier !== "good" && brand.tier !== "check" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
 : "<p style=\"font-size:13.5px; color:#7a7561; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
-if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
+if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
 if(brand) wireShareWidget("share2", brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 }
@@ -624,7 +624,7 @@ var brand = knownBrand || findBrand(brandText) || findBrand(name);
 var identified = !!(name || brandText);
 if(brand){
 out += verdictHTML(brand);
-if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
+if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 } else if(!identified){
@@ -669,7 +669,7 @@ out += "</div>";
 }
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + out + "</div>";
-if(brand && brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
+if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
@@ -891,11 +891,11 @@ if(!brand) return;
 var out = "<div class=\"result-in\">";
 out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:10px;\">shared result</p>";
 out += verdictHTML(brand);
-if(brand.tier !== "good") out += "<div id=\"swapSection\"></div>";
+if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
 out += "</div>";
 el("results").innerHTML = out;
-if(brand.tier !== "good" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
+if(brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 wireShareWidget("share1", brand);
 if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 } catch(e){}

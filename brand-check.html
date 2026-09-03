@@ -467,7 +467,11 @@ html += '</details>';
 }
 
 var tierValue = tierClass === 'v-bad' ? 'bad' : tierClass === 'v-warn' ? 'warn' : tierClass === 'v-unknown' ? 'unknown' : 'good';
-if (tierValue !== 'good') {
+// "unknown" here is brand-check.html's own label for the "check" tier --
+// certified cruelty-free itself, only the vegan status varies by product
+// -- so it belongs alongside "good" here: no "looking for something
+// kinder?" prompt on a brand that's already cruelty-free.
+if (tierValue !== 'good' && tierValue !== 'unknown') {
 var swapSlotId = 'kswap-' + normalizeSearch(name).replace(/[^a-z0-9]/g, '') + '-' + Math.random().toString(36).slice(2, 7);
 html += '<div id="' + swapSlotId + '" class="rcard-swap-slot"></div>';
 }
@@ -477,7 +481,7 @@ card.innerHTML = html;
 card.dataset.cf = cfClass;
 card.dataset.vegan = veganClass;
 
-if (tierValue !== 'good') {
+if (tierValue !== 'good' && tierValue !== 'unknown') {
 var slotEl = card.querySelector('.rcard-swap-slot');
 if (slotEl && window.AHKSwap) AHKSwap.render(slotEl, { name: name, tier: tierValue });
 }
