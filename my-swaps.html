@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Swaps - a home kind</title>
+<meta name="description" content="A private, running record of the cruelty-free and vegan swaps you've made - whether you're just starting out or have been doing this for years.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260903">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.ms-intro { max-width:620px; }
+.ms-tally { background:#3d4a3a; border-radius:14px; padding:26px 24px; margin:24px 0 30px; text-align:center; }
+.ms-tally .num { font-family:'Cormorant Garamond',serif; font-size:52px; color:#e6d4a8; line-height:1; }
+.ms-tally .lbl { color:#c9d1c3; font-size:12.5px; letter-spacing:1px; margin-top:6px; }
+.ms-form { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+.ms-form input[type=text] { flex:1 1 200px; padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:10px; font:inherit; font-size:14px; }
+.ms-form select { padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:10px; font:inherit; font-size:13.5px; background:#fff; }
+.ms-list { margin-top:24px; }
+.ms-item { display:flex; align-items:center; justify-content:space-between; gap:14px; background:#fff; border:0.5px solid #dcd2b8; border-radius:12px; padding:14px 16px; margin-bottom:10px; }
+.ms-item-main { font-size:14px; color:#3d4a3a; }
+.ms-item-cat { font-size:11px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-top:2px; }
+.ms-item-date { font-size:11.5px; color:#8a8672; }
+.ms-remove { background:none; border:0; color:#c98a3a; cursor:pointer; font-size:12.5px; padding:4px; }
+.ms-empty { color:#8a8672; font-size:13.5px; padding:20px 0; }
+.ms-note { font-size:12.5px; color:#8a8672; margin-top:6px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="ingredient-check.html">check ingredients</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="start-here.html">start here</a>
+<a href="quiz.html">take the quiz</a>
+<a href="impact.html">your impact</a>
+<a href="my-swaps.html">my swaps</a>
+<a href="what-testing-means.html">what testing means</a>
+<a href="money.html">who gets your money</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-watch.html">brand watch</a>
+<a href="instead-of.html">popular swaps</a>
+<a href="food.html">food &amp; kitchen</a>
+<a href="fashion.html">fashion &amp; accessories</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap" id="main">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">my swaps</h1>
+
+<p class="ms-intro">This isn't just for people mid-switch. If you're already fully vegan and cruelty-free, you're not exempt from this page, you're the reason it exists in the first place, keeping a record of the choices that got you here, or the ones you're still making as brands change and new alternatives turn up. Log a swap whenever you make one, big or small, and this keeps a running, private tally - nothing is sent anywhere, it lives only in this browser.</p>
+
+<div class="ms-tally">
+<div class="num" id="msCount">0</div>
+<div class="lbl" id="msLabel">swaps logged so far</div>
+</div>
+
+<form class="ms-form" id="msForm">
+<input type="text" id="msWhat" placeholder="what did you swap? e.g. shampoo to Faith in Nature" required maxlength="120">
+<select id="msCategory">
+<option value="beauty">beauty &amp; skincare</option>
+<option value="hair">hair care</option>
+<option value="household">household &amp; cleaning</option>
+<option value="food">food &amp; kitchen</option>
+<option value="fashion">fashion &amp; accessories</option>
+<option value="other">other</option>
+</select>
+<button type="submit" class="btn">log it</button>
+</form>
+<p class="ms-note">Already know your rough impact from going plant-based? The <a href="impact.html">impact calculator</a> is the place for the numbers - this page is just about keeping count of what you've actually changed.</p>
+
+<div class="ms-list" id="msList"></div>
+<p class="ms-empty" id="msEmpty" hidden>Nothing logged yet - your first swap goes here.</p>
+</main>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-21" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-21" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-21" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-21" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-21" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
+<script src="js/nav.js?v=20260903"></script>
+<script src="js/newsletter.js"></script>
+<script>
+(function(){
+var STORE_KEY = 'ahk-my-swaps';
+var CAT_LABEL = { beauty:'beauty & skincare', hair:'hair care', household:'household & cleaning', food:'food & kitchen', fashion:'fashion & accessories', other:'other' };
+
+function load(){
+  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || []; } catch(e){ return []; }
+}
+function save(list){
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(list)); } catch(e){}
+}
+function esc(s){ return (s||'').replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+function fmtDate(iso){
+  var d = new Date(iso);
+  return d.toLocaleDateString(undefined, { day:'numeric', month:'short', year:'numeric' });
+}
+
+var list = load();
+var countEl = document.getElementById('msCount');
+var labelEl = document.getElementById('msLabel');
+var listEl = document.getElementById('msList');
+var emptyEl = document.getElementById('msEmpty');
+
+function render(){
+  countEl.textContent = list.length;
+  labelEl.textContent = list.length === 1 ? 'swap logged so far' : 'swaps logged so far';
+  emptyEl.hidden = list.length > 0;
+  var html = '';
+  list.slice().reverse().forEach(function(item){
+    html += '<div class="ms-item" data-id="' + item.id + '">' +
+      '<div><div class="ms-item-main">' + esc(item.what) + '</div><div class="ms-item-cat">' + esc(CAT_LABEL[item.category] || item.category) + '</div></div>' +
+      '<div style="text-align:right;"><div class="ms-item-date">' + fmtDate(item.date) + '</div><button type="button" class="ms-remove" data-id="' + item.id + '">remove</button></div>' +
+    '</div>';
+  });
+  listEl.innerHTML = html;
+}
+
+document.getElementById('msForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var what = document.getElementById('msWhat').value.trim();
+  if (!what) return;
+  var category = document.getElementById('msCategory').value;
+  list.push({ id: Date.now() + '-' + Math.random().toString(36).slice(2,7), what: what, category: category, date: new Date().toISOString() });
+  save(list);
+  document.getElementById('msWhat').value = '';
+  render();
+});
+
+listEl.addEventListener('click', function(ev){
+  var btn = ev.target.closest('.ms-remove');
+  if (!btn) return;
+  var id = btn.dataset.id;
+  list = list.filter(function(i){ return i.id !== id; });
+  save(list);
+  render();
+});
+
+render();
+})();
+</script>
+</body>
+</html>

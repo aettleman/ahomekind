@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Brand Watch - a home kind</title>
+<meta name="description" content="A running, dated feed of every brand added, changed or reassessed on a home kind - not just today's verdict, but the history behind it.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260903">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.bw-intro { max-width:620px; }
+.bw-filters { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 26px; }
+.bw-filter { font-size:11.5px; letter-spacing:0.5px; padding:7px 14px; border-radius:20px; border:0.5px solid #cfc4a9; background:#fff; color:#5c5c4f; cursor:pointer; }
+.bw-filter.active { background:#3d4a3a; border-color:#3d4a3a; color:#f4efe2; }
+.bw-feed { position:relative; padding-left:22px; border-left:2px solid #dcd2b8; }
+.bw-item { position:relative; padding-bottom:22px; }
+.bw-item::before { content:''; position:absolute; left:-27px; top:4px; width:10px; height:10px; border-radius:50%; background:#6f8768; border:2px solid #faf8f2; }
+.bw-item.tier-change::before { background:#c98a3a; }
+.bw-item.note-update::before { background:#8a8672; }
+.bw-date { font-size:11px; letter-spacing:0.5px; color:#8a8672; text-transform:uppercase; margin-bottom:4px; }
+.bw-summary { font-size:14px; line-height:1.6; color:#3d4a3a; }
+.bw-summary a { color:#4d6b4f; font-weight:600; }
+.bw-empty { color:#8a8672; font-size:13.5px; padding:30px 0; }
+.bw-loadmore { display:block; margin:18px auto 0; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="ingredient-check.html">check ingredients</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="start-here.html">start here</a>
+<a href="quiz.html">take the quiz</a>
+<a href="impact.html">your impact</a>
+<a href="my-swaps.html">my swaps</a>
+<a href="what-testing-means.html">what testing means</a>
+<a href="money.html">who gets your money</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-watch.html">brand watch</a>
+<a href="instead-of.html">popular swaps</a>
+<a href="food.html">food &amp; kitchen</a>
+<a href="fashion.html">fashion &amp; accessories</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap" id="main">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">brand watch</h1>
+
+<p class="bw-intro">Every brand list on the internet is a snapshot with no history - you can't tell if it was checked yesterday or two years ago. This one has a memory. Every addition, every tier change, every rewritten note gets logged here automatically, with the date, straight from the same records that run brand check. If you're new here, it's a good way to see this list is actually maintained. If you're already cruelty-free and vegan and just swing by to check for new or changed brands, this is the page built for exactly that - skip the noise, see what's actually different since you last looked.</p>
+
+<div class="bw-filters" id="bwFilters">
+<button type="button" class="bw-filter active" data-filter="all">everything</button>
+<button type="button" class="bw-filter" data-filter="added">new brands</button>
+<button type="button" class="bw-filter" data-filter="tier-change">status changes</button>
+<button type="button" class="bw-filter" data-filter="note-update">note updates</button>
+</div>
+
+<div class="bw-feed" id="bwFeed"></div>
+<p class="bw-empty" id="bwEmpty" hidden>Nothing matches that filter yet.</p>
+<button type="button" class="btn bw-loadmore" id="bwLoadMore">show more</button>
+</main>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-20" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-20" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-20" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-20" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-20" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
+<script src="js/nav.js?v=20260903"></script>
+<script src="js/newsletter.js"></script>
+<script>
+(function(){
+var TYPE_LABEL = { added: 'new brand', 'tier-change': 'status changed', 'note-update': 'note updated' };
+var PAGE_SIZE = 25;
+var all = [];
+var filtered = [];
+var shown = 0;
+var feed = document.getElementById('bwFeed');
+var empty = document.getElementById('bwEmpty');
+var loadMoreBtn = document.getElementById('bwLoadMore');
+
+function esc(s){ return (s||'').replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+
+function render(reset){
+  if (reset){ feed.innerHTML=''; shown=0; }
+  var next = filtered.slice(shown, shown + PAGE_SIZE);
+  var html = '';
+  next.forEach(function(e){
+    html += '<div class="bw-item ' + e.type + '">' +
+      '<p class="bw-date">' + e.date + ' &middot; ' + (TYPE_LABEL[e.type]||e.type) + '</p>' +
+      '<p class="bw-summary">' + esc(e.summary) + ' <a href="brands/' + esc(e.slug) + '/">view brand &rarr;</a></p>' +
+    '</div>';
+  });
+  feed.insertAdjacentHTML('beforeend', html);
+  shown += next.length;
+  empty.hidden = filtered.length > 0;
+  loadMoreBtn.hidden = shown >= filtered.length;
+}
+
+function applyFilter(type){
+  filtered = type === 'all' ? all : all.filter(function(e){ return e.type === type; });
+  render(true);
+}
+
+document.getElementById('bwFilters').addEventListener('click', function(ev){
+  var btn = ev.target.closest('.bw-filter');
+  if (!btn) return;
+  document.querySelectorAll('.bw-filter').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  applyFilter(btn.dataset.filter);
+});
+
+loadMoreBtn.addEventListener('click', function(){ render(false); });
+
+fetch('data/changelog.json').then(function(r){ return r.json(); }).then(function(data){
+  all = data || [];
+  applyFilter('all');
+}).catch(function(){
+  empty.hidden = false;
+  loadMoreBtn.hidden = true;
+});
+})();
+</script>
+</body>
+</html>
