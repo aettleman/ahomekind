@@ -189,16 +189,12 @@ sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
 '<a href="/shelf.html">scan a shelf</a>' +
-'<a href="/start-here.html">start here</a>' +
+'<a href="/learn.html">learn</a>' +
 '<a href="/quiz.html">take the quiz</a>' +
 '<a href="/impact.html">your impact</a>' +
 '<a href="/my-swaps.html">my swaps</a>' +
-'<a href="/what-testing-means.html">what testing means</a>' +
-'<a href="/money.html">who gets your money</a>' +
 '<a href="/brand-watch.html">brand watch</a>' +
-'<a href="/instead-of.html">popular swaps</a>' +
-'<a href="/food.html">food &amp; kitchen</a>' +
-'<a href="/fashion.html">fashion &amp; accessories</a>' +
+'<a href="/swap-guide.html">swap guide</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/about.html">about</a>' +
 '<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +
@@ -324,7 +320,7 @@ btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
 // "One small swap" -- a single instead-of/try pair on the homepage,
 // picked from the day of the year so it's stable for the whole visit
 // and changes daily rather than reshuffling on every reload. Pairs are
-// the same ones already verified on instead-of.html and brand-check,
+// the same ones already verified on swap-guide.html and brand-check,
 // nothing new is claimed here.
 document.addEventListener('DOMContentLoaded', function(){
 var el = document.getElementById('swapOfDay');
@@ -362,5 +358,5 @@ el.innerHTML =
 '<div class="swap-of-day-side"><p class="swap-label try">try</p><p class="swap-name"><a href="' + pick.tryHref + '">' + pick.tryName + '</a></p><p class="swap-note">' + pick.tryNote + '</p></div>' +
 '</div>' +
 '</div>' +
-'<p style="margin-top:22px;"><a href="/instead-of.html" class="btn">see more swaps</a></p>';
+'<p style="margin-top:22px;"><a href="/swap-guide.html" class="btn">see more swaps</a></p>';
 });

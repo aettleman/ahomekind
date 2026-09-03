@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Popular Products, Kinder Swaps - a home kind</title>
-<meta name="description" content="Well-known everyday brands that aren't cruelty-free, paired with genuinely certified cruelty-free alternatives.">
+<title>Swap Guide - a home kind</title>
+<meta name="description" content="Popular products paired with cruelty-free alternatives, plus food and fashion, in one place.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260903">
 <link rel="manifest" href="manifest.json">
@@ -17,6 +17,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
+.hub-tabs { display:flex; gap:8px; flex-wrap:wrap; margin:22px 0 30px; border-bottom:1px solid #dcd2b8; padding-bottom:2px; }
+.hub-tab { font:inherit; font-size:13px; font-weight:600; letter-spacing:0.3px; color:#8a8672; background:none; border:0; padding:10px 4px 12px; cursor:pointer; position:relative; }
+.hub-tab.active { color:#3d4a3a; }
+.hub-tab.active::after { content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#4d6b4f; }
+.hub-panel { display:none; }
+.hub-panel.active { display:block; }
 .swap-card { background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:14px; padding:22px 22px 20px; margin-bottom:18px; }
 .swap-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
 .swap-side { flex:1; min-width:220px; }
@@ -30,13 +36,42 @@
 @media(max-width:520px){ .swap-arrow { display:none; } }
 .swap-also { margin-top:12px; padding-top:12px; border-top:0.5px solid #dcd2b8; font-size:12px; line-height:1.6; color:#5c5c4f; }
 .swap-also strong { color:#3d4a3a; }
-
-/* Category headers on this page get their own pill-style treatment,
-   distinct from the site-wide .section-label, so "haircare", "skincare"
-   etc. read as a clear divider between groups of swap cards rather
-   than a plain caption line. */
 .swap-section-label { display:inline-block; margin:40px 0 16px; padding:9px 20px; background:#3d4a3a; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; border-radius:30px; }
-.swap-section-label:first-of-type { margin-top:26px; }
+.swap-section-label:first-of-type { margin-top:6px; }
+.ingredient-watch { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:12px; }
+.iw-row { border-radius:8px; padding:12px 14px; font-size:13.5px; line-height:1.6; margin-bottom:0; }
+.iw-name { display:block; font-weight:600; color:#3d4a3a; margin-bottom:3px; }
+.iw-note { color:#5c5c4f; }
+.iw-animal { background:#f3e2df; border:1px solid #d9a89f; }
+.iw-ambiguous { background:#f6ecd9; border:1px solid #dfc491; }
+.iw-key { font-size:12px; color:#8a8672; margin-bottom:14px; }
+.iw-key span { display:inline-block; margin-right:16px; }
+.iw-key .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; }
+.iw-key .dot.animal { background:#d9a89f; }
+.iw-key .dot.ambiguous { background:#dfc491; }
+.iw-why { margin-top:8px; }
+.iw-why summary { cursor:pointer; font-size:11.5px; letter-spacing:0.6px; text-transform:uppercase; color:#8a4a2a; font-weight:600; }
+.iw-why summary:hover { color:#5c2c17; }
+.iw-why p { font-size:13px; line-height:1.7; color:#5c5c4f; margin:10px 0 0; }
+.iw-why .iw-sources { font-size:11.5px; margin-top:8px; }
+.iw-why .iw-sources a { color:#8a4a2a; }
+.pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid #6f8768; padding:4px 0 4px 20px; margin:26px 0; }
+.material-card { margin-bottom:0; }
+.material-name { font-family:'Cormorant Garamond',serif; font-size:19px; letter-spacing:0.5px; color:#3d4a3a; margin-bottom:8px; }
+.material-what { font-size:13.5px; color:#5c5c4f; margin-bottom:10px; line-height:1.7; }
+.material-note { font-size:13px; color:#5c5c4f; line-height:1.7; margin-bottom:10px; padding:10px 12px; background:#f6ecd9; border:1px solid #dfc491; border-radius:8px; }
+.material-lookfor { font-size:13px; line-height:1.6; margin-bottom:0; }
+.material-lookfor strong { color:#4d6b4f; }
+.fur-pill { display:inline-flex; align-items:center; gap:6px; padding:7px 13px; border-radius:20px; font-size:12px; line-height:1.3; margin-bottom:10px; }
+.fur-pill.programme { background:#dbe8d7; color:#33502f; }
+.fur-pill.self-declared { background:#f6ecd9; color:#8a6a2a; }
+.brand-card { margin-bottom:0; }
+.brand-name { font-family:'Cormorant Garamond',serif; font-size:18px; color:#3d4a3a; margin-bottom:8px; }
+.sells-note { font-size:13px; color:#5c5c4f; line-height:1.6; margin-bottom:0; }
+.controversy-note { font-size:13px; color:#8a332c; line-height:1.7; margin-top:10px; padding:10px 12px; background:#f3e2df; border:1px solid #d9a89f; border-radius:8px; margin-bottom:0; }
+.source-links { font-size:12px; margin-top:10px; margin-bottom:0; }
+.source-links a { color:#6f8768; }
+#materialsList, #brandsList { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; align-items:start; }
 </style>
 </head>
 <body>
@@ -58,19 +93,15 @@
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
 <span class="dd-m">
-<a href="start-here.html">start here</a>
+<a href="learn.html">learn</a>
 <a href="quiz.html">take the quiz</a>
 <a href="impact.html">your impact</a>
-<a href="what-testing-means.html">what testing means</a>
-<a href="money.html">who gets your money</a>
 <a href="my-swaps.html">my swaps</a>
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="brand-watch.html">brand watch</a>
-<a href="instead-of.html">popular swaps</a>
-<a href="food.html">food &amp; kitchen</a>
-<a href="fashion.html">fashion &amp; accessories</a>
+<a href="swap-guide.html">swap guide</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
 </span></span>
@@ -80,7 +111,14 @@
 </header>
 
 <main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">popular products, kinder swaps</h1>
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">swap guide</h1>
+<div class="hub-tabs" id="hubTabs">
+<button type="button" class="hub-tab" data-tab="swaps">popular swaps</button>
+<button type="button" class="hub-tab" data-tab="food">food &amp; kitchen</button>
+<button type="button" class="hub-tab" data-tab="fashion">fashion &amp; accessories</button>
+</div>
+
+<div class="hub-panel" id="panel-swaps">
 <p>Some of the biggest names on the shelf are still not cruelty-free - not because of a rumour or an old boycott, but because their parent company sells into markets like mainland China, where animal testing on cosmetics can still be legally required, and hasn't adopted a policy that rules it out everywhere. Here are the ones you've probably got in your bathroom or under your sink right now, each paired with a genuinely certified alternative that does the same job.</p>
 <p style="font-size:13px; color:#8a8672;">Every brand below, on both sides, is pulled straight from my <a href="brand-check.html">brand check</a> database - nothing here is a one-off claim, you can look each one up yourself.</p>
 
@@ -453,26 +491,157 @@
 </div>
 
 <p style="margin-top:30px;"><a href="brand-check.html" class="btn">search the full brand check</a></p>
+</div>
+
+<div class="hub-panel" id="panel-food">
+<p>This site is mostly about what's on the shelf next to the food - cosmetics, cleaning products, toiletries. But food is part of the same picture. Animal agriculture and animal testing aren't the same industry, but they share a root: how much weight we give to an animal's experience when it's inconvenient to us. If brand-checking your bathroom cabinet has got you thinking about the kitchen too, this is a gentle place to start - not a diet plan, just a next step if you want one.</p>
+
+<p class="pull-quote">"Is it vegan?" and "was it produced with better welfare?" are two different questions. This page is mostly about the first one.</p>
+
+<p class="section-label" style="margin-top:30px;">cruelty-free vs vegan, for food</p>
+<p>With cosmetics, cruelty-free is mostly about animal testing, and vegan is about ingredients. Food doesn't really have an animal-testing angle, so I think of it as two separate questions instead.</p>
+<p><strong>Is it vegan?</strong> This is about ingredients only - does the product contain anything derived from an animal, whether that's obvious (meat, milk, honey) or hidden (gelatine in a sweet, whey in a flavoured crisp, animal rennet in a cheese)? A product either is or isn't, based on what's actually in it.</p>
+<p><strong>Was it produced with better welfare?</strong> A completely different question, and the one free-range, cage-free and grass-fed labels are trying to answer. Those are about how an animal was kept during its life, not about whether the product contains animal-derived ingredients at all. A free-range egg still comes from a chicken; a grass-fed burger is still beef. Both questions are valid starting points, they're just not the same one, and I try to be clear about which I'm answering rather than blur the two together.</p>
+
+<p class="section-label" style="margin-top:30px;">hidden animal ingredients to watch for</p>
+<p>Some of these are always animal-derived. Others genuinely could go either way and the label won't always say, so I've marked those honestly rather than guessing.</p>
+<div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
+<div id="foodIngredientList" class="ingredient-watch"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
+
+<p class="section-label" style="margin-top:30px;">easy swaps, no pressure</p>
+<p>You don't have to overhaul everything at once. If you're just starting to look at dairy, eggs or gelatine-based sweets, here are a few gentle starting points.</p>
+<div class="card" style="margin-top:14px;">
+<p><strong>Dairy</strong> is probably the easiest place to begin. Oat, soya, almond and pea milks work well in tea, coffee and cereal, and vegan cheeses, yoghurts and butters have come a long way, so it's worth trying a few brands to find ones you actually like rather than judging the whole category on the first one.</p>
+<p><strong>Eggs</strong> can feel trickier since they do a few different jobs in cooking. For baking, mashed banana, applesauce, or a flax or chia "egg" (ground seeds mixed with water) work well as a binder. For scrambles or omelettes, chickpea flour and tofu-based versions are surprisingly close.</p>
+<p style="margin-bottom:0;"><strong>Gelatine-based sweets</strong> are one of those hidden-ingredient areas, since gelatine turns up in jellies, marshmallows and some gummy sweets without always being obvious. Agar agar (a seaweed-based setting agent) and pectin-based sweets are easy substitutes, and a growing number of mainstream sweet brands now make gelatine-free versions. None of this needs to happen overnight - swapping one thing at a time still counts.</p>
+</div>
+
+<div class="card" style="margin-top:24px;">
+<p class="rating">&#127807; a free place to start</p>
+<h3>PETA's free vegan starter kit</h3>
+<p>PETA offers a free vegan starter kit - recipes, meal plans and practical tips to get going, sent straight to you at no cost. It's their resource, not mine; I'm just pointing you to it because it's a solid, well-tested starting point.</p>
+<p style="margin-top:14px;"><a class="btn" href="https://www.peta.org/lifestyle/food/free-vegan-starter-kit/" target="_blank" rel="noopener">get PETA's free vegan starter kit &rarr;</a></p>
+</div>
+
+<p style="margin-top:28px;">If you'd rather ease in than overhaul everything at once, the <a href="impact.html">impact page</a> shows what just a few plant-based days a week actually adds up to, with honest numbers rather than dramatic ones. And if you haven't already, the <a href="quiz.html">quiz</a> and <a href="brand-check.html">brand check</a> are still the fastest way to clean up what's already in your basket.</p>
+</div>
+
+<div class="hub-panel" id="panel-fashion">
+<p>Cruelty-free here means something different than it does on the rest of this site. With cosmetics, it's about whether the company tested on animals. With clothes, it's about whether the material itself is animal-derived, leather, wool, silk, down, fur, exotic skins, regardless of the brand's testing policy. A brand can be genuinely fur-free and still sell plenty of leather and wool, so I've kept the two questions separate rather than trying to squeeze fashion into the same tier system used for brand-check.</p>
+
+<p class="pull-quote">Being fur-free is genuinely good. It is not the same as being cruelty-free.</p>
+
+<p class="section-label" style="margin-top:30px;">materials glossary</p>
+<p>What each one actually is, and what to search for instead if you'd rather avoid it.</p>
+<div id="materialsList" style="margin-top:14px;"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
+
+<p class="section-label" style="margin-top:36px;">where major UK retailers actually stand</p>
+<p>Being fur-free is genuinely good, but it's not the same as being fully cruelty-free in the way that phrase is used elsewhere on this site, since most fur-free brands still sell leather, wool and down. I've noted where a policy is a self-declared corporate commitment versus backed by a third-party programme like Fur Free Retailer, since neither of these is independently audited the way Leaping Bunny certifies cosmetics, so I'd treat all of them as good-faith commitments rather than guarantees.</p>
+<div id="brandsList" style="margin-top:14px;"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
+
+<p style="margin-top:28px; font-size:12.5px; color:#8a8672;">Spotted something out of date, or a brand you'd like me to look into? <a href="mailto:hello@ahomekind.com?subject=Fashion%20brand%20policy%20update">let me know</a> and I'll check it.</p>
+</div>
 </main>
+
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
 <p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
-<form class="newsletter-form" id="nf-9" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<form class="newsletter-form" id="nf-31" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
 <input type="hidden" value="1" name="embed">
 <div class="nf-row">
-<label for="nf-email-9" class="visually-hidden">Email address</label>
-<input type="email" id="nf-email-9" name="email" placeholder="you@example.com" autocomplete="email" required>
+<label for="nf-email-31" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-31" name="email" placeholder="you@example.com" autocomplete="email" required>
 <button type="submit" class="btn">join the list</button>
 </div>
 <label class="nf-consent">
-<input type="checkbox" id="nf-consent-9" required>
+<input type="checkbox" id="nf-consent-31" required>
 <span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
 </label>
-<p class="nf-msg" id="nf-msg-9" role="status" aria-live="polite"></p>
+<p class="nf-msg" id="nf-msg-31" role="status" aria-live="polite"></p>
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260904"></script>
+<script src="js/nav.js?v=20260905"></script>
 <script src="js/newsletter.js"></script>
+<script>
+(function(){
+var TABS = ['swaps', 'food', 'fashion'];
+var tabButtons = document.querySelectorAll('.hub-tab');
+function show(tab){
+  if (TABS.indexOf(tab) === -1) tab = 'swaps';
+  tabButtons.forEach(function(btn){ btn.classList.toggle('active', btn.dataset.tab === tab); });
+  TABS.forEach(function(t){
+    var panel = document.getElementById('panel-' + t);
+    if (panel) panel.classList.toggle('active', t === tab);
+  });
+}
+tabButtons.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    history.replaceState(null, '', '#' + btn.dataset.tab);
+    show(btn.dataset.tab);
+  });
+});
+show((window.location.hash || '#swaps').slice(1));
+})();
+
+fetch('data/food-ingredients.json').then(function(r){ return r.json(); }).then(function(list){
+var el = document.getElementById('foodIngredientList');
+var html = '';
+(list || []).forEach(function(item){
+html += '<div class="iw-row iw-' + item.type + '"><span class="iw-name">' + item.name + '</span><span class="iw-note">' + item.note + '</span>';
+if(item.detail){
+html += '<details class="iw-why"><summary>why isn\'t this vegan?</summary><p>' + item.detail + '</p>';
+if(item.sources && item.sources.length){
+html += '<p class="iw-sources">' + item.sources.map(function(s){ return '<a href="' + s.url + '" target="_blank" rel="noopener">' + s.label + '</a>'; }).join(' &middot; ') + '</p>';
+}
+html += '</details>';
+}
+html += '</div>';
+});
+el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the list right now.</p>';
+}).catch(function(){
+document.getElementById('foodIngredientList').innerHTML = '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the list right now.</p>';
+});
+
+fetch('data/fashion-materials.json').then(function(r){ return r.json(); }).then(function(list){
+var el = document.getElementById('materialsList');
+var html = '';
+(list || []).forEach(function(m){
+html += '<div class="card material-card">';
+html += '<p class="material-name">' + m.name + '</p>';
+html += '<p class="material-what">' + m.what + '</p>';
+html += '<p class="material-note">' + m.note + '</p>';
+html += '<p class="material-lookfor"><strong>look for instead:</strong> ' + m.lookFor + '</p>';
+html += '</div>';
+});
+el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the glossary right now.</p>';
+}).catch(function(){
+document.getElementById('materialsList').innerHTML = '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the glossary right now.</p>';
+});
+
+fetch('data/fashion-brands.json').then(function(r){ return r.json(); }).then(function(list){
+var el = document.getElementById('brandsList');
+var html = '';
+(list || []).forEach(function(b){
+html += '<div class="card brand-card">';
+html += '<p class="brand-name">' + b.name + '</p>';
+html += '<span class="fur-pill ' + b.furFreeStatus + '">' + (b.furFreeStatus === 'programme' ? 'fur-free (programme member)' : 'fur-free (self-declared)') + '</span>';
+html += '<p class="sells-note">' + b.furFreeNote + '</p>';
+if(b.stillSells && b.stillSells.length){
+html += '<p class="sells-note" style="margin-top:8px;"><strong>still sells:</strong> ' + b.stillSells.join(', ') + '. ' + (b.sellsNote || '') + '</p>';
+}
+if(b.controversy){
+html += '<p class="controversy-note">' + b.controversy + '</p>';
+}
+if(b.sources && b.sources.length){
+html += '<p class="source-links">sources: ' + b.sources.map(function(s){ return '<a href="' + s.url + '" target="_blank" rel="noopener">' + s.label + '</a>'; }).join(' &middot; ') + '</p>';
+}
+html += '</div>';
+});
+el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load brand research right now.</p>';
+}).catch(function(){
+document.getElementById('brandsList').innerHTML = '<p style="color:#8a8672; font-size:13px;">Couldn\'t load brand research right now.</p>';
+});
+</script>
 </body>
 </html>

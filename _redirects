@@ -1,0 +1,8 @@
+# Old standalone pages merged into hub pages (learn.html, swap-guide.html)
+# on 2026-09-03. 301s so bookmarks and any indexed links keep working.
+/start-here.html /learn.html#start 301
+/what-testing-means.html /learn.html#testing 301
+/money.html /learn.html#money 301
+/instead-of.html /swap-guide.html#swaps 301
+/food.html /swap-guide.html#food 301
+/fashion.html /swap-guide.html#fashion 301

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Learn - a home kind</title>
+<meta name="description" content="Start here, what testing means, and who actually gets your money - the three big questions, in one place.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260903">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.hub-tabs { display:flex; gap:8px; flex-wrap:wrap; margin:22px 0 30px; border-bottom:1px solid #dcd2b8; padding-bottom:2px; }
+.hub-tab { font:inherit; font-size:13px; font-weight:600; letter-spacing:0.3px; color:#8a8672; background:none; border:0; padding:10px 4px 12px; cursor:pointer; position:relative; }
+.hub-tab.active { color:#3d4a3a; }
+.hub-tab.active::after { content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#4d6b4f; }
+.hub-panel { display:none; }
+.hub-panel.active { display:block; }
+.hero-banner { width:100%; background:#efe7d0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.hero-banner img { display:block; max-width:100%; width:auto; height:auto; max-height:320px; margin:0 auto; }
+@media(max-width:700px){ .hero-banner img { max-height:190px; } }
+.test-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin:22px 0 30px; }
+.stat-chip-row { display:flex; flex-wrap:wrap; gap:14px; margin:22px 0 8px; }
+.stat-chip { flex:1 1 130px; background:#fff; border:0.5px solid #dcd2b8; border-radius:14px; padding:16px 14px; text-align:center; }
+.stat-chip .stat-num { font-family:'Cormorant Garamond',serif; font-size:26px; color:#3d4a3a; display:block; line-height:1.1; }
+.stat-chip .stat-label { font-size:10.5px; letter-spacing:0.5px; color:#5c5c4f; margin-top:6px; display:block; }
+.owner { background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:12px; padding:22px; margin-bottom:16px; }
+.owner.clean { border-color:#6f8768; background:#e6efe3; }
+.owner h3 { margin-bottom:4px; }
+.chain { font-size:13px; color:#8a8672; letter-spacing:0.5px; margin-bottom:14px; }
+.brandlist { font-size:13.5px; line-height:2; color:#5c5c4f; }
+.tag-cf { display:inline-block; font-size:11px; padding:4px 10px; border-radius:20px; background:#dbe8d7; border:0.5px solid #6f8768; color:#33502f; margin:0 6px 6px 0; }
+.tag-no { display:inline-block; font-size:11px; padding:4px 10px; border-radius:20px; background:#f3ded9; border:0.5px solid #c98a3a; color:#8a4a2a; margin:0 6px 6px 0; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+<a href="ingredient-check.html">check ingredients</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="learn.html">learn</a>
+<a href="quiz.html">take the quiz</a>
+<a href="impact.html">your impact</a>
+<a href="my-swaps.html">my swaps</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-watch.html">brand watch</a>
+<a href="swap-guide.html">swap guide</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap" id="main">
+<h1 style="text-align:left; font-size:22px; margin-top:30px;">learn</h1>
+<div class="hub-tabs" id="hubTabs">
+<button type="button" class="hub-tab" data-tab="start">start here</button>
+<button type="button" class="hub-tab" data-tab="testing">what testing means</button>
+<button type="button" class="hub-tab" data-tab="money">who gets your money</button>
+</div>
+
+<div class="hub-panel" id="panel-start">
+<p>New to this? <strong>a home kind</strong> is a no-lecture guide to cruelty-free and vegan living: honest brand checks, quick swaps, and where the money really goes. Start wherever feels least overwhelming, you don't need to overhaul everything at once, that's not how any of this sticks.</p>
+
+<p class="section-label" style="text-align:center; margin-top:30px;">pick a place to start</p>
+<div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:16px 0 8px;">
+<a href="shop.html?category=beauty" style="background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:20px 16px; width:160px; text-align:center; text-decoration:none; display:block;">
+<div style="font-size:28px; margin-bottom:8px; line-height:1;">&#128132;</div>
+<div style="color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">beauty &amp; skincare</div>
+<div style="color:#7a7561; font-size:11.5px; line-height:1.6;">the easiest place to begin, nobody needs animal-tested shampoo</div>
+</a>
+<a href="swap-guide.html#food" style="background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:20px 16px; width:160px; text-align:center; text-decoration:none; display:block;">
+<div style="font-size:28px; margin-bottom:8px; line-height:1;">&#129367;</div>
+<div style="color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">food &amp; kitchen</div>
+<div style="color:#7a7561; font-size:11.5px; line-height:1.6;">a thriving way to eat, not a compromise, no overnight overhaul needed</div>
+</a>
+<a href="swap-guide.html#fashion" style="background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:20px 16px; width:160px; text-align:center; text-decoration:none; display:block;">
+<div style="font-size:28px; margin-bottom:8px; line-height:1;">&#128092;</div>
+<div style="color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">fashion &amp; accessories</div>
+<div style="color:#7a7561; font-size:11.5px; line-height:1.6;">leather, wool, silk, down and fur - what to look for instead</div>
+</a>
+<a href="shop.html?category=household" style="background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:20px 16px; width:160px; text-align:center; text-decoration:none; display:block;">
+<div style="font-size:28px; margin-bottom:8px; line-height:1;">&#129532;</div>
+<div style="color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px;">household &amp; cleaning</div>
+<div style="color:#7a7561; font-size:11.5px; line-height:1.6;">an easy swap most people overlook entirely</div>
+</a>
+</div>
+
+<p class="section-label" style="margin-top:36px;">what to actually look for</p>
+<p>A bunny on a bottle means nothing unless someone's checked it. These are the three worth trusting, click through, search the brand, see for yourself:</p>
+<p>&middot; <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a><br>
+&middot; <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a><br>
+&middot; <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA's Beauty Without Bunnies</a></p>
+
+<p style="margin-top:32px;"><a href="quiz.html" class="btn">not sure? take the quiz</a></p>
+</div>
+
+<div class="hub-panel" id="panel-testing">
+<p>Years ago I saw a meme of a gorilla wearing lipstick. The caption was something about animal testing. I laughed at it.</p>
+<p>I didn't know then that it wasn't a joke about a gorilla in lipstick, because that isn't what happens. Nobody is dabbing blusher on a chimp and taking notes. What actually happens is much quieter, much more clinical, and much worse.</p>
+<p>So here's the plain version. No photographs, no shock tactics. Just what the words on the label are covering up.</p>
+
+<p class="section-label">the tests themselves</p>
+<p>Tap a card for the fuller detail. Nothing graphic, just the mechanics most people never get told.</p>
+<div class="test-grid" id="testGrid"></div>
+
+<p class="section-label">why beagles</p>
+<p>This is the part I find hardest.</p>
+<p>Of all the non-human animals in this story, dogs are the ones people tend to flinch at hardest, maybe because we already know their personalities. Beagles are the most-used dog in laboratories worldwide, and it isn't because of their biology. It's because of their temperament. They're friendly. They're trusting. They're bred to work in packs, so they don't resist. They forgive you.</p>
+<p>A lab technician quoted by the Beagle Freedom Project put it plainly: they won't fight back, they let us do anything we want to them, that's why we like beagles.</p>
+<p>The exact trait that makes them good family dogs is the reason they're chosen. Around 4,000 dogs a year are used in UK laboratories, the overwhelming majority of them beagles. Very few are ever rehomed.</p>
+
+<p class="section-label">"but it's banned here"</p>
+<p>Partly. Cosmetic testing is banned in the UK and EU, and several other countries have followed. That's real progress and worth saying out loud.</p>
+<p>But: ingredients can still be tested elsewhere and used here. Companies selling into markets that legally require animal testing can still be paying for it while calling themselves cruelty-free at home. Household products, chemicals and pharmaceuticals sit under entirely different rules. And a ban on paper doesn't retire the labs, it moves them.</p>
+<p>That's why certification matters more than a bunny drawn on a bottle.</p>
+
+<p class="section-label">the scale of it, in the UK</p>
+<p>Numbers can't do what a Draize test description does, but they're worth having, because they stop this being an abstract argument. Here's the UK Home Office's own <a href="https://www.gov.uk/government/statistics/scientific-procedures-on-living-animals-great-britain-2025" target="_blank" rel="noopener">Statistics of Scientific Procedures on Living Animals, Great Britain, 2025</a>.</p>
+<div class="stat-chip-row">
+<div class="stat-chip"><span class="stat-num">2.54m</span><span class="stat-label">procedures on animals in Great Britain, 2025</span></div>
+<div class="stat-chip"><span class="stat-num">52%</span><span class="stat-label">were actual tests or studies (the rest is breeding)</span></div>
+<div class="stat-chip"><span class="stat-num">56%</span><span class="stat-label">of experimental animals were mice</span></div>
+</div>
+<p>That 2.54 million splits into two quite different categories: 1.32 million (52%) were "experimental procedures" - an animal used in an actual test or study - and the other 1.22 million (48%) were "creation and breeding of genetically altered animals," which is a separate category, not animals used in a test that day.</p>
+<p>Of the 1.32 million experimental procedures, the species breakdown was mice 56%, fish 16%, birds 10%, rats 9%, specially protected species (dogs, cats, horses, non-human primates) 1%, and other species 8%. One distinction worth holding onto: "procedures" isn't the same as "animals" - a single animal can be counted more than once if it's used in multiple procedures, so the true number of individual animals is somewhat lower than the procedure count above. The Home Office data doesn't give a single clean "total animals" figure, so I won't invent one here.</p>
+
+<p class="section-label">the scale of it, globally</p>
+<p>I looked for a reliable, current, worldwide figure for cosmetics testing specifically. It doesn't exist. No government or regulator publishes one, because most countries don't require cosmetics companies to report animal use by product category the way the UK and EU do for all research. The number "500,000 animals a year for cosmetics" turns up all over the internet, but I couldn't trace it back to a source I'd trust enough to put on this page, so I'm leaving it out rather than repeating a figure I can't stand behind.</p>
+<p>What I can point to instead are real totals for animal testing overall, not cosmetics-specific, but the best evidence of scale that actually exists. <a href="https://www.crueltyfreeinternational.org/the-issue/facts-and-figures/" target="_blank" rel="noopener">Cruelty Free International's own estimate</a>, still cited as the most reliable global figure available, put worldwide animal use for all scientific purposes at <strong>at least 192.1 million animals in 2015</strong> - their most recent full global estimate, not because nothing has changed since, but because nobody has produced a more current worldwide count. Regionally, the picture is more up to date: the <a href="https://www.crueltyfreeinternational.org/wp-content/uploads/2025/11/Facts-and-Figures-the-scale-of-animal-testing.pdf" target="_blank" rel="noopener">European Commission's 2022 figures</a> record 9.3 million experiments across the EU and Norway, and the UK Home Office figures above cover 2025.</p>
+<p>All of these numbers include far more than cosmetics - chemicals, medical research, pharmaceuticals, basic science - and cosmetic testing has been banned outright in the UK and EU since 2013. The real, current risk for a UK shopper isn't a lab down the road testing your shampoo; it's a brand still paying for tests elsewhere, most often to sell into markets like mainland China, while marketing itself as cruelty-free at home. That's exactly the gap brand-check is built to catch.</p>
+
+<p class="section-label">if you want the proof</p>
+<p>None of this needs to be taken on faith. <a href="https://www.gov.uk/government/statistics/scientific-procedures-on-living-animals-great-britain-2025" target="_blank" rel="noopener">The UK Home Office statistics</a>, <a href="https://www.crueltyfreeinternational.org/the-issue/facts-and-figures/" target="_blank" rel="noopener">Cruelty Free International's facts and figures</a>, and the <a href="https://www.beaglefreedomproject.org/" target="_blank" rel="noopener">Beagle Freedom Project</a> are all a search away.</p>
+
+<p class="section-label">and then what</p>
+<p>Now you know. That's genuinely the whole point of this page, not to shock you into a decision, just to make sure the decision you do make is an informed one. <a href="brand-check.html">Check a brand</a> before you buy it, or <a href="scan.html">scan what's already in your basket</a>.</p>
+</div>
+
+<div class="hub-panel" id="panel-money">
+<div style="margin: -6px 0 22px;"><img src="IMG_8503-crop.jpg" alt="A mouse with a clipboard, making notes" style="width:100%; max-height:220px; object-fit:cover; border-radius:14px; display:block;"></div>
+<p>Nobody can tell you what percentage of a company's profit funds animal testing. They do not publish it, and anyone who gives you that number made it up.</p>
+<p>What is knowable is where the money lands. A lot of brands that are themselves cruelty-free - meaning they don't test their own products on non-human animals - are owned by companies that still do, elsewhere in their business. Whether that is a dealbreaker is your call, but you should get to make it knowingly.</p>
+
+<div style="margin: 24px 0;">
+<input type="text" id="ownerSearch" placeholder="search a brand or company..." style="width:100%; padding:12px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:14px; color:#3d4a3a;">
+</div>
+
+<div id="owners"></div>
+<p id="noOwner" style="display:none; text-align:center; color:#7a7561; font-size:14px; padding:24px 0;">Nothing here for that one yet.</p>
+
+<p class="section-label">a note on this list</p>
+<p style="font-size:13.5px; line-height:1.9; color:#7a7561;">Ownership changes constantly, and brands get bought and sold faster than any list can keep up with. The Body Shop has changed hands three times in recent years alone. Everything here was checked when it was added, but if something looks out of date it might be. Tell me and I will recheck it.</p>
+</div>
+</main>
+
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-30" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-30" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-30" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-30" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-30" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
+<script src="js/nav.js?v=20260905"></script>
+<script src="js/newsletter.js"></script>
+<script>
+// Tab switching, hash-linkable (learn.html#testing etc).
+(function(){
+var TABS = ['start', 'testing', 'money'];
+var tabButtons = document.querySelectorAll('.hub-tab');
+function show(tab){
+  if (TABS.indexOf(tab) === -1) tab = 'start';
+  tabButtons.forEach(function(btn){ btn.classList.toggle('active', btn.dataset.tab === tab); });
+  TABS.forEach(function(t){
+    var panel = document.getElementById('panel-' + t);
+    if (panel) panel.classList.toggle('active', t === tab);
+  });
+}
+tabButtons.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    history.replaceState(null, '', '#' + btn.dataset.tab);
+    show(btn.dataset.tab);
+  });
+});
+show((window.location.hash || '#start').slice(1));
+})();
+
+// "what testing means" flip cards
+(function(){
+var tests = [
+{ name: 'the Draize eye test', front: 'A substance is placed directly into a conscious rabbit’s eye.', back: 'The rabbit is restrained so it can’t move; its eyelids are held open so it can’t blink the substance away. It’s observed for up to fourteen days and scored for redness, swelling, ulceration, bleeding and, in some cases, blindness — often without pain relief. Rabbits are used partly because they produce very few tears, so whatever’s put in stays there. Albino rabbits specifically, because there’s no pigment to obscure the damage.' },
+{ name: 'the skin test', front: 'Fur is shaved off, a substance is applied, and the reaction is measured.', back: 'The same restraint and lack of pain relief applies as the eye test — it’s the same category of procedure, just on skin instead of eyes. Reactions scored include redness, swelling and corrosion.' },
+{ name: 'lethal dose testing', front: 'Animals are dosed until half of them die.', back: 'Animals are forced to swallow, inhale or be injected with a substance to find the dose at which half of them die. The measurement is the death rate itself — that’s not a side effect of the test, it’s what’s being measured.' },
+{ name: 'longer studies', front: 'Testing for cancer, genetic damage, and harm to unborn young.', back: 'A single carcinogenicity study can use around 400 animals. Almost all of them are killed at the end so their organs can be examined — that isn’t a failure of the process, it’s the process. Most won’t live long enough to see their first birthday.' }
+];
+var grid = document.getElementById('testGrid');
+var html = '';
+for (var i=0;i<tests.length;i++){
+var t = tests[i];
+html += '<div class="flip-card">' +
+'<button type="button" class="flip-card-btn" id="testCard'+i+'" aria-label="Flip to see the detail">' +
+'<div class="flip-card-inner">' +
+'<div class="flip-front"><p class="flip-label">'+t.name+'</p><p class="flip-text">'+t.front+'</p><p class="flip-hint">tap for the detail &rarr;</p></div>' +
+'<div class="flip-back"><p class="flip-label">'+t.name+'</p><p class="flip-text">'+t.back+'</p><p class="flip-hint">tap to flip back</p></div>' +
+'</div></button></div>';
+}
+grid.innerHTML = html;
+grid.querySelectorAll('.flip-card').forEach(function(card){
+var btn = card.querySelector('.flip-card-btn');
+btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
+});
+})();
+
+// "who gets your money" ownership chains
+(function(){
+var OWNERS = [
+{ parent: "SC Johnson", clean: false, cf: ["Method", "Ecover"], other: ["Glade", "Windex", "Mr Muscle", "Duck", "Raid", "Pledge"], note: "Both Method and Ecover are Leaping Bunny certified and vegan in their own right. The parent company is not cruelty-free." },
+{ parent: "Unilever", clean: false, cf: ["Simple"], other: ["Dove", "Vaseline", "Pond's", "Nexxus", "TIGI", "REN", "Murad", "Hourglass", "Seventh Generation"], note: "Simple is PETA certified. Unilever as a whole is not a cruelty-free company." },
+{ parent: "L'Oreal", clean: false, cf: ["Garnier"], other: ["Maybelline", "NYX", "Lancome", "La Roche-Posay", "CeraVe", "Kiehl's", "Urban Decay", "Essie", "Vichy", "YSL Beauty", "Redken", "SkinCeuticals", "IT Cosmetics"], note: "Garnier is Leaping Bunny certified and not sold in mainland China. L'Oreal still tests where legally required elsewhere." },
+{ parent: "Coty", clean: false, cf: ["Rimmel"], other: ["Bourjois", "Max Factor", "Sally Hansen", "CoverGirl", "OPI", "Wella", "Clairol", "Philosophy"], note: "Rimmel holds Leaping Bunny certification. Only its Kind and Free range is fully vegan." },
+{ parent: "Walgreens Boots Alliance", clean: false, cf: ["No7"], other: ["Boots own brand", "Soap and Glory", "Botanics"], note: "No7 is cruelty-free and not sold in mainland China stores. Not fully vegan, some products contain lanolin, carmine or beeswax." },
+{ parent: "Independent, no conflicting parent", clean: true, cf: ["e.l.f. Cosmetics", "Faith in Nature", "Barry M", "Astonish", "The Pink Stuff", "BYOMA"], other: [], note: "These are not owned by a company that tests on animals. Every pound goes to a business whose whole output is cruelty-free." }
+];
+function el(id){ return document.getElementById(id); }
+var BRAND_SLUGS = { "Simple": "simple", "Method": "method", "Ecover": "ecover", "Garnier": "garnier", "Rimmel": "rimmel", "No7": "no7", "e.l.f. Cosmetics": "e-l-f-cosmetics", "Faith in Nature": "faith-in-nature", "Barry M": "barry-m", "Astonish": "astonish", "The Pink Stuff": "the-pink-stuff", "BYOMA": "byoma" };
+var PARENT_SLUGS = { "L'Oreal": "l-oreal" };
+function cardFor(o){
+var h = '<div class="owner' + (o.clean ? ' clean' : '') + '" data-search="' + (o.parent + ' ' + o.cf.join(' ') + ' ' + o.other.join(' ')).toLowerCase() + '">';
+h += '<h3>' + (PARENT_SLUGS[o.parent] ? '<a href="brands/' + PARENT_SLUGS[o.parent] + '/">' + o.parent + '</a>' : o.parent) + '</h3>';
+if(!o.clean) h += '<p class="chain">your money goes here &rarr;</p>';
+h += '<p style="font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:#6f8768; margin-bottom:8px;">' + (o.clean ? 'cruelty-free brands' : 'the cruelty-free brand you might be buying') + '</p>';
+h += '<p style="margin-bottom:14px;">';
+o.cf.forEach(function(b){
+if(BRAND_SLUGS[b]){ h += '<a href="brands/' + BRAND_SLUGS[b] + '/" class="tag-cf" style="text-decoration:none;">' + b + '</a>'; }
+else { h += '<span class="tag-cf">' + b + '</span>'; }
+});
+h += '</p>';
+if(o.other.length){
+h += '<p style="font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:#c98a3a; margin-bottom:8px;">what else they own</p>';
+h += '<p style="margin-bottom:14px;">';
+o.other.forEach(function(b){ h += '<span class="tag-no">' + b + '</span>'; });
+h += '</p>';
+}
+h += '<p style="font-size:13.5px; margin-bottom:0;">' + o.note + '</p>';
+h += '</div>';
+return h;
+}
+el('owners').innerHTML = OWNERS.map(cardFor).join('');
+el('ownerSearch').addEventListener('input', function(e){
+var q = e.target.value.toLowerCase();
+var any = false;
+document.querySelectorAll('.owner').forEach(function(card){
+var match = card.getAttribute('data-search').indexOf(q) !== -1;
+card.style.display = match ? '' : 'none';
+if(match) any = true;
+});
+el('noOwner').style.display = any ? 'none' : 'block';
+});
+})();
+</script>
+</body>
+</html>

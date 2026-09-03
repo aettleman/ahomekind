@@ -51,19 +51,15 @@
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
 <span class="dd-m">
-<a href="start-here.html">start here</a>
+<a href="learn.html">learn</a>
 <a href="quiz.html">take the quiz</a>
 <a href="impact.html">your impact</a>
-<a href="what-testing-means.html">what testing means</a>
-<a href="money.html">who gets your money</a>
 <a href="my-swaps.html">my swaps</a>
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
 <a href="brand-watch.html">brand watch</a>
-<a href="instead-of.html">popular swaps</a>
-<a href="food.html">food &amp; kitchen</a>
-<a href="fashion.html">fashion &amp; accessories</a>
+<a href="swap-guide.html">swap guide</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
 </span></span>
@@ -328,7 +324,7 @@ function renderResults() {
     foodHtml += '<p style="margin-bottom:16px;">' + (answers.q2 === 'food-ready'
       ? "Sounds like you're ready to actually try some swaps. Good news: there's a genuine abundance once you look past the processed stuff."
       : "Totally fine to just be thinking about it. No pressure, no deadline, just a place to start when you're ready.") + '</p>';
-    foodHtml += '<p><a href="food.html" class="btn">go to food &amp; kitchen &rarr;</a></p>';
+    foodHtml += '<p><a href="swap-guide.html#food" class="btn">go to food &amp; kitchen &rarr;</a></p>';
     foodHtml += '</div>';
     foodHtml += '<p style="margin-top:20px;"><a href="quiz.html">start over &rarr;</a> &middot; <a href="brand-check.html">full brand check</a></p>';
     app.innerHTML = foodHtml;
@@ -372,7 +368,7 @@ function renderResults() {
   html += '</div>';
 
   html += '</div>';
-  html += '<p style="margin-top:20px; display:flex; gap:16px; flex-wrap:wrap;"><a href="quiz.html">start over &rarr;</a> <a href="brand-check.html">full brand check &rarr;</a> <a href="food.html">food &amp; kitchen &rarr;</a></p>';
+  html += '<p style="margin-top:20px; display:flex; gap:16px; flex-wrap:wrap;"><a href="quiz.html">start over &rarr;</a> <a href="brand-check.html">full brand check &rarr;</a> <a href="swap-guide.html#food">food &amp; kitchen &rarr;</a></p>';
   app.innerHTML = html;
 }
 
@@ -397,7 +393,7 @@ render();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260904"></script>
+<script src="js/nav.js?v=20260905"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
