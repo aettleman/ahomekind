@@ -24,6 +24,22 @@
 .bar { height:6px; background:#dcd3c0; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
 .bar span { display:block; height:100%; width:0%; background:#6f8768; transition:width 0.3s; }
 
+/* Two ways in: a photo of the label, or a barcode scan. Same page, same
+   dictionary underneath -- someone reaching for the barcode scanner by
+   habit lands in the right place either way. */
+.ic-tabs { display:flex; gap:8px; margin-bottom:18px; }
+.ic-tab { flex:1; padding:12px 10px; border:1px solid #cfc4a9; border-radius:10px; background:#ece5d5; font-family:'Karla',sans-serif; font-weight:600; font-size:12.5px; letter-spacing:0.5px; color:#5c5c4f; cursor:pointer; text-align:center; }
+.ic-tab.active { background:#4d6b4f; color:#f4efe2; border-color:#4d6b4f; }
+.ic-panel { display:none; }
+.ic-panel.active { display:block; }
+.camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
+#bcReader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+.camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; }
+.camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
+.manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
+.manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:0 0 10px; }
+
 /* Overall verdict banner -- the one thing someone standing in an aisle
    actually needs at a glance, before they read the ingredient-by-
    ingredient breakdown underneath. */
@@ -85,19 +101,43 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">check the ingredients</h1>
-<p>A cruelty-free certified brand can still sell a product that isn't vegan. The <a href="scan.html">barcode scanner</a> already checks this automatically when the product database has an ingredients list on file - this page is for everything else: use it when a barcode comes back with no ingredients data, or when you'd rather just photograph what's in your hand. Either way, whatever turns up is named plainly - not left as an INCI name you'd have to look up yourself.</p>
+<p>A cruelty-free certified brand can still sell a product that isn't vegan - and even if you're not fussed about cruelty-free status at all, you might just want to know what's actually in something, whether that's for a vegan check or your own allergies. This page checks the ingredients themselves, on their own terms, however you get them in front of me: photograph the label, or scan the barcode right here and I'll pull the ingredients list for you. Whatever turns up is named plainly - not left as an INCI name you'd have to look up yourself.</p>
 
+<div class="ic-tabs">
+<button type="button" class="ic-tab active" id="tabPhoto">photograph the label</button>
+<button type="button" class="ic-tab" id="tabBarcode">scan a barcode</button>
+</div>
+
+<div class="ic-panel active" id="panelPhoto">
 <div class="drop" id="drop">
 <img id="preview" alt="your ingredients list photo">
 <p style="margin-bottom:16px; font-size:14px;">take a photo of the ingredients list, or pick one from your camera roll</p>
 <label class="big-btn" for="file">choose a photo</label>
 <input type="file" id="file" accept="image/*" capture="environment" style="display:none;">
 </div>
-
 <button class="big-btn" id="go" style="display:none; width:100%;">read the ingredients</button>
-
 <div class="bar" id="bar"><span id="barfill"></span></div>
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+</div>
+
+<div class="ic-panel" id="panelBarcode">
+<div class="camera-wrap" id="bcCameraWrap" style="display:none;">
+<video id="bcReader" muted playsinline></video>
+<div class="camera-controls" id="bcCameraControls" style="display:none;">
+<button type="button" id="bcStopBtn">&#10005; stop</button>
+</div>
+</div>
+<button class="big-btn" id="bcStartBtn" style="width:100%;">scan a barcode</button>
+<p class="manual-lead" style="margin-top:16px;">can't scan it? enter the barcode manually</p>
+<div class="manual">
+<label for="bcManualCode" class="visually-hidden">Barcode number</label>
+<input type="text" id="bcManualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
+<button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="bcLookupBtn">check</button>
+</div>
+<div id="bcStatus" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+<p style="font-size:12px; color:#8a8672; margin-top:4px;">This only checks the ingredients, not brand policy - for the full cruelty-free verdict too, use the <a href="scan.html">brand scanner</a> instead.</p>
+</div>
+
 <div id="results"></div>
 
 <p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: fill the frame with just the ingredients text, hold the phone straight-on rather than at an angle, and make sure there's no glare across the panel. This only recognises ingredient names already in my dictionary and can miss things a photo reads badly - it's a helpful first pass, not a guarantee, and it's not a substitute for a brand's own vegan claim. "Fragrance"/"parfum" can legally hide undisclosed ingredients that no OCR tool can see. Nothing leaves your phone - the reading happens in your browser.</p>
@@ -124,9 +164,26 @@
 <script src="./js/nav.js?v=20260905"></script>
 <script src="js/newsletter.js"></script>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 <script>
 (function(){
 function el(id){ return document.getElementById(id); }
+
+// Tab switching between the two ways in.
+var tabPhoto = el("tabPhoto"), tabBarcode = el("tabBarcode");
+var panelPhoto = el("panelPhoto"), panelBarcode = el("panelBarcode");
+function showTab(which){
+var isPhoto = which === "photo";
+tabPhoto.classList.toggle("active", isPhoto);
+tabBarcode.classList.toggle("active", !isPhoto);
+panelPhoto.classList.toggle("active", isPhoto);
+panelBarcode.classList.toggle("active", !isPhoto);
+el("results").innerHTML = "";
+if(!isPhoto) return;
+stopBcCamera();
+}
+tabPhoto.addEventListener("click", function(){ showTab("photo"); });
+tabBarcode.addEventListener("click", function(){ showTab("barcode"); });
 function escapeHtml(s){
 return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;").split("'").join("&#x27;");
 }
@@ -282,6 +339,104 @@ el("status").textContent = "Could not read that image. A closer, straighter phot
 });
 });
 });
+// Barcode path: pull the ingredients text straight from Open Food/Beauty
+// Facts (whichever has it) and run it through the exact same dictionary
+// and verdict rendering as the photo path above - one checker, two doors
+// in. This deliberately does NOT touch brand/cruelty-free tier at all;
+// that's what the brand scanner (scan.html) is for.
+function bcSetStatus(t, loading){
+var s = el("bcStatus");
+s.textContent = t;
+s.classList.toggle("status-loading", !!loading);
+}
+function lookupIngredientsByBarcode(code){
+code = (code || "").replace(/[^0-9]/g, "");
+if(code.length < 6){ bcSetStatus("That does not look like a barcode."); return; }
+bcSetStatus("looking it up…", true);
+el("results").innerHTML = "";
+function tryBeauty(){
+fetch("https://world.openbeautyfacts.org/api/v2/product/" + code + ".json")
+.then(function(r){ return r.json(); })
+.then(function(d){
+bcSetStatus("");
+var p = d && d.status === 1 ? d.product : null;
+handleBarcodeProduct(p, code);
+})
+.catch(function(){
+bcSetStatus("");
+el("results").innerHTML = "<p style=\"font-size:13.5px; color:#7a7561;\">Could not reach the product database. Try the photo instead, or check back shortly.</p>";
+});
+}
+fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
+.then(function(r){ return r.json(); })
+.then(function(d){
+var p = d && d.status === 1 ? d.product : null;
+if(p && p.ingredients_text){ bcSetStatus(""); handleBarcodeProduct(p, code); }
+else { tryBeauty(); }
+})
+.catch(tryBeauty);
+}
+function handleBarcodeProduct(product, code){
+if(!product){
+el("results").innerHTML = "<p style=\"font-size:13.5px; color:#7a7561;\">Nothing found for that barcode in the public database. Try photographing the ingredients list instead - it works on anything, database or not.</p>";
+return;
+}
+var name = product.product_name || product.generic_name || "";
+var text = product.ingredients_text || "";
+var header = "";
+if(name) header = "<p style=\"font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:10px;\">" + escapeHtml(name) + "</p>";
+if(!text){
+el("results").innerHTML = header + "<p style=\"font-size:13.5px; color:#7a7561;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
+return;
+}
+var found = findIngredients(text);
+render(found, text);
+el("results").innerHTML = header + el("results").innerHTML;
+}
+el("bcLookupBtn").addEventListener("click", function(){ lookupIngredientsByBarcode(el("bcManualCode").value); });
+el("bcManualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookupIngredientsByBarcode(el("bcManualCode").value); });
+
+var bcCodeReader = null;
+var bcCaptured = false;
+function stopBcCamera(){
+if(bcCodeReader){ try { bcCodeReader.reset(); } catch(e){} }
+el("bcStartBtn").style.display = "block";
+el("bcCameraWrap").style.display = "none";
+el("bcCameraControls").style.display = "none";
+bcCaptured = false;
+bcSetStatus("");
+}
+el("bcStartBtn").addEventListener("click", function(){
+if(typeof ZXing === "undefined"){
+bcSetStatus("Camera scanning did not load. Type the numbers instead.");
+return;
+}
+bcSetStatus("Asking for camera permission...", true);
+bcCaptured = false;
+try {
+var hints = new Map();
+hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
+bcCodeReader = new ZXing.BrowserMultiFormatReader(hints);
+bcCodeReader.decodeFromConstraints({ video: { facingMode: "environment" } }, "bcReader", function(result){
+if(result && !bcCaptured){
+bcCaptured = true;
+if(navigator.vibrate) navigator.vibrate(60);
+stopBcCamera();
+lookupIngredientsByBarcode(result.getText());
+}
+}).then(function(){
+bcSetStatus("Point at a barcode.");
+el("bcStartBtn").style.display = "none";
+el("bcCameraWrap").style.display = "block";
+el("bcCameraControls").style.display = "flex";
+}).catch(function(){
+bcSetStatus("Could not open the camera. Type the numbers instead.");
+});
+} catch(e){
+bcSetStatus("Camera scanning is not available here.");
+}
+});
+el("bcStopBtn").addEventListener("click", stopBcCamera);
 })();
 </script>
 </body>
