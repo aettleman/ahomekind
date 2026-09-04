@@ -123,7 +123,9 @@
 <div class="ic-panel" id="panelBarcode">
 <div class="camera-wrap" id="bcCameraWrap" style="display:none;">
 <video id="bcReader" muted playsinline></video>
+<p id="bcTorchHint" style="display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div class="camera-controls" id="bcCameraControls" style="display:none;">
+<button type="button" id="bcTorchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="bcStopBtn">&#10005; stop</button>
 </div>
 </div>
@@ -399,11 +401,56 @@ el("bcManualCode").addEventListener("keydown", function(e){ if(e.key === "Enter"
 
 var bcCodeReader = null;
 var bcCaptured = false;
+var bcTorchOn = false;
+
+// Same flash/torch handling as scan.html: only Chrome-family browsers on
+// Android currently expose torch control to a web page, so the button
+// only appears when the camera track itself reports it's actually there.
+function bcGetVideoTrack(){
+var video = el("bcReader");
+var stream = video && video.srcObject;
+return stream ? stream.getVideoTracks()[0] : null;
+}
+function bcSetupTorchButton(){
+var track = bcGetVideoTrack();
+var torchBtn = el("bcTorchBtn");
+var torchHint = el("bcTorchHint");
+torchBtn.style.display = "none";
+torchHint.style.display = "none";
+if(!track || typeof track.getCapabilities !== "function"){
+torchHint.style.display = "block";
+return;
+}
+var caps;
+try { caps = track.getCapabilities(); } catch(e){ caps = null; }
+if(caps && caps.torch){
+bcTorchOn = false;
+torchBtn.innerHTML = "&#128161; flash on";
+torchBtn.style.display = "inline-block";
+} else {
+torchHint.style.display = "block";
+}
+}
+function bcToggleTorch(){
+var track = bcGetVideoTrack();
+if(!track) return;
+bcTorchOn = !bcTorchOn;
+track.applyConstraints({ advanced: [{ torch: bcTorchOn }] }).then(function(){
+el("bcTorchBtn").innerHTML = bcTorchOn ? "&#128161; flash off" : "&#128161; flash on";
+}).catch(function(){
+bcSetStatus("Couldn't switch the flash on this device.");
+});
+}
+el("bcTorchBtn").addEventListener("click", bcToggleTorch);
+
 function stopBcCamera(){
 if(bcCodeReader){ try { bcCodeReader.reset(); } catch(e){} }
 el("bcStartBtn").style.display = "block";
 el("bcCameraWrap").style.display = "none";
 el("bcCameraControls").style.display = "none";
+el("bcTorchBtn").style.display = "none";
+el("bcTorchHint").style.display = "none";
+bcTorchOn = false;
 bcCaptured = false;
 bcSetStatus("");
 }
@@ -430,6 +477,7 @@ bcSetStatus("Point at a barcode.");
 el("bcStartBtn").style.display = "none";
 el("bcCameraWrap").style.display = "block";
 el("bcCameraControls").style.display = "flex";
+bcSetupTorchButton();
 }).catch(function(){
 bcSetStatus("Could not open the camera. Type the numbers instead.");
 });
