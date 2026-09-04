@@ -40,6 +40,15 @@
 .manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
 .manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:0 0 10px; }
 
+/* Same barcode alignment guide as scan.html: a dashed band roughly
+   where the bars sit, with a faint row of "ghost" digits standing in
+   for the number line most barcodes print underneath. */
+.barcode-guide { position:absolute; left:9%; right:9%; top:34%; height:20%; border:2px dashed rgba(244,239,226,0.85); border-radius:6px; pointer-events:none; }
+.barcode-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#f4efe2; background:rgba(20,24,18,0.72); padding:5px 10px; border-radius:20px; }
+.barcode-guide-numbers { position:absolute; left:9%; right:9%; top:calc(34% + 20% + 6px); text-align:center; font-family:'Karla',sans-serif; font-size:13px; letter-spacing:3px; color:rgba(244,239,226,0.55); pointer-events:none; margin:0; }
+.shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #6f8768; border-radius:30px; padding:8px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3d4a3a; background:none; cursor:pointer; }
+.shelf-cta:hover, .shelf-cta:focus-visible { background:#eef1e9; color:#3d4a3a; }
+
 /* Overall verdict banner -- the one thing someone standing in an aisle
    actually needs at a glance, before they read the ingredient-by-
    ingredient breakdown underneath. */
@@ -113,7 +122,7 @@
 <img id="preview" alt="your ingredients list photo">
 <p style="margin-bottom:16px; font-size:14px;">take a photo of the ingredients list, or pick one from your camera roll</p>
 <label class="big-btn" for="file">choose a photo</label>
-<input type="file" id="file" accept="image/*" capture="environment" style="display:none;">
+<input type="file" id="file" accept="image/*" style="display:none;">
 </div>
 <button class="big-btn" id="go" style="display:none; width:100%;">read the ingredients</button>
 <div class="bar" id="bar"><span id="barfill"></span></div>
@@ -123,6 +132,8 @@
 <div class="ic-panel" id="panelBarcode">
 <div class="camera-wrap" id="bcCameraWrap" style="display:none;">
 <video id="bcReader" muted playsinline></video>
+<div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
+<p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
 <p id="bcTorchHint" style="display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div class="camera-controls" id="bcCameraControls" style="display:none;">
 <button type="button" id="bcTorchBtn" style="display:none;">&#128161; flash</button>
@@ -367,7 +378,8 @@ handleBarcodeProduct(p, code);
 })
 .catch(function(){
 bcSetStatus("");
-el("results").innerHTML = "<p style=\"font-size:13.5px; color:#7a7561;\">Could not reach the product database. Try the photo instead, or check back shortly.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#7a7561;\">Could not reach the product database. Try the photo instead, or check back shortly.</p>";
+wireBcScanAgain();
 });
 }
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")
@@ -381,7 +393,8 @@ else { tryBeauty(); }
 }
 function handleBarcodeProduct(product, code){
 if(!product){
-el("results").innerHTML = "<p style=\"font-size:13.5px; color:#7a7561;\">Nothing found for that barcode in the public database. Try photographing the ingredients list instead - it works on anything, database or not.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#7a7561;\">Nothing found for that barcode in the public database. This can also mean a barcode was misread rather than genuinely missing, especially if the scan happened quickly - scanning again often fixes it. Otherwise, try photographing the ingredients list instead - it works on anything, database or not.</p>";
+wireBcScanAgain();
 return;
 }
 var name = product.product_name || product.generic_name || "";
@@ -389,12 +402,14 @@ var text = product.ingredients_text || "";
 var header = "";
 if(name) header = "<p style=\"font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:10px;\">" + escapeHtml(name) + "</p>";
 if(!text){
-el("results").innerHTML = header + "<p style=\"font-size:13.5px; color:#7a7561;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + header + "<p style=\"font-size:13.5px; color:#7a7561;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
+wireBcScanAgain();
 return;
 }
 var found = findIngredients(text);
 render(found, text);
-el("results").innerHTML = header + el("results").innerHTML;
+el("results").innerHTML = bcScanAgainMarkup() + header + el("results").innerHTML;
+wireBcScanAgain();
 }
 el("bcLookupBtn").addEventListener("click", function(){ lookupIngredientsByBarcode(el("bcManualCode").value); });
 el("bcManualCode").addEventListener("keydown", function(e){ if(e.key === "Enter") lookupIngredientsByBarcode(el("bcManualCode").value); });
@@ -454,7 +469,7 @@ bcTorchOn = false;
 bcCaptured = false;
 bcSetStatus("");
 }
-el("bcStartBtn").addEventListener("click", function(){
+function startBcScan(){
 if(typeof ZXing === "undefined"){
 bcSetStatus("Camera scanning did not load. Type the numbers instead.");
 return;
@@ -484,8 +499,24 @@ bcSetStatus("Could not open the camera. Type the numbers instead.");
 } catch(e){
 bcSetStatus("Camera scanning is not available here.");
 }
-});
+}
+el("bcStartBtn").addEventListener("click", startBcScan);
 el("bcStopBtn").addEventListener("click", stopBcCamera);
+
+// Same "scan again" convenience as the barcode brand-scanner: a button
+// right at the top of a barcode result so a wrong or empty scan can be
+// retried in one tap instead of scrolling back up to the barcode tab.
+function bcScanAgainMarkup(){
+return "<div class=\"scan-again-wrap\" style=\"text-align:center; margin-bottom:16px;\"><button type=\"button\" class=\"shelf-cta\" id=\"bcScanAgainBtn\">&#8635; scan again</button></div>";
+}
+function wireBcScanAgain(){
+var btn = el("bcScanAgainBtn");
+if(!btn) return;
+btn.addEventListener("click", function(){
+document.getElementById("tabBarcode").scrollIntoView({ behavior: "smooth", block: "start" });
+startBcScan();
+});
+}
 })();
 </script>
 </body>
