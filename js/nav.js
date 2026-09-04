@@ -174,7 +174,7 @@ bn.className = 'bottom-nav';
 bn.innerHTML =
 bnItem('/index.html', '&#8962;', 'Home', 'home') +
 bnItem('/scan.html', '&#128247;', 'Scan', 'scan') +
-bnItem('/brand-check.html', '&#128269;', 'Check', 'check') +
+bnItem('/brand-check.html', '&#128269;', 'Brands', 'check') +
 bnItem('/shop.html', '&#128717;', 'Shop', 'shop') +
 '<button type="button" class="bn-item bn-more" id="bn-more-btn">' +
 '<span class="bn-icon">&#8942;</span><span class="bn-label">More</span></button>';
@@ -188,6 +188,7 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
+'<a href="/ingredient-check.html">check ingredients (photo or barcode)</a>' +
 '<a href="/shelf.html">scan a shelf</a>' +
 '<a href="/learn.html">learn</a>' +
 '<a href="/quiz.html">take the quiz</a>' +

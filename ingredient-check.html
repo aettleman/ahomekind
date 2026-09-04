@@ -101,7 +101,7 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">check the ingredients</h1>
-<p>A cruelty-free certified brand can still sell a product that isn't vegan - and even if you're not fussed about cruelty-free status at all, you might just want to know what's actually in something, whether that's for a vegan check or your own allergies. This page checks the ingredients themselves, on their own terms, however you get them in front of me: photograph the label, or scan the barcode right here and I'll pull the ingredients list for you. Whatever turns up is named plainly - not left as an INCI name you'd have to look up yourself.</p>
+<p>A cruelty-free certified brand can still sell a product that isn't vegan, so this page checks the ingredients themselves, on their own terms - useful for confirming vegan status, and just as useful for checking allergens, whatever your reason for looking. Photograph the label, or scan the barcode below, and whatever turns up is named plainly - not left as an INCI name you'd have to look up yourself.</p>
 
 <div class="ic-tabs">
 <button type="button" class="ic-tab active" id="tabPhoto">photograph the label</button>
@@ -161,7 +161,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="./js/nav.js?v=20260905"></script>
+<script src="./js/nav.js?v=20260906"></script>
 <script src="js/newsletter.js"></script>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
@@ -280,10 +280,10 @@ function renderVerdict(found){
 var always = found.filter(function(f){ return f.type === "animal"; });
 var sometimes = found.filter(function(f){ return f.type === "ambiguous"; });
 if(always.length){
-return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ".</p></div>";
+return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ". A photo reading badly is the single most common cause of a wrong result here - the raw text below is opened automatically so you can check these words are actually there before trusting the verdict.</p></div>";
 }
 if(sometimes.length){
-return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vegan</p><p class=\"verdict-body\">Contains ingredients that are sometimes animal-derived and sometimes plant-based - see below, and check the brand's own vegan claim if it doesn't say.</p></div>";
+return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vegan</p><p class=\"verdict-body\">Contains ingredients that are sometimes animal-derived and sometimes plant-based - see below, and check the brand's own vegan claim if it doesn't say. Also worth checking the raw text below turned out clean, since a misread photo is the most common cause of a wrong result.</p></div>";
 }
 return "<div class=\"verdict good\"><p class=\"verdict-title\">No animal-derived ingredients recognised</p><p class=\"verdict-body\">Nothing in my dictionary turned up - but this checks against a list, not against every ingredient that exists, and can't see inside an unspecified \"fragrance\". Not a guarantee.</p></div>";
 }
@@ -302,7 +302,8 @@ html += "</div>";
 });
 html += "</div>";
 }
-html += "<details class=\"ing-raw\"><summary>what I actually read from the photo</summary><pre>" + escapeHtml(rawText || "(nothing readable)") + "</pre></details>";
+var openAttr = found.some(function(f){ return f.type === "animal"; }) ? " open" : "";
+html += "<details class=\"ing-raw\"" + openAttr + "><summary>what I actually read from the photo</summary><pre>" + escapeHtml(rawText || "(nothing readable)") + "</pre></details>";
 el("results").innerHTML = html;
 }
 
