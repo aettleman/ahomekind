@@ -36,6 +36,8 @@
 #bcReader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
 .camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; }
 .camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
+.camera-controls button.snap:hover { background:#dcc78f; }
 .manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
 .manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
 .manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:0 0 10px; }
@@ -136,6 +138,7 @@
 <p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
 <p id="bcTorchHint" style="display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div class="camera-controls" id="bcCameraControls" style="display:none;">
+<button type="button" id="bcSnapBtn" class="snap">&#128247; snap</button>
 <button type="button" id="bcTorchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="bcStopBtn">&#10005; stop</button>
 </div>
@@ -469,6 +472,61 @@ bcTorchOn = false;
 bcCaptured = false;
 bcSetStatus("");
 }
+// Same rotate-and-retry helper as scan.html's barcode scanner.
+function bcRotatedCanvas(source, deg){
+var w = source.videoWidth || source.width, h = source.videoHeight || source.height;
+var rc = document.createElement("canvas");
+if(deg === 90 || deg === 270){ rc.width = h; rc.height = w; } else { rc.width = w; rc.height = h; }
+var ctx = rc.getContext("2d");
+ctx.translate(rc.width / 2, rc.height / 2);
+ctx.rotate(deg * Math.PI / 180);
+ctx.drawImage(source, -w / 2, -h / 2);
+return rc;
+}
+// Manual capture: grabs the current frame and tries every rotation
+// (0/90/180/270) on demand, for lining the barcode up in the guide and
+// choosing the exact moment to read it, instead of relying only on the
+// continuous live scan.
+function bcCaptureAndDecode(){
+if(bcCaptured || !bcCodeReader) return;
+var video = el("bcReader");
+if(!video.videoWidth){ bcSetStatus("Camera's not ready yet - give it a second and try again."); return; }
+bcSetStatus("reading that frame…", true);
+var angles = [0, 90, 180, 270];
+var i = 0;
+function frameAt(deg){
+if(deg === 0){
+var c = document.createElement("canvas");
+c.width = video.videoWidth; c.height = video.videoHeight;
+c.getContext("2d").drawImage(video, 0, 0);
+return c;
+}
+return bcRotatedCanvas(video, deg);
+}
+function attempt(){
+if(bcCaptured) return;
+if(i >= angles.length){ bcSetStatus("Couldn't find a barcode in that frame - line it up in the guide and try again, or type the number in below."); return; }
+var rc = frameAt(angles[i]);
+var img = new Image();
+img.onload = function(){
+var result = null;
+try { result = bcCodeReader.decode(img); } catch(e){}
+if(result && !bcCaptured){
+bcCaptured = true;
+if(navigator.vibrate) navigator.vibrate(60);
+stopBcCamera();
+lookupIngredientsByBarcode(result.getText());
+return;
+}
+i++;
+attempt();
+};
+img.onerror = function(){ i++; attempt(); };
+img.src = rc.toDataURL("image/png");
+}
+attempt();
+}
+
 function startBcScan(){
 if(typeof ZXing === "undefined"){
 bcSetStatus("Camera scanning did not load. Type the numbers instead.");
@@ -488,7 +546,7 @@ stopBcCamera();
 lookupIngredientsByBarcode(result.getText());
 }
 }).then(function(){
-bcSetStatus("Point at a barcode.");
+bcSetStatus("Point at a barcode - it reads automatically, or line it up in the guide and tap snap.");
 el("bcStartBtn").style.display = "none";
 el("bcCameraWrap").style.display = "block";
 el("bcCameraControls").style.display = "flex";
@@ -502,6 +560,7 @@ bcSetStatus("Camera scanning is not available here.");
 }
 el("bcStartBtn").addEventListener("click", startBcScan);
 el("bcStopBtn").addEventListener("click", stopBcCamera);
+el("bcSnapBtn").addEventListener("click", bcCaptureAndDecode);
 
 // Same "scan again" convenience as the barcode brand-scanner: a button
 // right at the top of a barcode result so a wrong or empty scan can be
