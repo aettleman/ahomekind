@@ -9,24 +9,59 @@ person_profiles: 'identified_only'
 });
 } catch(e) {}
 
-// Live "X scans today" bubble, placed next to scanner buttons/links
-// rather than buried in the footer. Any element with class
-// "ahk-counter-bubble" on the page gets filled in and revealed; pages
-// with none (most of the site) do nothing extra. Pulls from a small
+// Live "X products scanned today" bubble. Says how many scans have
+// happened, not "people" or "scans left" -- deliberately worded so it
+// can't read as a quota or a headcount, since one person scanning five
+// times and five different people scanning once look identical from
+// here. Shown next to scanner buttons/links (page-specific slots
+// already in the HTML) and, once more, in the footer of every other
+// page. Dismissible with the little x -- hides it on that one page for
+// the rest of this browser session (not sitewide, not permanently), so
+// it's never a nag but still comes back next visit. Pulls from a small
 // Cloudflare Worker that asks PostHog on the site's behalf -- the site
 // itself never sees or exposes the PostHog account, just a plain
 // number. Fails silently (bubble just never appears) if the Worker is
 // unreachable, mid-deploy, or not set up yet.
 (function(){
 var WORKER_URL = 'https://ahomekind-scan-counter.ettlemanash.workers.dev';
+var DISMISS_KEY = 'ahk-counter-dismissed:' + location.pathname;
 window.addEventListener('DOMContentLoaded', function(){
-var slots = document.querySelectorAll('.ahk-counter-bubble');
-if(!slots.length || !WORKER_URL) return;
+if(!WORKER_URL) return;
+var dismissed = false;
+try { dismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch(e){}
+if(dismissed) return;
+
+var slots = Array.prototype.slice.call(document.querySelectorAll('.ahk-counter-bubble'));
+// Every other page gets one added to its footer, so the bubble isn't
+// limited to the handful of pages with a scan button on them.
+var footer = document.querySelector('.site-footer');
+if(footer && !slots.length){
+var footerSlot = document.createElement('span');
+footerSlot.className = 'ahk-counter-bubble';
+footerSlot.style.marginTop = '14px';
+footer.appendChild(footerSlot);
+slots.push(footerSlot);
+}
+if(!slots.length) return;
+
 fetch(WORKER_URL).then(function(r){ return r.json(); }).then(function(data){
 if(!data || typeof data.count !== 'number') return;
-var text = "🐰 " + data.count + (data.count === 1 ? ' scan today' : ' scans today');
+var text = data.count + (data.count === 1 ? ' product scanned today' : ' products scanned today');
 slots.forEach(function(slot){
-slot.textContent = text;
+var label = document.createElement('span');
+label.textContent = "🐰 " + text;
+var closeBtn = document.createElement('button');
+closeBtn.type = 'button';
+closeBtn.className = 'ahk-counter-x';
+closeBtn.setAttribute('aria-label', 'Dismiss');
+closeBtn.textContent = '×';
+closeBtn.addEventListener('click', function(){
+slot.classList.remove('ahk-visible');
+try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch(e){}
+});
+slot.textContent = '';
+slot.appendChild(label);
+slot.appendChild(closeBtn);
 slot.classList.add('ahk-visible');
 });
 }).catch(function(){});

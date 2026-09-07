@@ -70,11 +70,10 @@ export default {
 
       return new Response(JSON.stringify({ count: count }), {
         headers: corsHeaders,
-        // Cache for 5 minutes at Cloudflare's edge -- a daily count
-        // doesn't need to be second-accurate, and this keeps the
-        // Worker (and PostHog) from being hit on every single page
-        // load site-wide.
-        cf: { cacheTtl: 300, cacheEverything: true },
+        // Cache for 1 minute at Cloudflare's edge -- close to real-time
+        // while still keeping the Worker (and PostHog) from being hit
+        // on every single page load site-wide.
+        cf: { cacheTtl: 60, cacheEverything: true },
       });
     } catch (err) {
       return new Response(JSON.stringify({ count: null }), {

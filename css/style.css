@@ -805,9 +805,15 @@ body { animation: pageFadeIn 0.22s ease; }
   .pgrid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
 
-/* Live "X scans today" bubble -- sits next to or under a scan
-   button/link. Filled in by js/nav.js from the Cloudflare Worker;
+/* Live "X products scanned today" bubble -- sits next to a scan
+   button/link, and once more in the footer site-wide (js/nav.js
+   injects the footer copy; page-specific ones are placed in the HTML).
+   Gold, to stand out as its own thing rather than blend into the
+   site's green palette -- same accent already used for the homepage's
+   scan-hero button, so it reads as "on brand" rather than an add-on.
+   Dismissible per page for this browser session only (see nav.js);
    stays empty/hidden (no layout jump) until real data arrives. */
-.ahk-counter-bubble { display: none; align-items: center; gap: 6px; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: 0.3px; color: #4d6b4f; background: #e6efe3; border: 1px solid #b9c7ae; border-radius: 30px; padding: 6px 14px; white-space: nowrap; }
-.ahk-counter-bubble.ahk-visible { display: inline-flex; }
-.ahk-counter-bubble.on-dark { color: #e6d4a8; background: rgba(230,212,168,0.12); border-color: rgba(230,212,168,0.4); }
+.ahk-counter-bubble { display: none; align-items: center; gap: 8px; width: fit-content; margin: 0 auto; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.3px; color: #3d4a3a; background: #e6d4a8; border: 1px solid #d4b876; border-radius: 30px; padding: 8px 8px 8px 16px; white-space: nowrap; box-shadow: 0 3px 10px rgba(166,127,45,0.18); }
+.ahk-counter-bubble.ahk-visible { display: flex; }
+.ahk-counter-x { flex-shrink: 0; background: rgba(61,74,58,0.12); border: none; color: #3d4a3a; width: 19px; height: 19px; border-radius: 50%; font-size: 13px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.ahk-counter-x:hover { background: rgba(61,74,58,0.24); }
