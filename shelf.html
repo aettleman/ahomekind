@@ -545,6 +545,7 @@ reader.readAsDataURL(f);
 });
 function render(found, raw){
 var out = "";
+try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'shelf', brands_found: found.length }); } catch(e){}
 if(found.length){
 setStatus("Found " + found.length + (found.length === 1 ? " brand" : " brands") + " I know.");
 var order = {good:0, check:1, warn:2, bad:3};
@@ -690,7 +691,7 @@ setStatus("Could not read that image. A closer, straighter photo usually helps."
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260906"></script>
+<script src="js/nav.js?v=20260907"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>

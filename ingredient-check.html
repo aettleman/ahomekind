@@ -177,7 +177,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="./js/nav.js?v=20260906"></script>
+<script src="./js/nav.js?v=20260907"></script>
 <script src="js/newsletter.js"></script>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
@@ -305,6 +305,7 @@ return "<div class=\"verdict good\"><p class=\"verdict-title\">No animal-derived
 }
 
 function render(found, rawText){
+try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_photo', animal_found: found.some(function(f){ return f.type === "animal"; }), ambiguous_found: found.some(function(f){ return f.type === "ambiguous"; }) }); } catch(e){}
 var html = renderVerdict(found);
 if(found.length){
 html += "<div class=\"ing-list\">";
@@ -396,6 +397,7 @@ else { tryBeauty(); }
 }
 function handleBarcodeProduct(product, code){
 if(!product){
+try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_barcode', outcome: 'not_found' }); } catch(e){}
 el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#7a7561;\">Nothing found for that barcode in the public database. This can also mean a barcode was misread rather than genuinely missing, especially if the scan happened quickly - scanning again often fixes it. Otherwise, try photographing the ingredients list instead - it works on anything, database or not.</p>";
 wireBcScanAgain();
 return;
@@ -405,6 +407,7 @@ var text = product.ingredients_text || "";
 var header = "";
 if(name) header = "<p style=\"font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:10px;\">" + escapeHtml(name) + "</p>";
 if(!text){
+try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_barcode', outcome: 'no_ingredients_listed' }); } catch(e){}
 el("results").innerHTML = bcScanAgainMarkup() + header + "<p style=\"font-size:13.5px; color:#7a7561;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
 wireBcScanAgain();
 return;

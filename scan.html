@@ -638,6 +638,7 @@ var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
 var identified = !!(name || brandText);
+try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'barcode', brand_found: !!brand, tier: brand ? brand.tier : null, identified: identified }); } catch(e){}
 if(brand){
 out += verdictHTML(brand);
 if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
@@ -995,7 +996,7 @@ if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
-<script src="js/nav.js?v=20260906"></script>
+<script src="js/nav.js?v=20260907"></script>
 <script src="js/newsletter.js"></script>
 <script>
 // "Add to home screen" -- shown only when it's actually possible (or, on

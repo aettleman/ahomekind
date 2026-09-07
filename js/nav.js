@@ -1,3 +1,14 @@
+// Site analytics (PostHog) -- page views + custom "scan completed" events.
+// Cookie-light, EU-hosted. Wrapped in try/catch so an ad-blocker or an
+// analytics outage never breaks the site itself.
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploaded_event_queue=t.uploaded_event_queue||[],t.uploaded_event_queue.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+try {
+posthog.init('phc_qAqieswX6Zj78X7HuqkLuB87Ts9sMfTFvV95QrAH6vQt', {
+api_host: 'https://eu.i.posthog.com',
+person_profiles: 'identified_only'
+});
+} catch(e) {}
+
 // Register the service worker site-wide so the app shell (styling, this
 // script, icons) loads instantly and offline visits get a proper "you're
 // offline" screen instead of a browser error. See sw.js for what this
