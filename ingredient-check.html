@@ -292,11 +292,14 @@ if(termMatches(entry.terms[i], text, compact)){ found.push(entry); return; }
 return found;
 }
 
-function renderVerdict(found){
+function renderVerdict(found, certifiedVegan){
 var always = found.filter(function(f){ return f.type === "animal"; });
 var sometimes = found.filter(function(f){ return f.type === "ambiguous"; });
 if(always.length){
 return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ". A photo reading badly is the single most common cause of a wrong result here - the raw text below is opened automatically so you can check these words are actually there before trusting the verdict.</p></div>";
+}
+if(sometimes.length && certifiedVegan){
+return "<div class=\"verdict good\"><p class=\"verdict-title\">Vegan (officially certified)</p><p class=\"verdict-body\">This product carries an official vegan certification, so " + sometimes.map(function(f){ return escapeHtml(f.name.toLowerCase()); }).join(", ") + " here is very likely the plant-derived version, even though the ingredient list itself doesn't say - the certification is a stronger signal than the wording, so it's trusted over the flag below.</p></div>";
 }
 if(sometimes.length){
 return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vegan</p><p class=\"verdict-body\">Contains ingredients that are sometimes animal-derived and sometimes plant-based - see below, and check the brand's own vegan claim if it doesn't say. Also worth checking the raw text below turned out clean, since a misread photo is the most common cause of a wrong result.</p></div>";
@@ -304,9 +307,9 @@ return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vega
 return "<div class=\"verdict good\"><p class=\"verdict-title\">No animal-derived ingredients recognised</p><p class=\"verdict-body\">Nothing in my dictionary turned up - but this checks against a list, not against every ingredient that exists, and can't see inside an unspecified \"fragrance\". Not a guarantee.</p></div>";
 }
 
-function render(found, rawText){
+function render(found, rawText, certifiedVegan){
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_photo', animal_found: found.some(function(f){ return f.type === "animal"; }), ambiguous_found: found.some(function(f){ return f.type === "ambiguous"; }) }); } catch(e){}
-var html = renderVerdict(found);
+var html = renderVerdict(found, certifiedVegan);
 if(found.length){
 html += "<div class=\"ing-list\">";
 found.forEach(function(f){
@@ -413,7 +416,15 @@ wireBcScanAgain();
 return;
 }
 var found = findIngredients(text);
-render(found, text);
+// Open Food Facts' own "labels" data flags recognised third-party vegan
+// certifications (Vegan Society trademark, V-Label, etc). That's a
+// stronger signal than an ambiguous ingredient like lecithin, which can
+// be plant or animal-derived depending on source -- a certified product
+// has already had that verified, so trust the certification over the
+// dictionary flag rather than contradicting it.
+var labels = (product.labels_tags || []).join(" ");
+var certifiedVegan = /en:vegan\b|vegan-society|v-label-vegan/i.test(labels);
+render(found, text, certifiedVegan);
 el("results").innerHTML = bcScanAgainMarkup() + header + el("results").innerHTML;
 wireBcScanAgain();
 }
