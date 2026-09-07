@@ -9,24 +9,26 @@ person_profiles: 'identified_only'
 });
 } catch(e) {}
 
-// Live "X scans today" counter, shown in the footer site-wide. Pulls
-// from a small Cloudflare Worker that asks PostHog on the site's
-// behalf -- the site itself never sees or exposes the PostHog account,
-// just a plain number. Fails silently (counter just doesn't appear) if
-// the Worker is unreachable, mid-deploy, or not set up yet.
+// Live "X scans today" bubble, placed next to scanner buttons/links
+// rather than buried in the footer. Any element with class
+// "ahk-counter-bubble" on the page gets filled in and revealed; pages
+// with none (most of the site) do nothing extra. Pulls from a small
+// Cloudflare Worker that asks PostHog on the site's behalf -- the site
+// itself never sees or exposes the PostHog account, just a plain
+// number. Fails silently (bubble just never appears) if the Worker is
+// unreachable, mid-deploy, or not set up yet.
 (function(){
 var WORKER_URL = 'https://ahomekind-scan-counter.ettlemanash.workers.dev';
 window.addEventListener('DOMContentLoaded', function(){
-if(!WORKER_URL || WORKER_URL.indexOf('YOURSUBDOMAIN') !== -1) return;
-var footer = document.querySelector('.site-footer');
-if(!footer) return;
+var slots = document.querySelectorAll('.ahk-counter-bubble');
+if(!slots.length || !WORKER_URL) return;
 fetch(WORKER_URL).then(function(r){ return r.json(); }).then(function(data){
 if(!data || typeof data.count !== 'number') return;
-var span = document.createElement('span');
-span.className = 'ahk-scan-counter';
-span.style.cssText = 'display:block; margin-top:6px; font-size:11.5px; color:#a39d87; letter-spacing:0.3px;';
-span.textContent = data.count + (data.count === 1 ? ' scan today' : ' scans today');
-footer.appendChild(span);
+var text = "🐰 " + data.count + (data.count === 1 ? ' scan today' : ' scans today');
+slots.forEach(function(slot){
+slot.textContent = text;
+slot.classList.add('ahk-visible');
+});
 }).catch(function(){});
 });
 })();

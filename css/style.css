@@ -804,3 +804,10 @@ body { animation: pageFadeIn 0.22s ease; }
   .shop-tabbar { gap: 6px 16px; }
   .pgrid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
+
+/* Live "X scans today" bubble -- sits next to or under a scan
+   button/link. Filled in by js/nav.js from the Cloudflare Worker;
+   stays empty/hidden (no layout jump) until real data arrives. */
+.ahk-counter-bubble { display: none; align-items: center; gap: 6px; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 11.5px; letter-spacing: 0.3px; color: #4d6b4f; background: #e6efe3; border: 1px solid #b9c7ae; border-radius: 30px; padding: 6px 14px; white-space: nowrap; }
+.ahk-counter-bubble.ahk-visible { display: inline-flex; }
+.ahk-counter-bubble.on-dark { color: #e6d4a8; background: rgba(230,212,168,0.12); border-color: rgba(230,212,168,0.4); }
