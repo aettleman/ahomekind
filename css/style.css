@@ -349,6 +349,8 @@ footer.site-footer {
   letter-spacing: 0.5px;
   background: #dcd3c0;
 }
+.footer-ig { color: #8a8672; }
+.footer-ig:hover { color: #4d6b4f; }
 
 /* App-style bottom navigation (mobile only) */
 .bottom-nav {
@@ -856,3 +858,59 @@ body { animation: pageFadeIn 0.22s ease; }
      rather than trying to slot into it. */
   .ahk-back-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 36px; height: 36px; font-size: 16px; }
 }
+
+/* Floating "share" button -- top-right mirror of the back button.
+   Matters most for the installed home-screen app (no browser chrome,
+   so no address bar to copy a link from), but shown on every page,
+   including the homepage, since sharing is useful everywhere back
+   navigation isn't. Uses the device's real native share sheet where
+   available (js/nav.js), falling back to a copy-link + toast. */
+.ahk-share-btn {
+  position: fixed;
+  top: calc(14px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(244,239,226,0.92);
+  backdrop-filter: blur(4px);
+  border: 0.5px solid #cfc4a9;
+  box-shadow: 0 4px 14px rgba(61,74,58,0.16);
+  color: #3d4a3a;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.ahk-share-btn:hover { background: #fff; }
+.ahk-share-btn:active { transform: scale(0.92); }
+.ahk-share-btn svg { display: block; }
+@media (max-width: 760px) {
+  .ahk-share-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 36px; height: 36px; }
+  .ahk-share-btn svg { width: 16px; height: 16px; }
+}
+
+/* Small "link copied" toast, shown briefly after the share fallback
+   (desktop browsers without a native share sheet) copies the URL. */
+.ahk-toast {
+  position: fixed;
+  top: calc(60px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 301;
+  background: #3d4a3a;
+  color: #f4efe2;
+  font-family: 'Karla', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+.ahk-toast.show { opacity: 1; transform: none; }
+@media(prefers-reduced-motion: reduce){ .ahk-toast { transition: none; } }

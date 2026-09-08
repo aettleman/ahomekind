@@ -37,6 +37,49 @@ document.body.appendChild(btn);
 });
 })();
 
+// Floating share button -- top-right mirror of the back button, shown
+// on every page including the homepage. Matters most in the installed
+// home-screen app, which has no browser chrome and so no address bar
+// to copy a link from otherwise. Uses the device's real share sheet
+// (AirDrop, Messages, Instagram, etc) where the browser supports it,
+// and falls back to copying the link with a small toast confirming it
+// worked, for the handful of browsers (mainly desktop) that don't.
+(function(){
+window.addEventListener('DOMContentLoaded', function(){
+var btn = document.createElement('button');
+btn.type = 'button';
+btn.className = 'ahk-share-btn';
+btn.setAttribute('aria-label', 'Share this page');
+btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.8"/><line x1="8.6" y1="10.6" x2="15.4" y2="6.4" stroke="currentColor" stroke-width="1.8"/><line x1="8.6" y1="13.4" x2="15.4" y2="17.6" stroke="currentColor" stroke-width="1.8"/></svg>';
+btn.addEventListener('click', function(){
+var shareData = { title: document.title, url: location.href };
+if(navigator.share){
+navigator.share(shareData).catch(function(){});
+return;
+}
+var fallback = function(){
+var toast = document.createElement('div');
+toast.className = 'ahk-toast';
+toast.textContent = 'Link copied';
+document.body.appendChild(toast);
+requestAnimationFrame(function(){ toast.classList.add('show'); });
+setTimeout(function(){
+toast.classList.remove('show');
+setTimeout(function(){ toast.remove(); }, 250);
+}, 1800);
+};
+if(navigator.clipboard && navigator.clipboard.writeText){
+navigator.clipboard.writeText(location.href).then(fallback).catch(function(){
+prompt('Copy this link:', location.href);
+});
+} else {
+prompt('Copy this link:', location.href);
+}
+});
+document.body.appendChild(btn);
+});
+})();
+
 // Live "X products scanned today" bubble. Says how many scans have
 // happened, not "people" or "scans left" -- deliberately worded so it
 // can't read as a quota or a headcount, since one person scanning five
