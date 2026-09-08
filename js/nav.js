@@ -9,6 +9,34 @@ person_profiles: 'identified_only'
 });
 } catch(e) {}
 
+// Floating back button -- the bottom nav only jumps to its own fixed
+// tabs (Home/Brands/Scan/More), so there was no way back to whatever
+// page you actually came from (a brand page reached via search, a
+// journal post reached from the index) without hunting for the right
+// nav item. This uses real browser history when the visit came from
+// elsewhere on the site, and falls back to the homepage when it can't
+// tell (a bookmark, a fresh tab, a link from Instagram) -- both cases
+// leave you somewhere sensible rather than stuck. Skipped on the
+// homepage itself, since "back" from there has nowhere useful to go.
+(function(){
+var path = location.pathname;
+var isHome = path === '/' || /\/index\.html$/.test(path) || path === '/ahomekind' || path === '';
+if(isHome) return;
+window.addEventListener('DOMContentLoaded', function(){
+var btn = document.createElement('button');
+btn.type = 'button';
+btn.className = 'ahk-back-btn';
+btn.setAttribute('aria-label', 'Go back');
+btn.innerHTML = '&#8592;';
+btn.addEventListener('click', function(){
+var cameFromSite = document.referrer && document.referrer.indexOf(location.origin) === 0;
+if(cameFromSite && history.length > 1){ history.back(); }
+else { location.href = location.origin + '/index.html'; }
+});
+document.body.appendChild(btn);
+});
+})();
+
 // Live "X products scanned today" bubble. Says how many scans have
 // happened, not "people" or "scans left" -- deliberately worded so it
 // can't read as a quota or a headcount, since one person scanning five
