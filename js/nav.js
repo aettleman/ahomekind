@@ -139,6 +139,82 @@ slot.classList.add('ahk-visible');
 });
 })();
 
+// "Recently checked" brands: quietly remember the last few brand pages a
+// visitor has looked at (name, url, tier) in localStorage, then show them
+// as a small strip at the top of brand-check.html so it's easy to go back
+// to something you looked up a minute ago. Purely local to the browser --
+// nothing is sent anywhere, and it's just a handful of entries.
+(function(){
+var STORAGE_KEY = 'ahk-recent-brands';
+var MAX_ITEMS = 6;
+
+function readRecent(){
+try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch(e){ return []; }
+}
+function writeRecent(list){
+try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch(e){}
+}
+
+// On an individual brand page, record this visit.
+var m = location.pathname.match(/\/brands\/([^\/]+)\/?$/);
+if (m) {
+var run = function(){
+var h1 = document.querySelector('main h1, #main h1');
+if (!h1) return;
+var name = h1.textContent.trim();
+if (!name) return;
+var ratingEl = document.querySelector('.rating');
+var tier = 'neutral';
+if (ratingEl) {
+if (ratingEl.classList.contains('bad')) tier = 'bad';
+else if (ratingEl.classList.contains('warn')) tier = 'warn';
+else if (ratingEl.classList.contains('neutral')) tier = 'neutral';
+else tier = 'good';
+}
+var list = readRecent().filter(function(item){ return item.slug !== m[1]; });
+list.unshift({ slug: m[1], name: name, tier: tier });
+if (list.length > MAX_ITEMS) list = list.slice(0, MAX_ITEMS);
+writeRecent(list);
+};
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', run);
+} else {
+run();
+}
+}
+
+// On brand-check.html, render the strip if we have anything to show.
+if (location.pathname.replace(/^\//, '') === 'brand-check.html' || /\/brand-check\.html$/.test(location.pathname)) {
+var renderStrip = function(){
+var list = readRecent();
+if (!list.length) return;
+var slot = document.getElementById('main');
+if (!slot) return;
+var iconFor = { good: '🌿', warn: '⚠️', bad: '❌', neutral: '🐰' };
+var wrap = document.createElement('div');
+wrap.className = 'ahk-recent-strip';
+var html = '<p class="ahk-recent-label">recently checked</p><div class="ahk-recent-pills">';
+list.forEach(function(item){
+html += '<a class="ahk-recent-pill ahk-recent-' + item.tier + '" href="brands/' + item.slug + '/">' +
+'<span aria-hidden="true">' + (iconFor[item.tier] || iconFor.neutral) + '</span> ' + item.name + '</a>';
+});
+html += '</div>';
+wrap.innerHTML = html;
+var anchor = slot.querySelector('h1') || slot.firstElementChild;
+if (anchor && anchor.parentNode === slot) {
+anchor.insertAdjacentElement('afterend', wrap);
+} else {
+slot.insertBefore(wrap, slot.firstChild);
+}
+};
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', renderStrip);
+} else {
+renderStrip();
+}
+}
+})();
+
 // Register the service worker site-wide so the app shell (styling, this
 // script, icons) loads instantly and offline visits get a proper "you're
 // offline" screen instead of a browser error. See sw.js for what this
