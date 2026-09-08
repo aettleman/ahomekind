@@ -2,6 +2,21 @@
 
 html, body { overflow-x: hidden; }
 
+/* Smooth, native page-to-page transitions. Opting in with this one rule
+   makes supporting browsers (Chrome/Edge, with Safari catching up) cross-
+   fade between pages instead of the usual hard cut -- no JS, and browsers
+   that don't support it just do the normal instant navigation, so this is
+   pure upside. The default browser cross-fade is a little flat, so we
+   override its timing to feel calmer and closer to what Apple's pages do. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) {
+  animation-duration: 0.32s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
 body {
   background: #dcd3c0;
   font-family: 'Karla', sans-serif;
@@ -789,7 +804,9 @@ body { animation: pageFadeIn 0.22s ease; }
 .shop-tab:hover { color: #3d4a3a; }
 .shop-tab.active { color: #3d4a3a; border-bottom-color: #4d6b4f; }
 .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
-.pcard { background: #fff; border: 0.5px solid #e2d9c4; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; }
+.pcard { background: #fff; border: 0.5px solid #e2d9c4; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
+.pcard.pcard-hide { opacity: 0; transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) { .pcard { transition: none; } }
 .pcard-imgwrap { background: #faf7ef; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; height: 120px; }
 .pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
 .pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
