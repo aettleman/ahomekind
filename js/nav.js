@@ -561,23 +561,67 @@ reality: 'Every swap is a real, cumulative reduction, not an all-or-nothing swit
 ];
 var html = '';
 MYTHS.forEach(function(m, i){
-html += '<div class="flip-card">' +
-'<button type="button" class="flip-card-btn" id="mythCard' + i + '" aria-label="Flip to see the reality">' +
-'<div class="flip-card-inner">' +
-'<div class="flip-front"><div class="flip-img"><img src="images/myth-' + (i + 1) + '.jpg" alt="" loading="lazy" onerror="this.hidden=true"></div>' +
-'<p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap to see the reality &rarr;</p></div>' +
-'<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint">tap to flip back</p></div>' +
-'</div>' +
+html += '<div class="myth-card" data-myth="' + i + '">' +
+'<button type="button" class="myth-card-btn" id="mythCard' + i + '" aria-expanded="false" aria-controls="mythReality' + i + '">' +
+'<span class="myth-img"><img src="images/myth-' + (i + 1) + '.jpg" alt="" loading="lazy" onerror="this.hidden=true"></span>' +
+'<span class="myth-body">' +
+'<span class="myth-tag">the myth</span>' +
+'<span class="myth-claim">' + m.myth + '</span>' +
+'<span class="myth-hint">tap to see the reality <span aria-hidden="true">&rarr;</span></span>' +
+'</span>' +
 '</button>' +
 '</div>';
 });
 grid.innerHTML = html;
 grid.classList.add('myth-track');
-var cards = Array.prototype.slice.call(grid.querySelectorAll('.flip-card'));
-cards.forEach(function(card){
-var btn = card.querySelector('.flip-card-btn');
-btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
+var cards = Array.prototype.slice.call(grid.querySelectorAll('.myth-card'));
+
+// The reality opens in a panel beneath the row -- image beside the
+// answer -- rather than on the back of a flip. Flipping hid the myth at
+// the moment you wanted to compare it against the correction, and the
+// answers are too long to fit a card back on a phone without shrinking
+// the type. One panel is reused for whichever card is open.
+var reality = document.createElement('div');
+reality.className = 'myth-reality';
+reality.hidden = true;
+reality.innerHTML =
+'<span class="myth-reality-img"><img alt="" id="mythRealityImg"></span>' +
+'<div class="myth-reality-body">' +
+'<p class="myth-reality-tag">the reality</p>' +
+'<p class="myth-reality-text" id="mythRealityText"></p>' +
+'<button type="button" class="myth-reality-close">close</button>' +
+'</div>';
+grid.parentNode.insertBefore(reality, grid.nextSibling);
+var rText = reality.querySelector('#mythRealityText');
+var rImg = reality.querySelector('#mythRealityImg');
+var openIndex = null;
+
+function closeReality(){
+reality.hidden = true;
+if (openIndex !== null) {
+var prev = cards[openIndex];
+if (prev) {
+prev.classList.remove('is-open');
+prev.querySelector('.myth-card-btn').setAttribute('aria-expanded', 'false');
+}
+}
+openIndex = null;
+}
+function openReality(i){
+if (openIndex === i) { closeReality(); return; }
+closeReality();
+openIndex = i;
+reality.id = 'mythReality' + i;
+rText.textContent = MYTHS[i].reality;
+rImg.src = 'images/myth-' + (i + 1) + '.jpg';
+reality.hidden = false;
+cards[i].classList.add('is-open');
+cards[i].querySelector('.myth-card-btn').setAttribute('aria-expanded', 'true');
+}
+cards.forEach(function(card, i){
+card.querySelector('.myth-card-btn').addEventListener('click', function(){ openReality(i); });
 });
+reality.querySelector('.myth-reality-close').addEventListener('click', closeReality);
 
 // Dots for the carousel. They only mean anything while the track is
 // actually scrollable -- above 900px CSS lays the cards out as a grid

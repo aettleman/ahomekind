@@ -36,12 +36,14 @@ el.className = 'impact-counter';
 el.setAttribute('role', 'status');
 el.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since you opened this page');
 el.innerHTML =
-'<button type="button" class="impact-counter-x" aria-label="dismiss">&times;</button>' +
 '<div class="impact-counter-num" id="impactCounterNum">0</div>' +
 '<div class="impact-counter-label">land animals killed for meat worldwide, since you opened this page</div>' +
 '<div class="impact-counter-line">This isn\'t a hypothetical. It\'s the rate right now, everywhere, while you read this. I can\'t make the choice for you, but you get to decide whether your money keeps feeding it.</div>' +
 '<a href="' + SOURCE_URL + '" target="_blank" rel="noopener" class="impact-counter-source">based on FAO data via Our World in Data &rarr;</a>';
-document.body.appendChild(el);
+// In the page, just above the footer -- not floating over it.
+var footer = document.querySelector('footer.site-footer');
+if (footer && footer.parentNode) { footer.parentNode.insertBefore(el, footer); }
+else { document.body.appendChild(el); }
 requestAnimationFrame(function(){ el.classList.add('show'); });
 
 var numEl = el.querySelector('#impactCounterNum');
@@ -54,12 +56,7 @@ timer = requestAnimationFrame(tick);
 }
 timer = requestAnimationFrame(tick);
 
-var closeBtn = el.querySelector('.impact-counter-x');
-closeBtn.addEventListener('click', function(){
-if (timer) cancelAnimationFrame(timer);
-el.classList.remove('show');
-setTimeout(function(){ if (el.parentNode) el.parentNode.removeChild(el); }, 300);
-});
+
 };
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
 setTimeout(run, 400);
