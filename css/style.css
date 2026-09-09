@@ -1124,6 +1124,10 @@ body { animation: pageFadeIn 0.22s ease; }
    shows through instead of a broken-image icon. */
 .ahk-slot { position: relative; overflow: hidden; border-radius: 20px; background: linear-gradient(135deg, #3f4d3a 0%, #2f3a2d 100%); }
 .ahk-slot > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* `display:block` above outranks the browser's [hidden] rule, so a slot
+   whose image is missing would still paint a broken-image icon over the
+   placeholder. Restore it explicitly. */
+.ahk-slot > img[hidden] { display: none; }
 .ahk-slot-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: rgba(244,239,226,0.5); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; pointer-events: none; }
 .ahk-slot > img:not([hidden]) ~ .ahk-slot-label { display: none; }
 
@@ -1218,3 +1222,57 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
   .shelf-cta { color: var(--ahk-green); }
   .ahk-counter-bubble { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-text) !important; }
 }
+
+/* ============================================================
+   CATEGORY TILES + FEATURE CARDS
+   ============================================================
+   Image-led browsing, in place of the old wall of text cards. Each
+   tile is a photo with a short label under it -- the picture does
+   the explaining, so the copy doesn't have to. */
+.cat-section { background: var(--ahk-surface-2); padding: 46px 24px 52px; }
+.cat-inner { max-width: 900px; margin: 0 auto; }
+.cat-head { text-align: center; margin-bottom: 30px; }
+.cat-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.3px; margin: 0 0 10px; }
+.cat-head p { color: var(--ahk-text); font-size: 14px; line-height: 1.75; max-width: 420px; margin: 0 auto; }
+.cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 760px) { .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.cat-tile-x { display: block; text-decoration: none; border-radius: 18px; overflow: hidden; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
+.cat-tile-x:hover, .cat-tile-x:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px var(--ahk-shadow); border-color: var(--ahk-green-soft); }
+@media (prefers-reduced-motion: reduce) { .cat-tile-x { transition: none; } }
+.cat-tile-x .ahk-slot { aspect-ratio: 1 / 1; border-radius: 0; }
+.cat-tile-label { display: block; padding: 13px 14px 14px; font-size: 13px; font-weight: 600; color: var(--ahk-heading); text-align: center; line-height: 1.4; }
+/* The "everything else" tile has no photo -- it's a signpost, so it
+   reads as a quieter, typographic sibling of the image tiles. */
+.cat-tile-x.is-more { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px 16px; background: var(--ahk-surface); min-height: 150px; }
+.cat-tile-x.is-more .cat-tile-label { padding: 0; }
+.cat-tile-more-arrow { font-size: 22px; color: var(--ahk-green); margin-bottom: 8px; line-height: 1; }
+
+/* A wide feature card: image one side, copy and a call to action the
+   other. Used for the quiz prompt and the journal teaser. */
+.feature-card { max-width: 900px; margin: 0 auto; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: 1fr; }
+.feature-card .ahk-slot { aspect-ratio: 16 / 9; border-radius: 0; }
+.feature-card-body { padding: 26px 24px 28px; text-align: center; }
+.feature-card-kicker { color: var(--ahk-green); font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; margin: 0 0 12px; }
+.feature-card-body h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.3px; margin: 0 0 12px; }
+.feature-card-body p { color: var(--ahk-text); font-size: 14px; line-height: 1.8; margin: 0 0 20px; }
+.feature-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--ahk-green); color: #f4efe2; font-weight: 600; font-size: 13px; letter-spacing: 0.4px; padding: 14px 26px; border-radius: 60px; text-decoration: none; transition: background 0.18s ease; }
+.feature-cta:hover, .feature-cta:focus-visible { background: var(--ahk-heading); color: #f4efe2; }
+.feature-sub-link { display: block; margin-top: 14px; font-size: 12.5px; color: var(--ahk-text-muted); }
+@media (min-width: 760px) {
+  .feature-card { grid-template-columns: 1fr 1.15fr; align-items: center; }
+  .feature-card .ahk-slot { aspect-ratio: 1 / 1; height: 100%; }
+  .feature-card-body { text-align: left; padding: 34px 34px 36px; }
+}
+.band-feature { background: var(--ahk-surface); padding: 46px 24px 52px; }
+@media (prefers-color-scheme: dark) {
+  .cat-tile-x.is-more { background: var(--ahk-surface-2); }
+  .feature-cta { color: #1e241d; }
+  .feature-cta:hover, .feature-cta:focus-visible { background: var(--ahk-green-soft); color: #1e241d; }
+}
+
+/* The impact teaser gets the mockup's circular animal portrait above
+   the number, so the figure reads as being about a living thing
+   rather than as an abstract statistic. */
+.impact-portrait { width: 108px; height: 108px; border-radius: 50%; overflow: hidden; margin: 0 auto 18px; border: 2px solid rgba(109,135,104,0.35); }
+.impact-portrait .ahk-slot { width: 100%; height: 100%; border-radius: 50%; }
+.impact-portrait .ahk-slot-label { font-size: 9px; letter-spacing: 1px; }
