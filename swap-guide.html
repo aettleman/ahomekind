@@ -6,7 +6,7 @@
 <title>Swap Guide - a home kind</title>
 <meta name="description" content="Popular products paired with cruelty-free alternatives, plus food and fashion, in one place.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910g">
+<link rel="stylesheet" href="css/style.css?v=20260910h">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -39,22 +39,41 @@
 .swap-section-label { display:inline-block; margin:40px 0 16px; padding:9px 20px; background:#3d4a3a; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; border-radius:30px; }
 .swap-section-label:first-of-type { margin-top:6px; }
 .ingredient-watch { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:12px; }
-.iw-row { border-radius:8px; padding:12px 14px; font-size:13.5px; line-height:1.6; margin-bottom:0; }
-.iw-name { display:block; font-weight:600; color:#3d4a3a; margin-bottom:3px; }
-.iw-note { color:#5c5c4f; }
-.iw-animal { background:#f3e2df; border:1px solid #d9a89f; }
-.iw-ambiguous { background:#f6ecd9; border:1px solid #dfc491; }
-.iw-key { font-size:12px; color:#8a8672; margin-bottom:14px; }
+/* Twenty-one ingredients, each with a paragraph, used to sit open at once
+   -- a wall of text you had to read to find the one word you came for.
+   They're tappable rows now: you scan twenty-one short names and open only
+   what you care about. Same information, a fraction of the reading. */
+.ingredient-watch { background:#e8efe2; border:1px solid #cbdcc0; border-radius:14px; padding:6px 4px; }
+.iw-row { border-radius:9px; margin:0; border:0; background:transparent; }
+.iw-row + .iw-row { border-top:1px solid rgba(109,135,104,0.18); }
+.iw-row > summary { display:flex; align-items:center; gap:9px; cursor:pointer; padding:11px 12px; font-size:13.5px; font-weight:600; color:#33502f; list-style:none; }
+.iw-row > summary::-webkit-details-marker { display:none; }
+.iw-row > summary::after { content:'+'; margin-left:auto; font-size:16px; font-weight:400; color:#6f8768; line-height:1; }
+.iw-row[open] > summary::after { content:'\2013'; }
+.iw-row > summary:hover { background:rgba(255,255,255,0.5); border-radius:9px; }
+.iw-dot { flex:0 0 8px; height:8px; border-radius:50%; }
+.iw-animal .iw-dot { background:#a5453d; }
+.iw-ambiguous .iw-dot { background:#c98a3a; }
+.iw-body { padding:0 12px 13px 29px; }
+.iw-note { display:block; font-size:13px; line-height:1.7; color:#3f4a3b; }
+.iw-key { font-size:12px; color:#7a7561; margin-bottom:10px; }
 .iw-key span { display:inline-block; margin-right:16px; }
-.iw-key .dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; }
-.iw-key .dot.animal { background:#d9a89f; }
-.iw-key .dot.ambiguous { background:#dfc491; }
-.iw-why { margin-top:8px; }
-.iw-why summary { cursor:pointer; font-size:11.5px; letter-spacing:0.6px; text-transform:uppercase; color:#8a4a2a; font-weight:600; }
-.iw-why summary:hover { color:#5c2c17; }
-.iw-why p { font-size:13px; line-height:1.7; color:#5c5c4f; margin:10px 0 0; }
+.iw-key .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; }
+.iw-key .dot.animal { background:#a5453d; }
+.iw-key .dot.ambiguous { background:#c98a3a; }
+.iw-why { margin-top:10px; }
+.iw-why summary { cursor:pointer; font-size:11px; letter-spacing:0.6px; text-transform:uppercase; color:#4d6b4f; font-weight:700; }
+.iw-why summary:hover { color:#33502f; }
+.iw-why p { font-size:12.5px; line-height:1.7; color:#4f5a4b; margin:8px 0 0; }
 .iw-why .iw-sources { font-size:11.5px; margin-top:8px; }
-.iw-why .iw-sources a { color:#8a4a2a; }
+.iw-why .iw-sources a { color:#4d6b4f; }
+@media (prefers-color-scheme: dark) {
+  .ingredient-watch { background:#242c22; border-color:#3a4635; }
+  .iw-row > summary { color:#a3bf99; }
+  .iw-row > summary:hover { background:rgba(255,255,255,0.05); }
+  .iw-note { color:var(--ahk-text); }
+  .iw-why p { color:var(--ahk-text); }
+}
 .pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid #6f8768; padding:4px 0 4px 20px; margin:26px 0; }
 .material-card { margin-bottom:0; }
 .material-name { font-family:'Cormorant Garamond',serif; font-size:19px; letter-spacing:0.5px; color:#3d4a3a; margin-bottom:8px; }
@@ -504,7 +523,7 @@
 <p><strong>Was it produced with better welfare?</strong> A completely different question, and the one free-range, cage-free and grass-fed labels are trying to answer. Those are about how an animal was kept during its life, not about whether the product contains animal-derived ingredients at all. A free-range egg still comes from a chicken; a grass-fed burger is still beef. Both questions are valid starting points, they're just not the same one, and I try to be clear about which I'm answering rather than blur the two together.</p>
 
 <p class="section-label" style="margin-top:30px;">hidden animal ingredients to watch for</p>
-<p>Some of these are always animal-derived. Others genuinely could go either way and the label won't always say, so I've marked those honestly rather than guessing.</p>
+<p>Tap any of these to see what it actually is. A red dot means always animal-derived; amber means it could go either way and the label won't always tell you.</p>
 <div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
 <div id="foodIngredientList" class="ingredient-watch"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
 
@@ -561,7 +580,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260910g"></script>
+<script src="js/nav.js?v=20260910h"></script>
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
@@ -588,7 +607,9 @@ fetch('data/food-ingredients.json').then(function(r){ return r.json(); }).then(f
 var el = document.getElementById('foodIngredientList');
 var html = '';
 (list || []).forEach(function(item){
-html += '<div class="iw-row iw-' + item.type + '"><span class="iw-name">' + item.name + '</span><span class="iw-note">' + item.note + '</span>';
+html += '<details class="iw-row iw-' + item.type + '">';
+html += '<summary><span class="iw-dot" aria-hidden="true"></span>' + item.name + '</summary>';
+html += '<div class="iw-body"><span class="iw-note">' + item.note + '</span>';
 if(item.detail){
 html += '<details class="iw-why"><summary>why isn\'t this vegan?</summary><p>' + item.detail + '</p>';
 if(item.sources && item.sources.length){
@@ -596,7 +617,7 @@ html += '<p class="iw-sources">' + item.sources.map(function(s){ return '<a href
 }
 html += '</details>';
 }
-html += '</div>';
+html += '</div></details>';
 });
 el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the list right now.</p>';
 }).catch(function(){
