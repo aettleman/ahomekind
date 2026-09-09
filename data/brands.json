@@ -2213,7 +2213,7 @@
     "slug": "l-oreal",
     "name": "L'Oréal",
     "tier": "bad",
-    "note": "The world's largest cosmetics company. L'Oréal itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. It's also the parent company of Maybelline, Garnier, Redken, NYX, Kiehl's, Lancôme, and dozens more.",
+    "note": "The world's largest cosmetics company. L'Oréal itself is not cruelty-free: it sells into mainland China, where animal testing on cosmetics can still be legally required, and it has lobbied against a full end to cosmetics testing on animals in the EU. Brands it owns that also aren't cruelty-free include Maybelline, Redken, CeraVe, La Roche-Posay, Vichy and Elvive. It does own some brands that are certified cruelty-free in their own right, like Garnier and NYX, which are listed separately here.",
     "parentCompany": null,
     "isParentCompany": true,
     "vegan": "partial",
@@ -2228,7 +2228,8 @@
       "skincare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "lastVerified": "2026-09-10"
   },
   {
     "slug": "peace-with-the-wild",

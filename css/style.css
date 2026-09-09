@@ -1323,7 +1323,6 @@ body { animation: pageFadeIn 0.22s ease; }
      .btn-pri      primary action -- dark green pill
      .btn-sec      secondary action -- outlined pill
      .btn-quiet    tertiary -- plain text link under a button
-     .tilegrid     grid of image or monogram tiles
      .listrow      icon + label + chevron navigation row
      .statblock    big figure with a label and an action
    ============================================================ */
@@ -1366,31 +1365,10 @@ body { animation: pageFadeIn 0.22s ease; }
   .btn-pri:hover, .btn-pri:focus-visible { background: var(--ahk-green-soft); color: #1a2018; }
 }
 
-/* tile grid -- images, or monograms where no image exists */
-.tilegrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
-@media (max-width: 420px) { .tilegrid { gap: 9px; } }
-.tile { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 15px 8px 14px; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 16px; text-decoration: none; text-align: center; transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease; }
-.tile:hover, .tile:focus-visible { transform: translateY(-2px); border-color: var(--ahk-green-soft); box-shadow: 0 8px 18px var(--ahk-shadow); }
-@media (prefers-reduced-motion: reduce) { .tile { transition: none; } }
-.tile-mono { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 500; }
-.tile-name { font-size: 12px; font-weight: 600; color: var(--ahk-heading); line-height: 1.3; }
-.tile-chip { font-size: 9.5px; letter-spacing: 0.6px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 700; }
-/* Chips reuse the brand-check tier meanings so the colour says the
-   same thing here as it does on a brand's own page. */
-.tile-chip.t-good { background: #dbe8d7; color: #33502f; }
-.tile-chip.t-check { background: #f6ecd9; color: #8a6a2a; }
-.tile-chip.t-warn { background: #dde9ea; color: #3d6b78; }
-.tile-chip.t-bad { background: #f3e2df; color: #8a332c; }
-.tile-mono.t-good { background: #dbe8d7; color: #33502f; }
-.tile-mono.t-check { background: #f6ecd9; color: #8a6a2a; }
-.tile-mono.t-warn { background: #dde9ea; color: #3d6b78; }
-.tile-mono.t-bad { background: #f3e2df; color: #8a332c; }
-@media (prefers-color-scheme: dark) {
-  .tile-chip.t-good, .tile-mono.t-good { background: #26331f; color: #9dc294; }
-  .tile-chip.t-check, .tile-mono.t-check { background: #33301f; color: #d9b877; }
-  .tile-chip.t-warn, .tile-mono.t-warn { background: #22333a; color: #86b3c0; }
-  .tile-chip.t-bad, .tile-mono.t-bad { background: #3a2a28; color: #d98d84; }
-}
+/* (The tile/monogram grid that lived here powered brand-check's "popular
+   brands" block. That block is gone -- the search field directly above it
+   did the same job better, and a letter in a coloured circle was never
+   going to stand in for a logo. Removed rather than left dead.) */
 
 /* navigation rows -- icon, label, chevron */
 .listrow { display: flex; align-items: center; gap: 13px; padding: 15px 17px; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 15px; text-decoration: none; margin-bottom: 9px; transition: border-color 0.16s ease, background 0.16s ease; }
@@ -1524,11 +1502,11 @@ body { animation: pageFadeIn 0.22s ease; }
 /* A card sitting on a cream page needs a little lift as well as an edge --
    on the old darker background the border alone did the separating, but at
    #faf5eb the border is doing almost nothing on its own. */
-.card, .u-card, .tile, .home-card, .myth-card-btn, .listrow, .quiz-opt {
+.card, .u-card, .home-card, .myth-card-btn, .listrow, .quiz-opt {
   box-shadow: 0 1px 2px rgba(90,80,55,0.05), 0 6px 16px rgba(90,80,55,0.045);
 }
 @media (prefers-color-scheme: dark) {
-  .card, .u-card, .tile, .home-card, .myth-card-btn, .listrow, .quiz-opt {
+  .card, .u-card, .home-card, .myth-card-btn, .listrow, .quiz-opt {
     box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 16px rgba(0,0,0,0.22);
   }
 }
