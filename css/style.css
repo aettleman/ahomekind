@@ -218,6 +218,7 @@ p { margin-bottom: 18px; font-size: 15px; }
 .parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
 .parent-test-flag.bad { background:#f3e2df; color:#8a332c; }
 .parent-test-flag.good { background:#e6efe2; color:#33502f; }
+.parent-test-flag.unverified { background:#ece5d5; color:#6b6656; }
 
 /* cards */
 .card {

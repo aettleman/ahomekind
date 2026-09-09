@@ -78,8 +78,12 @@ function renderBrandPage(brand) {
     : 'vegan-unknown';
   const parentPillClass = brand.tier === 'bad' ? 'parent-bad' : 'parent-neutral';
   const parentLine = brand.parentCompany ? ('<span class="status-pill ' + parentPillClass + '"><span class="status-pill-label">parent company</span> ' + escapeHtml(brand.parentCompany) + '</span>') : '';
-  const parentTestFlag = (brand.tier === 'unverified' && typeof brand.parentTestsOnAnimals === 'boolean')
-    ? ('<p class="parent-test-flag ' + (brand.parentTestsOnAnimals ? 'bad' : 'good') + '">' + (brand.parentTestsOnAnimals ? '&#10060; parent company tests on animals' : '&#127807; parent company doesn\'t test on animals') + '</p>')
+  const parentTestFlag = brand.tier === 'unverified'
+    ? (brand.parentTestsOnAnimals === true
+        ? '<p class="parent-test-flag bad">&#10060; parent company tests on animals</p>'
+        : brand.parentTestsOnAnimals === false
+        ? '<p class="parent-test-flag good">&#127807; parent company doesn\'t test on animals</p>'
+        : '<p class="parent-test-flag unverified">&#128269; parent company\'s testing policy is also unverified</p>')
     : '';
   const veganButNotCrueltyFreeWarning = (brand.tier === 'bad' && (brand.vegan === 'partial' || brand.vegan === 'full'))
     ? '<div style="margin-top:16px; padding:14px 16px; background:#f3e2df; border:0.5px solid #d9b9b3; border-radius:8px; font-size:13.5px; color:#7a4640; line-height:1.7;"><strong>a vegan label here doesn\'t make it cruelty-free.</strong> ' + escapeHtml(brand.name) + ' isn\'t on the cruelty-free list because of the company\'s wider testing policy, not because of what\'s in any one product. Buying a vegan-labelled item from them still puts money behind a company that tests on animals elsewhere in its business.</div>'
@@ -100,7 +104,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909l">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909m">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -214,7 +218,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260909l"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260909m"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
