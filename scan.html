@@ -6,7 +6,7 @@
 <title>Scan a Barcode - a home kind</title>
 <meta name="description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909o">
+<link rel="stylesheet" href="css/style.css?v=20260909p">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -24,6 +24,34 @@
 .big-btn:active { transform:scale(0.98); box-shadow:0 6px 16px rgba(61,74,58,0.24); }
 @media(prefers-reduced-motion: reduce){ .big-btn { transition:none; } }
 .big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+
+/* App-style scan entry: one dark, focused panel with the viewfinder, the
+   primary scan action, and the fallbacks underneath -- rather than a page
+   of stacked full-width blocks. The out-of-focus panel behind the barcode
+   stands in for the camera preview before permission is granted. */
+.scan-panel { background:#3d4a3a; border-radius:26px; padding:30px 22px 26px; margin:0 auto 26px; max-width:420px; text-align:center; }
+.scan-panel-kicker { color:#d9c99a; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin:0 0 20px; }
+.scan-viewfinder { position:relative; height:210px; border-radius:20px; overflow:hidden; margin:0 auto 24px; background:radial-gradient(120% 90% at 50% 35%, #55684f 0%, #3a4738 55%, #2c3629 100%); display:flex; align-items:center; justify-content:center; }
+.scan-viewfinder::before { content:''; position:absolute; inset:0; background:radial-gradient(60% 45% at 72% 22%, rgba(230,212,168,0.22), transparent 70%), radial-gradient(50% 40% at 22% 78%, rgba(230,212,168,0.12), transparent 70%); filter:blur(6px); }
+.scan-viewfinder-barcode { position:relative; width:150px; height:auto; }
+.scan-viewfinder-line { position:absolute; left:16%; right:16%; height:2px; top:50%; background:linear-gradient(90deg, transparent, rgba(230,212,168,0.85), transparent); }
+.scan-corner { position:absolute; width:26px; height:26px; border-color:#f4efe2; }
+.scan-corner.tl { top:14px; left:14px; border-top:2px solid; border-left:2px solid; border-radius:6px 0 0 0; }
+.scan-corner.tr { top:14px; right:14px; border-top:2px solid; border-right:2px solid; border-radius:0 6px 0 0; }
+.scan-corner.bl { bottom:14px; left:14px; border-bottom:2px solid; border-left:2px solid; border-radius:0 0 0 6px; }
+.scan-corner.br { bottom:14px; right:14px; border-bottom:2px solid; border-right:2px solid; border-radius:0 0 6px 0; }
+#startBtn.big-btn { display:flex; align-items:center; justify-content:center; gap:10px; background:#e6d4a8; color:#3d4a3a; font-size:15px; font-weight:700; letter-spacing:0.4px; text-transform:none; padding:18px; border-radius:60px; margin:0 auto 20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.scan-or { color:#8a9686; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin:0 0 18px; }
+.scan-panel .manual { display:flex; gap:8px; max-width:100%; margin:0 auto 16px; }
+.scan-panel .manual input { flex:1; padding:15px 18px; border:1px solid rgba(244,239,226,0.28); border-radius:60px; background:rgba(244,239,226,0.06); color:#f4efe2; font-size:14px; }
+.scan-panel .manual input::placeholder { color:rgba(244,239,226,0.5); }
+.scan-panel .manual #lookupBtn { flex:0 0 auto; background:rgba(244,239,226,0.14); color:#f4efe2; border:1px solid rgba(244,239,226,0.28); border-radius:60px; padding:15px 22px; font-size:13px; letter-spacing:1px; text-transform:uppercase; box-shadow:none; margin:0; width:auto; }
+.scan-panel-links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:4px; }
+.scan-panel-links a { display:inline-flex; align-items:center; gap:8px; background:rgba(244,239,226,0.06); border:1px solid rgba(244,239,226,0.28); border-radius:60px; padding:13px 20px; color:#f4efe2; font-size:13px; font-weight:600; text-decoration:none; transition:background 0.18s ease; }
+.scan-panel-links a:hover, .scan-panel-links a:focus-visible { background:rgba(244,239,226,0.13); }
+.scan-panel .camera-wrap { max-width:100%; margin-bottom:20px; }
+.scan-panel #reader { border-radius:20px; }
+@media(max-width:480px){ .scan-panel { border-radius:22px; padding:26px 16px 22px; } }
 
 /* Camera controls float directly on the video feed itself, right where
    your eye already is while lining up a barcode, instead of living below
@@ -231,7 +259,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <rect x="22.5" y="2" width="2" height="22" fill="#3d4a3a"/>
 </svg>
 scan a barcode</h1>
-<p class="scan-sub">Point your camera at any barcode, food, drink, cosmetics, household, anything with one, and I'll tell you what I know.</p>
+<p class="scan-sub">Point your camera at any barcode and I'll tell you what I know.</p>
 <span class="ahk-counter-bubble" style="margin-bottom:14px;"></span>
 
 <div id="addHome">
@@ -247,6 +275,29 @@ scan a barcode</h1>
 <button type="button" id="addHome-dismiss" aria-label="dismiss">&times;</button>
 </div>
 
+<div class="scan-panel">
+<p class="scan-panel-kicker">check before you buy</p>
+
+<div class="scan-viewfinder" id="scanPlaceholder">
+<svg class="scan-viewfinder-barcode" viewBox="0 0 150 70" fill="none" aria-hidden="true">
+<rect x="0" y="0" width="4" height="56" fill="#f4efe2"/><rect x="7" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="13" y="0" width="5" height="56" fill="#f4efe2"/><rect x="22" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="28" y="0" width="3" height="56" fill="#f4efe2"/><rect x="35" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="44" y="0" width="2" height="56" fill="#f4efe2"/><rect x="50" y="0" width="4" height="56" fill="#f4efe2"/>
+<rect x="58" y="0" width="2" height="56" fill="#f4efe2"/><rect x="64" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="73" y="0" width="3" height="56" fill="#f4efe2"/><rect x="80" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="86" y="0" width="5" height="56" fill="#f4efe2"/><rect x="95" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="101" y="0" width="4" height="56" fill="#f4efe2"/><rect x="109" y="0" width="3" height="56" fill="#f4efe2"/>
+<rect x="116" y="0" width="2" height="56" fill="#f4efe2"/><rect x="122" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="131" y="0" width="2" height="56" fill="#f4efe2"/><rect x="137" y="0" width="4" height="56" fill="#f4efe2"/>
+<rect x="145" y="0" width="2" height="56" fill="#f4efe2"/>
+<text x="75" y="68" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" letter-spacing="2" fill="rgba(244,239,226,0.75)">5 060685 491832</text>
+</svg>
+<span class="scan-viewfinder-line"></span>
+<span class="scan-corner tl"></span><span class="scan-corner tr"></span>
+<span class="scan-corner bl"></span><span class="scan-corner br"></span>
+</div>
+
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
@@ -258,15 +309,33 @@ scan a barcode</h1>
 <button type="button" id="stopBtn">&#10005; stop</button>
 </div>
 </div>
-<button class="big-btn" id="startBtn">scan a product</button>
 
-<p class="manual-lead">can't scan it? enter the barcode manually</p>
+<button class="big-btn" id="startBtn">
+<svg width="20" height="20" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+<rect x="9" y="11" width="22" height="18" rx="3" stroke="#3d4a3a" stroke-width="1.6"/>
+<circle cx="20" cy="20" r="5.5" stroke="#3d4a3a" stroke-width="1.6"/>
+<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#3d4a3a" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+<span>scan a product</span>
+</button>
+
+<p class="scan-or">or</p>
 <div class="manual">
 <label for="manualCode" class="visually-hidden">Barcode number</label>
-<input type="text" id="manualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
-<button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="lookupBtn">check</button>
+<input type="text" id="manualCode" inputmode="numeric" placeholder="enter barcode manually">
+<button class="big-btn" id="lookupBtn">check</button>
 </div>
-<div class="shelf-cta-wrap"><a href="shelf.html" class="shelf-cta">or scan a whole shelf instead</a> <a href="ingredient-check.html" class="shelf-cta">or check the ingredients instead</a></div>
+<div class="scan-panel-links">
+<a href="shelf.html">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#f4efe2" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#f4efe2" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#f4efe2" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#f4efe2" stroke-width="1.6"/></svg>
+<span>scan a whole shelf</span>
+</a>
+<a href="ingredient-check.html">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#f4efe2" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#f4efe2" stroke-width="1.5" stroke-linecap="round"/></svg>
+<span>check ingredients</span>
+</a>
+</div>
+</div>
 
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
@@ -816,8 +885,9 @@ var rotateTimer = null;
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
 if(rotateTimer){ clearInterval(rotateTimer); rotateTimer = null; }
-el("startBtn").style.display = "block";
+el("startBtn").style.display = "flex";
 el("cameraWrap").style.display = "none";
+if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "flex";
 el("cameraControls").style.display = "none";
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
@@ -927,6 +997,7 @@ if(result){ onBarcodeDecoded(result.getText()); }
 setStatus("Point at a barcode - it reads automatically, or line it up in the guide and tap snap.");
 el("startBtn").style.display = "none";
 el("cameraWrap").style.display = "block";
+if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "none";
 el("cameraControls").style.display = "flex";
 setupTorchButton();
 rotateTimer = setInterval(tryRotatedDecode, 2500);
@@ -997,7 +1068,7 @@ if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909o"></script>
+<script src="js/nav.js?v=20260909p"></script>
 <script src="js/newsletter.js"></script>
 <script>
 // "Add to home screen" -- shown only when it's actually possible (or, on

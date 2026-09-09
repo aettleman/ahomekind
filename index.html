@@ -6,7 +6,7 @@
 <title>a home kind - cruelty-free, vegan living</title>
 <meta name="description" content="Cruelty-free and vegan swaps, honest brand checks, and a starter guide, without the lectures.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909o">
+<link rel="stylesheet" href="css/style.css?v=20260909p">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -38,6 +38,52 @@
 .impact-teaser:hover .impact-teaser-cta { background:#3d5a3f; }
 .rabbit-caption { text-align:center; font-family:'Dancing Script',cursive; font-weight:600; font-size:21px; line-height:1.2; color:#a4894f; background:#efe7d0; margin:0; padding:2px 24px 22px; }
 @media(max-width:480px){ .rabbit-caption { font-size:17px; padding:2px 16px 20px; } }
+
+/* Simplified hero: a calmer, less text-heavy top of the page than the old
+   full-width photo strip + separate dark CTA block -- one light section
+   introduces the site and the rotating fact, a second, distinct dark
+   section is the single clear "check before you buy" action. */
+.hero-simple { background:#f4efe2; padding:48px 24px 40px; text-align:center; }
+.hero-simple-rabbit { max-width:265px; margin:0 auto 22px; }
+@media(max-width:480px){ .hero-simple-rabbit { max-width:230px; } }
+.hero-simple-rabbit img { display:block; width:100%; height:auto; border-radius:18px; }
+.hero-simple-kicker { color:#8a8258; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin:0 0 18px; }
+.hero-simple h1 { color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:31px; line-height:1.28; letter-spacing:0.2px; text-transform:none; margin:0 0 18px; }
+@media(max-width:480px){ .hero-simple h1 { font-size:28px; } }
+.hero-simple h1 em { font-style:italic; color:#a4894f; }
+.hero-simple .hero-fact-text { color:#5c6b57; font-size:13.5px; line-height:1.75; min-height:70px; max-width:330px; margin-left:auto; margin-right:auto; }
+.hero-simple .hero-fact-dot { background:rgba(138,106,42,0.25); }
+.hero-simple .hero-fact-dot.active { background:#a4894f; }
+.hero-simple .hero-fact-arrow { border-color:rgba(138,106,42,0.3); color:#5c6b57; }
+.hero-simple .hero-fact-arrow:hover, .hero-simple .hero-fact-arrow:focus-visible { border-color:#a4894f; }
+.hero-simple-scan-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#e6d4a8; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:0.4px; text-decoration:none; padding:18px 34px; border-radius:60px; box-shadow:0 8px 20px rgba(61,74,58,0.14); margin:30px 0 30px; transition:transform 0.18s ease, box-shadow 0.18s ease; }
+.hero-simple-scan-btn:hover, .hero-simple-scan-btn:focus-visible { transform:translateY(-2px); box-shadow:0 12px 24px rgba(61,74,58,0.18); }
+@media(prefers-reduced-motion: reduce){ .hero-simple-scan-btn { transition:none; } }
+.hero-simple-links { display:flex; justify-content:center; gap:36px; max-width:360px; margin:0 auto; }
+.hero-simple-link { display:flex; flex-direction:column; align-items:center; gap:8px; text-decoration:none; flex:1; }
+.hero-simple-link-icon { width:52px; height:52px; border-radius:50%; border:1px solid #cfc4a9; display:flex; align-items:center; justify-content:center; background:#fff; transition:border-color 0.18s ease; }
+.hero-simple-link:hover .hero-simple-link-icon, .hero-simple-link:focus-visible .hero-simple-link-icon { border-color:#a4894f; }
+.hero-simple-link-label { font-size:11px; letter-spacing:0.5px; color:#3d4a3a; }
+
+.check-before-buy { background:#3d4a3a; padding:52px 24px 48px; text-align:center; }
+.check-before-buy-kicker { color:#d9c99a; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin:0 0 24px; }
+/* Stands in for the camera viewfinder: a soft, out-of-focus panel with a
+   barcode sitting in the scan brackets, so the section reads as "point
+   your camera here" without repeating the rabbit illustration that's
+   already above it. */
+.check-before-buy-frame { position:relative; max-width:320px; height:210px; margin:0 auto 26px; border-radius:22px; overflow:hidden; background:radial-gradient(120% 90% at 50% 35%, #55684f 0%, #3a4738 55%, #2c3629 100%); display:flex; align-items:center; justify-content:center; }
+.check-before-buy-frame::before { content:''; position:absolute; inset:0; background:radial-gradient(60% 45% at 72% 22%, rgba(230,212,168,0.22), transparent 70%), radial-gradient(50% 40% at 22% 78%, rgba(230,212,168,0.12), transparent 70%); filter:blur(6px); }
+.check-before-buy-barcode { position:relative; display:block; width:150px; height:auto; opacity:0.95; }
+.check-before-buy-scanline { position:absolute; left:16%; right:16%; height:2px; background:linear-gradient(90deg, transparent, rgba(230,212,168,0.85), transparent); top:50%; }
+.check-before-buy-corner { position:absolute; width:26px; height:26px; border-color:#f4efe2; }
+.check-before-buy-corner.tl { top:14px; left:14px; border-top:2px solid; border-left:2px solid; border-radius:6px 0 0 0; }
+.check-before-buy-corner.tr { top:14px; right:14px; border-top:2px solid; border-right:2px solid; border-radius:0 6px 0 0; }
+.check-before-buy-corner.bl { bottom:14px; left:14px; border-bottom:2px solid; border-left:2px solid; border-radius:0 0 0 6px; }
+.check-before-buy-corner.br { bottom:14px; right:14px; border-bottom:2px solid; border-right:2px solid; border-radius:0 0 6px 0; }
+.check-before-buy-btn { display:flex; align-items:center; justify-content:center; gap:10px; background:#e6d4a8; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:0.4px; text-decoration:none; padding:18px; border-radius:60px; max-width:320px; margin:0 auto 22px; box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.check-before-buy-or { color:#8a9686; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin:0 0 22px; }
+.check-before-buy-alt { display:flex; align-items:center; justify-content:center; gap:10px; background:rgba(244,239,226,0.06); border:1px solid rgba(244,239,226,0.28); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:14px; text-decoration:none; padding:16px; border-radius:60px; max-width:320px; margin:0 auto 14px; transition:background 0.18s ease; }
+.check-before-buy-alt:hover, .check-before-buy-alt:focus-visible { background:rgba(244,239,226,0.12); }
 </style>
 </head>
 <body>
@@ -75,12 +121,10 @@
 </nav>
 </div>
 </header>
-<div class="hero-banner"><img src="IMG_8501-crop.jpg" alt="A rabbit inspecting a product - unimpressed" width="1296" height="576"></div>
-
-
-<div style="background:#3d4a3a; padding:66px 24px 38px; text-align:center;">
-<p style="color:#d9c99a; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:22px;">cruelty-free &middot; vegan</p>
-<h1 style="color:#f4efe2; font-family:'Cormorant Garamond',serif; font-weight:400; font-size:38px; line-height:1.32; letter-spacing:0.4px; text-transform:none; margin-bottom:20px;">your shampoo didn't<br>need to be tested<br>on a <em style="font-style:italic; color:#e6d4a8;">rabbit</em>.</h1>
+<div class="hero-simple">
+<div class="hero-simple-rabbit"><img src="IMG_8501-crop.jpg" alt="A rabbit inspecting a product - unimpressed" width="1296" height="576"></div>
+<p class="hero-simple-kicker">cruelty-free &middot; vegan</p>
+<h1>your shampoo didn't<br>need to be tested<br>on a <em>rabbit</em>.</h1>
 <div class="hero-fact-carousel" id="heroFactCarousel">
 <p class="hero-fact-text" id="heroFactText"></p>
 <div class="hero-fact-nav">
@@ -89,6 +133,85 @@
 <button type="button" class="hero-fact-arrow" id="heroFactNext" aria-label="next fact">&rarr;</button>
 </div>
 </div>
+<a href="scan.html" class="hero-simple-scan-btn">
+<svg width="20" height="20" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+<rect x="9" y="11" width="22" height="18" rx="3" stroke="#3d4a3a" stroke-width="1.6"/>
+<circle cx="20" cy="20" r="5.5" stroke="#3d4a3a" stroke-width="1.6"/>
+<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#3d4a3a" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+<span>scan a product</span>
+</a>
+<div class="hero-simple-links">
+<a href="brand-check.html" class="hero-simple-link">
+<span class="hero-simple-link-icon" aria-hidden="true">
+<svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+<circle cx="17" cy="17" r="10" stroke="#6f8768" stroke-width="1.4"/>
+<line x1="24.5" y1="24.5" x2="33" y2="33" stroke="#6f8768" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+</span>
+<span class="hero-simple-link-label">check a brand</span>
+</a>
+<a href="brand-check.html#allBrands" class="hero-simple-link">
+<span class="hero-simple-link-icon" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+<path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#6f8768" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#6f8768" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+</span>
+<span class="hero-simple-link-label">browse brands</span>
+</a>
+<a href="learn.html" class="hero-simple-link">
+<span class="hero-simple-link-icon" aria-hidden="true">
+<svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+<path d="M20 30s-11-6.5-11-15c0-4.4 3.4-7.5 7.4-7.5 2.3 0 4.3 1.1 5.6 2.9 1.3-1.8 3.3-2.9 5.6-2.9 4 0 7.4 3.1 7.4 7.5 0 8.5-11 15-11 15z" stroke="#6f8768" stroke-width="1.4" stroke-linejoin="round"/>
+</svg>
+</span>
+<span class="hero-simple-link-label">why it matters</span>
+</a>
+</div>
+</div>
+
+<div class="check-before-buy">
+<p class="check-before-buy-kicker">check before you buy</p>
+<div class="check-before-buy-frame">
+<svg class="check-before-buy-barcode" viewBox="0 0 150 70" fill="none" aria-hidden="true">
+<rect x="0" y="0" width="4" height="56" fill="#f4efe2"/><rect x="7" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="13" y="0" width="5" height="56" fill="#f4efe2"/><rect x="22" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="28" y="0" width="3" height="56" fill="#f4efe2"/><rect x="35" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="44" y="0" width="2" height="56" fill="#f4efe2"/><rect x="50" y="0" width="4" height="56" fill="#f4efe2"/>
+<rect x="58" y="0" width="2" height="56" fill="#f4efe2"/><rect x="64" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="73" y="0" width="3" height="56" fill="#f4efe2"/><rect x="80" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="86" y="0" width="5" height="56" fill="#f4efe2"/><rect x="95" y="0" width="2" height="56" fill="#f4efe2"/>
+<rect x="101" y="0" width="4" height="56" fill="#f4efe2"/><rect x="109" y="0" width="3" height="56" fill="#f4efe2"/>
+<rect x="116" y="0" width="2" height="56" fill="#f4efe2"/><rect x="122" y="0" width="5" height="56" fill="#f4efe2"/>
+<rect x="131" y="0" width="2" height="56" fill="#f4efe2"/><rect x="137" y="0" width="4" height="56" fill="#f4efe2"/>
+<rect x="145" y="0" width="2" height="56" fill="#f4efe2"/>
+<text x="75" y="68" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" letter-spacing="2" fill="rgba(244,239,226,0.75)">5 060685 491832</text>
+</svg>
+<span class="check-before-buy-scanline"></span>
+<span class="check-before-buy-corner tl"></span>
+<span class="check-before-buy-corner tr"></span>
+<span class="check-before-buy-corner bl"></span>
+<span class="check-before-buy-corner br"></span>
+</div>
+<a href="scan.html" class="check-before-buy-btn">
+<svg width="20" height="20" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+<rect x="9" y="11" width="22" height="18" rx="3" stroke="#3d4a3a" stroke-width="1.6"/>
+<circle cx="20" cy="20" r="5.5" stroke="#3d4a3a" stroke-width="1.6"/>
+<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#3d4a3a" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+<span>scan a product</span>
+</a>
+<p class="check-before-buy-or">or</p>
+<a href="scan.html#manualCode" class="check-before-buy-alt">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#f4efe2" stroke-width="1.6"/><line x1="16" y1="16" x2="21" y2="21" stroke="#f4efe2" stroke-width="1.6" stroke-linecap="round"/></svg>
+<span>enter barcode manually</span>
+</a>
+<a href="brand-check.html" class="check-before-buy-alt">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#f4efe2" stroke-width="1.6"/><path d="M7 8h10M7 12h6" stroke="#f4efe2" stroke-width="1.6" stroke-linecap="round"/></svg>
+<span>check a brand instead</span>
+</a>
+<span class="ahk-counter-bubble" style="margin-top:14px;"></span>
 </div>
 
 <script>
@@ -163,22 +286,6 @@
   render();
 })();
 </script>
-
-<div class="scan-hero">
-<p class="scan-hero-kicker">check before you buy</p>
-<a href="scan.html" class="scan-hero-btn">
-<span class="scan-hero-icon" aria-hidden="true">
-<svg width="30" height="30" viewBox="0 0 40 40" fill="none">
-<rect x="9" y="11" width="22" height="18" rx="3" stroke="#f4efe2" stroke-width="1.6"/>
-<circle cx="20" cy="20" r="5.5" stroke="#f4efe2" stroke-width="1.6"/>
-<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#f4efe2" stroke-width="1.6" stroke-linejoin="round"/>
-</svg>
-</span>
-<span>scan a product</span>
-</a>
-<p class="scan-hero-sub">Point your camera at the barcode - I'll tell you what I know, instantly.</p>
-<span class="ahk-counter-bubble" style="margin-top:14px;"></span>
-</div>
 
 <div style="background:#f4efe2; padding:8px 24px 54px;">
 <div class="home-grid home-grid-2">
@@ -282,7 +389,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909o"></script>
+<script src="js/nav.js?v=20260909p"></script>
 <script src="js/newsletter.js"></script>
 
 <script>
