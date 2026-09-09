@@ -1400,3 +1400,8 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 .statblock-num { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 52px; line-height: 1; color: var(--ahk-heading); }
 .statblock-unit { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--ahk-heading); margin-bottom: 10px; }
 .statblock-sub { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text); max-width: 380px; margin: 0 auto 22px; }
+
+/* The results block on impact.html gets the mockup's animal portrait
+   above the figures, so the number reads as being about a living thing
+   rather than as an abstract statistic. */
+.results .statblock-portrait { margin-bottom: 20px; }

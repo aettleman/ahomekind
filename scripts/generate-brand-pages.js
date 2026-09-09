@@ -104,7 +104,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909t">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909u">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -155,7 +155,7 @@ function renderBrandPage(brand) {
   lines.push('</div>');
   lines.push('</header>');
   lines.push('');
-  lines.push('<main class="wrap" id="main">');
+  lines.push('<main class="page-shell" id="main">');
   lines.push('<p class="ahk-back-link"><a href="../../brand-check.html" id="ahkBackLink">&larr; back to brand check</a></p>');
   lines.push('<script>(function(){var a=document.getElementById("ahkBackLink");if(a&&document.referrer&&document.referrer.indexOf("brand-check.html")!==-1){a.addEventListener("click",function(e){e.preventDefault();history.back();});}})();</script>');
   lines.push('');
@@ -163,7 +163,7 @@ function renderBrandPage(brand) {
 
   lines.push('<div class="card ' + tier.className + '" style="margin-top:16px;">');
   lines.push('<p class="rating ' + tier.ratingClass + '">' + tier.emoji + ' ' + tier.label + priceBadge + '</p>');
-  lines.push('<h1 style="font-size:26px; margin:6px 0 14px;">' + escapeHtml(brand.name) + '</h1>');
+  lines.push('<h1 style="font-family:\'Cormorant Garamond\',serif; font-weight:500; font-size:30px; line-height:1.2; letter-spacing:0.2px; text-transform:none; margin:8px 0 14px;">' + escapeHtml(brand.name) + '</h1>');
   lines.push('<p style="font-size:15px; line-height:1.8;">' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
   lines.push('</div>');
@@ -218,7 +218,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260909t"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260909u"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
