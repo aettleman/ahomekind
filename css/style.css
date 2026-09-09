@@ -1484,3 +1484,16 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
   .page-hero-copy h1 { font-size: 38px; }
   .page-hero-copy p { font-size: 15px; }
 }
+
+/* Affiliate disclosure on the shop. Honest but not shouting -- it was
+   11px italic grey, which read as something being hidden in the small
+   print rather than stated plainly. */
+.shop-disclosure { font-size: 12.5px; line-height: 1.7; color: var(--ahk-text-muted); background: var(--ahk-surface); border: 0.5px solid var(--ahk-border-soft); border-radius: 12px; padding: 13px 16px; margin: 0 0 24px; }
+/* Context that used to be crammed into the page's sub-line. */
+.ic-why { margin: 0 0 22px; }
+.ic-why p { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text); margin: 0; }
+/* Retailer product shots go stale as listings rotate -- a dead one should
+   look like an empty shelf slot, not a broken page. */
+.pcard-imgwrap img[hidden] { display: none; }
+.pcard-imgwrap.is-empty::after { content: '\1F33F'; font-size: 26px; opacity: 0.32; }
+.pcard-imgwrap.is-empty { background: var(--ahk-surface); }

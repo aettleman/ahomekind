@@ -6,7 +6,7 @@
 <title>Shop – a home kind</title>
 <meta name="description" content="Cruelty-free and vegan product recommendations from Home Kind.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909y">
+<link rel="stylesheet" href="css/style.css?v=20260910a">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -53,9 +53,16 @@
 </div>
 </header>
 
-<main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">Shop</h1>
-<p style="font-style:italic; font-size:11px; color:#8a8672; margin:20px 0 26px;">Disclosure: as an Amazon Associate, I earn from qualifying purchases made through the links below, at no extra cost to you.</p>
+<main class="page-shell" id="main">
+<div class="page-hero">
+<img src="images/hero-shop.jpg" alt="" onerror="this.hidden=true">
+<div class="page-hero-scrim"></div>
+<div class="page-hero-copy">
+<h1>Shop</h1>
+<p>Cruelty-free and vegan things worth buying, picked from the brand check rather than from whoever pays the most.</p>
+</div>
+</div>
+<p class="shop-disclosure">As an Amazon Associate I earn from qualifying purchases made through these links, at no extra cost to you. It doesn't change what gets listed: everything here has to pass the brand check first.</p>
 
 <div class="shop-tabbar" id="shopTabbar">
 <button class="shop-tab active" data-cat="all">all</button>
@@ -90,7 +97,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="./js/nav.js?v=20260909y"></script>
+<script src="./js/nav.js?v=20260910a"></script>
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
@@ -118,7 +125,11 @@ var catLabel = CATEGORY_LABELS[p.category] || escapeHtml(p.category);
 var name = escapeHtml(p.name);
 var brand = escapeHtml(p.brand);
 var url = p.active !== false ? p.affiliateUrl : null;
-var img = "<img src=\"" + p.image + "\" alt=\"" + name + "\" loading=\"lazy\">";
+// Product shots are hotlinked from the retailer, so they go stale as
+// listings rotate. A dead one used to leave a broken-image icon with the
+// full product name spilling out of it; now it falls back to a quiet
+// placeholder mark and the name below the card does the work.
+var img = "<img src=\"" + p.image + "\" alt=\"" + name + "\" loading=\"lazy\" onerror=\"this.hidden=true;this.parentNode.classList.add('is-empty');\">";
 var out = "<div class=\"pcard\" data-category=\"" + p.category + "\" data-product-id=\"" + p.id + "\">";
 out += url ? ("<a href=\"" + url + "\" class=\"pcard-imgwrap\" rel=\"nofollow noopener\" target=\"_blank\">" + img + "</a>") : ("<div class=\"pcard-imgwrap\">" + img + "</div>");
 out += "<span class=\"pcard-chip\">" + catLabel + "</span>";
