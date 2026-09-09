@@ -1022,9 +1022,12 @@ body { animation: pageFadeIn 0.22s ease; }
   --ahk-bg:            #faf5eb;  /* page behind everything */
   --ahk-surface:       #f4eede;  /* banded sections -- barely deeper */
   --ahk-surface-2:     #f7f2e6;  /* lighter bands */
-  --ahk-card:          #fffefa;  /* raised cards */
-  --ahk-border:        #e0d8c4;
-  --ahk-border-soft:   #e8e1d0;
+  --ahk-card:          #ffffff;  /* raised cards -- full white, because a
+                                    near-cream card on a cream page has
+                                    almost no edge (1.08 contrast) and the
+                                    whole grid goes mushy */
+  --ahk-border:        #ddd4bd;
+  --ahk-border-soft:   #e4dbc7;
   --ahk-text:          #5c5c4f;  /* body copy */
   --ahk-text-muted:    #7a7561;
   --ahk-heading:       #3d4a3a;  /* headings + deep forest */
@@ -1517,4 +1520,16 @@ body { animation: pageFadeIn 0.22s ease; }
   input[type=range] { accent-color: var(--ahk-green); }
   .bn-label { color: var(--ahk-text-muted); }
   .bn-item.active .bn-label { color: var(--ahk-heading); }
+}
+
+/* A card sitting on a cream page needs a little lift as well as an edge --
+   on the old darker background the border alone did the separating, but at
+   #faf5eb the border is doing almost nothing on its own. */
+.card, .u-card, .tile, .home-card, .myth-card-btn, .listrow, .quiz-opt {
+  box-shadow: 0 1px 2px rgba(90,80,55,0.05), 0 6px 16px rgba(90,80,55,0.045);
+}
+@media (prefers-color-scheme: dark) {
+  .card, .u-card, .tile, .home-card, .myth-card-btn, .listrow, .quiz-opt {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 16px rgba(0,0,0,0.22);
+  }
 }
