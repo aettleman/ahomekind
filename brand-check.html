@@ -6,7 +6,7 @@
 <title>Brand Check - a home kind</title>
 <meta name="description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909s">
+<link rel="stylesheet" href="css/style.css?v=20260909t">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -55,11 +55,8 @@
 .rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
 .browse-btn-row { display:flex; justify-content:center; gap:14px; margin:0 auto 28px; max-width:480px; }
 .browse-btn-row button { flex:1; }
-#browseAllBtn, #browseAZBtn { display:block; width:100%; padding:14px 20px; border-radius:10px; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin:0; text-align:center; }
-#browseAllBtn { background:#faf1d9; border:0.5px solid #e2cf9a; color:#8a6a2a; }
-#browseAllBtn:hover { background:#f5e8c4; }
-#browseAZBtn { background:#e8efe2; border:0.5px solid #bdd0ac; color:#4d6b4f; }
-#browseAZBtn:hover { background:#dbe8d6; }
+/* Browse buttons now use the shared .btn-pri / .btn-sec components --
+   the old per-ID colours are gone so they can't outrank them. */
 @media (max-width:480px) { .browse-btn-row { flex-direction:column; max-width:320px; } }
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
@@ -136,21 +133,66 @@
 </div>
 </header>
 
-<main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">brand check</h1>
-<p>Search a brand and see where it stands - cruelty-free, vegan, or neither.</p>
+<main class="page-shell" id="main">
 
-<div style="margin: 24px 0;">
-<label for="ratingSearch" class="visually-hidden">Search a brand</label>
-<input type="text" id="ratingSearch" placeholder="search a brand, e.g. Dove, L'Or&eacute;al, Faith in Nature..." style="width:100%; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:10px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; box-shadow:0 2px 8px rgba(61,74,58,0.06);">
+<div class="pagehead">
+<h1>Check a brand</h1>
+<p>See who's cruelty-free, who's vegan, and who still tests on animals &mdash; before you buy.</p>
 </div>
 
-<details class="key-details" style="margin-bottom:20px;">
+<div class="pill-input">
+<span class="pill-input-icon" aria-hidden="true">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+</span>
+<label for="ratingSearch" class="visually-hidden">Search a brand</label>
+<input type="text" id="ratingSearch" placeholder="Search a brand&hellip;">
+</div>
+
+<p class="u-label">popular brands</p>
+<div class="tilegrid" style="margin-bottom:24px;">
+<a href="brands/the-body-shop/" class="tile">
+<span class="tile-mono t-warn" aria-hidden="true">B</span>
+<span class="tile-name">The Body Shop</span>
+<span class="tile-chip t-warn">parent co.</span>
+</a>
+<a href="brands/lush/" class="tile">
+<span class="tile-mono t-check" aria-hidden="true">L</span>
+<span class="tile-name">Lush</span>
+<span class="tile-chip t-check">cruelty-free</span>
+</a>
+<a href="brands/e-l-f-cosmetics/" class="tile">
+<span class="tile-mono t-good" aria-hidden="true">E</span>
+<span class="tile-name">e.l.f.</span>
+<span class="tile-chip t-good">cf &amp; vegan</span>
+</a>
+<a href="brands/nivea/" class="tile">
+<span class="tile-mono t-bad" aria-hidden="true">N</span>
+<span class="tile-name">Nivea</span>
+<span class="tile-chip t-bad">tests</span>
+</a>
+<a href="brands/maybelline/" class="tile">
+<span class="tile-mono t-bad" aria-hidden="true">M</span>
+<span class="tile-name">Maybelline</span>
+<span class="tile-chip t-bad">tests</span>
+</a>
+<a href="brands/l-oreal/" class="tile">
+<span class="tile-mono t-bad" aria-hidden="true">L</span>
+<span class="tile-name">L'Or&eacute;al</span>
+<span class="tile-chip t-bad">tests</span>
+</a>
+</div>
+
+<div class="btn-row" style="margin-bottom:20px;">
+<button type="button" class="btn-pri" id="browseAllBtn">browse by category</button>
+<button type="button" class="btn-sec" id="browseAZBtn">browse A&ndash;Z</button>
+</div>
+
+<details class="key-details" style="margin-bottom:22px;">
 <summary>key - what the symbols and price badges mean</summary>
-<div style="background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:18px 20px; margin-top:10px;">
+<div class="u-card" style="margin-top:10px;">
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#4d6b4f;">&#127807; fully cruelty-free &amp; vegan</strong></p>
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#6f8768;">&#128048; cruelty-free, check vegan status</strong></p>
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#c98a3a;">&#9888;&#65039; parent company tests on animals</strong></p>
+<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#8a6a2a;">&#128048; cruelty-free, check vegan status</strong></p>
+<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#3d6b78;">&#9888;&#65039; cruelty-free itself, parent company isn't</strong></p>
 <p style="font-size:13px; margin-bottom:10px;"><strong style="color:#8a332c;">&#10060; tested on animals</strong></p>
 <p style="font-size:13px; margin-bottom:14px;"><strong style="color:#6b6656;">&#128269; not certified - as of the date checked, no evidence they do or don't test on animals</strong></p>
 <p style="font-size:12.5px; color:#7a7561; margin:0;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
@@ -172,9 +214,6 @@
 <option value="peta">PETA certified</option>
 </select>
 </div>
-
-<button type="button" id="browseAllBtn">browse all brands</button>
-<button type="button" id="browseAZBtn">browse A-Z</button>
 
 <div id="categoryGrid" style="display:none; margin-bottom:28px;">
 <p class="section-label" style="text-align:center;">browse by category</p>
@@ -1724,7 +1763,7 @@ saveState({ mode: 'search', searchQuery: q });
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909s"></script>
+<script src="js/nav.js?v=20260909t"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
