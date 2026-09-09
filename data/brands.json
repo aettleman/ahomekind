@@ -10085,5 +10085,3933 @@
     ],
     "region": "USA & Canada",
     "veganConfidence": "low"
+  },
+  {
+    "slug": "abbott",
+    "name": "Abbott",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "acure",
+    "name": "Acure",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Better Planet Brands",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "alba-botanica",
+    "name": "Alba Botanica",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "aloe-up",
+    "name": "Aloe Up",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "american-safety-razor",
+    "name": "American Safety Razor",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "amyris",
+    "name": "Amyris",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "anastasia-beverly-hills",
+    "name": "Anastasia Beverly Hills",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "andalou-naturals",
+    "name": "Andalou Naturals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "arbonne-international",
+    "name": "Arbonne International",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Groupe Rocher",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "aunt-fannies",
+    "name": "Aunt Fannie's",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "australian-gold",
+    "name": "Australian Gold",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "avalon-organics",
+    "name": "Avalon Organics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "beauty-bay",
+    "name": "Beauty Bay",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "beekman-1802",
+    "name": "Beekman 1802",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "benecos",
+    "name": "Benecos",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Cosmondial",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bite-beauty",
+    "name": "Bite Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bio-ionic",
+    "name": "Bio Ionic",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "biossance",
+    "name": "Biossance",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "boxycharm",
+    "name": "BoxyCharm",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bperfect-cosmetics",
+    "name": "BPerfect Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "brandless",
+    "name": "Brandless",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "burts-bees",
+    "name": "Burt's Bees",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Clorox",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "butter-london",
+    "name": "butter LONDON",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "buxom",
+    "name": "Buxom",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bareminerals",
+    "name": "bareMinerals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "black-girl-sunscreen",
+    "name": "Black Girl Sunscreen",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bobs-red-mill",
+    "name": "Bob's Red Mill",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bosleymd",
+    "name": "BosleyMD",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "calgon",
+    "name": "Calgon",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "carols-daughter",
+    "name": "Carol's Daughter",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "colourpop-cosmetics",
+    "name": "ColourPop Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "concrete-minerals",
+    "name": "Concrete Minerals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "cover-fx-skin-care",
+    "name": "Cover FX Skin Care",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "crayola-beauty",
+    "name": "Crayola Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "conair",
+    "name": "Conair",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "caswell-massey",
+    "name": "Caswell-Massey",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "cj-olive-young",
+    "name": "CJ Olive Young",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dabur",
+    "name": "Dabur",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dr-bronners-magic-soaps",
+    "name": "Dr. Bronner's Magic Soaps",
+    "tier": "check",
+    "note": "100% vegan. Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "dr-hauschka-skin-care",
+    "name": "Dr. Hauschka Skin Care",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dr-dennis-gross-skincare",
+    "name": "Dr. Dennis Gross Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dr-teals",
+    "name": "Dr. Teal's",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dolce-and-gabbana-beauty",
+    "name": "Dolce & Gabbana Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dossier",
+    "name": "Dossier",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "design-essentials",
+    "name": "Design Essentials",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "derma-e-natural-bodycare",
+    "name": "derma-e Natural Bodycare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "desert-essence",
+    "name": "Desert Essence",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dermablend",
+    "name": "Dermablend",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dermadoctor",
+    "name": "DERMAdoctor",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "ecotools",
+    "name": "EcoTools",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "eminence-organic-skin-care",
+    "name": "Eminence Organic Skin Care",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "eos-products",
+    "name": "EOS Products",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "eugene-perma",
+    "name": "Eugene Perma",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "european-wax-center",
+    "name": "European Wax Center",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "every-man-jack",
+    "name": "Every Man Jack",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "eylure",
+    "name": "Eylure",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "earth-friendly-products",
+    "name": "Earth Friendly Products",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "eco-dent-international",
+    "name": "Eco-DenT International",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "first-aid-beauty",
+    "name": "First Aid Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "florence-by-mills",
+    "name": "Florence By Mills",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "formula-x",
+    "name": "Formula X",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "frank-body",
+    "name": "Frank Body",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "freeman-beauty",
+    "name": "Freeman Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "fruit-of-the-earth",
+    "name": "Fruit of the Earth",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "function-of-beauty",
+    "name": "Function of Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "fudge",
+    "name": "Fudge",
+    "tier": "check",
+    "note": "Haircare. Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "forest-essentials",
+    "name": "Forest Essentials",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "foamie",
+    "name": "Foamie",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "garden-of-life",
+    "name": "Garden of Life",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "gelish",
+    "name": "Gelish",
+    "tier": "check",
+    "note": "Nail brand. Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "glo-skin-beauty",
+    "name": "Glo Skin Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "go-to-skincare",
+    "name": "Go-To Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "goli-nutrition",
+    "name": "Goli Nutrition",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "food-kitchen"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "gosh-copenhagen",
+    "name": "GOSH Copenhagen",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "grande-cosmetics",
+    "name": "Grande Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "grisi",
+    "name": "Grisi",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "grown-alchemist",
+    "name": "Grown Alchemist",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hello-products",
+    "name": "Hello Products",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hims",
+    "name": "Hims",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hismile",
+    "name": "HiSmile",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "holo-taco",
+    "name": "Holo Taco",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "honeybee-gardens",
+    "name": "Honeybee Gardens",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hurraw-balm",
+    "name": "Hurraw! Balm",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "herbivore-botanicals",
+    "name": "Herbivore Botanicals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "iconic-london",
+    "name": "Iconic London",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "idun-minerals",
+    "name": "IDUN Minerals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "illamasqua",
+    "name": "Illamasqua",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "image-skincare",
+    "name": "Image Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "inglot-cosmetics",
+    "name": "Inglot Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "isagenix",
+    "name": "Isagenix",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "isle-of-paradise",
+    "name": "Isle Of Paradise",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "invisibobble",
+    "name": "Invisibobble",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "j-beverly-hills",
+    "name": "J Beverly Hills",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "jack-black",
+    "name": "Jack Black",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "jane-iredale",
+    "name": "jane iredale",
+    "tier": "check",
+    "note": "The Skin Care Makeup. Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "jeffree-star",
+    "name": "Jeffree Star",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "john-masters-organics",
+    "name": "John Masters Organics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "josie-maran-cosmetics",
+    "name": "Josie Maran Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "juice-beauty",
+    "name": "Juice Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "julep-beauty",
+    "name": "Julep Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "jesses-girl-cosmetics",
+    "name": "Jesse's Girl Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "jr-watkins",
+    "name": "J.R. Watkins",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "john-paul-mitchell-systems",
+    "name": "John Paul Mitchell Systems",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Paul Mitchell",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kvd-beauty",
+    "name": "KVD Beauty",
+    "tier": "check",
+    "note": "Formerly Kat Von D Beauty. Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kate-somerville",
+    "name": "Kate Somerville",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "keys-soulcare",
+    "name": "Keys Soulcare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "king-of-shaves",
+    "name": "King of Shaves",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kiss-products",
+    "name": "Kiss Products",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kora-organics",
+    "name": "Kora Organics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "korres",
+    "name": "Korres",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kristin-ess-hair",
+    "name": "Kristin Ess Hair",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kryolan-professional-make-up",
+    "name": "Kryolan Professional Make-up",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kenra",
+    "name": "Kenra",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "kevinmurphy",
+    "name": "KEVIN.MURPHY",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "krave-beauty",
+    "name": "KRAVE BEAUTY",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lavanila",
+    "name": "Lavanila",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lavera-naturkosmetik",
+    "name": "lavera Naturkosmetik",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lee-stafford",
+    "name": "Lee Stafford",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lime-crime",
+    "name": "Lime Crime",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lip-smacker",
+    "name": "Lip Smacker",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lorac",
+    "name": "LORAC",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "londontown",
+    "name": "Londontown",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "luminess-air",
+    "name": "Luminess Air",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lush-cosmetics",
+    "name": "LUSH Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lvx",
+    "name": "LVX",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lys-beauty",
+    "name": "LYS Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "lucky-tiger",
+    "name": "Lucky Tiger",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "madam-cj-walker",
+    "name": "Madam CJ Walker",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "malin-goetz",
+    "name": "Malin+Goetz",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mama-mio",
+    "name": "Mama Mio",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mamaearth",
+    "name": "Mamaearth",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "manic-panic",
+    "name": "Manic Panic",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "marc-anthony",
+    "name": "Marc Anthony",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "maple-holistics",
+    "name": "Maple Holistics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "manscaped",
+    "name": "MANSCAPED",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "milani-cosmetics",
+    "name": "Milani Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "milk-honey",
+    "name": "milk + honey",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mixed-chicks",
+    "name": "Mixed Chicks",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "modelco",
+    "name": "ModelCo",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "moroccanoil",
+    "name": "Moroccanoil",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mrs-meyers-clean-day",
+    "name": "Mrs. Meyers Clean Day",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "The Caldrea Company",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "household-cleaning"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mychelle-dermaceuticals",
+    "name": "MyChelle Dermaceuticals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "michael-todd-beauty",
+    "name": "Michael Todd Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "mesauda-milano",
+    "name": "Mesauda Milano",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "modere",
+    "name": "Modere",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "marcelle",
+    "name": "Marcelle",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Groupe Marcelle",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nads",
+    "name": "Nad's",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nails-inc",
+    "name": "Nails Inc.",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "natures-gate",
+    "name": "Nature's Gate",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "naturium",
+    "name": "Naturium",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "newmans-own-organics",
+    "name": "Newman's Own Organics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nest-fragrances",
+    "name": "Nest Fragrances",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "niod",
+    "name": "NIOD",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nude-by-nature",
+    "name": "Nude by Nature",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "obsessive-compulsive-cosmetics",
+    "name": "Obsessive Compulsive Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "OCC",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "ole-henriksen",
+    "name": "Ole Henriksen",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "ouidad",
+    "name": "Ouidad",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "oribe-hair-care",
+    "name": "ORIBE Hair Care",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "osea",
+    "name": "OSEA",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "OSEA Malibu",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "organic-harvest",
+    "name": "Organic Harvest",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pacifica",
+    "name": "Pacifica",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pangea-organics",
+    "name": "Pangea Organics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pattern-beauty",
+    "name": "Pattern Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "physicians-formula",
+    "name": "Physicians Formula",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pilgrim",
+    "name": "Pilgrim",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pipette",
+    "name": "Pipette",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "plum-goodness",
+    "name": "Plum Goodness",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "prai-beauty",
+    "name": "PRAI Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pravana",
+    "name": "Pravana",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pretty-vulgar",
+    "name": "Pretty Vulgar",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pura-dor",
+    "name": "PURA D'OR",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "puracy",
+    "name": "Puracy",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pz-cussons",
+    "name": "PZ Cussons",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "queen-helene",
+    "name": "Queen Helene",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "rem-beauty",
+    "name": "r.e.m. beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "real-techniques",
+    "name": "Real Techniques",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "revitalash-cosmetics",
+    "name": "RevitaLash Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Athena Cosmetics",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "rhode-skin",
+    "name": "Rhode Skin",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "rms-beauty",
+    "name": "rms beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "roc-skincare",
+    "name": "RoC Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "riley-rose",
+    "name": "Riley Rose",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "rustic-art",
+    "name": "Rustic Art",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "salon-selectives",
+    "name": "Salon Selectives",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "shani-darden",
+    "name": "Shani Darden",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "shikai-products",
+    "name": "ShiKai Products",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sigma-beauty",
+    "name": "Sigma Beauty",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "skinfix",
+    "name": "Skinfix",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "skyn-iceland",
+    "name": "skyn ICELAND",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sol-de-janeiro",
+    "name": "Sol de Janeiro",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "solgar-vitamin-company",
+    "name": "Solgar Vitamin Company",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "food-kitchen"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sparitual",
+    "name": "SpaRitual",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "splat-hair-color",
+    "name": "Splat Hair Color",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "stargazer",
+    "name": "Stargazer",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "stila-cosmetics",
+    "name": "Stila Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sugar-cosmetics",
+    "name": "Sugar Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sugarpill-cosmetics",
+    "name": "Sugarpill Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sun-bum",
+    "name": "Sun Bum",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sunday-riley-modern-skincare",
+    "name": "Sunday Riley Modern Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "supergoop",
+    "name": "Supergoop!",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "surya-brasil",
+    "name": "Surya Brasil",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "susanne-kaufmann",
+    "name": "Susanne Kaufmann",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tarte-cosmetics",
+    "name": "Tarte Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tata-harper-skincare",
+    "name": "Tata Harper Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "thayers-natural",
+    "name": "Thayers Natural",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "the-honest-company",
+    "name": "The Honest Company",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "this-works",
+    "name": "This Works",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "thrive-causemetics",
+    "name": "Thrive Causemetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tonymoly",
+    "name": "TONYMOLY",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "trader-joes-company",
+    "name": "Trader Joe's Company",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tree-hut",
+    "name": "Tree Hut",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Naterra International",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "trish-mcevoy",
+    "name": "Trish McEvoy",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "trevor-sorbie",
+    "name": "Trevor Sorbie",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "true-botanicals",
+    "name": "True Botanicals",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tula",
+    "name": "TULA",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "typology",
+    "name": "Typology",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tangle-teezer",
+    "name": "Tangle Teezer",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tan-luxe",
+    "name": "Tan-Luxe",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tanologist",
+    "name": "Tanologist",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "ulta-beauty-collection",
+    "name": "Ulta Beauty Collection",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "unite-haircare",
+    "name": "UNITE Haircare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "verb",
+    "name": "VERB",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "vasanti-cosmetics",
+    "name": "Vasanti Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "whole-foods-market-365",
+    "name": "Whole Foods Market 365",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "winky-lux",
+    "name": "Winky Lux",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "ws-badger",
+    "name": "W.S. Badger",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "youth-to-the-people",
+    "name": "Youth To The People",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "youngblood-mineral-cosmetics",
+    "name": "Youngblood Mineral Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "zia-natural-skincare",
+    "name": "Zia Natural Skincare",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": "Hain Celestial",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "zuzu-cosmetics",
+    "name": "Zuzu Cosmetics",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "100-pure",
+    "name": "100% Pure",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "3ina",
+    "name": "3INA",
+    "tier": "check",
+    "note": "Listed by PETA as not testing on animals.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
   }
 ]
