@@ -6,7 +6,7 @@
 <title>Brand Check - a home kind</title>
 <meta name="description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909n">
+<link rel="stylesheet" href="css/style.css?v=20260909o">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -1222,6 +1222,32 @@ var paginationNav = document.getElementById('paginationNav');
 var allCards = document.querySelectorAll('main .card');
 var allCardsArr = Array.from(allCards);
 
+// Remembers whichever view/filters were active (default sections, a
+// category tile, browse A-Z with its filters, or a search) in
+// sessionStorage, so following a link to a brand's own page and then
+// clicking "back to brand check" restores the same filtered view instead
+// of resetting to the default page -- this matches the actual browser
+// back button's normal behaviour, which the site wasn't reliably getting
+// for free (some browsers don't restore in-page JS state from cache).
+var AHK_STATE_KEY = 'ahkBrandCheckState';
+function saveState(extra) {
+  try {
+    var state = Object.assign({
+      mode: 'default',
+      category: activeCategory,
+      region: activeRegion,
+      filter: activeFilter,
+      cert: activeCert,
+      azMode: azMode,
+      azLetter: azLetter,
+      page: currentPage,
+      pageSize: pageSize,
+      searchQuery: searchInput ? searchInput.value : ''
+    }, extra || {});
+    sessionStorage.setItem(AHK_STATE_KEY, JSON.stringify(state));
+  } catch (e) { /* sessionStorage unavailable (private mode etc) - just skip persistence */ }
+}
+
 function cardCategories(card) {
 return (card.dataset.category || '').split(' ').filter(Boolean);
 }
@@ -1254,6 +1280,7 @@ return azRank;
 
 var azMode = false;
 var azLetter = 'all';
+var restoringState = false;
 var pageSize = 50; // 20 / 50 / 100 / 'all'
 var currentPage = 1;
 
@@ -1359,6 +1386,7 @@ currentPage = 1;
 setActivePills();
 var dentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (dentalDisclaimer) dentalDisclaimer.style.display = 'none';
+saveState({ mode: 'categoryGrid' });
 }
 
 // Renders #allBrands filtered by whichever of activeCategory/activeFilter/
@@ -1421,7 +1449,8 @@ resultCount.textContent = matches.length
 ? (matches.length + ' brand' + (matches.length === 1 ? '' : 's') + (totalPages > 1 ? ' · page ' + currentPage + ' of ' + totalPages : ''))
 : '';
 renderPaginationNav(totalPages);
-window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
+if (!restoringState) window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
+saveState({ mode: azMode ? 'az' : (activeCategory ? 'category' : 'filtered') });
 }
 
 function renderPaginationNav(totalPages) {
@@ -1599,11 +1628,70 @@ lbl.style.display = 'none';
 });
 document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block';
 resultCount.textContent = matchCount ? (matchCount + ' brand' + (matchCount === 1 ? '' : 's')) : '';
-if (anyVisible) {
+if (anyVisible && !restoringState) {
 window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
 }
 if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
+saveState({ mode: 'search', searchQuery: q });
 });
+
+// Restore whatever view/filters were active last time, so following a
+// brand link then clicking back doesn't dump you back at the default page
+// with everything reset. Only restores when actually returning from a
+// brand page on this same visit -- a fresh visit (new tab, external link,
+// first load) always starts at the default page, not a filter set left
+// over from a previous session.
+(function restoreState(){
+  var raw;
+  try { raw = sessionStorage.getItem(AHK_STATE_KEY); } catch (e) { raw = null; }
+  // A real browser back/forward navigation often has no document.referrer
+  // at all (unlike a normal link click), so we check the Navigation Timing
+  // API for that case too rather than relying on referrer alone.
+  var navEntries = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+  var navType = navEntries && navEntries[0] ? navEntries[0].type : '';
+  var cameFromBrandPage = document.referrer.indexOf('/brands/') !== -1;
+  if (!raw || (navType !== 'back_forward' && !cameFromBrandPage)) return;
+  var state;
+  try { state = JSON.parse(raw); } catch (e) { return; }
+  if (!state || !state.mode || state.mode === 'default') return;
+
+  restoringState = true;
+  activeCategory = state.category || null;
+  activeRegion = state.region || null;
+  activeFilter = state.filter || 'all';
+  activeCert = state.cert || 'all';
+  azMode = !!state.azMode;
+  azLetter = state.azLetter || 'all';
+  currentPage = state.page || 1;
+  pageSize = state.pageSize || 50;
+
+  if (certSelect) certSelect.value = activeCert;
+  if (pageSizeSelect) pageSizeSelect.value = String(pageSize);
+  if (azMode) {
+    if (azLetterSelect.children.length <= 1) buildAzLetterSelect();
+    azLetterSelect.value = azLetter;
+  }
+  if (azCategorySelect) azCategorySelect.value = activeCategory || 'all';
+  if (azRegionSelect) azRegionSelect.value = activeRegion || 'all';
+
+  if (state.mode === 'categoryGrid') {
+    showCategoryGrid();
+  } else if (state.mode === 'search') {
+    searchInput.value = state.searchQuery || '';
+    searchInput.dispatchEvent(new Event('input'));
+  } else {
+    setActivePills();
+    renderBrandList();
+  }
+
+  // Land back in the vicinity of the results rather than at the very top
+  // of the page, without the smooth-scroll animation a fresh filter click
+  // gets (that would look odd immediately on page load).
+  if (state.mode !== 'categoryGrid') {
+    setTimeout(function(){ window.scrollTo({ top: allBrands.offsetTop - 90 }); }, 0);
+  }
+  restoringState = false;
+})();
 </script>
 </main>
 <div class="newsletter">
@@ -1624,7 +1712,7 @@ if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFl
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909n"></script>
+<script src="js/nav.js?v=20260909o"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
