@@ -1474,7 +1474,10 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 .page-hero { position: relative; margin: 0 0 26px; border-radius: 20px; overflow: hidden; min-height: 190px; display: flex; align-items: flex-end; background: linear-gradient(140deg, #46553f 0%, #2e392b 100%); }
 .page-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .page-hero > img[hidden] { display: none; }
-.page-hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,33,24,.88) 8%, rgba(26,33,24,.5) 55%, rgba(26,33,24,.22) 100%); }
+/* Deep enough that a pale photograph still holds white text. Several of
+   these shots are bright linen and cream, where a light wash left the
+   sub-line barely readable. */
+.page-hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(24,31,22,.92) 6%, rgba(24,31,22,.72) 48%, rgba(24,31,22,.42) 100%); }
 .page-hero-copy { position: relative; padding: 22px 22px 24px; }
 .page-hero-copy h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 30px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; color: #f6f2e6; margin: 0 0 8px; text-wrap: balance; }
 .page-hero-copy p { font-size: 14px; line-height: 1.65; color: rgba(246,242,230,.86); margin: 0; max-width: 46ch; }
