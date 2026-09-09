@@ -1276,3 +1276,27 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 .impact-portrait { width: 108px; height: 108px; border-radius: 50%; overflow: hidden; margin: 0 auto 18px; border: 2px solid rgba(109,135,104,0.35); }
 .impact-portrait .ahk-slot { width: 100%; height: 100%; border-radius: 50%; }
 .impact-portrait .ahk-slot-label { font-size: 9px; letter-spacing: 1px; }
+
+/* ============================================================
+   MYTH CARDS AS A CAROUSEL
+   ============================================================
+   Six stacked flip cards made for a long scroll on a phone. They
+   now sit in a horizontal, snap-scrolling track with dots beneath
+   -- swipe on touch, drag or arrow-key on desktop -- so the whole
+   section costs one screen instead of six. Above 900px there's
+   room to lay them out as a normal grid, so the carousel is a
+   phone/tablet treatment only. */
+.myth-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 0 6px; margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+.myth-track::-webkit-scrollbar { display: none; }
+.myth-track .flip-card { flex: 0 0 84%; max-width: 340px; scroll-snap-align: center; height: 250px; }
+@media (min-width: 560px) { .myth-track .flip-card { flex-basis: 46%; } }
+.myth-dots { display: flex; justify-content: center; gap: 7px; margin-top: 18px; }
+.myth-dot { width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0; background: rgba(109,135,104,0.28); cursor: pointer; transition: background 0.18s ease, transform 0.18s ease; }
+.myth-dot.active { background: var(--ahk-green); transform: scale(1.25); }
+@media (prefers-reduced-motion: reduce) { .myth-track { scroll-behavior: auto; } .myth-dot { transition: none; } }
+@media (min-width: 900px) {
+  .myth-track { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; margin: 0; padding: 0; gap: 20px; }
+  .myth-track .flip-card { flex: none; max-width: none; height: 270px; }
+  .myth-dots { display: none; }
+}
+@media (prefers-color-scheme: dark) { .myth-dot { background: rgba(163,191,153,0.3); } }

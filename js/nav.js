@@ -571,10 +571,47 @@ html += '<div class="flip-card">' +
 '</div>';
 });
 grid.innerHTML = html;
-grid.querySelectorAll('.flip-card').forEach(function(card){
+grid.classList.add('myth-track');
+var cards = Array.prototype.slice.call(grid.querySelectorAll('.flip-card'));
+cards.forEach(function(card){
 var btn = card.querySelector('.flip-card-btn');
 btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
 });
+
+// Dots for the carousel. They only mean anything while the track is
+// actually scrollable -- above 900px CSS lays the cards out as a grid
+// and hides the dots, so nothing here needs to know the breakpoint.
+var dots = document.createElement('div');
+dots.className = 'myth-dots';
+cards.forEach(function(_, i){
+var d = document.createElement('button');
+d.type = 'button';
+d.className = 'myth-dot' + (i === 0 ? ' active' : '');
+d.setAttribute('aria-label', 'Go to myth ' + (i + 1) + ' of ' + cards.length);
+d.addEventListener('click', function(){
+cards[i].scrollIntoView({ block: 'nearest', inline: 'center' });
+});
+dots.appendChild(d);
+});
+grid.parentNode.insertBefore(dots, grid.nextSibling);
+
+// Mark the dot for whichever card is nearest the middle of the track.
+var dotEls = Array.prototype.slice.call(dots.children);
+var raf = null;
+grid.addEventListener('scroll', function(){
+if (raf) return;
+raf = requestAnimationFrame(function(){
+raf = null;
+var mid = grid.scrollLeft + grid.clientWidth / 2;
+var best = 0, bestDist = Infinity;
+cards.forEach(function(card, i){
+var centre = card.offsetLeft + card.offsetWidth / 2;
+var dist = Math.abs(centre - mid);
+if (dist < bestDist) { bestDist = dist; best = i; }
+});
+dotEls.forEach(function(d, i){ d.classList.toggle('active', i === best); });
+});
+}, { passive: true });
 });
 
 // "One small swap" -- a single instead-of/try pair on the homepage,
