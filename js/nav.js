@@ -37,7 +37,7 @@ var PAGE_LABELS = {
 'quiz.html': 'quiz',
 'impact.html': 'your impact',
 'my-swaps.html': 'my swaps',
-'brand-watch.html': 'brand watch',
+'brand-watch.html': "what's changed",
 'swap-guide.html': 'swap guide',
 'about.html': 'about'
 };
@@ -447,14 +447,16 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
-'<a href="/ingredient-check.html">check ingredients (photo or barcode)</a>' +
-'<a href="/shelf.html">scan a shelf</a>' +
-'<a href="/learn.html">learn</a>' +
-'<a href="/quiz.html">take the quiz</a>' +
-'<a href="/impact.html">your impact</a>' +
-'<a href="/my-swaps.html">my swaps</a>' +
-'<a href="/brand-watch.html">brand watch</a>' +
+/* Shelf scan and "what's changed" used to sit here as peers. Both are
+   second steps rather than destinations -- you scan a shelf after reaching
+   for the scanner, you check what's changed after using the brand check --
+   so they live on those pages now and this list is two rows shorter. */
+'<a href="/ingredient-check.html">ingredient checker</a>' +
 '<a href="/swap-guide.html">swap guide</a>' +
+'<a href="/quiz.html">take the quiz</a>' +
+'<a href="/my-swaps.html">my swaps</a>' +
+'<a href="/impact.html">your impact</a>' +
+'<a href="/learn.html">learn</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/about.html">about</a>' +
 '<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +
@@ -469,7 +471,12 @@ function openSheet(){
 sheet.classList.add('open');
 document.body.classList.add('bn-sheet-lock');
 moreBtn.setAttribute('aria-expanded', 'true');
-closeBtn.focus(); // move focus into the sheet, since it behaves like a modal dialog
+/* Focusing the close button (the last child) makes the browser scroll the
+   sheet to reach it, which pushed the first and most-used item off the top.
+   Focus without scrolling, then pin the sheet to its top. */
+closeBtn.focus({ preventScroll: true });
+var inner = sheet.querySelector('.bn-sheet-inner');
+if(inner) inner.scrollTop = 0;
 }
 function closeSheet(){
 sheet.classList.remove('open');

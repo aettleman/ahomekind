@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910m">
+<link rel="stylesheet" href="css/style.css?v=20260910v">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -97,7 +97,7 @@
 <span class="dd-m">
 <a href="scan.html">scan a barcode</a>
 <a href="shelf.html">scan a shelf</a>
-<a href="ingredient-check.html">check ingredients</a>
+<a href="ingredient-check.html">ingredient checker</a>
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
 <span class="dd-m">
@@ -108,7 +108,7 @@
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
-<a href="brand-watch.html">brand watch</a>
+<a href="brand-watch.html">what's changed</a>
 <a href="swap-guide.html">swap guide</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
@@ -177,6 +177,25 @@
 
 <div id="results"></div>
 
+<!-- Not everyone arrives with a bottle in hand. Some people already have
+     the word -- they read "shellac" on a label an hour ago and just want
+     to know. Same rows as the food & kitchen section of the swap guide,
+     but drawing on both dictionaries, so it covers cosmetics too. -->
+<section class="iw-lookup" id="iwLookup">
+<p class="section-label">or just look one up</p>
+<p class="iw-lead">Every ingredient this page knows about, in plain English. Tap one to see what it actually is. A red dot means always animal-derived; amber means it could go either way and the label won't always tell you.</p>
+<div class="pill-input iw-search">
+<span class="pill-input-icon" aria-hidden="true">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+</span>
+<label for="iwSearch" class="visually-hidden">Search the ingredient list</label>
+<input type="search" id="iwSearch" placeholder="search an ingredient, e.g. shellac" autocomplete="off">
+</div>
+<div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
+<div id="iwList" class="ingredient-watch"><p class="iw-empty">loading&hellip;</p></div>
+<p class="iw-empty" id="iwNone" hidden>Nothing matching that. It might still be animal-derived &mdash; this list isn't exhaustive.</p>
+</section>
+
 <p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: fill the frame with just the ingredients text, hold the phone straight-on rather than at an angle, and make sure there's no glare across the panel. This only recognises ingredient names already in my dictionary and can miss things a photo reads badly - it's a helpful first pass, not a guarantee, and it's not a substitute for a brand's own vegan claim. "Fragrance"/"parfum" can legally hide undisclosed ingredients that no OCR tool can see. Nothing leaves your phone - the reading happens in your browser.</p>
 </main>
 
@@ -198,7 +217,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="./js/nav.js?v=20260910m"></script>
+<script src="./js/nav.js?v=20260910v"></script>
 <script src="js/newsletter.js"></script>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
@@ -232,6 +251,107 @@ var DICT = [];
 // scan.html) - one dictionary, so a term added or corrected there
 // automatically improves this page too, and vice versa.
 fetch("data/ingredients.json").then(function(r){ return r.json(); }).then(function(d){ DICT = d || []; }).catch(function(){ DICT = []; });
+
+/* The browsable list underneath. It merges the cosmetics dictionary this
+   page scans with (ingredients.json) and the food one the swap guide uses,
+   deduped by name, so someone who read a word on a food label finds it here
+   too rather than being sent to another page for it. */
+(function(){
+var listEl = document.getElementById("iwList");
+if(!listEl) return;
+var searchEl = document.getElementById("iwSearch");
+var noneEl = document.getElementById("iwNone");
+
+function esc(t){ return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+Promise.all([
+  fetch("data/ingredients.json").then(function(r){ return r.json(); }).catch(function(){ return []; }),
+  fetch("data/food-ingredients.json").then(function(r){ return r.json(); }).catch(function(){ return []; })
+]).then(function(sets){
+  /* The two dictionaries overlap on about a dozen entries, but under
+     different names -- "Shellac" in one, "Shellac (E904)" in the other --
+     so deduping by name alone leaves visible twins. Merge on any shared
+     search term instead, keep whichever entry carries the fuller
+     explanation, and union the terms so both spellings still find it. */
+  var byTerm = {}, all = [];
+  function terms(item){
+    return ((item.terms || []).concat([item.name || ""]))
+      .map(function(t){ return String(t).toLowerCase().trim(); })
+      .filter(Boolean);
+  }
+  sets.forEach(function(set){
+    (set || []).forEach(function(item){
+      var ts = terms(item), existing = null;
+      for(var i = 0; i < ts.length; i++){
+        if(byTerm[ts[i]]){ existing = byTerm[ts[i]]; break; }
+      }
+      if(existing){
+        var richer = (item.detail && !existing.detail) ||
+                     ((item.note || "").length > (existing.note || "").length && !existing.detail);
+        if(richer){
+          existing.name = item.name;
+          existing.note = item.note;
+          existing.type = item.type;
+          if(item.detail){ existing.detail = item.detail; existing.sources = item.sources; }
+        } else if(item.detail && !existing.detail){
+          existing.detail = item.detail; existing.sources = item.sources;
+        }
+        existing.terms = (existing.terms || []).concat(item.terms || []);
+      } else {
+        existing = {
+          name: item.name, note: item.note, type: item.type,
+          detail: item.detail, sources: item.sources,
+          terms: (item.terms || []).slice()
+        };
+        all.push(existing);
+      }
+      terms(existing).forEach(function(t){ byTerm[t] = existing; });
+    });
+  });
+  all.sort(function(a, b){ return a.name.localeCompare(b.name); });
+
+  if(!all.length){ listEl.innerHTML = '<p class="iw-empty">Couldn\'t load the list right now.</p>'; return; }
+
+  var html = "";
+  all.forEach(function(item){
+    /* the terms go into a data attribute so searching "e120" or "cochineal"
+       finds Carmine, not just an exact name match */
+    var hay = ((item.name || "") + " " + (item.terms || []).join(" ")).toLowerCase();
+    html += '<details class="iw-row iw-' + esc(item.type) + '" data-hay="' + esc(hay) + '">';
+    html += '<summary><span class="iw-dot" aria-hidden="true"></span>' + esc(item.name) + '</summary>';
+    html += '<div class="iw-body"><span class="iw-note">' + item.note + '</span>';
+    if(item.detail){
+      html += '<details class="iw-why"><summary>why isn\'t this vegan?</summary><p>' + item.detail + '</p>';
+      if(item.sources && item.sources.length){
+        html += '<p class="iw-sources">' + item.sources.map(function(s){
+          return '<a href="' + s.url + '" target="_blank" rel="noopener">' + esc(s.label) + '</a>';
+        }).join(" &middot; ") + '</p>';
+      }
+      html += '</details>';
+    }
+    html += '</div></details>';
+  });
+  listEl.innerHTML = html;
+
+  var rows = listEl.querySelectorAll(".iw-row");
+  if(searchEl){
+    searchEl.addEventListener("input", function(){
+      var q = searchEl.value.trim().toLowerCase();
+      var shown = 0;
+      for(var i = 0; i < rows.length; i++){
+        var hit = !q || rows[i].getAttribute("data-hay").indexOf(q) !== -1;
+        rows[i].hidden = !hit;
+        if(hit) shown++;
+        if(!hit) rows[i].open = false;
+      }
+      if(noneEl) noneEl.hidden = shown !== 0;
+      listEl.hidden = shown === 0;
+    });
+  }
+}).catch(function(){
+  listEl.innerHTML = '<p class="iw-empty">Couldn\'t load the list right now.</p>';
+});
+})();
 
 el("file").addEventListener("change", function(e){
 var f = e.target.files && e.target.files[0];

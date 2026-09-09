@@ -111,7 +111,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:site_name" content="a home kind">');
   lines.push('<meta name="twitter:card" content="summary_large_image">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260910m">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260910v">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -141,7 +141,7 @@ function renderBrandPage(brand) {
   lines.push('<span class="dd-m">');
   lines.push('<a href="../../scan.html">scan a barcode</a>');
   lines.push('<a href="../../shelf.html">scan a shelf</a>');
-  lines.push('<a href="../../ingredient-check.html">check ingredients</a>');
+  lines.push('<a href="../../ingredient-check.html">ingredient checker</a>');
   lines.push('</span></span>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
@@ -152,7 +152,7 @@ function renderBrandPage(brand) {
   lines.push('</span></span>');
   lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>');
   lines.push('<span class="dd-m">');
-  lines.push('<a href="../../brand-watch.html">brand watch</a>');
+  lines.push('<a href="../../brand-watch.html">what\'s changed</a>');
   lines.push('<a href="../../swap-guide.html">swap guide</a>');
   lines.push('<a href="../../journal/">journal</a>');
   lines.push('<a href="../../about.html">about</a>');
@@ -225,7 +225,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260910m"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260910v"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');

@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Scan a Barcode - a home kind</title>
 <meta name="description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
-<meta property="og:title" content="Scan a product">
+<meta property="og:title" content="Scan a Barcode">
 <meta property="og:description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/scan.html">
 <meta property="og:image" content="https://ahomekind.com/images/share-default.jpg">
-<meta property="og:image:alt" content="Scan a product">
+<meta property="og:image:alt" content="Scan a Barcode">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910m">
+<link rel="stylesheet" href="css/style.css?v=20260910v">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -252,7 +252,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <span class="dd-m">
 <a href="scan.html">scan a barcode</a>
 <a href="shelf.html">scan a shelf</a>
-<a href="ingredient-check.html">check ingredients</a>
+<a href="ingredient-check.html">ingredient checker</a>
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
 <span class="dd-m">
@@ -263,7 +263,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </span></span>
 <span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
 <span class="dd-m">
-<a href="brand-watch.html">brand watch</a>
+<a href="brand-watch.html">what's changed</a>
 <a href="swap-guide.html">swap guide</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
@@ -275,8 +275,8 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 
 <main class="wrap scan-shell" id="main">
 <div class="pagehead">
-<h1>Scan a product</h1>
-<p>Point your camera at any barcode and I'll tell you what I know.</p>
+<h1 class="scan-h1"><svg class="scan-h1-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="5.6" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="8" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/><rect x="11.5" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="14" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="17" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="19.4" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/></svg>Scan a Barcode</h1>
+<p>Point your camera at the product's barcode, or any barcode you like.</p>
 </div>
 
 <span class="ahk-counter-bubble" style="margin-bottom:14px;"></span>
@@ -348,7 +348,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </a>
 <a href="ingredient-check.html">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#f4efe2" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#f4efe2" stroke-width="1.5" stroke-linecap="round"/></svg>
-<span>check ingredients</span>
+<span>ingredient checker</span>
 </a>
 </div>
 
@@ -546,20 +546,25 @@ return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split(
 }
 function reportWidget(prefillName, idPrefix){
 var p = idPrefix || "rpt";
-var h = "<div style=\"margin-top:16px; padding-top:16px; border-top:0.5px solid #cfc4a9;\">";
-h += "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:8px;\">know something the scan doesn't? let me know below.</p>";
-h += "<input type=\"text\" id=\"" + p + "-name\" placeholder=\"brand or product\" value=\"" + escapeAttr(prefillName) + "\" style=\"width:100%; box-sizing:border-box; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; margin-bottom:10px;\">";
-h += "<div style=\"font-size:13.5px; line-height:2;\">";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-lb\"> has the Leaping Bunny logo</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-peta\"> has the PETA logo</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-cfi\"> certified by Cruelty Free International</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-vs\"> has a vegan logo (Vegan Society or similar)</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-other\"> I know it's cruelty-free/vegan another way</label>";
-h += "<label style=\"display:block;\"><input type=\"checkbox\" id=\"" + p + "-unsure\"> not sure - please look into it</label>";
+var OPTS = [
+["lb", "has the Leaping Bunny logo"],
+["peta", "has the PETA logo"],
+["cfi", "certified by Cruelty Free International"],
+["vs", "has a vegan logo (Vegan Society or similar)"],
+["other", "I know it's cruelty-free/vegan another way"],
+["unsure", "not sure - please look into it"]
+];
+var h = "<div class=\"report-widget\">";
+h += "<p class=\"report-title\">know something the scan doesn't? let me know below.</p>";
+h += "<input type=\"text\" class=\"report-field\" id=\"" + p + "-name\" placeholder=\"brand or product\" value=\"" + escapeAttr(prefillName) + "\">";
+h += "<div class=\"report-checks\">";
+OPTS.forEach(function(o){
+h += "<label class=\"report-check\"><input type=\"checkbox\" id=\"" + p + "-" + o[0] + "\"><span>" + o[1] + "</span></label>";
+});
 h += "</div>";
-h += "<textarea id=\"" + p + "-notes\" placeholder=\"anything else - where you saw it, a link, etc.\" style=\"width:100%; box-sizing:border-box; margin-top:10px; padding:10px 12px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:13.5px; color:#3d4a3a; min-height:60px; resize:vertical;\"></textarea>";
-h += "<button class=\"big-btn\" style=\"width:auto; margin:10px 0 0; padding:12px 20px;\" id=\"" + p + "-btn\">send this to me</button>";
-h += "<p style=\"font-size:12px; color:#8a8672; margin-top:8px;\">This opens your email app with the details filled in, addressed to me. Got a photo of the logo or packaging? Attach it before you hit send - that helps a lot.</p>";
+h += "<textarea class=\"report-field\" id=\"" + p + "-notes\" placeholder=\"anything else - where you saw it, a link, etc.\"></textarea>";
+h += "<button class=\"btn-pri report-send\" id=\"" + p + "-btn\">send this to me</button>";
+h += "<p class=\"report-foot\">This opens your email app with the details filled in, addressed to me. Got a photo of the logo or packaging? Attach it before you hit send, that helps a lot.</p>";
 h += "</div>";
 return h;
 }
@@ -1083,7 +1088,7 @@ if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260910m"></script>
+<script src="js/nav.js?v=20260910v"></script>
 <script src="js/newsletter.js"></script>
 <script>
 // "Add to home screen" -- shown only when it's actually possible (or, on
