@@ -1460,3 +1460,5 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
   .myth-track .myth-card { flex: none; max-width: none; }
   .myth-reality { max-width: 720px; margin-left: auto; margin-right: auto; }
 }
+/* Same [hidden]-vs-display:block trap as the other slots. */
+.myth-reality-img img[hidden] { display: none; }

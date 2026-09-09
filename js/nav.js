@@ -585,7 +585,7 @@ var reality = document.createElement('div');
 reality.className = 'myth-reality';
 reality.hidden = true;
 reality.innerHTML =
-'<span class="myth-reality-img"><img alt="" id="mythRealityImg"></span>' +
+'<span class="myth-reality-img"><img alt="" id="mythRealityImg" hidden></span>' +
 '<div class="myth-reality-body">' +
 '<p class="myth-reality-tag">the reality</p>' +
 '<p class="myth-reality-text" id="mythRealityText"></p>' +
@@ -614,6 +614,7 @@ openIndex = i;
 reality.id = 'mythReality' + i;
 rText.textContent = MYTHS[i].reality;
 rImg.src = 'images/myth-' + (i + 1) + '.jpg';
+rImg.hidden = false;
 reality.hidden = false;
 cards[i].classList.add('is-open');
 cards[i].querySelector('.myth-card-btn').setAttribute('aria-expanded', 'true');
