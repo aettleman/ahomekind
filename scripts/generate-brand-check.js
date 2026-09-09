@@ -29,10 +29,10 @@ const OUT_PATH = path.join(ROOT, 'brand-check.html');
 // classes/labels to build the interactive result-card UI, so this mapping
 // must keep producing byte-for-byte the same shapes it always has.
 const TIER_META = {
-  good:       { cardClass: '', ratingClass: '', emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan' },
-  check:      { cardClass: '', ratingClass: 'neutral', emoji: '&#128048;', label: 'cruelty-free, check vegan status per product' },
+  good:       { cardClass: 'good', ratingClass: 'good', emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan' },
+  check:      { cardClass: 'check', ratingClass: 'check', emoji: '&#128048;', label: 'cruelty-free, check vegan status per product' },
   warn:       { cardClass: 'warn', ratingClass: 'warn', emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t' },
-  unverified: { cardClass: 'warn', ratingClass: 'warn', emoji: '&#9888;&#65039;', label: 'unverified claim' },
+  unverified: { cardClass: 'unverified', ratingClass: 'unverified', emoji: '&#128269;', label: 'unverified claim' },
   bad:        { cardClass: 'bad', ratingClass: 'bad', emoji: '&#10060;', label: 'tested on animals' }
 };
 
@@ -180,7 +180,7 @@ function buildCardsMarkup(brands) {
   buckets.supermarket.forEach(function (b) { out.push(renderCard(b)); });
 
   out.push('<p class="section-label" style="color:#8a332c;">tested on animals</p>');
-  out.push('<p style="font-size:13.5px; color:#7a7561; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
+  out.push('<p class="section-label-note" style="font-size:13.5px; color:#7a7561; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
   buckets['bad-all'].forEach(function (b) { out.push(renderCard(b)); });
 
   if (buckets.other.length) {

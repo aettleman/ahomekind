@@ -638,9 +638,9 @@
     "slug": "aussie",
     "name": "Aussie",
     "tier": "warn",
-    "note": "PETA certified cruelty-free, owned by Procter & Gamble.",
+    "note": "PETA certified cruelty-free, owned by Procter & Gamble. Some products are vegan but not the full range - check individual items.",
     "parentCompany": "Procter & Gamble",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -649,7 +649,7 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "medium"
   },
   {
     "slug": "wild",

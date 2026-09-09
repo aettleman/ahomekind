@@ -207,8 +207,11 @@ var tier = 'neutral';
 if (ratingEl) {
 if (ratingEl.classList.contains('bad')) tier = 'bad';
 else if (ratingEl.classList.contains('warn')) tier = 'warn';
+else if (ratingEl.classList.contains('check')) tier = 'neutral';
+else if (ratingEl.classList.contains('unverified')) tier = 'neutral';
 else if (ratingEl.classList.contains('neutral')) tier = 'neutral';
-else tier = 'good';
+else if (ratingEl.classList.contains('good')) tier = 'good';
+else tier = 'neutral';
 }
 var list = readRecent().filter(function(item){ return item.slug !== m[1]; });
 list.unshift({ slug: m[1], name: name, tier: tier });

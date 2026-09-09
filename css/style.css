@@ -224,32 +224,44 @@ p { margin-bottom: 18px; font-size: 15px; }
   padding: 20px 22px;
   margin-bottom: 14px;
 }
-.card.warn { border-color: #d9b06e; }
-
 /* brand-check: A-Z browse + pagination */
 .flex-order { display: flex; flex-direction: column; }
 .page-btn {
-  min-width: 34px;
-  padding: 7px 10px;
-  border: 0.5px solid #cfc4a9;
-  border-radius: 6px;
-  background: #fff;
+  min-width: 26px;
+  padding: 6px 4px;
+  border: none;
+  background: none;
   font-family: 'Karla', sans-serif;
+  font-weight: 600;
   font-size: 13px;
-  color: #3d4a3a;
+  color: #4d6b4f;
   cursor: pointer;
 }
-.page-btn.active { background: #4d6b4f; border-color: #4d6b4f; color: #fff; }
-.page-btn:disabled { color: #cfc4a9; cursor: default; }
-.page-ellipsis { padding: 7px 4px; color: #7a7561; font-size: 13px; }
+.page-btn:hover:not(:disabled) { color: #33502f; }
+.page-btn.active { color: #33502f; text-decoration: underline; text-underline-offset: 3px; }
+.page-btn:disabled { color: #c3cfc0; cursor: default; }
+.page-ellipsis { padding: 6px 2px; color: #7a7561; font-size: 13px; }
 .rating {
   color: #4d6b4f;
   font-size: 11px;
   letter-spacing: 0.3px;
   margin-bottom: 10px;
 }
-.rating.warn { color: #c98a3a; }
-.rating.neutral { color: #6f8768; }
+/* Tier color coding: green = fully cruelty-free & vegan, gold = cruelty-free
+   certified but check vegan status per product, blue = cruelty-free itself
+   but the parent company isn't, red = tested on animals (defined per-page,
+   see .rating.bad), grey = not certified either way. Kept visually distinct
+   from each other on purpose -- a brand shouldn't read as "a shade of
+   warning" just because it isn't the fully-green case. */
+.rating.good { color: #33502f; }
+.rating.check { color: #8a6a2a; }
+.rating.neutral { color: #8a6a2a; } /* legacy alias for .check, kept so older markup still resolves */
+.rating.warn { color: #3d6b78; }
+.rating.unverified { color: #6b6656; }
+.card.good { border-color: #a8c4a0; }
+.card.check { border-color: #d9c48a; }
+.card.warn { border-color: #a8c4c9; }
+.card.unverified { border-color: #cfc4a9; }
 .card p { margin-bottom: 0; font-size: 13.5px; line-height: 1.8; }
 
 /* footer / newsletter */
@@ -950,3 +962,30 @@ body { animation: pageFadeIn 0.22s ease; }
 }
 .ahk-toast.show { opacity: 1; transform: none; }
 @media(prefers-reduced-motion: reduce){ .ahk-toast { transition: none; } }
+
+/* Homepage hero: rotating "would you..." fact, one at random per visit,
+   swipeable/clickable through the rest. */
+.hero-fact-carousel { max-width: 450px; margin: 0 auto; }
+.hero-fact-text { color: #c9d1c3; font-size: 14.5px; line-height: 1.95; margin-bottom: 16px; min-height: 84px; }
+.hero-fact-nav { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.hero-fact-arrow {
+  background: none;
+  border: 0.5px solid rgba(217,201,154,0.4);
+  color: #d9c99a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.18s ease, transform 0.12s ease;
+}
+.hero-fact-arrow:hover, .hero-fact-arrow:focus-visible { border-color: #d9c99a; }
+.hero-fact-arrow:active { transform: scale(0.92); }
+.hero-fact-dots { display: flex; gap: 6px; }
+.hero-fact-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(217,201,154,0.35); }
+.hero-fact-dot.active { background: #d9c99a; }
+@media (prefers-reduced-motion: reduce) { .hero-fact-arrow { transition: none; } }

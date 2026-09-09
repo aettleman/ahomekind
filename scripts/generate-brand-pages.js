@@ -18,12 +18,12 @@ const OUT_DIR = path.join(ROOT, 'brands');
 const SITE_URL = 'https://ahomekind.com';
 
 const TIER_META = {
-  good:  { emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan', className: '', ratingClass: '' },
-  check: { emoji: '&#128048;', label: 'cruelty-free, check vegan status per product', className: '', ratingClass: 'neutral' },
+  good:  { emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan', className: 'good', ratingClass: 'good' },
+  check: { emoji: '&#128048;', label: 'cruelty-free, check vegan status per product', className: 'check', ratingClass: 'check' },
   warn:  { emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t', className: 'warn', ratingClass: 'warn' },
   bad:   { emoji: '&#10060;', label: 'tested on animals', className: 'bad', ratingClass: 'bad' },
-  unverified: { emoji: '&#128269;', label: 'not certified - no evidence either way', className: '', ratingClass: 'neutral' },
-  unknown: { emoji: '&#10067;', label: 'status not known yet', className: '', ratingClass: 'neutral' }
+  unverified: { emoji: '&#128269;', label: 'not certified - no evidence either way', className: 'unverified', ratingClass: 'unverified' },
+  unknown: { emoji: '&#10067;', label: 'status not known yet', className: 'unverified', ratingClass: 'unverified' }
 };
 
 function escapeHtml(str) {
@@ -97,7 +97,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909h">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909j">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -209,7 +209,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260909h"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260909j"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
