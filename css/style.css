@@ -215,6 +215,9 @@ p { margin-bottom: 18px; font-size: 15px; }
 .status-pill.vegan-unknown { background:#f3ded9; color:#8a4a2a; }
 .status-pill.parent-neutral { background:#e3ddf0; color:#4a3d70; }
 .status-pill.parent-bad { background:#f3e2df; color:#8a332c; }
+.parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.parent-test-flag.bad { background:#f3e2df; color:#8a332c; }
+.parent-test-flag.good { background:#e6efe2; color:#33502f; }
 
 /* cards */
 .card {

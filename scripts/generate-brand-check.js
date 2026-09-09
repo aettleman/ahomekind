@@ -102,10 +102,16 @@ function renderCard(brand) {
   const nameHtml = brand.slug
     ? '<a href="brands/' + brand.slug + '/">' + escapeHtml(brand.name) + '</a>'
     : escapeHtml(brand.name);
+  var parentNote = '';
+  if (brand.tier === 'unverified' && typeof brand.parentTestsOnAnimals === 'boolean') {
+    parentNote = brand.parentTestsOnAnimals
+      ? '<p class="parent-test-flag bad">&#10060; parent company tests on animals</p>'
+      : '<p class="parent-test-flag good">&#127807; parent company doesn\'t test on animals</p>';
+  }
   return '<div class="' + cardClass + '" data-category="' + dataCategory + '">' +
     '<p class="' + ratingClass + '">' + tier.emoji + ' ' + tier.label + '</p>' +
     '<h3>' + nameHtml + '</h3>' +
-    '<p>' + escapeHtml(brand.note) + '</p></div>';
+    '<p>' + escapeHtml(brand.note) + '</p>' + parentNote + '</div>';
 }
 
 // Classify each brand into exactly one of brand-check.html's existing

@@ -3371,7 +3371,7 @@
     "slug": "hawaiian-tropic",
     "name": "Hawaiian Tropic",
     "tier": "unverified",
-    "note": "Owned by Edgewell Personal Care. As of 2026-09-02, no animal-testing policy specific to Chinese market sales could be confirmed from a primary source, so treated as unverified rather than bad.",
+    "note": "Owned by Edgewell Personal Care, which has confirmed it allows animal testing on its products where required by law (for example, to register cosmetics for sale in mainland China). Hawaiian Tropic itself has no independent cruelty-free certification, so treated as unverified rather than bad.",
     "parentCompany": "Edgewell Personal Care",
     "vegan": "unclear",
     "evidence": "",
@@ -3383,7 +3383,8 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "parentTestsOnAnimals": true
   },
   {
     "slug": "riemann-p20",

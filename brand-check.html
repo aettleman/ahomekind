@@ -6,7 +6,7 @@
 <title>Brand Check - a home kind</title>
 <meta name="description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909j">
+<link rel="stylesheet" href="css/style.css?v=20260909k">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -46,14 +46,20 @@
 .rstatus-value.maybe { color:#8a6a2a; }
 .rstatus-value.parent { color:#3d6b78; }
 .rstatus-value.na { color:#7a7561; }
+.parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.parent-test-flag.bad { background:#f3e2df; color:#8a332c; }
+.parent-test-flag.good { background:#e6efe2; color:#33502f; }
 .rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; list-style:revert; }
 .rcard-details summary:hover { color:#3d4a3a; }
 .rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
-.browse-btn-row { display:flex; gap:12px; margin-bottom:28px; }
+.browse-btn-row { display:flex; justify-content:center; gap:14px; margin:0 auto 28px; max-width:480px; }
 .browse-btn-row button { flex:1; }
-#browseAllBtn, #browseAZBtn { display:block; width:100%; padding:14px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin:0; }
-#browseAllBtn:hover, #browseAZBtn:hover { background:#e2d9bd; }
-@media (max-width:480px) { .browse-btn-row { flex-direction:column; } }
+#browseAllBtn, #browseAZBtn { display:block; width:100%; padding:14px 20px; border-radius:10px; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin:0; text-align:center; }
+#browseAllBtn { background:#faf1d9; border:0.5px solid #e2cf9a; color:#8a6a2a; }
+#browseAllBtn:hover { background:#f5e8c4; }
+#browseAZBtn { background:#f7e4e6; border:0.5px solid #e0b8bd; color:#8a4a52; }
+#browseAZBtn:hover { background:#f2d5d8; }
+@media (max-width:480px) { .browse-btn-row { flex-direction:column; max-width:320px; } }
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
@@ -167,7 +173,7 @@
 </div>
 
 <button type="button" id="browseAllBtn">browse all brands</button>
-<button type="button" id="browseAZBtn" style="margin-left:10px;">browse A-Z</button>
+<button type="button" id="browseAZBtn">browse A-Z</button>
 
 <div id="categoryGrid" style="display:none; margin-bottom:28px;">
 <p class="section-label" style="text-align:center;">browse by category</p>
@@ -864,7 +870,7 @@
 <div class="card warn" data-category="skin-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/habi/">Habi</a></h3><p>Boots' own wellness and skincare range. Boots says it's vegan and cruelty-free, but claims are self-declared and not independently verified against a recognised certifier at time of writing.</p></div>
 <div class="card unverified" data-category="body-shower"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/right-guard/">Right Guard</a></h3><p>As of 2026-09-02, ownership has changed hands (formerly Henkel, now reported under Thriving Brands) and no animal-testing policy or certification could be confirmed either way.</p></div>
 <div class="card unverified" data-category="skin-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/piz-buin/">Piz Buin</a></h3><p>As of 2026-09-02, now owned by Sarantis Group after a change in ownership - no animal-testing policy or certification confirmed either way.</p></div>
-<div class="card unverified" data-category="skin-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/hawaiian-tropic/">Hawaiian Tropic</a></h3><p>Owned by Edgewell Personal Care. As of 2026-09-02, no animal-testing policy specific to Chinese market sales could be confirmed from a primary source, so treated as unverified rather than bad.</p></div>
+<div class="card unverified" data-category="skin-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/hawaiian-tropic/">Hawaiian Tropic</a></h3><p>Owned by Edgewell Personal Care, which has confirmed it allows animal testing on its products where required by law (for example, to register cosmetics for sale in mainland China). Hawaiian Tropic itself has no independent cruelty-free certification, so treated as unverified rather than bad.</p><p class="parent-test-flag bad">&#10060; parent company tests on animals</p></div>
 <div class="card unverified" data-category="skin-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/riemann-p20/">Riemann P20</a></h3><p>As of 2026-09-02, current ownership could not be reliably confirmed from a primary source, so no animal-testing policy could be checked either way.</p></div>
 <div class="card unverified" data-category="hair-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/vosene/">Vosene</a></h3><p>Owned by Thornton &amp; Ross (part of STADA). As of 2026-09-02, no animal-testing policy or China market exposure could be confirmed from a primary source.</p></div>
 <div class="card unverified" data-category="hair-care"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/alberto-balsam/">Alberto Balsam</a></h3><p>Owned by McBride plc, same parent as Bloo. As of 2026-09-02, no animal-testing policy or certification was found either way.</p></div>
@@ -1577,7 +1583,7 @@ if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFl
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909j"></script>
+<script src="js/nav.js?v=20260909k"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
