@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910j">
+<link rel="stylesheet" href="css/style.css?v=20260910l">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -86,16 +86,38 @@
 .material-card { margin-bottom:0; }
 .material-name { font-family:'Cormorant Garamond',serif; font-size:19px; letter-spacing:0.5px; color:#3d4a3a; margin-bottom:8px; }
 .material-what { font-size:13.5px; color:#5c5c4f; margin-bottom:10px; line-height:1.7; }
-.material-note { font-size:13px; color:#5c5c4f; line-height:1.7; margin-bottom:10px; padding:10px 12px; background:#f6ecd9; border:1px solid #dfc491; border-radius:8px; }
-.material-lookfor { font-size:13px; line-height:1.6; margin-bottom:0; }
-.material-lookfor strong { color:#4d6b4f; }
+/* These were coloured slabs sitting mid-card -- an amber box inside every
+   material and a red one inside every retailer -- which read as warnings
+   and made each card a wall of text you had to read past. They're quiet
+   drop-downs now: the summary line is the scannable bit, the detail is
+   one tap away for anyone who wants it. */
+.mat-drop { border-top:1px solid var(--ahk-border-soft); margin-top:10px; padding-top:10px; }
+.mat-drop summary { cursor:pointer; font-size:12px; font-weight:700; letter-spacing:0.4px; color:var(--ahk-green); list-style:none; display:flex; align-items:center; gap:7px; }
+.mat-drop summary::-webkit-details-marker { display:none; }
+.mat-drop summary::after { content:'+'; margin-left:auto; font-size:15px; font-weight:400; opacity:0.7; }
+.mat-drop[open] summary::after { content:'\2013'; }
+.mat-drop summary:hover { color:var(--ahk-heading); }
+.mat-drop p { font-size:13px; line-height:1.75; color:var(--ahk-text); margin:9px 0 0; }
+.mat-drop.is-good summary { color:#4d6b4f; }
+.mat-drop.is-flag summary { color:#8a4a43; }
+@media (prefers-color-scheme: dark) {
+  .mat-drop.is-good summary { color:var(--ahk-green); }
+  .mat-drop.is-flag summary { color:#d98d84; }
+}
+.swap-lede { font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.4; color:var(--ahk-heading); text-align:center; max-width:26ch; margin:0 auto 14px; text-wrap:balance; }
+.swap-chips { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
+.swap-chip { background:var(--ahk-card); border:1px solid var(--ahk-border); border-radius:60px; padding:9px 16px; font-family:'Karla',sans-serif; font-size:12.5px; font-weight:600; color:var(--ahk-heading); cursor:pointer; transition:background 0.15s ease, border-color 0.15s ease; }
+.swap-chip:hover { border-color:var(--ahk-green-soft); }
+.swap-chip.active { background:var(--ahk-heading); border-color:var(--ahk-heading); color:#f4efe2; }
+@media (prefers-color-scheme: dark) { .swap-chip.active { background:var(--ahk-green); border-color:var(--ahk-green); color:#1a2018; } }
+.swap-group[hidden] { display:none; }
+@media (prefers-reduced-motion: reduce) { .swap-chip { transition:none; } }
 .fur-pill { display:inline-flex; align-items:center; gap:6px; padding:7px 13px; border-radius:20px; font-size:12px; line-height:1.3; margin-bottom:10px; }
 .fur-pill.programme { background:#dbe8d7; color:#33502f; }
 .fur-pill.self-declared { background:#f6ecd9; color:#8a6a2a; }
 .brand-card { margin-bottom:0; }
 .brand-name { font-family:'Cormorant Garamond',serif; font-size:18px; color:#3d4a3a; margin-bottom:8px; }
 .sells-note { font-size:13px; color:#5c5c4f; line-height:1.6; margin-bottom:0; }
-.controversy-note { font-size:13px; color:#8a332c; line-height:1.7; margin-top:10px; padding:10px 12px; background:#f3e2df; border:1px solid #d9a89f; border-radius:8px; margin-bottom:0; }
 .source-links { font-size:12px; margin-top:10px; margin-bottom:0; }
 .source-links a { color:#6f8768; }
 #materialsList, #brandsList { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; align-items:start; }
@@ -137,8 +159,10 @@
 </div>
 </header>
 
-<main class="wrap" id="main">
-<h1 style="text-align:left; font-size:22px; margin-top:30px;">swap guide</h1>
+<main class="page-shell" id="main">
+<div class="pagehead">
+<h1>Swap guide</h1>
+</div>
 <div class="hub-tabs" id="hubTabs">
 <button type="button" class="hub-tab" data-tab="swaps">popular swaps</button>
 <button type="button" class="hub-tab" data-tab="food">food &amp; kitchen</button>
@@ -146,9 +170,21 @@
 </div>
 
 <div class="hub-panel" id="panel-swaps">
-<p>Some of the biggest names on the shelf are still not cruelty-free - not because of a rumour or an old boycott, but because their parent company sells into markets like mainland China, where animal testing on cosmetics can still be legally required, and hasn't adopted a policy that rules it out everywhere. Here are the ones you've probably got in your bathroom or under your sink right now, each paired with a genuinely certified alternative that does the same job.</p>
-<p style="font-size:13px; color:#8a8672;">Every brand below, on both sides, is pulled straight from my <a href="brand-check.html">brand check</a> database - nothing here is a one-off claim, you can look each one up yourself.</p>
+<p class="swap-lede">What's already in your bathroom, and what to buy instead.</p>
+<details class="mat-drop" style="max-width:520px; margin:0 auto 4px;"><summary>why these ones aren't cruelty-free</summary><p>Not because of a rumour or an old boycott. Their parent companies sell into markets like mainland China, where animal testing on cosmetics can still be legally required, and haven't adopted a policy ruling it out everywhere. Every brand below, on both sides, comes straight from the <a href="brand-check.html">brand check</a>, so you can look each one up yourself.</p></details>
 
+<div class="swap-chips" id="swapChips">
+<button type="button" class="swap-chip active" data-cat="all">everything</button>
+<button type="button" class="swap-chip" data-cat="haircare">haircare</button>
+<button type="button" class="swap-chip" data-cat="makeup">makeup</button>
+<button type="button" class="swap-chip" data-cat="skincare">skincare</button>
+<button type="button" class="swap-chip" data-cat="deodorant">deodorant</button>
+<button type="button" class="swap-chip" data-cat="period-care">period care</button>
+<button type="button" class="swap-chip" data-cat="oral-care">oral care</button>
+<button type="button" class="swap-chip" data-cat="household-and-cleaning">household &amp; cleaning</button>
+</div>
+
+<section class="swap-group" data-cat="haircare">
 <p class="swap-section-label">haircare</p>
 
 <div class="swap-card">
@@ -199,7 +235,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="makeup">
 <p class="swap-section-label">makeup</p>
 
 <div class="swap-card">
@@ -217,7 +255,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="skincare">
 <p class="swap-section-label">skincare</p>
 
 <div class="swap-card">
@@ -316,7 +356,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="deodorant">
 <p class="swap-section-label">deodorant</p>
 
 <div class="swap-card">
@@ -350,7 +392,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="period-care">
 <p class="swap-section-label">period care</p>
 
 <div class="swap-card">
@@ -384,7 +428,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="oral-care">
 <p class="swap-section-label">oral care</p>
 
 <div class="swap-card">
@@ -434,7 +480,9 @@
 </div>
 </div>
 </div>
+</section>
 
+<section class="swap-group" data-cat="household-and-cleaning">
 <p class="swap-section-label">household &amp; cleaning</p>
 
 <div class="swap-card">
@@ -519,6 +567,7 @@
 
 <p style="margin-top:30px;"><a href="brand-check.html" class="btn">search the full brand check</a></p>
 </div>
+</section>
 
 <div class="hub-panel" id="panel-food">
 <p>This site is mostly about what's on the shelf next to the food - cosmetics, cleaning products, toiletries. But food is part of the same picture. Animal agriculture and animal testing aren't the same industry, but they share a root: how much weight we give to an animal's experience when it's inconvenient to us. If brand-checking your bathroom cabinet has got you thinking about the kitchen too, this is a gentle place to start - not a diet plan, just a next step if you want one.</p>
@@ -588,7 +637,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260910j"></script>
+<script src="js/nav.js?v=20260910l"></script>
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
@@ -639,8 +688,8 @@ var html = '';
 html += '<div class="card material-card">';
 html += '<p class="material-name">' + m.name + '</p>';
 html += '<p class="material-what">' + m.what + '</p>';
-html += '<p class="material-note">' + m.note + '</p>';
-html += '<p class="material-lookfor"><strong>look for instead:</strong> ' + m.lookFor + '</p>';
+html += '<details class="mat-drop"><summary>why it\'s complicated</summary><p>' + m.note + '</p></details>';
+html += '<details class="mat-drop is-good"><summary>what to look for instead</summary><p>' + m.lookFor + '</p></details>';
 html += '</div>';
 });
 el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the glossary right now.</p>';
@@ -657,10 +706,13 @@ html += '<p class="brand-name">' + b.name + '</p>';
 html += '<span class="fur-pill ' + b.furFreeStatus + '">' + (b.furFreeStatus === 'programme' ? 'fur-free (programme member)' : 'fur-free (self-declared)') + '</span>';
 html += '<p class="sells-note">' + b.furFreeNote + '</p>';
 if(b.stillSells && b.stillSells.length){
-html += '<p class="sells-note" style="margin-top:8px;"><strong>still sells:</strong> ' + b.stillSells.join(', ') + '. ' + (b.sellsNote || '') + '</p>';
+html += '<p class="sells-note" style="margin-top:8px;"><strong>still sells:</strong> ' + b.stillSells.join(', ') + '</p>';
+if(b.sellsNote){
+html += '<details class="mat-drop"><summary>more on that</summary><p>' + b.sellsNote + '</p></details>';
+}
 }
 if(b.controversy){
-html += '<p class="controversy-note">' + b.controversy + '</p>';
+html += '<details class="mat-drop is-flag"><summary>worth knowing</summary><p>' + b.controversy + '</p></details>';
 }
 if(b.sources && b.sources.length){
 html += '<p class="source-links">sources: ' + b.sources.map(function(s){ return '<a href="' + s.url + '" target="_blank" rel="noopener">' + s.label + '</a>'; }).join(' &middot; ') + '</p>';
@@ -671,6 +723,22 @@ el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load
 }).catch(function(){
 document.getElementById('brandsList').innerHTML = '<p style="color:#8a8672; font-size:13px;">Couldn\'t load brand research right now.</p>';
 });
+
+// Twenty-two swaps across seven categories used to render flat, so
+// reaching oral care meant scrolling past haircare, makeup, skincare and
+// deodorant. Pick a category and see only that.
+(function(){
+var chips = document.getElementById('swapChips');
+if (!chips) return;
+var groups = Array.prototype.slice.call(document.querySelectorAll('.swap-group'));
+chips.addEventListener('click', function(e){
+var btn = e.target.closest('.swap-chip');
+if (!btn) return;
+var cat = btn.getAttribute('data-cat');
+chips.querySelectorAll('.swap-chip').forEach(function(c){ c.classList.toggle('active', c === btn); });
+groups.forEach(function(g){ g.hidden = (cat !== 'all' && g.getAttribute('data-cat') !== cat); });
+});
+})();
 </script>
 </body>
 </html>
