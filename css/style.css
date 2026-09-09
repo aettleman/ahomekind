@@ -698,6 +698,15 @@ body { animation: pageFadeIn 0.22s ease; }
 .filter-pill:hover { border-color: #8ba284; }
 .filter-pill:active { transform: scale(0.96); }
 .filter-pill.active { background: #4d6b4f; border-color: #4d6b4f; color: #f4efe2; }
+
+/* Certification narrowing, as a single compact dropdown rather than its
+   own row of pills -- the pill version repeated the same visual weight
+   as the primary filters above it for something used far less often,
+   and ran long enough to wrap onto two or three lines on its own. */
+.cert-select-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 22px; font-size: 12.5px; color: #7a7561; }
+.cert-select-row label { letter-spacing: 0.2px; }
+.cert-select-row select { background: #f4efe2; border: 0.5px solid #cfc4a9; border-radius: 30px; padding: 8px 14px; font-size: 12.5px; font-family: 'Karla', sans-serif; color: #3d4a3a; cursor: pointer; max-width: 100%; }
+.cert-select-row select:hover { border-color: #8ba284; }
 .bn-item:active .bn-icon-wrap { transform: scale(0.88); }
 
 /* Shared "just appeared" reveal, reused by scan results and brand-check
@@ -850,44 +859,17 @@ body { animation: pageFadeIn 0.22s ease; }
 .ahk-recent-pill.ahk-recent-bad { border-color: #c98f86; }
 .ahk-recent-pill.ahk-recent-neutral { border-color: #a9bfa3; }
 
-/* Floating "back" button -- added because the bottom nav (Home/Brands/
-   Scan/More) only ever jumps to those fixed destinations, so getting
-   back to whatever page you actually came from (a brand's page from a
-   search, a journal post from the index) meant hunting for the right
-   nav item instead of just going back. Sits top-left, out of the way of
-   the header's own content; js/nav.js injects it on every page except
-   the homepage and wires it to real browser history, not a fixed link,
-   so it always goes to wherever you actually were. */
-.ahk-back-btn {
-  position: fixed;
-  top: calc(14px + env(safe-area-inset-top, 0px));
-  left: 14px;
-  z-index: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(244,239,226,0.92);
-  backdrop-filter: blur(4px);
-  border: 0.5px solid #cfc4a9;
-  box-shadow: 0 4px 14px rgba(61,74,58,0.16);
-  color: #3d4a3a;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.12s ease;
-}
-.ahk-back-btn:hover { background: #fff; }
-.ahk-back-btn:active { transform: scale(0.92); }
-@media (max-width: 760px) {
-  /* Sits above the header on mobile since the header often wraps to two
-     rows there (logo, then nav) -- floating avoids fighting that layout
-     rather than trying to slot into it. */
-  .ahk-back-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 36px; height: 36px; font-size: 16px; }
-}
+/* Inline "back to X" link -- replaced an earlier floating circular back
+   button that covered the site logo on some layouts. This sits in the
+   normal page flow, right at the top of the content, matching the
+   hand-written "back to brand check" link that's long lived on every
+   individual brand page (brands/*/, see generate-brand-pages.js) --
+   js/nav.js injects the same style everywhere else, wired to real
+   browser history so it always goes back to wherever you actually came
+   from, worded with the page name when it can tell what that was. */
+.ahk-back-link { margin: 22px 0 0; }
+.ahk-back-link a { display: inline-flex; align-items: center; gap: 5px; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: 0.3px; color: #4d6b4f; text-decoration: none; }
+.ahk-back-link a:hover { text-decoration: underline; }
 
 /* Floating "share" button -- top-right mirror of the back button.
    Matters most for the installed home-screen app (no browser chrome,

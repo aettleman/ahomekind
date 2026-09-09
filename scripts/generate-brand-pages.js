@@ -89,7 +89,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260908d">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909a">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -141,7 +141,7 @@ function renderBrandPage(brand) {
   lines.push('</header>');
   lines.push('');
   lines.push('<main class="wrap" id="main">');
-  lines.push('<p style="font-size:12px; margin-top:24px;"><a href="../../brand-check.html">&larr; back to brand check</a></p>');
+  lines.push('<p class="ahk-back-link"><a href="../../brand-check.html">&larr; back to brand check</a></p>');
   lines.push('');
   const priceBadge = brand.price ? ('<span style="display:inline-block; margin-left:10px; padding:2px 9px; background:#e6d4a8; border-radius:12px; font-size:12px; color:#3d4a3a; vertical-align:middle;">' + escapeHtml(brand.price) + '</span>') : '';
 
@@ -198,7 +198,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260908d"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260909a"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');

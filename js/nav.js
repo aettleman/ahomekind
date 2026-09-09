@@ -9,31 +9,70 @@ person_profiles: 'identified_only'
 });
 } catch(e) {}
 
-// Floating back button -- the bottom nav only jumps to its own fixed
-// tabs (Home/Brands/Scan/More), so there was no way back to whatever
-// page you actually came from (a brand page reached via search, a
-// journal post reached from the index) without hunting for the right
-// nav item. This uses real browser history when the visit came from
-// elsewhere on the site, and falls back to the homepage when it can't
-// tell (a bookmark, a fresh tab, a link from Instagram) -- both cases
-// leave you somewhere sensible rather than stuck. Skipped on the
-// homepage itself, since "back" from there has nowhere useful to go.
+// Inline "back to X" link -- replaces an earlier floating circular back
+// button, which sat top-left and ended up covering the site logo. This
+// is plain text at the top of the page content instead: forest green,
+// small arrow, reads "back to brand check" / "back to home" / etc when
+// we can tell where the visit came from (via document.referrer), or
+// just "back" when we can't (a bookmark, a fresh tab, a link from
+// Instagram) -- both cases use real browser history so it always goes
+// to wherever you actually were, falling back to the homepage link only
+// when there's no usable history at all. Skipped on the homepage
+// itself (nothing useful to go "back" to there) and skipped wherever a
+// page already has its own hand-written version of this same link
+// (every brands/*/ page), matched by the shared .ahk-back-link class.
 (function(){
 var path = location.pathname;
 var isHome = path === '/' || /\/index\.html$/.test(path) || path === '/ahomekind' || path === '';
 if(isHome) return;
+
+var PAGE_LABELS = {
+'index.html': 'home',
+'brand-check.html': 'brand check',
+'scan.html': 'scan',
+'shelf.html': 'shelf scan',
+'ingredient-check.html': 'ingredient check',
+'shop.html': 'shop',
+'learn.html': 'learn',
+'quiz.html': 'quiz',
+'impact.html': 'your impact',
+'my-swaps.html': 'my swaps',
+'brand-watch.html': 'brand watch',
+'swap-guide.html': 'swap guide',
+'about.html': 'about'
+};
+
+function labelFromReferrer(){
+if(!document.referrer || document.referrer.indexOf(location.origin) !== 0) return null;
+var refPath = '';
+try { refPath = new URL(document.referrer).pathname; } catch(e){ return null; }
+if(refPath === location.pathname) return null;
+if(refPath === '/' || /\/index\.html$/.test(refPath)) return PAGE_LABELS['index.html'];
+if(/\/journal\/?$/.test(refPath) || /\/journal\/index\.html$/.test(refPath)) return 'journal';
+if(/\/journal\//.test(refPath)) return 'journal';
+if(/\/brands\//.test(refPath)) return 'brand check';
+var file = refPath.split('/').filter(Boolean).pop();
+return PAGE_LABELS[file] || null;
+}
+
 window.addEventListener('DOMContentLoaded', function(){
-var btn = document.createElement('button');
-btn.type = 'button';
-btn.className = 'ahk-back-btn';
-btn.setAttribute('aria-label', 'Go back');
-btn.innerHTML = '&#8592;';
-btn.addEventListener('click', function(){
+if(document.querySelector('.ahk-back-link')) return;
+var main = document.getElementById('main');
+if(!main) return;
+var label = labelFromReferrer();
+var p = document.createElement('p');
+p.className = 'ahk-back-link';
+var a = document.createElement('a');
+a.href = '#';
+a.innerHTML = '&larr; ' + (label ? ('back to ' + label) : 'back');
+a.addEventListener('click', function(e){
+e.preventDefault();
 var cameFromSite = document.referrer && document.referrer.indexOf(location.origin) === 0;
 if(cameFromSite && history.length > 1){ history.back(); }
 else { location.href = location.origin + '/index.html'; }
 });
-document.body.appendChild(btn);
+p.appendChild(a);
+main.insertBefore(p, main.firstChild);
 });
 })();
 
