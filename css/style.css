@@ -1411,7 +1411,6 @@ body { animation: pageFadeIn 0.22s ease; }
 /* The results block on impact.html gets the mockup's animal portrait
    above the figures, so the number reads as being about a living thing
    rather than as an abstract statistic. */
-.results .statblock-portrait { margin-bottom: 20px; }
 
 /* Each myth card carries a photograph above its claim. The image is the
    reason the card reads as something rather than a text box -- it sits
@@ -1508,7 +1507,7 @@ body { animation: pageFadeIn 0.22s ease; }
    width with an arched top, rather than a small circle above the figures.
    At that scale the animal is the first thing you see, which is the whole
    argument of the page -- the number means more with a face over it. */
-.impact-portrait { width: 100%; max-width: 320px; height: auto; margin: 0 auto 8px; overflow: hidden; }
+.impact-portrait { width: 100%; max-width: 320px; height: auto; margin: 0 auto 26px; overflow: hidden; }
 .impact-portrait .ahk-slot { aspect-ratio: 1 / 0.86; border-radius: 160px 160px 18px 18px; background: linear-gradient(140deg, #cfd8c4 0%, #b9c6ac 100%); }
 .impact-portrait .ahk-slot > img { object-position: 50% 32%; }
 @media (min-width: 560px) { .impact-portrait { max-width: 360px; } }
