@@ -4009,9 +4009,9 @@
   {
     "slug": "aveda",
     "name": "Aveda",
-    "tier": "check",
-    "note": "Creates vegan, high-performance hair, skin, makeup and body formulas with sustainability at heart. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Leaping Bunny certified since 2022, owned by Estée Lauder Companies.",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -13507,9 +13507,9 @@
   {
     "slug": "tarte-cosmetics",
     "name": "Tarte Cosmetics",
-    "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Kosé Corporation. Tarte itself does not sell in mainland China.",
+    "parentCompany": "Kosé Corporation",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -14010,6 +14010,437 @@
     "links": [],
     "category": [
       "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "bumble-and-bumble",
+    "name": "Bumble and Bumble",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Estée Lauder Companies.",
+    "parentCompany": "Estée Lauder Companies",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hourglass-cosmetics",
+    "name": "Hourglass Cosmetics",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "smashbox",
+    "name": "Smashbox",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Estée Lauder Companies.",
+    "parentCompany": "Estée Lauder Companies",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "too-faced",
+    "name": "Too Faced",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Estée Lauder Companies.",
+    "parentCompany": "Estée Lauder Companies",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "tatcha",
+    "name": "TATCHA",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "dermalogica",
+    "name": "Dermalogica",
+    "tier": "warn",
+    "note": "Leaping Bunny certified, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "living-proof",
+    "name": "Living Proof",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "love-beauty-and-planet",
+    "name": "Love Beauty and Planet",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare",
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "lakm",
+    "name": "Lakmé",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever (Hindustan Unilever).",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nubian-heritage",
+    "name": "Nubian Heritage",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "schmidts-naturals",
+    "name": "Schmidt's Naturals",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "seventh-generation",
+    "name": "Seventh Generation",
+    "tier": "warn",
+    "note": "Leaping Bunny certified, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "household-cleaning",
+      "laundry"
+    ],
+    "region": "",
+    "veganConfidence": "medium"
+  },
+  {
+    "slug": "sunsilk",
+    "name": "Sunsilk",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "murad",
+    "name": "Murad",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "paulas-choice",
+    "name": "Paula's Choice",
+    "tier": "warn",
+    "note": "Leaping Bunny certified, owned by Unilever.",
+    "parentCompany": "Unilever",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "devacurl",
+    "name": "DevaCurl",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Henkel.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "joico",
+    "name": "Joico",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free since 2021, owned by Henkel.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "sexy-hair",
+    "name": "Sexy Hair",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Henkel.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "logona",
+    "name": "Logona",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by L’Oréal (via Logocos Naturkosmetik).",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare",
+      "makeup-beauty",
+      "skincare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "nyx-professional-makeup",
+    "name": "NYX Professional Makeup",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by L’Oréal.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "pureology",
+    "name": "Pureology",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by L’Oréal.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "urban-decay",
+    "name": "Urban Decay",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by L’Oréal. Urban Decay does not sell in mainland China, a stance it took specifically to keep its cruelty-free status.",
+    "parentCompany": "L'Oréal",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "goldwell",
+    "name": "Goldwell",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Kao Corporation.",
+    "parentCompany": "Kao Corporation",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "toms-of-maine",
+    "name": "Tom's of Maine",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Colgate-Palmolive.",
+    "parentCompany": "Colgate-Palmolive",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "dental",
+      "body-shower"
+    ],
+    "region": "",
+    "veganConfidence": "low"
+  },
+  {
+    "slug": "hair-food",
+    "name": "Hair Food",
+    "tier": "warn",
+    "note": "PETA certified cruelty-free, owned by Procter & Gamble.",
+    "parentCompany": "Procter & Gamble",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
     ],
     "region": "",
     "veganConfidence": "low"
