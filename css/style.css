@@ -58,8 +58,8 @@ a:hover { color: #3d4a3a; }
 
 /* header */
 header.site-header {
-  background: var(--ahk-surface, #e9e2d2);
-  border-bottom: 0.5px solid var(--ahk-border, #cfc4a9);
+  background: var(--ahk-bg, #faf5eb);
+  border-bottom: 0.5px solid var(--ahk-border, #e2dac6);
 }
 header.site-header .wrap {
   display: flex;
@@ -417,8 +417,8 @@ footer.site-footer {
     justify-content: space-around;
     position: fixed;
     left: 0; right: 0; bottom: 0;
-    background: #f4efe2;
-    border-top: 0.5px solid #cfc4a9;
+    background: var(--ahk-bg, #faf5eb);
+    border-top: 0.5px solid var(--ahk-border, #e0d8c4);
     padding: 8px 6px calc(8px + env(safe-area-inset-bottom, 0px));
     z-index: 500;
   }
@@ -1014,12 +1014,17 @@ body { animation: pageFadeIn 0.22s ease; }
    Follows the visitor's device setting automatically. No toggle,
    no stored preference, nothing to configure. */
 :root {
-  --ahk-bg:            #f2ede1;  /* page behind everything */
-  --ahk-surface:       #e9e2d2;  /* header, banded sections */
-  --ahk-surface-2:     #f7f3ea;  /* lighter bands */
-  --ahk-card:          #fffdf8;  /* raised cards */
-  --ahk-border:        #cfc4a9;
-  --ahk-border-soft:   #dcd2b8;
+  /* Sampled straight out of the mockup: its pages and its header are both
+     #faf5eb, a very light warm cream. The site had drifted to #f2ede1 page
+     on a #e9e2d2 header, which is a good two shades heavier and is why it
+     read as muddy next to the reference. Forest green is the accent here,
+     not the ground. */
+  --ahk-bg:            #faf5eb;  /* page behind everything */
+  --ahk-surface:       #f4eede;  /* banded sections -- barely deeper */
+  --ahk-surface-2:     #f7f2e6;  /* lighter bands */
+  --ahk-card:          #fffefa;  /* raised cards */
+  --ahk-border:        #e0d8c4;
+  --ahk-border-soft:   #e8e1d0;
   --ahk-text:          #5c5c4f;  /* body copy */
   --ahk-text-muted:    #7a7561;
   --ahk-heading:       #3d4a3a;  /* headings + deep forest */
@@ -1038,14 +1043,17 @@ body { animation: pageFadeIn 0.22s ease; }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ahk-bg:            #1e241d;
-    --ahk-surface:       #262e24;
-    --ahk-surface-2:     #222a21;
-    --ahk-card:          #2c352a;
-    --ahk-border:        #3f4a3c;
-    --ahk-border-soft:   #3a4538;
-    --ahk-text:          #c6c3b5;
-    --ahk-text-muted:    #97937f;
+    /* A warm neutral dark, not a forest-green one. Green stays the accent
+       in both themes -- flooding every surface with it was what made the
+       dark view feel like a different, heavier site. */
+    --ahk-bg:            #1c1b18;
+    --ahk-surface:       #24231f;
+    --ahk-surface-2:     #201f1c;
+    --ahk-card:          #2a2925;
+    --ahk-border:        #3d3b34;
+    --ahk-border-soft:   #37352f;
+    --ahk-text:          #c8c4b6;
+    --ahk-text-muted:    #99958a;
     --ahk-heading:       #e8e3d5;
     --ahk-forest:        #26301f;
     --ahk-forest-deep:   #1b231a;
@@ -1143,17 +1151,12 @@ body { animation: pageFadeIn 0.22s ease; }
 @media (prefers-color-scheme: dark) {
   .impact-teaser { background: var(--ahk-surface); border-top-color: var(--ahk-border); border-bottom-color: var(--ahk-border); }
   .impact-teaser:hover, .impact-teaser:focus-visible { background: var(--ahk-card); }
-  .impact-teaser.is-warm { background: #2f3529; }
-  .impact-teaser.is-warm:hover { background: #363c2f; }
+  .impact-teaser.is-warm { background: #2e2b23; }
+  .impact-teaser.is-warm:hover { background: #35322a; }
   .impact-teaser-num, .impact-teaser-num span { color: var(--ahk-heading); }
   .impact-teaser-sub { color: var(--ahk-text); }
   .impact-teaser-kicker { color: var(--ahk-green-soft); }
-  /* The logo mark is a dark illustration -- lift it so it stays legible
-     on a dark header instead of disappearing into it. */
-  .logo img { filter: brightness(0) invert(0.88); }
 }
-/* Same treatment on the always-dark scan page, whatever the device theme. */
-body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 
 /* Brand-check controls carry inline styles from when the page was
    hand-written, so the dark theme has to override them explicitly. */
@@ -1191,9 +1194,9 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
      which loads after this file -- they read these tokens so the values
      can still be flipped from here. */
   :root {
-    --ahk-impact-bg:       #26301f;
-    --ahk-impact-bg-hover: #2d3826;
-    --ahk-impact-line:     #3f4a3c;
+    --ahk-impact-bg:       #262a22;
+    --ahk-impact-bg-hover: #2d3229;
+    --ahk-impact-line:     #3d3b34;
   }
 
   /* myth vs reality (flip cards) */
@@ -1204,7 +1207,7 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
   .flip-front { background: var(--ahk-card); border-color: var(--ahk-border); }
   .flip-front .flip-text { color: var(--ahk-heading); }
   .flip-front .flip-label { color: var(--ahk-gold-deep); }
-  .flip-back { background: #33472f; }
+  .flip-back { background: #333d2d; }
   .flip-hint { color: var(--ahk-text-muted); }
   .flip-card-btn:focus-visible .flip-front,
   .flip-card-btn:focus-visible .flip-back { outline-color: var(--ahk-gold-soft); }
@@ -1277,9 +1280,6 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 /* The impact teaser gets the mockup's circular animal portrait above
    the number, so the figure reads as being about a living thing
    rather than as an abstract statistic. */
-.impact-portrait { width: 108px; height: 108px; border-radius: 50%; overflow: hidden; margin: 0 auto 18px; border: 2px solid rgba(109,135,104,0.35); }
-.impact-portrait .ahk-slot { width: 100%; height: 100%; border-radius: 50%; }
-.impact-portrait .ahk-slot-label { font-size: 9px; letter-spacing: 1px; }
 
 /* ============================================================
    MYTH CARDS AS A CAROUSEL
@@ -1500,3 +1500,21 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
 .pcard-imgwrap img[hidden] { display: none; }
 .pcard-imgwrap.is-empty::after { content: '\1F33F'; font-size: 26px; opacity: 0.32; }
 .pcard-imgwrap.is-empty { background: var(--ahk-surface); }
+
+/* The impact portrait, sized as the mockup has it: near the full column
+   width with an arched top, rather than a small circle above the figures.
+   At that scale the animal is the first thing you see, which is the whole
+   argument of the page -- the number means more with a face over it. */
+.impact-portrait { width: 100%; max-width: 320px; height: auto; margin: 0 auto 8px; overflow: hidden; }
+.impact-portrait .ahk-slot { aspect-ratio: 1 / 0.86; border-radius: 160px 160px 18px 18px; background: linear-gradient(140deg, #cfd8c4 0%, #b9c6ac 100%); }
+.impact-portrait .ahk-slot > img { object-position: 50% 32%; }
+@media (min-width: 560px) { .impact-portrait { max-width: 360px; } }
+.pagehead h1 em { font-style: italic; color: var(--ahk-gold-deep); }
+
+@media (prefers-color-scheme: dark) {
+  /* the slider read-outs and range tracks were tuned for a light page */
+  .slider-row label, .slider-val, .preset-note { color: var(--ahk-text); }
+  input[type=range] { accent-color: var(--ahk-green); }
+  .bn-label { color: var(--ahk-text-muted); }
+  .bn-item.active .bn-label { color: var(--ahk-heading); }
+}
