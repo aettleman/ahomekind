@@ -225,6 +225,37 @@ p { margin-bottom: 18px; font-size: 15px; }
   margin-bottom: 14px;
 }
 .card.warn { border-color: #d9b06e; }
+
+/* brand-check: A-Z browse + pagination */
+.flex-order { display: flex; flex-direction: column; }
+.az-letters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.az-letters button {
+  min-width: 30px;
+  padding: 6px 8px;
+  border: 0.5px solid #cfc4a9;
+  border-radius: 6px;
+  background: #fff;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+  color: #3d4a3a;
+  cursor: pointer;
+}
+.az-letters button.active { background: #4d6b4f; border-color: #4d6b4f; color: #fff; }
+.az-letters button:disabled { color: #cfc4a9; cursor: default; }
+.page-btn {
+  min-width: 34px;
+  padding: 7px 10px;
+  border: 0.5px solid #cfc4a9;
+  border-radius: 6px;
+  background: #fff;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+  color: #3d4a3a;
+  cursor: pointer;
+}
+.page-btn.active { background: #4d6b4f; border-color: #4d6b4f; color: #fff; }
+.page-btn:disabled { color: #cfc4a9; cursor: default; }
+.page-ellipsis { padding: 7px 4px; color: #7a7561; font-size: 13px; }
 .rating {
   color: #4d6b4f;
   font-size: 11px;

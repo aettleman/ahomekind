@@ -6,7 +6,7 @@
 <title>Brand Check - a home kind</title>
 <meta name="description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909e">
+<link rel="stylesheet" href="css/style.css?v=20260909f">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -161,6 +161,7 @@
 </div>
 
 <button type="button" id="browseAllBtn">browse all brands</button>
+<button type="button" id="browseAZBtn" style="margin-left:10px;">browse A-Z</button>
 
 <div id="categoryGrid" style="display:none; margin-bottom:28px;">
 <p class="section-label" style="text-align:center;">browse by category</p>
@@ -169,7 +170,38 @@
 
 <p id="categoryBack" style="display:none; margin-bottom:16px;"><a href="#" id="categoryBackLink">&larr; all categories</a></p>
 
-<div id="allBrands" style="display:none;">
+<div id="azJumpBar" style="display:none; margin-bottom:18px;">
+<div class="az-letters" id="azLetters" role="navigation" aria-label="jump to letter"></div>
+<div class="cert-select-row" style="margin-top:12px;">
+<label for="azCategorySelect">narrow by category</label>
+<select id="azCategorySelect">
+<option value="all">all categories</option>
+<option value="skin-care">skin care</option>
+<option value="makeup">makeup</option>
+<option value="hair-care">hair care</option>
+<option value="body-shower">body &amp; shower</option>
+<option value="mouth-care">mouth care</option>
+<option value="household">household &amp; cleaning</option>
+<option value="supermarket">supermarket own-brand</option>
+</select>
+</div>
+</div>
+
+<div id="listControls" style="display:none; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+<p id="resultCount" style="margin:0; font-size:13px; color:#7a7561;"></p>
+<div class="cert-select-row" style="margin:0;">
+<label for="pageSizeSelect">show</label>
+<select id="pageSizeSelect">
+<option value="20">20</option>
+<option value="50" selected>50</option>
+<option value="100">100</option>
+<option value="all">all</option>
+</select>
+<span style="font-size:13px; color:#7a7561;">per page</span>
+</div>
+</div>
+
+<div id="allBrands" class="flex-order" style="display:none;">
 <!-- GENERATED:BRAND-CARDS:START -->
 <p class="section-label">beauty &amp; skincare</p>
 <div class="card" data-category="makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/e-l-f-cosmetics/">e.l.f. cosmetics</a></h3><p>Independently owned, PETA and Vegan Society certified.</p></div>
@@ -1016,6 +1048,8 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <p id="noResults" style="display:none; text-align:center; color:#7a7561; font-size:14px; padding:24px 0;">Nothing here yet for that one.</p>
 </div>
 
+<div id="paginationNav" style="display:none; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; margin-top:8px;"></div>
+
 <p style="margin-top:36px; font-size:13px; color:#7a7561; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
 
 <div style="text-align:center; margin:28px 0 8px;">
@@ -1090,6 +1124,7 @@ var sp = headline.indexOf(' ');
 if (sp !== -1) { headline = headline.slice(sp + 1); }
 
 var initial = (name.replace(/[^A-Za-z0-9]/g, '').charAt(0) || '?').toUpperCase();
+card.dataset.initial = /[0-9]/.test(initial) ? '#' : initial;
 var price = priceMap[name];
 
 var html = '<div class="rcard-top">';
@@ -1147,15 +1182,72 @@ var CATEGORIES = [
 
 var searchInput = document.getElementById('ratingSearch');
 var browseBtn = document.getElementById('browseAllBtn');
+var browseAZBtn = document.getElementById('browseAZBtn');
 var allBrands = document.getElementById('allBrands');
 var categoryGrid = document.getElementById('categoryGrid');
 var categoryGridInner = document.getElementById('categoryGridInner');
 var categoryBack = document.getElementById('categoryBack');
 var categoryBackLink = document.getElementById('categoryBackLink');
+var azJumpBar = document.getElementById('azJumpBar');
+var azLetters = document.getElementById('azLetters');
+var azCategorySelect = document.getElementById('azCategorySelect');
+var listControls = document.getElementById('listControls');
+var pageSizeSelect = document.getElementById('pageSizeSelect');
+var resultCount = document.getElementById('resultCount');
+var paginationNav = document.getElementById('paginationNav');
 var allCards = document.querySelectorAll('main .card');
+var allCardsArr = Array.from(allCards);
 
 function cardCategories(card) {
 return (card.dataset.category || '').split(' ').filter(Boolean);
+}
+
+// A-Z browse: cards sorted once alphabetically by name, cached as a rank
+// map (card -> position). Used to reorder the (already-in-the-DOM) cards
+// visually via CSS `order` on the flex container, rather than moving DOM
+// nodes around -- so leaving A-Z mode instantly restores the normal
+// category-grouped source order with no extra bookkeeping.
+var azRank = null;
+function getAzRank() {
+if (azRank) return azRank;
+var sorted = allCardsArr.slice().sort(function(a, b) {
+return (a.dataset.searchName || '').localeCompare(b.dataset.searchName || '');
+});
+azRank = new Map();
+sorted.forEach(function(card, i) { azRank.set(card, i); });
+return azRank;
+}
+
+var azMode = false;
+var azLetter = 'all';
+var pageSize = 50; // 20 / 50 / 100 / 'all'
+var currentPage = 1;
+
+var AZ_LETTERS = ['#'].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''));
+
+function buildAzLetters() {
+var presentLetters = new Set(allCardsArr.map(function(c) { return c.dataset.initial; }));
+var html = '<button type="button" class="az-letter-btn active" data-letter="all">all</button>';
+AZ_LETTERS.forEach(function(l) {
+var has = presentLetters.has(l);
+html += '<button type="button" class="az-letter-btn" data-letter="' + l + '"' + (has ? '' : ' disabled') + '>' + l + '</button>';
+});
+azLetters.innerHTML = html;
+azLetters.querySelectorAll('.az-letter-btn').forEach(function(btn) {
+btn.addEventListener('click', function() {
+if (btn.disabled) return;
+azLetter = btn.getAttribute('data-letter');
+currentPage = 1;
+setActiveAzLetter();
+renderBrandList();
+});
+});
+}
+
+function setActiveAzLetter() {
+azLetters.querySelectorAll('.az-letter-btn').forEach(function(btn) {
+btn.classList.toggle('active', btn.getAttribute('data-letter') === azLetter);
+});
 }
 
 function buildCategoryGrid() {
@@ -1195,6 +1287,11 @@ if (certKey === 'all') return true;
 return (card.dataset.cert || '').split(' ').indexOf(certKey) !== -1;
 }
 
+function cardMatchesLetter(card, letter) {
+if (letter === 'all') return true;
+return card.dataset.initial === letter;
+}
+
 function setActivePills() {
 filterPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === activeFilter); });
 if (certSelect) certSelect.value = activeCert;
@@ -1207,67 +1304,150 @@ searchInput.value = '';
 categoryGrid.style.display = 'block';
 allBrands.style.display = 'none';
 categoryBack.style.display = 'none';
+azJumpBar.style.display = 'none';
+listControls.style.display = 'none';
+paginationNav.style.display = 'none';
 browseBtn.style.display = '';
 browseBtn.textContent = 'hide categories';
+browseAZBtn.style.display = '';
 activeCategory = null;
 activeFilter = 'all';
 activeCert = 'all';
+azMode = false;
+azLetter = 'all';
+currentPage = 1;
 setActivePills();
 var dentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (dentalDisclaimer) dentalDisclaimer.style.display = 'none';
 }
 
-// Renders #allBrands filtered by whichever of activeCategory/activeFilter
-// are currently set -- a category and a filter can both be active at once,
-// so clicking a filter pill while browsing "household & cleaning" narrows
-// within that category instead of jumping back out to everything.
+// Renders #allBrands filtered by whichever of activeCategory/activeFilter/
+// azMode/azLetter are currently set (a category and a filter, or A-Z mode
+// and a category, can be active together -- narrowing compounds rather
+// than one replacing the other), then slices the matching set down to the
+// current page.
 function renderBrandList() {
 categoryGrid.style.display = 'none';
 allBrands.style.display = 'block';
-categoryBack.style.display = activeCategory ? 'block' : 'none';
+categoryBack.style.display = (activeCategory || azMode) ? 'block' : 'none';
 browseBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
+browseAZBtn.style.display = 'none';
+azJumpBar.style.display = azMode ? 'block' : 'none';
+listControls.style.display = 'flex';
 document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lbl.style.display = 'none'; });
 // The dental disclaimer only makes sense when you're actually looking
 // at mouth-care products -- otherwise it just sits there out of context
 // above whatever else you've searched or browsed to.
 var dentalDisclaimer = document.getElementById('dentalDisclaimer');
-if (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care') ? 'block' : 'none';
-var anyVisible = false;
-allCards.forEach(function(card) {
+if (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care' && !azMode) ? 'block' : 'none';
+
+// A-Z mode reorders the cards visually (via CSS `order`, so the actual
+// DOM stays untouched) instead of relying on document order.
+var rank = azMode ? getAzRank() : null;
+allCardsArr.forEach(function(card) {
+card.style.order = azMode ? rank.get(card) : '';
+});
+
+var pool = azMode ? allCardsArr.slice().sort(function(a, b){ return rank.get(a) - rank.get(b); }) : allCardsArr;
+var matches = pool.filter(function(card) {
 var inCategory = !activeCategory || cardCategories(card).indexOf(activeCategory) !== -1;
-var match = inCategory && cardMatchesFilter(card, activeFilter) && cardMatchesCert(card, activeCert);
+return inCategory && cardMatchesFilter(card, activeFilter) && cardMatchesCert(card, activeCert) && (!azMode || cardMatchesLetter(card, azLetter));
+});
+
+var size = pageSize === 'all' ? matches.length : pageSize;
+var totalPages = Math.max(1, Math.ceil(matches.length / (size || 1)));
+if (currentPage > totalPages) currentPage = totalPages;
+if (currentPage < 1) currentPage = 1;
+var start = (currentPage - 1) * size;
+var pageCards = matches.slice(start, start + size);
+var pageSet = new Set(pageCards);
+
+allCardsArr.forEach(function(card) {
+var match = pageSet.has(card);
 var wasHidden = card.style.display === 'none';
 card.style.display = match ? '' : 'none';
-if (match) {
-anyVisible = true;
-if (wasHidden) {
+if (match && wasHidden) {
 card.classList.remove('card-reveal');
 void card.offsetWidth;
 card.classList.add('card-reveal');
 }
-}
 });
-document.getElementById('noResults').style.display = anyVisible ? 'none' : 'block';
+
+document.getElementById('noResults').style.display = matches.length ? 'none' : 'block';
+resultCount.textContent = matches.length
+? (matches.length + ' brand' + (matches.length === 1 ? '' : 's') + (totalPages > 1 ? ' · page ' + currentPage + ' of ' + totalPages : ''))
+: '';
+renderPaginationNav(totalPages);
 window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
+}
+
+function renderPaginationNav(totalPages) {
+if (totalPages <= 1) { paginationNav.style.display = 'none'; paginationNav.innerHTML = ''; return; }
+paginationNav.style.display = 'flex';
+var html = '';
+html += '<button type="button" class="page-btn" data-page="' + (currentPage - 1) + '"' + (currentPage === 1 ? ' disabled' : '') + '>&larr; prev</button>';
+
+// Show first, last, current, and one neighbour either side; collapse the
+// rest behind an ellipsis so this stays usable even at 800+ brands.
+var pages = [];
+for (var p = 1; p <= totalPages; p++) {
+if (p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1) pages.push(p);
+}
+var lastShown = 0;
+pages.forEach(function(p) {
+if (lastShown && p - lastShown > 1) html += '<span class="page-ellipsis">&hellip;</span>';
+html += '<button type="button" class="page-btn' + (p === currentPage ? ' active' : '') + '" data-page="' + p + '">' + p + '</button>';
+lastShown = p;
+});
+
+html += '<button type="button" class="page-btn" data-page="' + (currentPage + 1) + '"' + (currentPage === totalPages ? ' disabled' : '') + '>next &rarr;</button>';
+paginationNav.innerHTML = html;
+paginationNav.querySelectorAll('.page-btn').forEach(function(btn) {
+btn.addEventListener('click', function() {
+if (btn.disabled) return;
+currentPage = parseInt(btn.getAttribute('data-page'), 10);
+renderBrandList();
+window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
+});
+});
 }
 
 function showCategory(key) {
 activeCategory = key;
 activeFilter = 'all';
+azMode = false;
+azLetter = 'all';
+currentPage = 1;
+setActivePills();
+renderBrandList();
+}
+
+function showAZList() {
+activeCategory = null;
+activeFilter = 'all';
+activeCert = 'all';
+azMode = true;
+azLetter = 'all';
+currentPage = 1;
+if (azLetters.children.length === 0) buildAzLetters();
+setActiveAzLetter();
+if (azCategorySelect) azCategorySelect.value = 'all';
 setActivePills();
 renderBrandList();
 }
 
 function applyFilter(key) {
 activeFilter = key;
+currentPage = 1;
 setActivePills();
-if (key === 'all' && activeCert === 'all' && !activeCategory) { showCategoryGrid(); return; }
+if (key === 'all' && activeCert === 'all' && !activeCategory && !azMode) { showCategoryGrid(); return; }
 renderBrandList();
 }
 
 function applyCertFilter(key) {
 activeCert = key;
+currentPage = 1;
 setActivePills();
 // Unlike applyFilter, clearing a certification filter should never bounce
 // back to the category tiles -- "any certification" is just removing a
@@ -1291,6 +1471,23 @@ browseBtn.textContent = 'browse all brands';
 showCategoryGrid();
 }
 });
+browseAZBtn.addEventListener('click', function(){
+showAZList();
+});
+if (azCategorySelect) {
+azCategorySelect.addEventListener('change', function(){
+activeCategory = azCategorySelect.value === 'all' ? null : azCategorySelect.value;
+currentPage = 1;
+renderBrandList();
+});
+}
+if (pageSizeSelect) {
+pageSizeSelect.addEventListener('change', function(){
+pageSize = pageSizeSelect.value === 'all' ? 'all' : parseInt(pageSizeSelect.value, 10);
+currentPage = 1;
+renderBrandList();
+});
+}
 categoryBackLink.addEventListener('click', function(e){
 e.preventDefault();
 showCategoryGrid();
@@ -1300,12 +1497,19 @@ var q = normalizeSearch(e.target.value);
 if (q !== '') {
 categoryGrid.style.display = 'none';
 categoryBack.style.display = 'none';
+azJumpBar.style.display = 'none';
+listControls.style.display = 'none';
+paginationNav.style.display = 'none';
 allBrands.style.display = 'block';
 browseBtn.style.display = 'none';
+browseAZBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
 activeFilter = 'all';
 activeCert = 'all';
 activeCategory = null;
+azMode = false;
+azLetter = 'all';
+allCardsArr.forEach(function(card){ card.style.order = ''; });
 document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
 var searchDentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (searchDentalDisclaimer) searchDentalDisclaimer.style.display = 'none';
@@ -1314,12 +1518,14 @@ showCategoryGrid();
 return;
 }
 var anyVisible = false;
-allCards.forEach(function(card){
+var matchCount = 0;
+allCardsArr.forEach(function(card){
 var match = (card.dataset.searchName || '').indexOf(q) !== -1;
 var wasHidden = card.style.display === 'none';
 card.style.display = match ? '' : 'none';
 if (match) {
 anyVisible = true;
+matchCount++;
 if (wasHidden) {
 card.classList.remove('card-reveal');
 void card.offsetWidth;
@@ -1331,6 +1537,7 @@ document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){
 lbl.style.display = 'none';
 });
 document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block';
+resultCount.textContent = matchCount ? (matchCount + ' brand' + (matchCount === 1 ? '' : 's')) : '';
 if (anyVisible) {
 window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
 }
@@ -1356,7 +1563,7 @@ if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFl
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909e"></script>
+<script src="js/nav.js?v=20260909f"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
