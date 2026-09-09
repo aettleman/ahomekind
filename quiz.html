@@ -6,7 +6,7 @@
 <title>Where Do You Start? - a home kind</title>
 <meta name="description" content="A 30-second quiz to find your best cruelty-free and vegan starting point.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910b">
+<link rel="stylesheet" href="css/style.css?v=20260910c">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -17,11 +17,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.quiz-opt:hover, .quiz-opt:active { background:#6f8768 !important; border-color:#6f8768 !important; }
-.quiz-opt:hover div, .quiz-opt:active div { color:#ece5d5 !important; }
 .quiz-opt.wide { grid-column: 1 / -1; }
+.quiz-question { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; line-height:1.3; letter-spacing:0.2px; text-transform:none; color:var(--ahk-heading); text-align:center; margin-bottom:22px; text-wrap:balance; }
+.quiz-opt { cursor:pointer; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:16px; text-align:center; overflow:hidden; transition:border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease; padding:22px 12px; }
+.quiz-opt.has-pic { padding:0 0 14px; }
+.quiz-opt-pic { display:block; height:104px; background:linear-gradient(140deg,#46553f,#2e392b); }
+.quiz-opt-pic img { display:block; width:100%; height:100%; object-fit:cover; }
+.quiz-opt-pic img[hidden] { display:none; }
+.quiz-opt-icon { font-size:30px; margin-bottom:8px; }
+.quiz-opt-label { font-size:13.5px; font-weight:600; color:var(--ahk-heading); letter-spacing:0.2px; line-height:1.4; padding:12px 10px 0; }
+.quiz-opt:not(.has-pic) .quiz-opt-label { padding-top:0; }
+.quiz-opt:hover, .quiz-opt:active { transform:translateY(-2px); border-color:var(--ahk-green-soft); box-shadow:0 8px 18px var(--ahk-shadow); }
+@media (prefers-reduced-motion: reduce) { .quiz-opt { transition:none; } }
 .quiz-sub { font-size:11.5px; color:#7a7561; margin-top:4px; }
-.quiz-opt:hover .quiz-sub, .quiz-opt:active .quiz-sub { color:#ece5d5 !important; }
 .quiz-progress { text-align:center; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#8ba284; margin-bottom:14px; }
 .rec-card { background:#f4efe2; border:0.5px solid #cfc4a9; border-radius:12px; padding:18px 20px; margin-bottom:14px; }
 .rec-top { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; }
@@ -85,6 +93,17 @@ var BRANDS = [{"slug": "e-l-f-cosmetics", "name": "e.l.f. cosmetics", "tier": "g
 
 var TIER_LABEL = { good: "cruelty-free", check: "worth a closer look", warn: "caution - check", bad: "tested on animals" };
 var SUPERMARKET_SLUGS = ["aldi","lidl","co-op","sainsbury-s","morrisons","waitrose","marks-and-spencer"];
+
+// The opening question's answers are the site's own categories, so each
+// one shows the same photograph as its category tile. Anything without an
+// entry here falls back to its emoji.
+var OPT_IMAGE = {
+  'makeup-beauty':      'cat-all.jpg',
+  'skincare':           'cat-skincare.jpg',
+  'haircare':           'cat-haircare.jpg',
+  'household-cleaning': 'cat-household.jpg',
+  'food-kitchen':       'cat-food.jpg'
+};
 
 var questions = [
 {
@@ -190,13 +209,18 @@ function render() {
   if (current < questions.length) {
     var q = currentQuestion();
     var html = '<p class="quiz-progress">question ' + (current + 1) + ' of ' + questions.length + '</p>';
-    html += '<h3 style="text-align:center; margin-bottom:24px; font-size:18px;">' + q.q + '</h3>';
+    html += '<h3 class="quiz-question">' + q.q + '</h3>';
     html += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">';
     q.options.forEach(function(opt) {
       var wide = q.options.length % 2 !== 0 && q.options[q.options.length - 1] === opt ? ' wide' : '';
-      html += '<div class="quiz-opt' + wide + '" data-value="' + opt.value + '" style="cursor:pointer; background:#ece5d5; border:1.5px solid #cfc4a9; border-radius:12px; padding:22px 12px; text-align:center; transition:0.15s;">';
-      html += '<div style="font-size:30px; margin-bottom:8px;">' + opt.icon + '</div>';
-      html += '<div style="font-size:13px; color:#3d4a3a; letter-spacing:0.3px; line-height:1.4;">' + opt.label + '</div>';
+      var pic = OPT_IMAGE[opt.value];
+      html += '<div class="quiz-opt' + (pic ? ' has-pic' : '') + wide + '" data-value="' + opt.value + '">';
+      if (pic) {
+        html += '<span class="quiz-opt-pic"><img src="images/' + pic + '" alt="" loading="lazy" onerror="this.hidden=true"></span>';
+      } else {
+        html += '<div class="quiz-opt-icon">' + opt.icon + '</div>';
+      }
+      html += '<div class="quiz-opt-label">' + opt.label + '</div>';
       if (opt.sub) { html += '<div class="quiz-sub">' + opt.sub + '</div>'; }
       html += '</div>';
     });
@@ -396,7 +420,7 @@ render();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260910b"></script>
+<script src="js/nav.js?v=20260910c"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
