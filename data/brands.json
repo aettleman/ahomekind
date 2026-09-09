@@ -35,7 +35,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "faith-in-nature",
@@ -74,7 +75,8 @@
       "haircare",
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "byoma",
@@ -168,7 +170,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "b-by-superdrug",
@@ -187,7 +190,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "baylis-and-harding",
@@ -204,7 +208,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "original-source",
@@ -221,7 +226,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "noughty",
@@ -249,7 +255,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "umberto-giannini",
@@ -277,7 +284,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "oceansaver",
@@ -305,7 +313,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "fabulosa",
@@ -333,7 +342,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "superdrug-own-brand-wider-range",
@@ -352,7 +362,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "imperial-leather",
@@ -369,7 +380,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "carex",
@@ -386,7 +398,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "the-inkey-list",
@@ -403,7 +416,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "green-people",
@@ -421,7 +435,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "superdrug-pro-care",
@@ -438,7 +453,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "mua",
@@ -466,7 +482,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "fussy",
@@ -483,7 +500,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "glaze",
@@ -500,7 +518,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "kingfisher",
@@ -517,7 +536,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "bleach-london",
@@ -534,7 +554,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "nyx",
@@ -562,7 +583,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bondi-sands",
@@ -580,7 +602,8 @@
       "makeup-beauty",
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Australia & New Zealand"
   },
   {
     "slug": "bulldog",
@@ -598,7 +621,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "tresemm",
@@ -615,7 +639,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "lynx",
@@ -632,7 +657,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "aussie",
@@ -649,7 +675,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "wild",
@@ -666,7 +693,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "rimmel",
@@ -683,7 +711,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "garnier",
@@ -701,7 +730,8 @@
       "skincare",
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "no7",
@@ -719,7 +749,8 @@
       "skincare",
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "simple",
@@ -736,7 +767,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "dove",
@@ -754,7 +786,8 @@
       "body-shower",
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "herbal-essences",
@@ -771,7 +804,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "ren",
@@ -788,7 +822,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "the-ordinary",
@@ -805,7 +840,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "drunk-elephant",
@@ -822,7 +858,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "astonish",
@@ -850,7 +887,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "the-pink-stuff",
@@ -878,7 +916,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bio-d",
@@ -896,7 +935,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "zoflora",
@@ -924,7 +964,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "miniml",
@@ -942,7 +983,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "smol",
@@ -960,7 +1002,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "method",
@@ -977,7 +1020,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Australia & New Zealand, Europe, USA & Canada"
   },
   {
     "slug": "ecover",
@@ -995,7 +1039,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "aldi",
@@ -1013,7 +1058,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "lidl",
@@ -1031,7 +1077,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "co-op",
@@ -1049,7 +1096,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "sainsbury-s",
@@ -1067,7 +1115,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "morrisons",
@@ -1085,7 +1134,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "waitrose",
@@ -1103,7 +1153,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "marks-and-spencer",
@@ -1121,7 +1172,8 @@
       "household-cleaning",
       "food-kitchen"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "ariel",
@@ -1139,7 +1191,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bold",
@@ -1157,7 +1210,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "daz",
@@ -1175,7 +1229,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "fairy",
@@ -1193,7 +1248,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "flash",
@@ -1210,7 +1266,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "lenor",
@@ -1228,7 +1285,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "gillette",
@@ -1245,7 +1303,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "venus",
@@ -1262,7 +1321,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "head-and-shoulders",
@@ -1279,7 +1339,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "oral-b",
@@ -1296,7 +1357,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "pantene",
@@ -1313,7 +1375,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "always",
@@ -1331,7 +1394,8 @@
       "period-menstrual",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "tampax",
@@ -1349,7 +1413,8 @@
       "period-menstrual",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "febreze",
@@ -1366,7 +1431,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "viakal",
@@ -1383,7 +1449,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "satin-care",
@@ -1401,7 +1468,8 @@
       "period-menstrual",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "vaseline",
@@ -1419,7 +1487,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "sure",
@@ -1436,7 +1505,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "persil",
@@ -1454,7 +1524,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "comfort",
@@ -1472,7 +1543,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "surf",
@@ -1490,7 +1562,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "cif",
@@ -1507,7 +1580,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "domestos",
@@ -1524,7 +1598,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "radox",
@@ -1541,7 +1616,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "axe",
@@ -1558,7 +1634,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bedhead",
@@ -1575,7 +1652,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "nivea",
@@ -1593,7 +1671,8 @@
       "body-shower",
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "dettol",
@@ -1610,7 +1689,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "vanish",
@@ -1628,7 +1708,8 @@
       "household-cleaning",
       "laundry"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "cillit-bang",
@@ -1645,7 +1726,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "finish",
@@ -1662,7 +1744,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "mr-muscle",
@@ -1679,7 +1762,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "glade",
@@ -1696,7 +1780,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "pledge",
@@ -1713,7 +1798,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "maybelline",
@@ -1730,7 +1816,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "redken",
@@ -1747,7 +1834,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "max-factor",
@@ -1764,7 +1852,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "clairol",
@@ -1781,7 +1870,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "colgate",
@@ -1798,7 +1888,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "palmolive",
@@ -1815,7 +1906,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "sanex",
@@ -1832,7 +1924,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "johnson-s",
@@ -1850,7 +1943,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "aveeno",
@@ -1868,7 +1962,8 @@
       "skincare",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "neutrogena",
@@ -1885,7 +1980,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "listerine",
@@ -1902,7 +1998,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "ogx",
@@ -1919,7 +2016,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "clean-and-clear",
@@ -1936,7 +2034,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "t-gel",
@@ -1953,7 +2052,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "elemis",
@@ -1970,7 +2070,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "tena",
@@ -1987,7 +2088,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "rare-beauty",
@@ -2015,7 +2117,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "mad-hippie",
@@ -2073,7 +2176,8 @@
       "body-shower",
       "makeup-beauty"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "dr-bronners",
@@ -2102,7 +2206,8 @@
       "body-shower",
       "household-cleaning"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "l-oreal",
@@ -2122,7 +2227,8 @@
       "haircare",
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "peace-with-the-wild",
@@ -2225,7 +2331,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "aquafresh",
@@ -2242,7 +2349,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "sensodyne",
@@ -2259,7 +2367,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "sally-hansen",
@@ -2276,7 +2385,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "collection",
@@ -2310,7 +2420,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bic",
@@ -2327,7 +2438,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "clinique",
@@ -2345,7 +2457,8 @@
       "skincare",
       "makeup-beauty"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "olay",
@@ -2362,7 +2475,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "carmex",
@@ -2379,7 +2493,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "air-wick",
@@ -2396,7 +2511,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "cerave",
@@ -2413,7 +2529,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "got2b",
@@ -2431,7 +2548,8 @@
       "haircare",
       "makeup-beauty"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "sukin",
@@ -2521,7 +2639,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "salt-of-the-earth",
@@ -2538,7 +2657,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "hurraw",
@@ -2555,7 +2675,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "USA & Canada"
   },
   {
     "slug": "beauty-kitchen",
@@ -2607,7 +2728,8 @@
     "category": [
       "period-menstrual"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "totm",
@@ -2624,7 +2746,8 @@
     "category": [
       "period-menstrual"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "dame",
@@ -2641,7 +2764,8 @@
     "category": [
       "period-menstrual"
     ],
-    "veganConfidence": "high"
+    "veganConfidence": "high",
+    "region": "Europe"
   },
   {
     "slug": "revolution-beauty",
@@ -2658,7 +2782,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Australia & New Zealand, Europe, USA & Canada"
   },
   {
     "slug": "w7-cosmetics",
@@ -2675,7 +2800,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "technic-cosmetics",
@@ -2692,7 +2818,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "wet-n-wild",
@@ -2709,7 +2836,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "essence",
@@ -2726,7 +2854,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "catrice",
@@ -2743,7 +2872,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe, USA & Canada"
   },
   {
     "slug": "sleek-makeup",
@@ -2760,7 +2890,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "st-ives",
@@ -2777,7 +2908,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "soap-glory",
@@ -2794,7 +2926,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "covergirl",
@@ -2811,7 +2944,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "batiste",
@@ -2828,7 +2962,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "john-frieda",
@@ -2845,7 +2980,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "cetaphil",
@@ -2862,7 +2998,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bourjois",
@@ -2879,7 +3016,8 @@
     "category": [
       "makeup-beauty"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "la-roche-posay",
@@ -2896,7 +3034,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "vichy",
@@ -2913,7 +3052,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "schwarzkopf",
@@ -2930,7 +3070,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "avon",
@@ -2949,7 +3090,8 @@
       "skincare",
       "haircare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "the-natural-deodorant-co",
@@ -3018,7 +3160,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "solait-by-superdrug",
@@ -3035,7 +3178,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "region": "Europe"
   },
   {
     "slug": "dr-jart-plus",
@@ -3052,7 +3196,8 @@
     "category": [
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "vo5",
@@ -3069,7 +3214,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "arkive",
@@ -3120,7 +3266,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "daise",
@@ -3155,7 +3302,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "ambi-pur",
@@ -3172,7 +3320,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "bloo",
@@ -3190,7 +3339,8 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "cristalinas",
@@ -3208,7 +3358,8 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "pacific-wax-co",
@@ -3226,7 +3377,8 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "yankee-candle",
@@ -3244,7 +3396,8 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "harpic",
@@ -3261,7 +3414,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "toilet-duck",
@@ -3278,7 +3432,8 @@
     "category": [
       "household-cleaning"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "right-guard",
@@ -3296,7 +3451,8 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "old-spice",
@@ -3313,7 +3469,8 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "macleans",
@@ -3330,7 +3487,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "corsodyl",
@@ -3347,7 +3505,8 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "piz-buin",
@@ -3365,7 +3524,8 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "hawaiian-tropic",
@@ -3384,7 +3544,8 @@
     ],
     "veganConfidence": "low",
     "dateChecked": "2026-09-02",
-    "parentTestsOnAnimals": true
+    "parentTestsOnAnimals": true,
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "riemann-p20",
@@ -3402,7 +3563,8 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "vosene",
@@ -3420,7 +3582,8 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "alberto-balsam",
@@ -3438,7 +3601,8 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "charles-worthington",
@@ -3456,7 +3620,8 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "timotei",
@@ -3473,7 +3638,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Europe"
   },
   {
     "slug": "elvive",
@@ -3490,7 +3656,8 @@
     "category": [
       "haircare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "e45",
@@ -3508,7 +3675,8 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02"
+    "dateChecked": "2026-09-02",
+    "region": "Europe"
   },
   {
     "slug": "lush",
@@ -3528,7 +3696,8 @@
       "haircare",
       "body-shower"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
   },
   {
     "slug": "newgen",
@@ -3689,7 +3858,7 @@
       "haircare",
       "skincare"
     ],
-    "region": "",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "veganConfidence": "low",
     "lastVerified": "2026-09-09"
   },
@@ -4033,7 +4202,7 @@
       "makeup-beauty",
       "skincare"
     ],
-    "region": "",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "veganConfidence": "low",
     "lastVerified": "2026-09-09"
   },
@@ -7589,7 +7758,7 @@
     "category": [
       "body-shower"
     ],
-    "region": "",
+    "region": "Europe, USA & Canada",
     "veganConfidence": "low",
     "lastVerified": "2026-09-09"
   },
@@ -7860,7 +8029,7 @@
     "category": [
       "skincare"
     ],
-    "region": "",
+    "region": "Europe",
     "veganConfidence": "low",
     "lastVerified": "2026-09-09"
   },
@@ -8383,7 +8552,7 @@
     "category": [
       "skincare"
     ],
-    "region": "",
+    "region": "USA & Canada",
     "veganConfidence": "low",
     "lastVerified": "2026-09-09"
   },

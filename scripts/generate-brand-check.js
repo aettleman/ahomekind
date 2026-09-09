@@ -94,11 +94,35 @@ function dataCategoryAttr(brand) {
   return seen.join(' ');
 }
 
+// brand.region is a free-text, comma-separated string (e.g. "Europe, USA &
+// Canada") from the CFI import plus this site's own region backfill pass.
+// Translate it into the short filter codes the region <select> uses. Brands
+// with no region data yet emit no data-region attribute at all, so the
+// filter can tell "known to not be sold there" apart from "we don't know" -
+// only cards that actually have the attribute participate in the filter.
+const REGION_CODE_MAP = [
+  ['Europe', 'uk-europe'],
+  ['USA & Canada', 'usa-canada'],
+  ['Australia & New Zealand', 'australia-nz'],
+  ['Asia', 'asia'],
+  ['Africa & The Middle East', 'africa-middle-east'],
+  ['South & Central America', 'south-central-america']
+];
+function dataRegionAttr(brand) {
+  if (!brand.region) return '';
+  const codes = [];
+  REGION_CODE_MAP.forEach(function (pair) {
+    if (brand.region.indexOf(pair[0]) !== -1) codes.push(pair[1]);
+  });
+  return codes.join(' ');
+}
+
 function renderCard(brand) {
   const tier = TIER_META[brand.tier] || TIER_META.check;
   const cardClass = 'card' + (tier.cardClass ? ' ' + tier.cardClass : '');
   const ratingClass = 'rating' + (tier.ratingClass ? ' ' + tier.ratingClass : '');
   const dataCategory = dataCategoryAttr(brand);
+  const dataRegion = dataRegionAttr(brand);
   const nameHtml = brand.slug
     ? '<a href="brands/' + brand.slug + '/">' + escapeHtml(brand.name) + '</a>'
     : escapeHtml(brand.name);
@@ -110,7 +134,7 @@ function renderCard(brand) {
       ? '<p class="parent-test-flag good">&#127807; parent company doesn\'t test on animals</p>'
       : '<p class="parent-test-flag unverified">&#128269; parent company\'s testing policy is also unverified</p>';
   }
-  return '<div class="' + cardClass + '" data-category="' + dataCategory + '">' +
+  return '<div class="' + cardClass + '" data-category="' + dataCategory + '"' + (dataRegion ? ' data-region="' + dataRegion + '"' : '') + '>' +
     '<p class="' + ratingClass + '">' + tier.emoji + ' ' + tier.label + '</p>' +
     '<h3>' + nameHtml + '</h3>' +
     '<p>' + escapeHtml(brand.note) + '</p>' + parentNote + '</div>';
