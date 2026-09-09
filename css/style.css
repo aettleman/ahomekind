@@ -969,7 +969,9 @@ body { animation: pageFadeIn 0.22s ease; }
 /* Homepage hero: rotating "would you..." fact, one at random per visit,
    swipeable/clickable through the rest. */
 .hero-fact-carousel { max-width: 450px; margin: 0 auto; }
-.hero-fact-text { color: #c9d1c3; font-size: 14.5px; line-height: 1.95; margin-bottom: 16px; min-height: 84px; }
+.hero-fact-text { color: #c9d1c3; font-size: 14.5px; line-height: 1.95; margin-bottom: 16px; min-height: 84px; text-wrap: balance; transition: opacity .2s ease; touch-action: pan-y; }
+.hero-fact-text.is-fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .hero-fact-text { transition: none; } }
 .hero-fact-nav { display: flex; align-items: center; justify-content: center; gap: 16px; }
 .hero-fact-arrow {
   background: none;
