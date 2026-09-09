@@ -115,6 +115,24 @@
     "veganConfidence": "medium"
   },
   {
+    "slug": "tropic",
+    "name": "Tropic Skincare",
+    "tier": "good",
+    "note": "Leaping Bunny certified since 2015, 100% vegan -- UK, independent, founded by Susie Ma.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "veganConfidence": "high"
+  },
+  {
     "slug": "barry-m",
     "name": "Barry M",
     "tier": "good",
