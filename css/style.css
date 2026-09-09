@@ -995,3 +995,226 @@ body { animation: pageFadeIn 0.22s ease; }
 .hero-fact-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(217,201,154,0.35); }
 .hero-fact-dot.active { background: #d9c99a; }
 @media (prefers-reduced-motion: reduce) { .hero-fact-arrow { transition: none; } }
+
+/* ============================================================
+   DESIGN TOKENS + DARK MODE
+   ============================================================
+   The site was built with hard-coded hex values throughout. Rather
+   than rewrite every rule, the palette is declared once here as
+   tokens, and the dark-mode block below re-points the handful of
+   *surface* colours (backgrounds, borders, body text) that actually
+   need to flip. Meaning-carrying colours -- the brand-check tier
+   greens/golds/blues/reds -- keep their hue in dark mode and only
+   shift lightness, so a "cruelty-free" green still reads as green.
+
+   Follows the visitor's device setting automatically. No toggle,
+   no stored preference, nothing to configure. */
+:root {
+  --ahk-bg:            #dcd3c0;  /* page behind everything */
+  --ahk-surface:       #ece5d5;  /* header, banded sections */
+  --ahk-surface-2:     #f4efe2;  /* lighter bands */
+  --ahk-card:          #ffffff;  /* raised cards */
+  --ahk-border:        #cfc4a9;
+  --ahk-border-soft:   #dcd2b8;
+  --ahk-text:          #5c5c4f;  /* body copy */
+  --ahk-text-muted:    #7a7561;
+  --ahk-heading:       #3d4a3a;  /* headings + deep forest */
+  --ahk-forest:        #3d4a3a;  /* the dark green, as a surface */
+  --ahk-forest-deep:   #2f3a2d;
+  --ahk-green:         #4d6b4f;  /* interactive green */
+  --ahk-green-soft:    #6f8768;
+  --ahk-gold:          #e6d4a8;  /* primary button fill */
+  --ahk-gold-deep:     #a4894f;
+  --ahk-gold-soft:     #d9c99a;
+  --ahk-on-dark:       #f4efe2;  /* text on forest */
+  --ahk-on-dark-muted: #c9d1c3;
+  --ahk-shadow:        rgba(61,74,58,0.12);
+  --ahk-shadow-strong: rgba(61,74,58,0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ahk-bg:            #1e241d;
+    --ahk-surface:       #262e24;
+    --ahk-surface-2:     #222a21;
+    --ahk-card:          #2c352a;
+    --ahk-border:        #3f4a3c;
+    --ahk-border-soft:   #3a4538;
+    --ahk-text:          #c6c3b5;
+    --ahk-text-muted:    #97937f;
+    --ahk-heading:       #e8e3d5;
+    --ahk-forest:        #26301f;
+    --ahk-forest-deep:   #1b231a;
+    --ahk-green:         #8fae86;
+    --ahk-green-soft:    #a3bf99;
+    --ahk-gold:          #e0cd9d;
+    --ahk-gold-deep:     #d9c99a;
+    --ahk-gold-soft:     #cbb887;
+    --ahk-on-dark:       #f0ebdd;
+    --ahk-on-dark-muted: #b9c2b3;
+    --ahk-shadow:        rgba(0,0,0,0.4);
+    --ahk-shadow-strong: rgba(0,0,0,0.55);
+  }
+
+  body { background: var(--ahk-bg); color: var(--ahk-text); }
+
+  /* chrome */
+  header.site-header { background: var(--ahk-surface); border-bottom-color: var(--ahk-border); }
+  .logo span { color: var(--ahk-heading); }
+  nav.main-nav, nav.main-nav a { color: var(--ahk-on-dark-muted); }
+  nav.main-nav a:hover { color: var(--ahk-heading); }
+  .dd-m { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; }
+  .dd-m a { color: var(--ahk-on-dark-muted) !important; }
+  .dd-m a:hover { background: var(--ahk-surface-2) !important; color: var(--ahk-heading) !important; }
+  .site-footer { background: var(--ahk-surface); color: var(--ahk-text-muted); border-top-color: var(--ahk-border); }
+
+  /* type */
+  h1, h2, h3, .section-label { color: var(--ahk-heading); }
+  a { color: var(--ahk-green); }
+  a:hover { color: var(--ahk-green-soft); }
+
+  /* surfaces */
+  .card, .home-card { background: var(--ahk-card); border-color: var(--ahk-border); }
+  .home-card-title { color: var(--ahk-heading); }
+  .home-card-sub { color: var(--ahk-text); }
+  .hero, .hero-banner { background: var(--ahk-surface); }
+  .newsletter { background: var(--ahk-surface-2); border-color: var(--ahk-border); }
+  .newsletter input[type=email], .newsletter input[type=text] { background: var(--ahk-card); border-color: var(--ahk-border); color: var(--ahk-heading); }
+  .rabbit-caption { background: var(--ahk-surface); }
+
+  /* forms + inputs across the site */
+  input[type=text], input[type=email], input[type=number], select, textarea {
+    background: var(--ahk-card); border-color: var(--ahk-border); color: var(--ahk-heading);
+  }
+  input::placeholder { color: var(--ahk-text-muted); }
+
+  /* brand-check tiers -- hue preserved, lightness raised so each tier
+     still reads as its own colour against a dark card */
+  .rating.good { color: #9dc294; }
+  .rating.check, .rating.neutral { color: #d9b877; }
+  .rating.warn { color: #86b3c0; }
+  .rating.bad { color: #d98d84; }
+  .rating.unverified { color: #a09b86; }
+  .card.good { border-color: #5b7a54; }
+  .card.check { border-color: #8a7440; }
+  .card.warn { border-color: #4d707b; }
+  .card.bad { border-color: #8a4a43; background: #3a2a28; }
+  .card.unverified { border-color: #4a4739; }
+  .parent-test-flag.bad { background: #3a2a28; color: #d98d84; }
+  .parent-test-flag.good { background: #24331f; color: #9dc294; }
+  .parent-test-flag.unverified { background: #2e3329; color: #a09b86; }
+  .status-pill.vegan-yes { background: #26331f; color: #9dc294; }
+  .status-pill.vegan-partial { background: #33301f; color: #d9b877; }
+  .status-pill.vegan-unknown { background: #33291f; color: #d9a87a; }
+  .status-pill.parent-neutral { background: #2b2833; color: #b3a8d1; }
+  .status-pill.parent-bad { background: #3a2a28; color: #d98d84; }
+
+  /* images sit a touch calmer against a dark page */
+  .hero-banner img, .hero-simple-rabbit img { filter: brightness(0.92); }
+}
+
+/* ============================================================
+   IMAGE SLOTS
+   ============================================================
+   Every photo on the redesigned pages sits in one of these. The
+   wrapper carries a soft tinted panel, so a slot whose image hasn't
+   been supplied yet still looks deliberate rather than broken --
+   and dropping the file in at the expected path is all that's
+   needed to fill it. `onerror` hides a missing <img> so the panel
+   shows through instead of a broken-image icon. */
+.ahk-slot { position: relative; overflow: hidden; border-radius: 20px; background: linear-gradient(135deg, #3f4d3a 0%, #2f3a2d 100%); }
+.ahk-slot > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ahk-slot-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: rgba(244,239,226,0.5); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; pointer-events: none; }
+.ahk-slot > img:not([hidden]) ~ .ahk-slot-label { display: none; }
+
+/* Banded sections + variants that used to carry hard-coded inline
+   backgrounds, so they follow the light/dark tokens like everything
+   else rather than staying cream on a dark page. */
+.band-soft { background: var(--ahk-surface-2); }
+.impact-teaser.is-warm { background: #efe7d0; border-top: 0.5px solid var(--ahk-border); border-bottom: 0.5px solid var(--ahk-border); }
+@media (prefers-color-scheme: dark) {
+  .impact-teaser { background: var(--ahk-surface); border-top-color: var(--ahk-border); border-bottom-color: var(--ahk-border); }
+  .impact-teaser:hover, .impact-teaser:focus-visible { background: var(--ahk-card); }
+  .impact-teaser.is-warm { background: #2f3529; }
+  .impact-teaser.is-warm:hover { background: #363c2f; }
+  .impact-teaser-num, .impact-teaser-num span { color: var(--ahk-heading); }
+  .impact-teaser-sub { color: var(--ahk-text); }
+  .impact-teaser-kicker { color: var(--ahk-green-soft); }
+  /* The logo mark is a dark illustration -- lift it so it stays legible
+     on a dark header instead of disappearing into it. */
+  .logo img { filter: brightness(0) invert(0.88); }
+}
+/* Same treatment on the always-dark scan page, whatever the device theme. */
+body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
+
+/* Brand-check controls carry inline styles from when the page was
+   hand-written, so the dark theme has to override them explicitly. */
+@media (prefers-color-scheme: dark) {
+  #ratingSearch { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-heading) !important; box-shadow: none !important; }
+  #ratingSearch::placeholder { color: var(--ahk-text-muted); }
+  .filter-pill { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-text) !important; }
+  .filter-pill.active { background: var(--ahk-green) !important; border-color: var(--ahk-green) !important; color: #1e241d !important; }
+  #certSelect, #azLetterSelect, #azCategorySelect, #azRegionSelect, #pageSizeSelect {
+    background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-heading) !important;
+  }
+  #browseAllBtn { background: #3a3526 !important; border-color: #6a5c33 !important; color: #e0cd9d !important; }
+  #browseAllBtn:hover { background: #453f2d !important; }
+  #browseAZBtn { background: #2a3527 !important; border-color: #4e6b48 !important; color: #a3bf99 !important; }
+  #browseAZBtn:hover { background: #33402f !important; }
+  .page-btn { color: var(--ahk-green) !important; }
+  .page-btn.active { color: var(--ahk-green-soft) !important; }
+  .cert-select-row label, #resultCount, .section-label-note { color: var(--ahk-text-muted) !important; }
+  #dentalDisclaimer { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-text) !important; }
+  .rcard, .v-good, .v-check, .v-warn, .v-bad, .v-unverified { color: var(--ahk-heading); }
+  .v-good { background: #26331f !important; border-color: #5b7a54 !important; }
+  .v-check { background: #33301f !important; border-color: #8a7440 !important; }
+  .v-warn { background: #22333a !important; border-color: #4d707b !important; }
+  .v-bad { background: #3a2a28 !important; border-color: #8a4a43 !important; }
+  .v-unverified { background: #2e3329 !important; border-color: #4a4739 !important; }
+  .rstatus-value.yes { color: #9dc294; }
+  .rstatus-value.no { color: #d98d84; }
+  .rstatus-value.maybe { color: #d9b877; }
+  .rstatus-value.parent { color: #86b3c0; }
+  .rstatus-value.na { color: #a09b86; }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* The impact/my-swaps bands are declared in index.html's own <style>,
+     which loads after this file -- they read these tokens so the values
+     can still be flipped from here. */
+  :root {
+    --ahk-impact-bg:       #26301f;
+    --ahk-impact-bg-hover: #2d3826;
+    --ahk-impact-line:     #3f4a3c;
+  }
+
+  /* myth vs reality (flip cards) */
+  .myth-section { background: var(--ahk-surface-2); }
+  .myth-heading { color: var(--ahk-heading); }
+  .myth-kicker { color: var(--ahk-green); }
+  .myth-sub { color: var(--ahk-text); }
+  .flip-front { background: var(--ahk-card); border-color: var(--ahk-border); }
+  .flip-front .flip-text { color: var(--ahk-heading); }
+  .flip-front .flip-label { color: var(--ahk-gold-deep); }
+  .flip-back { background: #33472f; }
+  .flip-hint { color: var(--ahk-text-muted); }
+  .flip-card-btn:focus-visible .flip-front,
+  .flip-card-btn:focus-visible .flip-back { outline-color: var(--ahk-gold-soft); }
+
+  /* ambient impact counter strip */
+  .ambient-counter { background: var(--ahk-surface); border-top-color: var(--ahk-border); }
+  .ambient-counter-num { color: var(--ahk-heading); }
+  .ambient-counter-label { color: var(--ahk-text); }
+  .ambient-counter-label a { color: var(--ahk-green); }
+
+  /* swap of the day */
+  .swap-of-day { background: var(--ahk-surface); }
+  .swap-of-day-card { background: var(--ahk-card); border-color: var(--ahk-border); }
+  .swap-of-day-arrow { color: var(--ahk-text-muted); }
+
+  /* misc bands used across the other pages */
+  .secondary-block, .quiet-details { border-color: var(--ahk-border); }
+  .quiet-details summary, .quiet-details p { color: var(--ahk-text-muted); }
+  .shelf-cta { color: var(--ahk-green); }
+  .ahk-counter-bubble { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-text) !important; }
+}
