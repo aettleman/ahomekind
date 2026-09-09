@@ -564,7 +564,8 @@ MYTHS.forEach(function(m, i){
 html += '<div class="flip-card">' +
 '<button type="button" class="flip-card-btn" id="mythCard' + i + '" aria-label="Flip to see the reality">' +
 '<div class="flip-card-inner">' +
-'<div class="flip-front"><p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap to see the reality &rarr;</p></div>' +
+'<div class="flip-front"><div class="flip-img"><img src="images/myth-' + (i + 1) + '.jpg" alt="" loading="lazy" onerror="this.hidden=true"></div>' +
+'<p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap to see the reality &rarr;</p></div>' +
 '<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint">tap to flip back</p></div>' +
 '</div>' +
 '</button>' +

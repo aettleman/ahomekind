@@ -794,7 +794,7 @@ body { animation: pageFadeIn 0.22s ease; }
 .myth-section { background: var(--ahk-surface, #e9e2d2); padding: 54px 24px 60px; }
 .myth-section-inner { max-width: 900px; margin: 0 auto; text-align: center; }
 .myth-kicker { color: #4d6b4f; font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-.myth-heading { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; color: #3d4a3a; margin-bottom: 10px; }
+.myth-heading { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; line-height: 1.25; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.2px; margin-bottom: 10px; text-wrap: balance; }
 .myth-sub { color: #5c5c4f; font-size: 13.5px; line-height: 1.8; max-width: 480px; margin: 0 auto 34px; }
 .myth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; text-align: left; }
 .flip-card { perspective: 1200px; height: 270px; }
@@ -1405,3 +1405,15 @@ body.scan-dark .logo img { filter: brightness(0) invert(0.88); }
    above the figures, so the number reads as being about a living thing
    rather than as an abstract statistic. */
 .results .statblock-portrait { margin-bottom: 20px; }
+
+/* Each myth card carries a photograph above its claim. The image is the
+   reason the card reads as something rather than a text box -- it sits
+   flush to the card's top edge, with the padding only on the copy. */
+.flip-front { padding: 0 0 18px; overflow: hidden; }
+.flip-front .flip-label,
+.flip-front .flip-text,
+.flip-front .flip-hint { padding-left: 20px; padding-right: 20px; }
+.flip-img { height: 104px; margin-bottom: 14px; background: linear-gradient(140deg, #46553f 0%, #2e392b 100%); }
+.flip-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.flip-img img[hidden] { display: none; }
+.flip-front .flip-label { margin-top: 0; }
