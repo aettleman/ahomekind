@@ -6,7 +6,7 @@
 <title>Brand Check - a home kind</title>
 <meta name="description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260909f">
+<link rel="stylesheet" href="css/style.css?v=20260909h">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -46,8 +46,11 @@
 .rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; list-style:revert; }
 .rcard-details summary:hover { color:#3d4a3a; }
 .rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
-#browseAllBtn { display:block; width:100%; padding:14px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin-bottom:28px; }
-#browseAllBtn:hover { background:#e2d9bd; }
+.browse-btn-row { display:flex; gap:12px; margin-bottom:28px; }
+.browse-btn-row button { flex:1; }
+#browseAllBtn, #browseAZBtn { display:block; width:100%; padding:14px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-transform:uppercase; cursor:pointer; margin:0; }
+#browseAllBtn:hover, #browseAZBtn:hover { background:#e2d9bd; }
+@media (max-width:480px) { .browse-btn-row { flex-direction:column; } }
 .key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
 .key-details summary:hover { color:#3d4a3a; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
@@ -170,9 +173,9 @@
 
 <p id="categoryBack" style="display:none; margin-bottom:16px;"><a href="#" id="categoryBackLink">&larr; all categories</a></p>
 
-<div id="azJumpBar" style="display:none; margin-bottom:18px;">
-<div class="az-letters" id="azLetters" role="navigation" aria-label="jump to letter"></div>
-<div class="cert-select-row" style="margin-top:12px;">
+<div id="azJumpBar" class="cert-select-row" style="display:none; margin-bottom:22px;">
+<label for="azLetterSelect">jump to letter</label>
+<select id="azLetterSelect"><option value="all">all (A-Z)</option></select>
 <label for="azCategorySelect">narrow by category</label>
 <select id="azCategorySelect">
 <option value="all">all categories</option>
@@ -184,7 +187,6 @@
 <option value="household">household &amp; cleaning</option>
 <option value="supermarket">supermarket own-brand</option>
 </select>
-</div>
 </div>
 
 <div id="listControls" style="display:none; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
@@ -205,13 +207,13 @@
 <!-- GENERATED:BRAND-CARDS:START -->
 <p class="section-label">beauty &amp; skincare</p>
 <div class="card" data-category="makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/e-l-f-cosmetics/">e.l.f. cosmetics</a></h3><p>Independently owned, PETA and Vegan Society certified.</p></div>
-<div class="card" data-category="hair-care body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/faith-in-nature/">Faith in Nature</a></h3><p>UK, Leaping Bunny certified, budget-friendly.</p></div>
-<div class="card" data-category="skin-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/byoma/">BYOMA</a></h3><p>UK, Leaping Bunny certified.</p></div>
+<div class="card" data-category="hair-care body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/faith-in-nature/">Faith in Nature</a></h3><p>UK, Leaping Bunny certified, budget-friendly.</p></div>
+<div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/byoma/">BYOMA</a></h3><p>UK, Leaping Bunny certified.</p></div>
 <div class="card" data-category="skin-care makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/tropic/">Tropic Skincare</a></h3><p>Leaping Bunny certified since 2015, 100% vegan -- UK, independent, founded by Susie Ma.</p></div>
 <div class="card" data-category="makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/barry-m/">Barry M</a></h3><p>UK, 100% vegan since 2020.</p></div>
 <div class="card" data-category="makeup skin-care body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/b-by-superdrug/">B. by Superdrug</a></h3><p>100% vegan, cruelty-free own-brand line.</p></div>
-<div class="card" data-category="body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/baylis-and-harding/">Baylis &amp; Harding</a></h3><p>PETA certified cruelty-free.</p></div>
-<div class="card" data-category="body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/original-source/">Original Source</a></h3><p>PETA-approved and Vegan Society certified.</p></div>
+<div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/baylis-and-harding/">Baylis &amp; Harding</a></h3><p>PETA certified cruelty-free.</p></div>
+<div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/original-source/">Original Source</a></h3><p>PETA-approved and Vegan Society certified.</p></div>
 <div class="card" data-category="hair-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/noughty/">Noughty</a></h3><p>Leaping Bunny certified, vegan, independent.</p></div>
 <div class="card" data-category="hair-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/umberto-giannini/">Umberto Giannini</a></h3><p>PETA certified cruelty-free, 100% vegan.</p></div>
 <div class="card" data-category="makeup skin-care body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/superdrug-own-brand-wider-range/">Superdrug own brand (wider range)</a></h3><p>Leaping Bunny approved.</p></div>
@@ -223,7 +225,8 @@
 <div class="card" data-category="hair-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/bleach-london/">Bleach London</a></h3><p>PETA-approved, 100% vegan since 2017.</p></div>
 <div class="card" data-category="makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/rare-beauty/">Rare Beauty</a></h3><p>PETA and Leaping Bunny certified, 100% vegan.</p></div>
 <div class="card" data-category="skin-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/mad-hippie/">Mad Hippie</a></h3><p>PETA certified cruelty-free, 100% vegan skincare.</p></div>
-<div class="card" data-category="skin-care body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/dr-organic/">Dr Organic</a></h3><p>Certified cruelty-free (Leaping Bunny / Cruelty Free International); check individual product vegan status as not every item in the range is vegan.</p></div>
+<div class="card" data-category="body-shower household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-bronners/">Dr Bronner's</a></h3><p>Leaping Bunny and PETA certified cruelty-free. Vegan except lip and body balms, which contain beeswax.</p></div>
+<div class="card" data-category="skin-care body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-organic/">Dr Organic</a></h3><p>Certified cruelty-free (Leaping Bunny / Cruelty Free International); check individual product vegan status as not every item in the range is vegan.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/collection/">Collection</a></h3><p>Collection says it doesn't test on animals itself and doesn't sell where testing is required by law, though it isn't Leaping Bunny or PETA certified. It's only made new products vegan since 2020, so vegan status varies by product - check the label.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/carmex/">Carmex</a></h3><p>Carmex says it has never tested on animals. It isn't vegan though - the balm itself contains beeswax and lanolin.</p></div>
 <div class="card" data-category="skin-care hair-care body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/sukin/">Sukin</a></h3><p>Leaping Bunny certified and 100% vegan -- Australian, independent, sold in Superdrug and Holland &amp; Barrett.</p></div>
@@ -250,7 +253,7 @@
 <div class="card" data-category="hair-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/arkive/">Arkive Headcare</a></h3><p>Leaping Bunny certified, 100% vegan, independent brand founded by Adam Reed.</p></div>
 <div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/treaclemoon/">Treaclemoon</a></h3><p>Listed on PETA's Beauty Without Bunnies (self-declared assurance, not an independently audited certifier like Leaping Bunny). No vegan certification found.</p></div>
 <div class="card" data-category="body-shower skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/daise/">Daise</a></h3><p>Appears on Cruelty Free International's approved-brands listing, but I could not independently re-verify the live certification text — worth a manual check of crueltyfreeinternational.org before treating as fully confirmed. Not vegan-certified; some products contain animal-derived ingredients.</p></div>
-<div class="card" data-category="skin-care makeup hair-care body-shower"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/lush/">Lush</a></h3><p>Independently owned, PETA-certified cruelty-free, no animal testing anywhere in the supply chain.</p></div>
+<div class="card" data-category="skin-care makeup hair-care body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lush/">Lush</a></h3><p>Independently owned, PETA-certified cruelty-free, no animal testing anywhere in the supply chain.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/newgen/">#NEWGEN</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/17/">17</a></h3><p>17 believes in unbelievable beauty, elevated quality and accessible prices. Extensive range of affordable make-up essentials formulated with vegan ingredients. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/7th-heaven/">7th Heaven</a></h3><p>For over 30 years stood against animal testing, a founding CICAW member, approved by Cruelty Free International. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -272,7 +275,6 @@
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/areu-areu/">AREU AREU</a></h3><p>A safe living care brand seeking to deliver a healthy and stylish lifestyle. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/argital/">Argital</a></h3><p>Green clay-based cosmetics, natural certified and preservative free, established in Milan in 1979. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/arithmos/">Arithmos</a></h3><p>A precious collection of decadent oil blends, micro-batched and hand-blended. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/arkive-2/">ARKIVE</a></h3><p>A haircare range founded by Adam Reed, comprising nourishing treatments and styling products. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/aromatherapy-associates/">Aromatherapy Associates</a></h3><p>Founded in London in 1985 by pioneering therapists, born from a belief in the transformative power of essential oils. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/atelier-rebul/">Atelier Rebul</a></h3><p>Over 125 years of dedication to scent expertise and pharmaceutical heritage. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/atikha/">atikha</a></h3><p>All about curly hair, creating unique and exotic blends for the best results. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -304,12 +306,11 @@
 <div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/boucleme/">Boucleme</a></h3><p>Naturally powerful haircare taking curls seriously, packed with plant extracts. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/boundary/">Boundary</a></h3><p>Founded by two Singaporean entrepreneurs to break boundaries in hair and body care. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="household hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/bravenewhair-bravenewcare/">BRAVE.NEW.HAIR., BRAVE.NEW.CARE.</a></h3><p>Creates clean haircare powered by modern, carefully tested ingredients. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/bulldog-skincare/">Bulldog Skincare</a></h3><p>Man's Best Friend - products purpose built to help men look and feel their best. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/by-sarah-london/">By Sarah London</a></h3><p>On a mission to empower a more conscious life, detailing full ingredient lists. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/byellie/">Byellie</a></h3><p>A makeup company delivering results-driven products for a confident routine. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/byk-beauty/">BYK Beauty</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/byron-bay-skincare/">Byron Bay Skincare</a></h3><p>Offers 100% natural products inspired by the beauty of Byron Bay. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/callen-olive/">Callen Olive</a></h3><p>100% vegan skincare targeting the specific needs of legs and feet, developed by a podiatrist. Cruelty-free approved by Cruelty Free International.</p></div>
+<div class="card" data-category="skin-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/callen-olive/">Callen Olive</a></h3><p>100% vegan skincare targeting the specific needs of legs and feet, developed by a podiatrist. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/cellis/">Cellis</a></h3><p>A science-led skincare brand offering high-performance, multi-functional formulas. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/celui-by-anisa-sojka/">CELUI by Anisa Sojka</a></h3><p>Founded by UK's leading hair content creator. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/cenoura-and-bronze/">Cenoura &amp; Bronze</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -466,7 +467,6 @@
 <div class="card" data-category="hair-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/monday-haircare/">MONDAY Haircare</a></h3><p>An award-winning, modern beauty brand making luxury haircare more inclusive. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/moss-and-adams/">Moss &amp; Adams</a></h3><p>A premium-inspired personal care brand offering vegan and cruelty-free hand washes and lifestyle products. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/mother-nailture/">Mother Nailture</a></h3><p>A 21-free, vegan nail polish brand made with naturally derived plant-based ingredients. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/mua-makeup-academy/">MUA Makeup Academy</a></h3><p>The go-to brand for on trend, pro quality, 100% vegan and cruelty free beauty since 2010. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/mumandyou/">Mum&amp;You</a></h3><p>A sustainable baby brand developed in 2016 offering biodegradable baby wipes and eco-nappies. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nakin/">Nakin</a></h3><p>Eco beauty at its absolute best, an award winning luxurious natural skincare system. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="hair-care skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nalas-baby/">Nala's Baby</a></h3><p>Created by a family wanting the absolute best for their daughter's hair &amp; skin. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -482,7 +482,7 @@
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nimonths/">nimonths+</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nourish-london/">Nourish London</a></h3><p>A British organic skincare company offering high-performance organic, vegan &amp; cruelty-free certified skincare. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/novaretin/">NOVARETIN</a></h3><p>A unique and innovative facial care line with serum, face cream and eye cream. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nsfa-beauty/">NSFA Beauty</a></h3><p>A 100% vegan &amp; cruelty-free brand launched in 2018 by Czech influencer ANY. Cruelty-free approved by Cruelty Free International.</p></div>
+<div class="card" data-category="skin-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/nsfa-beauty/">NSFA Beauty</a></h3><p>A 100% vegan &amp; cruelty-free brand launched in 2018 by Czech influencer ANY. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nunaia/">Nunaia</a></h3><p>Creates moments of connection through green beauty rituals, researched in Ecuador and Peru. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nursem/">Nursem</a></h3><p>Caring skincare developed with nurses to help combat the effects of relentless hand-washing. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/nutmeg/">Nutmeg</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -575,7 +575,7 @@
 <div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-australian-natural-soap-company/">The Australian Natural Soap Company</a></h3><p>Redefines the way you think about soap with pure plant oil and essential oil soaps. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-barberia/">THE BARBERIA</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-cheeky-panda/">The Cheeky Panda</a></h3><p>First a toilet roll revolution, now bamboozling baby wipes, whipped up from biodegradable bamboo. Cruelty-free approved by Cruelty Free International.</p></div>
-<div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-cocoon-original-vietnam/">The COCOON ORIGINAL VIETNAM</a></h3><p>A 100% vegan cosmetics brand from Vietnam reflecting true Vietnamese beauty. Cruelty-free approved by Cruelty Free International.</p></div>
+<div class="card" data-category="makeup"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/the-cocoon-original-vietnam/">The COCOON ORIGINAL VIETNAM</a></h3><p>A 100% vegan cosmetics brand from Vietnam reflecting true Vietnamese beauty. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-east-to-west-lifestyle-co/">THE EAST TO WEST LIFESTYLE CO</a></h3><p>A cosmetic &amp; well-being brand inspired by Persian lifestyle principles and traditional medicine. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-gel-crew/">The Gel Crew</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/the-good-one/">The Good One</a></h3><p>Cruelty Free International approved brand. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -647,7 +647,6 @@
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/caswell-massey/">Caswell-Massey</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/cj-olive-young/">CJ Olive Young</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dabur/">Dabur</a></h3><p>Listed by PETA as not testing on animals.</p></div>
-<div class="card" data-category="body-shower"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-bronners-magic-soaps/">Dr. Bronner's Magic Soaps</a></h3><p>100% vegan. Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-hauschka-skin-care/">Dr. Hauschka Skin Care</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="skin-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-dennis-gross-skincare/">Dr. Dennis Gross Skincare</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/dr-teals/">Dr. Teal's</a></h3><p>Listed by PETA as not testing on animals.</p></div>
@@ -690,7 +689,6 @@
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/hismile/">HiSmile</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/holo-taco/">Holo Taco</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/honeybee-gardens/">Honeybee Gardens</a></h3><p>Listed by PETA as not testing on animals.</p></div>
-<div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/hurraw-balm/">Hurraw! Balm</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/herbivore-botanicals/">Herbivore Botanicals</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/iconic-london/">Iconic London</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/idun-minerals/">IDUN Minerals</a></h3><p>Listed by PETA as not testing on animals.</p></div>
@@ -731,7 +729,6 @@
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lorac/">LORAC</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/londontown/">Londontown</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/luminess-air/">Luminess Air</a></h3><p>Listed by PETA as not testing on animals.</p></div>
-<div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lush-cosmetics/">LUSH Cosmetics</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lvx/">LVX</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lys-beauty/">LYS Beauty</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card" data-category="makeup"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/lucky-tiger/">Lucky Tiger</a></h3><p>Listed by PETA as not testing on animals.</p></div>
@@ -856,7 +853,6 @@
 <div class="card warn" data-category="skin-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/the-ordinary/">The Ordinary</a></h3><p>DECIEM is cruelty-free and vegan. Owned by Estée Lauder.</p></div>
 <div class="card warn" data-category="skin-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/drunk-elephant/">Drunk Elephant</a></h3><p>Owned by Shiseido, not cruelty-free.</p></div>
 <div class="card warn" data-category="skin-care body-shower makeup"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/the-body-shop/">The Body Shop</a></h3><p>Leaping Bunny and PETA certified cruelty-free. No longer fully vegan as of 2026 - the brand quietly dropped its 100% vegan claim after new ownership; check individual products.</p></div>
-<div class="card warn" data-category="body-shower household"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/dr-bronners/">Dr Bronner's</a></h3><p>Leaping Bunny and PETA certified cruelty-free. Vegan except lip and body balms, which contain beeswax.</p></div>
 <div class="card warn" data-category="makeup"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/sleek-makeup/">Sleek MakeUP</a></h3><p>Cruelty-free itself, but owned by Walgreens Boots Alliance, who do test on animals, and doesn't currently offer vegan products.</p></div>
 <div class="card warn" data-category="skin-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/st-ives/">St Ives</a></h3><p>PETA certified cruelty-free and mostly vegan itself, but owned by Unilever, who do test on animals.</p></div>
 <div class="card warn" data-category="body-shower"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/soap-glory/">Soap &amp; Glory</a></h3><p>Leaping Bunny certified cruelty-free itself, but owned by Walgreens Boots Alliance, who do test on animals. Vegan status varies by product.</p></div>
@@ -897,14 +893,14 @@
 <div class="card warn" data-category="hair-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/goldwell/">Goldwell</a></h3><p>PETA certified cruelty-free, owned by Kao Corporation.</p></div>
 <div class="card warn" data-category="hair-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/hair-food/">Hair Food</a></h3><p>PETA certified cruelty-free, owned by Procter &amp; Gamble.</p></div>
 <p class="section-label">household &amp; cleaning</p>
-<div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/oceansaver/">OceanSaver</a></h3><p>Vegan and cruelty-free per Ethical Elephant.</p></div>
+<div class="card" data-category="household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/oceansaver/">OceanSaver</a></h3><p>Vegan and cruelty-free per Ethical Elephant.</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/fabulosa/">Fabulosa</a></h3><p>Company states all products are 100% vegan with no animal-derived ingredients, and none are tested on animals anywhere. Endorsed by Naturewatch Foundation's Compassionate Shopping Guide.</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/astonish/">Astonish</a></h3><p>UK-manufactured, Leaping Bunny and PETA certified cruelty-free, and states its full range is vegan.</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/the-pink-stuff/">The Pink Stuff</a></h3><p>Leaping Bunny certified worldwide, and states its range is vegan (recognised by the Vegan Society).</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/bio-d/">Bio-D</a></h3><p>Vegan Society and Cruelty Free International certified.</p></div>
-<div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/zoflora/">Zoflora</a></h3><p>Confirms no animal testing.</p></div>
+<div class="card" data-category="household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/zoflora/">Zoflora</a></h3><p>Confirms no animal testing.</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/miniml/">Miniml</a></h3><p>Cruelty Free International and Vegan Society certified.</p></div>
-<div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/smol/">Smol</a></h3><p>Confirms no animal testing, listed on PETA's database.</p></div>
+<div class="card" data-category="household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/smol/">Smol</a></h3><p>Confirms no animal testing, listed on PETA's database.</p></div>
 <div class="card" data-category="household"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/delphis-eco/">Delphis Eco</a></h3><p>Never tested on animals and 100% vegan -- independent, B-Corp certified household cleaning range, sold via Ocado and independent stores.</p></div>
 <div class="card" data-category="household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/asperox/">Asperox</a></h3><p>Turkiye's No.1 spray cleaning brand, best known for Asperox Magic Yellow. Cruelty-free approved by Cruelty Free International.</p></div>
 <div class="card" data-category="household"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/asperox-sparx/">Asperox-Sparx</a></h3><p>Focuses on high-performance dishwasher products. Cruelty-free approved by Cruelty Free International.</p></div>
@@ -939,15 +935,15 @@
 Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a company that isn't cruelty-free still financially supports that company - even though these are non-edible, everyday items. That's a different claim from saying any specific product was itself personally tested on an animal: it's about where your money goes, not a claim about that individual item's testing history.
 </div>
 <div class="card" data-category="mouth-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/superdrug-pro-care/">Superdrug Pro Care</a></h3><p>Superdrug's own cruelty-free range, vegan products marked individually.</p></div>
-<div class="card" data-category="mouth-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/kingfisher/">Kingfisher</a></h3><p>Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formulas as a small number of variants may differ.</p></div>
+<div class="card" data-category="mouth-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/kingfisher/">Kingfisher</a></h3><p>Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formulas as a small number of variants may differ.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/oral-b/">Oral-B</a></h3><p>Owned by Procter &amp; Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Oral-B financially supports P&amp;G as a company - that isn't the same as saying this specific toothbrush or toothpaste was itself tested on animals.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/colgate/">Colgate</a></h3><p>Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company - this isn't a claim that a specific tube of toothpaste was itself tested on an animal.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/listerine/">Listerine</a></h3><p>Owned by Johnson &amp; Johnson, who test where required by law.</p></div>
-<div class="card" data-category="mouth-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/peace-with-the-wild/">Peace With The Wild</a></h3><p>Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself - it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.</p></div>
+<div class="card" data-category="mouth-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/peace-with-the-wild/">Peace With The Wild</a></h3><p>Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself - it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.</p></div>
 <div class="card warn" data-category="mouth-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/gutology/">Gutology</a></h3><p>Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.</p></div>
 <div class="card warn" data-category="mouth-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/biomed/">Biomed</a></h3><p>Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.</p></div>
 <div class="card warn" data-category="mouth-care"><p class="rating warn">&#9888;&#65039; cruelty-free itself, parent company isn't</p><h3><a href="brands/waken/">Waken</a></h3><p>Independent UK brand marketed as vegan and cruelty-free. Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.</p></div>
-<div class="card" data-category="mouth-care"><p class="rating">&#127807; fully cruelty-free &amp; vegan</p><h3><a href="brands/superdrug-own-brand-dental/">Superdrug own-brand (dental range)</a></h3><p>Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer - this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.</p></div>
+<div class="card" data-category="mouth-care"><p class="rating neutral">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/superdrug-own-brand-dental/">Superdrug own-brand (dental range)</a></h3><p>Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer - this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/aquafresh/">Aquafresh</a></h3><p>Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company - that isn't the same as saying this specific tube was itself tested on animals.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/sensodyne/">Sensodyne</a></h3><p>Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Sensodyne financially supports Haleon as a company - that isn't the same as saying this specific tube was itself tested on animals.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/macleans/">Macleans</a></h3><p>Owned by Haleon (spun off from GSK), who sell into markets requiring animal testing.</p></div>
@@ -1189,7 +1185,7 @@ var categoryGridInner = document.getElementById('categoryGridInner');
 var categoryBack = document.getElementById('categoryBack');
 var categoryBackLink = document.getElementById('categoryBackLink');
 var azJumpBar = document.getElementById('azJumpBar');
-var azLetters = document.getElementById('azLetters');
+var azLetterSelect = document.getElementById('azLetterSelect');
 var azCategorySelect = document.getElementById('azCategorySelect');
 var listControls = document.getElementById('listControls');
 var pageSizeSelect = document.getElementById('pageSizeSelect');
@@ -1202,16 +1198,26 @@ function cardCategories(card) {
 return (card.dataset.category || '').split(' ').filter(Boolean);
 }
 
-// A-Z browse: cards sorted once alphabetically by name, cached as a rank
+// Alphabetical order for every list on this page, cached once as a rank
 // map (card -> position). Used to reorder the (already-in-the-DOM) cards
 // visually via CSS `order` on the flex container, rather than moving DOM
-// nodes around -- so leaving A-Z mode instantly restores the normal
-// category-grouped source order with no extra bookkeeping.
+// nodes around. Brands starting with a digit (17, 3INA, 7th Heaven) sort
+// into their own bucket ahead of A, then each letter bucket A-Z is sorted
+// within itself -- plain string comparison on the already-normalised
+// (lowercase, a-z0-9 only) searchName, not localeCompare, since
+// localeCompare's default collation interleaves digits and letters in a
+// way that reads as broken rather than alphabetical.
 var azRank = null;
 function getAzRank() {
 if (azRank) return azRank;
+var LETTER_ORDER = { '#': 0 };
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(function(l, i) { LETTER_ORDER[l] = i + 1; });
 var sorted = allCardsArr.slice().sort(function(a, b) {
-return (a.dataset.searchName || '').localeCompare(b.dataset.searchName || '');
+var oa = LETTER_ORDER[a.dataset.initial]; if (oa == null) oa = 99;
+var ob = LETTER_ORDER[b.dataset.initial]; if (ob == null) ob = 99;
+if (oa !== ob) return oa - ob;
+var sa = a.dataset.searchName || '', sb = b.dataset.searchName || '';
+return sa < sb ? -1 : sa > sb ? 1 : 0;
 });
 azRank = new Map();
 sorted.forEach(function(card, i) { azRank.set(card, i); });
@@ -1224,30 +1230,19 @@ var pageSize = 50; // 20 / 50 / 100 / 'all'
 var currentPage = 1;
 
 var AZ_LETTERS = ['#'].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''));
+var AZ_LETTER_LABEL = { '#': '# (starts with a number)' };
 
-function buildAzLetters() {
+// A simple "jump to letter" dropdown, not a full A-Z button grid -- and
+// only lists letters brands actually start with, so there's never a
+// greyed-out, nothing-there option to click.
+function buildAzLetterSelect() {
 var presentLetters = new Set(allCardsArr.map(function(c) { return c.dataset.initial; }));
-var html = '<button type="button" class="az-letter-btn active" data-letter="all">all</button>';
+var html = '<option value="all">all (A-Z)</option>';
 AZ_LETTERS.forEach(function(l) {
-var has = presentLetters.has(l);
-html += '<button type="button" class="az-letter-btn" data-letter="' + l + '"' + (has ? '' : ' disabled') + '>' + l + '</button>';
+if (!presentLetters.has(l)) return;
+html += '<option value="' + l + '">' + (AZ_LETTER_LABEL[l] || l) + '</option>';
 });
-azLetters.innerHTML = html;
-azLetters.querySelectorAll('.az-letter-btn').forEach(function(btn) {
-btn.addEventListener('click', function() {
-if (btn.disabled) return;
-azLetter = btn.getAttribute('data-letter');
-currentPage = 1;
-setActiveAzLetter();
-renderBrandList();
-});
-});
-}
-
-function setActiveAzLetter() {
-azLetters.querySelectorAll('.az-letter-btn').forEach(function(btn) {
-btn.classList.toggle('active', btn.getAttribute('data-letter') === azLetter);
-});
+azLetterSelect.innerHTML = html;
 }
 
 function buildCategoryGrid() {
@@ -1328,12 +1323,12 @@ if (dentalDisclaimer) dentalDisclaimer.style.display = 'none';
 // current page.
 function renderBrandList() {
 categoryGrid.style.display = 'none';
-allBrands.style.display = 'block';
+allBrands.style.display = 'flex';
 categoryBack.style.display = (activeCategory || azMode) ? 'block' : 'none';
 browseBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
 browseAZBtn.style.display = 'none';
-azJumpBar.style.display = azMode ? 'block' : 'none';
+azJumpBar.style.display = azMode ? 'flex' : 'none';
 listControls.style.display = 'flex';
 document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lbl.style.display = 'none'; });
 // The dental disclaimer only makes sense when you're actually looking
@@ -1342,14 +1337,15 @@ document.querySelectorAll('#allBrands .section-label').forEach(function(lbl){ lb
 var dentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care' && !azMode) ? 'block' : 'none';
 
-// A-Z mode reorders the cards visually (via CSS `order`, so the actual
-// DOM stays untouched) instead of relying on document order.
-var rank = azMode ? getAzRank() : null;
+// Every filtered/paginated list is shown alphabetically (not just the
+// dedicated A-Z browse) -- reordered visually via CSS `order` on the flex
+// container, so the actual DOM stays untouched.
+var rank = getAzRank();
 allCardsArr.forEach(function(card) {
-card.style.order = azMode ? rank.get(card) : '';
+card.style.order = rank.get(card);
 });
 
-var pool = azMode ? allCardsArr.slice().sort(function(a, b){ return rank.get(a) - rank.get(b); }) : allCardsArr;
+var pool = allCardsArr.slice().sort(function(a, b){ return rank.get(a) - rank.get(b); });
 var matches = pool.filter(function(card) {
 var inCategory = !activeCategory || cardCategories(card).indexOf(activeCategory) !== -1;
 return inCategory && cardMatchesFilter(card, activeFilter) && cardMatchesCert(card, activeCert) && (!azMode || cardMatchesLetter(card, azLetter));
@@ -1430,8 +1426,8 @@ activeCert = 'all';
 azMode = true;
 azLetter = 'all';
 currentPage = 1;
-if (azLetters.children.length === 0) buildAzLetters();
-setActiveAzLetter();
+if (azLetterSelect.children.length <= 1) buildAzLetterSelect();
+azLetterSelect.value = 'all';
 if (azCategorySelect) azCategorySelect.value = 'all';
 setActivePills();
 renderBrandList();
@@ -1481,6 +1477,13 @@ currentPage = 1;
 renderBrandList();
 });
 }
+if (azLetterSelect) {
+azLetterSelect.addEventListener('change', function(){
+azLetter = azLetterSelect.value;
+currentPage = 1;
+renderBrandList();
+});
+}
 if (pageSizeSelect) {
 pageSizeSelect.addEventListener('change', function(){
 pageSize = pageSizeSelect.value === 'all' ? 'all' : parseInt(pageSizeSelect.value, 10);
@@ -1500,7 +1503,7 @@ categoryBack.style.display = 'none';
 azJumpBar.style.display = 'none';
 listControls.style.display = 'none';
 paginationNav.style.display = 'none';
-allBrands.style.display = 'block';
+allBrands.style.display = 'flex';
 browseBtn.style.display = 'none';
 browseAZBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
@@ -1509,7 +1512,8 @@ activeCert = 'all';
 activeCategory = null;
 azMode = false;
 azLetter = 'all';
-allCardsArr.forEach(function(card){ card.style.order = ''; });
+var searchRank = getAzRank();
+allCardsArr.forEach(function(card){ card.style.order = searchRank.get(card); });
 document.querySelectorAll('.filter-pill').forEach(function(p){ p.classList.remove('active'); });
 var searchDentalDisclaimer = document.getElementById('dentalDisclaimer');
 if (searchDentalDisclaimer) searchDentalDisclaimer.style.display = 'none';
@@ -1563,7 +1567,7 @@ if (q.length >= 3 && anyVisible && window.ahkShowKofiFloat) window.ahkShowKofiFl
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260909f"></script>
+<script src="js/nav.js?v=20260909h"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>

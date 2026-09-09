@@ -40,7 +40,7 @@
   {
     "slug": "faith-in-nature",
     "name": "Faith in Nature",
-    "tier": "good",
+    "tier": "check",
     "note": "UK, Leaping Bunny certified, budget-friendly.",
     "parentCompany": null,
     "vegan": "partial",
@@ -79,7 +79,7 @@
   {
     "slug": "byoma",
     "name": "BYOMA",
-    "tier": "good",
+    "tier": "check",
     "note": "UK, Leaping Bunny certified.",
     "parentCompany": null,
     "vegan": "partial",
@@ -138,7 +138,7 @@
     "tier": "good",
     "note": "UK, 100% vegan since 2020.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -192,7 +192,7 @@
   {
     "slug": "baylis-and-harding",
     "name": "Baylis & Harding",
-    "tier": "good",
+    "tier": "check",
     "note": "PETA certified cruelty-free.",
     "parentCompany": null,
     "vegan": "partial",
@@ -209,7 +209,7 @@
   {
     "slug": "original-source",
     "name": "Original Source",
-    "tier": "good",
+    "tier": "check",
     "note": "PETA-approved and Vegan Society certified.",
     "parentCompany": null,
     "vegan": "partial",
@@ -282,7 +282,7 @@
   {
     "slug": "oceansaver",
     "name": "OceanSaver",
-    "tier": "good",
+    "tier": "check",
     "note": "Vegan and cruelty-free per Ethical Elephant.",
     "parentCompany": null,
     "vegan": "partial",
@@ -505,7 +505,7 @@
   {
     "slug": "kingfisher",
     "name": "Kingfisher",
-    "tier": "good",
+    "tier": "check",
     "note": "Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formulas as a small number of variants may differ.",
     "parentCompany": null,
     "vegan": "partial",
@@ -588,7 +588,7 @@
     "tier": "warn",
     "note": "Leaping Bunny certified, 100% vegan, owned by Edgewell.",
     "parentCompany": "Edgewell",
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -901,7 +901,7 @@
   {
     "slug": "zoflora",
     "name": "Zoflora",
-    "tier": "good",
+    "tier": "check",
     "note": "Confirms no animal testing.",
     "parentCompany": null,
     "vegan": "unknown",
@@ -947,7 +947,7 @@
   {
     "slug": "smol",
     "name": "Smol",
-    "tier": "good",
+    "tier": "check",
     "note": "Confirms no animal testing, listed on PETA's database.",
     "parentCompany": null,
     "vegan": "unknown",
@@ -1057,7 +1057,7 @@
     "tier": "check",
     "note": "Leaping Bunny certified own-brand range; own-brand beauty line has expanded to a large fully vegan makeup range.",
     "parentCompany": null,
-    "vegan": "full",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -1995,7 +1995,7 @@
     "tier": "good",
     "note": "PETA and Leaping Bunny certified, 100% vegan.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -2078,10 +2078,10 @@
   {
     "slug": "dr-bronners",
     "name": "Dr Bronner's",
-    "tier": "warn",
+    "tier": "check",
     "note": "Leaping Bunny and PETA certified cruelty-free. Vegan except lip and body balms, which contain beeswax.",
     "parentCompany": null,
-    "vegan": "full",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -2127,7 +2127,7 @@
   {
     "slug": "peace-with-the-wild",
     "name": "Peace With The Wild",
-    "tier": "good",
+    "tier": "check",
     "note": "Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself - it stocks a range of independently vetted cruelty-free and vegan personal care and dental products. Check each product it lists for its own certification status.",
     "parentCompany": null,
     "vegan": "partial",
@@ -2144,7 +2144,7 @@
   {
     "slug": "dr-organic",
     "name": "Dr Organic",
-    "tier": "good",
+    "tier": "check",
     "note": "Certified cruelty-free (Leaping Bunny / Cruelty Free International); check individual product vegan status as not every item in the range is vegan.",
     "parentCompany": null,
     "vegan": "partial",
@@ -2213,7 +2213,7 @@
   {
     "slug": "superdrug-own-brand-dental",
     "name": "Superdrug own-brand (dental range)",
-    "tier": "good",
+    "tier": "check",
     "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer - this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.",
     "parentCompany": null,
     "vegan": "partial",
@@ -3512,7 +3512,7 @@
   {
     "slug": "lush",
     "name": "Lush",
-    "tier": "good",
+    "tier": "check",
     "note": "Independently owned, PETA-certified cruelty-free, no animal testing anywhere in the supply chain.",
     "parentCompany": null,
     "vegan": "partial",
@@ -3544,7 +3544,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "17",
@@ -3561,7 +3562,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "7th-heaven",
@@ -3578,7 +3580,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "a-little-something",
@@ -3595,7 +3598,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "abundant-natural-health",
@@ -3612,7 +3616,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "academy-of-colour",
@@ -3629,7 +3634,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "adaptology",
@@ -3646,7 +3652,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "addition-studio",
@@ -3663,7 +3670,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aesop",
@@ -3681,7 +3689,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "almora-botanica",
@@ -3698,7 +3707,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "alta-marea",
@@ -3715,7 +3725,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "alter-native-by-suma",
@@ -3732,7 +3743,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "alucia-organics",
@@ -3749,7 +3761,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "amaras",
@@ -3766,7 +3779,8 @@
       "haircare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "anara-skincare",
@@ -3783,7 +3797,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "anko",
@@ -3800,7 +3815,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aqua-natural",
@@ -3817,7 +3833,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ar-ocean",
@@ -3834,7 +3851,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "areu-areu",
@@ -3851,7 +3869,8 @@
       "skincare"
     ],
     "region": "Asia",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "argital",
@@ -3868,7 +3887,8 @@
       "makeup-beauty"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "arithmos",
@@ -3885,24 +3905,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "arkive-2",
-    "name": "ARKIVE",
-    "tier": "check",
-    "note": "A haircare range founded by Adam Reed, comprising nourishing treatments and styling products. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
-    "vegan": "unknown",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "haircare"
-    ],
-    "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aromatherapy-associates",
@@ -3919,7 +3923,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "asperox",
@@ -3936,7 +3941,8 @@
       "household-cleaning"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "asperox-sparx",
@@ -3953,7 +3959,8 @@
       "laundry"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "atelier-rebul",
@@ -3970,7 +3977,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "atikha",
@@ -3987,7 +3995,8 @@
       "haircare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aurelia-london",
@@ -4004,7 +4013,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aveda",
@@ -4023,7 +4033,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "awake-organics",
@@ -4041,7 +4052,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "b-skincare",
@@ -4058,7 +4070,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bob",
@@ -4075,7 +4088,8 @@
       "skincare"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bakel-srl",
@@ -4092,7 +4106,8 @@
       "household-cleaning"
     ],
     "region": "Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bali-body",
@@ -4109,7 +4124,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "balm-balm",
@@ -4126,7 +4142,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "batch",
@@ -4143,7 +4160,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bath-house",
@@ -4160,7 +4178,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "beautiful-brows-and-lashes",
@@ -4177,7 +4196,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "beauty-favours",
@@ -4194,7 +4214,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "beauty-without-cruelty",
@@ -4211,7 +4232,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bed-intentions",
@@ -4228,7 +4250,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "being",
@@ -4245,7 +4268,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bel-rebel",
@@ -4262,7 +4286,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bellapierre-cosmetics",
@@ -4279,7 +4304,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "benefit",
@@ -4296,7 +4322,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "biohygiene",
@@ -4313,7 +4340,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "biolage",
@@ -4330,7 +4358,8 @@
       "haircare"
     ],
     "region": "Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bioleon",
@@ -4347,7 +4376,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "biolet",
@@ -4364,7 +4394,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "biologi",
@@ -4381,7 +4412,8 @@
       "household-cleaning"
     ],
     "region": "Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "blur-london",
@@ -4398,7 +4430,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bmt",
@@ -4415,7 +4448,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "boots",
@@ -4432,7 +4466,8 @@
       "skincare"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "botanica-slavica",
@@ -4449,7 +4484,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "botanico-vida-skincare",
@@ -4466,7 +4502,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "botanics",
@@ -4483,7 +4520,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "boucleme",
@@ -4500,7 +4538,8 @@
       "haircare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "boundary",
@@ -4517,7 +4556,8 @@
       "haircare"
     ],
     "region": "Asia",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bravenewhair-bravenewcare",
@@ -4535,24 +4575,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "bulldog-skincare",
-    "name": "Bulldog Skincare",
-    "tier": "check",
-    "note": "Man's Best Friend - products purpose built to help men look and feel their best. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
-    "vegan": "unknown",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "skincare"
-    ],
-    "region": "Asia, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "by-sarah-london",
@@ -4569,7 +4593,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "byellie",
@@ -4586,7 +4611,8 @@
       "makeup-beauty"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "byk-beauty",
@@ -4603,7 +4629,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "byron-bay-skincare",
@@ -4620,12 +4647,13 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "callen-olive",
     "name": "Callen Olive",
-    "tier": "check",
+    "tier": "good",
     "note": "100% vegan skincare targeting the specific needs of legs and feet, developed by a podiatrist. Cruelty-free approved by Cruelty Free International.",
     "parentCompany": null,
     "vegan": "full",
@@ -4637,7 +4665,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cellis",
@@ -4654,7 +4683,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "celui-by-anisa-sojka",
@@ -4671,7 +4701,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cenoura-and-bronze",
@@ -4688,7 +4719,8 @@
       "skincare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cherish",
@@ -4705,7 +4737,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "childs-farm",
@@ -4722,7 +4755,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cien",
@@ -4739,7 +4773,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "clemence-organics",
@@ -4756,7 +4791,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "coco-and-lola",
@@ -4773,7 +4809,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "copper-and-black",
@@ -4790,7 +4827,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cowshed",
@@ -4807,7 +4845,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cozium",
@@ -4824,7 +4863,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cranbourn",
@@ -4841,7 +4881,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cult-candy-cosmetics",
@@ -4858,7 +4899,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cultivator-natural-products",
@@ -4875,7 +4917,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cultured",
@@ -4892,7 +4935,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "curl-jar",
@@ -4909,7 +4953,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cycle",
@@ -4926,7 +4971,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cyzone",
@@ -4943,7 +4989,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dlas",
@@ -4960,7 +5007,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dentalux",
@@ -4977,7 +5025,8 @@
       "dental"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dermacare",
@@ -4994,7 +5043,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dial",
@@ -5012,7 +5062,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dianne-caine-australia",
@@ -5030,7 +5081,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ditto-balms",
@@ -5047,7 +5099,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "doussy",
@@ -5064,7 +5117,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "down-to-earth",
@@ -5081,7 +5135,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-heald",
@@ -5098,7 +5153,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-jacksons",
@@ -5117,7 +5173,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-sams",
@@ -5134,7 +5191,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "duo",
@@ -5151,7 +5209,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "earth-conscious",
@@ -5168,7 +5227,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "earth-sense",
@@ -5185,7 +5245,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "earthy-nail-polish",
@@ -5202,7 +5263,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ecoleaf-by-suma",
@@ -5219,7 +5281,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ecozone",
@@ -5236,7 +5299,8 @@
       "household-cleaning"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "elegance",
@@ -5253,7 +5317,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "emma-hardie",
@@ -5270,7 +5335,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "epiderma",
@@ -5287,7 +5353,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "esika",
@@ -5304,7 +5371,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "esspire",
@@ -5321,7 +5389,8 @@
       "food-kitchen"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eternal-skincare",
@@ -5338,7 +5407,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eudora",
@@ -5355,7 +5425,8 @@
       "skincare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "evdaimonia",
@@ -5372,7 +5443,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "everyandone",
@@ -5389,7 +5461,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "evolve-organic-beauty",
@@ -5407,7 +5480,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "evre",
@@ -5425,7 +5499,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fab-brows",
@@ -5442,7 +5517,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "facetheory",
@@ -5459,7 +5535,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fatface",
@@ -5476,7 +5553,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fill-refill-co",
@@ -5495,7 +5573,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "filter-by-molly-mae",
@@ -5512,7 +5591,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "finice",
@@ -5529,7 +5609,8 @@
       "household-cleaning"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "floralys",
@@ -5546,7 +5627,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "florentine",
@@ -5563,7 +5645,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "forest-and-shore",
@@ -5581,7 +5664,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "formil",
@@ -5598,7 +5682,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "formulae-prescott",
@@ -5615,7 +5700,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fresh-and-dry",
@@ -5632,7 +5718,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fria",
@@ -5650,7 +5737,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fria-1000-giorni",
@@ -5668,7 +5756,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fria-easy",
@@ -5686,7 +5775,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fria-k-beauty-inspired",
@@ -5704,7 +5794,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "friendly-soap",
@@ -5722,7 +5813,8 @@
       "body-shower"
     ],
     "region": "Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fuarain-skincare",
@@ -5739,7 +5831,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "furtastic",
@@ -5756,7 +5849,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fushi",
@@ -5773,7 +5867,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gaia-skincare",
@@ -5790,7 +5885,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gatineau",
@@ -5807,7 +5903,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gelitup-by-giup",
@@ -5824,7 +5921,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gender-neutral",
@@ -5841,7 +5939,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "genglo",
@@ -5858,7 +5957,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ghs-direct",
@@ -5877,7 +5977,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gingingers",
@@ -5894,7 +5995,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "girls-with-attitude",
@@ -5911,7 +6013,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "glow-for-it",
@@ -5928,7 +6031,8 @@
       "skincare"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "glow-hub",
@@ -5945,7 +6049,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "goats-of-the-gorge",
@@ -5962,7 +6067,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "good-bubble",
@@ -5979,7 +6085,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "good-one",
@@ -5996,7 +6103,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "green-wave",
@@ -6013,7 +6121,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "greenscents",
@@ -6031,7 +6140,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hair-by-sam-mcknight",
@@ -6048,7 +6158,8 @@
       "haircare"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "handmade-naturals",
@@ -6065,7 +6176,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hanna-sillitoe",
@@ -6082,7 +6194,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hannah-natural",
@@ -6099,7 +6212,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "happy-anne",
@@ -6116,7 +6230,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "helan",
@@ -6133,7 +6248,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "herbal-elea",
@@ -6150,7 +6266,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hershesons",
@@ -6167,7 +6284,8 @@
       "haircare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hiip",
@@ -6184,7 +6302,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hownd",
@@ -6201,7 +6320,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "i-m-naturkosmetik-berlin",
@@ -6218,7 +6338,8 @@
       "makeup-beauty"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "icom",
@@ -6236,7 +6357,8 @@
       "household-cleaning"
     ],
     "region": "Africa & The Middle East, Asia, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "incia",
@@ -6253,7 +6375,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ineos",
@@ -6270,7 +6393,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "inhana-skincare",
@@ -6287,7 +6411,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "inlight-beauty-and-wellness",
@@ -6304,7 +6429,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "iren-shizen",
@@ -6321,7 +6447,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "itreatskin",
@@ -6338,7 +6465,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "je-suis-vert",
@@ -6355,7 +6483,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jeuneora",
@@ -6373,7 +6502,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "john-lewis-and-partners",
@@ -6390,7 +6520,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "julie-clarke-candles",
@@ -6407,7 +6538,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "juvenate-skincare",
@@ -6424,7 +6556,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kadalys",
@@ -6441,7 +6574,8 @@
       "makeup-beauty"
     ],
     "region": "Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kash-beauty",
@@ -6459,7 +6593,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kativa",
@@ -6476,7 +6611,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "katoa-botanicals",
@@ -6493,7 +6629,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kids-stuff",
@@ -6510,7 +6647,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kireyna",
@@ -6527,7 +6665,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kmart",
@@ -6544,7 +6683,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kone-care",
@@ -6562,7 +6702,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kotanical",
@@ -6579,7 +6720,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kurl-kitchen",
@@ -6596,7 +6738,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kvitok",
@@ -6614,7 +6757,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kyushi",
@@ -6631,7 +6775,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lbel",
@@ -6648,7 +6793,8 @@
       "skincare"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lerbolario-societa-benefit-srl",
@@ -6665,7 +6811,8 @@
       "makeup-beauty"
     ],
     "region": "Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "la-cosmetica-srl",
@@ -6682,7 +6829,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "labbok",
@@ -6699,7 +6847,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lacura",
@@ -6716,7 +6865,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lanolips",
@@ -6733,7 +6883,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "leeukopf-laboratories",
@@ -6750,7 +6901,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lefay-spa-cosmetic-line",
@@ -6767,7 +6919,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lemon-myrtle",
@@ -6784,7 +6937,8 @@
       "food-kitchen"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lerana",
@@ -6801,7 +6955,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "levrana",
@@ -6820,7 +6975,8 @@
       "skincare"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lidl-gb",
@@ -6837,7 +6993,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lidl-ireland-and-lidl-northern-ireland",
@@ -6854,7 +7011,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lipstains-gold",
@@ -6871,7 +7029,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "little-heroes",
@@ -6888,7 +7047,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "liz-earle",
@@ -6905,7 +7065,8 @@
       "skincare"
     ],
     "region": "Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lock-stock-and-barrel",
@@ -6922,7 +7083,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "london-copyright",
@@ -6939,7 +7101,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "look-fabulous-forever",
@@ -6956,7 +7119,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "love-ethical-beauty",
@@ -6973,7 +7137,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "love-katie",
@@ -6990,7 +7155,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "love-pets",
@@ -7007,7 +7173,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lucy-bee",
@@ -7024,7 +7191,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lumity",
@@ -7041,7 +7209,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lupilu",
@@ -7058,7 +7227,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "made-for-life-organics",
@@ -7075,7 +7245,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "made-of-more",
@@ -7092,7 +7263,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "magic-lips",
@@ -7109,7 +7281,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "magnum-guardex",
@@ -7126,7 +7299,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mancave",
@@ -7143,7 +7317,8 @@
       "skincare"
     ],
     "region": "Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "manhattan",
@@ -7161,7 +7336,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "manufaktura",
@@ -7178,7 +7354,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "maria-nila",
@@ -7195,7 +7372,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mark-birch-trichlogist",
@@ -7213,7 +7391,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "maroqueen",
@@ -7230,7 +7409,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mazel",
@@ -7247,7 +7427,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mazillo",
@@ -7264,7 +7445,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mendittorosa",
@@ -7281,7 +7463,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mervue-natural-skincare",
@@ -7298,7 +7481,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "micky-day",
@@ -7315,7 +7499,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mielev",
@@ -7332,7 +7517,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mienna-cosmetics-ltd",
@@ -7349,7 +7535,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "miss-organics",
@@ -7366,7 +7553,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "modern-botany",
@@ -7383,7 +7571,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "molton-brown",
@@ -7400,7 +7589,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "monange",
@@ -7417,7 +7607,8 @@
       "skincare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "monday-haircare",
@@ -7434,7 +7625,8 @@
       "haircare"
     ],
     "region": "Asia, Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "moss-and-adams",
@@ -7451,7 +7643,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mother-nailture",
@@ -7468,7 +7661,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mothers-earth",
@@ -7485,24 +7679,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "mua-makeup-academy",
-    "name": "MUA Makeup Academy",
-    "tier": "check",
-    "note": "The go-to brand for on trend, pro quality, 100% vegan and cruelty free beauty since 2010. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
-    "vegan": "full",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "makeup-beauty"
-    ],
-    "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mumandyou",
@@ -7519,7 +7697,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nakin",
@@ -7536,7 +7715,8 @@
       "skincare"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nalas-baby",
@@ -7554,7 +7734,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "natroma",
@@ -7571,7 +7752,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "natura",
@@ -7588,7 +7770,8 @@
       "skincare"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "natural-by-nature-oils",
@@ -7605,7 +7788,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "naturally-tiwa-skincare",
@@ -7622,7 +7806,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "natures-divine",
@@ -7639,7 +7824,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "neal-and-wolf",
@@ -7656,7 +7842,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "neals-yard-remedies",
@@ -7673,7 +7860,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nex-environment",
@@ -7690,7 +7878,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nice",
@@ -7708,7 +7897,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nimonths",
@@ -7725,7 +7915,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nourish-london",
@@ -7742,7 +7933,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "novaretin",
@@ -7759,12 +7951,13 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nsfa-beauty",
     "name": "NSFA Beauty",
-    "tier": "check",
+    "tier": "good",
     "note": "A 100% vegan & cruelty-free brand launched in 2018 by Czech influencer ANY. Cruelty-free approved by Cruelty Free International.",
     "parentCompany": null,
     "vegan": "full",
@@ -7776,7 +7969,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nunaia",
@@ -7793,7 +7987,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nursem",
@@ -7810,7 +8005,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nutmeg",
@@ -7827,7 +8023,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "o-boticario",
@@ -7844,7 +8041,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "oui",
@@ -7861,7 +8059,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "obvs-skincare",
@@ -7878,7 +8077,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "oio-lab",
@@ -7895,7 +8095,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "okiki-skincare",
@@ -7912,7 +8113,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "omorovicza",
@@ -7929,7 +8131,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "organic-skin-australia",
@@ -7946,7 +8149,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "organicspa",
@@ -7963,7 +8167,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "oxx",
@@ -7980,7 +8185,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "plouise",
@@ -7997,7 +8203,8 @@
       "makeup-beauty"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pai-skincare",
@@ -8014,7 +8221,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "paixao",
@@ -8031,7 +8239,8 @@
       "skincare"
     ],
     "region": "South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "paladone",
@@ -8048,7 +8257,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pamoja",
@@ -8065,7 +8275,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "parla",
@@ -8082,7 +8293,8 @@
       "dental"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "penneys",
@@ -8099,7 +8311,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "people-of-the-earth",
@@ -8116,7 +8329,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "perfect-girl",
@@ -8133,7 +8347,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "peros",
@@ -8150,7 +8365,8 @@
       "laundry"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "philosophy",
@@ -8167,7 +8383,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "phoenix-crown",
@@ -8184,7 +8401,8 @@
       "household-cleaning"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pikes-pouches",
@@ -8201,7 +8419,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "planted-skincare",
@@ -8218,7 +8437,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "poppin-yang",
@@ -8235,7 +8455,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "primark",
@@ -8252,7 +8473,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "primavera-life",
@@ -8269,7 +8491,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pura-vie",
@@ -8287,7 +8510,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pure-argan-co",
@@ -8304,7 +8528,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pure-chemistry",
@@ -8321,7 +8546,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pure-project",
@@ -8338,7 +8564,8 @@
       "household-cleaning"
     ],
     "region": "Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "purearth",
@@ -8355,7 +8582,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "purextracts",
@@ -8372,7 +8600,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pyykkiarkki",
@@ -8389,7 +8618,8 @@
       "laundry"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "quem-disse-berenice",
@@ -8406,7 +8636,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "raven-botanicals",
@@ -8423,7 +8654,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rebul",
@@ -8440,7 +8672,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "refy",
@@ -8457,7 +8690,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rhug-wild-beauty",
@@ -8474,7 +8708,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "risque",
@@ -8491,7 +8726,8 @@
       "makeup-beauty"
     ],
     "region": "South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rspca",
@@ -8508,7 +8744,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sable-labs",
@@ -8525,7 +8762,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sacred",
@@ -8542,7 +8780,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "safeway",
@@ -8559,7 +8798,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "saira",
@@ -8576,7 +8816,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "samaya-ayurveda",
@@ -8593,7 +8834,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sanctum",
@@ -8610,7 +8852,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sansin",
@@ -8627,7 +8870,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "santaverde",
@@ -8644,7 +8888,8 @@
       "skincare"
     ],
     "region": "Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sarafumi",
@@ -8661,7 +8906,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sbtrct-skincare",
@@ -8678,7 +8924,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "scott-and-lawson",
@@ -8695,7 +8942,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sculpted-by-aimee",
@@ -8712,7 +8960,8 @@
       "makeup-beauty"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "seeds-of-colour",
@@ -8729,7 +8978,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "seniha-skincare",
@@ -8747,7 +8997,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sensapur",
@@ -8764,7 +9015,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sensatia",
@@ -8782,7 +9034,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sensilait",
@@ -8799,7 +9052,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "seresilk",
@@ -8816,7 +9070,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "shades-of-london",
@@ -8833,7 +9088,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "shedid-and-parrish",
@@ -8850,7 +9106,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sheglam",
@@ -8867,7 +9124,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "silvan-skincare",
@@ -8884,7 +9142,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "siskyn-skincare-oils",
@@ -8902,7 +9161,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "siveno",
@@ -8919,7 +9179,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "skin-deep",
@@ -8937,7 +9198,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "skin-formulas",
@@ -8954,7 +9216,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soak-sunday",
@@ -8971,7 +9234,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soap-valley",
@@ -8988,7 +9252,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soaphoria",
@@ -9006,7 +9271,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soft-and-delicate",
@@ -9024,7 +9290,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "softy",
@@ -9041,7 +9308,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soho-skin",
@@ -9058,7 +9326,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "solitaire-uk-ltd",
@@ -9075,7 +9344,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "soluclean",
@@ -9092,7 +9362,8 @@
       "household-cleaning"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "solupak",
@@ -9109,7 +9380,8 @@
       "household-cleaning"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "st-moriz",
@@ -9126,7 +9398,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "stardrops",
@@ -9143,7 +9416,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "stereo",
@@ -9160,7 +9434,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "strange-luxury",
@@ -9177,7 +9452,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "studio-gel",
@@ -9194,7 +9470,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "studio-milligram",
@@ -9211,7 +9488,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "subtle-energies",
@@ -9228,7 +9506,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sue-marsh",
@@ -9245,7 +9524,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sugar-coated",
@@ -9262,7 +9542,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sundae",
@@ -9280,7 +9561,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "superdrug",
@@ -9297,7 +9579,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "swypes",
@@ -9315,7 +9598,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "synergie-skin",
@@ -9333,7 +9617,8 @@
       "skincare"
     ],
     "region": "Asia, Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "syorell",
@@ -9350,7 +9635,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "system-nature",
@@ -9367,7 +9653,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tanorganic",
@@ -9384,7 +9671,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "temko-cosmetics",
@@ -9401,7 +9689,8 @@
       "makeup-beauty"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "that-good-hair",
@@ -9418,7 +9707,8 @@
       "haircare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-australian-natural-soap-company",
@@ -9435,7 +9725,8 @@
       "body-shower"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-barberia",
@@ -9452,7 +9743,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-cheeky-panda",
@@ -9469,12 +9761,13 @@
       "body-shower"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-cocoon-original-vietnam",
     "name": "The COCOON ORIGINAL VIETNAM",
-    "tier": "check",
+    "tier": "good",
     "note": "A 100% vegan cosmetics brand from Vietnam reflecting true Vietnamese beauty. Cruelty-free approved by Cruelty Free International.",
     "parentCompany": null,
     "vegan": "full",
@@ -9486,7 +9779,8 @@
       "makeup-beauty"
     ],
     "region": "Asia",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-east-to-west-lifestyle-co",
@@ -9503,7 +9797,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-gel-crew",
@@ -9520,7 +9815,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-good-one",
@@ -9537,7 +9833,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-handmade-soap-company",
@@ -9554,7 +9851,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-honest-midwife",
@@ -9571,7 +9869,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-konjac-sponge-co",
@@ -9588,7 +9887,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-natural-soapworks",
@@ -9605,7 +9905,8 @@
       "body-shower"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-powder-shampoo",
@@ -9623,7 +9924,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-skin-edition",
@@ -9640,7 +9942,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "thermitek-ltd",
@@ -9657,7 +9960,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "throda-skincare",
@@ -9674,7 +9978,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tootilab",
@@ -9691,7 +9996,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "trigwell-cosmetics",
@@ -9708,7 +10014,8 @@
       "makeup-beauty"
     ],
     "region": "Europe, South & Central America",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "true",
@@ -9725,7 +10032,8 @@
       "household-cleaning"
     ],
     "region": "Australia & New Zealand, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "true-alchemy",
@@ -9742,7 +10050,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tulita",
@@ -9759,7 +10068,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ukviat",
@@ -9776,7 +10086,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ultra-glow",
@@ -9793,7 +10104,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ultraceuticals",
@@ -9810,7 +10122,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "uniq-made",
@@ -9827,7 +10140,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "unique-boutique",
@@ -9844,7 +10158,8 @@
       "makeup-beauty"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "upcircle-beauty",
@@ -9861,7 +10176,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "vegantan",
@@ -9878,7 +10194,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "viridian-nutrition",
@@ -9895,7 +10212,8 @@
       "food-kitchen"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "vult",
@@ -9912,7 +10230,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "w5",
@@ -9929,7 +10248,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "wild-science-lab",
@@ -9948,7 +10268,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "wildsmith-skin",
@@ -9965,7 +10286,8 @@
       "skincare"
     ],
     "region": "Asia, Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "wildwash",
@@ -9982,7 +10304,8 @@
       "skincare"
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "wizz",
@@ -9999,7 +10322,8 @@
       "skincare"
     ],
     "region": "Australia & New Zealand, Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "yes-nurse",
@@ -10016,7 +10340,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "yom-beauty",
@@ -10033,7 +10358,8 @@
       "skincare"
     ],
     "region": "Europe, USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "young-epure",
@@ -10050,7 +10376,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "zoya-goes-pretty",
@@ -10067,7 +10394,8 @@
       "skincare"
     ],
     "region": "Europe",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "zuvi",
@@ -10084,7 +10412,8 @@
       "skincare"
     ],
     "region": "USA & Canada",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "abbott",
@@ -10101,7 +10430,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "acure",
@@ -10118,7 +10448,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "alba-botanica",
@@ -10135,7 +10466,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aloe-up",
@@ -10152,7 +10484,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "american-safety-razor",
@@ -10169,7 +10502,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "amyris",
@@ -10186,7 +10520,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "anastasia-beverly-hills",
@@ -10203,7 +10538,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "andalou-naturals",
@@ -10220,7 +10556,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "arbonne-international",
@@ -10237,7 +10574,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "aunt-fannies",
@@ -10254,7 +10592,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "australian-gold",
@@ -10271,7 +10610,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "avalon-organics",
@@ -10288,7 +10628,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "beauty-bay",
@@ -10305,7 +10646,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "beekman-1802",
@@ -10322,7 +10664,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "benecos",
@@ -10339,7 +10682,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bite-beauty",
@@ -10356,7 +10700,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bio-ionic",
@@ -10373,7 +10718,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "biossance",
@@ -10390,7 +10736,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "boxycharm",
@@ -10407,7 +10754,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bperfect-cosmetics",
@@ -10424,7 +10772,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "brandless",
@@ -10441,7 +10790,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "burts-bees",
@@ -10458,7 +10808,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "butter-london",
@@ -10475,7 +10826,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "buxom",
@@ -10492,7 +10844,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bareminerals",
@@ -10509,7 +10862,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "black-girl-sunscreen",
@@ -10526,7 +10880,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bobs-red-mill",
@@ -10543,7 +10898,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bosleymd",
@@ -10560,7 +10916,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "calgon",
@@ -10577,7 +10934,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "carols-daughter",
@@ -10594,7 +10952,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "colourpop-cosmetics",
@@ -10611,7 +10970,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "concrete-minerals",
@@ -10628,7 +10988,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cover-fx-skin-care",
@@ -10645,7 +11006,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "crayola-beauty",
@@ -10662,7 +11024,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "conair",
@@ -10679,7 +11042,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "caswell-massey",
@@ -10696,7 +11060,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "cj-olive-young",
@@ -10713,7 +11078,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dabur",
@@ -10730,24 +11096,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "dr-bronners-magic-soaps",
-    "name": "Dr. Bronner's Magic Soaps",
-    "tier": "check",
-    "note": "100% vegan. Listed by PETA as not testing on animals.",
-    "parentCompany": null,
-    "vegan": "full",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "body-shower"
-    ],
-    "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-hauschka-skin-care",
@@ -10764,7 +11114,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-dennis-gross-skincare",
@@ -10781,7 +11132,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dr-teals",
@@ -10798,7 +11150,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dolce-and-gabbana-beauty",
@@ -10815,7 +11168,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dossier",
@@ -10832,7 +11186,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "design-essentials",
@@ -10849,7 +11204,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "derma-e-natural-bodycare",
@@ -10866,7 +11222,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "desert-essence",
@@ -10883,7 +11240,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dermablend",
@@ -10900,7 +11258,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dermadoctor",
@@ -10917,7 +11276,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ecotools",
@@ -10934,7 +11294,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eminence-organic-skin-care",
@@ -10951,7 +11312,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eos-products",
@@ -10968,7 +11330,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eugene-perma",
@@ -10985,7 +11348,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "european-wax-center",
@@ -11002,7 +11366,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "every-man-jack",
@@ -11019,7 +11384,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eylure",
@@ -11036,7 +11402,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "earth-friendly-products",
@@ -11053,7 +11420,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "eco-dent-international",
@@ -11070,7 +11438,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "first-aid-beauty",
@@ -11087,7 +11456,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "florence-by-mills",
@@ -11104,7 +11474,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "formula-x",
@@ -11121,7 +11492,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "frank-body",
@@ -11138,7 +11510,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "freeman-beauty",
@@ -11155,7 +11528,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fruit-of-the-earth",
@@ -11172,7 +11546,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "function-of-beauty",
@@ -11189,7 +11564,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "fudge",
@@ -11206,7 +11582,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "forest-essentials",
@@ -11223,7 +11600,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "foamie",
@@ -11240,7 +11618,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "garden-of-life",
@@ -11257,7 +11636,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gelish",
@@ -11274,7 +11654,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "glo-skin-beauty",
@@ -11291,7 +11672,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "go-to-skincare",
@@ -11308,7 +11690,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "goli-nutrition",
@@ -11325,7 +11708,8 @@
       "food-kitchen"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "gosh-copenhagen",
@@ -11342,7 +11726,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "grande-cosmetics",
@@ -11359,7 +11744,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "grisi",
@@ -11376,7 +11762,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "grown-alchemist",
@@ -11393,7 +11780,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hello-products",
@@ -11410,7 +11798,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hims",
@@ -11427,7 +11816,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hismile",
@@ -11444,7 +11834,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "holo-taco",
@@ -11461,7 +11852,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "honeybee-gardens",
@@ -11478,24 +11870,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "hurraw-balm",
-    "name": "Hurraw! Balm",
-    "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
-    "vegan": "unknown",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "makeup-beauty"
-    ],
-    "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "herbivore-botanicals",
@@ -11512,7 +11888,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "iconic-london",
@@ -11529,7 +11906,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "idun-minerals",
@@ -11546,7 +11924,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "illamasqua",
@@ -11563,7 +11942,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "image-skincare",
@@ -11580,7 +11960,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "inglot-cosmetics",
@@ -11597,7 +11978,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "isagenix",
@@ -11614,7 +11996,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "isle-of-paradise",
@@ -11631,7 +12014,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "invisibobble",
@@ -11648,7 +12032,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "j-beverly-hills",
@@ -11665,7 +12050,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jack-black",
@@ -11682,7 +12068,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jane-iredale",
@@ -11700,7 +12087,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jeffree-star",
@@ -11717,7 +12105,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "john-masters-organics",
@@ -11734,7 +12123,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "josie-maran-cosmetics",
@@ -11751,7 +12141,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "juice-beauty",
@@ -11768,7 +12159,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "julep-beauty",
@@ -11785,7 +12177,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jesses-girl-cosmetics",
@@ -11802,7 +12195,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "jr-watkins",
@@ -11819,7 +12213,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "john-paul-mitchell-systems",
@@ -11836,7 +12231,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kvd-beauty",
@@ -11853,7 +12249,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kate-somerville",
@@ -11870,7 +12267,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "keys-soulcare",
@@ -11887,7 +12285,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "king-of-shaves",
@@ -11904,7 +12303,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kiss-products",
@@ -11921,7 +12321,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kora-organics",
@@ -11938,7 +12339,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "korres",
@@ -11955,7 +12357,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kristin-ess-hair",
@@ -11972,7 +12375,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kryolan-professional-make-up",
@@ -11989,7 +12393,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kenra",
@@ -12006,7 +12411,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "kevinmurphy",
@@ -12023,7 +12429,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "krave-beauty",
@@ -12040,7 +12447,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lavanila",
@@ -12057,7 +12465,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lavera-naturkosmetik",
@@ -12074,7 +12483,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lee-stafford",
@@ -12091,7 +12501,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lime-crime",
@@ -12108,7 +12519,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lip-smacker",
@@ -12125,7 +12537,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lorac",
@@ -12142,7 +12555,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "londontown",
@@ -12159,7 +12573,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "luminess-air",
@@ -12176,24 +12591,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
-  },
-  {
-    "slug": "lush-cosmetics",
-    "name": "LUSH Cosmetics",
-    "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
-    "vegan": "unknown",
-    "evidence": "",
-    "products": [],
-    "alternatives": [],
-    "links": [],
-    "category": [
-      "makeup-beauty"
-    ],
-    "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lvx",
@@ -12210,7 +12609,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lys-beauty",
@@ -12227,7 +12627,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lucky-tiger",
@@ -12244,7 +12645,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "madam-cj-walker",
@@ -12261,7 +12663,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "malin-goetz",
@@ -12278,7 +12681,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mama-mio",
@@ -12295,7 +12699,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mamaearth",
@@ -12312,7 +12717,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "manic-panic",
@@ -12329,7 +12735,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "marc-anthony",
@@ -12346,7 +12753,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "maple-holistics",
@@ -12363,7 +12771,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "manscaped",
@@ -12380,7 +12789,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "milani-cosmetics",
@@ -12397,7 +12807,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "milk-honey",
@@ -12414,7 +12825,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mixed-chicks",
@@ -12431,7 +12843,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "modelco",
@@ -12448,7 +12861,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "moroccanoil",
@@ -12465,7 +12879,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mrs-meyers-clean-day",
@@ -12482,7 +12897,8 @@
       "household-cleaning"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mychelle-dermaceuticals",
@@ -12499,7 +12915,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "michael-todd-beauty",
@@ -12516,7 +12933,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "mesauda-milano",
@@ -12533,7 +12951,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "modere",
@@ -12550,7 +12969,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "marcelle",
@@ -12567,7 +12987,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nads",
@@ -12584,7 +13005,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nails-inc",
@@ -12601,7 +13023,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "natures-gate",
@@ -12618,7 +13041,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "naturium",
@@ -12635,7 +13059,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "newmans-own-organics",
@@ -12652,7 +13077,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nest-fragrances",
@@ -12669,7 +13095,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "niod",
@@ -12686,7 +13113,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nude-by-nature",
@@ -12703,7 +13131,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "obsessive-compulsive-cosmetics",
@@ -12720,7 +13149,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ole-henriksen",
@@ -12737,7 +13167,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ouidad",
@@ -12754,7 +13185,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "oribe-hair-care",
@@ -12771,7 +13203,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "osea",
@@ -12788,7 +13221,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "organic-harvest",
@@ -12805,7 +13239,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pacifica",
@@ -12822,7 +13257,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pangea-organics",
@@ -12839,7 +13275,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pattern-beauty",
@@ -12856,7 +13293,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "physicians-formula",
@@ -12873,7 +13311,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pilgrim",
@@ -12890,7 +13329,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pipette",
@@ -12907,7 +13347,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "plum-goodness",
@@ -12924,7 +13365,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "prai-beauty",
@@ -12941,7 +13383,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pravana",
@@ -12958,7 +13401,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pretty-vulgar",
@@ -12975,7 +13419,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pura-dor",
@@ -12992,7 +13437,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "puracy",
@@ -13009,7 +13455,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pz-cussons",
@@ -13026,7 +13473,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "queen-helene",
@@ -13043,7 +13491,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rem-beauty",
@@ -13060,7 +13509,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "real-techniques",
@@ -13077,7 +13527,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "revitalash-cosmetics",
@@ -13094,7 +13545,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rhode-skin",
@@ -13111,7 +13563,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rms-beauty",
@@ -13128,7 +13581,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "roc-skincare",
@@ -13145,7 +13599,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "riley-rose",
@@ -13162,7 +13617,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "rustic-art",
@@ -13179,7 +13635,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "salon-selectives",
@@ -13196,7 +13653,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "shani-darden",
@@ -13213,7 +13671,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "shikai-products",
@@ -13230,7 +13689,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sigma-beauty",
@@ -13247,7 +13707,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "skinfix",
@@ -13264,7 +13725,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "skyn-iceland",
@@ -13281,7 +13743,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sol-de-janeiro",
@@ -13298,7 +13761,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "solgar-vitamin-company",
@@ -13315,7 +13779,8 @@
       "food-kitchen"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sparitual",
@@ -13332,7 +13797,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "splat-hair-color",
@@ -13349,7 +13815,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "stargazer",
@@ -13366,7 +13833,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "stila-cosmetics",
@@ -13383,7 +13851,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sugar-cosmetics",
@@ -13400,7 +13869,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sugarpill-cosmetics",
@@ -13417,7 +13887,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sun-bum",
@@ -13434,7 +13905,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sunday-riley-modern-skincare",
@@ -13451,7 +13923,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "supergoop",
@@ -13468,7 +13941,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "surya-brasil",
@@ -13485,7 +13959,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "susanne-kaufmann",
@@ -13502,7 +13977,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tarte-cosmetics",
@@ -13519,7 +13995,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tata-harper-skincare",
@@ -13536,7 +14013,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "thayers-natural",
@@ -13553,7 +14031,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "the-honest-company",
@@ -13570,7 +14049,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "this-works",
@@ -13587,7 +14067,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "thrive-causemetics",
@@ -13604,7 +14085,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tonymoly",
@@ -13621,7 +14103,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "trader-joes-company",
@@ -13638,7 +14121,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tree-hut",
@@ -13655,7 +14139,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "trish-mcevoy",
@@ -13672,7 +14157,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "trevor-sorbie",
@@ -13689,7 +14175,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "true-botanicals",
@@ -13706,7 +14193,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tula",
@@ -13723,7 +14211,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "typology",
@@ -13740,7 +14229,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tangle-teezer",
@@ -13757,7 +14247,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tan-luxe",
@@ -13774,7 +14265,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tanologist",
@@ -13791,7 +14283,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ulta-beauty-collection",
@@ -13808,7 +14301,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "unite-haircare",
@@ -13825,7 +14319,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "verb",
@@ -13842,7 +14337,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "vasanti-cosmetics",
@@ -13859,7 +14355,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "whole-foods-market-365",
@@ -13876,7 +14373,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "winky-lux",
@@ -13893,7 +14391,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "ws-badger",
@@ -13910,7 +14409,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "youth-to-the-people",
@@ -13927,7 +14427,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "youngblood-mineral-cosmetics",
@@ -13944,7 +14445,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "zia-natural-skincare",
@@ -13961,7 +14463,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "zuzu-cosmetics",
@@ -13978,7 +14481,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "100-pure",
@@ -13995,7 +14499,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "3ina",
@@ -14012,7 +14517,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "bumble-and-bumble",
@@ -14029,7 +14535,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hourglass-cosmetics",
@@ -14046,7 +14553,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "smashbox",
@@ -14063,7 +14571,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "too-faced",
@@ -14080,7 +14589,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "tatcha",
@@ -14097,7 +14607,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "dermalogica",
@@ -14114,7 +14625,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "living-proof",
@@ -14131,7 +14643,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "love-beauty-and-planet",
@@ -14149,7 +14662,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "lakm",
@@ -14166,7 +14680,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nubian-heritage",
@@ -14184,7 +14699,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "schmidts-naturals",
@@ -14201,7 +14717,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "seventh-generation",
@@ -14219,7 +14736,8 @@
       "laundry"
     ],
     "region": "",
-    "veganConfidence": "medium"
+    "veganConfidence": "medium",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sunsilk",
@@ -14236,7 +14754,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "murad",
@@ -14253,7 +14772,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "paulas-choice",
@@ -14270,7 +14790,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "devacurl",
@@ -14287,7 +14808,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "joico",
@@ -14304,7 +14826,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "sexy-hair",
@@ -14321,7 +14844,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "logona",
@@ -14340,7 +14864,8 @@
       "skincare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "nyx-professional-makeup",
@@ -14357,7 +14882,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "pureology",
@@ -14374,7 +14900,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "urban-decay",
@@ -14391,7 +14918,8 @@
       "makeup-beauty"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "goldwell",
@@ -14408,7 +14936,8 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "toms-of-maine",
@@ -14426,7 +14955,8 @@
       "body-shower"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   },
   {
     "slug": "hair-food",
@@ -14443,6 +14973,7 @@
       "haircare"
     ],
     "region": "",
-    "veganConfidence": "low"
+    "veganConfidence": "low",
+    "lastVerified": "2026-09-09"
   }
 ]

@@ -39,6 +39,14 @@ function pageTitle(brand) {
   return 'Is ' + brand.name + ' Cruelty-Free? - a home kind';
 }
 
+var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function formatVerifiedDate(iso) {
+  var parts = String(iso).split('-');
+  if (parts.length !== 3) return iso;
+  var y = parts[0], m = parseInt(parts[1], 10) - 1, d = parseInt(parts[2], 10);
+  return d + ' ' + (MONTHS[m] || '') + ' ' + y;
+}
+
 function pageDescription(brand) {
   return escapeHtml(brand.note || ('Find out whether ' + brand.name + ' is cruelty-free and vegan.'));
 }
@@ -89,7 +97,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:url" content="' + canonical + '">');
   lines.push('<meta name="twitter:card" content="summary">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909f">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260909h">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -176,6 +184,9 @@ function renderBrandPage(brand) {
 
   
   lines.push('<div style="margin-top:36px; padding:18px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; font-size:13px; color:#7a7561;">');
+  if (brand.lastVerified) {
+    lines.push('<p style="margin:0 0 8px;">Checked against the source directory as of <strong>' + formatVerifiedDate(brand.lastVerified) + '</strong>.</p>');
+  }
   lines.push('Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">let me know</a>.');
   lines.push('</div>');
   lines.push('</main>');
@@ -198,7 +209,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260909f"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260909h"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
