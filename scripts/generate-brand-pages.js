@@ -18,12 +18,12 @@ const OUT_DIR = path.join(ROOT, 'brands');
 const SITE_URL = 'https://ahomekind.com';
 
 const TIER_META = {
-  good:  { emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan', className: 'good', ratingClass: 'good' },
-  check: { emoji: '&#128048;', label: 'cruelty-free, check vegan status per product', className: 'check', ratingClass: 'check' },
-  warn:  { emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t', className: 'warn', ratingClass: 'warn' },
-  bad:   { emoji: '&#10060;', label: 'tested on animals', className: 'bad', ratingClass: 'bad' },
-  unverified: { emoji: '&#128269;', label: 'not certified - no evidence either way', className: 'unverified', ratingClass: 'unverified' },
-  unknown: { emoji: '&#10067;', label: 'status not known yet', className: 'unverified', ratingClass: 'unverified' }
+  good:  { emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan', className: 'good', ratingClass: 'good', shareImage: 'share-good.jpg' },
+  check: { emoji: '&#128048;', label: 'cruelty-free, check vegan status per product', className: 'check', ratingClass: 'check', shareImage: 'share-check.jpg' },
+  warn:  { emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t', className: 'warn', ratingClass: 'warn', shareImage: 'share-warn.jpg' },
+  bad:   { emoji: '&#10060;', label: 'tested on animals', className: 'bad', ratingClass: 'bad', shareImage: 'share-bad.jpg' },
+  unverified: { emoji: '&#128269;', label: 'not certified - no evidence either way', className: 'unverified', ratingClass: 'unverified', shareImage: 'share-default.jpg' },
+  unknown: { emoji: '&#10067;', label: 'status not known yet', className: 'unverified', ratingClass: 'unverified', shareImage: 'share-default.jpg' }
 };
 
 function escapeHtml(str) {
@@ -102,9 +102,16 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:description" content="' + description + '">');
   lines.push('<meta property="og:type" content="article">');
   lines.push('<meta property="og:url" content="' + canonical + '">');
-  lines.push('<meta name="twitter:card" content="summary">');
+  // Without an image a shared brand link previews as a bare URL, which is
+  // the least persuasive possible version of it. Each tier gets its own
+  // card, so the preview already says cruelty-free or tested-on-animals
+  // before anyone taps through.
+  lines.push('<meta property="og:image" content="' + SITE_URL + '/images/' + tier.shareImage + '">');
+  lines.push('<meta property="og:image:alt" content="' + escapeHtml(brand.name) + ' on a home kind">');
+  lines.push('<meta property="og:site_name" content="a home kind">');
+  lines.push('<meta name="twitter:card" content="summary_large_image">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260910i">');
+  lines.push('<link rel="stylesheet" href="../../css/style.css?v=20260910j">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
@@ -218,7 +225,7 @@ function renderBrandPage(brand) {
   lines.push('</form>');
   lines.push('</div>');
   lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/nav.js?v=20260910i"></' + 'script>');
+  lines.push('<script src="../../js/nav.js?v=20260910j"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
