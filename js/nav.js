@@ -422,6 +422,15 @@ var current = normalizePath(window.location.pathname);
 function isActive(paths){
 return paths.some(function(p){ return normalizePath(p) === current; });
 }
+// Clean line-art icons (stroke-based SVG, 24x24) instead of emoji glyphs --
+// these read consistently across every OS/browser, unlike system emoji fonts.
+var bnIcons = {
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1H9.5a1 1 0 0 0 1-1v-4.5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1V20a1 1 0 0 0 1 1H17.5a1 1 0 0 0 1-1V9.5"/></svg>',
+  scan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/></svg>',
+  shop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8.5h11l.9 11a1.5 1.5 0 0 1-1.5 1.6H7.1a1.5 1.5 0 0 1-1.5-1.6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg>',
+  more: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18.5" cy="12" r="1.6"/></svg>'
+};
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
 return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : '') + (active ? ' active' : '') + '">' +
@@ -431,12 +440,12 @@ return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : 
 var bn = document.createElement('div');
 bn.className = 'bottom-nav';
 bn.innerHTML =
-bnItem('/index.html', '&#8962;', 'Home', 'home') +
-bnItem('/scan.html', '&#128247;', 'Scan', 'scan') +
-bnItem('/brand-check.html', '&#128269;', 'Brands', 'check') +
-bnItem('/shop.html', '&#128717;', 'Shop', 'shop') +
+bnItem('/index.html', bnIcons.home, 'Home', 'home') +
+bnItem('/scan.html', bnIcons.scan, 'Scan', 'scan') +
+bnItem('/brand-check.html', bnIcons.check, 'Brands', 'check') +
+bnItem('/shop.html', bnIcons.shop, 'Shop', 'shop') +
 '<button type="button" class="bn-item bn-more" id="bn-more-btn">' +
-'<span class="bn-icon">&#8942;</span><span class="bn-label">More</span></button>';
+'<span class="bn-icon-wrap"><span class="bn-icon">' + bnIcons.more + '</span></span><span class="bn-label">More</span></button>';
 document.body.appendChild(bn);
 
 var sheet = document.createElement('div');
