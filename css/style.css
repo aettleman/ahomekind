@@ -773,11 +773,34 @@ body { animation: pageFadeIn 0.22s ease; }
 .home-card.cat-tile:hover .home-card-title, .home-card.cat-tile:focus-visible .home-card-title, .home-card.cat-tile:active .home-card-title { color: #3d4a3a; }
 .home-card.cat-tile.is-soon .home-card-title { color: #f4efe2; opacity: 0.6; }
 .home-card.cat-tile.is-soon .home-card-sub { color: #e2ddd0; }
-.filter-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; }
-.filter-pill { background: #f4efe2; border: 0.5px solid #cfc4a9; border-radius: 30px; padding: 10px 18px; font-size: 12.5px; letter-spacing: 0.3px; color: #5c5c4f; cursor: pointer; transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.12s ease; font-family: 'Karla', sans-serif; }
-.filter-pill:hover { border-color: #8ba284; }
-.filter-pill:active { transform: scale(0.96); }
-.filter-pill.active { background: #4d6b4f; border-color: #4d6b4f; color: #f4efe2; }
+/* The pills now live one level down, inside the "filter & sort" panel,
+   as a plain list of rows with a toggle switch each rather than a row of
+   loose chips -- calmer to look at, same underlying behaviour. */
+.filter-sort { margin: 0 0 22px; }
+.filter-sort-toggle { display: inline-flex; align-items: center; gap: 9px; background: var(--ahk-surface-2); border: 1px solid var(--ahk-border); border-radius: 14px; padding: 12px 16px; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2px; color: var(--ahk-heading); cursor: pointer; transition: border-color 0.15s ease; }
+.filter-sort-toggle:hover { border-color: var(--ahk-green-soft); }
+.filter-sort-toggle svg { flex: none; }
+.filter-sort-chevron { transition: transform 0.18s ease; }
+.filter-sort-toggle.is-open .filter-sort-chevron { transform: rotate(180deg); }
+.filter-sort-count { background: var(--ahk-gold); color: var(--ahk-forest-deep); border-radius: 20px; font-size: 10.5px; font-weight: 700; padding: 1px 8px; line-height: 1.6; }
+.filter-sort-panel { margin-top: 12px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 14px; padding: 16px 16px 4px; max-width: 420px; }
+.filter-sort-panel:not([hidden]) { display: block; }
+.filter-sort-label { font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; color: var(--ahk-text-muted); margin: 0 0 4px; }
+.filter-sort-label:not(:first-child) { margin-top: 14px; }
+
+.filter-pills { display: flex; flex-direction: column; margin: 0; }
+.filter-pill { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; text-align: left; background: none; border: none; border-bottom: 0.5px solid var(--ahk-border-soft); border-radius: 0; padding: 12px 2px; font-size: 13.5px; color: var(--ahk-heading); cursor: pointer; font-family: 'Karla', sans-serif; transition: color 0.15s ease; }
+.filter-pill:last-child { border-bottom: none; }
+.filter-pill:hover { color: var(--ahk-green); }
+.filter-pill:active { transform: none; }
+/* The switch itself: a track that recolours plus a thumb that slides,
+   so "on" reads at a glance without needing the row's text to change
+   colour or weight. */
+.filter-switch { flex: 0 0 auto; width: 38px; height: 22px; border-radius: 20px; background: #dcd3c0; position: relative; transition: background 0.18s ease; }
+.filter-switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.22); transition: transform 0.18s ease; }
+.filter-pill.active .filter-switch { background: #4d6b4f; }
+.filter-pill.active .filter-switch::after { transform: translateX(16px); }
+@media (prefers-reduced-motion: reduce) { .filter-switch, .filter-switch::after, .filter-sort-chevron { transition: none; } }
 
 /* Certification narrowing, as a single compact dropdown rather than its
    own row of pills -- the pill version repeated the same visual weight
@@ -925,7 +948,10 @@ body { animation: pageFadeIn 0.22s ease; }
    scan-hero button, so it reads as "on brand" rather than an add-on.
    Dismissible per page for this browser session only (see nav.js);
    stays empty/hidden (no layout jump) until real data arrives. */
-.ahk-counter-bubble { display: none; align-items: center; gap: 8px; width: fit-content; margin: 0 auto; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.3px; color: #3d4a3a; background: #e6d4a8; border: 1px solid #d4b876; border-radius: 30px; padding: 8px 8px 8px 16px; white-space: nowrap; box-shadow: 0 3px 10px rgba(166,127,45,0.18); }
+/* Recoloured from a gold/tan pill to a light, neutral sage grey-green --
+   this is an encouraging little counter, not a promo badge, and the gold
+   read as more "look at this deal" than "nice, you're helping". */
+.ahk-counter-bubble { display: none; align-items: center; gap: 8px; width: fit-content; margin: 0 auto; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.3px; color: #2f3a2d; background: #b4c0ac; border: 1px solid #a2b096; border-radius: 30px; padding: 8px 8px 8px 16px; white-space: nowrap; box-shadow: 0 3px 10px rgba(61,74,58,0.16); }
 .ahk-counter-bubble.ahk-visible { display: flex; }
 .ahk-counter-x { flex-shrink: 0; background: rgba(61,74,58,0.12); border: none; color: #3d4a3a; width: 19px; height: 19px; border-radius: 50%; font-size: 13px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .ahk-counter-x:hover { background: rgba(61,74,58,0.24); }
@@ -1206,8 +1232,10 @@ body { animation: pageFadeIn 0.22s ease; }
 @media (prefers-color-scheme: dark) {
   #ratingSearch { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-heading) !important; box-shadow: none !important; }
   #ratingSearch::placeholder { color: var(--ahk-text-muted); }
-  .filter-pill { background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-text) !important; }
-  .filter-pill.active { background: var(--ahk-green) !important; border-color: var(--ahk-green) !important; color: #1e241d !important; }
+  /* Rows, not chips, now -- nothing to recolour but the switch itself. */
+  .filter-switch { background: #45443b; }
+  .filter-pill.active .filter-switch { background: var(--ahk-green); }
+  .filter-sort-toggle, .filter-sort-panel { background: var(--ahk-card); border-color: var(--ahk-border); }
   #certSelect, #azLetterSelect, #azCategorySelect, #azRegionSelect, #pageSizeSelect {
     background: var(--ahk-card) !important; border-color: var(--ahk-border) !important; color: var(--ahk-heading) !important;
   }

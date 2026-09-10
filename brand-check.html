@@ -182,20 +182,37 @@
 </div>
 </details>
 
+<!-- The pills + certification dropdown used to sit open on the page at
+     all times -- fine with three options, cluttered once certification
+     was added alongside them. They now live inside one "filter & sort"
+     panel, collapsed by default; the pills themselves are unchanged
+     underneath (same data-filter buttons, same click handlers below),
+     just restyled as a list of switches instead of a row of chips. -->
+<div class="filter-sort">
+<button type="button" class="filter-sort-toggle" id="filterSortToggle" aria-expanded="false" aria-controls="filterSortPanel">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+<span>filter &amp; sort</span>
+<span class="filter-sort-count" id="filterSortCount" hidden></span>
+<svg class="filter-sort-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<div class="filter-sort-panel" id="filterSortPanel" hidden>
+<p class="filter-sort-label">show me</p>
 <div class="filter-pills" id="filterPills">
-<button type="button" class="filter-pill active" data-filter="all">all brands</button>
-<button type="button" class="filter-pill" data-filter="cf-vegan">&#127807; 100% cruelty-free &amp; vegan</button>
-<button type="button" class="filter-pill" data-filter="cf">&#128048; cruelty-free, vegan varies</button>
+<button type="button" class="filter-pill active" data-filter="all"><span>all brands</span><span class="filter-switch" aria-hidden="true"></span></button>
+<button type="button" class="filter-pill" data-filter="cf-vegan"><span>&#127807; 100% cruelty-free &amp; vegan</span><span class="filter-switch" aria-hidden="true"></span></button>
+<button type="button" class="filter-pill" data-filter="cf"><span>&#128048; cruelty-free, vegan varies</span><span class="filter-switch" aria-hidden="true"></span></button>
 </div>
-
-<div class="cert-select-row">
-<label for="certSelect">narrow by certification</label>
+<p class="filter-sort-label">certification</p>
+<div class="cert-select-row" style="margin-bottom:6px;">
+<label for="certSelect" class="visually-hidden">narrow by certification</label>
 <select id="certSelect">
 <option value="all">any certification</option>
 <option value="vegan-society">Vegan Society certified</option>
 <option value="leaping-bunny">Leaping Bunny / Cruelty Free International</option>
 <option value="peta">PETA certified</option>
 </select>
+</div>
+</div>
 </div>
 
 <div id="categoryGrid" style="display:none; margin-bottom:28px;">
@@ -1382,6 +1399,17 @@ return card.dataset.initial === letter;
 function setActivePills() {
 filterPills.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-filter') === activeFilter); });
 if (certSelect) certSelect.value = activeCert;
+updateFilterSortCount();
+}
+
+// Small badge on the collapsed "filter & sort" button so it's obvious
+// something's narrowed even while the panel itself is closed.
+function updateFilterSortCount() {
+var count = document.getElementById('filterSortCount');
+if (!count) return;
+var active = (activeFilter !== 'all' ? 1 : 0) + (activeCert !== 'all' ? 1 : 0);
+if (active > 0) { count.textContent = String(active); count.hidden = false; }
+else { count.hidden = true; }
 }
 
 // Shows the category grid itself -- only reachable when nothing else is
@@ -1553,6 +1581,17 @@ renderBrandList();
 filterPills.forEach(function(p){
 p.addEventListener('click', function(){ applyFilter(p.getAttribute('data-filter')); });
 });
+
+var filterSortToggle = document.getElementById('filterSortToggle');
+var filterSortPanel = document.getElementById('filterSortPanel');
+if (filterSortToggle && filterSortPanel) {
+filterSortToggle.addEventListener('click', function(){
+var open = filterSortPanel.hidden;
+filterSortPanel.hidden = !open;
+filterSortToggle.setAttribute('aria-expanded', String(open));
+filterSortToggle.classList.toggle('is-open', open);
+});
+}
 
 if (certSelect) {
 certSelect.addEventListener('change', function(){ applyCertFilter(certSelect.value); });
