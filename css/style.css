@@ -893,13 +893,17 @@ body { animation: pageFadeIn 0.22s ease; }
 .shop-tab:hover { color: #3d4a3a; }
 .shop-tab.active { color: #3d4a3a; border-bottom-color: #4d6b4f; }
 .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
-.pcard { background: #fff; border: 0.5px solid #e2d9c4; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
+/* Product cards sit on a soft sage rather than plain white. On a cream
+   page a white card reads as a gap in the paper; a faint green one reads
+   as a card, and it ties the shop to the rest of the site's palette
+   without shouting. */
+.pcard { background: #f4f7f0; border: 0.5px solid #cfdcc6; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
 .pcard.pcard-hide { opacity: 0; transform: scale(0.97); }
 @media (prefers-reduced-motion: reduce) { .pcard { transition: none; } }
-.pcard-imgwrap { background: #faf7ef; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; height: 120px; }
+.pcard-imgwrap { background: #ffffff; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; height: 120px; }
 .pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
 .pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
-.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: #4d6b4f; background: #e6efe3; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; }
+.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: #3d4a3a; background: #e2ebdc; border: 0.5px solid #cbdbc2; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; }
 .pcard h3 { font-family: 'Karla', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
 .pcard h3 a { color: inherit; text-decoration: none; }
 .pcard h3 a:hover { text-decoration: underline; }
@@ -1518,6 +1522,16 @@ body { animation: pageFadeIn 0.22s ease; }
 .pcard-imgwrap img[hidden] { display: none; }
 .pcard-imgwrap.is-empty::after { content: '\1F33F'; font-size: 26px; opacity: 0.32; }
 .pcard-imgwrap.is-empty { background: var(--ahk-surface); }
+/* Shop cards were the one grid that never got a dark-mode pass -- they
+   stayed bright white on the dark page, which is exactly the flash of
+   white you don't want at night. They follow the card token now, keeping
+   the green cast that the light theme gives them. */
+@media (prefers-color-scheme: dark) {
+  .pcard { background: var(--ahk-card); border-color: #3f4b39; }
+  .pcard-imgwrap { background: var(--ahk-surface-2); }
+  .pcard-chip { color: var(--ahk-green); background: rgba(143,174,134,0.14); border-color: rgba(143,174,134,0.3); }
+  .pcard h3 { color: var(--ahk-heading); }
+}
 
 /* The impact portrait, sized as the mockup has it: near the full column
    width with an arched top, rather than a small circle above the figures.

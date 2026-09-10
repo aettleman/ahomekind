@@ -79,7 +79,7 @@
 <button class="shop-tab" data-cat="home-goods">a home kind goods</button>
 </div>
 
-<p class="shop-disclosure" id="shopDisclosure"><span>As an Amazon Associate I earn from qualifying purchases made through these links, at no extra cost to you. It doesn't change what gets listed &mdash; everything here still has to pass the brand check first.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
+<p class="shop-disclosure" id="shopDisclosure"><span>Some of these are Amazon Associate links, so I earn from qualifying purchases at no extra cost to you. A Home Kind goods are my own. Either way it doesn't change what gets listed &mdash; everything here still has to pass the brand check first.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
 
 <div class="pgrid" id="shopProducts">
 <p class="kswap-loading" id="shopLoading">loading products&hellip;</p>
@@ -130,7 +130,7 @@ try { localStorage.setItem('ahk-shop-disclosure-dismissed', '1'); } catch(e) {}
 })();
 
 var GROUP_KEYS = { "beauty": ["skincare", "makeup", "haircare"] };
-var CATEGORY_LABELS = { skincare: "skincare", makeup: "makeup", haircare: "haircare", household: "household &amp; cleaning" };
+var CATEGORY_LABELS = { skincare: "skincare", makeup: "makeup", haircare: "haircare", household: "household &amp; cleaning", "home-goods": "a home kind goods" };
 
 function escapeHtml(s){
 return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;").split("'").join("&#x27;");
@@ -144,6 +144,21 @@ return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split(
 // "shop on X" link, same rule as everywhere else on the site. Setting
 // active:false on a product hides it entirely -- for a rejected
 // programme, an expired link, or a product that's no longer suitable.
+// The shop button used to be hard-coded to "shop on amazon", which was
+// fine while Amazon was the only retailer and wrong the moment it wasn't.
+// It now reads the product's own network, so A Home Kind's Teemill merch
+// says "shop on teemill" and anything added later gets a sensible label
+// rather than sending people somewhere the button didn't name.
+var CTA_LABELS = { "amazon-associates": "shop on amazon", "own-store": "shop on teemill" };
+function ctaLabel(p){
+return CTA_LABELS[p.network] || (p.retailer ? ("shop at " + escapeHtml(String(p.retailer).toLowerCase())) : "shop now");
+}
+// nofollow is the right signal for a paid affiliate link. A Home Kind's own
+// shop isn't one -- it's our store -- so those links are plain outbound.
+function ctaRel(p){
+return p.network === "own-store" ? "noopener" : "nofollow noopener";
+}
+
 function pcardHTML(p){
 var catLabel = CATEGORY_LABELS[p.category] || escapeHtml(p.category);
 var name = escapeHtml(p.name);
@@ -159,16 +174,19 @@ out += url ? ("<a href=\"" + url + "\" class=\"pcard-imgwrap\" rel=\"nofollow no
 out += "<span class=\"pcard-chip\">" + catLabel + "</span>";
 out += "<h3>" + (url ? ("<a href=\"" + url + "\" rel=\"nofollow noopener\" target=\"_blank\">" + name + "</a>") : name) + "</h3>";
 out += "<p class=\"pcard-brand\">" + brand + "</p>";
-if(url) out += "<a href=\"" + url + "\" class=\"btn\" rel=\"nofollow noopener\" target=\"_blank\">shop on amazon</a>";
+if(url) out += "<a href=\"" + url + "\" class=\"btn\" rel=\"" + ctaRel(p) + "\" target=\"_blank\">" + ctaLabel(p) + "</a>";
 out += "</div>";
 return out;
 }
 
+// The "reserved for future launches" placeholder lived here until the
+// A Home Kind goods tab had real products in it. It now only appears if
+// that tab is somehow empty, so the tab is never a dead end.
 var comingSoonHTML = "" +
 "<div class=\"pcard pcard-soon\" data-category=\"home-goods\">" +
 "<div class=\"pcard-imgwrap pcard-imgwrap-soon\">&#127968;</div>" +
 "<span class=\"pcard-chip\">a home kind goods</span>" +
-"<h3>reserved for future launches</h3>" +
+"<h3>more on the way</h3>" +
 "<p class=\"pcard-brand\">coming soon</p>" +
 "</div>";
 
@@ -176,7 +194,8 @@ var grid = document.getElementById("shopProducts");
 
 fetch("data/products.json").then(function(r){ return r.json(); }).then(function(products){
 var visible = (products || []).filter(function(p){ return p.active !== false; });
-grid.innerHTML = visible.map(pcardHTML).join("") + comingSoonHTML;
+var hasGoods = visible.some(function(p){ return p.category === "home-goods"; });
+grid.innerHTML = visible.map(pcardHTML).join("") + (hasGoods ? "" : comingSoonHTML);
 initFilters();
 }).catch(function(){
 grid.innerHTML = "<p class=\"pgrid-empty\">Couldn't load the shop right now &mdash; try refreshing.</p>" + comingSoonHTML;
