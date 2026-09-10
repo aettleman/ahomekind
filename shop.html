@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910z">
+<link rel="stylesheet" href="css/style.css?v=20260910aa">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -70,8 +70,6 @@
 <p>Cruelty-free and vegan things worth buying, picked from the brand check rather than from whoever pays the most.</p>
 </div>
 </div>
-<p class="shop-disclosure">As an Amazon Associate I earn from qualifying purchases made through these links, at no extra cost to you. It doesn't change what gets listed: everything here has to pass the brand check first.</p>
-
 <div class="shop-tabbar" id="shopTabbar">
 <button class="shop-tab active" data-cat="all">all</button>
 <button class="shop-tab" data-cat="skincare">skincare</button>
@@ -80,6 +78,8 @@
 <button class="shop-tab" data-cat="household">household &amp; cleaning</button>
 <button class="shop-tab" data-cat="home-goods">a home kind goods</button>
 </div>
+
+<p class="shop-disclosure" id="shopDisclosure"><span>As an Amazon Associate I earn from qualifying purchases made through these links, at no extra cost to you. It doesn't change what gets listed &mdash; everything here still has to pass the brand check first.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
 
 <div class="pgrid" id="shopProducts">
 <p class="kswap-loading" id="shopLoading">loading products&hellip;</p>
@@ -105,7 +105,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="./js/nav.js?v=20260910z"></script>
+<script src="./js/nav.js?v=20260910aa"></script>
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
@@ -113,6 +113,22 @@
 // still used by start-here.html) onto the set of tabs/cards it actually
 // covers -- kept from the old category-grid version so those links
 // still work with the new tab bar.
+// The Amazon disclosure is small print, not a headline -- it stays
+// dismissed (remembered per-browser) once someone's closed it, since
+// nobody needs to read it twice.
+(function(){
+var d = document.getElementById('shopDisclosure');
+var closeBtn = document.getElementById('shopDisclosureClose');
+if (!d || !closeBtn) { return; }
+try {
+if (localStorage.getItem('ahk-shop-disclosure-dismissed') === '1') { d.hidden = true; }
+} catch(e) {}
+closeBtn.addEventListener('click', function(){
+d.hidden = true;
+try { localStorage.setItem('ahk-shop-disclosure-dismissed', '1'); } catch(e) {}
+});
+})();
+
 var GROUP_KEYS = { "beauty": ["skincare", "makeup", "haircare"] };
 var CATEGORY_LABELS = { skincare: "skincare", makeup: "makeup", haircare: "haircare", household: "household &amp; cleaning" };
 

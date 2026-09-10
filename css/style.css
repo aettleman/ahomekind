@@ -1495,10 +1495,12 @@ body { animation: pageFadeIn 0.22s ease; }
 /* Affiliate disclosure on the shop. Honest but not shouting -- it was
    11px italic grey, which read as something being hidden in the small
    print rather than stated plainly. */
-.shop-disclosure { font-size: 12.5px; line-height: 1.7; color: var(--ahk-text-muted); background: var(--ahk-surface); border: 0.5px solid var(--ahk-border-soft); border-radius: 12px; padding: 13px 16px; margin: 0 0 24px; }
+.shop-disclosure { display: flex; align-items: flex-start; gap: 8px; font-size: 11px; line-height: 1.55; color: var(--ahk-text-muted); opacity: 0.8; margin: -6px 0 20px; padding: 0 2px; }
+.shop-disclosure span { flex: 1; }
+.shop-disclosure-close { flex: none; border: 0; background: none; cursor: pointer; font-size: 15px; line-height: 1; color: var(--ahk-text-muted); padding: 0 2px; opacity: 0.7; }
+.shop-disclosure-close:hover { opacity: 1; }
 /* Context that used to be crammed into the page's sub-line. */
-.ic-why { margin: 0 0 22px; }
-.ic-why p { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text); margin: 0; }
+.ic-why-note { font-size: 11.5px; line-height: 1.55; color: var(--ahk-text-muted); opacity: 0.85; text-align: center; max-width: 380px; margin: 0 auto 18px; }
 /* Retailer product shots go stale as listings rotate -- a dead one should
    look like an empty shelf slot, not a broken page. */
 .pcard-imgwrap img[hidden] { display: none; }

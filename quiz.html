@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910z">
+<link rel="stylesheet" href="css/style.css?v=20260910aa">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -170,15 +170,6 @@ var questions = [
   }
 },
 {
-  key: 'q3',
-  q: "how dramatic are you feeling today?",
-  options: [
-    { label: "baby steps", icon: "🐣", value: "small" },
-    { label: "steady and sensible", icon: "🌱", value: "medium" },
-    { label: "burn it all down", icon: "🔥", value: "large" }
-  ]
-},
-{
   key: 'q4',
   q: "okay, what's the dealbreaker?",
   options: [
@@ -186,16 +177,6 @@ var questions = [
     { label: "I want it where I already shop", icon: "🛒", value: "accessible" },
     { label: "I want the good stuff", icon: "✨", value: "quality" },
     { label: "I care most about the ethics", icon: "🌱", value: "ethics" }
-  ]
-},
-{
-  key: 'q5',
-  q: "how much do you know already?",
-  options: [
-    { label: "completely new", icon: "🐣", value: "new" },
-    { label: "know the basics", icon: "🌱", value: "basics" },
-    { label: "already check brands", icon: "🔎", value: "advanced" },
-    { label: "no idea", icon: "🤷‍♀️", value: "noidea" }
   ]
 }
 ];
@@ -374,7 +355,6 @@ function renderResults() {
   }
 
   var result = getRecommendations();
-  var beginner = (answers.q5 === 'new' || answers.q5 === 'noidea');
   var catLabels = result.cats.map(categoryLabel).join(' / ');
 
   var html = '<div class="card" style="border-color:#6f8768;">';
@@ -386,7 +366,7 @@ function renderResults() {
   else if (answers.q4 === 'budget') { intro += " I've kept these budget-friendly, since that's the priority."; }
   else if (answers.q4 === 'quality') { intro += " I've leaned toward the higher-end picks since you want the good stuff."; }
   else if (answers.q4 === 'accessible') { intro += " I've tried to prioritise names you can pick up where you already shop."; }
-  if (beginner) { intro += " Since you're just getting started: \"cruelty-free\" means not tested on animals, \"vegan\" means no animal-derived ingredients at all - a brand can be one without the other."; }
+  intro += " Quick reminder: \"cruelty-free\" means not tested on animals, \"vegan\" means no animal-derived ingredients at all - a brand can be one without the other.";
   html += '<p style="margin-bottom:18px;">' + intro + '</p>';
 
   result.picks.forEach(function(b) {
@@ -435,7 +415,7 @@ render();
 </form>
 </div>
 <footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/nav.js?v=20260910z"></script>
+<script src="js/nav.js?v=20260910aa"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
