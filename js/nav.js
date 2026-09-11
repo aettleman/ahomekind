@@ -462,7 +462,6 @@ sheet.innerHTML =
    so they live on those pages now and this list is two rows shorter. */
 '<a href="/ingredient-check.html">ingredient checker</a>' +
 '<a href="/swap-guide.html">swap guide</a>' +
-'<a href="/quiz.html">take the quiz</a>' +
 '<a href="/my-swaps.html">my swaps</a>' +
 '<a href="/impact.html">your impact</a>' +
 '<a href="/learn.html">learn</a>' +
