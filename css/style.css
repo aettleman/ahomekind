@@ -1424,6 +1424,10 @@ body { animation: pageFadeIn 0.22s ease; }
 .impact-lede { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.4; color: var(--ahk-heading); text-align: center; max-width: 24ch; margin: 0 auto 30px; text-wrap: balance; }
 @media (min-width: 560px) { .impact-lede { font-size: 25px; } }
 
+/* Headings inside the mobile "more" sheet. */
+.bn-sheet-group { font-family:'Karla',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--ahk-warm,#a97a52); margin:16px 0 2px; padding:0 2px; }
+.bn-sheet-group:first-child { margin-top:0; }
+
 /* ============================================================
    "KNOW SOMETHING THE SCAN DOESN'T" REPORT FORM
    ============================================================

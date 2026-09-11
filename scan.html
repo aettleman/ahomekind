@@ -63,6 +63,63 @@
 .scan-tagline { display:inline-flex; align-items:center; gap:7px; background:rgba(244,239,226,0.94); border-radius:30px; padding:9px 18px; margin:0 auto 16px; font-family:'Cormorant Garamond',serif; font-size:14.5px; color:#3d4a3a; letter-spacing:0.2px; }
 .scan-tagline svg { flex:none; }
 
+/* ============================================================
+   IMMERSIVE CAMERA MODE  (body.scan-live)
+   ============================================================
+   Once the camera is actually running, the page gets out of the way:
+   header, nav, page title, manual entry and footer all hide, the video
+   fills the screen, and the only things left are the framing guide and
+   the shutter. The class is added when the camera opens and removed the
+   moment it closes, so the normal page is always what you come back to. */
+body.scan-live { overflow:hidden; background:#14180f; }
+body.scan-live .site-header,
+body.scan-live .pagehead,
+body.scan-live .ahk-counter-bubble,
+body.scan-live .ahk-back-link,
+body.scan-live .ahk-share-btn,
+body.scan-live .bottom-nav,
+body.scan-live #addHome,
+body.scan-live .scan-or,
+body.scan-live .manual,
+body.scan-live .scan-shell-links,
+body.scan-live .scan-tagline,
+body.scan-live .quiet-details,
+body.scan-live .newsletter,
+body.scan-live .site-footer,
+body.scan-live .ambient-counter,
+body.scan-live #status,
+body.scan-live #results,
+body.scan-live .barcode-guide,
+body.scan-live .barcode-guide-numbers { display:none !important; }
+
+body.scan-live .scan-frame { position:fixed; inset:0; max-width:none; margin:0; padding:0; border-radius:0; background:#14180f; z-index:900; }
+body.scan-live .camera-wrap { position:fixed; inset:0; max-width:none; margin:0; }
+body.scan-live #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:#14180f; }
+
+/* The framing guide: four corner brackets rather than a dashed box --
+   less like a form field, more like a camera. */
+.scan-brackets, .scan-live-hint, .scan-live-arrow, .scan-live-card { display:none; }
+body.scan-live .scan-brackets { display:block; position:fixed; left:44px; right:44px; top:50%; transform:translateY(-62%); height:150px; z-index:920; pointer-events:none; }
+body.scan-live .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 140px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
+body.scan-live .scan-live-arrow { display:block; position:fixed; left:calc(50% - 92px); top:calc(50% - 104px); width:64px; height:52px; z-index:920; pointer-events:none; opacity:0.92; }
+
+/* The card the shutter sits on, carrying the line. */
+body.scan-live .scan-live-card { display:flex; position:fixed; left:50%; transform:translateX(-50%); bottom:34px; width:min(215px, 62vw); height:124px; background:var(--ahk-bg,#faf5eb); border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,0.42); flex-direction:column; align-items:center; justify-content:center; gap:5px; z-index:910; }
+body.scan-live .scan-live-card p { font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--ahk-heading,#3d4a3a); margin:0; letter-spacing:0.2px; }
+
+/* The three controls become a shutter plus two glass chips. */
+body.scan-live .camera-controls { position:static; display:block; }
+body.scan-live #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:124px; width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#f4efe2; z-index:930; }
+body.scan-live #snapBtn:active { transform:translateX(-50%) scale(0.95); }
+body.scan-live #stopBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
+body.scan-live #torchBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); right:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
+body.scan-live #torchHint { position:fixed; left:20px; right:20px; bottom:174px; z-index:930; }
+@media (max-height:640px){
+  body.scan-live .scan-live-card { height:104px; bottom:24px; }
+  body.scan-live #snapBtn { bottom:104px; }
+  body.scan-live .scan-live-hint { top:calc(50% - 124px); font-size:19px; }
+}
+
 
 /* The scan control: one photographic block, not a drawn barcode plus a
    button underneath. JS toggles display between "flex" and "none" when the
@@ -318,6 +375,15 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <video id="reader" muted playsinline></video>
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
 <p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
+<!-- Only visible once the camera is live (see body.scan-live). -->
+<p class="scan-live-hint" aria-hidden="true">line up the barcode</p>
+<svg class="scan-live-arrow" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M52 7C35 7 20 17 15 36" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M15 36l-2.5-10.5M15 36l10.5-3.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg class="scan-brackets" viewBox="0 0 212 132" preserveAspectRatio="none" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,0.94)" stroke-width="2.6" stroke-linecap="round"><path d="M2 34V12a10 10 0 0 1 10-10h22"/><path d="M178 2h22a10 10 0 0 1 10 10v22"/><path d="M210 98v22a10 10 0 0 1-10 10h-22"/><path d="M34 130H12a10 10 0 0 1-10-10V98"/></g></svg>
+<div class="scan-live-card" aria-hidden="true">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>
+<p>point. scan. know.</p>
+<svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a876" stroke="#c9a876" stroke-width="1.6"><path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9A4.6 4.6 0 0 1 20.8 8.6Z"/></svg>
+</div>
 <p id="torchHint" style="display:none;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div id="cameraControls" class="camera-controls" style="display:none;">
 <button type="button" id="snapBtn" class="snap">&#128247; snap</button>
@@ -911,6 +977,10 @@ el("torchBtn").addEventListener("click", toggleTorch);
 
 var barcodeCaptured = false;
 var rotateTimer = null;
+// Kept so leaving immersive mode restores the ordinary labelled buttons.
+var SNAP_LABEL = el("snapBtn").innerHTML;
+var STOP_LABEL = el("stopBtn").innerHTML;
+var TORCH_LABEL = el("torchBtn").innerHTML;
 function stopCamera(){
 if(codeReader){ try { codeReader.reset(); } catch(e){} }
 if(rotateTimer){ clearInterval(rotateTimer); rotateTimer = null; }
@@ -918,6 +988,11 @@ el("startBtn").style.display = "flex";
 el("cameraWrap").style.display = "none";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "flex";
 el("cameraControls").style.display = "none";
+// Back out of immersive mode and give the buttons their words back.
+document.body.classList.remove("scan-live");
+el("snapBtn").innerHTML = SNAP_LABEL;
+el("stopBtn").innerHTML = STOP_LABEL;
+el("torchBtn").innerHTML = TORCH_LABEL;
 el("torchBtn").style.display = "none";
 el("torchHint").style.display = "none";
 torchOn = false;
@@ -1028,6 +1103,12 @@ el("startBtn").style.display = "none";
 el("cameraWrap").style.display = "block";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "none";
 el("cameraControls").style.display = "flex";
+// Immersive mode: the camera becomes the page. Words on the buttons are
+// replaced by icons, since at this size they read as controls, not labels.
+document.body.classList.add("scan-live");
+el("snapBtn").innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.4"/><path d="M8 7l1.6-3h4.8L16 7"/><circle cx="12" cy="13.5" r="3.2"/></svg>';
+el("stopBtn").innerHTML = "&#10005;";
+el("torchBtn").innerHTML = "&#9889;";
 setupTorchButton();
 rotateTimer = setInterval(tryRotatedDecode, 2500);
 }).catch(function(){
@@ -1039,6 +1120,9 @@ setStatus("Camera scanning is not available here.");
 }
 el("startBtn").addEventListener("click", startScan);
 el("stopBtn").addEventListener("click", stopCamera);
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape" && document.body.classList.contains("scan-live")) stopCamera();
+});
 
 // A "scan again" button lives at the top of every result (found or not)
 // so a wrong or empty scan doesn't leave someone scrolling back up to

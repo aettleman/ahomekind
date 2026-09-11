@@ -458,16 +458,20 @@ sheet.setAttribute('aria-modal', 'true');
 sheet.setAttribute('aria-label', 'more pages');
 sheet.innerHTML =
 '<div class="bn-sheet-inner">' +
-/* Shelf scan and "what's changed" used to sit here as peers. Both are
-   second steps rather than destinations -- you scan a shelf after reaching
-   for the scanner, you check what's changed after using the brand check --
-   so they live on those pages now and this list is two rows shorter. */
+/* Grouped rather than one long list of ten links: four short headed
+   groups are far easier to scan than a pile, and it gives the newer
+   pages (ingredient checker, food, fashion) somewhere obvious to sit. */
+'<p class="bn-sheet-group">check something</p>' +
 '<a href="/ingredient-check.html">ingredient checker</a>' +
+'<a href="/brand-watch.html">what\'s changed</a>' +
+'<p class="bn-sheet-group">explore</p>' +
 '<a href="/swap-guide.html">swap guide</a>' +
 '<a href="/food.html">food &amp; kitchen</a>' +
 '<a href="/fashion.html">fashion &amp; accessories</a>' +
+'<p class="bn-sheet-group">yours</p>' +
 '<a href="/my-swaps.html">my swaps</a>' +
 '<a href="/impact.html">your impact</a>' +
+'<p class="bn-sheet-group">read</p>' +
 '<a href="/learn.html">learn</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/about.html">about</a>' +
