@@ -132,8 +132,8 @@
 <span class="dd-m">
 <a href="brand-watch.html">what's changed</a>
 <a href="swap-guide.html">swap guide</a>
-<a href="swap-guide.html#food">food &amp; kitchen</a>
-<a href="swap-guide.html#fashion">fashion &amp; accessories</a>
+<a href="food.html">food &amp; kitchen</a>
+<a href="fashion.html">fashion &amp; accessories</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
 </span></span>
@@ -1767,6 +1767,19 @@ saveState({ mode: 'search', searchQuery: q });
   restoringState = false;
 })();
 </script>
+
+<!-- A quiet sign-off at the foot of the directory: after 800-odd brands and a
+     lot of small print, one warm thing that isn't a verdict. -->
+<div class="rabbit-stamp">
+<img src="images/rabbit-approved.jpg" alt="A rabbit looking over the edge of a woven basket" loading="lazy" onerror="this.hidden=true">
+<p>Rabbit-approved. &#128007;</p>
+</div>
+<style>
+.rabbit-stamp { display:flex; align-items:center; gap:18px; background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:22px; padding:20px 24px; margin:38px auto 8px; max-width:520px; }
+.rabbit-stamp img { width:76px; height:76px; border-radius:50%; object-fit:cover; flex:none; }
+.rabbit-stamp p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; line-height:1.35; color:var(--ahk-warm-deep,#8a6340); margin:0; }
+@media (max-width:480px){ .rabbit-stamp { gap:14px; padding:16px 18px; } .rabbit-stamp img { width:60px; height:60px; } .rabbit-stamp p { font-size:19px; } }
+</style>
 </main>
 <div class="newsletter">
 <p class="label3">stay in the loop</p>

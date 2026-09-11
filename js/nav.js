@@ -39,6 +39,8 @@ var PAGE_LABELS = {
 'my-swaps.html': 'my swaps',
 'brand-watch.html': "what's changed",
 'swap-guide.html': 'swap guide',
+'food.html': 'food & kitchen',
+'fashion.html': 'fashion & accessories',
 'about.html': 'about'
 };
 
@@ -462,6 +464,8 @@ sheet.innerHTML =
    so they live on those pages now and this list is two rows shorter. */
 '<a href="/ingredient-check.html">ingredient checker</a>' +
 '<a href="/swap-guide.html">swap guide</a>' +
+'<a href="/food.html">food &amp; kitchen</a>' +
+'<a href="/fashion.html">fashion &amp; accessories</a>' +
 '<a href="/my-swaps.html">my swaps</a>' +
 '<a href="/impact.html">your impact</a>' +
 '<a href="/learn.html">learn</a>' +

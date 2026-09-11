@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Food &amp; Kitchen - a home kind</title>
+<meta name="description" content="Simple vegan recipes, easy dairy and egg swaps, and the animal-derived ingredients worth knowing about.">
+<meta property="og:title" content="Food &amp; Kitchen">
+<meta property="og:description" content="Simple vegan recipes, easy dairy and egg swaps, and the animal-derived ingredients worth knowing about.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahomekind.com/food.html">
+<meta property="og:image" content="https://ahomekind.com/images/food-hero.jpg">
+<meta property="og:site_name" content="a home kind">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260911a">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid var(--ahk-warm,#a97a52); padding:4px 0 4px 20px; margin:26px 0; }
+.mat-drop { border-top:1px solid var(--ahk-border-soft); margin-top:10px; padding-top:10px; }
+.mat-drop summary { cursor:pointer; font-size:12px; font-weight:700; letter-spacing:0.4px; color:var(--ahk-green); list-style:none; display:flex; align-items:center; gap:7px; }
+.mat-drop summary::-webkit-details-marker { display:none; }
+.mat-drop summary::after { content:'+'; margin-left:auto; font-size:15px; font-weight:400; opacity:0.7; }
+.mat-drop[open] summary::after { content:'\2013'; }
+.mat-drop summary:hover { color:var(--ahk-heading); }
+.mat-drop p { font-size:13px; line-height:1.75; color:var(--ahk-text); margin:9px 0 0; }
+.mat-drop.is-good summary { color:#4d6b4f; }
+.mat-drop.is-flag summary { color:#8a4a43; }
+.page-photo { display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px; }
+.tile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 34px; }
+.ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; }
+.ptile img { width:100%; height:100%; object-fit:cover; display:block; }
+.ptile span { position:absolute; inset:0; display:flex; align-items:flex-end; padding:12px 14px; background:linear-gradient(0deg, rgba(47,58,45,0.82), rgba(47,58,45,0.06) 62%); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:13.5px; line-height:1.25; letter-spacing:0.2px; }
+.ptile:hover img { transform:scale(1.03); }
+.ptile img { transition:transform 0.4s ease; }
+@media (prefers-reduced-motion: reduce){ .ptile img { transition:none; } }
+.ptile.soon { border:1.5px dashed var(--ahk-border); }
+.ptile.soon span { position:static; inset:auto; height:100%; align-items:center; justify-content:center; text-align:center; background:none; color:var(--ahk-text-muted); font-size:12.5px; }
+.route { display:flex; align-items:center; justify-content:space-between; gap:14px; border-radius:18px; padding:18px 22px; margin-bottom:11px; text-decoration:none; border:1px solid; }
+.route b { font-family:'Karla',sans-serif; font-size:14.5px; font-weight:700; }
+.route i { font-style:normal; font-size:18px; }
+.route.sage { background:#e8eee1; border-color:#d6e0cb; }
+.route.sage b, .route.sage i { color:#3a5a3c; }
+.route.terra { background:#faeee6; border-color:#f0d9c9; }
+.route.terra b, .route.terra i { color:#8a5a3a; }
+.route.blush { background:#f8eaee; border-color:#eed5dd; }
+.route.blush b, .route.blush i { color:#8a4a63; }
+.route:hover { filter:brightness(0.98); }
+.rcards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:18px 0 6px; align-items:start; }
+.rcard { background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:20px; overflow:hidden; }
+.rcard img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+.rcard-body { padding:16px 18px 18px; }
+.rcard-cat { display:inline-block; font-size:10px; letter-spacing:1.4px; text-transform:uppercase; font-weight:700; color:var(--ahk-warm-deep,#8a6340); background:var(--ahk-warm-soft,#fbf3ea); border-radius:20px; padding:4px 10px; margin-bottom:9px; }
+.rcard h3 { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; color:var(--ahk-heading); margin:0 0 7px; }
+.rcard p { font-size:13px; line-height:1.7; color:var(--ahk-text); margin:0; }
+.rcard details { margin-top:12px; }
+.rcard summary { cursor:pointer; font-size:12px; font-weight:700; color:var(--ahk-green); list-style:none; }
+.rcard summary::-webkit-details-marker { display:none; }
+.rcard summary::after { content:' +'; }
+.rcard details[open] summary::after { content:' \2013'; }
+.rcard details p { margin-top:9px; font-size:12.5px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+</span></span>
+<a href="ingredient-check.html">ingredient checker</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="learn.html">learn</a>
+<a href="impact.html">your impact</a>
+<a href="my-swaps.html">my swaps</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-watch.html">what's changed</a>
+<a href="swap-guide.html">swap guide</a>
+<a href="food.html">food &amp; kitchen</a>
+<a href="fashion.html">fashion &amp; accessories</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="page-shell" id="main">
+<div class="pagehead">
+<h1>food &amp; kitchen</h1>
+</div>
+
+<img class="page-photo" src="images/food-hero.jpg" alt="A wooden kitchen counter with herbs, a lemon and a jar of lentils" loading="eager" onerror="this.hidden=true">
+
+<h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:30px; line-height:1.15; color:var(--ahk-heading); margin:0 0 6px;">what are you hungry for?</h2>
+<p style="font-size:14px; line-height:1.7; color:var(--ahk-text-muted); margin:0;">Four recipes to start with, and more each month. No meal plans, no lectures.</p>
+
+<div class="tile-grid">
+<a class="ptile" href="#recipes"><img src="images/food-quick-easy.jpg" alt="A bowl of lentil dal with flatbread" loading="lazy"><span>quick &amp; easy</span></a>
+<a class="ptile" href="#recipes"><img src="images/food-comfort.jpg" alt="A vegetable pie with a golden crust" loading="lazy"><span>comfort food</span></a>
+<a class="ptile" href="#recipes"><img src="images/food-protein.jpg" alt="A bowl of chickpeas, tofu, quinoa and greens" loading="lazy"><span>high protein</span></a>
+<a class="ptile" href="#recipes"><img src="images/food-cheap.jpg" alt="A pan of tomato and white bean stew with bread" loading="lazy"><span>cheap &amp; cheerful</span></a>
+<a class="ptile" href="#recipes"><img src="images/food-sweet.jpg" alt="Oat and dark chocolate flapjack squares" loading="lazy"><span>something sweet</span></a>
+<div class="ptile soon"><span>supplements<br>coming soon</span></div>
+</div>
+
+<p class="section-label" id="recipes">four to start with</p>
+<p>My own versions, written plainly. Swap the herbs and spices for whatever's actually in your cupboard, that's the whole point.</p>
+
+<div class="rcards">
+<article class="rcard">
+<img src="images/food-quick-easy.jpg" alt="A bowl of lentil dal with coriander and flatbread" loading="lazy">
+<div class="rcard-body">
+<span class="rcard-cat">quick &amp; easy</span>
+<h3>15-minute dal</h3>
+<p>The one I make when I can't be bothered. Red lentils, a tin of tomatoes, and whatever's in the spice drawer.</p>
+<details><summary>how I make it</summary><p>Soften an onion and a few cloves of garlic in oil. Add a heaped teaspoon each of cumin and turmeric, half a teaspoon of chilli if you like it, and stir for a minute until it smells like something. Tip in 200g red lentils, a tin of chopped tomatoes and 600ml water. Simmer 12&ndash;15 minutes until the lentils collapse, stirring now and then. Salt properly, squeeze over lemon, scatter coriander. Flatbread or rice.</p></details>
+</div>
+</article>
+
+<article class="rcard">
+<img src="images/food-comfort.jpg" alt="A rustic vegetable pie in an enamel dish" loading="lazy">
+<div class="rcard-body">
+<span class="rcard-cat">comfort food</span>
+<h3>Root vegetable pie</h3>
+<p>A Sunday thing. Most shop-bought puff pastry is accidentally vegan, so check the label and you're halfway there.</p>
+<details><summary>how I make it</summary><p>Chop a mix of carrot, parsnip, potato and leek into rough chunks and roast at 200&deg;C for 25 minutes with oil and thyme. Make a quick gravy: fry a chopped onion, stir in a tablespoon of flour, then add 400ml vegetable stock and a splash of soy sauce, whisking until it thickens. Combine with the veg in a dish, lid it with pastry, brush with a little oil or plant milk, and bake 25&ndash;30 minutes until deeply golden.</p></details>
+</div>
+</article>
+
+<article class="rcard">
+<img src="images/food-protein.jpg" alt="A bowl of roasted chickpeas, tofu, quinoa, kale and avocado" loading="lazy">
+<div class="rcard-body">
+<span class="rcard-cat">high protein</span>
+<h3>The everything bowl</h3>
+<p>Roughly 30g of protein without trying very hard, and it uses up whatever's wilting in the fridge.</p>
+<details><summary>how I make it</summary><p>Toss a drained tin of chickpeas and a block of cubed firm tofu in oil, smoked paprika and salt. Roast at 200&deg;C for 25 minutes, turning once. Meanwhile cook 80g quinoa and wilt a few handfuls of kale in the same pan you'll serve from. Pile it all up, add avocado, and dress with tahini loosened with lemon juice and water. Sesame over the top.</p></details>
+</div>
+</article>
+
+<article class="rcard">
+<img src="images/food-sweet.jpg" alt="Oat and dark chocolate flapjacks on greaseproof paper" loading="lazy">
+<div class="rcard-body">
+<span class="rcard-cat">something sweet</span>
+<h3>Oat and chocolate flapjacks</h3>
+<p>Most dark chocolate is already dairy-free. Check for milk powder and you're fine.</p>
+<details><summary>how I make it</summary><p>Melt 150g dairy-free spread with 4 tablespoons golden syrup and 75g sugar over a low heat. Stir in 300g porridge oats and press firmly into a lined tin. Bake at 180&deg;C for 20&ndash;22 minutes until the edges catch. Melt 100g dark chocolate, spoon over in stripes while still warm, and leave to set before cutting, which is the hard part.</p></details>
+</div>
+</article>
+</div>
+
+<p class="section-label" style="margin-top:38px;">the two easiest shelves to swap</p>
+<div class="rcards">
+<article class="rcard">
+<img src="images/food-dairy.jpg" alt="Oat milk being poured into a cup of tea" loading="lazy">
+<div class="rcard-body">
+<h3>Dairy</h3>
+<p>Oat holds up best in tea and coffee, soya has the most protein, almond is the lightest. Vegan cheese and butter have come a long way, so it's worth trying a few brands rather than judging the whole category on the first one.</p>
+</div>
+</article>
+<article class="rcard">
+<img src="images/food-eggs.jpg" alt="Ground flaxseed and mashed banana on a floured board" loading="lazy">
+<div class="rcard-body">
+<h3>Eggs</h3>
+<p>For baking: mashed banana, applesauce, or a flax egg (a tablespoon of ground flaxseed with three of water, left five minutes). For scrambles and omelettes: silken tofu or chickpea flour, which is closer than you'd expect.</p>
+</div>
+</article>
+</div>
+
+<p>This site is mostly about what's on the shelf next to the food - cosmetics, cleaning products, toiletries. But food is part of the same picture. Animal agriculture and animal testing aren't the same industry, but they share a root: how much weight we give to an animal's experience when it's inconvenient to us. If brand-checking your bathroom cabinet has got you thinking about the kitchen too, this is a gentle place to start - not a diet plan, just a next step if you want one.</p>
+
+<p class="pull-quote">"Is it vegan?" and "was it produced with better welfare?" are two different questions. This page is mostly about the first one.</p>
+
+<p class="section-label" style="margin-top:30px;">cruelty-free vs vegan, for food</p>
+<p>With cosmetics, cruelty-free is mostly about animal testing, and vegan is about ingredients. Food doesn't really have an animal-testing angle, so I think of it as two separate questions instead.</p>
+<p><strong>Is it vegan?</strong> This is about ingredients only - does the product contain anything derived from an animal, whether that's obvious (meat, milk, honey) or hidden (gelatine in a sweet, whey in a flavoured crisp, animal rennet in a cheese)? A product either is or isn't, based on what's actually in it.</p>
+<p><strong>Was it produced with better welfare?</strong> A completely different question, and the one free-range, cage-free and grass-fed labels are trying to answer. Those are about how an animal was kept during its life, not about whether the product contains animal-derived ingredients at all. A free-range egg still comes from a chicken; a grass-fed burger is still beef. Both questions are valid starting points, they're just not the same one, and I try to be clear about which I'm answering rather than blur the two together.</p>
+
+<p class="section-label" style="margin-top:30px;">hidden animal ingredients to watch for</p>
+<p>Tap any of these to see what it actually is. A red dot means always animal-derived; amber means it could go either way and the label won't always tell you.</p>
+<div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
+<div id="foodIngredientList" class="ingredient-watch"><p style="color:#8a8672; font-size:13px;">loading&hellip;</p></div>
+
+<p class="section-label" style="margin-top:30px;">easy swaps, no pressure</p>
+<p>You don't have to overhaul everything at once. If you're just starting to look at dairy, eggs or gelatine-based sweets, here are a few gentle starting points.</p>
+<div class="card" style="margin-top:14px;">
+<p><strong>Dairy</strong> is probably the easiest place to begin. Oat, soya, almond and pea milks work well in tea, coffee and cereal, and vegan cheeses, yoghurts and butters have come a long way, so it's worth trying a few brands to find ones you actually like rather than judging the whole category on the first one.</p>
+<p><strong>Eggs</strong> can feel trickier since they do a few different jobs in cooking. For baking, mashed banana, applesauce, or a flax or chia "egg" (ground seeds mixed with water) work well as a binder. For scrambles or omelettes, chickpea flour and tofu-based versions are surprisingly close.</p>
+<p style="margin-bottom:0;"><strong>Gelatine-based sweets</strong> are one of those hidden-ingredient areas, since gelatine turns up in jellies, marshmallows and some gummy sweets without always being obvious. Agar agar (a seaweed-based setting agent) and pectin-based sweets are easy substitutes, and a growing number of mainstream sweet brands now make gelatine-free versions. None of this needs to happen overnight - swapping one thing at a time still counts.</p>
+</div>
+
+<div class="card" style="margin-top:24px; background:var(--ahk-warm-soft,#fbf3ea); border-color:var(--ahk-warm-border,#e9d9c4);">
+<p class="rating" style="color:var(--ahk-warm-deep,#8a6340);">&#127807; a free place to start</p>
+<h3>PETA's free vegan starter kit</h3>
+<p>PETA offers a free vegan starter kit - recipes, meal plans and practical tips to get going, sent straight to you at no cost. It's their resource, not mine; I'm just pointing you to it because it's a solid, well-tested starting point.</p>
+<p style="margin-top:14px;"><a class="btn" href="https://www.peta.org/lifestyle/food/free-vegan-starter-kit/" target="_blank" rel="noopener">get PETA's free vegan starter kit &rarr;</a></p>
+</div>
+
+<p style="margin-top:28px;">If you'd rather ease in than overhaul everything at once, the <a href="impact.html">impact page</a> shows what just a few plant-based days a week actually adds up to, with honest numbers rather than dramatic ones. And if you haven't already, the <a href="quiz.html">quiz</a> and <a href="brand-check.html">brand check</a> are still the fastest way to clean up what's already in your basket.</p>
+
+</main>
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-31" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-31" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-31" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-31" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-31" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="js/nav.js?v=20260910z"></script>
+<script src="js/newsletter.js"></script>
+<script>
+fetch('data/food-ingredients.json').then(function(r){ return r.json(); }).then(function(list){
+var el = document.getElementById('foodIngredientList');
+var html = '';
+(list || []).forEach(function(item){
+html += '<details class="iw-row iw-' + item.type + '">';
+html += '<summary><span class="iw-dot" aria-hidden="true"></span>' + item.name + '</summary>';
+html += '<div class="iw-body"><span class="iw-note">' + item.note + '</span>';
+if(item.detail){
+html += '<details class="iw-why"><summary>why isn\'t this vegan?</summary><p>' + item.detail + '</p>';
+if(item.sources && item.sources.length){
+html += '<p class="iw-sources">' + item.sources.map(function(s){ return '<a href="' + s.url + '" target="_blank" rel="noopener">' + s.label + '</a>'; }).join(' &middot; ') + '</p>';
+}
+html += '</details>';
+}
+html += '</div></details>';
+});
+el.innerHTML = html || '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the list right now.</p>';
+}).catch(function(){
+document.getElementById('foodIngredientList').innerHTML = '<p style="color:#8a8672; font-size:13px;">Couldn\'t load the list right now.</p>';
+});
+</script>
+</body>
+</html>
