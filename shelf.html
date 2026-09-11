@@ -92,6 +92,23 @@
 .camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
 .camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; padding:13px 26px; }
 .camera-controls button:hover { filter:brightness(1.08); }
+
+/* Forest-green frame around the whole shelf-scan control, matching the
+   single-barcode scan page, plus a small stat summary shown once a
+   shelf photo has been read. */
+.shelf-frame { background: var(--ahk-forest); border-radius: 26px; padding: 20px 16px 22px; margin: 0 auto 22px; max-width: 460px; }
+@media (min-width: 860px) { .shelf-frame { max-width: 520px; } }
+.shelf-frame .camera-wrap { margin-bottom:14px; }
+.shelf-frame .shelf-controls, .shelf-frame .drop { color: var(--ahk-on-dark, #f4efe2); }
+.shelf-frame .live-scan-caption { color: rgba(244,239,226,0.75); }
+.shelf-frame #shelfCancel { color: #f4efe2; }
+.shelf-stats { display:flex; gap:8px; margin:0 0 16px; }
+.shelf-stat { flex:1; text-align:center; background:rgba(244,239,226,0.94); border-radius:14px; padding:10px 6px; }
+.shelf-stat-num { display:block; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:22px; line-height:1; margin-bottom:3px; }
+.shelf-stat-num.good { color:#3d5a3f; }
+.shelf-stat-num.check { color:#9e5a2a; }
+.shelf-stat-num.bad { color:#a5453d; }
+.shelf-stat-label { font-size:9px; letter-spacing:0.6px; text-transform:uppercase; color:#5c5c4f; }
 .live-pulse { display:inline-block; width:7px; height:7px; border-radius:50%; background:#c9433a; margin-right:6px; animation:livePulse 1.2s ease-in-out infinite; }
 @keyframes livePulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
 @media(prefers-reduced-motion: reduce){ .live-pulse { animation:none; } }
@@ -154,6 +171,7 @@
 
 <span class="ahk-counter-bubble" style="margin-bottom:14px;"></span>
 
+<div class="shelf-frame">
 <div class="camera-wrap" id="shelfCameraWrap">
 <video id="shelfVideo" muted playsinline autoplay></video>
 <div class="shelf-guide"><span class="shelf-guide-label">fill this box</span></div>
@@ -184,6 +202,7 @@
 </div>
 
 <button class="big-btn" id="go" style="display:none; width:100%;">read the shelf</button>
+</div><!-- /.shelf-frame -->
 
 <div class="bar" id="bar"><span id="barfill"></span></div>
 <div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
@@ -563,6 +582,14 @@ if(navigator.vibrate) navigator.vibrate(60);
 setStatus("Found " + found.length + (found.length === 1 ? " brand" : " brands") + " I know.");
 var order = {good:0, check:1, warn:2, bad:3};
 found.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
+var kindCount = found.filter(function(b){ return b.tier === "good"; }).length;
+var checkCount = found.filter(function(b){ return b.tier === "check" || b.tier === "unknown"; }).length;
+var notKindCount = found.filter(function(b){ return b.tier === "warn" || b.tier === "bad"; }).length;
+out += "<div class=\"shelf-stats\">";
+out += "<div class=\"shelf-stat\"><span class=\"shelf-stat-num good\">" + kindCount + "</span><span class=\"shelf-stat-label\">kind</span></div>";
+out += "<div class=\"shelf-stat\"><span class=\"shelf-stat-num check\">" + checkCount + "</span><span class=\"shelf-stat-label\">check</span></div>";
+out += "<div class=\"shelf-stat\"><span class=\"shelf-stat-num bad\">" + notKindCount + "</span><span class=\"shelf-stat-label\">not kind</span></div>";
+out += "</div>";
 var swapTargets = [];
 found.forEach(function(b, i){
 var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));

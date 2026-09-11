@@ -57,6 +57,12 @@
 .scan-frame .scan-or { color: var(--ahk-on-dark-muted); }
 .scan-frame .scan-shell-links a { background: rgba(244,239,226,0.94); }
 
+/* The little "point. scan. know." badge sitting at the top of the frame --
+   picked out in the same cream as the rest of the frame's controls, a
+   quiet bit of personality above the camera itself. */
+.scan-tagline { display:inline-flex; align-items:center; gap:7px; background:rgba(244,239,226,0.94); border-radius:30px; padding:9px 18px; margin:0 auto 16px; font-family:'Cormorant Garamond',serif; font-size:14.5px; color:#3d4a3a; letter-spacing:0.2px; }
+.scan-tagline svg { flex:none; }
+
 
 /* The scan control: one photographic block, not a drawn barcode plus a
    button underneath. JS toggles display between "flex" and "none" when the
@@ -306,6 +312,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 
 <div class="scan-frame">
+<p class="scan-tagline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>point. scan. know.<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2"><path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9A4.6 4.6 0 0 1 20.8 8.6Z"/></svg></p>
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
