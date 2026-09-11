@@ -133,8 +133,8 @@
 <span class="dd-m">
 <a href="brand-watch.html">what's changed</a>
 <a href="swap-guide.html">swap guide</a>
-<a href="food.html">food &amp; kitchen</a>
-<a href="fashion.html">fashion &amp; accessories</a>
+<a href="food">food &amp; kitchen</a>
+<a href="fashion">fashion &amp; accessories</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
 </span></span>
@@ -147,7 +147,7 @@
 <div class="pagehead">
 <h1>swap guide</h1>
 </div>
-<p class="xlink" style="margin-bottom:22px;">Looking for <a href="food.html">food &amp; kitchen</a> or <a href="fashion.html">fashion &amp; accessories</a>? They have their own pages now.</p>
+<p class="xlink" style="margin-bottom:22px;">Looking for <a href="food">food &amp; kitchen</a> or <a href="fashion">fashion &amp; accessories</a>? They have their own pages now.</p>
 
 <div class="hub-panel active" id="panel-swaps">
 
@@ -595,14 +595,7 @@
 <script src="js/nav.js?v=20260910z"></script>
 <script src="js/newsletter.js"></script>
 <script>
-// Food and fashion used to be tabs on this page and now have pages of
-// their own, so old links and bookmarks ending #food / #fashion are sent
-// where they meant to go.
-(function(){
-  var h = (window.location.hash || '').toLowerCase();
-  if (h === '#food') { location.replace('food.html'); }
-  else if (h === '#fashion') { location.replace('fashion.html'); }
-})();
+
 // Twenty-two swaps across seven categories used to render flat, so
 // reaching oral care meant scrolling past haircare, makeup, skincare and
 // deodorant. Pick a category and see only that.
