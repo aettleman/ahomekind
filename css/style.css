@@ -1108,6 +1108,14 @@ body { animation: pageFadeIn 0.22s ease; }
   --ahk-on-dark-muted: #c9d1c3;
   --ahk-shadow:        rgba(61,74,58,0.12);
   --ahk-shadow-strong: rgba(61,74,58,0.22);
+
+  /* A warm terracotta-pink accent, pulled in from the Swap Guide / My
+     Swaps redesign -- used sparingly as a second accent alongside the
+     forest green, mostly on pull-quotes and warm highlight cards. */
+  --ahk-warm:          #a97a52;
+  --ahk-warm-deep:     #8a6340;
+  --ahk-warm-soft:     #fbf3ea;
+  --ahk-warm-border:   #e9d9c4;
 }
 
 

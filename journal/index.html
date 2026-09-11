@@ -55,19 +55,53 @@
 
 <main class="wrap" id="main">
 <h1 style="text-align:left; font-size:22px; margin-top:30px;">journal</h1>
-<div class="card">
-<h3><a href="what-does-cruelty-free-mean.html">What Does "Cruelty-Free" Actually Mean?</a></h3>
-<p>Understanding what cruelty-free really means, the difference between testing policies and ingredients, and how to make informed choices. <a href="what-does-cruelty-free-mean.html">read more</a></p>
-</div>
-<div class="card">
-<h3><a href="cruelty-free-vs-vegan.html">Cruelty-Free vs Vegan: What's the Difference?</a></h3>
-<p>The key differences between cruelty-free and vegan, why they're not the same thing, and how to identify what matters most to you. <a href="cruelty-free-vs-vegan.html">read more</a></p>
-</div>
-<div class="card">
-<h3><a href="you-dont-have-to-be-perfect.html">You Don't Have to Be Perfect to Make Kinder Choices</a></h3>
-<p>Making ethical choices doesn't require perfection. Start small, make incremental changes, and remember that awareness is the first step toward kinder consumption. <a href="you-dont-have-to-be-perfect.html">read more</a></p>
+
+<!-- Featured article: one big card up top, magnified, with its own
+     photo. Swap the "featured" pick and image filenames below whenever
+     there's a new post to lead with. -->
+<a href="what-does-cruelty-free-mean.html" class="journal-featured">
+<span class="journal-featured-img">
+<img src="../images/journal-cruelty-free-mean.jpg" alt="" loading="eager" onerror="this.parentElement.style.display='none'">
+</span>
+<span class="journal-featured-body">
+<span class="journal-featured-tag">featured</span>
+<h2>What Does "Cruelty-Free" Actually Mean?</h2>
+<p>Understanding what cruelty-free really means, the difference between testing policies and ingredients, and how to make informed choices.</p>
+<span class="journal-featured-more">read more &rarr;</span>
+</span>
+</a>
+
+<!-- The rest, as smaller tappable cards rather than another full-width
+     list -- each with its own thumbnail once a photo's in place. -->
+<div class="journal-grid">
+<a href="cruelty-free-vs-vegan.html" class="journal-tile">
+<span class="journal-tile-img"><img src="../images/journal-cruelty-free-vs-vegan.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span>
+<span class="journal-tile-title">Cruelty-Free vs Vegan: What's the Difference?</span>
+<span class="journal-tile-more">read more &rarr;</span>
+</a>
+<a href="you-dont-have-to-be-perfect.html" class="journal-tile">
+<span class="journal-tile-img"><img src="../images/journal-you-dont-have-to-be-perfect.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span>
+<span class="journal-tile-title">You Don't Have to Be Perfect to Make Kinder Choices</span>
+<span class="journal-tile-more">read more &rarr;</span>
+</a>
 </div>
 </main>
+<style>
+.journal-featured { display:block; text-decoration:none; color:inherit; margin:24px 0 20px; border-radius:20px; overflow:hidden; background:#fff; border:0.5px solid #e4dbc7; box-shadow:0 8px 22px rgba(61,74,58,0.08); }
+.journal-featured-img { display:block; }
+.journal-featured-img img { width:100%; height:240px; object-fit:cover; display:block; background:linear-gradient(135deg,#cfd8c4,#9db08e); }
+.journal-featured-body { display:block; padding:20px 22px 24px; }
+.journal-featured-tag { display:inline-block; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#4d6b4f; background:#e2ebdc; padding:4px 11px; border-radius:20px; margin-bottom:10px; }
+.journal-featured-body h2 { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:24px; margin:0 0 8px; color:#3d4a3a; line-height:1.25; }
+.journal-featured-body p { margin:0 0 10px; font-size:14.5px; color:#5c5c4f; line-height:1.6; }
+.journal-featured-more { font-size:12.5px; font-weight:700; color:#4d6b4f; }
+.journal-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:30px; }
+@media (max-width:560px) { .journal-grid { grid-template-columns:1fr; } }
+.journal-tile { display:block; text-decoration:none; color:inherit; border-radius:16px; overflow:hidden; background:#fff; border:0.5px solid #e4dbc7; }
+.journal-tile-img img { width:100%; height:110px; object-fit:cover; display:block; background:linear-gradient(135deg,#e8d9bd,#c9a876); }
+.journal-tile-title { display:block; padding:12px 14px 2px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:15.5px; color:#3d4a3a; line-height:1.3; }
+.journal-tile-more { display:block; padding:6px 14px 14px; font-size:11.5px; font-weight:700; color:#4d6b4f; }
+</style>
 
 <div class="newsletter">
 <p class="label3">stay in the loop</p>

@@ -26,18 +26,23 @@
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
 .ms-intro { max-width:620px; }
-.ms-tally { background:#3d4a3a; border-radius:14px; padding:26px 24px; margin:24px 0 30px; text-align:center; }
-.ms-tally .num { font-family:'Cormorant Garamond',serif; font-size:52px; color:#e6d4a8; line-height:1; }
-.ms-tally .lbl { color:#c9d1c3; font-size:12.5px; letter-spacing:1px; margin-top:6px; }
+/* My Swaps gets its own warmer, slightly different vibe from the rest of
+   the site -- a personal scrapbook feel rather than the forest-green
+   "app" look used elsewhere, using the warm terracotta accent. */
+.ms-tally { background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:20px; padding:26px 24px; margin:24px 0 30px; text-align:center; }
+.ms-tally .num { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:52px; color:var(--ahk-warm,#a97a52); line-height:1; }
+.ms-tally .lbl { color:var(--ahk-warm-deep,#8a6340); font-size:12.5px; letter-spacing:1px; margin-top:6px; }
 .ms-form { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
-.ms-form input[type=text] { flex:1 1 200px; padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:10px; font:inherit; font-size:14px; }
-.ms-form select { padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:10px; font:inherit; font-size:13.5px; background:#fff; }
+.ms-form input[type=text] { flex:1 1 200px; padding:12px 14px; border:0.5px solid var(--ahk-warm-border,#e9d9c4); border-radius:10px; font:inherit; font-size:14px; }
+.ms-form select { padding:12px 14px; border:0.5px solid var(--ahk-warm-border,#e9d9c4); border-radius:10px; font:inherit; font-size:13.5px; background:#fff; }
+.ms-form .btn { background:var(--ahk-warm,#a97a52); }
+.ms-form .btn:hover { background:var(--ahk-warm-deep,#8a6340); }
 .ms-list { margin-top:24px; }
-.ms-item { display:flex; align-items:center; justify-content:space-between; gap:14px; background:#fff; border:0.5px solid #dcd2b8; border-radius:12px; padding:14px 16px; margin-bottom:10px; }
+.ms-item { display:flex; align-items:center; justify-content:space-between; gap:14px; background:#fff; border:0.5px solid var(--ahk-warm-border,#e9d9c4); border-radius:16px; padding:14px 16px; margin-bottom:10px; }
 .ms-item-main { font-size:14px; color:#3d4a3a; }
 .ms-item-cat { font-size:11px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-top:2px; }
 .ms-item-date { font-size:11.5px; color:#8a8672; }
-.ms-remove { background:none; border:0; color:#c98a3a; cursor:pointer; font-size:12.5px; padding:4px; }
+.ms-remove { background:none; border:0; color:var(--ahk-warm-deep,#8a6340); cursor:pointer; font-size:12.5px; padding:4px; }
 .ms-empty { color:#8a8672; font-size:13.5px; padding:20px 0; }
 .ms-note { font-size:12.5px; color:#8a8672; margin-top:6px; }
 </style>
