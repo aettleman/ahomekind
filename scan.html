@@ -56,9 +56,7 @@
 .scan-frame .camera-wrap { margin-bottom: 16px; }
 .scan-frame .scan-or { color: var(--ahk-on-dark-muted); }
 .scan-frame .scan-shell-links a { background: rgba(244,239,226,0.94); }
-@media (prefers-color-scheme: dark) {
-  .scan-frame { background: var(--ahk-forest-deep); }
-}
+
 
 /* The scan control: one photographic block, not a drawn barcode plus a
    button underneath. JS toggles display between "flex" and "none" when the
@@ -76,9 +74,7 @@
 .scan-cta:focus-visible { outline:3px solid var(--ahk-gold); outline-offset:3px; }
 @media(prefers-reduced-motion: reduce){ .scan-cta { transition:none; } }
 @media(max-width:480px){ .scan-cta { height:180px; } }
-@media (prefers-color-scheme: dark) {
-  .scan-cta { background: var(--ahk-heading); }
-}
+
 
 .scan-or { color:var(--ahk-text-muted); font-size:11px; letter-spacing:2px; text-transform:uppercase; margin:0 0 16px; }
 .scan-shell .manual { display:flex; gap:8px; max-width:100%; margin:0 auto 16px; }
