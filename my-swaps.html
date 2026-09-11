@@ -26,23 +26,37 @@
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
 .ms-intro { max-width:620px; }
-/* My Swaps gets its own warmer, slightly different vibe from the rest of
-   the site -- a personal scrapbook feel rather than the forest-green
-   "app" look used elsewhere, using the warm terracotta accent. */
-.ms-tally { background:var(--ahk-warm,#a97a52); border-radius:20px; padding:30px 24px; margin:24px 0 30px; text-align:center; box-shadow:0 10px 26px rgba(138,99,64,0.28); }
-.ms-tally .num { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:56px; color:#fff; line-height:1; }
-.ms-tally .lbl { color:rgba(255,255,255,0.85); font-size:12.5px; letter-spacing:1.5px; text-transform:uppercase; margin-top:8px; }
+
+/* My Swaps has its own world: warm terracotta rather than the forest green
+   used across the rest of the site, a progress ring instead of a number in
+   a box, and the swaps as a grid of cards rather than a list of rows. It
+   should feel like a personal scrapbook, not an admin screen. */
+.ms-hero { display:flex; align-items:center; gap:22px; flex-wrap:wrap; background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:24px; padding:26px 28px; margin:24px 0 26px; }
+.ms-ring { position:relative; width:104px; height:104px; flex:none; }
+.ms-ring svg { display:block; }
+.ms-ring-num { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:34px; color:var(--ahk-warm-deep,#8a6340); line-height:1; }
+.ms-hero-copy { flex:1 1 220px; }
+.ms-hero-copy .lbl { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; line-height:1.2; color:var(--ahk-warm-deep,#8a6340); margin:0 0 6px; }
+.ms-hero-copy .sub { font-size:13px; line-height:1.6; color:#a4896f; margin:0; }
+
 .ms-form { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
-.ms-form input[type=text] { flex:1 1 200px; padding:12px 14px; border:0.5px solid var(--ahk-warm-border,#e9d9c4); border-radius:10px; font:inherit; font-size:14px; }
-.ms-form select { padding:12px 14px; border:0.5px solid var(--ahk-warm-border,#e9d9c4); border-radius:10px; font:inherit; font-size:13.5px; background:#fff; }
+.ms-form input[type=text] { flex:1 1 200px; padding:12px 14px; border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:12px; font:inherit; font-size:14px; background:#fff; }
+.ms-form select { padding:12px 14px; border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:12px; font:inherit; font-size:13.5px; background:#fff; }
 .ms-form .btn { background:var(--ahk-warm,#a97a52); }
 .ms-form .btn:hover { background:var(--ahk-warm-deep,#8a6340); }
-.ms-list { margin-top:24px; }
-.ms-item { display:flex; align-items:center; justify-content:space-between; gap:14px; background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-left:4px solid var(--ahk-warm,#a97a52); border-radius:16px; padding:14px 16px; margin-bottom:10px; }
-.ms-item-main { font-size:14px; color:#3d4a3a; }
-.ms-item-cat { font-size:11px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-top:2px; }
-.ms-item-date { font-size:11.5px; color:#8a8672; }
-.ms-remove { background:none; border:0; color:var(--ahk-warm-deep,#8a6340); cursor:pointer; font-size:12.5px; padding:4px; }
+
+.ms-list { margin-top:26px; display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:14px; align-items:start; }
+.ms-card { position:relative; background:#fff; border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:18px; overflow:hidden; }
+.ms-card-top { height:78px; position:relative; }
+.ms-card-body { padding:12px 14px 14px; }
+.ms-card-main { font-size:13.5px; line-height:1.4; color:#3d4a3a; font-weight:600; margin:0 0 7px; word-break:break-word; }
+.ms-card-cat { display:inline-block; font-size:10px; letter-spacing:0.6px; text-transform:uppercase; font-weight:700; color:var(--ahk-warm-deep,#8a6340); background:var(--ahk-warm-soft,#fbf3ea); border-radius:20px; padding:4px 10px; }
+.ms-card-date { font-size:10.5px; color:#a4896f; margin:8px 0 0; }
+.ms-remove { position:absolute; top:8px; right:8px; width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.86); border:0; color:#8a6340; cursor:pointer; font-size:13px; line-height:1; display:flex; align-items:center; justify-content:center; }
+.ms-remove:hover { background:#fff; color:#a5453d; }
+.ms-add { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; min-height:150px; border:1.5px dashed var(--ahk-warm-border,#e9d9c4); border-radius:18px; background:transparent; color:var(--ahk-warm-deep,#8a6340); font:inherit; font-size:13px; font-weight:600; cursor:pointer; }
+.ms-add span { font-size:24px; line-height:1; }
+.ms-add:hover { background:var(--ahk-warm-soft,#fbf3ea); }
 .ms-empty { color:#8a8672; font-size:13.5px; padding:20px 0; }
 .ms-note { font-size:12.5px; color:#8a8672; margin-top:6px; }
 </style>
@@ -98,9 +112,18 @@
 
 <p class="ms-intro">This isn't just for people mid-switch. If you're already fully vegan and cruelty-free, you're not exempt from this page, you're the reason it exists in the first place, keeping a record of the choices that got you here, or the ones you're still making as brands change and new alternatives turn up. Log a swap whenever you make one, big or small, and this keeps a running, private tally - nothing is sent anywhere, it lives only in this browser.</p>
 
-<div class="ms-tally">
-<div class="num" id="msCount">0</div>
-<div class="lbl" id="msLabel">swaps logged so far</div>
+<div class="ms-hero">
+<div class="ms-ring">
+<svg width="104" height="104" viewBox="0 0 104 104" aria-hidden="true">
+<circle cx="52" cy="52" r="44" fill="none" stroke="#ecdfcb" stroke-width="9"></circle>
+<circle id="msRingArc" cx="52" cy="52" r="44" fill="none" stroke="#a97a52" stroke-width="9" stroke-linecap="round" stroke-dasharray="276.5" stroke-dashoffset="276.5" transform="rotate(-90 52 52)"></circle>
+</svg>
+<div class="ms-ring-num" id="msCount">0</div>
+</div>
+<div class="ms-hero-copy">
+<p class="lbl" id="msLabel">swaps logged so far</p>
+<p class="sub" id="msMilestone">Log your first one and this starts filling up.</p>
+</div>
 </div>
 
 <form class="ms-form" id="msForm">
@@ -164,17 +187,60 @@ var labelEl = document.getElementById('msLabel');
 var listEl = document.getElementById('msList');
 var emptyEl = document.getElementById('msEmpty');
 
+// Each swap gets a coloured card rather than a list row -- the colour comes
+// from its category, so the grid reads as a scrapbook at a glance.
+var CAT_TINT = {
+  beauty:    'linear-gradient(150deg,#f0d3c4,#d49e83)',
+  hair:      'linear-gradient(150deg,#e9d7ba,#c9a271)',
+  household: 'linear-gradient(150deg,#cbd6c0,#9aae8d)',
+  food:      'linear-gradient(150deg,#f0e2bd,#d3b676)',
+  fashion:   'linear-gradient(150deg,#eccfd4,#c99098)',
+  other:     'linear-gradient(150deg,#dfd8c6,#b5ab92)'
+};
+// Milestones give the ring something honest to fill against -- a nudge,
+// never a target you are failing to hit.
+function milestoneFor(n){
+  var steps = [5, 10, 25, 50, 100];
+  for (var k = 0; k < steps.length; k++) { if (n < steps[k]) return steps[k]; }
+  return Math.ceil((n + 1) / 100) * 100;
+}
+
 function render(){
   countEl.textContent = list.length;
-  labelEl.textContent = list.length === 1 ? 'swap logged so far' : 'swaps logged so far';
+  labelEl.textContent = list.length === 1 ? 'kinder swap made' : 'kinder swaps made';
+
+  var next = milestoneFor(list.length);
+  var arc = document.getElementById('msRingArc');
+  if (arc) {
+    var circ = 276.5;
+    var pct = Math.min(1, list.length / next);
+    arc.style.transition = 'stroke-dashoffset 0.6s ease';
+    arc.setAttribute('stroke-dashoffset', String(circ - (circ * pct)));
+  }
+  var msEl = document.getElementById('msMilestone');
+  if (msEl) {
+    msEl.textContent = list.length === 0
+      ? 'Log your first one and this starts filling up.'
+      : (next - list.length) + ' more to reach ' + next + '. No rush, and no streak to break.';
+  }
+
   emptyEl.hidden = list.length > 0;
   var html = '';
   list.slice().reverse().forEach(function(item){
-    html += '<div class="ms-item" data-id="' + item.id + '">' +
-      '<div><div class="ms-item-main">' + esc(item.what) + '</div><div class="ms-item-cat">' + esc(CAT_LABEL[item.category] || item.category) + '</div></div>' +
-      '<div style="text-align:right;"><div class="ms-item-date">' + fmtDate(item.date) + '</div><button type="button" class="ms-remove" data-id="' + item.id + '">remove</button></div>' +
+    var tint = CAT_TINT[item.category] || CAT_TINT.other;
+    html += '<div class="ms-card" data-id="' + item.id + '">' +
+      '<div class="ms-card-top" style="background:' + tint + ';"></div>' +
+      '<button type="button" class="ms-remove" data-id="' + item.id + '" aria-label="Remove this swap">&times;</button>' +
+      '<div class="ms-card-body">' +
+        '<p class="ms-card-main">' + esc(item.what) + '</p>' +
+        '<span class="ms-card-cat">' + esc(CAT_LABEL[item.category] || item.category) + '</span>' +
+        '<p class="ms-card-date">' + fmtDate(item.date) + '</p>' +
+      '</div>' +
     '</div>';
   });
+  if (list.length) {
+    html += '<button type="button" class="ms-add" id="msAddTile"><span>+</span>add another swap</button>';
+  }
   listEl.innerHTML = html;
 }
 
@@ -190,6 +256,12 @@ document.getElementById('msForm').addEventListener('submit', function(ev){
 });
 
 listEl.addEventListener('click', function(ev){
+  if (ev.target.closest('#msAddTile')) {
+    var input = document.getElementById('msWhat');
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(function(){ input.focus(); }, 300);
+    return;
+  }
   var btn = ev.target.closest('.ms-remove');
   if (!btn) return;
   var id = btn.dataset.id;

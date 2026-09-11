@@ -73,6 +73,39 @@
 .swap-chip:hover { border-color:var(--ahk-green-soft); }
 .swap-chip.active { background:var(--ahk-warm,#a97a52); border-color:var(--ahk-warm,#a97a52); color:#fff; }
 
+/* Swap of the day -- the spotlight at the top of the page. Two photos meeting
+   on a diagonal with the arrow sitting on the join, so the before/after reads
+   instantly without a word of explanation. Photos are optional: if the files
+   aren't there yet the panels fall back to their gradient and nothing breaks. */
+.sotd { background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:26px; overflow:hidden; margin:0 auto 30px; max-width:560px; }
+.sotd-head { padding:24px 26px 4px; }
+.sotd-kicker { font-family:'Karla',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--ahk-warm,#a97a52); margin:0 0 8px; }
+.sotd-h { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:32px; line-height:1.15; color:var(--ahk-warm-deep,#8a6340); margin:0 0 6px; }
+.sotd-sub { font-size:13.5px; line-height:1.6; color:#a4896f; margin:0; }
+.sotd-split { position:relative; height:220px; margin:18px 0 0; }
+.sotd-pane { position:absolute; top:0; height:100%; width:64%; background-size:cover; background-position:center; }
+.sotd-pane.before { left:0; background-image:linear-gradient(150deg,#cbd6c0,#9aae8d); clip-path:polygon(0 0, 90% 0, 72% 100%, 0 100%); }
+.sotd-pane.after { right:0; top:14px; height:calc(100% - 14px); background-image:linear-gradient(150deg,#e9d7ba,#c9a271); clip-path:polygon(28% 0, 100% 0, 100% 100%, 10% 100%); }
+.sotd-arrow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:var(--ahk-warm,#a97a52); color:#fff; display:flex; align-items:center; justify-content:center; font-size:19px; box-shadow:0 8px 20px rgba(138,99,64,0.38); z-index:2; }
+.sotd-body { padding:20px 26px 26px; }
+.sotd-from { display:flex; align-items:center; gap:9px; flex-wrap:wrap; margin-bottom:4px; }
+.sotd-from .name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#b58a6c; text-decoration:line-through; }
+.sotd-to { display:flex; align-items:center; gap:9px; flex-wrap:wrap; margin-bottom:8px; }
+.sotd-to .name { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:26px; color:var(--ahk-warm-deep,#8a6340); }
+.sotd-to .name a, .sotd-from .name a { color:inherit; text-decoration:none; }
+.sotd-to .name a:hover, .sotd-from .name a:hover { text-decoration:underline; }
+.sotd-why { font-size:13px; line-height:1.65; color:#7d6a58; margin:0 0 16px; }
+.sotd-btn { display:inline-flex; align-items:center; justify-content:center; gap:7px; width:100%; background:var(--ahk-warm,#a97a52); color:#fff; font-family:'Karla',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.4px; padding:14px 18px; border-radius:30px; text-decoration:none; }
+.sotd-btn:hover { background:var(--ahk-warm-deep,#8a6340); color:#fff; }
+.sotd-pill { display:inline-flex; align-items:center; gap:4px; font-size:10.5px; font-weight:700; padding:4px 10px; border-radius:20px; }
+.sotd-pill.no { background:#f6e3de; color:#8d4a30; }
+.sotd-pill.yes { background:#e0ebd9; color:#3a5a3c; }
+@media (max-width:520px){
+  .sotd-h { font-size:27px; }
+  .sotd-split { height:176px; }
+  .sotd-to .name { font-size:22px; }
+}
+
 .swap-group[hidden] { display:none; }
 @media (prefers-reduced-motion: reduce) { .swap-chip { transition:none; } }
 .fur-pill { display:inline-flex; align-items:center; gap:6px; padding:7px 13px; border-radius:20px; font-size:12px; line-height:1.3; margin-bottom:10px; }
@@ -125,7 +158,6 @@
 
 <main class="page-shell" id="main">
 <div class="pagehead">
-<p style="font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--ahk-warm,#a97a52); font-weight:700; margin:0 0 8px;">a different kind of page</p>
 <h1>swap guide</h1>
 </div>
 <div class="hub-tabs" id="hubTabs">
@@ -135,6 +167,29 @@
 </div>
 
 <div class="hub-panel" id="panel-swaps">
+
+<!-- Swap of the day. One swap, front and centre, so the page opens with a
+     single easy thing to do rather than a wall of choices. Change the four
+     bits below (names, links, the why line) whenever you want a new one. -->
+<div class="sotd">
+<div class="sotd-head">
+<p class="sotd-kicker">swap of the day</p>
+<p class="sotd-h">fancy a swap?</p>
+<p class="sotd-sub">You don't have to change everything. Just change one thing.</p>
+</div>
+<div class="sotd-split">
+<div class="sotd-pane before" style="background-image:url('images/swap-before.jpg'), linear-gradient(150deg,#cbd6c0,#9aae8d);"></div>
+<div class="sotd-pane after" style="background-image:url('images/swap-after.jpg'), linear-gradient(150deg,#e9d7ba,#c9a271);"></div>
+<div class="sotd-arrow" aria-hidden="true">&rarr;</div>
+</div>
+<div class="sotd-body">
+<div class="sotd-from"><span class="name"><a href="brands/head-and-shoulders/index.html">Head &amp; Shoulders</a></span><span class="sotd-pill no">&#10007; not kind</span></div>
+<div class="sotd-to"><span class="name"><a href="brands/noughty/index.html">Noughty</a></span><span class="sotd-pill yes">&#10003; kind</span></div>
+<p class="sotd-why">Owned by Procter &amp; Gamble, who test where it's legally required. Noughty is Leaping Bunny certified, vegan, independent, and in most supermarkets.</p>
+<a class="sotd-btn" href="#swapChips">show me more swaps &rarr;</a>
+</div>
+</div>
+
 <p class="swap-lede">What's already in your bathroom, and what to buy instead.</p>
 <details class="mat-drop" style="max-width:520px; margin:0 auto 4px;"><summary>why these ones aren't cruelty-free</summary><p>Not because of a rumour or an old boycott. Their parent companies sell into markets like mainland China, where animal testing on cosmetics can still be legally required, and haven't adopted a policy ruling it out everywhere. Every brand below, on both sides, comes straight from the <a href="brand-check.html">brand check</a>, so you can look each one up yourself.</p></details>
 
