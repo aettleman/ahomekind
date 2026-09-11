@@ -71,54 +71,77 @@
    fills the screen, and the only things left are the framing guide and
    the shutter. The class is added when the camera opens and removed the
    moment it closes, so the normal page is always what you come back to. */
-body.scan-live { overflow:hidden; background:#14180f; }
-body.scan-live .site-header,
-body.scan-live .pagehead,
-body.scan-live .ahk-counter-bubble,
-body.scan-live .ahk-back-link,
-body.scan-live .ahk-share-btn,
-body.scan-live .bottom-nav,
-body.scan-live #addHome,
-body.scan-live .scan-or,
-body.scan-live .manual,
-body.scan-live .scan-shell-links,
-body.scan-live .scan-tagline,
-body.scan-live .quiet-details,
-body.scan-live .newsletter,
-body.scan-live .site-footer,
-body.scan-live .ambient-counter,
-body.scan-live #status,
-body.scan-live #results,
-body.scan-live .barcode-guide,
-body.scan-live .barcode-guide-numbers { display:none !important; }
+body.scan-immersive { overflow:hidden; background:#14180f; }
+body.scan-live .bottom-nav { display:none !important; }
+body.scan-immersive .site-header,
+body.scan-immersive .pagehead,
+body.scan-immersive .ahk-counter-bubble,
+body.scan-immersive .ahk-back-link,
+body.scan-immersive .ahk-share-btn,
+body.scan-immersive #addHome,
+body.scan-immersive .scan-or,
+body.scan-immersive .manual,
+body.scan-immersive .scan-shell-links,
+body.scan-immersive .scan-tagline,
+body.scan-immersive .quiet-details,
+body.scan-immersive .newsletter,
+body.scan-immersive .site-footer,
+body.scan-immersive .ambient-counter,
+body.scan-immersive #status,
+body.scan-immersive #results,
+body.scan-immersive .barcode-guide,
+body.scan-immersive .barcode-guide-numbers { display:none !important; }
 
-body.scan-live .scan-frame { position:fixed; inset:0; max-width:none; margin:0; padding:0; border-radius:0; background:#14180f; z-index:900; }
-body.scan-live .camera-wrap { position:fixed; inset:0; max-width:none; margin:0; }
-body.scan-live #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:#14180f; }
+body.scan-immersive .scan-frame { position:fixed; inset:0; max-width:none; margin:0; padding:0; border-radius:0; background:#14180f; z-index:900; }
+body.scan-immersive .camera-wrap { position:fixed; inset:0; max-width:none; margin:0; }
+body.scan-immersive #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:#14180f; }
 
 /* The framing guide: four corner brackets rather than a dashed box --
    less like a form field, more like a camera. */
 .scan-brackets, .scan-live-hint, .scan-live-arrow, .scan-live-card { display:none; }
-body.scan-live .scan-brackets { display:block; position:fixed; left:44px; right:44px; top:50%; transform:translateY(-62%); height:150px; z-index:920; pointer-events:none; }
-body.scan-live .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 140px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
-body.scan-live .scan-live-arrow { display:block; position:fixed; left:calc(50% - 92px); top:calc(50% - 104px); width:64px; height:52px; z-index:920; pointer-events:none; opacity:0.92; }
+body.scan-immersive .scan-brackets { display:block; position:fixed; left:44px; right:44px; top:50%; transform:translateY(-62%); height:150px; z-index:920; pointer-events:none; }
+body.scan-immersive .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 140px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
+body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(50% - 92px); top:calc(50% - 104px); width:64px; height:52px; z-index:920; pointer-events:none; opacity:0.92; }
 
 /* The card the shutter sits on, carrying the line. */
-body.scan-live .scan-live-card { display:flex; position:fixed; left:50%; transform:translateX(-50%); bottom:34px; width:min(215px, 62vw); height:124px; background:var(--ahk-bg,#faf5eb); border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,0.42); flex-direction:column; align-items:center; justify-content:center; gap:5px; z-index:910; }
-body.scan-live .scan-live-card p { font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--ahk-heading,#3d4a3a); margin:0; letter-spacing:0.2px; }
+body.scan-immersive .scan-live-card { display:flex; position:fixed; left:50%; transform:translateX(-50%); bottom:34px; width:min(215px, 62vw); height:124px; background:var(--ahk-bg,#faf5eb); border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,0.42); flex-direction:column; align-items:center; justify-content:center; gap:5px; z-index:910; }
+body.scan-immersive .scan-live-card p { font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--ahk-heading,#3d4a3a); margin:0; letter-spacing:0.2px; }
 
 /* The three controls become a shutter plus two glass chips. */
-body.scan-live .camera-controls { position:static; display:block; }
-body.scan-live #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:124px; width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#f4efe2; z-index:930; }
-body.scan-live #snapBtn:active { transform:translateX(-50%) scale(0.95); }
-body.scan-live #stopBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
-body.scan-live #torchBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); right:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
-body.scan-live #torchHint { position:fixed; left:20px; right:20px; bottom:174px; z-index:930; }
+body.scan-immersive .camera-controls { position:static; display:block; }
+body.scan-immersive #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:124px; width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#f4efe2; z-index:930; }
+body.scan-immersive #snapBtn:active { transform:translateX(-50%) scale(0.95); }
+body.scan-immersive #stopBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
+body.scan-immersive #torchBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); right:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
+body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:174px; z-index:930; }
 @media (max-height:640px){
-  body.scan-live .scan-live-card { height:104px; bottom:24px; }
-  body.scan-live #snapBtn { bottom:104px; }
-  body.scan-live .scan-live-hint { top:calc(50% - 124px); font-size:19px; }
+  body.scan-immersive .scan-live-card { height:104px; bottom:24px; }
+  body.scan-immersive #snapBtn,
+  body.scan-standby .scan-cta { bottom:104px; }
+  body.scan-immersive .scan-live-hint { top:calc(50% - 124px); font-size:19px; }
 }
+
+body.scan-standby .camera-wrap { display:block !important; }
+body.scan-standby #reader { background:#14180f; }
+body.scan-standby .bottom-nav { z-index:940; }
+
+/* ---- standby: arrived, camera not open yet ----
+   The page you land on is already the viewfinder, as in the mockup. The
+   green shutter starts the camera in place; nothing moves when it does. */
+body.scan-standby .scan-cta { position:fixed; left:50%; transform:translateX(-50%); bottom:124px; width:68px; height:68px; max-width:none; height:68px; margin:0; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; overflow:hidden; z-index:930; }
+body.scan-standby .scan-cta > img, body.scan-standby .scan-cta-scrim { display:none; }
+body.scan-standby .scan-cta .scan-cta-label { position:static; display:flex; align-items:center; justify-content:center; padding:0; margin:0; color:#f4efe2; }
+body.scan-standby .scan-cta .scan-cta-label span { display:none; }
+body.scan-standby .scan-cta .scan-cta-label svg { width:27px; height:27px; }
+body.scan-standby .scan-cta:active { transform:translateX(-50%) scale(0.95); }
+body.scan-immersive .scan-brackets { display:block; }
+/* a way out, so the rest of the page is never unreachable */
+.scan-escape { display:none; }
+body.scan-standby .scan-escape { display:block; position:fixed; left:0; right:0; bottom:calc(84px + env(safe-area-inset-bottom, 0px)); text-align:center; z-index:930; }
+body.scan-standby .scan-escape button { background:none; border:0; color:rgba(255,255,255,0.82); font-family:'Karla',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px; padding:8px 14px; cursor:pointer; }
+body.scan-standby #stopBtn, body.scan-standby #torchBtn, body.scan-standby #cameraControls { display:none !important; }
+body.scan-standby .scan-close { display:flex; position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; cursor:pointer; }
+.scan-close { display:none; }
 
 
 /* The scan control: one photographic block, not a drawn barcode plus a
@@ -376,9 +399,11 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
 <p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
 <!-- Only visible once the camera is live (see body.scan-live). -->
-<p class="scan-live-hint" aria-hidden="true">line up the barcode</p>
+<p class="scan-live-hint" id="scanHint" aria-hidden="true">line up the barcode</p>
 <svg class="scan-live-arrow" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M52 7C35 7 20 17 15 36" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M15 36l-2.5-10.5M15 36l10.5-3.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <svg class="scan-brackets" viewBox="0 0 212 132" preserveAspectRatio="none" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,0.94)" stroke-width="2.6" stroke-linecap="round"><path d="M2 34V12a10 10 0 0 1 10-10h22"/><path d="M178 2h22a10 10 0 0 1 10 10v22"/><path d="M210 98v22a10 10 0 0 1-10 10h-22"/><path d="M34 130H12a10 10 0 0 1-10-10V98"/></g></svg>
+<button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>
+<div class="scan-escape"><button type="button" id="scanEscapeBtn">type the number instead</button></div>
 <div class="scan-live-card" aria-hidden="true">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>
 <p>point. scan. know.</p>
@@ -989,7 +1014,7 @@ el("cameraWrap").style.display = "none";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "flex";
 el("cameraControls").style.display = "none";
 // Back out of immersive mode and give the buttons their words back.
-document.body.classList.remove("scan-live");
+document.body.classList.remove("scan-immersive", "scan-standby", "scan-live");
 el("snapBtn").innerHTML = SNAP_LABEL;
 el("stopBtn").innerHTML = STOP_LABEL;
 el("torchBtn").innerHTML = TORCH_LABEL;
@@ -1105,7 +1130,9 @@ if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "none";
 el("cameraControls").style.display = "flex";
 // Immersive mode: the camera becomes the page. Words on the buttons are
 // replaced by icons, since at this size they read as controls, not labels.
-document.body.classList.add("scan-live");
+document.body.classList.add("scan-immersive", "scan-live");
+document.body.classList.remove("scan-standby");
+var _h = el("scanHint"); if(_h) _h.textContent = "line up the barcode";
 el("snapBtn").innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.4"/><path d="M8 7l1.6-3h4.8L16 7"/><circle cx="12" cy="13.5" r="3.2"/></svg>';
 el("stopBtn").innerHTML = "&#10005;";
 el("torchBtn").innerHTML = "&#9889;";
@@ -1118,10 +1145,44 @@ setStatus("Could not open the camera. Type the numbers instead.");
 setStatus("Camera scanning is not available here.");
 }
 }
+// The scan page opens as the viewfinder rather than as a page about
+// scanning: brackets, the line, and a shutter. Tapping the shutter opens
+// the real camera in place, so nothing jumps. Anyone who would rather
+// type a number, or go elsewhere, has a way out that restores the
+// ordinary page.
+function enterStandby(){
+  document.body.classList.add("scan-immersive", "scan-standby");
+  var hint = el("scanHint");
+  if(hint) hint.textContent = "tap to start the camera";
+}
+function leaveImmersive(){
+  document.body.classList.remove("scan-immersive", "scan-standby", "scan-live");
+  var hint = el("scanHint");
+  if(hint) hint.textContent = "line up the barcode";
+}
+enterStandby();
+el("scanEscapeBtn").addEventListener("click", function(){
+  leaveImmersive();
+  var box = el("manualCode");
+  if(box){ box.scrollIntoView({ block: "center" }); setTimeout(function(){ box.focus(); }, 250); }
+});
+el("scanCloseBtn").addEventListener("click", leaveImmersive);
+
+// If the camera has already been allowed on this device, open it straight
+// away -- that is the arrival the mockup shows. On a first visit the
+// permission prompt needs a real tap, so standby waits for the shutter.
+if (navigator.permissions && navigator.permissions.query) {
+  navigator.permissions.query({ name: "camera" }).then(function(s){
+    if (s.state === "granted") startScan();
+  }).catch(function(){});
+}
+
 el("startBtn").addEventListener("click", startScan);
 el("stopBtn").addEventListener("click", stopCamera);
 document.addEventListener("keydown", function(e){
-  if(e.key === "Escape" && document.body.classList.contains("scan-live")) stopCamera();
+  if(e.key !== "Escape") return;
+  if(document.body.classList.contains("scan-live")) { stopCamera(); }
+  else if(document.body.classList.contains("scan-immersive")) { leaveImmersive(); }
 });
 
 // A "scan again" button lives at the top of every result (found or not)
