@@ -114,7 +114,7 @@ body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(
 body.scan-immersive .camera-controls { position:static; display:block; }
 body.scan-immersive #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(102px + env(safe-area-inset-bottom, 0px)); width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#f4efe2; z-index:930; }
 body.scan-immersive #snapBtn:active { transform:translateX(-50%) scale(0.95); }
-body.scan-immersive #stopBtn { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
+body.scan-immersive #stopBtn { display:none !important; }
 body.scan-immersive #torchBtn { position:fixed; bottom:calc(116px + env(safe-area-inset-bottom, 0px)); right:38px; width:44px; height:44px; font-size:0 !important; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
 body.scan-immersive #torchBtn::before { content:"\26A1"; font-size:18px; line-height:1; }
 body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:calc(180px + env(safe-area-inset-bottom, 0px)); z-index:930; font-size:12px; }
@@ -131,6 +131,14 @@ body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:c
 body.scan-standby .camera-wrap { display:block !important; }
 body.scan-standby #reader { background:var(--ahk-forest-deep,#2f3a2d); }
 body.scan-immersive .bottom-nav { z-index:940; }
+
+/* Reached only by "see the full page" from a result, so it shows the
+   result and the notes around it -- not a second copy of the scanner. */
+body.scan-result-page .pagehead,
+body.scan-result-page .ahk-counter-bubble,
+body.scan-result-page .scan-frame,
+body.scan-result-page #addHome { display:none !important; }
+body.scan-result-page #results { margin-top:6px; }
 
 /* ---- the result, as a card over the camera ----
    The camera keeps running behind it, dimmed, so dismissing the card puts
@@ -1180,6 +1188,7 @@ el("cameraControls").style.display = "flex";
 // Immersive mode: the camera becomes the page. Words on the buttons are
 // replaced by icons, since at this size they read as controls, not labels.
 document.body.classList.add("scan-immersive", "scan-live");
+document.body.classList.remove("scan-result-page");
 document.body.classList.remove("scan-standby");
 el("snapBtn").innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.4"/><path d="M8 7l1.6-3h4.8L16 7"/><circle cx="12" cy="13.5" r="3.2"/></svg>';
 el("stopBtn").innerHTML = "&#10005;";
@@ -1248,6 +1257,7 @@ function openFullResult(){
   document.body.classList.remove("scan-card-open");
   stripCardChrome();
   stopCamera();
+  document.body.classList.add("scan-result-page");
   var box = el("results");
   if(box) setTimeout(function(){ window.scrollTo({ top: Math.max(0, box.offsetTop - 80), behavior: "smooth" }); }, 60);
 }
@@ -1269,6 +1279,7 @@ function openFullResult(){
 
 function enterStandby(){
   document.body.classList.add("scan-immersive", "scan-standby");
+  document.body.classList.remove("scan-result-page");
 }
 function leaveImmersive(){
   document.body.classList.remove("scan-immersive", "scan-standby", "scan-live");
