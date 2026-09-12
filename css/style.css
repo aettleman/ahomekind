@@ -820,6 +820,19 @@ body { animation: pageFadeIn 0.22s ease; }
 #allBrands .card.unknown .rating { color: #6b6656; }
 #allBrands .card h3 { margin-top: 2px; }
 
+/* Browse by category: the landing view, and the way in for anyone who
+   doesn't have a brand name in mind. Photo tiles rather than emoji on
+   white cards, matching the food page. */
+#categoryGridInner { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.cat-photo { position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; text-decoration: none; background: linear-gradient(150deg, #cbd6c0, #7f9070); }
+.cat-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.cat-photo:hover img, .cat-photo:focus-visible img { transform: scale(1.04); }
+.cat-photo-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 34px; opacity: 0.85; }
+.cat-photo-label { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 14px; background: linear-gradient(0deg, rgba(47,58,45,0.84), rgba(47,58,45,0.06) 62%); color: #f4efe2; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13.5px; line-height: 1.25; letter-spacing: 0.2px; }
+.cat-photo-label em { display: block; font-style: normal; font-size: 9.5px; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(244,239,226,0.78); margin-top: 4px; }
+.cat-photo.is-soon { opacity: 0.62; pointer-events: none; }
+@media(prefers-reduced-motion: reduce){ .cat-photo img { transition: none; } }
+
 /* The key, always on show instead of behind a drop-down: five colour
    chips and one quiet line about price. */
 .verdict-key { display: flex; flex-wrap: wrap; gap: 6px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 16px; padding: 11px 12px; margin: 0 0 20px; }

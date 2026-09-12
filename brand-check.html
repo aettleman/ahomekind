@@ -1230,15 +1230,15 @@ if (slotEl && window.AHKSwap) AHKSwap.render(slotEl, { name: name, tier: tierVal
 // yet on purpose -- they're shown as a "coming soon" tile rather than an
 // empty surprise, ready for whenever that data gets filled in.
 var CATEGORIES = [
-{ key: 'skin-care', icon: '✨', label: 'skin care' },
-{ key: 'makeup', icon: '💄', label: 'makeup' },
-{ key: 'hair-care', icon: '💇', label: 'hair care' },
-{ key: 'body-shower', icon: '🫙', label: 'body &amp; shower' },
-{ key: 'mouth-care', icon: '🦷', label: 'mouth care' },
-{ key: 'household', icon: '🧽', label: 'household &amp; cleaning' },
-{ key: 'supermarket', icon: '🛒', label: 'supermarket own-brand' },
-{ key: 'food', icon: '🥗', label: 'food &amp; kitchen', soon: true },
-{ key: 'clothing', icon: '👗', label: 'clothing &amp; accessories', soon: true }
+{ key: 'skin-care', icon: '✨', label: 'skin care', img: 'cat-skincare.jpg' },
+{ key: 'makeup', icon: '💄', label: 'makeup', img: 'cat-makeup.jpg' },
+{ key: 'hair-care', icon: '💇', label: 'hair care', img: 'cat-haircare.jpg' },
+{ key: 'body-shower', icon: '🫙', label: 'body &amp; shower', img: 'cat-body.jpg' },
+{ key: 'mouth-care', icon: '🦷', label: 'mouth care', img: 'cat-mouth.jpg' },
+{ key: 'household', icon: '🧽', label: 'household &amp; cleaning', img: 'cat-household.jpg' },
+{ key: 'supermarket', icon: '🛒', label: 'supermarket own-brand', img: 'cat-supermarket.jpg' },
+{ key: 'food', icon: '🥗', label: 'food &amp; kitchen', img: 'cat-food.jpg', soon: true },
+{ key: 'clothing', icon: '👗', label: 'clothing &amp; accessories', img: 'cat-fashion.jpg', soon: true }
 ];
 
 var searchInput = document.getElementById('ratingSearch');
@@ -1340,10 +1340,12 @@ azLetterSelect.innerHTML = html;
 function buildCategoryGrid() {
 var html = '';
 CATEGORIES.forEach(function(cat) {
-html += '<a href="#" class="home-card cat-tile' + (cat.soon ? ' is-soon' : '') + '" data-cat="' + cat.key + '"' + (cat.soon ? ' aria-disabled="true"' : '') + '>';
-html += '<span class="home-card-icon" aria-hidden="true">' + cat.icon + '</span>';
-html += '<span class="home-card-title" style="display:block; margin-bottom:0;">' + cat.label + '</span>';
-if (cat.soon) { html += '<span class="home-card-sub" style="display:block; margin:8px 0 0;">coming soon</span>'; }
+html += '<a href="#" class="cat-photo' + (cat.soon ? ' is-soon' : '') + '" data-cat="' + cat.key + '"' + (cat.soon ? ' aria-disabled="true"' : '') + '>';
+// The emoji stays as the fallback: if a photo isn't there yet the tile
+// still reads as a tile rather than as a broken image.
+html += '<span class="cat-photo-fallback" aria-hidden="true">' + cat.icon + '</span>';
+html += '<img src="images/' + cat.img + '" alt="" loading="lazy" onerror="this.remove()">';
+html += '<span class="cat-photo-label">' + cat.label + (cat.soon ? '<em>coming soon</em>' : '') + '</span>';
 html += '</a>';
 });
 categoryGridInner.innerHTML = html;
