@@ -1,8 +1,8 @@
 {
-  "name": "A Home Kind — Scanner",
+  "name": "A Home Kind",
   "short_name": "A Home Kind",
-  "description": "Scan a barcode to check whether a product is cruelty-free and vegan before you buy.",
-  "start_url": "/scan.html?source=pwa",
+  "description": "Check whether a product is cruelty-free and vegan before you buy: scan a barcode, search over 800 brands, or read an ingredients list.",
+  "start_url": "/?source=pwa",
   "id": "/scan.html",
   "scope": "/",
   "display": "standalone",
@@ -11,8 +11,23 @@
   "theme_color": "#3d4a3a",
   "lang": "en-GB",
   "icons": [
-    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

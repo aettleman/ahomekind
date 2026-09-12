@@ -65,32 +65,32 @@
 .hero-x-bg { position: absolute; inset: 0; }
 .hero-x-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.34; }
 .hero-x-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,48,31,0.55) 0%, rgba(38,48,31,0.8) 100%); }
-.hero-x-inner { position: relative; max-width: 1080px; margin: 0 auto; padding: 44px 24px 46px; display: grid; gap: 34px; align-items: center; text-align: center; }
+.hero-x-inner { position: relative; max-width: 1080px; margin: 0 auto; padding: 0 24px 30px; display: grid; gap: 18px; align-items: center; text-align: center; }
 /* One photograph now does the job the blurred backdrop and the illustrated
    card used to do between them. It's feathered on every side so it melts
    into the green instead of sitting on it, and it runs nearly the full
    width on a phone, where most people will meet it. */
-.hero-x-art { max-width: 100%; margin: 0 auto; }
+.hero-x-art { max-width: 100%; margin: 0 -8px; }
 .hero-x-photo {
   /* On a phone the full 16:9 frame leaves the rabbit tiny, so the crop is
      squarer and weighted to the right, where he is. The left-hand grass is
      what gets given up, and there's plenty of it. */
-  display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover;
-  object-position: 68% 50%;
+  display: block; width: 100%; aspect-ratio: 3 / 2.2; object-fit: cover;
+  object-position: 70% 50%;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
 }
 .hero-x-photo[hidden] { display: none; }
-.hero-x-kicker { color: var(--ahk-gold-soft); font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px; }
-.hero-x h1 { color: var(--ahk-on-dark); font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 33px; line-height: 1.28; letter-spacing: 0.2px; text-transform: none; margin: 0 0 18px; text-wrap: balance; }
+.hero-x-kicker { color: var(--ahk-gold-soft); font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 12px; }
+.hero-x h1 { color: var(--ahk-on-dark); font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 31px; line-height: 1.22; letter-spacing: 0.2px; text-transform: none; margin: 0 0 14px; text-wrap: balance; }
 .hero-x h1 em { font-style: italic; color: var(--ahk-gold); }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
-.hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.8; min-height: 72px; }
+.hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.7; min-height: 66px; margin-bottom: 12px; }
 .hero-x-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--ahk-gold); color: #3d4a3a; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 17px 34px; border-radius: 60px; margin: 26px 0 24px; box-shadow: 0 8px 22px rgba(0,0,0,0.26); transition: transform 0.18s ease, box-shadow 0.18s ease; }
 .hero-x-cta:hover, .hero-x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 13px 28px rgba(0,0,0,0.32); color: #3d4a3a; }
 @media (prefers-reduced-motion: reduce) { .hero-x-cta { transition: none; } }
-.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 26px; }
+.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 18px; }
 .hero-x-link { flex: 1; max-width: 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
 .hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(244,239,226,0.3); background: rgba(244,239,226,0.07); display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
 .hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: rgba(244,239,226,0.15); border-color: var(--ahk-gold-soft); }
@@ -108,6 +108,19 @@
   .hero-x-links { justify-content: flex-start; }
   .hero-x-link { align-items: flex-start; }
   .hero-x-link-label { text-align: left; }
+}
+/* Short screens (an iPhone SE, or any phone with a lot of browser chrome
+   on show) get a shallower photo and slightly smaller type, so the three
+   circles still clear the fold. Nothing is squashed; it all scales. */
+@media (max-height: 720px) {
+  .hero-x-photo { aspect-ratio: 3 / 1.7; }
+  .hero-x-inner { gap: 13px; padding-bottom: 20px; }
+  .hero-x h1 { font-size: 25px; line-height: 1.2; margin-bottom: 10px; }
+  .hero-x-kicker { margin-bottom: 9px; }
+  .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
+  .hero-x .hero-fact-nav { transform: scale(0.92); }
+  .hero-x-links { margin-top: 12px; }
+  .hero-x-link-icon { width: 46px; height: 46px; }
 }
 @media (max-width: 480px) {
   .hero-x h1 { font-size: 28px; }
@@ -202,7 +215,6 @@
 </a>
 </div>
 
-<span class="ahk-counter-bubble" style="margin-top:18px;"></span>
 </div>
 </div>
 </section>
