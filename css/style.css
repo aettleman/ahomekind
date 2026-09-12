@@ -1449,21 +1449,63 @@ body { animation: pageFadeIn 0.22s ease; }
    The dark wash isn't decoration: it's what lets the title stay
    readable over any photograph, so pictures can be chosen on
    whether they're good rather than whether their middle is empty. */
-.page-hero { position: relative; margin: 0 0 26px; border-radius: 20px; overflow: hidden; min-height: 190px; display: flex; align-items: flex-end; background: linear-gradient(140deg, #46553f 0%, #2e392b 100%); }
-.page-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* Page heroes.
+
+   The photo is no longer a box with a dark wash and white type on top of
+   it. It's cut to an L, feathered so every edge dissolves into the page
+   ground, and the headline sits in the corner the cut clears -- standing
+   on the part of the photograph that was only wall, table or blur anyway.
+
+   Which way the L faces is set per page by a modifier class, because it's
+   decided by where each photograph happens to be empty:
+     .hero-cut-tl   quiet top-left   -- most of them
+     .hero-cut-tr   quiet top-right
+     .hero-plain    busy everywhere  -- soft all-round fade, headline above
+
+   There is no .page-hero-scrim any more; the markup drops it. */
+.page-hero { position: relative; margin: 0 0 20px; }
+.page-hero > img {
+  display: block; width: 100%; aspect-ratio: 4 / 3.3; object-fit: cover;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
 .page-hero > img[hidden] { display: none; }
-/* Deep enough that a pale photograph still holds white text. Several of
-   these shots are bright linen and cream, where a light wash left the
-   sub-line barely readable. */
-.page-hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(24,31,22,.92) 6%, rgba(24,31,22,.72) 48%, rgba(24,31,22,.42) 100%); }
-.page-hero-copy { position: relative; padding: 22px 22px 24px; }
-.page-hero-copy h1 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 30px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; color: #f6f2e6; margin: 0 0 8px; text-wrap: balance; }
-.page-hero-copy p { font-size: 14px; line-height: 1.65; color: rgba(246,242,230,.86); margin: 0; max-width: 46ch; }
-@media (min-width: 760px) {
-  .page-hero { min-height: 240px; }
-  .page-hero-copy { padding: 30px 32px 32px; }
-  .page-hero-copy h1 { font-size: 38px; }
-  .page-hero-copy p { font-size: 15px; }
+.page-hero-copy { position: absolute; top: 1%; left: 2%; z-index: 2; max-width: 58%; padding: 0; }
+.page-hero-copy h1 {
+  font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500; font-size: 29px; line-height: 1.07; letter-spacing: -0.2px;
+  color: var(--ahk-heading); text-transform: none; margin: 0; text-wrap: balance;
+}
+
+.hero-cut-tl > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='50' y='8' width='35' height='77' rx='14'/%3E%3Crect x='8' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='50' y='8' width='35' height='77' rx='14'/%3E%3Crect x='8' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero-cut-tr > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='15' y='8' width='35' height='77' rx='14'/%3E%3Crect x='15' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='15' y='8' width='35' height='77' rx='14'/%3E%3Crect x='15' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero-cut-tr .page-hero-copy { left: auto; right: 2%; text-align: right; }
+
+/* No quiet corner in the photograph, so nothing is carved: the picture
+   simply fades out all round and the headline sits above it. */
+.page-hero.hero-plain { display: flex; flex-direction: column-reverse; }
+.hero-plain > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='11' y='11' width='78' height='78' rx='26'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='11' y='11' width='78' height='78' rx='26'/%3E%3C/g%3E%3C/svg%3E"); aspect-ratio: 4 / 2.6; }
+.hero-plain .page-hero-copy { position: static; max-width: none; margin: 0 0 6px; }
+
+/* The line that used to sit under the headline inside the hero now lives
+   below the photo as ordinary lead copy, where it can be read. */
+.hero-lede { font-size: 14.5px; line-height: 1.65; color: var(--ahk-text-muted); margin: 0 0 20px; max-width: 54ch; }
+
+@media (min-width: 720px) {
+  .page-hero > img { aspect-ratio: 21 / 8; }
+  .hero-plain > img { aspect-ratio: 21 / 7; }
+  .page-hero-copy { max-width: 46%; top: 3%; left: 3%; }
+  .hero-cut-tr .page-hero-copy { right: 3%; }
+  .page-hero-copy h1 { font-size: 44px; }
+  .hero-lede { font-size: 15.5px; }
+
+  /* The mask SVG is stretched to the element, so on a wide hero a mask
+     drawn on a square grid gets its blur squashed flat and the edges go
+     hard. These are the same shapes drawn on a 21:8 grid instead. */
+  .hero-cut-tl > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='56' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='56' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-cut-tr > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='7' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='7' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-plain > img  { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.8'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='5' y='3' width='90' height='29' rx='7'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.8'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='5' y='3' width='90' height='29' rx='7'/%3E%3C/g%3E%3C/svg%3E"); }
+}
 }
 
 /* Affiliate disclosure on the shop. Honest but not shouting -- it was
