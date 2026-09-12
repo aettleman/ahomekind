@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "slug": "quick-easy",
+      "label": "quick &amp; easy",
+      "image": "images/food-quick-easy.jpg",
+      "blurb": "Things that are on the table before you've changed your mind about cooking."
+    },
+    {
+      "slug": "comfort",
+      "label": "comfort food",
+      "image": "images/food-comfort.jpg",
+      "blurb": "The slow, filling ones. Sunday food, mostly."
+    },
+    {
+      "slug": "high-protein",
+      "label": "high protein",
+      "image": "images/food-protein.jpg",
+      "blurb": "For anyone who's been asked where they get their protein and would like an answer on a plate."
+    },
+    {
+      "slug": "cheap",
+      "label": "cheap &amp; cheerful",
+      "image": "images/food-cheap.jpg",
+      "blurb": "Store-cupboard cooking. Tins, dried things, whatever's reduced."
+    },
+    {
+      "slug": "sweet",
+      "label": "something sweet",
+      "image": "images/food-sweet.jpg",
+      "blurb": "Puddings and baking, without the dairy or the eggs."
+    }
+  ],
+  "recipes": [
+    {
+      "slug": "15-minute-dal",
+      "title": "15-minute dal",
+      "category": "quick-easy",
+      "category_label": "quick &amp; easy",
+      "image": "images/food-quick-easy.jpg",
+      "alt": "A bowl of lentil dal with coriander and flatbread",
+      "intro": "The one I make when I can't be bothered. Red lentils, a tin of tomatoes, and whatever's in the spice drawer.",
+      "method": "Soften an onion and a few cloves of garlic in oil. Add a heaped teaspoon each of cumin and turmeric, half a teaspoon of chilli if you like it, and stir for a minute until it smells like something. Tip in 200g red lentils, a tin of chopped tomatoes and 600ml water. Simmer 12&ndash;15 minutes until the lentils collapse, stirring now and then. Salt properly, squeeze over lemon, scatter coriander. Flatbread or rice."
+    },
+    {
+      "slug": "root-vegetable-pie",
+      "title": "Root vegetable pie",
+      "category": "comfort",
+      "category_label": "comfort food",
+      "image": "images/food-comfort.jpg",
+      "alt": "A rustic vegetable pie in an enamel dish",
+      "intro": "A Sunday thing. Most shop-bought puff pastry is accidentally vegan, so check the label and you're halfway there.",
+      "method": "Chop a mix of carrot, parsnip, potato and leek into rough chunks and roast at 200&deg;C for 25 minutes with oil and thyme. Make a quick gravy: fry a chopped onion, stir in a tablespoon of flour, then add 400ml vegetable stock and a splash of soy sauce, whisking until it thickens. Combine with the veg in a dish, lid it with pastry, brush with a little oil or plant milk, and bake 25&ndash;30 minutes until deeply golden."
+    },
+    {
+      "slug": "the-everything-bowl",
+      "title": "The everything bowl",
+      "category": "high-protein",
+      "category_label": "high protein",
+      "image": "images/food-protein.jpg",
+      "alt": "A bowl of roasted chickpeas, tofu, quinoa, kale and avocado",
+      "intro": "Roughly 30g of protein without trying very hard, and it uses up whatever's wilting in the fridge.",
+      "method": "Toss a drained tin of chickpeas and a block of cubed firm tofu in oil, smoked paprika and salt. Roast at 200&deg;C for 25 minutes, turning once. Meanwhile cook 80g quinoa and wilt a few handfuls of kale in the same pan you'll serve from. Pile it all up, add avocado, and dress with tahini loosened with lemon juice and water. Sesame over the top."
+    },
+    {
+      "slug": "oat-and-chocolate-flapjacks",
+      "title": "Oat and chocolate flapjacks",
+      "category": "sweet",
+      "category_label": "something sweet",
+      "image": "images/food-sweet.jpg",
+      "alt": "Oat and dark chocolate flapjacks on greaseproof paper",
+      "intro": "Most dark chocolate is already dairy-free. Check for milk powder and you're fine.",
+      "method": "Melt 150g dairy-free spread with 4 tablespoons golden syrup and 75g sugar over a low heat. Stir in 300g porridge oats and press firmly into a lined tin. Bake at 180&deg;C for 20&ndash;22 minutes until the edges catch. Melt 100g dark chocolate, spoon over in stripes while still warm, and leave to set before cutting, which is the hard part."
+    }
+  ]
+}

@@ -1732,3 +1732,30 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
 .pcard-chip { background: var(--ahk-sage-soft, #e4ebdd); color: #5e7355; border-color: #dbe3d3; }
 .pcard-buy { color: var(--ahk-green, #4d6b4f); }
 .pcard-buy:hover { color: var(--ahk-forest); }
+
+/* ---- Food: category tiles and recipe cards ---------------------------
+   Lifted out of food.html so the category and recipe pages can use them
+   as well. */
+.page-photo { display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px; }
+.tile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 34px; }
+.ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; }
+.ptile img { width:100%; height:100%; object-fit:cover; display:block; }
+.ptile span { position:absolute; inset:0; display:flex; align-items:flex-end; padding:12px 14px; background:linear-gradient(0deg, rgba(47,58,45,0.82), rgba(47,58,45,0.06) 62%); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:13.5px; line-height:1.25; letter-spacing:0.2px; }
+.ptile:hover img { transform:scale(1.03); }
+.ptile img { transition:transform 0.4s ease; }
+.ptile img { transition:none; }
+.ptile.soon { border:1.5px dashed var(--ahk-border); }
+.ptile.soon span { position:static; inset:auto; height:100%; align-items:center; justify-content:center; text-align:center; background:none; color:var(--ahk-text-muted); font-size:12.5px; }
+.rcards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:18px 0 6px; align-items:start; }
+.rcard { background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:20px; overflow:hidden; }
+.rcard img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+.rcard-body { padding:16px 18px 18px; }
+.rcard-cat { display:inline-block; font-size:10px; letter-spacing:1.4px; text-transform:uppercase; font-weight:700; color:var(--ahk-warm-deep,#8a6340); background:var(--ahk-warm-soft,#fbf3ea); border-radius:20px; padding:4px 10px; margin-bottom:9px; }
+.rcard h3 { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; color:var(--ahk-heading); margin:0 0 7px; }
+.rcard p { font-size:13px; line-height:1.7; color:var(--ahk-text); margin:0; }
+.rcard details { margin-top:12px; }
+.rcard summary { cursor:pointer; font-size:12px; font-weight:700; color:var(--ahk-green); list-style:none; }
+.rcard summary::-webkit-details-marker { display:none; }
+.rcard summary::after { content:' +'; }
+.rcard details[open] summary::after { content:' \2013'; }
+.rcard details p { margin-top:9px; font-size:12.5px; }
