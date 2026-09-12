@@ -96,9 +96,14 @@ body.scan-immersive #reader { position:fixed; inset:0; width:100vw; height:100vh
 /* The framing guide: four corner brackets rather than a dashed box --
    less like a form field, more like a camera. */
 .scan-brackets, .scan-live-hint, .scan-live-arrow, .scan-live-card { display:none; }
-body.scan-immersive .scan-brackets { display:block; position:fixed; left:44px; right:44px; top:calc(50% - 78px); height:156px; z-index:920; pointer-events:none; }
-body.scan-immersive .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 208px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
-body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(50% - 86px); top:calc(50% - 158px); width:58px; height:46px; z-index:920; pointer-events:none; opacity:0.92; }
+body.scan-immersive .scan-brackets { display:block; position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:min(74vw, 290px); height:200px; z-index:920; pointer-events:none; }
+body.scan-immersive .scan-brackets i { position:absolute; width:40px; height:40px; border:3px solid rgba(255,255,255,0.95); }
+body.scan-immersive .scan-brackets i:nth-child(1) { top:0; left:0; border-right:0; border-bottom:0; border-radius:15px 0 0 0; }
+body.scan-immersive .scan-brackets i:nth-child(2) { top:0; right:0; border-left:0; border-bottom:0; border-radius:0 15px 0 0; }
+body.scan-immersive .scan-brackets i:nth-child(3) { bottom:0; right:0; border-left:0; border-top:0; border-radius:0 0 15px 0; }
+body.scan-immersive .scan-brackets i:nth-child(4) { bottom:0; left:0; border-right:0; border-top:0; border-radius:0 0 0 15px; }
+body.scan-immersive .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 190px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
+body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(50% - 84px); top:calc(50% - 152px); width:56px; height:44px; z-index:920; pointer-events:none; opacity:0.92; }
 
 /* The card the shutter sits on, carrying the line. */
 /* The cream card is gone: the shutter covered it, and the bottom row
@@ -114,9 +119,9 @@ body.scan-immersive #torchBtn { position:fixed; bottom:calc(116px + env(safe-are
 body.scan-immersive #torchBtn::before { content:"\26A1"; font-size:18px; line-height:1; }
 body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:calc(180px + env(safe-area-inset-bottom, 0px)); z-index:930; font-size:12px; }
 @media (max-height:680px){
-  body.scan-immersive .scan-live-hint { top:calc(50% - 176px); font-size:19px; }
-  body.scan-immersive .scan-live-arrow { top:calc(50% - 132px); }
-  body.scan-immersive .scan-brackets { top:calc(50% - 64px); height:128px; }
+  body.scan-immersive .scan-live-hint { top:calc(50% - 162px); font-size:19px; }
+  body.scan-immersive .scan-live-arrow { top:calc(50% - 128px); }
+  body.scan-immersive .scan-brackets { height:168px; }
   body.scan-immersive #snapBtn,
   body.scan-standby .scan-cta { bottom:calc(94px + env(safe-area-inset-bottom, 0px)); }
   body.scan-immersive #torchBtn { bottom:calc(108px + env(safe-area-inset-bottom, 0px)); }
@@ -133,7 +138,7 @@ body.scan-immersive #status { position:fixed; left:24px; right:24px; bottom:calc
 body.scan-immersive .manual { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 52px); left:16px; right:16px; display:flex; gap:8px; margin:0; max-width:none; z-index:930; }
 body.scan-immersive .manual input[type=text] { flex:1; min-width:0; padding:12px 16px; border-radius:30px; border:1px solid rgba(255,255,255,0.3); background:rgba(20,24,18,0.5); backdrop-filter:blur(6px); color:#fff; font-family:'Karla',sans-serif; font-size:13.5px; }
 body.scan-immersive .manual input[type=text]::placeholder { color:rgba(255,255,255,0.62); }
-body.scan-immersive .manual .big-btn { flex:none; width:auto; margin:0; padding:12px 20px; border-radius:30px; font-size:11.5px; letter-spacing:1.4px; background:rgba(255,255,255,0.92); color:var(--ahk-heading,#3d4a3a); box-shadow:none; }
+body.scan-immersive .manual .big-btn { flex:none; width:auto; margin:0; padding:13px 22px; border-radius:30px; font-size:11.5px; font-weight:700; letter-spacing:1.4px; background:#faf5eb !important; color:#3d4a3a !important; border:0 !important; box-shadow:none; }
 
 /* ---- standby: arrived, camera not open yet ----
    The page you land on is already the viewfinder, as in the mockup. The
@@ -411,7 +416,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <!-- Only visible once the camera is live (see body.scan-live). -->
 <p class="scan-live-hint" id="scanHint" aria-hidden="true">line up the barcode</p>
 <svg class="scan-live-arrow" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M52 7C35 7 20 17 15 36" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M15 36l-2.5-10.5M15 36l10.5-3.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<svg class="scan-brackets" viewBox="0 0 212 132" preserveAspectRatio="none" fill="none" aria-hidden="true"><g stroke="rgba(255,255,255,0.94)" stroke-width="2.6" stroke-linecap="round"><path d="M2 34V12a10 10 0 0 1 10-10h22"/><path d="M178 2h22a10 10 0 0 1 10 10v22"/><path d="M210 98v22a10 10 0 0 1-10 10h-22"/><path d="M34 130H12a10 10 0 0 1-10-10V98"/></g></svg>
+<div class="scan-brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>
 <div class="scan-escape"><button type="button" id="scanEscapeBtn">type the number instead</button></div>
 <div class="scan-live-card" aria-hidden="true">
