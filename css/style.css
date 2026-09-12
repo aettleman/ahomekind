@@ -1184,6 +1184,7 @@ body { animation: pageFadeIn 0.22s ease; }
   --ahk-gold-soft:     #d9c99a;
   --ahk-on-dark:       #f4efe2;  /* text on forest */
   --ahk-on-dark-muted: #c9d1c3;
+  --ahk-sage-soft:     #e4ebdd;  /* the pale green used for tags and tabs */
   --ahk-clay:          #b4674a;  /* the shop's accent -- the same warm
                                     terracotta My Swaps already uses */
   --ahk-clay-deep:     #9a5539;
@@ -1646,8 +1647,8 @@ textarea.report-field { min-height: 72px; resize: vertical; line-height: 1.6; }
    clay rather than violet, and sage is kept for the little category tags.
    Product names are in the serif -- that alone is most of what stops the
    grid reading like a spreadsheet. */
-body.shop-skin { background: var(--ahk-shop-ground, #f6efe4); }
-body.shop-skin header.site-header { background: var(--ahk-shop-ground, #f6efe4); }
+body.shop-skin { background: var(--ahk-bg); }
+body.shop-skin header.site-header { background: var(--ahk-surface); }
 
 .shop-tabbar { background: none; border: 0; border-radius: 0; padding: 0;
   gap: 7px; margin: 4px 0 18px; overflow-x: auto; flex-wrap: nowrap; }
@@ -1717,3 +1718,17 @@ body.shop-skin header.site-header { background: var(--ahk-shop-ground, #f6efe4);
    of the same family as the three circles above it. */
 .hero-x .ahk-counter-bubble { color: #f4efe2; border-color: rgba(244,239,226,0.34); background: rgba(244,239,226,0.10); }
 .hero-x .ahk-counter-bubble button, .hero-x .ahk-counter-bubble .ahk-counter-close { color: #f4efe2; }
+
+/* ---- Shop, in the site's own clothes ----------------------------------
+   Tabs match "browse by category" on brand check: sage, with a forest pill
+   for the current one. Buy links are green like every other link on the
+   site. The only warm colour left is the brand line above each product. */
+.shop-tab { background: var(--ahk-sage-soft, #e4ebdd); color: #5e7355; }
+.shop-tab:hover { color: var(--ahk-heading); }
+.shop-tab.active { background: var(--ahk-forest); color: #f4efe2; }
+.pcard { background: var(--ahk-card, #fffdf8); border-color: var(--ahk-border-soft, #e4dbc7); }
+.pcard h3 { color: var(--ahk-heading); }
+.pcard-brand { color: var(--ahk-clay, #b4674a); }
+.pcard-chip { background: var(--ahk-sage-soft, #e4ebdd); color: #5e7355; border-color: #dbe3d3; }
+.pcard-buy { color: var(--ahk-green, #4d6b4f); }
+.pcard-buy:hover { color: var(--ahk-forest); }
