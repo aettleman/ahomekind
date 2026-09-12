@@ -1642,11 +1642,12 @@ body.shop-skin { background: var(--ahk-bg); }
 body.shop-skin header.site-header { background: var(--ahk-surface); }
 
 .shop-tabbar { background: none; border: 0; border-radius: 0; padding: 0;
-  gap: 7px; margin: 4px 0 18px; overflow-x: auto; flex-wrap: nowrap; }
-.shop-tab { flex: 0 0 auto; background: var(--ahk-clay-track, #ece1d1); color: #8a7660;
-  border-radius: 999px; padding: 9px 15px; font-size: 12.5px; box-shadow: none; }
-.shop-tab:hover { color: #6f5c47; }
-.shop-tab.active { background: var(--ahk-clay, #b4674a); color: #fdf7ef; box-shadow: none; }
+  gap: 7px; margin: 4px 0 16px; overflow: visible; flex-wrap: wrap; }
+.shop-tab { flex: 0 0 auto; background: transparent; border: 1px solid var(--ahk-border, #ddd4bd);
+  color: #6f6a59; border-radius: 999px; padding: 9px 15px; font-size: 12.5px; box-shadow: none; }
+.shop-tab:hover { color: var(--ahk-heading); border-color: var(--ahk-green); }
+.shop-tab.active { background: var(--ahk-forest); border-color: var(--ahk-forest);
+  color: #f4efe2; box-shadow: none; }
 
 .pcard { background: #fffdf8; border: 1px solid #ecdfcd; border-radius: 20px;
   padding: 6px 6px 14px; }
@@ -1714,9 +1715,6 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
    Tabs match "browse by category" on brand check: sage, with a forest pill
    for the current one. Buy links are green like every other link on the
    site. The only warm colour left is the brand line above each product. */
-.shop-tab { background: var(--ahk-sage-soft, #e4ebdd); color: #5e7355; }
-.shop-tab:hover { color: var(--ahk-heading); }
-.shop-tab.active { background: var(--ahk-forest); color: #f4efe2; }
 .pcard { background: var(--ahk-card, #fffdf8); border-color: var(--ahk-border-soft, #e4dbc7); }
 .pcard h3 { color: var(--ahk-heading); }
 .pcard-brand { color: var(--ahk-clay, #b4674a); }
