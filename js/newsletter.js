@@ -1,6 +1,6 @@
 // Client-side validation + UX for the newsletter signup forms.
 // The actual subscription is handled by the email provider named in each
-// form's "action" URL (see form markup) — this script does not send email
+// form's "action" URL (see form markup) - this script does not send email
 // itself, it just validates input and gives the person clear feedback
 // before handing off to the provider.
 (function () {
@@ -43,7 +43,7 @@
       // and show an optimistic success message here.
       if (msg) {
         msg.className = 'nf-msg nf-success';
-        msg.textContent = 'Thanks — check the new tab to confirm your subscription.';
+        msg.textContent = 'Thanks - check the new tab to confirm your subscription.';
       }
     });
   }

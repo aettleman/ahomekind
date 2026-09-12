@@ -79,12 +79,12 @@
 <button class="shop-tab" data-cat="home-goods">a home kind goods</button>
 </div>
 
-<p class="shop-disclosure" id="shopDisclosure"><span>Some of these are Amazon Associate links, so I earn from qualifying purchases at no extra cost to you. A Home Kind goods are my own. Either way it doesn't change what gets listed &mdash; everything here still has to pass the brand check first.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
+<p class="shop-disclosure" id="shopDisclosure"><span>Some links earn me a commission, at no extra cost to you.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
 
 <div class="pgrid" id="shopProducts">
 <p class="kswap-loading" id="shopLoading">loading products&hellip;</p>
 </div>
-<p id="shopEmpty" class="pgrid-empty" style="display:none;">Nothing in this category yet &mdash; check back soon.</p>
+<p id="shopEmpty" class="pgrid-empty" style="display:none;">Nothing in this category yet - check back soon.</p>
 </main>
 
 <div class="newsletter">
@@ -199,7 +199,7 @@ var hasGoods = visible.some(function(p){ return p.category === "home-goods"; });
 grid.innerHTML = visible.map(pcardHTML).join("") + (hasGoods ? "" : comingSoonHTML);
 initFilters();
 }).catch(function(){
-grid.innerHTML = "<p class=\"pgrid-empty\">Couldn't load the shop right now &mdash; try refreshing.</p>" + comingSoonHTML;
+grid.innerHTML = "<p class=\"pgrid-empty\">Couldn't load the shop right now - try refreshing.</p>" + comingSoonHTML;
 initFilters();
 });
 

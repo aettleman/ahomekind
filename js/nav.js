@@ -716,7 +716,7 @@ var pick = SWAPS[dayOfYear % SWAPS.length];
 el.innerHTML =
 '<p class="swap-of-day-kicker" style="color:#4d6b4f; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">one small swap</p>' +
 '<h2 class="myth-heading" style="font-size:24px;">today’s swap, made for you</h2>' +
-'<p class="myth-sub" style="margin-bottom:0;">A different genuine, certified alternative each day, straight from the brand check &mdash; no need to change everything at once.</p>' +
+'<p class="myth-sub" style="margin-bottom:0;">A different genuine, certified alternative each day, straight from the brand check - no need to change everything at once.</p>' +
 '<div class="swap-of-day-card">' +
 '<div class="swap-of-day-row">' +
 '<div class="swap-of-day-side"><p class="swap-label instead">instead of</p><p class="swap-name"><a href="' + pick.insteadHref + '">' + pick.insteadName + '</a></p><p class="swap-note">' + pick.insteadNote + '</p></div>' +

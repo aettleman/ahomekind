@@ -138,7 +138,7 @@
       return "" +
         "<div class=\"kswap-freebie-card\">" +
         "<p class=\"kswap-freebie-title\">your cruelty freebie is on its way</p>" +
-        "<p class=\"kswap-freebie-body\">I haven't finished designing these yet &mdash; wallpapers, little animal illustrations, that sort of thing. The moment the first batch is ready, this is where you'll find it. Thank you for making the kinder choice in the meantime.</p>" +
+        "<p class=\"kswap-freebie-body\">I haven't finished designing these yet - wallpapers, little animal illustrations, that sort of thing. The moment the first batch is ready, this is where you'll find it. Thank you for making the kinder choice in the meantime.</p>" +
         "</div>";
     }
     var body = freebie.description ? "<p class=\"kswap-freebie-body\">" + freebie.description + "</p>" : "";
@@ -165,7 +165,7 @@
     return "" +
       "<div class=\"kswap-unlock\">" +
       "<p class=\"kswap-unlock-title\">you made a kinder swap</p>" +
-      "<p class=\"kswap-unlock-body\">You've unlocked a Cruelty Freebie &mdash; a little thank-you from me, one kind choice at a time.</p>" +
+      "<p class=\"kswap-unlock-body\">You've unlocked a Cruelty Freebie - a little thank-you from me, one kind choice at a time.</p>" +
       "<button type=\"button\" class=\"btn\" id=\"kswap-claim-btn\">claim your freebie</button>" +
       "<div id=\"kswap-freebie-slot\"></div>" +
       "</div>";
@@ -219,7 +219,7 @@
     return "" +
       "<p class=\"kswap-affiliate-row\">" +
       "<a href=\"" + link.url + "\" class=\"kswap-shop-link\" target=\"_blank\" rel=\"nofollow sponsored noopener\">shop " + alt.name + " on " + retailer + " &rarr;</a>" +
-      "<span class=\"kswap-affiliate-note\">affiliate link &mdash; a small commission may support A Home Kind, at no extra cost to you</span>" +
+      "<span class=\"kswap-affiliate-note\">affiliate link - a small commission may support A Home Kind, at no extra cost to you</span>" +
       "</p>";
   }
 
@@ -241,7 +241,7 @@
   function noAlternativeHTML(){
     return "" +
       "<div class=\"kswap-none\">" +
-      "<p class=\"kswap-none-title\">no easy swap right now &mdash; and that's alright</p>" +
+      "<p class=\"kswap-none-title\">no easy swap right now - and that's alright</p>" +
       "<p class=\"kswap-none-body\">Sometimes you're just stood in a shop late at night with one option in your hand. That's a completely normal way to live, not a failure. Have a browse when you've got a minute and I'll help you find a kinder option for next time.</p>" +
       "<a href=\"brand-check.html\" class=\"btn\">browse cruelty-free brands</a>" +
       "</div>";

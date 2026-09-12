@@ -1001,7 +1001,7 @@ body { animation: pageFadeIn 0.22s ease; }
 .pcard.pcard-hide { opacity: 0; transform: scale(0.97); }
 @media (prefers-reduced-motion: reduce) { .pcard { transition: none; } }
 .pcard-imgwrap { background: #ffffff; border-radius: 13px; padding: 10px; margin-bottom: 11px; display: flex; align-items: center; justify-content: center; height: 120px; }
-.pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
+.pcard-imgwrap img { width: 100%; height: 100%; max-height: none; object-fit: cover; display: block; }
 .pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
 .pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ahk-parent-ink, #5c5378); background: var(--ahk-parent, #eae6f0); border: 1px solid var(--ahk-parent-line, #d9d3e4); padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
 .pcard h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
@@ -1658,7 +1658,8 @@ body.shop-skin header.site-header { background: var(--ahk-shop-ground, #f6efe4);
 
 .pcard { background: #fffdf8; border: 1px solid #ecdfcd; border-radius: 20px;
   padding: 6px 6px 14px; }
-.pcard-imgwrap { background: #f3ece0; border-radius: 15px; margin-bottom: 11px; height: 132px; }
+.pcard-imgwrap { background: #ffffff; border-radius: 15px; margin-bottom: 11px; height: 132px;
+  padding: 0; overflow: hidden; }
 .pcard-chip { color: #5e7355; background: #e6ece0; border-color: #dbe3d3; }
 .pcard-brand { color: var(--ahk-clay, #b4674a); font-size: 10px; letter-spacing: 1.1px;
   text-transform: uppercase; font-weight: 700; margin: 0 0 3px; }
@@ -1702,3 +1703,12 @@ body.shop-skin header.site-header { background: var(--ahk-shop-ground, #f6efe4);
 .pcard-buy:hover { color: var(--ahk-clay-deep, #9a5539); text-decoration: underline;
   text-underline-offset: 3px; }
 .pcard h3 { margin-bottom: 12px; }
+
+.shop-disclosure[hidden] { display: none !important; }
+
+/* Belt and braces: these two rules are the ones that decide whether a
+   product photo fills its frame, so they're repeated last where nothing
+   later in the file can quietly undo them. */
+.pcard-imgwrap { padding: 0; overflow: hidden; }
+.pcard-imgwrap img { width: 100%; height: 100%; max-height: none; max-width: none; object-fit: cover; }
+.pcard-imgwrap.is-empty { background: var(--ahk-surface); }
