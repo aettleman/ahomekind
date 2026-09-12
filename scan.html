@@ -132,6 +132,30 @@ body.scan-standby .camera-wrap { display:block !important; }
 body.scan-standby #reader { background:var(--ahk-forest-deep,#2f3a2d); }
 body.scan-immersive .bottom-nav { z-index:940; }
 
+/* ---- the result, as a card over the camera ----
+   The camera keeps running behind it, dimmed, so dismissing the card puts
+   you straight back to scanning the next thing rather than reloading a
+   page. Long results scroll inside the card; the full page is one tap. */
+body.scan-card-open .scan-dim { display:block; position:fixed; inset:0; background:rgba(26,32,22,0.55); z-index:940; }
+.scan-dim { display:none; }
+body.scan-card-open .scan-brackets,
+body.scan-card-open .scan-live-hint,
+body.scan-card-open .scan-live-arrow { opacity:0.22; }
+body.scan-card-open #snapBtn,
+body.scan-card-open .scan-cta,
+body.scan-card-open #torchBtn,
+body.scan-card-open .manual,
+body.scan-card-open #status { display:none !important; }
+
+body.scan-card-open #results { display:block !important; position:fixed; left:0; right:0; bottom:0; max-height:74vh; overflow-y:auto; -webkit-overflow-scrolling:touch; background:var(--ahk-bg,#faf5eb); border-radius:26px 26px 0 0; box-shadow:0 -16px 44px rgba(0,0,0,0.36); padding:8px 18px calc(22px + env(safe-area-inset-bottom, 0px)); z-index:950; overscroll-behavior:contain; }
+body.scan-card-open #results .result-in { animation:none; }
+.rescard-top { position:sticky; top:0; background:var(--ahk-bg,#faf5eb); padding:6px 0 10px; margin:0 0 4px; z-index:2; }
+.rescard-grab { display:block; width:38px; height:4px; border-radius:4px; background:#d9d0bb; margin:0 auto; }
+.rescard-close { position:absolute; top:2px; right:0; width:28px; height:28px; border-radius:50%; background:rgba(61,74,58,0.08); border:0; color:var(--ahk-heading,#3d4a3a); font-size:13px; line-height:1; cursor:pointer; }
+.rescard-foot { margin:14px 0 0; text-align:center; }
+.rescard-full { background:none; border:0; font-family:'Karla',sans-serif; font-weight:700; font-size:12px; color:var(--ahk-green,#4d6b4f); text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:6px; }
+.rescard-hint { font-size:10px; letter-spacing:1.2px; text-transform:uppercase; color:var(--ahk-text-muted,#8a8672); margin:6px 0 0; }
+
 /* Manual entry lives on the same screen, up in the empty space above the
    guide, rather than being a reason to leave it. */
 body.scan-immersive #status { position:fixed; left:24px; right:24px; bottom:calc(178px + env(safe-area-inset-bottom, 0px)); text-align:center; color:#fff !important; font-size:12.5px; line-height:1.5; text-shadow:0 2px 10px rgba(0,0,0,0.6); z-index:930; min-height:0; }
@@ -419,6 +443,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <div class="scan-brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>
 <div class="scan-escape"><button type="button" id="scanEscapeBtn">type the number instead</button></div>
+<div class="scan-dim" aria-hidden="true"></div>
 <div class="scan-live-card" aria-hidden="true">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>
 <p>point. scan. know.</p>
@@ -891,6 +916,7 @@ out += "</div>";
 }
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + out + "</div>";
+showResultCard();
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
@@ -959,6 +985,7 @@ fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_
 .catch(function(){
 setStatus("");
 el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + "<div class=\"verdict v-unknown\"><div class=\"v-title\">could not reach the product database</div>" + brandSearchWidget() + "</div></div>";
+showResultCard();
 wireBrandLookup();
 wireScanAgain();
 });
@@ -1029,7 +1056,8 @@ el("cameraWrap").style.display = "none";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "flex";
 el("cameraControls").style.display = "none";
 // Back out of immersive mode and give the buttons their words back.
-document.body.classList.remove("scan-immersive", "scan-standby", "scan-live");
+document.body.classList.remove("scan-immersive", "scan-standby", "scan-live", "scan-card-open");
+clearTimeout(cardIdleTimer);
 el("snapBtn").innerHTML = SNAP_LABEL;
 el("stopBtn").innerHTML = STOP_LABEL;
 el("torchBtn").innerHTML = TORCH_LABEL;
@@ -1043,7 +1071,13 @@ function onBarcodeDecoded(text){
 if(barcodeCaptured) return;
 barcodeCaptured = true;
 if(navigator.vibrate) navigator.vibrate(60);
-stopCamera();
+// Mute decoding rather than closing the camera, so the result can sit
+// over a live feed. stopCamera() still runs if we're not immersive.
+if(document.body.classList.contains("scan-immersive")){
+  if(rotateTimer){ clearInterval(rotateTimer); rotateTimer = null; }
+} else {
+  stopCamera();
+}
 lookup(text);
 }
 // A barcode held sideways or upside down often isn't read by the
@@ -1164,6 +1198,75 @@ setStatus("Camera scanning is not available here.");
 // the real camera in place, so nothing jumps. Anyone who would rather
 // type a number, or go elsewhere, has a way out that restores the
 // ordinary page.
+// ---- the result card -------------------------------------------------
+// The camera is left running when a code is read, so the result can sit
+// over the live feed. Decoding is muted rather than torn down, and after
+// twenty seconds of the card being open the feed itself is paused to save
+// battery -- it resumes the instant the card is dismissed.
+var cardIdleTimer = null;
+function cardChromeHTML(){
+  return '<div class="rescard-top"><span class="rescard-grab"></span>' +
+         '<button type="button" class="rescard-close" id="rescardClose" aria-label="Back to scanning">&#10005;</button></div>';
+}
+function cardFootHTML(){
+  return '<p class="rescard-foot"><button type="button" class="rescard-full" id="rescardFull">see the full page &rarr;</button>' +
+         '<span class="rescard-hint" style="display:block;">swipe down to scan the next one</span></p>';
+}
+function showResultCard(){
+  if(!document.body.classList.contains("scan-immersive")) return;
+  var box = el("results");
+  if(!box || !box.innerHTML.trim()) return;
+  if(!box.querySelector(".rescard-top")) box.insertAdjacentHTML("afterbegin", cardChromeHTML());
+  if(!box.querySelector(".rescard-foot")) box.insertAdjacentHTML("beforeend", cardFootHTML());
+  document.body.classList.add("scan-card-open");
+  box.scrollTop = 0;
+  var close = el("rescardClose"); if(close) close.addEventListener("click", hideResultCard);
+  var full = el("rescardFull"); if(full) full.addEventListener("click", openFullResult);
+  clearTimeout(cardIdleTimer);
+  cardIdleTimer = setTimeout(function(){
+    var v = el("reader"); if(v){ try { v.pause(); } catch(e){} }
+  }, 20000);
+}
+function stripCardChrome(){
+  var box = el("results");
+  if(!box) return;
+  var a = box.querySelector(".rescard-top"); if(a) a.remove();
+  var b = box.querySelector(".rescard-foot"); if(b) b.remove();
+}
+function hideResultCard(){
+  clearTimeout(cardIdleTimer);
+  document.body.classList.remove("scan-card-open");
+  stripCardChrome();
+  var box = el("results"); if(box) box.innerHTML = "";
+  var v = el("reader"); if(v && v.paused){ v.play().catch(function(){}); }
+  barcodeCaptured = false;
+  if(!rotateTimer && codeReader) rotateTimer = setInterval(tryRotatedDecode, 2500);
+  setStatus("");
+}
+function openFullResult(){
+  clearTimeout(cardIdleTimer);
+  document.body.classList.remove("scan-card-open");
+  stripCardChrome();
+  stopCamera();
+  var box = el("results");
+  if(box) setTimeout(function(){ window.scrollTo({ top: Math.max(0, box.offsetTop - 80), behavior: "smooth" }); }, 60);
+}
+// Swiping the card down, from the top of its scroll, goes back to scanning.
+(function(){
+  var y0 = null;
+  var box = el("results");
+  if(!box) return;
+  box.addEventListener("touchstart", function(e){
+    y0 = (box.scrollTop <= 0 && e.touches && e.touches.length === 1) ? e.touches[0].clientY : null;
+  }, { passive: true });
+  box.addEventListener("touchend", function(e){
+    if(y0 === null || !document.body.classList.contains("scan-card-open")) return;
+    var y1 = e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientY : y0;
+    if(y1 - y0 > 60) hideResultCard();
+    y0 = null;
+  }, { passive: true });
+})();
+
 function enterStandby(){
   document.body.classList.add("scan-immersive", "scan-standby");
 }
@@ -1191,7 +1294,8 @@ el("startBtn").addEventListener("click", startScan);
 el("stopBtn").addEventListener("click", stopCamera);
 document.addEventListener("keydown", function(e){
   if(e.key !== "Escape") return;
-  if(document.body.classList.contains("scan-live")) { stopCamera(); }
+  if(document.body.classList.contains("scan-card-open")) { hideResultCard(); }
+  else if(document.body.classList.contains("scan-live")) { stopCamera(); }
   else if(document.body.classList.contains("scan-immersive")) { leaveImmersive(); }
 });
 
