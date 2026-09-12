@@ -987,10 +987,10 @@ body { animation: pageFadeIn 0.22s ease; }
 /* Six underlined words read as six separate decisions. One forest track
    with a cream pill in it reads as a single switch with an obvious
    position -- and it's a far bigger tap target. */
-.shop-tabbar { display: flex; flex-wrap: wrap; gap: 4px; background: var(--ahk-forest); border-radius: 30px; padding: 5px; margin: 4px 0 26px; }
-.shop-tab { flex: 1 1 auto; background: none; border: none; font-family: 'Karla', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: rgba(244,239,226,0.74); padding: 10px 14px; border-radius: 26px; cursor: pointer; white-space: nowrap; transition: background 0.18s ease, color 0.18s ease; }
-.shop-tab:hover { color: #f4efe2; }
-.shop-tab.active { background: var(--ahk-bg); color: var(--ahk-heading); }
+.shop-tabbar { display: flex; flex-wrap: wrap; gap: 4px; background: var(--ahk-kind); border: 1px solid var(--ahk-kind-line); border-radius: 30px; padding: 5px; margin: 4px 0 26px; }
+.shop-tab { flex: 1 1 auto; background: none; border: none; font-family: 'Karla', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: #6d7a68; padding: 10px 14px; border-radius: 26px; cursor: pointer; white-space: nowrap; transition: background 0.18s ease, color 0.18s ease; }
+.shop-tab:hover { color: var(--ahk-heading); }
+.shop-tab.active { background: #ffffff; color: var(--ahk-heading); box-shadow: 0 2px 6px rgba(61,74,58,0.10); }
 @media(prefers-reduced-motion: reduce){ .shop-tab { transition: none; } }
 .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
 /* Product cards sit on a soft sage rather than plain white. On a cream
@@ -1003,13 +1003,13 @@ body { animation: pageFadeIn 0.22s ease; }
 .pcard-imgwrap { background: #ffffff; border-radius: 13px; padding: 10px; margin-bottom: 11px; display: flex; align-items: center; justify-content: center; height: 120px; }
 .pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
 .pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
-.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ahk-warm-deep, #8a6340); background: var(--ahk-warm-soft, #fbf3ea); border: 1px solid var(--ahk-warm-border, #e9d9c4); padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ahk-parent-ink, #5c5378); background: var(--ahk-parent, #eae6f0); border: 1px solid var(--ahk-parent-line, #d9d3e4); padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
 .pcard h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
 .pcard h3 a { color: inherit; text-decoration: none; }
 .pcard h3 a:hover { text-decoration: underline; }
 .pcard-brand { font-size: 11.5px; color: #8a8672; margin: 0 0 12px; }
-.pcard .btn { margin-top: auto; text-align: center; background: var(--ahk-warm, #a97a52); color: #fff; border-radius: 30px; }
-.pcard .btn:hover { background: var(--ahk-warm-deep, #8a6340); color: #fff; }
+.pcard .btn { margin-top: auto; text-align: center; background: var(--ahk-parent-ink, #5c5378); color: #fff; border-radius: 30px; }
+.pcard .btn:hover { background: #4b4463; color: #fff; }
 .pcard-soon { opacity: 0.7; }
 .pcard-soon h3 { font-style: italic; font-weight: 600; }
 .pgrid-empty { text-align: center; color: #8a8672; font-size: 13px; padding: 30px 0; }
