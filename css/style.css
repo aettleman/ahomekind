@@ -785,6 +785,16 @@ body { animation: pageFadeIn 0.22s ease; }
 .filter-sort-count { background: var(--ahk-gold); color: var(--ahk-forest-deep); border-radius: 20px; font-size: 10.5px; font-weight: 700; padding: 1px 8px; line-height: 1.6; }
 .filter-sort-panel { margin-top: 12px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 14px; padding: 16px 16px 4px; max-width: 420px; }
 .filter-sort-panel:not([hidden]) { display: block; }
+/* The A-Z controls were three full-width rows with sentence-length labels,
+   which pushed the brands themselves off the screen. One strip of three:
+   smaller, but permanently on show rather than hidden behind anything. */
+.az-filters { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:16px; padding:11px 12px; margin:0 0 20px; }
+.az-filters .azf { min-width:0; }
+.az-filters label { display:block; font-family:'Karla',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; color:var(--ahk-text-muted); margin:0 0 5px; }
+.az-filters select { width:100%; font:inherit; font-size:12.5px; padding:9px 8px; border-radius:11px; border:1px solid var(--ahk-border); background:var(--ahk-bg); color:var(--ahk-heading); }
+.az-filters select:focus { outline:2px solid var(--ahk-green); outline-offset:1px; }
+@media (max-width:380px){ .az-filters { grid-template-columns:1fr 1fr; } .az-filters .azf:first-child { grid-column:1 / -1; } }
+
 .filter-sort-label { font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; color: var(--ahk-text-muted); margin: 0 0 4px; }
 .filter-sort-label:not(:first-child) { margin-top: 14px; }
 

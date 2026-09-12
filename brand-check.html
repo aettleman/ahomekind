@@ -223,10 +223,10 @@
 
 <p id="categoryBack" style="display:none; margin-bottom:16px;"><a href="#" id="categoryBackLink">&larr; all categories</a></p>
 
-<div id="azJumpBar" class="cert-select-row" style="display:none; margin-bottom:22px;">
-<label for="azLetterSelect">jump to letter</label>
-<select id="azLetterSelect"><option value="all">all (A-Z)</option></select>
-<label for="azCategorySelect">narrow by category</label>
+<div id="azJumpBar" class="az-filters" style="display:none;">
+<span class="azf"><label for="azLetterSelect">letter</label>
+<select id="azLetterSelect"><option value="all">all</option></select></span>
+<span class="azf"><label for="azCategorySelect">category</label>
 <select id="azCategorySelect">
 <option value="all">all categories</option>
 <option value="skin-care">skin care</option>
@@ -236,8 +236,8 @@
 <option value="mouth-care">mouth care</option>
 <option value="household">household &amp; cleaning</option>
 <option value="supermarket">supermarket own-brand</option>
-</select>
-<label for="azRegionSelect">narrow by region</label>
+</select></span>
+<span class="azf"><label for="azRegionSelect">region</label>
 <select id="azRegionSelect">
 <option value="all">all regions</option>
 <option value="uk-europe">UK &amp; Europe</option>
@@ -246,9 +246,8 @@
 <option value="asia">Asia</option>
 <option value="africa-middle-east">Africa &amp; The Middle East</option>
 <option value="south-central-america">South &amp; Central America</option>
-</select>
+</select></span>
 </div>
-<p id="regionDataNote" style="display:none; font-size:12px; color:#8a8672; margin:-14px 0 22px;">We're still confirming where some brands are sold - brands without region info yet are left out of a region filter rather than guessed at.</p>
 
 <div id="listControls" style="display:none; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
 <p id="resultCount" style="margin:0; font-size:13px; color:#7a7561;"></p>
@@ -1369,7 +1368,6 @@ activeRegion = null;
 if (azRegionSelect) azRegionSelect.value = 'all';
 var activeRegion = null;
 var azRegionSelect = document.getElementById('azRegionSelect');
-var regionDataNote = document.getElementById('regionDataNote');
 
 // Region data only exists for a subset of brands so far (~490 of 823) --
 // a card with no data-region attribute at all means "we don't know yet",
@@ -1453,7 +1451,6 @@ browseBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
 browseAZBtn.style.display = 'none';
 azJumpBar.style.display = azMode ? 'flex' : 'none';
-if (regionDataNote) regionDataNote.style.display = azMode ? 'block' : 'none';
 listControls.style.display = 'flex';
 document.querySelectorAll('#allBrands .section-label, #allBrands .section-label-note').forEach(function(lbl){ lbl.style.display = 'none'; });
 // The dental disclaimer only makes sense when you're actually looking
