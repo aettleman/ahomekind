@@ -944,7 +944,7 @@ var LOCAL_BARCODES_PROMISE = fetch("data/barcodes.json").then(function(r){ retur
 function lookup(code){
 code = (code || "").replace(/[^0-9]/g,"");
 if(code.length < 6){ setStatus("That does not look like a barcode."); return; }
-setStatus("looking it up&hellip;", true);
+setStatus("looking it up…", true);
 el("results").innerHTML = "";
 LOCAL_BARCODES_PROMISE.then(function(localBarcodes){
 var local = localBarcodes && localBarcodes[code];
@@ -1093,7 +1093,7 @@ function captureAndDecode(){
 if(barcodeCaptured || !codeReader) return;
 var video = el("reader");
 if(!video.videoWidth){ setStatus("Camera's not ready yet - give it a second and try again."); return; }
-setStatus("reading that frame&hellip;", true);
+setStatus("reading that frame…", true);
 var angles = [0, 90, 180, 270];
 var i = 0;
 function frameAt(deg){
