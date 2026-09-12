@@ -215,6 +215,15 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .scan-shell .manual input::placeholder { color:var(--ahk-text-muted); }
 .scan-shell .manual #lookupBtn { flex:0 0 auto; background:transparent; color:var(--ahk-heading); border:1px solid var(--ahk-border); border-radius:60px; padding:15px 22px; font-size:12.5px; letter-spacing:1px; text-transform:uppercase; box-shadow:none; margin:0; width:auto; }
 .scan-shell .manual #lookupBtn:hover { background:var(--ahk-surface); }
+.scan-live-ingredients { display:none; }
+/* While the camera is up, everything else is hidden - which took the
+   ingredient checker away at the exact moment someone is stood in a shop
+   with the bottle in their hand. This is the one thing that stays. */
+body.scan-immersive .scan-live-ingredients { display:block; position:fixed; left:0; right:0;
+  bottom:calc(172px + env(safe-area-inset-bottom, 0px)); z-index:930; text-align:center;
+  font-size:12.5px; font-weight:600; color:#f4efe2; text-decoration:underline;
+  text-underline-offset:4px; text-shadow:0 1px 10px rgba(20,24,18,0.7); }
+body.scan-card-open .scan-live-ingredients { display:none !important; }
 .scan-shell-links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
 .scan-shell-links a { display:inline-flex; align-items:center; gap:8px; background:var(--ahk-card); border:0.5px solid var(--ahk-border-soft); border-radius:60px; padding:13px 20px; color:var(--ahk-heading); font-size:13px; font-weight:600; text-decoration:none; transition:border-color 0.16s ease; }
 .scan-shell-links a:hover, .scan-shell-links a:focus-visible { border-color:var(--ahk-green-soft); color:var(--ahk-heading); }
@@ -463,6 +472,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="stopBtn">&#10005; stop</button>
 </div>
+<a href="ingredient-check.html" class="scan-live-ingredients">no barcode? read the ingredients instead</a>
 </div>
 
 <!-- The drawn barcode in a dark box was a picture of the thing rather than
@@ -895,6 +905,7 @@ if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.l
 });
 head += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 if(product.ingredients_text) head += "<div id=\"ingredientWatch\"></div>";
+else head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, so I can't tell you whether it's vegan. <a href=\"ingredient-check.html\">Photograph the label</a> and I'll read it directly.</p>";
 head += "</div>";
 }
 
