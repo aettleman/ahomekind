@@ -59,55 +59,58 @@
    On wider screens it becomes two columns -- artwork left, words
    right -- so a desktop browser gets a layout designed for its
    width instead of a phone column floating in empty space. */
-.hero-x { position: relative; background: var(--ahk-bg); overflow: hidden; }
-
-/* The photograph is cut to an L and feathered into the page, same as every
-   other hero on the site, and the headline stands on the open grass the
-   crop clears. The rabbit sits in the right third of the shot, so the
-   cleared corner is the top left. */
-.hero-x-inner-art { position: relative; grid-column: 1 / -1; }
-.hero-x-inner-art > img {
-  display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='4'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='52' y='5' width='40' height='46' rx='8'/%3E%3Crect x='8' y='27' width='84' height='24' rx='8'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='4'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='52' y='5' width='40' height='46' rx='8'/%3E%3Crect x='8' y='27' width='84' height='24' rx='8'/%3E%3C/g%3E%3C/svg%3E");
+.hero-x { position: relative; background: var(--ahk-forest); overflow: hidden; }
+/* Optional photographic backdrop (a dark, leafy image). Until one is
+   supplied the forest green shows through on its own. */
+.hero-x-bg { position: absolute; inset: 0; }
+.hero-x-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.34; }
+.hero-x-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,48,31,0.55) 0%, rgba(38,48,31,0.8) 100%); }
+.hero-x-inner { position: relative; max-width: 1080px; margin: 0 auto; padding: 44px 24px 46px; display: grid; gap: 34px; align-items: center; text-align: center; }
+/* One photograph now does the job the blurred backdrop and the illustrated
+   card used to do between them. It's feathered on every side so it melts
+   into the green instead of sitting on it, and it runs nearly the full
+   width on a phone, where most people will meet it. */
+.hero-x-art { max-width: 100%; margin: 0 auto; }
+.hero-x-photo {
+  /* On a phone the full 16:9 frame leaves the rabbit tiny, so the crop is
+     squarer and weighted to the right, where he is. The left-hand grass is
+     what gets given up, and there's plenty of it. */
+  display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover;
+  object-position: 68% 50%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E");
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
 }
-.hero-x-inner-art > img[hidden] { display: none; }
-.hero-x-over { position: absolute; top: 2%; left: 1%; z-index: 2; max-width: 62%; text-align: left; }
-
-.hero-x-inner { position: relative; max-width: 1080px; margin: 0 auto; padding: 18px 24px 42px; display: grid; gap: 18px; align-items: center; text-align: center; }
-.hero-x-kicker { color: var(--ahk-green, #4d6b4f); font-size: 9.5px; letter-spacing: 2.4px; text-transform: uppercase; margin: 0 0 8px; font-weight: 700; }
-.hero-x h1 { color: var(--ahk-heading); font-family: 'Fraunces', 'Cormorant Garamond', serif; font-weight: 500; font-size: 26px; line-height: 1.08; letter-spacing: -0.4px; text-transform: none; margin: 0; text-wrap: balance; }
-.hero-x h1 em { font-style: italic; color: var(--ahk-gold-deep); }
+.hero-x-photo[hidden] { display: none; }
+.hero-x-kicker { color: var(--ahk-gold-soft); font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 16px; }
+.hero-x h1 { color: var(--ahk-on-dark); font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 33px; line-height: 1.28; letter-spacing: 0.2px; text-transform: none; margin: 0 0 18px; text-wrap: balance; }
+.hero-x h1 em { font-style: italic; color: var(--ahk-gold); }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
-.hero-x .hero-fact-text { max-width: 420px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.8; min-height: 72px; color: var(--ahk-text); }
-.hero-fact-arrow { border-color: var(--ahk-border) !important; color: var(--ahk-green) !important; }
-.hero-fact-arrow:hover, .hero-fact-arrow:focus-visible { border-color: var(--ahk-green) !important; }
-.hero-fact-dot { background: rgba(61,74,58,0.22); }
-.hero-fact-dot.active { background: var(--ahk-green, #4d6b4f); }
-.hero-x-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--ahk-forest); color: #f6f2e6; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 16px 32px; border-radius: 60px; margin: 18px 0 22px; box-shadow: 0 8px 20px rgba(61,74,58,0.18); transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.hero-x-cta svg rect, .hero-x-cta svg circle, .hero-x-cta svg path { stroke: #f6f2e6; }
-.hero-x-cta:hover, .hero-x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 13px 26px rgba(61,74,58,0.24); color: #f6f2e6; }
+.hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.8; min-height: 72px; }
+.hero-x-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--ahk-gold); color: #3d4a3a; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 17px 34px; border-radius: 60px; margin: 26px 0 24px; box-shadow: 0 8px 22px rgba(0,0,0,0.26); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.hero-x-cta:hover, .hero-x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 13px 28px rgba(0,0,0,0.32); color: #3d4a3a; }
 @media (prefers-reduced-motion: reduce) { .hero-x-cta { transition: none; } }
 .hero-x-links { display: flex; justify-content: center; gap: 14px; }
 .hero-x-link { flex: 1; max-width: 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
-.hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--ahk-border); background: #fffdf8; display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
-.hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: var(--ahk-surface); border-color: var(--ahk-green); }
-.hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-text-muted); text-align: center; line-height: 1.4; }
+.hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(244,239,226,0.3); background: rgba(244,239,226,0.07); display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
+.hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: rgba(244,239,226,0.15); border-color: var(--ahk-gold-soft); }
+.hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-on-dark-muted); text-align: center; line-height: 1.4; }
 
 @media (min-width: 860px) {
-  .hero-x-inner { padding: 22px 32px 56px; gap: 22px; }
-  .hero-x-inner-art > img { aspect-ratio: 21 / 8; }
-  .hero-x-over { top: 6%; left: 2%; max-width: 46%; }
-  .hero-x h1 { font-size: 44px; }
-  .hero-x .hero-fact-text { font-size: 14.5px; }
+  .hero-x-inner { grid-template-columns: 0.85fr 1fr; text-align: left; gap: 52px; padding: 64px 32px 66px; }
+  .hero-x-art { max-width: 100%; margin: 0; }
+  .hero-x-photo { aspect-ratio: 4 / 3.1; object-position: 60% 50%; }
+  .hero-x h1 { font-size: 42px; }
+  .hero-x .hero-fact-carousel, .hero-x .hero-fact-text { margin-left: 0; margin-right: 0; }
+  .hero-x .hero-fact-nav { justify-content: flex-start; }
+  .hero-x-links { justify-content: flex-start; }
+  .hero-x-link { align-items: flex-start; }
+  .hero-x-link-label { text-align: left; }
 }
 @media (max-width: 480px) {
-  .hero-x h1 { font-size: 22px; }
-  .hero-x-over { max-width: 64%; }
+  .hero-x h1 { font-size: 28px; }
   .hero-x-links { gap: 8px; }
   .hero-x-link-label { font-size: 11px; }
-}
 }
 </style>
 </head>
@@ -149,15 +152,14 @@
 </header>
 <section class="hero-x">
 <div class="hero-x-inner">
-<div class="hero-x-inner-art">
-<img src="images/hero-rabbit-meadow.jpg" alt="A rabbit sitting in long meadow grass in evening light" onerror="this.hidden=true">
-<div class="hero-x-over">
-<p class="hero-x-kicker">cruelty-free &middot; vegan</p>
-<h1>nobody has to be hurt for your shampoo to work.</h1>
-</div>
+
+<div class="hero-x-art">
+<img class="hero-x-photo" src="images/hero-rabbit-meadow.jpg" alt="A rabbit sitting in long meadow grass in evening light" onerror="this.hidden=true">
 </div>
 
 <div class="hero-x-copy">
+<p class="hero-x-kicker">cruelty-free &middot; vegan</p>
+<h1>your shampoo didn't need to be tested on a <em>rabbit</em>.</h1>
 
 <div class="hero-fact-carousel" id="heroFactCarousel">
 <p class="hero-fact-text" id="heroFactText"></p>
@@ -181,8 +183,8 @@
 <a href="brand-check.html" class="hero-x-link">
 <span class="hero-x-link-icon" aria-hidden="true">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<circle cx="10.5" cy="10.5" r="6.5" stroke="#3d4a3a" stroke-width="1.6"/>
-<line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="#3d4a3a" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="10.5" cy="10.5" r="6.5" stroke="#f4efe2" stroke-width="1.6"/>
+<line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="#f4efe2" stroke-width="1.6" stroke-linecap="round"/>
 </svg>
 </span>
 <span class="hero-x-link-label">check a brand</span>
@@ -190,8 +192,8 @@
 <a href="brand-check.html#allBrands" class="hero-x-link">
 <span class="hero-x-link-icon" aria-hidden="true">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#3d4a3a" stroke-width="1.5" stroke-linejoin="round"/>
-<path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#3d4a3a" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#f4efe2" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#f4efe2" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
 </span>
 <span class="hero-x-link-label">browse brands</span>
@@ -199,7 +201,7 @@
 <a href="learn.html" class="hero-x-link">
 <span class="hero-x-link-icon" aria-hidden="true">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M12 20s-8-4.8-8-11c0-3.2 2.5-5.5 5.4-5.5 1.7 0 3.1.8 4.1 2.1 1-1.3 2.4-2.1 4.1-2.1C20.5 3.5 23 5.8 23 9c0 6.2-8 11-8 11z" transform="translate(-1.5,0)" stroke="#3d4a3a" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M12 20s-8-4.8-8-11c0-3.2 2.5-5.5 5.4-5.5 1.7 0 3.1.8 4.1 2.1 1-1.3 2.4-2.1 4.1-2.1C20.5 3.5 23 5.8 23 9c0 6.2-8 11-8 11z" transform="translate(-1.5,0)" stroke="#f4efe2" stroke-width="1.5" stroke-linejoin="round"/>
 </svg>
 </span>
 <span class="hero-x-link-label">why it matters</span>
