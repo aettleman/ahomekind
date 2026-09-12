@@ -876,6 +876,28 @@ var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
 var identified = !!(name || brandText);
+
+// What was scanned, before the verdict on it.
+var head = "";
+if(product){
+head += "<div class=\"card\">";
+if(name) head += "<h3>" + name + "</h3>";
+if(brandText) head += "<p style=\"margin-bottom:12px;\">" + brandText + "</p>";
+var chips = "";
+var an = (product.ingredients_analysis_tags || []).join(" ");
+if(an.indexOf("en:vegan") !== -1 && an.indexOf("non-vegan") === -1) chips += "<span class=\"chip yes\">vegan ingredients</span>";
+else if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">contains animal ingredients</span>";
+var labels = (product.labels_tags || []).join(" ");
+LABEL_MAP.forEach(function(L){
+for(var k=0;k<L.keys.length;k++){
+if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.label + "</span>"; return; }
+}
+});
+head += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
+if(product.ingredients_text) head += "<div id=\"ingredientWatch\"></div>";
+head += "</div>";
+}
+
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'barcode', brand_found: !!brand, tier: brand ? brand.tier : null, identified: identified }); } catch(e){}
 if(brand){
 out += verdictHTML(brand);
@@ -893,24 +915,6 @@ out += "<p class=\"rcard-note\">The public barcode database doesn't have every p
 out += brandSearchWidget();
 out += "</div>";
 }
-if(product){
-out += "<div class=\"card\">";
-if(name) out += "<h3>" + name + "</h3>";
-if(brandText) out += "<p style=\"margin-bottom:12px;\">" + brandText + "</p>";
-var chips = "";
-var an = (product.ingredients_analysis_tags || []).join(" ");
-if(an.indexOf("en:vegan") !== -1 && an.indexOf("non-vegan") === -1) chips += "<span class=\"chip yes\">vegan ingredients</span>";
-else if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">contains animal ingredients</span>";
-var labels = (product.labels_tags || []).join(" ");
-LABEL_MAP.forEach(function(L){
-for(var k=0;k<L.keys.length;k++){
-if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.label + "</span>"; return; }
-}
-});
-out += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
-if(product.ingredients_text) out += "<div id=\"ingredientWatch\"></div>";
-out += "</div>";
-}
 if(!brand && identified){
 // The product itself was identified, just not its cruelty-free
 // status -- a softer, secondary note rather than the big "not on
@@ -923,7 +927,7 @@ out += brandSearchWidget();
 out += "</div>";
 }
 out += sourceBlock(brandText);
-el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + out + "</div>";
+el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + head + out + "</div>";
 showResultCard();
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 if(brand) wireShareWidget("share1", brand);
