@@ -171,10 +171,11 @@ var url = p.active !== false ? p.affiliateUrl : null;
 var img = "<img src=\"" + p.image + "\" alt=\"" + name + "\" loading=\"lazy\" onerror=\"this.hidden=true;this.parentNode.classList.add('is-empty');\">";
 var out = "<div class=\"pcard\" data-category=\"" + p.category + "\" data-product-id=\"" + p.id + "\">";
 out += url ? ("<a href=\"" + url + "\" class=\"pcard-imgwrap\" rel=\"nofollow noopener\" target=\"_blank\">" + img + "</a>") : ("<div class=\"pcard-imgwrap\">" + img + "</div>");
-out += "<span class=\"pcard-chip\">" + catLabel + "</span>";
 out += "<p class=\"pcard-brand\">" + brand + "</p>";
 out += "<h3>" + (url ? ("<a href=\"" + url + "\" rel=\"nofollow noopener\" target=\"_blank\">" + name + "</a>") : name) + "</h3>";
-if(url) out += "<a href=\"" + url + "\" class=\"btn\" rel=\"" + ctaRel(p) + "\" target=\"_blank\">" + ctaLabel(p) + "</a>";
+out += "<div class=\"pcard-foot\"><span class=\"pcard-chip\">" + catLabel + "</span>";
+if(url) out += "<a href=\"" + url + "\" class=\"pcard-buy\" rel=\"" + ctaRel(p) + "\" target=\"_blank\">" + ctaLabel(p) + " &rarr;</a>";
+out += "</div>";
 out += "</div>";
 return out;
 }
@@ -185,9 +186,9 @@ return out;
 var comingSoonHTML = "" +
 "<div class=\"pcard pcard-soon\" data-category=\"home-goods\">" +
 "<div class=\"pcard-imgwrap pcard-imgwrap-soon\">&#127968;</div>" +
-"<span class=\"pcard-chip\">a home kind goods</span>" +
 "<p class=\"pcard-brand\">coming soon</p>" +
 "<h3>more on the way</h3>" +
+"<div class=\"pcard-foot\"><span class=\"pcard-chip\">a home kind goods</span></div>" +
 "</div>";
 
 var grid = document.getElementById("shopProducts");
