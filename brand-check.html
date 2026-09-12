@@ -66,8 +66,6 @@
 /* Browse buttons now use the shared .btn-pri / .btn-sec components --
    the old per-ID colours are gone so they can't outrank them. */
 @media (max-width:480px) { .browse-btn-row { flex-direction:column; max-width:320px; } }
-.key-details summary { cursor:pointer; color:#6f8768; font-size:11px; letter-spacing:2px; text-transform:uppercase; list-style:revert; }
-.key-details summary:hover { color:#3d4a3a; }
 .kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:20px; }
 .kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:11px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3d4a3a; }
@@ -171,17 +169,17 @@
      belongs here, next to the thing it's a history of. -->
 <p class="xlink"><a href="brand-watch.html">what's changed since you last looked &rarr;</a></p>
 
-<details class="key-details" style="margin-bottom:22px;">
-<summary>key - what the symbols and price badges mean</summary>
-<div class="u-card" style="margin-top:10px;">
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#4d6b4f;">&#127807; fully cruelty-free &amp; vegan</strong></p>
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#8a6a2a;">&#128048; cruelty-free, check vegan status</strong></p>
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#3d6b78;">&#9888;&#65039; cruelty-free itself, parent company isn't</strong></p>
-<p style="font-size:13px; margin-bottom:10px;"><strong style="color:#8a332c;">&#10060; tested on animals</strong></p>
-<p style="font-size:13px; margin-bottom:14px;"><strong style="color:#6b6656;">&#128269; not certified - as of the date checked, no evidence they do or don't test on animals</strong></p>
-<p style="font-size:12.5px; color:#7a7561; margin:0;">Price badges (&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury) are a rough, general guide to market positioning, not exact pricing.</p>
+<!-- The key used to be a drop-down, which meant the colours on the page
+     were unexplained until you went looking. It's five chips and one line
+     now: always on show, and smaller than the closed drop-down was. -->
+<div class="verdict-key">
+<span class="vk good"><i></i>kind</span>
+<span class="vk check"><i></i>check vegan</span>
+<span class="vk warn"><i></i>parent co.</span>
+<span class="vk bad"><i></i>not kind</span>
+<span class="vk unknown"><i></i>not certified</span>
+<p class="vk-price">&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury &mdash; a rough guide to where a brand sits, not exact pricing.</p>
 </div>
-</details>
 
 <!-- The pills + certification dropdown used to sit open on the page at
      all times -- fine with three options, cluttered once certification

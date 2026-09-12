@@ -793,6 +793,51 @@ body { animation: pageFadeIn 0.22s ease; }
 /* The A-Z controls were three full-width rows with sentence-length labels,
    which pushed the brands themselves off the screen. One strip of three:
    smaller, but permanently on show rather than hidden behind anything. */
+
+/* ============================================================
+   BRAND ROWS
+   ============================================================
+   White cards on cream meant 800 brands read one line at a time. Each
+   verdict now tints its own row and carries a colour rail down the left,
+   so the list is skimmable: mostly green is reassuring, a block of rose
+   is not. Scoped to the directory so cards elsewhere are untouched. */
+#allBrands .card { position: relative; overflow: hidden; border-radius: 16px; padding-left: 18px; }
+#allBrands .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+#allBrands .card.good { background: var(--ahk-kind); border-color: var(--ahk-kind-line); }
+#allBrands .card.good::before { background: var(--ahk-kind-rail); }
+#allBrands .card.good .rating { color: var(--ahk-kind-ink); }
+#allBrands .card.check { background: var(--ahk-check); border-color: var(--ahk-check-line); }
+#allBrands .card.check::before { background: var(--ahk-check-rail); }
+#allBrands .card.check .rating { color: var(--ahk-check-ink); }
+#allBrands .card.warn { background: var(--ahk-parent); border-color: var(--ahk-parent-line); }
+#allBrands .card.warn::before { background: var(--ahk-parent-rail); }
+#allBrands .card.warn .rating { color: var(--ahk-parent-ink); }
+#allBrands .card.bad { background: var(--ahk-nokind); border-color: var(--ahk-nokind-line); }
+#allBrands .card.bad::before { background: var(--ahk-nokind-rail); }
+#allBrands .card.bad .rating { color: var(--ahk-nokind-ink); }
+#allBrands .card.unknown { background: #f3efe4; border-color: #e2dac7; }
+#allBrands .card.unknown::before { background: #b3ab94; }
+#allBrands .card.unknown .rating { color: #6b6656; }
+#allBrands .card h3 { margin-top: 2px; }
+
+/* The key, always on show instead of behind a drop-down: five colour
+   chips and one quiet line about price. */
+.verdict-key { display: flex; flex-wrap: wrap; gap: 6px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 16px; padding: 11px 12px; margin: 0 0 20px; }
+.vk { display: inline-flex; align-items: center; gap: 6px; font-family: 'Karla', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.2px; padding: 5px 10px; border-radius: 20px; border: 1px solid; }
+.vk i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.vk.good { background: var(--ahk-kind); border-color: var(--ahk-kind-line); color: var(--ahk-kind-ink); }
+.vk.good i { background: var(--ahk-kind-rail); }
+.vk.check { background: var(--ahk-check); border-color: var(--ahk-check-line); color: var(--ahk-check-ink); }
+.vk.check i { background: var(--ahk-check-rail); }
+.vk.warn { background: var(--ahk-parent); border-color: var(--ahk-parent-line); color: var(--ahk-parent-ink); }
+.vk.warn i { background: var(--ahk-parent-rail); }
+.vk.bad { background: var(--ahk-nokind); border-color: var(--ahk-nokind-line); color: var(--ahk-nokind-ink); }
+.vk.bad i { background: var(--ahk-nokind-rail); }
+.vk.unknown { background: #f3efe4; border-color: #e2dac7; color: #6b6656; }
+.vk.unknown i { background: #b3ab94; }
+.verdict-key .vk-price { flex-basis: 100%; font-size: 9.5px; letter-spacing: 0.3px; color: var(--ahk-text-muted); margin: 3px 0 0; }
+
+
 .az-filters { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:16px; padding:11px 12px; margin:0 0 20px; }
 .az-filters .azf { min-width:0; }
 .az-filters label { display:block; font-family:'Karla',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; color:var(--ahk-text-muted); margin:0 0 5px; }
@@ -926,27 +971,32 @@ body { animation: pageFadeIn 0.22s ease; }
 
 /* Shop page: tab bar + clean product grid (replaced the big category
    tiles, which weren't landing well in any of the colours tried). */
-.shop-tabbar { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 4px 0 28px; border-bottom: 1px solid #dcd2b8; padding-bottom: 16px; }
-.shop-tab { background: none; border: none; font-family: 'Karla', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; color: #8a8672; padding: 6px 2px; cursor: pointer; border-bottom: 2px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; }
-.shop-tab:hover { color: #3d4a3a; }
-.shop-tab.active { color: #3d4a3a; border-bottom-color: #4d6b4f; }
+/* Six underlined words read as six separate decisions. One forest track
+   with a cream pill in it reads as a single switch with an obvious
+   position -- and it's a far bigger tap target. */
+.shop-tabbar { display: flex; flex-wrap: wrap; gap: 4px; background: var(--ahk-forest); border-radius: 30px; padding: 5px; margin: 4px 0 26px; }
+.shop-tab { flex: 1 1 auto; background: none; border: none; font-family: 'Karla', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: rgba(244,239,226,0.74); padding: 10px 14px; border-radius: 26px; cursor: pointer; white-space: nowrap; transition: background 0.18s ease, color 0.18s ease; }
+.shop-tab:hover { color: #f4efe2; }
+.shop-tab.active { background: var(--ahk-bg); color: var(--ahk-heading); }
+@media(prefers-reduced-motion: reduce){ .shop-tab { transition: none; } }
 .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
 /* Product cards sit on a soft sage rather than plain white. On a cream
    page a white card reads as a gap in the paper; a faint green one reads
    as a card, and it ties the shop to the rest of the site's palette
    without shouting. */
-.pcard { background: #f4f7f0; border: 0.5px solid #cfdcc6; border-radius: 10px; padding: 14px 14px 16px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
+.pcard { background: var(--ahk-kind); border: 1px solid var(--ahk-kind-line); border-radius: 18px; padding: 10px 10px 14px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
 .pcard.pcard-hide { opacity: 0; transform: scale(0.97); }
 @media (prefers-reduced-motion: reduce) { .pcard { transition: none; } }
-.pcard-imgwrap { background: #ffffff; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; height: 120px; }
+.pcard-imgwrap { background: #ffffff; border-radius: 13px; padding: 10px; margin-bottom: 11px; display: flex; align-items: center; justify-content: center; height: 120px; }
 .pcard-imgwrap img { max-height: 96px; max-width: 100%; object-fit: contain; }
 .pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
-.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: #3d4a3a; background: #e2ebdc; border: 0.5px solid #cbdbc2; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; }
-.pcard h3 { font-family: 'Karla', sans-serif; font-size: 13.5px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
+.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ahk-warm-deep, #8a6340); background: var(--ahk-warm-soft, #fbf3ea); border: 1px solid var(--ahk-warm-border, #e9d9c4); padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+.pcard h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
 .pcard h3 a { color: inherit; text-decoration: none; }
 .pcard h3 a:hover { text-decoration: underline; }
 .pcard-brand { font-size: 11.5px; color: #8a8672; margin: 0 0 12px; }
-.pcard .btn { margin-top: auto; text-align: center; }
+.pcard .btn { margin-top: auto; text-align: center; background: var(--ahk-warm, #a97a52); color: #fff; border-radius: 30px; }
+.pcard .btn:hover { background: var(--ahk-warm-deep, #8a6340); color: #fff; }
 .pcard-soon { opacity: 0.7; }
 .pcard-soon h3 { font-style: italic; font-weight: 600; }
 .pgrid-empty { text-align: center; color: #8a8672; font-size: 13px; padding: 30px 0; }
@@ -1127,6 +1177,15 @@ body { animation: pageFadeIn 0.22s ease; }
   /* A warm terracotta-pink accent, pulled in from the Swap Guide / My
      Swaps redesign -- used sparingly as a second accent alongside the
      forest green, mostly on pull-quotes and warm highlight cards. */
+  /* One colour per verdict, so a page of brands has a shape before you've
+     read a word. The violet is the only new hue: "cruelty-free itself but
+     owned by a parent company that isn't" used to share amber with "check
+     the vegan status", which are two quite different things. */
+  --ahk-kind:          #e4ece0;  --ahk-kind-ink:  #3a5a3c;  --ahk-kind-line:  #cddcc6;  --ahk-kind-rail:  #6f9a6c;
+  --ahk-check:         #f7edd8;  --ahk-check-ink: #8a6a2a;  --ahk-check-line: #ecdcba;  --ahk-check-rail: #c99a45;
+  --ahk-parent:        #eae6f0;  --ahk-parent-ink:#5c5378;  --ahk-parent-line:#d9d3e4;  --ahk-parent-rail:#8a80a8;
+  --ahk-nokind:        #f7e6e1;  --ahk-nokind-ink:#8d4a30;  --ahk-nokind-line:#eed3c9;  --ahk-nokind-rail:#c4735a;
+
   --ahk-warm:          #a97a52;
   --ahk-warm-deep:     #8a6340;
   --ahk-warm-soft:     #fbf3ea;
