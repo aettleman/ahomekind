@@ -90,10 +90,12 @@
 .hero-x-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--ahk-gold); color: #3d4a3a; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 17px 34px; border-radius: 60px; margin: 26px 0 24px; box-shadow: 0 8px 22px rgba(0,0,0,0.26); transition: transform 0.18s ease, box-shadow 0.18s ease; }
 .hero-x-cta:hover, .hero-x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 13px 28px rgba(0,0,0,0.32); color: #3d4a3a; }
 @media (prefers-reduced-motion: reduce) { .hero-x-cta { transition: none; } }
-.hero-x-links { display: flex; justify-content: center; gap: 14px; }
+.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 26px; }
 .hero-x-link { flex: 1; max-width: 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
 .hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(244,239,226,0.3); background: rgba(244,239,226,0.07); display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
 .hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: rgba(244,239,226,0.15); border-color: var(--ahk-gold-soft); }
+.hero-x-link-icon.is-lead { background: #c9b184; border-color: #c9b184; }
+.hero-x-link:hover .hero-x-link-icon.is-lead, .hero-x-link:focus-visible .hero-x-link-icon.is-lead { background: #d6c096; border-color: #d6c096; }
 .hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-on-dark-muted); text-align: center; line-height: 1.4; }
 
 @media (min-width: 860px) {
@@ -170,16 +172,17 @@
 </div>
 </div>
 
-<a href="scan.html" class="hero-x-cta">
-<svg width="20" height="20" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-<rect x="9" y="11" width="22" height="18" rx="3" stroke="#3d4a3a" stroke-width="1.6"/>
-<circle cx="20" cy="20" r="5.5" stroke="#3d4a3a" stroke-width="1.6"/>
-<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#3d4a3a" stroke-width="1.6" stroke-linejoin="round"/>
-</svg>
-<span>scan a product</span>
-</a>
-
 <div class="hero-x-links">
+<a href="scan.html" class="hero-x-link">
+<span class="hero-x-link-icon is-lead" aria-hidden="true">
+<svg width="21" height="21" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+<rect x="9" y="11" width="22" height="18" rx="3" stroke="#2f3a2d" stroke-width="1.6"/>
+<circle cx="20" cy="20" r="5.5" stroke="#2f3a2d" stroke-width="1.6"/>
+<path d="M15 11l1.4-2.6h7.2L25 11" stroke="#2f3a2d" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+</span>
+<span class="hero-x-link-label">scan a product</span>
+</a>
 <a href="brand-check.html" class="hero-x-link">
 <span class="hero-x-link-icon" aria-hidden="true">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -188,15 +191,6 @@
 </svg>
 </span>
 <span class="hero-x-link-label">check a brand</span>
-</a>
-<a href="brand-check.html#allBrands" class="hero-x-link">
-<span class="hero-x-link-icon" aria-hidden="true">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-<path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="#f4efe2" stroke-width="1.5" stroke-linejoin="round"/>
-<path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="#f4efe2" stroke-width="1.5" stroke-linecap="round"/>
-</svg>
-</span>
-<span class="hero-x-link-label">browse brands</span>
 </a>
 <a href="learn.html" class="hero-x-link">
 <span class="hero-x-link-icon" aria-hidden="true">
