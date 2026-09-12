@@ -1184,6 +1184,12 @@ body { animation: pageFadeIn 0.22s ease; }
   --ahk-gold-soft:     #d9c99a;
   --ahk-on-dark:       #f4efe2;  /* text on forest */
   --ahk-on-dark-muted: #c9d1c3;
+  --ahk-clay:          #b4674a;  /* the shop's accent -- the same warm
+                                    terracotta My Swaps already uses */
+  --ahk-clay-deep:     #9a5539;
+  --ahk-clay-soft:     #f3e5dc;
+  --ahk-clay-track:    #ece1d1;
+  --ahk-shop-ground:   #f6efe4;
   --ahk-shadow:        rgba(61,74,58,0.12);
   --ahk-shadow-strong: rgba(61,74,58,0.22);
 
@@ -1632,3 +1638,54 @@ textarea.report-field { min-height: 72px; resize: vertical; line-height: 1.6; }
 .xlink { margin: -6px 0 22px; font-size: 13px; }
 .xlink a { color: var(--ahk-green); text-decoration: none; border-bottom: 1px solid var(--ahk-border); padding-bottom: 1px; }
 .xlink a:hover { border-bottom-color: var(--ahk-green); }
+
+
+/* ---- Shop: clay & sage -------------------------------------------------
+   The shop is the one page allowed to look like somewhere else. It sits on
+   a slightly deeper cream than the rest of the site, the accent is warm
+   clay rather than violet, and sage is kept for the little category tags.
+   Product names are in the serif -- that alone is most of what stops the
+   grid reading like a spreadsheet. */
+body.shop-skin { background: var(--ahk-shop-ground, #f6efe4); }
+body.shop-skin header.site-header { background: var(--ahk-shop-ground, #f6efe4); }
+
+.shop-tabbar { background: none; border: 0; border-radius: 0; padding: 0;
+  gap: 7px; margin: 4px 0 18px; overflow-x: auto; flex-wrap: nowrap; }
+.shop-tab { flex: 0 0 auto; background: var(--ahk-clay-track, #ece1d1); color: #8a7660;
+  border-radius: 999px; padding: 9px 15px; font-size: 12.5px; box-shadow: none; }
+.shop-tab:hover { color: #6f5c47; }
+.shop-tab.active { background: var(--ahk-clay, #b4674a); color: #fdf7ef; box-shadow: none; }
+
+.pcard { background: #fffdf8; border: 1px solid #ecdfcd; border-radius: 20px;
+  padding: 6px 6px 14px; }
+.pcard-imgwrap { background: #f3ece0; border-radius: 15px; margin-bottom: 11px; height: 132px; }
+.pcard-chip { color: #5e7355; background: #e6ece0; border-color: #dbe3d3; }
+.pcard-brand { color: var(--ahk-clay, #b4674a); font-size: 10px; letter-spacing: 1.1px;
+  text-transform: uppercase; font-weight: 700; margin: 0 0 3px; }
+.pcard h3 { font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+  font-size: 16px; letter-spacing: -0.2px; line-height: 1.22; color: #42342a; margin: 0 0 10px; }
+.pcard .btn { background: var(--ahk-clay, #b4674a); color: #fdf7ef; }
+.pcard .btn:hover { background: var(--ahk-clay-deep, #9a5539); color: #fdf7ef; }
+.pcard-chip, .pcard-brand, .pcard h3, .pcard .btn { padding-left: 6px; padding-right: 6px; }
+.pcard .btn { padding-left: 14px; padding-right: 14px; }
+
+/* The disclosure is small print, so it reads as one quiet line under the
+   tabs rather than a panel competing with the first row of products. */
+.shop-disclosure { background: none !important; border: 0 !important; padding: 0 !important;
+  font-size: 11.5px; line-height: 1.5; color: #9a8b78; margin: -8px 0 18px;
+  display: flex; align-items: flex-start; gap: 8px; }
+.shop-disclosure-close { color: #b3a795; }
+
+
+/* ---- Ingredient checker: the two ways in, side by side -----------------
+   Scanning is the primary route and photographing the label is the
+   fallback, but both stay on one line so the page doesn't grow. */
+.ic-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 16px; }
+.ic-tab { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; padding: 14px 8px; border: 1px solid #e0d6c2; border-radius: 16px;
+  background: #fffdf8; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px;
+  letter-spacing: 0; color: #5c5c4f; cursor: pointer; text-align: center; line-height: 1.25; }
+.ic-tab svg { display: block; }
+.ic-tab .ic-tab-sub { display: block; font-weight: 500; font-size: 11px; color: #97907f; }
+.ic-tab.active { background: var(--ahk-forest, #3d4a3a); border-color: var(--ahk-forest, #3d4a3a); color: #f4efe2; }
+.ic-tab.active .ic-tab-sub { color: rgba(244,239,226,.78); }
