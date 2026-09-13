@@ -131,6 +131,29 @@ body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:c
 body.scan-standby .camera-wrap { display:block !important; }
 body.scan-standby #reader { background:var(--ahk-forest-deep,#2f3a2d); }
 body.scan-immersive .bottom-nav { z-index:940; }
+/* Before the camera is running there is nothing to line up, so the
+   brackets, the "line up the barcode" line and its arrow all read as a
+   broken screen. They only appear once the feed is actually live. In
+   standby the screen says the one thing that matters: tap the button. */
+.scan-standby-hint, .scan-standby-arrow { display:none; }
+body.scan-standby .scan-brackets,
+body.scan-standby .scan-live-hint,
+body.scan-standby .scan-live-arrow { display:none !important; }
+body.scan-standby .scan-standby-hint {
+  display:block; position:fixed; left:24px; right:24px;
+  bottom:calc(330px + env(safe-area-inset-bottom, 0px)); text-align:center;
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-size:23px;
+  color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none;
+}
+body.scan-standby .scan-standby-arrow {
+  display:block; position:fixed; left:50%; transform:translateX(-50%);
+  bottom:calc(266px + env(safe-area-inset-bottom, 0px));
+  width:30px; height:52px; z-index:920; pointer-events:none; opacity:.9;
+}
+@media (max-height: 720px) {
+  body.scan-standby .scan-standby-hint { bottom:calc(312px + env(safe-area-inset-bottom, 0px)); font-size:20px; }
+  body.scan-standby .scan-standby-arrow { bottom:calc(264px + env(safe-area-inset-bottom, 0px)); height:40px; }
+}
 
 /* Reached only by "see the full page" from a result, so it shows the
    result and the notes around it -- not a second copy of the scanner. */
@@ -476,6 +499,8 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
 <!-- Only visible once the camera is live (see body.scan-live). -->
 <p class="scan-live-hint" id="scanHint" aria-hidden="true">line up the barcode</p>
+<p class="scan-standby-hint" aria-hidden="true">tap to start the camera</p>
+<svg class="scan-standby-arrow" viewBox="0 0 40 70" fill="none" aria-hidden="true"><path d="M20 4c-6 18-6 34 0 54" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M20 58l-7-9M20 58l7-9" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <svg class="scan-live-arrow" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M52 7C35 7 20 17 15 36" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M15 36l-2.5-10.5M15 36l10.5-3.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <div class="scan-brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>

@@ -456,6 +456,14 @@ footer.site-footer {
     padding: 5px 6px calc(5px + env(safe-area-inset-bottom, 0px));
     z-index: 500;
   }
+  /* The bar's own background stops where the element stops. On pages with
+     a dark body (the scanner) that left a strip of forest green below it
+     in the installed app. This paints the bar's colour on past the bottom
+     edge so there is never a gap, whatever the device's safe area does. */
+  .bottom-nav::after {
+    content: ''; position: absolute; left: 0; right: 0; top: 100%;
+    height: 80px; background: var(--ahk-bg, #faf5eb);
+  }
   /* The header's full desktop dropdown nav (Scan/Convince Me/Explore
      More, each with its own hover/tap menu) has nowhere near enough
      width on a phone -- it wraps into a cramped multi-row header and

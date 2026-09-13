@@ -1,9 +1,9 @@
 {
   "name": "A Home Kind",
   "short_name": "A Home Kind",
-  "description": "Check whether a product is cruelty-free and vegan before you buy: scan a barcode, search over 800 brands, or read an ingredients list.",
+  "description": "Check whether a product is cruelty-free and vegan before you buy: scan a barcode, search over a thousand brands, or read an ingredients list.",
   "start_url": "/?source=pwa",
-  "id": "/scan.html",
+  "id": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",

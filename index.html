@@ -69,8 +69,14 @@
    are. Full-bleed left/right/top, with the bottom edge dissolving into
    the band below instead of stopping on a hard line. */
 .hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%;
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.55) 88%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.55) 88%, rgba(0,0,0,0) 100%); }
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 5%, #000 74%, rgba(0,0,0,.5) 90%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 5%, #000 74%, rgba(0,0,0,.5) 90%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  mask-composite: intersect; }
 .hero-x-photo[hidden] { display: none; }
 .hero-x-art::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
