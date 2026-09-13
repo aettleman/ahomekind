@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Perfume &amp; Fragrance - a home kind</title>
+<meta name="description" content="Which perfume brands test on animals and which don't, and why the name on the bottle often isn't who makes it.">
+<meta property="og:title" content="Perfume &amp; Fragrance">
+<meta property="og:description" content="Which perfume brands test on animals and which don't, and why the name on the bottle often isn't who makes it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahomekind.com/perfume.html">
+<meta property="og:image" content="https://ahomekind.com/images/perfume-hero.jpg">
+<meta property="og:site_name" content="a home kind">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260911a">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d4a3a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A Home Kind">
+<style>
+.page-photo { display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px; }
+.pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid var(--ahk-green); padding:4px 0 4px 20px; margin:26px 0; }
+.route { display:flex; align-items:center; justify-content:space-between; gap:14px; border-radius:18px; padding:18px 22px; margin-bottom:11px; text-decoration:none; border:1px solid; }
+.route b { font-family:'Karla',sans-serif; font-size:14.5px; font-weight:700; }
+.route i { font-style:normal; font-size:18px; }
+.route.sage { background:#e8eee1; border-color:#d6e0cb; }
+.route.sage b, .route.sage i { color:#3a5a3c; }
+.route.terra { background:#faeee6; border-color:#f0d9c9; }
+.route.terra b, .route.terra i { color:#8a5a3a; }
+.route:hover { filter:brightness(0.98); }
+
+/* one row per brand, colour-railed the same way brand-check rows are */
+.pf-list { margin-top:14px; }
+.pf-card { background:var(--ahk-card); border:0.5px solid var(--ahk-border-soft); border-left:4px solid var(--ahk-border); border-radius:16px; padding:16px 18px; margin-bottom:10px; }
+.pf-card.is-kind { border-left-color:var(--ahk-kind-rail); }
+.pf-card.is-not-kind { border-left-color:var(--ahk-nokind-rail); }
+.pf-card.is-checking { border-left-color:var(--ahk-check-rail); }
+.pf-top { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.pf-name { font-family:'Karla',sans-serif; font-weight:700; font-size:15px; color:var(--ahk-heading); margin:0; }
+.pf-pills { display:flex; flex-wrap:wrap; gap:6px; justify-content:flex-end; }
+.pf-pill { display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; padding:5px 10px; border-radius:20px; white-space:nowrap; }
+.pf-pill.kind { background:var(--ahk-kind); color:var(--ahk-kind-ink); }
+.pf-pill.not-kind { background:var(--ahk-nokind); color:var(--ahk-nokind-ink); }
+.pf-pill.checking { background:var(--ahk-check); color:var(--ahk-check-ink); }
+.pf-pill.vegan { background:var(--ahk-sage-soft); color:#3a5a3c; }
+.pf-note { font-size:13px; line-height:1.72; color:var(--ahk-text); margin:10px 0 0; }
+.pf-src { font-size:11px; color:var(--ahk-text-muted); margin:9px 0 0; }
+.pf-src a { color:var(--ahk-green); }
+
+/* the china filter */
+.pf-filter { display:flex; align-items:center; gap:14px; background:var(--ahk-surface); border:0.5px solid var(--ahk-border-soft); border-radius:16px; padding:15px 18px; margin:22px 0 4px; }
+.pf-filter-text { flex:1; font-size:12.5px; color:var(--ahk-text); line-height:1.55; }
+.pf-filter-text b { display:block; color:var(--ahk-heading); font-size:13.5px; margin-bottom:2px; }
+.pf-switch { flex-shrink:0; position:relative; width:44px; height:26px; border:0; padding:0; border-radius:20px; background:var(--ahk-border); cursor:pointer; transition:background 0.16s ease; }
+.pf-switch::after { content:''; position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.22); transition:transform 0.16s ease; }
+.pf-switch[aria-pressed="true"] { background:var(--ahk-green); }
+.pf-switch[aria-pressed="true"]::after { transform:translateX(18px); }
+@media (prefers-reduced-motion: reduce) { .pf-switch, .pf-switch::after { transition:none; } }
+.pf-empty { font-size:13px; color:var(--ahk-text-muted); }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a href="index.html" class="logo">
+<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
+<span>a home kind</span>
+</a>
+<nav class="main-nav">
+<a href="index.html">home</a>
+<a href="brand-check.html">brand check</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="scan.html">scan a barcode</a>
+<a href="shelf.html">scan a shelf</a>
+</span></span>
+<a href="ingredient-check.html">ingredient checker</a>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="learn.html">learn</a>
+<a href="impact.html">your impact</a>
+<a href="my-swaps.html">my swaps</a>
+</span></span>
+<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
+<span class="dd-m">
+<a href="brand-watch.html">what's changed</a>
+<a href="swap-guide.html">swap guide</a>
+<a href="food">food &amp; kitchen</a>
+<a href="fashion">fashion &amp; accessories</a>
+<a href="perfume.html">perfume &amp; fragrance</a>
+<a href="journal/">journal</a>
+<a href="about.html">about</a>
+</span></span>
+<a href="shop.html" class="nav-shop-btn">shop</a>
+</nav>
+</div>
+</header>
+
+<main class="page-shell" id="main">
+<div class="pagehead">
+<h1>perfume &amp; fragrance</h1>
+</div>
+
+<h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:32px; line-height:1.14; color:var(--ahk-heading); margin:0 0 18px; max-width:22ch; text-transform:none;">the name on the bottle isn't always who made it.</h2>
+
+<img class="page-photo" src="images/perfume-hero.jpg" alt="Three plain glass perfume bottles on a stone surface in soft daylight, with dried lavender and cotton stems beside them" loading="eager" onerror="this.hidden=true">
+
+<a class="route sage" href="#brands"><b>which brands are kind</b><i>&rsaquo;</i></a>
+<a class="route terra" href="brand-check.html"><b>check any other brand</b><i>&rsaquo;</i></a>
+
+<p>Perfume gets its own section rather than sitting under makeup, because the question you have to ask is a different one. Most fragrances you see on a department store counter are made under licence: a fashion house owns the name, and a separate company actually makes, sells and decides the testing policy for what's in the bottle. So checking the designer tells you very little. Gucci is the clearest example, its fragrances are made by Coty, and it's Coty's policy that matters.</p>
+
+<p class="pull-quote">The brand you recognise is often just the label. Check who's behind it.</p>
+
+<p>The second thing that catches people out is mainland China, where animal testing is still required for a lot of imported cosmetics. A brand can be genuinely cruelty-free everywhere else and still be tested on animals in order to be sold there. It's the single most common reason a well-known fragrance house doesn't qualify, and it's why the filter below exists.</p>
+
+<p>One more distinction worth keeping straight: <strong>cruelty-free</strong> means no animal testing, <strong>vegan</strong> means no animal ingredients. Fragrance uses more animal-derived material than people expect, musk, civet, ambergris, beeswax and honey among them, though most of it is synthetic now. A brand can be one without the other, so both are marked separately below.</p>
+
+<p class="section-label" id="brands" style="margin-top:38px;">where the brands stand</p>
+<p>A starting list rather than a complete one. Each verdict links to where it came from, so you can check it yourself rather than taking my word for it.</p>
+
+<div class="pf-filter">
+<div class="pf-filter-text"><b>hide brands sold in mainland China</b>where animal testing is still required for many imported cosmetics</div>
+<button type="button" class="pf-switch" id="pfChina" aria-pressed="false" aria-label="hide brands sold in mainland China"></button>
+</div>
+
+<div class="pf-list" id="pfList"><p class="pf-empty">loading&hellip;</p></div>
+
+<p style="margin-top:28px; font-size:12.5px; color:var(--ahk-text-muted);">Know a fragrance brand I've missed, or spotted something that's changed? <a href="mailto:hello@ahomekind.com?subject=Perfume%20brand">let me know</a> and I'll look into it.</p>
+
+</main>
+<div class="newsletter">
+<p class="label3">stay in the loop</p>
+<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<form class="newsletter-form" id="nf-31" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
+<input type="hidden" value="1" name="embed">
+<div class="nf-row">
+<label for="nf-email-31" class="visually-hidden">Email address</label>
+<input type="email" id="nf-email-31" name="email" placeholder="you@example.com" autocomplete="email" required>
+<button type="submit" class="btn">join the list</button>
+</div>
+<label class="nf-consent">
+<input type="checkbox" id="nf-consent-31" required>
+<span>I'd like to receive emails from a home kind. See the <a href="privacy.html">privacy policy</a>.</span>
+</label>
+<p class="nf-msg" id="nf-msg-31" role="status" aria-live="polite"></p>
+</form>
+</div>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="js/nav.js?v=20260910z"></script>
+<script src="js/newsletter.js"></script>
+
+<script>
+(function(){
+  var listEl = document.getElementById('pfList');
+  var switchEl = document.getElementById('pfChina');
+  var BRANDS = [];
+  var hideChina = false;
+
+  var STATUS = {
+    'kind':      { cls:'kind',      label:'cruelty-free' },
+    'not-kind':  { cls:'not-kind',  label:'tests on animals' },
+    'checking':  { cls:'checking',  label:'still checking' }
+  };
+  var VEGAN = { 'full':'fully vegan', 'some':'some vegan' };
+
+  function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+  function render(){
+    var rows = BRANDS.filter(function(b){ return !(hideChina && b.china === 'sells'); });
+    if(!rows.length){ listEl.innerHTML = '<p class="pf-empty">Nothing left with that filter on.</p>'; return; }
+    listEl.innerHTML = rows.map(function(b){
+      var st = STATUS[b.status] || STATUS.checking;
+      var pills = '<span class="pf-pill ' + st.cls + '">' + st.label + '</span>';
+      if(VEGAN[b.vegan]) pills += '<span class="pf-pill vegan">' + VEGAN[b.vegan] + '</span>';
+      var src = (b.sources || []).map(function(s){
+        return '<a href="' + encodeURI(s.url) + '" target="_blank" rel="noopener">' + esc(s.label) + '</a>';
+      }).join(' &middot; ');
+      return '<div class="pf-card is-' + st.cls + '">' +
+               '<div class="pf-top"><p class="pf-name">' + esc(b.name) + '</p>' +
+               '<div class="pf-pills">' + pills + '</div></div>' +
+               '<p class="pf-note">' + esc(b.note) + '</p>' +
+               (src ? '<p class="pf-src">source: ' + src + '</p>' : '') +
+             '</div>';
+    }).join('');
+  }
+
+  switchEl.addEventListener('click', function(){
+    hideChina = !hideChina;
+    switchEl.setAttribute('aria-pressed', hideChina ? 'true' : 'false');
+    render();
+  });
+
+  fetch('data/perfume-brands.json').then(function(r){ return r.json(); }).then(function(list){
+    BRANDS = list || [];
+    render();
+  }).catch(function(){
+    listEl.innerHTML = '<p class="pf-empty">Couldn\'t load the brand list right now.</p>';
+  });
+})();
+</script>
+</body>
+</html>

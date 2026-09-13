@@ -132,6 +132,7 @@
 <a href="swap-guide.html">swap guide</a>
 <a href="food">food &amp; kitchen</a>
 <a href="fashion">fashion &amp; accessories</a>
+<a href="perfume.html">perfume &amp; fragrance</a>
 <a href="journal/">journal</a>
 <a href="about.html">about</a>
 </span></span>
@@ -1236,6 +1237,7 @@ var CATEGORIES = [
 { key: 'body-shower', icon: '🫙', label: 'body &amp; shower', img: 'cat-body.jpg' },
 { key: 'mouth-care', icon: '🦷', label: 'mouth care', img: 'cat-mouth.jpg' },
 { key: 'household', icon: '🧽', label: 'household &amp; cleaning', img: 'cat-household.jpg' },
+{ key: 'perfume', icon: '🌸', label: 'perfume &amp; fragrance', img: 'cat-perfume.jpg', href: 'perfume.html' },
 { key: 'supermarket', icon: '🛒', label: 'supermarket own-brand', img: 'cat-supermarket.jpg' },
 { key: 'food', icon: '🥗', label: 'food &amp; kitchen', img: 'cat-food.jpg', soon: true },
 { key: 'clothing', icon: '👗', label: 'clothing &amp; accessories', img: 'cat-fashion.jpg', soon: true }
@@ -1340,7 +1342,9 @@ azLetterSelect.innerHTML = html;
 function buildCategoryGrid() {
 var html = '';
 CATEGORIES.forEach(function(cat) {
-html += '<a href="#" class="cat-photo' + (cat.soon ? ' is-soon' : '') + '" data-cat="' + cat.key + '"' + (cat.soon ? ' aria-disabled="true"' : '') + '>';
+// A category with its own page (perfume) links straight out to it;
+// everything else filters this page in place.
+html += '<a href="' + (cat.href || '#') + '" class="cat-photo' + (cat.soon ? ' is-soon' : '') + '" data-cat="' + cat.key + '"' + (cat.href ? '' : '') + (cat.soon ? ' aria-disabled="true"' : '') + '>';
 // The emoji stays as the fallback: if a photo isn't there yet the tile
 // still reads as a tile rather than as a broken image.
 html += '<span class="cat-photo-fallback" aria-hidden="true">' + cat.icon + '</span>';
@@ -1349,9 +1353,14 @@ html += '<span class="cat-photo-label">' + cat.label + (cat.soon ? '<em>coming s
 html += '</a>';
 });
 categoryGridInner.innerHTML = html;
-categoryGridInner.querySelectorAll('.home-card').forEach(function(tile) {
+// These tiles render with the class .cat-photo, so the old selector here
+// (.home-card) matched nothing and every tile was silently dead on click.
+categoryGridInner.querySelectorAll('.cat-photo').forEach(function(tile) {
 tile.addEventListener('click', function(e) {
+// A tile pointing at its own page is left alone to navigate normally.
+if (tile.getAttribute('href') && tile.getAttribute('href') !== '#') return;
 e.preventDefault();
+if (tile.getAttribute('aria-disabled') === 'true') return;
 showCategory(tile.getAttribute('data-cat'));
 });
 });

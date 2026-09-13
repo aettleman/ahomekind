@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Ghost",
+    "status": "kind",
+    "vegan": "full",
+    "china": "unknown",
+    "note": "States on its own site that it doesn't test on animals and that its fragrances are Vegan Society approved. A rare case of a high-street name being both.",
+    "sources": [
+      {
+        "url": "https://ghostfragrances.com/pages/about",
+        "label": "Ghost, about page"
+      }
+    ]
+  },
+  {
+    "name": "Lush",
+    "status": "kind",
+    "vegan": "some",
+    "china": "clear",
+    "note": "Long-standing anti-testing campaigner, and much of the range is vegan, though not all of it. Doesn't sell in mainland China.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Floral Street",
+    "status": "kind",
+    "vegan": "full",
+    "china": "unknown",
+    "note": "British, vegan across the range, and the packaging is one of the few genuinely low-waste efforts in fragrance.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Stella McCartney",
+    "status": "kind",
+    "vegan": "some",
+    "china": "unknown",
+    "note": "Cruelty-free, and the wider brand has been vocally anti-fur and anti-leather for years, though not every fragrance is confirmed vegan.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "The 7 Virtues",
+    "status": "kind",
+    "vegan": "some",
+    "china": "unknown",
+    "note": "Cruelty-free, and sources some of its ingredients from countries rebuilding after conflict.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Pacifica",
+    "status": "kind",
+    "vegan": "full",
+    "china": "unknown",
+    "note": "Entirely vegan and cruelty-free, and one of the cheaper ways in.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Dossier",
+    "status": "kind",
+    "vegan": "some",
+    "china": "unknown",
+    "note": "Makes affordable versions of well-known scents. Cruelty-free, and a good answer if there's a designer perfume you like but not who makes it.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Henry Rose",
+    "status": "kind",
+    "vegan": "some",
+    "china": "unknown",
+    "note": "Cruelty-free, and unusually it publishes its full ingredient list rather than hiding behind the word \"fragrance\".",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Skylar",
+    "status": "kind",
+    "vegan": "full",
+    "china": "unknown",
+    "note": "Vegan and cruelty-free, built around lighter scents for people who find most perfume overwhelming.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Maison Louis Marie",
+    "status": "kind",
+    "vegan": "some",
+    "china": "unknown",
+    "note": "Cruelty-free, and the oil-based versions are worth knowing about if alcohol-heavy sprays bother you.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Chanel",
+    "status": "not-kind",
+    "vegan": "unknown",
+    "china": "sells",
+    "note": "Sold in mainland China, where animal testing is still required for a lot of imported cosmetics. Chanel's own policy also allows for testing carried out by ingredient suppliers.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/brands/chanel/",
+        "label": "Cruelty-Free Kitty on Chanel"
+      }
+    ]
+  },
+  {
+    "name": "Lancome",
+    "status": "not-kind",
+    "vegan": "unknown",
+    "china": "sells",
+    "note": "Owned by L'Oreal, which also tests. Lancome's policy says it doesn't test \"except when required by law\", and it sells in mainland China, which is exactly where that exception applies.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/brands/lancome/",
+        "label": "Cruelty-Free Kitty on Lancome"
+      }
+    ]
+  },
+  {
+    "name": "Gucci",
+    "status": "not-kind",
+    "vegan": "unknown",
+    "china": "sells",
+    "note": "The fragrances are made under licence by Coty, not by Gucci itself, and PETA lists Gucci Fragrances (Coty) as testing on animals. A good example of why the name on the bottle isn't the thing to check.",
+    "sources": [
+      {
+        "url": "https://crueltyfree.peta.org/company/gucci-fragrances-coty/",
+        "label": "PETA on Gucci Fragrances (Coty)"
+      }
+    ]
+  },
+  {
+    "name": "Le Labo",
+    "status": "not-kind",
+    "vegan": "unknown",
+    "china": "sells",
+    "note": "Was widely recommended in cruelty-free circles until it opened stores in mainland China. Worth knowing if you bought it on an older recommendation.",
+    "sources": [
+      {
+        "url": "https://www.crueltyfreekitty.com/bath-body/cruelty-free-perfume/",
+        "label": "Cruelty-Free Kitty, perfume guide"
+      }
+    ]
+  },
+  {
+    "name": "Ariana Grande",
+    "status": "checking",
+    "vegan": "unknown",
+    "china": "unknown",
+    "note": "Made under licence by Luxe Brands rather than by Ariana Grande directly, and I haven't been able to confirm that company's testing policy from a source I'd stand behind. Listed here rather than left out, because a lot of people ask about it.",
+    "sources": []
+  }
+]
