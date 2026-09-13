@@ -47,7 +47,13 @@
 .camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
 .camera-controls button.snap:hover { background:#dcc78f; }
 .manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
-.manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+/* min-width:0 matters: a text input has a built-in minimum width, and
+   without this a flex item refuses to shrink below it. On a 320px
+   phone (an iPhone SE) that pushed the "check" button 36px off the
+   right-hand edge of the screen. */
+.manual input { flex:1 1 0; min-width:0; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.manual .big-btn { flex:0 0 auto; }
+@media (max-width:360px){ .manual .big-btn { padding:14px 14px !important; } .manual input { font-size:14px; } }
 .manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:0 0 10px; }
 
 /* Same barcode alignment guide as scan.html: a dashed band roughly

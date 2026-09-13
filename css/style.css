@@ -483,7 +483,10 @@ footer.site-footer {
      safe area), so this has to clear all of that plus a little
      breathing room, or the last bit of page content -- the footer,
      most often -- sits partly hidden behind the bar. */
-  body { padding-bottom: calc(86px + env(safe-area-inset-bottom, 0px)); }
+  /* var() values are set by js/nav.js, which measures what iOS is
+     actually doing on this page. They fall back to the plain CSS value
+     if the script hasn't run. See the comment block in js/nav.js. */
+  body { padding-bottom: calc(86px + var(--ahk-safe-bottom, env(safe-area-inset-bottom, 0px))); }
   .bottom-nav {
     display: flex;
     align-items: flex-end;
@@ -503,7 +506,12 @@ footer.site-footer {
        still letting forest green show through on iOS. */
     box-shadow: 0 -6px 20px rgba(61,74,58,0.09),
                 0 200px 0 0 var(--ahk-bg, #faf5eb);
-    padding: 5px 6px calc(5px + env(safe-area-inset-bottom, 0px));
+    padding: 5px 6px calc(5px + var(--ahk-safe-bottom, env(safe-area-inset-bottom, 0px)));
+    /* Pushed down by however far this page's viewport falls short of
+       the real screen, so the bar reaches the bottom and sits in an
+       identical spot on every page. Zero everywhere except the pages
+       where iOS gets the viewport wrong. */
+    bottom: calc(0px - var(--ahk-nav-drop, 0px));
     z-index: 500;
   }
   /* The bar's own background stops where the element stops. On pages with

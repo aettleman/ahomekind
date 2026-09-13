@@ -742,3 +742,99 @@ document.addEventListener('DOMContentLoaded', function(){
     '<a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a>';
   wrap.appendChild(div);
 });
+
+/* ------------------------------------------------------------------
+   Pin the bottom bar to the same place on every page
+   ------------------------------------------------------------------
+   The bar is fixed to the bottom of the screen, which should put it in
+   an identical spot on every page. In the installed iPhone app it
+   didn't: on the scanner it sat higher and shorter than everywhere
+   else, leaving a strip of the page showing underneath. Two separate
+   causes, both measured off a real screenshot:
+
+     - iOS reported the home-indicator allowance as zero on that page,
+       so the bar came out 27px shorter than on other pages.
+     - iOS also gave that page a viewport 47px shorter than the actual
+       screen, so "stick to the bottom" stuck it 47px too high.
+
+   The root cause was overflow:hidden on that page and that's been
+   removed, but relying on that alone means trusting iOS to behave.
+   This measures what iOS is actually doing on each page and corrects
+   for it, so the bar lands in the same place regardless:
+
+     --ahk-safe-bottom  the real home-indicator allowance. Read from
+                        the page; if a page reports zero but another
+                        page reported a real number, the real one is
+                        remembered and used, so the bar is never short.
+     --ahk-nav-drop     how far this page's viewport falls short of the
+                        actual screen. The bar is pushed down by this,
+                        so it always reaches the bottom.
+
+   Both are zero in a normal browser and on desktop, where the bar
+   already behaves, so nothing changes there. Both fall back to the
+   plain CSS value if this script never runs. */
+(function(){
+  var SAFE_KEY = 'ahk-safe-bottom';
+
+  function readStored(){
+    try { return parseInt(window.localStorage.getItem(SAFE_KEY) || '0', 10) || 0; }
+    catch (e) { return 0; }
+  }
+  function writeStored(v){
+    try { window.localStorage.setItem(SAFE_KEY, String(v)); } catch (e) {}
+  }
+
+  function isStandalone(){
+    return window.navigator.standalone === true ||
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+  }
+
+  /* Measure what env(safe-area-inset-bottom) actually resolves to here,
+     by rendering a hidden box of exactly that height and reading it. */
+  function measureInset(){
+    if (!document.body) return 0;
+    var probe = document.createElement('div');
+    probe.style.cssText = 'position:fixed;left:0;bottom:0;width:0;' +
+      'height:env(safe-area-inset-bottom, 0px);visibility:hidden;pointer-events:none;';
+    document.body.appendChild(probe);
+    var h = Math.round(probe.getBoundingClientRect().height);
+    probe.parentNode.removeChild(probe);
+    return (isFinite(h) && h >= 0 && h < 120) ? h : 0;
+  }
+
+  function apply(){
+    var root = document.documentElement;
+    var standalone = isStandalone();
+
+    var inset = measureInset();
+    var best = inset;
+    if (standalone) {
+      /* Only trust readings from the installed app for the remembered
+         value, so a desktop browser's zero can never overwrite it. */
+      var stored = readStored();
+      if (inset > stored) writeStored(inset);
+      else if (stored > inset) best = stored;
+    }
+
+    var drop = 0;
+    if (standalone && window.screen && window.screen.height && window.innerHeight) {
+      drop = Math.round(window.screen.height - window.innerHeight);
+      /* In the installed app there is no browser chrome, so any
+         shortfall is the bug, not a toolbar. Clamped so an unexpected
+         reading can never fling the bar off the screen. */
+      if (!isFinite(drop) || drop < 0 || drop > 120) drop = 0;
+    }
+
+    root.style.setProperty('--ahk-safe-bottom', best + 'px');
+    root.style.setProperty('--ahk-nav-drop', drop + 'px');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+  window.addEventListener('resize', apply);
+  window.addEventListener('orientationchange', apply);
+  window.addEventListener('pageshow', apply);
+})();
