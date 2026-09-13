@@ -92,24 +92,40 @@ nav.main-nav a:hover { color: #3d4a3a; }
    leaving the logo/nav pair packed together on the left, same as the
    old space-between look did with just the two of them. */
 .header-social { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0; }
+/* Same circle as the floating share button, so on a phone the three of
+   them (Ko-fi, Instagram, share) read as one row rather than three
+   separate things at three different sizes in three different colours. */
 .header-social a {
-  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  background: var(--ahk-green-soft, #dfe8da); color: #3d4a3a;
-  transition: background 0.18s ease, transform 0.18s ease;
+  background: rgba(244,239,226,0.92); color: #3d4a3a;
+  border: 0.5px solid #cfc4a9;
+  box-shadow: 0 4px 14px rgba(61,74,58,0.16);
+  transition: background 0.18s ease;
 }
-.header-social a:hover, .header-social a:focus-visible { background: var(--ahk-gold-soft, #e6d4a8); transform: translateY(-1px); }
-.header-social svg { width: 15px; height: 15px; display: block; }
+.header-social a:hover, .header-social a:focus-visible { background: #fff; }
+.header-social svg { width: 16px; height: 16px; display: block; }
 @media (prefers-reduced-motion: reduce) { .header-social a { transition: none; } }
 @media (max-width: 760px) {
-  /* Below this width the full nav hides in favour of the bottom bar
-     (see js/nav.js's "more" sheet), so the header shrinks down to just
-     the logo. Pin the icons to the header's right edge instead of
-     letting them fall into the column stack below the logo. */
-  header.site-header .wrap { position: relative; }
-  .header-social { position: absolute; top: 50%; right: 24px; transform: translateY(-50%); margin-left: 0; }
-  .header-social a:hover, .header-social a:focus-visible { transform: translateY(-50%); }
+  /* Below this width the header shrinks to just the logo (the nav moves
+     to the bottom bar), and the floating share button is pinned to the
+     top-right corner of the screen. So these two get pinned to the same
+     line as the share button, immediately to its left, making one row
+     of three evenly-spaced circles instead of the icons sitting under
+     it and getting half-covered.
+     The right offset is the share button's own 14px edge margin, plus
+     its 36px width, plus an 8px gap - i.e. exactly where the next
+     circle in the row belongs. */
+  .header-social {
+    position: fixed;
+    top: calc(10px + env(safe-area-inset-top, 0px));
+    right: 58px;
+    margin-left: 0;
+    z-index: 300;
+  }
 }
+/* Above 760px the floating share button is hidden (desktop has a real
+   address bar), so these two simply sit at the end of the header row. */
 
 /* In-app browser notice -- shown on the two camera-dependent pages
    (scan.html, shelf.html) when we detect Instagram's/Facebook's own
@@ -477,7 +493,16 @@ footer.site-footer {
     background: var(--ahk-bg, #faf5eb);
     border-top: 0.5px solid var(--ahk-border, #e0d8c4);
     border-radius: 22px 22px 0 0;
-    box-shadow: 0 -6px 20px rgba(61,74,58,0.09);
+    /* Two things at once. The first shadow is the soft lift above the
+       bar. The second is a solid block of the bar's own colour painted
+       200px BELOW it (no blur, no spread, just offset) - that's what
+       fills the strip under the bar on the scanner in the installed
+       app. A box-shadow is painted as part of the element itself, so
+       unlike the ::after below it can't be clipped by a parent or
+       painted over by the full-screen camera layer, which is what was
+       still letting forest green show through on iOS. */
+    box-shadow: 0 -6px 20px rgba(61,74,58,0.09),
+                0 200px 0 0 var(--ahk-bg, #faf5eb);
     padding: 5px 6px calc(5px + env(safe-area-inset-bottom, 0px));
     z-index: 500;
   }

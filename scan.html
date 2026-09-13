@@ -136,9 +136,17 @@ body.scan-immersive .bottom-nav { z-index:940; }
    broken screen. They only appear once the feed is actually live. In
    standby the screen says the one thing that matters: tap the button. */
 .scan-standby-hint, .scan-standby-arrow { display:none; }
+/* Standby (arrived, camera not started) must show ONLY the "tap to
+   start the camera" hint - not the live-camera brackets/hint/arrow at
+   the same time. These three are already display:none by default and
+   only meant to appear once body.scan-immersive is on its own (camera
+   actually running); the !important here is because a second, older
+   ".scan-immersive .scan-brackets { display:block }" rule further down
+   this file has equal selector weight and comes later in the
+   stylesheet, so without it that rule would win the standby case back. */
 body.scan-standby .scan-brackets,
 body.scan-standby .scan-live-hint,
-body.scan-standby .scan-live-arrow,
+body.scan-standby .scan-live-arrow { display:none !important; }
 body.scan-standby .scan-standby-hint {
   display:block; position:fixed; left:24px; right:24px;
   bottom:calc(252px + env(safe-area-inset-bottom, 0px)); text-align:center;
