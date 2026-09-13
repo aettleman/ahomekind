@@ -64,7 +64,12 @@
 /* The height lives on the frame rather than the image, so a missing or
    slow photo leaves a green band of the right size instead of collapsing
    the headline onto whatever follows it. */
-.hero-x-art { position: relative; width: 100%; height: 420px; }
+/* Inset, not full-bleed. This is the whole point of the feathering: a
+   fading edge needs page colour on the other side of it to fade into.
+   Run the photo to the edge of the screen and the fade dissolves into
+   the edge of the phone instead, which reads as a hard crop however
+   soft the mask is. The padding here is what makes it visible. */
+.hero-x-art { position: relative; width: 100%; height: 330px; padding: 4px 14px 0; }
 /* Feathered back into the green, the way the rest of the site's photos
    are. Full-bleed left/right/top, with the bottom edge dissolving into
    the band below instead of stopping on a hard line. */
@@ -78,12 +83,10 @@
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
 .hero-x-photo[hidden] { display: none; }
-.hero-x-art::after {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(26,33,20,0.82) 0%, rgba(26,33,20,0.55) 38%, rgba(26,33,20,0.05) 68%, rgba(26,33,20,0) 100%);
-}
-.hero-x-copy { position: absolute; z-index: 2; left: 0; top: 50%; transform: translateY(-50%); padding: 0 0 0 24px; max-width: min(58%, 290px); text-align: left; }
-.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 18px rgba(20,26,16,0.55); }
+/* The dark wash that used to sit over the photo has gone with the
+   headline that needed it. The photograph is shown as it is. */
+.hero-x-copy { padding: 2px 24px 0; text-align: left; }
+.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 30px; line-height: 1.22; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; }
 .hero-x h1 em { font-style: italic; color: #f0dfae; }
 .hero-x-below { padding: 18px 24px 16px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
@@ -100,17 +103,21 @@
 @media (min-width: 860px) {
   /* Taller frame and bigger type, and the headline moves in off the very
      edge of the screen rather than sitting flush against it. */
-  .hero-x-art { height: clamp(400px, 56vh, 580px); }
-  .hero-x-copy { padding-left: 6vw; padding-right: 0; max-width: min(640px, 42vw); }
-  .hero-x h1 { font-size: 46px; line-height: 1.14; }
+  .hero-x-art { height: clamp(360px, 46vh, 520px); padding: 8px 34px 0; }
+  /* Everything under the headline (the rotating fact, the three
+     circles) is centred, so a hard-left headline on a wide screen
+     leaves the block looking lopsided. Centred here only; the phone
+     keeps the left-aligned version. */
+  .hero-x-copy { padding: 10px 34px 0; max-width: 1000px; margin: 0 auto; text-align: center; }
+  .hero-x h1 { font-size: 44px; line-height: 1.16; }
   .hero-x-below { padding: 26px 24px 36px; }
 }
 /* Short screens (an iPhone SE, or any phone with a lot of browser chrome
    on show) get a shallower photo and slightly smaller type, so the three
    circles still clear the fold. Nothing is squashed; it all scales. */
 @media (max-height: 720px) {
-  .hero-x-art { height: 300px; }
-  .hero-x h1 { font-size: 27px; }
+  .hero-x-art { height: 248px; padding: 2px 12px 0; }
+  .hero-x h1 { font-size: 25px; }
   .hero-x-below { padding: 16px 24px 22px; }
   .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
   .hero-x .hero-fact-nav { transform: scale(0.92); }
@@ -168,9 +175,9 @@
 
 <div class="hero-x-art">
 <img class="hero-x-photo" src="images/hero-rabbit-meadow.jpg" alt="A rabbit sitting in long meadow grass in evening light" onerror="this.hidden=true">
+</div>
 <div class="hero-x-copy">
 <h1>your shampoo didn't need to be tested on a <em>rabbit</em>.</h1>
-</div>
 </div>
 
 <div class="hero-x-below">
