@@ -180,6 +180,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "acuvue",
+  "name": "Acuvue",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "adaptology",
   "name": "Adaptology",
   "tier": "check",
@@ -233,6 +252,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "aim",
+  "name": "Aim",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "air-wick",
@@ -307,6 +345,25 @@
   ],
   "veganConfidence": "high",
   "region": "Europe, USA & Canada"
+ },
+ {
+  "slug": "algenist",
+  "name": "Algenist",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "almora-botanica",
@@ -436,6 +493,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "ambi",
+  "name": "Ambi",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "ambi-pur",
   "name": "Ambi Pur",
   "tier": "bad",
@@ -562,6 +638,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "anna-sui",
+  "name": "Anna Sui",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "aqua-di-parma",
+  "name": "Aqua di Parma",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "aqua-natural",
   "name": "Aqua Natural",
   "tier": "check",
@@ -614,6 +728,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "aramis",
+  "name": "Aramis",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "arbonne-international",
@@ -782,6 +915,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "arrid",
+  "name": "Arrid",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "asperox",
   "name": "Asperox",
   "tier": "check",
@@ -845,6 +997,25 @@
   ],
   "veganConfidence": "high",
   "region": "Europe"
+ },
+ {
+  "slug": "atelier-cologne",
+  "name": "Atelier Cologne",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "atelier-rebul",
@@ -1143,6 +1314,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "bain-de-soleil",
+  "name": "Bain de Soleil",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "bakel-srl",
   "name": "Bakel srl",
   "tier": "check",
@@ -1159,6 +1349,25 @@
   "region": "Asia, Europe, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "balenciaga",
+  "name": "Balenciaga",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "bali-body",
@@ -1195,6 +1404,25 @@
   "region": "Australia & New Zealand, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "band-aid",
+  "name": "Band-Aid",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "bareminerals",
@@ -1306,6 +1534,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "bausch-lomb",
+  "name": "Bausch + Lomb",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "baylis-and-harding",
@@ -1470,6 +1717,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "beiersdorf",
+  "name": "Beiersdorf",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "being",
   "name": "Being",
   "tier": "check",
@@ -1560,6 +1826,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "bengay",
+  "name": "BENGAY",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "bic",
   "name": "Bic",
   "tier": "bad",
@@ -1576,6 +1861,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "bic-corporation",
+  "name": "Bic Corporation",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "bio-ionic",
@@ -1740,6 +2044,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "biotene",
+  "name": "Biotene",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "biotherm",
+  "name": "Biotherm",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "bite-beauty",
   "name": "Bite Beauty",
   "tier": "check",
@@ -1811,6 +2153,25 @@
   "veganConfidence": "low",
   "dateChecked": "2026-09-02",
   "region": "Europe"
+ },
+ {
+  "slug": "blue-buffalo",
+  "name": "Blue Buffalo",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "blur-london",
@@ -2032,6 +2393,26 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "bounce",
+  "name": "Bounce",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "boundary",
   "name": "Boundary",
   "tier": "check",
@@ -2048,6 +2429,25 @@
   "region": "Asia",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "bounty",
+  "name": "Bounty",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "bourjois",
@@ -2122,6 +2522,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "braun",
+  "name": "Braun",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "bravenewhair-bravenewcare",
   "name": "BRAVE.NEW.HAIR., BRAVE.NEW.CARE.",
   "tier": "check",
@@ -2139,6 +2558,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "breathe-right",
+  "name": "Breathe Right",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "bulldog",
@@ -2176,6 +2614,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "burberry",
+  "name": "Burberry",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "burts-bees",
@@ -2230,6 +2687,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "bvlgari-parfums",
+  "name": "BVLGARI parfums",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "by-sarah-london",
@@ -2342,6 +2818,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "cacharel",
+  "name": "Cacharel",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "calgon",
   "name": "Calgon",
   "tier": "check",
@@ -2360,6 +2855,26 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "calgon-water-softener",
+  "name": "Calgon Water Softener",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "callen-olive",
   "name": "Callen Olive",
   "tier": "good",
@@ -2376,6 +2891,25 @@
   "region": "Europe",
   "veganConfidence": "medium",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "calvin-klein-cosmetics",
+  "name": "Calvin Klein Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "cantu",
@@ -2487,6 +3021,25 @@
   "region": "Europe, USA & Canada"
  },
  {
+  "slug": "caudalie-usa",
+  "name": "Caudalie USA",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "cellis",
   "name": "Cellis",
   "tier": "check",
@@ -2577,6 +3130,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "chapstick",
+  "name": "Chapstick",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "charles-worthington",
   "name": "Charles Worthington",
   "tier": "unverified",
@@ -2594,6 +3166,26 @@
   "veganConfidence": "low",
   "dateChecked": "2026-09-02",
   "region": "Europe"
+ },
+ {
+  "slug": "cheer",
+  "name": "Cheer",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "cherish",
@@ -2645,6 +3237,45 @@
   "price": "",
   "category": [
    "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "christina-aguilera-perfumes",
+  "name": "Christina Aguilera Perfumes",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "church-and-dwight",
+  "name": "Church & Dwight",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
   ],
   "veganConfidence": "low",
   "region": "",
@@ -2705,6 +3336,25 @@
   "region": "Europe"
  },
  {
+  "slug": "citre-shine",
+  "name": "Citre Shine",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "cj-olive-young",
   "name": "CJ Olive Young",
   "tier": "check",
@@ -2748,6 +3398,44 @@
   "parentCompany": null,
   "vegan": "unknown",
   "evidence": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "clarins-of-paris",
+  "name": "Clarins of Paris",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "clarisonic",
+  "name": "Clarisonic",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
   "products": [],
   "alternatives": [],
   "links": [],
@@ -2853,6 +3541,25 @@
   "lastVerified": "2026-09-13"
  },
  {
+  "slug": "close-up",
+  "name": "Close-up",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "co-op",
   "name": "Co-op",
   "tier": "check",
@@ -2925,6 +3632,25 @@
   "veganConfidence": "medium"
  },
  {
+  "slug": "collistar",
+  "name": "Collistar",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "colourpop-cosmetics",
   "name": "ColourPop Cosmetics",
   "tier": "check",
@@ -2941,6 +3667,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "comet",
+  "name": "Comet",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "comfort",
@@ -2960,6 +3705,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "command",
+  "name": "Command",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "conair",
@@ -2998,6 +3762,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "condense-paris",
+  "name": "Condense Paris",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "copper-and-black",
   "name": "Copper & Black",
   "tier": "check",
@@ -3016,6 +3799,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "coppertone",
+  "name": "Coppertone",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "corsodyl",
   "name": "Corsodyl",
   "tier": "bad",
@@ -3032,6 +3834,25 @@
   ],
   "veganConfidence": "low",
   "region": "Europe"
+ },
+ {
+  "slug": "coty-inc",
+  "name": "Coty Inc.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "cover-fx-skin-care",
@@ -3140,6 +3961,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "crest",
+  "name": "Crest",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "cristalinas",
@@ -3339,6 +4179,25 @@
   ],
   "veganConfidence": "high",
   "region": "Europe"
+ },
+ {
+  "slug": "davidoff",
+  "name": "Davidoff",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "daz",
@@ -3596,6 +4455,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "diesel",
+  "name": "Diesel",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "dior",
   "name": "Dior",
   "tier": "bad",
@@ -3670,6 +4548,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "donna-karan",
+  "name": "Donna Karan",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "dossier",
   "name": "Dossier",
   "tier": "check",
@@ -3741,6 +4638,26 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "downy",
+  "name": "Downy",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "dr-bronners",
@@ -3939,6 +4856,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "drano",
+  "name": "Drano",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "drunk-elephant",
   "name": "Drunk Elephant",
   "tier": "warn",
@@ -3957,6 +4893,44 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "dtrt",
+  "name": "DTRT",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "dunhill-fragrances",
+  "name": "Dunhill Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "duo",
   "name": "DUO",
   "tier": "check",
@@ -3973,6 +4947,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "durex",
+  "name": "Durex",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "e-l-f-cosmetics",
@@ -4105,6 +5098,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "easy-off",
+  "name": "Easy-Off",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "eco-dent-international",
   "name": "Eco-DenT International",
   "tier": "check",
@@ -4196,6 +5208,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "eisenberg-paris",
+  "name": "Eisenberg Paris",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "elegance",
   "name": "Elegance",
   "tier": "check",
@@ -4230,6 +5261,63 @@
   ],
   "veganConfidence": "medium",
   "region": "Europe, USA & Canada"
+ },
+ {
+  "slug": "elie-saab",
+  "name": "Elie Saab",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "elizabeth-arden",
+  "name": "Elizabeth Arden",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "ellegirl",
+  "name": "ELLEgirl",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "elvive",
@@ -4340,6 +5428,45 @@
   "region": "Africa & The Middle East, Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "era",
+  "name": "Era",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "escada-fragrances",
+  "name": "Escada Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "esika",
@@ -4522,6 +5649,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "ever-clean",
+  "name": "Ever Clean",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "every-man-jack",
@@ -4740,6 +5886,25 @@
   "region": "Europe"
  },
  {
+  "slug": "fantastik",
+  "name": "Fantastik",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "fatface",
   "name": "FatFace",
   "tier": "check",
@@ -4774,6 +5939,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "fendi",
+  "name": "Fendi",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "fill-refill-co",
@@ -4868,6 +6052,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "fixodent",
+  "name": "Fixodent",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "flash",
   "name": "Flash",
   "tier": "bad",
@@ -4958,6 +6161,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "for-beloved-one",
+  "name": "For Beloved One",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "forest-and-shore",
   "name": "Forest & Shore",
   "tier": "check",
@@ -5011,6 +6233,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "formula-409",
+  "name": "Formula 409",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "formula-x",
@@ -5101,6 +6342,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "fresh-step",
+  "name": "Fresh Step",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "fria",
@@ -5342,6 +6602,26 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "gain",
+  "name": "Gain",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "garden-of-life",
   "name": "Garden of Life",
   "tier": "check",
@@ -5507,6 +6787,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "gillette-co",
+  "name": "Gillette Co.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "gingingers",
   "name": "Gingingers",
   "tier": "check",
@@ -5523,6 +6822,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "giorgio-armani",
+  "name": "Giorgio Armani",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "girls-with-attitude",
@@ -5543,6 +6861,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "givenchy-inc",
+  "name": "Givenchy Inc.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "glad",
+  "name": "Glad",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "glade",
   "name": "Glade",
   "tier": "bad",
@@ -5559,6 +6915,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "glamglow",
+  "name": "GLAMGLOW",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "glaze",
@@ -5833,6 +7208,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "green-works",
+  "name": "Green Works",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "greenscents",
   "name": "Greenscents",
   "tier": "check",
@@ -5919,6 +7313,44 @@
   "price": "",
   "category": [
    "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "gucci-fragrances",
+  "name": "Gucci Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "guerlain",
+  "name": "Guerlain",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
   ],
   "veganConfidence": "low",
   "region": "",
@@ -6141,6 +7573,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "helena-rubinstein",
+  "name": "Helena Rubinstein",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "hello-products",
   "name": "Hello Products",
   "tier": "check",
@@ -6355,6 +7806,44 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "hoyu",
+  "name": "Hoyu",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "hugo-boss",
+  "name": "Hugo Boss",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "hurraw",
@@ -6592,6 +8081,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "institut-esthederm",
+  "name": "Institut Esthederm",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "invisibobble",
   "name": "Invisibobble",
   "tier": "check",
@@ -6664,6 +8172,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "issey-miyake",
+  "name": "Issey Miyake",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "itreatskin",
   "name": "itreatskin",
   "tier": "check",
@@ -6680,6 +8207,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "ivory",
+  "name": "Ivory",
+  "tier": "bad",
+  "note": "Owned by Procter & Gamble. Listed by PETA as a company that tests on animals.",
+  "parentCompany": "Procter & Gamble",
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "j-beverly-hills",
@@ -6828,6 +8374,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "jimmy-choo",
+  "name": "Jimmy Choo",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "jo-malone",
+  "name": "Jo Malone",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "john-frieda",
   "name": "John Frieda",
   "tier": "bad",
@@ -6898,6 +8482,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "johnson-and-johnson",
+  "name": "Johnson & Johnson",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "johnson-s",
@@ -7009,6 +8612,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "jurlique-pure-skin-care",
+  "name": "Jurlique Pure Skin Care",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "juvenate-skincare",
   "name": "Juvenate Skincare",
   "tier": "check",
@@ -7027,6 +8649,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "k-y",
+  "name": "K.Y.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "kaboom",
+  "name": "Kaboom",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "kadalys",
   "name": "Kadalys",
   "tier": "check",
@@ -7043,6 +8703,25 @@
   "region": "Asia, Australia & New Zealand, Europe, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "kao-usa",
+  "name": "Kao USA",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "kash-beauty",
@@ -7136,6 +8815,45 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "kenzo-parfums",
+  "name": "Kenzo Parfums",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "kerastase",
+  "name": "Kerastase",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "kevinmurphy",
   "name": "KEVIN.MURPHY",
   "tier": "check",
@@ -7188,6 +8906,25 @@
   "region": "Australia & New Zealand, Europe, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "kiehl-s",
+  "name": "Kiehl's",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "king-of-shaves",
@@ -7333,6 +9070,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "kose",
+  "name": "Kose",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "kotanical",
@@ -7516,6 +9272,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "l-occitane",
+  "name": "L'Occitane",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "l-oreal",
   "name": "L'Oréal",
   "tier": "bad",
@@ -7556,6 +9331,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "la-mer",
+  "name": "La Mer",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "la-roche-posay",
   "name": "La Roche-Posay",
   "tier": "bad",
@@ -7574,6 +9368,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "lab-series-for-men",
+  "name": "Lab Series for Men",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "labbok",
   "name": "LABBOK",
   "tier": "check",
@@ -7590,6 +9403,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "lacoste-fragrances",
+  "name": "Lacoste Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "lacura",
@@ -7626,6 +9458,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "lancaster-beauty",
+  "name": "Lancaster Beauty",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "lancome",
@@ -7666,6 +9517,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "lanvin",
+  "name": "Lanvin",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "lavanila",
   "name": "Lavanila",
   "tier": "check",
@@ -7700,6 +9570,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "leaders-cosmetics",
+  "name": "Leaders Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "lee-stafford",
@@ -7940,6 +9829,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "liquid-plumr",
+  "name": "Liquid Plumr",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "listerine",
   "name": "Listerine",
   "tier": "bad",
@@ -8045,6 +9953,25 @@
   "region": "Africa & The Middle East, Asia, Europe, South & Central America",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "loewe",
+  "name": "Loewe",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "logona",
@@ -8210,6 +10137,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "lubriderm",
+  "name": "Lubriderm",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "lucky-tiger",
@@ -8396,6 +10342,25 @@
   "lastVerified": "2026-09-13"
  },
  {
+  "slug": "m-a-c-cosmetics",
+  "name": "M.A.C. Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "mac",
   "name": "MAC",
   "tier": "bad",
@@ -8549,6 +10514,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "makeup-forever",
+  "name": "Makeup Forever",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "malin-goetz",
@@ -8732,6 +10716,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "marc-jacobs-fragrances",
+  "name": "Marc Jacobs Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "marcelle",
   "name": "Marcelle",
   "tier": "check",
@@ -8822,6 +10825,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "mary-kay",
+  "name": "Mary Kay",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "matrix",
@@ -8915,6 +10937,82 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "mead",
+  "name": "Mead",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "mediplorer",
+  "name": "Mediplorer",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "melaleuca",
+  "name": "Melaleuca",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "menard-cosmetics",
+  "name": "Menard Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "mendittorosa",
   "name": "Mendittorosa",
   "tier": "check",
@@ -8931,6 +11029,44 @@
   "region": "Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "mentadent",
+  "name": "Mentadent",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "merck",
+  "name": "Merck",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "mervue-natural-skincare",
@@ -8985,6 +11121,25 @@
   ],
   "veganConfidence": "low",
   "region": "Australia & New Zealand, Europe, USA & Canada"
+ },
+ {
+  "slug": "michael-kors",
+  "name": "Michael Kors",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "michael-todd-beauty",
@@ -9151,6 +11306,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "missoni",
+  "name": "Missoni",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "mitchum",
   "name": "Mitchum",
   "tier": "bad",
@@ -9169,6 +11343,44 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "mitchum-deodorant",
+  "name": "Mitchum Deodorant",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "miu-miu",
+  "name": "miu miu",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "mixed-chicks",
   "name": "Mixed Chicks",
   "tier": "check",
@@ -9185,6 +11397,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "mizani",
+  "name": "Mizani",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "modelco",
@@ -9293,6 +11524,25 @@
   "region": "Asia, Australia & New Zealand, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "mont-blanc",
+  "name": "Mont Blanc",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "moroccanoil",
@@ -9404,6 +11654,25 @@
   "region": "Europe"
  },
  {
+  "slug": "mr-clean",
+  "name": "Mr. Clean",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "mrs-meyers-clean-day",
   "name": "Mrs. Meyers Clean Day",
   "tier": "check",
@@ -9485,6 +11754,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "my-trendy-kit",
+  "name": "My Trendy Kit",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "mychelle-dermaceuticals",
@@ -9616,6 +11904,25 @@
   "lastVerified": "2026-09-13"
  },
  {
+  "slug": "nars-cosmetics",
+  "name": "Nars Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "natracare",
   "name": "Natracare",
   "tier": "good",
@@ -9670,6 +11977,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "natural-balance-pet-foods-inc",
+  "name": "Natural Balance Pet Foods Inc.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "natural-by-nature-oils",
   "name": "Natural by Nature Oils",
   "tier": "check",
@@ -9686,6 +12012,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "natural-instincts",
+  "name": "Natural Instincts",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "naturally-tiwa-skincare",
@@ -9740,6 +12085,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "nature-s-source",
+  "name": "Nature's Source",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "naturium",
@@ -9832,6 +12196,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "new-dana-perfumes",
+  "name": "New Dana Perfumes",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "newmans-own-organics",
   "name": "Newman's Own Organics",
   "tier": "check",
@@ -9868,6 +12251,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "nexcare",
+  "name": "Nexcare",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "nice",
   "name": "NICE",
   "tier": "check",
@@ -9885,6 +12287,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "nice-n-easy",
+  "name": "Nice 'n Easy",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "nimonths",
@@ -9905,6 +12326,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "nina-ricci",
+  "name": "Nina Ricci",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "niod",
   "name": "NIOD",
   "tier": "check",
@@ -9921,6 +12361,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "nioxin",
+  "name": "Nioxin",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "nivea",
@@ -10042,6 +12501,25 @@
   "region": "Europe",
   "veganConfidence": "medium",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "nu-skin-international",
+  "name": "Nu Skin International",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "nubian-heritage",
@@ -10283,6 +12761,25 @@
   "region": "Europe"
  },
  {
+  "slug": "off",
+  "name": "Off",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "ogx",
   "name": "OGX",
   "tier": "bad",
@@ -10355,6 +12852,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "old-english",
+  "name": "Old English",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "old-spice",
   "name": "Old Spice",
   "tier": "bad",
@@ -10409,6 +12925,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "oomph",
+  "name": "Oomph!",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "oral-b",
   "name": "Oral-B",
   "tier": "bad",
@@ -10425,6 +12960,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "orange-glo",
+  "name": "Orange Glo",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "organic-harvest",
@@ -10499,6 +13053,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "oriflame",
+  "name": "Oriflame",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "original-source",
   "name": "Original Source",
   "tier": "check",
@@ -10515,6 +13088,25 @@
   ],
   "veganConfidence": "medium",
   "region": "Europe"
+ },
+ {
+  "slug": "origins",
+  "name": "Origins",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "osea",
@@ -10535,6 +13127,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "osiao",
+  "name": "Osiao",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "ouidad",
   "name": "Ouidad",
   "tier": "check",
@@ -10551,6 +13162,44 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "oust",
+  "name": "Oust",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "oxiclean",
+  "name": "OxiClean",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "oxx",
@@ -10624,6 +13273,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "paco-rabanne",
+  "name": "Paco Rabanne",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "pai-skincare",
@@ -10714,6 +13382,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "pampers",
+  "name": "Pampers",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "pangea-organics",
@@ -10823,6 +13510,25 @@
   "veganConfidence": "low"
  },
  {
+  "slug": "pearl-drops",
+  "name": "Pearl Drops",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "penneys",
   "name": "Penneys",
   "tier": "check",
@@ -10857,6 +13563,25 @@
   "region": "Asia, Australia & New Zealand, Europe, South & Central America",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "pepsodent",
+  "name": "Pepsodent",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "perfect-girl",
@@ -10912,6 +13637,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "peter-thomas-roth",
+  "name": "Peter Thomas Roth",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "phb-ethical-beauty",
@@ -10984,6 +13728,44 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "physique",
+  "name": "Physique",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "phyto",
+  "name": "Phyto",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "pikes-pouches",
@@ -11132,6 +13914,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "pola-cosmetics",
+  "name": "POLA Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "polident",
+  "name": "Polident",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "poppin-yang",
   "name": "Poppin' Yang",
   "tier": "check",
@@ -11148,6 +13968,44 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "post-it",
+  "name": "Post-It",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "prada",
+  "name": "Prada",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "prai-beauty",
@@ -11238,6 +14096,63 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "procter-and-gamble",
+  "name": "Procter & Gamble",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "pronamel",
+  "name": "Pronamel",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "puffs",
+  "name": "Puffs",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "pura-dor",
@@ -11331,6 +14246,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "pure-heal-s",
+  "name": "Pure Heal's",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "pure-project",
   "name": "Pure Project",
   "tier": "check",
@@ -11385,6 +14319,26 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "purex",
+  "name": "Purex",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "purextracts",
   "name": "Purextracts",
   "tier": "check",
@@ -11401,6 +14355,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "purpose",
+  "name": "Purpose",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "pyykkiarkki",
@@ -11511,6 +14484,44 @@
   "region": "Europe"
  },
  {
+  "slug": "raid",
+  "name": "Raid",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "ralph-lauren-fragrances",
+  "name": "Ralph Lauren Fragrances",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "rare-beauty",
   "name": "Rare Beauty",
   "tier": "good",
@@ -11558,6 +14569,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "reach",
+  "name": "Reach",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "real-techniques",
   "name": "Real Techniques",
   "tier": "check",
@@ -11592,6 +14622,25 @@
   "region": "Africa & The Middle East, Asia, Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "reckitt-benckiser",
+  "name": "Reckitt Benckiser",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "redken",
@@ -11630,6 +14679,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "rembrandt",
+  "name": "Rembrandt",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "ren",
   "name": "REN",
   "tier": "warn",
@@ -11648,6 +14716,44 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "renuzit",
+  "name": "Renuzit",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "resolve",
+  "name": "Resolve",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "revitalash-cosmetics",
   "name": "RevitaLash Cosmetics",
   "tier": "check",
@@ -11664,6 +14770,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "revlon",
+  "name": "Revlon",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "revolution-beauty",
@@ -11718,6 +14843,25 @@
   "region": "Africa & The Middle East, Asia, Europe, USA & Canada",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "rid-x",
+  "name": "Rid-X",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "riemann-p20",
@@ -11830,6 +14974,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "roberto-cavalli",
+  "name": "Roberto Cavalli",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "roc-skincare",
   "name": "RoC Skincare",
   "tier": "check",
@@ -11846,6 +15009,45 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "rogaine",
+  "name": "Rogaine",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "rossi-and-rossa",
+  "name": "Rossi & Rossa",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "rspca",
@@ -11902,6 +15104,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "s-c-johnson",
+  "name": "S.C. Johnson",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "s-o-s",
+  "name": "S.O.S.",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "sacred",
   "name": "Sacred",
   "tier": "check",
@@ -11918,6 +15158,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "safeguard",
+  "name": "Safeguard",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "safeway",
@@ -12027,6 +15286,25 @@
   ],
   "veganConfidence": "high",
   "region": "Europe"
+ },
+ {
+  "slug": "salvatore-ferragamo",
+  "name": "Salvatore Ferragamo",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "samaya-ayurveda",
@@ -12156,6 +15434,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "savlon",
+  "name": "Savlon",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "sbtrct-skincare",
   "name": "SBTRCT Skincare",
   "tier": "check",
@@ -12210,6 +15507,101 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "scoop-away",
+  "name": "Scoop Away",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "scope",
+  "name": "Scope",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "dental"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "scotch",
+  "name": "Scotch",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "scotch-brite",
+  "name": "Scotch-Brite",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "scotchgard",
+  "name": "Scotchgard",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "scott-and-lawson",
   "name": "Scott & Lawson",
   "tier": "check",
@@ -12228,6 +15620,44 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "scrub-free",
+  "name": "Scrub Free",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "scrubbing-bubbles",
+  "name": "Scrubbing Bubbles",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "sculpted-by-aimee",
   "name": "Sculpted by Aimee",
   "tier": "check",
@@ -12244,6 +15674,44 @@
   "region": "Australia & New Zealand, Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "sebastian-international",
+  "name": "Sebastian International",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "sebastian-professional",
+  "name": "Sebastian Professional",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "seeds-of-colour",
@@ -12354,6 +15822,25 @@
   ],
   "veganConfidence": "medium",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "sephora-cosmetics",
+  "name": "Sephora Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "seresilk",
@@ -12501,6 +15988,83 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "shiseido-cosmetics",
+  "name": "Shiseido Cosmetics",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "shout",
+  "name": "Shout",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "shower-to-shower",
+  "name": "Shower to Shower",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "shu-uemura",
+  "name": "Shu Uemura",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "sigma-beauty",
   "name": "Sigma Beauty",
   "tier": "check",
@@ -12555,6 +16119,25 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "sinful-colors",
+  "name": "Sinful Colors",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "siskyn-skincare-oils",
   "name": "Siskyn Skincare Oils",
   "tier": "check",
@@ -12590,6 +16173,25 @@
   "region": "Africa & The Middle East, Asia, Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "sk-ii",
+  "name": "SK-II",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "skin-deep",
@@ -12629,6 +16231,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "skin-id",
+  "name": "Skin ID",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "skinfix",
   "name": "Skinfix",
   "tier": "check",
@@ -12645,6 +16266,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "skinvitals",
+  "name": "SkinVitals",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "skyn-iceland",
@@ -12810,6 +16450,44 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "soft-scrub",
+  "name": "Soft Scrub",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "softsheen",
+  "name": "SoftSheen",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "softy",
@@ -12990,6 +16668,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "spray-n-wash",
+  "name": "Spray 'N Wash",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "st-ives",
@@ -13518,6 +17215,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "swiffer",
+  "name": "Swiffer",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "swypes",
   "name": "Swypes",
   "tier": "check",
@@ -13627,6 +17343,25 @@
   ],
   "veganConfidence": "low",
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+ },
+ {
+  "slug": "talika",
+  "name": "Talika",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "tampax",
@@ -14039,6 +17774,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "the-history-of-whoo",
+  "name": "The History of Whoo",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "the-honest-company",
   "name": "The Honest Company",
   "tier": "check",
@@ -14230,6 +17984,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "thermacare",
+  "name": "Thermacare",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "thermitek-ltd",
   "name": "Thermitek Ltd",
   "tier": "check",
@@ -14302,6 +18075,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "thursday-plantation",
+  "name": "Thursday Plantation",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "tide",
   "name": "Tide",
   "tier": "bad",
@@ -14316,6 +18108,25 @@
   "category": [
    "household-cleaning",
    "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "tilex",
+  "name": "Tilex",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning"
   ],
   "veganConfidence": "low",
   "region": "",
@@ -14358,6 +18169,25 @@
   "region": "Europe"
  },
  {
+  "slug": "tom-ford",
+  "name": "Tom Ford",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "toms-of-maine",
   "name": "Tom's of Maine",
   "tier": "warn",
@@ -14375,6 +18205,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "tone",
+  "name": "Tone",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "tonymoly",
@@ -14523,6 +18372,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "trend",
+  "name": "Trend",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "tresemm",
   "name": "TRESemmé",
   "tier": "warn",
@@ -14593,6 +18461,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "trojan",
+  "name": "Trojan",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "body-shower"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "tropic",
@@ -14912,6 +18799,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "valentino",
+  "name": "Valentino",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "vanish",
   "name": "Vanish",
   "tier": "bad",
@@ -15004,6 +18910,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "veld-s-skincare",
+  "name": "VELD'S Skincare",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "venus",
   "name": "Venus",
   "tier": "bad",
@@ -15022,6 +18947,26 @@
   "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
  },
  {
+  "slug": "vera-wang",
+  "name": "Vera Wang",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "verb",
   "name": "VERB",
   "tier": "check",
@@ -15038,6 +18983,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "versace",
+  "name": "Versace",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "viakal",
@@ -15095,6 +19059,63 @@
   "lastVerified": "2026-09-13"
  },
  {
+  "slug": "victoria-s-secret",
+  "name": "Victoria's Secret",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "vidal-sassoon",
+  "name": "Vidal Sassoon",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "haircare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "viktor-and-rolf",
+  "name": "Viktor & Rolf",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "viridian-nutrition",
   "name": "Viridian Nutrition",
   "tier": "check",
@@ -15111,6 +19132,25 @@
   "region": "Europe",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "visine",
+  "name": "Visine",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "vo5",
@@ -15256,6 +19296,44 @@
    "dental"
   ],
   "veganConfidence": "low"
+ },
+ {
+  "slug": "walgreens",
+  "name": "Walgreens",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
+  "slug": "wei-beauty",
+  "name": "Wei Beauty",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "wella",
@@ -15460,6 +19538,26 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "woolite",
+  "name": "Woolite",
+  "tier": "bad",
+  "note": "Owned by Reckitt Benckiser. Listed by PETA as a company that tests on animals.",
+  "parentCompany": "Reckitt Benckiser",
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "household-cleaning",
+   "laundry"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "yankee-candle",
   "name": "Yankee Candle",
   "tier": "unverified",
@@ -15569,6 +19667,25 @@
   "lastVerified": "2026-09-09"
  },
  {
+  "slug": "zegna",
+  "name": "Zegna",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "makeup-beauty"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
+ },
+ {
   "slug": "zia-natural-skincare",
   "name": "Zia Natural Skincare",
   "tier": "check",
@@ -15585,6 +19702,25 @@
   "region": "",
   "veganConfidence": "low",
   "lastVerified": "2026-09-09"
+ },
+ {
+  "slug": "zirh",
+  "name": "Zirh",
+  "tier": "bad",
+  "note": "Listed by PETA as a company that tests on animals.",
+  "parentCompany": null,
+  "vegan": "unknown",
+  "evidence": "https://crueltyfree.peta.org/companies-do-test/",
+  "products": [],
+  "alternatives": [],
+  "links": [],
+  "price": "",
+  "category": [
+   "skincare"
+  ],
+  "veganConfidence": "low",
+  "region": "",
+  "lastVerified": "2026-09-13"
  },
  {
   "slug": "zoflora",
