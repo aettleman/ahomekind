@@ -64,7 +64,7 @@ header.site-header {
 header.site-header .wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 20px 24px;
   padding-top: calc(20px + env(safe-area-inset-top, 0px));
   /* Wide enough that the full nav (six links plus the shop pill) sits on
@@ -85,6 +85,31 @@ header.site-header .wrap {
 nav.main-nav { display: flex; align-items: center; gap: 18px; font-size: 11px; color: #5c6b57; letter-spacing: 1.3px; text-transform: uppercase; flex-wrap: nowrap; white-space: nowrap; }
 nav.main-nav a { color: #5c6b57; }
 nav.main-nav a:hover { color: #3d4a3a; }
+
+/* Ko-fi + Instagram, pinned to the header's right edge (injected by
+   js/nav.js on every page, so it doesn't need editing into 26 separate
+   header blocks). margin-left:auto pulls it to the far right while
+   leaving the logo/nav pair packed together on the left, same as the
+   old space-between look did with just the two of them. */
+.header-social { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0; }
+.header-social a {
+  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ahk-green-soft, #dfe8da); color: #3d4a3a;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.header-social a:hover, .header-social a:focus-visible { background: var(--ahk-gold-soft, #e6d4a8); transform: translateY(-1px); }
+.header-social svg { width: 15px; height: 15px; display: block; }
+@media (prefers-reduced-motion: reduce) { .header-social a { transition: none; } }
+@media (max-width: 760px) {
+  /* Below this width the full nav hides in favour of the bottom bar
+     (see js/nav.js's "more" sheet), so the header shrinks down to just
+     the logo. Pin the icons to the header's right edge instead of
+     letting them fall into the column stack below the logo. */
+  header.site-header .wrap { position: relative; }
+  .header-social { position: absolute; top: 50%; right: 24px; transform: translateY(-50%); margin-left: 0; }
+  .header-social a:hover, .header-social a:focus-visible { transform: translateY(-50%); }
+}
 
 /* In-app browser notice -- shown on the two camera-dependent pages
    (scan.html, shelf.html) when we detect Instagram's/Facebook's own

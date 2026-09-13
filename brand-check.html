@@ -150,7 +150,7 @@
 </div>
 </div>
 <p class="hero-lede">See who's cruelty-free, who's vegan, and who still tests on animals, before you buy.</p>
-<p class="xlink ic-from-brand"><a href="ingredient-check.html">just want to know if one product is vegan, not the whole brand's testing policy? scan or photograph its ingredients and I'll check them &rarr;</a></p>
+<p class="xlink ic-from-brand"><a href="ingredient-check.html">or check one product's ingredients &rarr;</a></p>
 
 <div class="pill-input">
 <span class="pill-input-icon" aria-hidden="true">
@@ -1734,14 +1734,28 @@ var start = (currentPage - 1) * size;
 var pageCards = matches.slice(start, start + size);
 var pageSet = new Set(pageCards);
 
+// Easing each newly-shown card in needs a forced layout per card
+// (the void card.offsetWidth below), which is fine for a page of 20-100
+// cards but becomes hundreds of synchronous reflows in one go when
+// "per page" is set to "all" on a list of a thousand-plus brands -
+// that's what was freezing the tab and leaving some cards stuck
+// invisible (the reveal animation starts from opacity:0 and never
+// finishes catching up). Past a small batch, just show the cards with
+// no animation instead of easing every single one in.
+var revealBudget = 60;
 allCardsArr.forEach(function(card) {
 var match = pageSet.has(card);
 var wasHidden = card.style.display === 'none';
 card.style.display = match ? '' : 'none';
 if (match && wasHidden) {
+if (revealBudget > 0) {
 card.classList.remove('card-reveal');
 void card.offsetWidth;
 card.classList.add('card-reveal');
+revealBudget--;
+} else {
+card.classList.remove('card-reveal');
+}
 }
 });
 
@@ -1921,6 +1935,9 @@ return;
 }
 var anyVisible = false;
 var matchCount = 0;
+// Same forced-reflow-per-card cost as the pagination reveal above, so
+// the same budget applies here for a very broad search match.
+var searchRevealBudget = 60;
 allCardsArr.forEach(function(card){
 var match = (card.dataset.searchName || '').indexOf(q) !== -1;
 var wasHidden = card.style.display === 'none';
@@ -1929,9 +1946,14 @@ if (match) {
 anyVisible = true;
 matchCount++;
 if (wasHidden) {
+if (searchRevealBudget > 0) {
 card.classList.remove('card-reveal');
 void card.offsetWidth;
 card.classList.add('card-reveal');
+searchRevealBudget--;
+} else {
+card.classList.remove('card-reveal');
+}
 }
 }
 });

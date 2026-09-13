@@ -1,5245 +1,1402 @@
 [
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "newgen",
-    "name": "#NEWGEN",
-    "summary": "#NEWGEN was added (cruelty-free, check vegan status per product)."
+    "slug": "arctic-fox",
+    "name": "Arctic Fox",
+    "summary": "Arctic Fox was added (fully cruelty-free & vegan)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "17",
-    "name": "17",
-    "summary": "17 was added (cruelty-free, check vegan status per product)."
+    "slug": "arm-and-hammer",
+    "name": "Arm & Hammer",
+    "summary": "Arm & Hammer was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "7th-heaven",
-    "name": "7th Heaven",
-    "summary": "7th Heaven was added (cruelty-free, check vegan status per product)."
+    "slug": "bobbi-brown",
+    "name": "Bobbi Brown",
+    "summary": "Bobbi Brown was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "a-little-something",
-    "name": "A Little Something",
-    "summary": "A Little Something was added (cruelty-free, check vegan status per product)."
+    "slug": "cantu",
+    "name": "Cantu",
+    "summary": "Cantu was added (worth a closer look)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "abundant-natural-health",
-    "name": "Abundant Natural Health",
-    "summary": "Abundant Natural Health was added (cruelty-free, check vegan status per product)."
+    "slug": "chloe",
+    "name": "Chloe",
+    "summary": "Chloe was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "academy-of-colour",
-    "name": "Academy of Colour",
-    "summary": "Academy of Colour was added (cruelty-free, check vegan status per product)."
+    "slug": "clarins",
+    "name": "Clarins",
+    "summary": "Clarins was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "adaptology",
-    "name": "Adaptology",
-    "summary": "Adaptology was added (cruelty-free, check vegan status per product)."
+    "slug": "clearasil",
+    "name": "Clearasil",
+    "summary": "Clearasil was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "addition-studio",
-    "name": "Addition Studio",
-    "summary": "Addition Studio was added (cruelty-free, check vegan status per product)."
+    "slug": "clorox",
+    "name": "Clorox",
+    "summary": "Clorox was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "aesop",
-    "name": "Aesop",
-    "summary": "Aesop was added (cruelty-free, check vegan status per product)."
+    "slug": "dior",
+    "name": "Dior",
+    "summary": "Dior was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "almora-botanica",
-    "name": "Almora Botanica",
-    "summary": "Almora Botanica was added (cruelty-free, check vegan status per product)."
+    "slug": "dr-pawpaw",
+    "name": "Dr PawPaw",
+    "summary": "Dr PawPaw was added (fully cruelty-free & vegan)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "alta-marea",
-    "name": "Alta Marea",
-    "summary": "Alta Marea was added (cruelty-free, check vegan status per product)."
+    "slug": "eos",
+    "name": "eos",
+    "summary": "eos was added (worth a closer look)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "alter-native-by-suma",
-    "name": "Alter/Native by Suma",
-    "summary": "Alter/Native by Suma was added (cruelty-free, check vegan status per product)."
+    "slug": "estee-lauder",
+    "name": "Estee Lauder",
+    "summary": "Estee Lauder was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "alucia-organics",
-    "name": "Alucia Organics",
-    "summary": "Alucia Organics was added (cruelty-free, check vegan status per product)."
+    "slug": "gucci",
+    "name": "Gucci",
+    "summary": "Gucci was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "amaras",
-    "name": "Amaras",
-    "summary": "Amaras was added (cruelty-free, check vegan status per product)."
+    "slug": "lancome",
+    "name": "Lancome",
+    "summary": "Lancome was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "anara-skincare",
-    "name": "Anara Skincare",
-    "summary": "Anara Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "lysol",
+    "name": "Lysol",
+    "summary": "Lysol was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "anko",
-    "name": "Anko",
-    "summary": "Anko was added (cruelty-free, check vegan status per product)."
+    "slug": "mac",
+    "name": "MAC",
+    "summary": "MAC was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "aqua-natural",
-    "name": "Aqua Natural",
-    "summary": "Aqua Natural was added (cruelty-free, check vegan status per product)."
+    "slug": "matrix",
+    "name": "Matrix",
+    "summary": "Matrix was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ar-ocean",
-    "name": "Ar Ocean",
-    "summary": "Ar Ocean was added (cruelty-free, check vegan status per product)."
+    "slug": "milani",
+    "name": "Milani",
+    "summary": "Milani was added (worth a closer look)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "areu-areu",
-    "name": "AREU AREU",
-    "summary": "AREU AREU was added (cruelty-free, check vegan status per product)."
+    "slug": "nair",
+    "name": "Nair",
+    "summary": "Nair was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "argital",
-    "name": "Argital",
-    "summary": "Argital was added (cruelty-free, check vegan status per product)."
+    "slug": "nars",
+    "name": "Nars",
+    "summary": "Nars was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "arithmos",
-    "name": "Arithmos",
-    "summary": "Arithmos was added (cruelty-free, check vegan status per product)."
+    "slug": "pine-sol",
+    "name": "Pine-Sol",
+    "summary": "Pine-Sol was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "aromatherapy-associates",
-    "name": "Aromatherapy Associates",
-    "summary": "Aromatherapy Associates was added (cruelty-free, check vegan status per product)."
+    "slug": "symbiosis-london",
+    "name": "Symbiosis London",
+    "summary": "Symbiosis London was added (fully cruelty-free & vegan)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "asperox",
-    "name": "Asperox",
-    "summary": "Asperox was added (cruelty-free, check vegan status per product)."
+    "slug": "tide",
+    "name": "Tide",
+    "summary": "Tide was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "asperox-sparx",
-    "name": "Asperox-Sparx",
-    "summary": "Asperox-Sparx was added (cruelty-free, check vegan status per product)."
+    "slug": "tower-28",
+    "name": "Tower 28",
+    "summary": "Tower 28 was added (fully cruelty-free & vegan)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "atelier-rebul",
-    "name": "Atelier Rebul",
-    "summary": "Atelier Rebul was added (cruelty-free, check vegan status per product)."
+    "slug": "vicks",
+    "name": "Vicks",
+    "summary": "Vicks was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "atikha",
-    "name": "atikha",
-    "summary": "atikha was added (cruelty-free, check vegan status per product)."
+    "slug": "wella",
+    "name": "Wella",
+    "summary": "Wella was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "aurelia-london",
-    "name": "Aurelia London",
-    "summary": "Aurelia London was added (cruelty-free, check vegan status per product)."
+    "slug": "windex",
+    "name": "Windex",
+    "summary": "Windex was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "aveda",
-    "name": "Aveda",
-    "summary": "Aveda was added (cruelty-free itself, parent company isn’t)."
+    "slug": "acuvue",
+    "name": "Acuvue",
+    "summary": "Acuvue was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "awake-organics",
-    "name": "Awake Organics",
-    "summary": "Awake Organics was added (cruelty-free, check vegan status per product)."
+    "slug": "aim",
+    "name": "Aim",
+    "summary": "Aim was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "b-skincare",
-    "name": "B Skincare",
-    "summary": "B Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "algenist",
+    "name": "Algenist",
+    "summary": "Algenist was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bob",
-    "name": "B.O.B.",
-    "summary": "B.O.B. was added (cruelty-free, check vegan status per product)."
+    "slug": "ambi",
+    "name": "Ambi",
+    "summary": "Ambi was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bakel-srl",
-    "name": "Bakel srl",
-    "summary": "Bakel srl was added (cruelty-free, check vegan status per product)."
+    "slug": "anna-sui",
+    "name": "Anna Sui",
+    "summary": "Anna Sui was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bali-body",
-    "name": "Bali Body",
-    "summary": "Bali Body was added (cruelty-free, check vegan status per product)."
+    "slug": "aqua-di-parma",
+    "name": "Aqua di Parma",
+    "summary": "Aqua di Parma was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "balm-balm",
-    "name": "Balm Balm",
-    "summary": "Balm Balm was added (cruelty-free, check vegan status per product)."
+    "slug": "aramis",
+    "name": "Aramis",
+    "summary": "Aramis was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "batch",
-    "name": "Batch",
-    "summary": "Batch was added (cruelty-free, check vegan status per product)."
+    "slug": "arrid",
+    "name": "Arrid",
+    "summary": "Arrid was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bath-house",
-    "name": "Bath House",
-    "summary": "Bath House was added (cruelty-free, check vegan status per product)."
+    "slug": "atelier-cologne",
+    "name": "Atelier Cologne",
+    "summary": "Atelier Cologne was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "beautiful-brows-and-lashes",
-    "name": "Beautiful Brows & Lashes",
-    "summary": "Beautiful Brows & Lashes was added (cruelty-free, check vegan status per product)."
+    "slug": "bain-de-soleil",
+    "name": "Bain de Soleil",
+    "summary": "Bain de Soleil was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "beauty-favours",
-    "name": "Beauty Favours",
-    "summary": "Beauty Favours was added (cruelty-free, check vegan status per product)."
+    "slug": "balenciaga",
+    "name": "Balenciaga",
+    "summary": "Balenciaga was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "beauty-without-cruelty",
-    "name": "Beauty Without Cruelty",
-    "summary": "Beauty Without Cruelty was added (cruelty-free, check vegan status per product)."
+    "slug": "band-aid",
+    "name": "Band-Aid",
+    "summary": "Band-Aid was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bed-intentions",
-    "name": "Bed intentions",
-    "summary": "Bed intentions was added (cruelty-free, check vegan status per product)."
+    "slug": "bausch-lomb",
+    "name": "Bausch + Lomb",
+    "summary": "Bausch + Lomb was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "being",
-    "name": "Being",
-    "summary": "Being was added (cruelty-free, check vegan status per product)."
+    "slug": "beiersdorf",
+    "name": "Beiersdorf",
+    "summary": "Beiersdorf was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bel-rebel",
-    "name": "Bel Rebel",
-    "summary": "Bel Rebel was added (cruelty-free, check vegan status per product)."
+    "slug": "bengay",
+    "name": "BENGAY",
+    "summary": "BENGAY was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bellapierre-cosmetics",
-    "name": "Bellapierre Cosmetics",
-    "summary": "Bellapierre Cosmetics was added (cruelty-free, check vegan status per product)."
+    "slug": "bic-corporation",
+    "name": "Bic Corporation",
+    "summary": "Bic Corporation was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "benefit",
-    "name": "Benefit",
-    "summary": "Benefit was added (cruelty-free, check vegan status per product)."
+    "slug": "biotene",
+    "name": "Biotene",
+    "summary": "Biotene was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "biohygiene",
-    "name": "BioHygiene",
-    "summary": "BioHygiene was added (cruelty-free, check vegan status per product)."
+    "slug": "biotherm",
+    "name": "Biotherm",
+    "summary": "Biotherm was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "biolage",
-    "name": "Biolage",
-    "summary": "Biolage was added (cruelty-free, check vegan status per product)."
+    "slug": "blue-buffalo",
+    "name": "Blue Buffalo",
+    "summary": "Blue Buffalo was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bioleon",
-    "name": "bioLEON",
-    "summary": "bioLEON was added (cruelty-free, check vegan status per product)."
+    "slug": "bounce",
+    "name": "Bounce",
+    "summary": "Bounce was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "biolet",
-    "name": "Biolet",
-    "summary": "Biolet was added (cruelty-free, check vegan status per product)."
+    "slug": "bounty",
+    "name": "Bounty",
+    "summary": "Bounty was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "biologi",
-    "name": "Biologi",
-    "summary": "Biologi was added (cruelty-free, check vegan status per product)."
+    "slug": "braun",
+    "name": "Braun",
+    "summary": "Braun was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "blur-london",
-    "name": "Blur London",
-    "summary": "Blur London was added (cruelty-free, check vegan status per product)."
+    "slug": "breathe-right",
+    "name": "Breathe Right",
+    "summary": "Breathe Right was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bmt",
-    "name": "BMT",
-    "summary": "BMT was added (cruelty-free, check vegan status per product)."
+    "slug": "burberry",
+    "name": "Burberry",
+    "summary": "Burberry was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "boots",
-    "name": "Boots",
-    "summary": "Boots was added (cruelty-free, check vegan status per product)."
+    "slug": "bvlgari-parfums",
+    "name": "BVLGARI parfums",
+    "summary": "BVLGARI parfums was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "botanica-slavica",
-    "name": "Botanica Slavica",
-    "summary": "Botanica Slavica was added (cruelty-free, check vegan status per product)."
+    "slug": "cacharel",
+    "name": "Cacharel",
+    "summary": "Cacharel was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "botanico-vida-skincare",
-    "name": "Botanico Vida Skincare",
-    "summary": "Botanico Vida Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "calgon-water-softener",
+    "name": "Calgon Water Softener",
+    "summary": "Calgon Water Softener was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "botanics",
-    "name": "Botanics",
-    "summary": "Botanics was added (cruelty-free, check vegan status per product)."
+    "slug": "calvin-klein-cosmetics",
+    "name": "Calvin Klein Cosmetics",
+    "summary": "Calvin Klein Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "boucleme",
-    "name": "Boucleme",
-    "summary": "Boucleme was added (cruelty-free, check vegan status per product)."
+    "slug": "caudalie-usa",
+    "name": "Caudalie USA",
+    "summary": "Caudalie USA was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "boundary",
-    "name": "Boundary",
-    "summary": "Boundary was added (cruelty-free, check vegan status per product)."
+    "slug": "chapstick",
+    "name": "Chapstick",
+    "summary": "Chapstick was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "bravenewhair-bravenewcare",
-    "name": "BRAVE.NEW.HAIR., BRAVE.NEW.CARE.",
-    "summary": "BRAVE.NEW.HAIR., BRAVE.NEW.CARE. was added (cruelty-free, check vegan status per product)."
+    "slug": "cheer",
+    "name": "Cheer",
+    "summary": "Cheer was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "by-sarah-london",
-    "name": "By Sarah London",
-    "summary": "By Sarah London was added (cruelty-free, check vegan status per product)."
+    "slug": "christina-aguilera-perfumes",
+    "name": "Christina Aguilera Perfumes",
+    "summary": "Christina Aguilera Perfumes was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "byellie",
-    "name": "Byellie",
-    "summary": "Byellie was added (cruelty-free, check vegan status per product)."
+    "slug": "church-and-dwight",
+    "name": "Church & Dwight",
+    "summary": "Church & Dwight was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "byk-beauty",
-    "name": "BYK Beauty",
-    "summary": "BYK Beauty was added (cruelty-free, check vegan status per product)."
+    "slug": "citre-shine",
+    "name": "Citre Shine",
+    "summary": "Citre Shine was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "byron-bay-skincare",
-    "name": "Byron Bay Skincare",
-    "summary": "Byron Bay Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "clarins-of-paris",
+    "name": "Clarins of Paris",
+    "summary": "Clarins of Paris was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "callen-olive",
-    "name": "Callen Olive",
-    "summary": "Callen Olive was added (cruelty-free, check vegan status per product)."
+    "slug": "clarisonic",
+    "name": "Clarisonic",
+    "summary": "Clarisonic was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cellis",
-    "name": "Cellis",
-    "summary": "Cellis was added (cruelty-free, check vegan status per product)."
+    "slug": "close-up",
+    "name": "Close-up",
+    "summary": "Close-up was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "celui-by-anisa-sojka",
-    "name": "CELUI by Anisa Sojka",
-    "summary": "CELUI by Anisa Sojka was added (cruelty-free, check vegan status per product)."
+    "slug": "collistar",
+    "name": "Collistar",
+    "summary": "Collistar was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cenoura-and-bronze",
-    "name": "Cenoura & Bronze",
-    "summary": "Cenoura & Bronze was added (cruelty-free, check vegan status per product)."
+    "slug": "comet",
+    "name": "Comet",
+    "summary": "Comet was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cherish",
-    "name": "Cherish",
-    "summary": "Cherish was added (cruelty-free, check vegan status per product)."
+    "slug": "command",
+    "name": "Command",
+    "summary": "Command was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "childs-farm",
-    "name": "Childs Farm",
-    "summary": "Childs Farm was added (cruelty-free, check vegan status per product)."
+    "slug": "condense-paris",
+    "name": "Condense Paris",
+    "summary": "Condense Paris was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cien",
-    "name": "Cien",
-    "summary": "Cien was added (cruelty-free, check vegan status per product)."
+    "slug": "coppertone",
+    "name": "Coppertone",
+    "summary": "Coppertone was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "clemence-organics",
-    "name": "Clemence Organics",
-    "summary": "Clemence Organics was added (cruelty-free, check vegan status per product)."
+    "slug": "coty-inc",
+    "name": "Coty Inc.",
+    "summary": "Coty Inc. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "coco-and-lola",
-    "name": "Coco and Lola",
-    "summary": "Coco and Lola was added (cruelty-free, check vegan status per product)."
+    "slug": "crest",
+    "name": "Crest",
+    "summary": "Crest was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "copper-and-black",
-    "name": "Copper & Black",
-    "summary": "Copper & Black was added (cruelty-free, check vegan status per product)."
+    "slug": "davidoff",
+    "name": "Davidoff",
+    "summary": "Davidoff was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cowshed",
-    "name": "Cowshed",
-    "summary": "Cowshed was added (cruelty-free, check vegan status per product)."
+    "slug": "diesel",
+    "name": "Diesel",
+    "summary": "Diesel was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cozium",
-    "name": "COZIUM",
-    "summary": "COZIUM was added (cruelty-free, check vegan status per product)."
+    "slug": "donna-karan",
+    "name": "Donna Karan",
+    "summary": "Donna Karan was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cranbourn",
-    "name": "CRANBOURN",
-    "summary": "CRANBOURN was added (cruelty-free, check vegan status per product)."
+    "slug": "downy",
+    "name": "Downy",
+    "summary": "Downy was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cult-candy-cosmetics",
-    "name": "Cult Candy Cosmetics",
-    "summary": "Cult Candy Cosmetics was added (cruelty-free, check vegan status per product)."
+    "slug": "drano",
+    "name": "Drano",
+    "summary": "Drano was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cultivator-natural-products",
-    "name": "Cultivator Natural Products",
-    "summary": "Cultivator Natural Products was added (cruelty-free, check vegan status per product)."
+    "slug": "dtrt",
+    "name": "DTRT",
+    "summary": "DTRT was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cultured",
-    "name": "Cultured",
-    "summary": "Cultured was added (cruelty-free, check vegan status per product)."
+    "slug": "dunhill-fragrances",
+    "name": "Dunhill Fragrances",
+    "summary": "Dunhill Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "curl-jar",
-    "name": "Curl Jar",
-    "summary": "Curl Jar was added (cruelty-free, check vegan status per product)."
+    "slug": "durex",
+    "name": "Durex",
+    "summary": "Durex was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cycle",
-    "name": "CYCLE",
-    "summary": "CYCLE was added (cruelty-free, check vegan status per product)."
+    "slug": "easy-off",
+    "name": "Easy-Off",
+    "summary": "Easy-Off was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "cyzone",
-    "name": "Cyzone",
-    "summary": "Cyzone was added (cruelty-free, check vegan status per product)."
+    "slug": "eisenberg-paris",
+    "name": "Eisenberg Paris",
+    "summary": "Eisenberg Paris was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dlas",
-    "name": "D'las",
-    "summary": "D'las was added (cruelty-free, check vegan status per product)."
+    "slug": "elie-saab",
+    "name": "Elie Saab",
+    "summary": "Elie Saab was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dentalux",
-    "name": "Dentalux",
-    "summary": "Dentalux was added (cruelty-free, check vegan status per product)."
+    "slug": "elizabeth-arden",
+    "name": "Elizabeth Arden",
+    "summary": "Elizabeth Arden was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dermacare",
-    "name": "Dermacare",
-    "summary": "Dermacare was added (cruelty-free, check vegan status per product)."
+    "slug": "ellegirl",
+    "name": "ELLEgirl",
+    "summary": "ELLEgirl was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dial",
-    "name": "Dial",
-    "summary": "Dial was added (cruelty-free, check vegan status per product)."
+    "slug": "era",
+    "name": "Era",
+    "summary": "Era was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dianne-caine-australia",
-    "name": "Dianne Caine Australia",
-    "summary": "Dianne Caine Australia was added (cruelty-free, check vegan status per product)."
+    "slug": "escada-fragrances",
+    "name": "Escada Fragrances",
+    "summary": "Escada Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ditto-balms",
-    "name": "Ditto Balms",
-    "summary": "Ditto Balms was added (cruelty-free, check vegan status per product)."
+    "slug": "ever-clean",
+    "name": "Ever Clean",
+    "summary": "Ever Clean was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "doussy",
-    "name": "Doussy",
-    "summary": "Doussy was added (cruelty-free, check vegan status per product)."
+    "slug": "fantastik",
+    "name": "Fantastik",
+    "summary": "Fantastik was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "down-to-earth",
-    "name": "Down to Earth",
-    "summary": "Down to Earth was added (cruelty-free, check vegan status per product)."
+    "slug": "fendi",
+    "name": "Fendi",
+    "summary": "Fendi was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dr-heald",
-    "name": "DR HEALD",
-    "summary": "DR HEALD was added (cruelty-free, check vegan status per product)."
+    "slug": "fixodent",
+    "name": "Fixodent",
+    "summary": "Fixodent was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dr-jacksons",
-    "name": "Dr Jackson's",
-    "summary": "Dr Jackson's was added (cruelty-free, check vegan status per product)."
+    "slug": "for-beloved-one",
+    "name": "For Beloved One",
+    "summary": "For Beloved One was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "dr-sams",
-    "name": "Dr Sam's",
-    "summary": "Dr Sam's was added (cruelty-free, check vegan status per product)."
+    "slug": "formula-409",
+    "name": "Formula 409",
+    "summary": "Formula 409 was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "duo",
-    "name": "DUO",
-    "summary": "DUO was added (cruelty-free, check vegan status per product)."
+    "slug": "fresh-step",
+    "name": "Fresh Step",
+    "summary": "Fresh Step was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "earth-conscious",
-    "name": "Earth Conscious",
-    "summary": "Earth Conscious was added (cruelty-free, check vegan status per product)."
+    "slug": "gain",
+    "name": "Gain",
+    "summary": "Gain was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "earth-sense",
-    "name": "Earth Sense",
-    "summary": "Earth Sense was added (cruelty-free, check vegan status per product)."
+    "slug": "gillette-co",
+    "name": "Gillette Co.",
+    "summary": "Gillette Co. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "earthy-nail-polish",
-    "name": "Earthy Nail Polish",
-    "summary": "Earthy Nail Polish was added (cruelty-free, check vegan status per product)."
+    "slug": "giorgio-armani",
+    "name": "Giorgio Armani",
+    "summary": "Giorgio Armani was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ecoleaf-by-suma",
-    "name": "Ecoleaf by Suma",
-    "summary": "Ecoleaf by Suma was added (cruelty-free, check vegan status per product)."
+    "slug": "givenchy-inc",
+    "name": "Givenchy Inc.",
+    "summary": "Givenchy Inc. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ecozone",
-    "name": "Ecozone",
-    "summary": "Ecozone was added (cruelty-free, check vegan status per product)."
+    "slug": "glad",
+    "name": "Glad",
+    "summary": "Glad was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "elegance",
-    "name": "Elegance",
-    "summary": "Elegance was added (cruelty-free, check vegan status per product)."
+    "slug": "glamglow",
+    "name": "GLAMGLOW",
+    "summary": "GLAMGLOW was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "emma-hardie",
-    "name": "Emma Hardie",
-    "summary": "Emma Hardie was added (cruelty-free, check vegan status per product)."
+    "slug": "green-works",
+    "name": "Green Works",
+    "summary": "Green Works was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "epiderma",
-    "name": "Epiderma",
-    "summary": "Epiderma was added (cruelty-free, check vegan status per product)."
+    "slug": "gucci-fragrances",
+    "name": "Gucci Fragrances",
+    "summary": "Gucci Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "esika",
-    "name": "Esika",
-    "summary": "Esika was added (cruelty-free, check vegan status per product)."
+    "slug": "guerlain",
+    "name": "Guerlain",
+    "summary": "Guerlain was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "esspire",
-    "name": "Esspire",
-    "summary": "Esspire was added (cruelty-free, check vegan status per product)."
+    "slug": "helena-rubinstein",
+    "name": "Helena Rubinstein",
+    "summary": "Helena Rubinstein was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "eternal-skincare",
-    "name": "Eternal Skincare",
-    "summary": "Eternal Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "hoyu",
+    "name": "Hoyu",
+    "summary": "Hoyu was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "eudora",
-    "name": "Eudora",
-    "summary": "Eudora was added (cruelty-free, check vegan status per product)."
+    "slug": "hugo-boss",
+    "name": "Hugo Boss",
+    "summary": "Hugo Boss was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "evdaimonia",
-    "name": "Evdaimonia",
-    "summary": "Evdaimonia was added (cruelty-free, check vegan status per product)."
+    "slug": "institut-esthederm",
+    "name": "Institut Esthederm",
+    "summary": "Institut Esthederm was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "everyandone",
-    "name": "every&one",
-    "summary": "every&one was added (cruelty-free, check vegan status per product)."
+    "slug": "issey-miyake",
+    "name": "Issey Miyake",
+    "summary": "Issey Miyake was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "evolve-organic-beauty",
-    "name": "Evolve Organic Beauty",
-    "summary": "Evolve Organic Beauty was added (cruelty-free, check vegan status per product)."
+    "slug": "ivory",
+    "name": "Ivory",
+    "summary": "Ivory was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "evre",
-    "name": "Evre",
-    "summary": "Evre was added (cruelty-free, check vegan status per product)."
+    "slug": "jimmy-choo",
+    "name": "Jimmy Choo",
+    "summary": "Jimmy Choo was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fab-brows",
-    "name": "FAB Brows",
-    "summary": "FAB Brows was added (cruelty-free, check vegan status per product)."
+    "slug": "jo-malone",
+    "name": "Jo Malone",
+    "summary": "Jo Malone was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "facetheory",
-    "name": "Facetheory",
-    "summary": "Facetheory was added (cruelty-free, check vegan status per product)."
+    "slug": "johnson-and-johnson",
+    "name": "Johnson & Johnson",
+    "summary": "Johnson & Johnson was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fatface",
-    "name": "FatFace",
-    "summary": "FatFace was added (cruelty-free, check vegan status per product)."
+    "slug": "jurlique-pure-skin-care",
+    "name": "Jurlique Pure Skin Care",
+    "summary": "Jurlique Pure Skin Care was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fill-refill-co",
-    "name": "Fill Refill Co.",
-    "summary": "Fill Refill Co. was added (cruelty-free, check vegan status per product)."
+    "slug": "k-y",
+    "name": "K.Y.",
+    "summary": "K.Y. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "filter-by-molly-mae",
-    "name": "Filter by Molly-Mae",
-    "summary": "Filter by Molly-Mae was added (cruelty-free, check vegan status per product)."
+    "slug": "kaboom",
+    "name": "Kaboom",
+    "summary": "Kaboom was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "finice",
-    "name": "finice",
-    "summary": "finice was added (cruelty-free, check vegan status per product)."
+    "slug": "kao-usa",
+    "name": "Kao USA",
+    "summary": "Kao USA was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "floralys",
-    "name": "Floralys",
-    "summary": "Floralys was added (cruelty-free, check vegan status per product)."
+    "slug": "kenzo-parfums",
+    "name": "Kenzo Parfums",
+    "summary": "Kenzo Parfums was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "florentine",
-    "name": "Florentine",
-    "summary": "Florentine was added (cruelty-free, check vegan status per product)."
+    "slug": "kerastase",
+    "name": "Kerastase",
+    "summary": "Kerastase was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "forest-and-shore",
-    "name": "Forest & Shore",
-    "summary": "Forest & Shore was added (cruelty-free, check vegan status per product)."
+    "slug": "kiehl-s",
+    "name": "Kiehl's",
+    "summary": "Kiehl's was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "formil",
-    "name": "formil",
-    "summary": "formil was added (cruelty-free, check vegan status per product)."
+    "slug": "kose",
+    "name": "Kose",
+    "summary": "Kose was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "formulae-prescott",
-    "name": "Formulae Prescott",
-    "summary": "Formulae Prescott was added (cruelty-free, check vegan status per product)."
+    "slug": "l-occitane",
+    "name": "L'Occitane",
+    "summary": "L'Occitane was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fresh-and-dry",
-    "name": "Fresh & Dry",
-    "summary": "Fresh & Dry was added (cruelty-free, check vegan status per product)."
+    "slug": "la-mer",
+    "name": "La Mer",
+    "summary": "La Mer was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fria",
-    "name": "FRIA",
-    "summary": "FRIA was added (cruelty-free, check vegan status per product)."
+    "slug": "lab-series-for-men",
+    "name": "Lab Series for Men",
+    "summary": "Lab Series for Men was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fria-1000-giorni",
-    "name": "FRIA 1000 GIORNI",
-    "summary": "FRIA 1000 GIORNI was added (cruelty-free, check vegan status per product)."
+    "slug": "lacoste-fragrances",
+    "name": "Lacoste Fragrances",
+    "summary": "Lacoste Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fria-easy",
-    "name": "FRIA EASY",
-    "summary": "FRIA EASY was added (cruelty-free, check vegan status per product)."
+    "slug": "lancaster-beauty",
+    "name": "Lancaster Beauty",
+    "summary": "Lancaster Beauty was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fria-k-beauty-inspired",
-    "name": "FRIA k-Beauty Inspired",
-    "summary": "FRIA k-Beauty Inspired was added (cruelty-free, check vegan status per product)."
+    "slug": "lanvin",
+    "name": "Lanvin",
+    "summary": "Lanvin was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "friendly-soap",
-    "name": "Friendly Soap",
-    "summary": "Friendly Soap was added (cruelty-free, check vegan status per product)."
+    "slug": "leaders-cosmetics",
+    "name": "Leaders Cosmetics",
+    "summary": "Leaders Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fuarain-skincare",
-    "name": "Fuarain Skincare",
-    "summary": "Fuarain Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "liquid-plumr",
+    "name": "Liquid Plumr",
+    "summary": "Liquid Plumr was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "furtastic",
-    "name": "Furtastic",
-    "summary": "Furtastic was added (cruelty-free, check vegan status per product)."
+    "slug": "loewe",
+    "name": "Loewe",
+    "summary": "Loewe was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "fushi",
-    "name": "Fushi",
-    "summary": "Fushi was added (cruelty-free, check vegan status per product)."
+    "slug": "lubriderm",
+    "name": "Lubriderm",
+    "summary": "Lubriderm was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "gaia-skincare",
-    "name": "Gaia Skincare",
-    "summary": "Gaia Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "m-a-c-cosmetics",
+    "name": "M.A.C. Cosmetics",
+    "summary": "M.A.C. Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "gatineau",
-    "name": "GATINEAU",
-    "summary": "GATINEAU was added (cruelty-free, check vegan status per product)."
+    "slug": "makeup-forever",
+    "name": "Makeup Forever",
+    "summary": "Makeup Forever was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "gelitup-by-giup",
-    "name": "GEL.IT.UP by GIUP",
-    "summary": "GEL.IT.UP by GIUP was added (cruelty-free, check vegan status per product)."
+    "slug": "marc-jacobs-fragrances",
+    "name": "Marc Jacobs Fragrances",
+    "summary": "Marc Jacobs Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "gender-neutral",
-    "name": "Gender Neutral",
-    "summary": "Gender Neutral was added (cruelty-free, check vegan status per product)."
+    "slug": "mary-kay",
+    "name": "Mary Kay",
+    "summary": "Mary Kay was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "genglo",
-    "name": "GenGlo",
-    "summary": "GenGlo was added (cruelty-free, check vegan status per product)."
+    "slug": "mead",
+    "name": "Mead",
+    "summary": "Mead was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ghs-direct",
-    "name": "GHS Direct",
-    "summary": "GHS Direct was added (cruelty-free, check vegan status per product)."
+    "slug": "mediplorer",
+    "name": "Mediplorer",
+    "summary": "Mediplorer was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "gingingers",
-    "name": "Gingingers",
-    "summary": "Gingingers was added (cruelty-free, check vegan status per product)."
+    "slug": "melaleuca",
+    "name": "Melaleuca",
+    "summary": "Melaleuca was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "girls-with-attitude",
-    "name": "Girls with Attitude",
-    "summary": "Girls with Attitude was added (cruelty-free, check vegan status per product)."
+    "slug": "menard-cosmetics",
+    "name": "Menard Cosmetics",
+    "summary": "Menard Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "glow-for-it",
-    "name": "Glow For It",
-    "summary": "Glow For It was added (cruelty-free, check vegan status per product)."
+    "slug": "mentadent",
+    "name": "Mentadent",
+    "summary": "Mentadent was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "glow-hub",
-    "name": "Glow Hub",
-    "summary": "Glow Hub was added (cruelty-free, check vegan status per product)."
+    "slug": "merck",
+    "name": "Merck",
+    "summary": "Merck was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "goats-of-the-gorge",
-    "name": "Goats of the Gorge",
-    "summary": "Goats of the Gorge was added (cruelty-free, check vegan status per product)."
+    "slug": "michael-kors",
+    "name": "Michael Kors",
+    "summary": "Michael Kors was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "good-bubble",
-    "name": "Good Bubble",
-    "summary": "Good Bubble was added (cruelty-free, check vegan status per product)."
+    "slug": "missoni",
+    "name": "Missoni",
+    "summary": "Missoni was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "good-one",
-    "name": "Good One",
-    "summary": "Good One was added (cruelty-free, check vegan status per product)."
+    "slug": "mitchum-deodorant",
+    "name": "Mitchum Deodorant",
+    "summary": "Mitchum Deodorant was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "green-wave",
-    "name": "Green Wave",
-    "summary": "Green Wave was added (cruelty-free, check vegan status per product)."
+    "slug": "miu-miu",
+    "name": "miu miu",
+    "summary": "miu miu was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "greenscents",
-    "name": "Greenscents",
-    "summary": "Greenscents was added (cruelty-free, check vegan status per product)."
+    "slug": "mizani",
+    "name": "Mizani",
+    "summary": "Mizani was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hair-by-sam-mcknight",
-    "name": "Hair by Sam McKnight",
-    "summary": "Hair by Sam McKnight was added (cruelty-free, check vegan status per product)."
+    "slug": "mont-blanc",
+    "name": "Mont Blanc",
+    "summary": "Mont Blanc was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "handmade-naturals",
-    "name": "Handmade Naturals",
-    "summary": "Handmade Naturals was added (cruelty-free, check vegan status per product)."
+    "slug": "mr-clean",
+    "name": "Mr. Clean",
+    "summary": "Mr. Clean was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hanna-sillitoe",
-    "name": "Hanna Sillitoe",
-    "summary": "Hanna Sillitoe was added (cruelty-free, check vegan status per product)."
+    "slug": "my-trendy-kit",
+    "name": "My Trendy Kit",
+    "summary": "My Trendy Kit was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hannah-natural",
-    "name": "Hannah Natural",
-    "summary": "Hannah Natural was added (cruelty-free, check vegan status per product)."
+    "slug": "nars-cosmetics",
+    "name": "Nars Cosmetics",
+    "summary": "Nars Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "happy-anne",
-    "name": "HAPPY ANNE",
-    "summary": "HAPPY ANNE was added (cruelty-free, check vegan status per product)."
+    "slug": "natural-balance-pet-foods-inc",
+    "name": "Natural Balance Pet Foods Inc.",
+    "summary": "Natural Balance Pet Foods Inc. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "helan",
-    "name": "Helan",
-    "summary": "Helan was added (cruelty-free, check vegan status per product)."
+    "slug": "natural-instincts",
+    "name": "Natural Instincts",
+    "summary": "Natural Instincts was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "herbal-elea",
-    "name": "Herbal Elea",
-    "summary": "Herbal Elea was added (cruelty-free, check vegan status per product)."
+    "slug": "nature-s-source",
+    "name": "Nature's Source",
+    "summary": "Nature's Source was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hershesons",
-    "name": "Hershesons",
-    "summary": "Hershesons was added (cruelty-free, check vegan status per product)."
+    "slug": "new-dana-perfumes",
+    "name": "New Dana Perfumes",
+    "summary": "New Dana Perfumes was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hiip",
-    "name": "Hiip",
-    "summary": "Hiip was added (cruelty-free, check vegan status per product)."
+    "slug": "nexcare",
+    "name": "Nexcare",
+    "summary": "Nexcare was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "hownd",
-    "name": "HOWND",
-    "summary": "HOWND was added (cruelty-free, check vegan status per product)."
+    "slug": "nice-n-easy",
+    "name": "Nice 'n Easy",
+    "summary": "Nice 'n Easy was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "i-m-naturkosmetik-berlin",
-    "name": "i+m NATURKOSMETIK BERLIN",
-    "summary": "i+m NATURKOSMETIK BERLIN was added (cruelty-free, check vegan status per product)."
+    "slug": "nina-ricci",
+    "name": "Nina Ricci",
+    "summary": "Nina Ricci was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "icom",
-    "name": "icom",
-    "summary": "icom was added (cruelty-free, check vegan status per product)."
+    "slug": "nioxin",
+    "name": "Nioxin",
+    "summary": "Nioxin was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "incia",
-    "name": "INCIA",
-    "summary": "INCIA was added (cruelty-free, check vegan status per product)."
+    "slug": "nu-skin-international",
+    "name": "Nu Skin International",
+    "summary": "Nu Skin International was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "ineos",
-    "name": "INEOS",
-    "summary": "INEOS was added (cruelty-free, check vegan status per product)."
+    "slug": "off",
+    "name": "Off",
+    "summary": "Off was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "inhana-skincare",
-    "name": "Inhana Skincare",
-    "summary": "Inhana Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "old-english",
+    "name": "Old English",
+    "summary": "Old English was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "inlight-beauty-and-wellness",
-    "name": "Inlight Beauty & Wellness",
-    "summary": "Inlight Beauty & Wellness was added (cruelty-free, check vegan status per product)."
+    "slug": "oomph",
+    "name": "Oomph!",
+    "summary": "Oomph! was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "iren-shizen",
-    "name": "IREN Shizen",
-    "summary": "IREN Shizen was added (cruelty-free, check vegan status per product)."
+    "slug": "orange-glo",
+    "name": "Orange Glo",
+    "summary": "Orange Glo was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "itreatskin",
-    "name": "itreatskin",
-    "summary": "itreatskin was added (cruelty-free, check vegan status per product)."
+    "slug": "oriflame",
+    "name": "Oriflame",
+    "summary": "Oriflame was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "je-suis-vert",
-    "name": "Je Suis Vert",
-    "summary": "Je Suis Vert was added (cruelty-free, check vegan status per product)."
+    "slug": "origins",
+    "name": "Origins",
+    "summary": "Origins was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "jeuneora",
-    "name": "Jeuneora",
-    "summary": "Jeuneora was added (cruelty-free, check vegan status per product)."
+    "slug": "osiao",
+    "name": "Osiao",
+    "summary": "Osiao was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "john-lewis-and-partners",
-    "name": "John Lewis & Partners",
-    "summary": "John Lewis & Partners was added (cruelty-free, check vegan status per product)."
+    "slug": "oust",
+    "name": "Oust",
+    "summary": "Oust was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "julie-clarke-candles",
-    "name": "Julie Clarke Candles",
-    "summary": "Julie Clarke Candles was added (cruelty-free, check vegan status per product)."
+    "slug": "oxiclean",
+    "name": "OxiClean",
+    "summary": "OxiClean was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "juvenate-skincare",
-    "name": "Juvenate Skincare",
-    "summary": "Juvenate Skincare was added (cruelty-free, check vegan status per product)."
+    "slug": "paco-rabanne",
+    "name": "Paco Rabanne",
+    "summary": "Paco Rabanne was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kadalys",
-    "name": "Kadalys",
-    "summary": "Kadalys was added (cruelty-free, check vegan status per product)."
+    "slug": "pampers",
+    "name": "Pampers",
+    "summary": "Pampers was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kash-beauty",
-    "name": "KASH Beauty",
-    "summary": "KASH Beauty was added (cruelty-free, check vegan status per product)."
+    "slug": "pearl-drops",
+    "name": "Pearl Drops",
+    "summary": "Pearl Drops was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kativa",
-    "name": "KATIVA",
-    "summary": "KATIVA was added (cruelty-free, check vegan status per product)."
+    "slug": "pepsodent",
+    "name": "Pepsodent",
+    "summary": "Pepsodent was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "katoa-botanicals",
-    "name": "Katoa Botanicals",
-    "summary": "Katoa Botanicals was added (cruelty-free, check vegan status per product)."
+    "slug": "peter-thomas-roth",
+    "name": "Peter Thomas Roth",
+    "summary": "Peter Thomas Roth was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kids-stuff",
-    "name": "Kids Stuff",
-    "summary": "Kids Stuff was added (cruelty-free, check vegan status per product)."
+    "slug": "physique",
+    "name": "Physique",
+    "summary": "Physique was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kireyna",
-    "name": "Kireyna",
-    "summary": "Kireyna was added (cruelty-free, check vegan status per product)."
+    "slug": "phyto",
+    "name": "Phyto",
+    "summary": "Phyto was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kmart",
-    "name": "Kmart",
-    "summary": "Kmart was added (cruelty-free, check vegan status per product)."
+    "slug": "pola-cosmetics",
+    "name": "POLA Cosmetics",
+    "summary": "POLA Cosmetics was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kone-care",
-    "name": "Kone Care",
-    "summary": "Kone Care was added (cruelty-free, check vegan status per product)."
+    "slug": "polident",
+    "name": "Polident",
+    "summary": "Polident was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kotanical",
-    "name": "KOTANICAL",
-    "summary": "KOTANICAL was added (cruelty-free, check vegan status per product)."
+    "slug": "post-it",
+    "name": "Post-It",
+    "summary": "Post-It was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kurl-kitchen",
-    "name": "Kurl Kitchen",
-    "summary": "Kurl Kitchen was added (cruelty-free, check vegan status per product)."
+    "slug": "prada",
+    "name": "Prada",
+    "summary": "Prada was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kvitok",
-    "name": "KVITOK",
-    "summary": "KVITOK was added (cruelty-free, check vegan status per product)."
+    "slug": "procter-and-gamble",
+    "name": "Procter & Gamble",
+    "summary": "Procter & Gamble was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "kyushi",
-    "name": "Kyushi",
-    "summary": "Kyushi was added (cruelty-free, check vegan status per product)."
+    "slug": "pronamel",
+    "name": "Pronamel",
+    "summary": "Pronamel was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lbel",
-    "name": "L'BEL",
-    "summary": "L'BEL was added (cruelty-free, check vegan status per product)."
+    "slug": "puffs",
+    "name": "Puffs",
+    "summary": "Puffs was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lerbolario-societa-benefit-srl",
-    "name": "L'Erbolario Societa Benefit Srl",
-    "summary": "L'Erbolario Societa Benefit Srl was added (cruelty-free, check vegan status per product)."
+    "slug": "pure-heal-s",
+    "name": "Pure Heal's",
+    "summary": "Pure Heal's was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "la-cosmetica-srl",
-    "name": "La Cosmetica srl",
-    "summary": "La Cosmetica srl was added (cruelty-free, check vegan status per product)."
+    "slug": "purex",
+    "name": "Purex",
+    "summary": "Purex was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "labbok",
-    "name": "LABBOK",
-    "summary": "LABBOK was added (cruelty-free, check vegan status per product)."
+    "slug": "purpose",
+    "name": "Purpose",
+    "summary": "Purpose was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lacura",
-    "name": "Lacura",
-    "summary": "Lacura was added (cruelty-free, check vegan status per product)."
+    "slug": "raid",
+    "name": "Raid",
+    "summary": "Raid was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lanolips",
-    "name": "Lanolips",
-    "summary": "Lanolips was added (cruelty-free, check vegan status per product)."
+    "slug": "ralph-lauren-fragrances",
+    "name": "Ralph Lauren Fragrances",
+    "summary": "Ralph Lauren Fragrances was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "leeukopf-laboratories",
-    "name": "Leeukopf Laboratories",
-    "summary": "Leeukopf Laboratories was added (cruelty-free, check vegan status per product)."
+    "slug": "reach",
+    "name": "Reach",
+    "summary": "Reach was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lefay-spa-cosmetic-line",
-    "name": "Lefay SPA Cosmetic Line",
-    "summary": "Lefay SPA Cosmetic Line was added (cruelty-free, check vegan status per product)."
+    "slug": "reckitt-benckiser",
+    "name": "Reckitt Benckiser",
+    "summary": "Reckitt Benckiser was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lemon-myrtle",
-    "name": "Lemon Myrtle",
-    "summary": "Lemon Myrtle was added (cruelty-free, check vegan status per product)."
+    "slug": "rembrandt",
+    "name": "Rembrandt",
+    "summary": "Rembrandt was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lerana",
-    "name": "Lerana",
-    "summary": "Lerana was added (cruelty-free, check vegan status per product)."
+    "slug": "renuzit",
+    "name": "Renuzit",
+    "summary": "Renuzit was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "levrana",
-    "name": "Levrana",
-    "summary": "Levrana was added (cruelty-free, check vegan status per product)."
+    "slug": "resolve",
+    "name": "Resolve",
+    "summary": "Resolve was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lidl-gb",
-    "name": "Lidl GB",
-    "summary": "Lidl GB was added (cruelty-free, check vegan status per product)."
+    "slug": "revlon",
+    "name": "Revlon",
+    "summary": "Revlon was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lidl-ireland-and-lidl-northern-ireland",
-    "name": "Lidl Ireland & Lidl Northern Ireland",
-    "summary": "Lidl Ireland & Lidl Northern Ireland was added (cruelty-free, check vegan status per product)."
+    "slug": "rid-x",
+    "name": "Rid-X",
+    "summary": "Rid-X was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lipstains-gold",
-    "name": "Lipstains Gold",
-    "summary": "Lipstains Gold was added (cruelty-free, check vegan status per product)."
+    "slug": "roberto-cavalli",
+    "name": "Roberto Cavalli",
+    "summary": "Roberto Cavalli was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "little-heroes",
-    "name": "Little Heroes",
-    "summary": "Little Heroes was added (cruelty-free, check vegan status per product)."
+    "slug": "rogaine",
+    "name": "Rogaine",
+    "summary": "Rogaine was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "liz-earle",
-    "name": "Liz Earle",
-    "summary": "Liz Earle was added (cruelty-free, check vegan status per product)."
+    "slug": "rossi-and-rossa",
+    "name": "Rossi & Rossa",
+    "summary": "Rossi & Rossa was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "lock-stock-and-barrel",
-    "name": "Lock Stock & Barrel",
-    "summary": "Lock Stock & Barrel was added (cruelty-free, check vegan status per product)."
+    "slug": "s-c-johnson",
+    "name": "S.C. Johnson",
+    "summary": "S.C. Johnson was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "london-copyright",
-    "name": "London Copyright",
-    "summary": "London Copyright was added (cruelty-free, check vegan status per product)."
+    "slug": "s-o-s",
+    "name": "S.O.S.",
+    "summary": "S.O.S. was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "look-fabulous-forever",
-    "name": "Look Fabulous Forever",
-    "summary": "Look Fabulous Forever was added (cruelty-free, check vegan status per product)."
+    "slug": "safeguard",
+    "name": "Safeguard",
+    "summary": "Safeguard was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "love-ethical-beauty",
-    "name": "Love Ethical beauty",
-    "summary": "Love Ethical beauty was added (cruelty-free, check vegan status per product)."
+    "slug": "salvatore-ferragamo",
+    "name": "Salvatore Ferragamo",
+    "summary": "Salvatore Ferragamo was added (tested on animals)."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-13",
     "type": "added",
-    "slug": "love-katie",
-    "name": "Love Katie",
-    "summary": "Love Katie was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "love-pets",
-    "name": "Love Pets",
-    "summary": "Love Pets was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lucy-bee",
-    "name": "Lucy Bee",
-    "summary": "Lucy Bee was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lumity",
-    "name": "Lumity",
-    "summary": "Lumity was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lupilu",
-    "name": "Lupilu",
-    "summary": "Lupilu was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "made-for-life-organics",
-    "name": "Made for Life Organics",
-    "summary": "Made for Life Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "made-of-more",
-    "name": "Made Of More",
-    "summary": "Made Of More was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "magic-lips",
-    "name": "Magic Lips",
-    "summary": "Magic Lips was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "magnum-guardex",
-    "name": "Magnum Guardex",
-    "summary": "Magnum Guardex was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mancave",
-    "name": "ManCave",
-    "summary": "ManCave was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "manhattan",
-    "name": "Manhattan",
-    "summary": "Manhattan was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "manufaktura",
-    "name": "Manufaktura",
-    "summary": "Manufaktura was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "maria-nila",
-    "name": "Maria Nila",
-    "summary": "Maria Nila was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mark-birch-trichlogist",
-    "name": "Mark Birch Trichlogist",
-    "summary": "Mark Birch Trichlogist was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "maroqueen",
-    "name": "Maroqueen",
-    "summary": "Maroqueen was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mazel",
-    "name": "MAZEL",
-    "summary": "MAZEL was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mazillo",
-    "name": "Mazillo",
-    "summary": "Mazillo was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mendittorosa",
-    "name": "Mendittorosa",
-    "summary": "Mendittorosa was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mervue-natural-skincare",
-    "name": "Mervue Natural Skincare",
-    "summary": "Mervue Natural Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "micky-day",
-    "name": "Micky Day",
-    "summary": "Micky Day was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mielev",
-    "name": "MIELEV",
-    "summary": "MIELEV was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mienna-cosmetics-ltd",
-    "name": "Mienna Cosmetics Ltd",
-    "summary": "Mienna Cosmetics Ltd was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "miss-organics",
-    "name": "Miss Organics",
-    "summary": "Miss Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "modern-botany",
-    "name": "Modern Botany",
-    "summary": "Modern Botany was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "molton-brown",
-    "name": "Molton Brown",
-    "summary": "Molton Brown was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "monange",
-    "name": "Monange",
-    "summary": "Monange was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "monday-haircare",
-    "name": "MONDAY Haircare",
-    "summary": "MONDAY Haircare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "moss-and-adams",
-    "name": "Moss & Adams",
-    "summary": "Moss & Adams was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mother-nailture",
-    "name": "Mother Nailture",
-    "summary": "Mother Nailture was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mothers-earth",
-    "name": "Mother's Earth",
-    "summary": "Mother's Earth was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mumandyou",
-    "name": "Mum&You",
-    "summary": "Mum&You was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nakin",
-    "name": "Nakin",
-    "summary": "Nakin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nalas-baby",
-    "name": "Nala's Baby",
-    "summary": "Nala's Baby was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "natroma",
-    "name": "Natroma",
-    "summary": "Natroma was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "natura",
-    "name": "Natura",
-    "summary": "Natura was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "natural-by-nature-oils",
-    "name": "Natural by Nature Oils",
-    "summary": "Natural by Nature Oils was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "naturally-tiwa-skincare",
-    "name": "Naturally Tiwa Skincare",
-    "summary": "Naturally Tiwa Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "natures-divine",
-    "name": "Nature's Divine",
-    "summary": "Nature's Divine was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "neal-and-wolf",
-    "name": "Neal & Wolf",
-    "summary": "Neal & Wolf was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "neals-yard-remedies",
-    "name": "Neal's Yard Remedies",
-    "summary": "Neal's Yard Remedies was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nex-environment",
-    "name": "NEX ENVIRONMENT",
-    "summary": "NEX ENVIRONMENT was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nice",
-    "name": "NICE",
-    "summary": "NICE was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nimonths",
-    "name": "nimonths+",
-    "summary": "nimonths+ was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nourish-london",
-    "name": "Nourish London",
-    "summary": "Nourish London was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "novaretin",
-    "name": "NOVARETIN",
-    "summary": "NOVARETIN was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nsfa-beauty",
-    "name": "NSFA Beauty",
-    "summary": "NSFA Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nunaia",
-    "name": "Nunaia",
-    "summary": "Nunaia was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nursem",
-    "name": "Nursem",
-    "summary": "Nursem was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nutmeg",
-    "name": "Nutmeg",
-    "summary": "Nutmeg was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "o-boticario",
-    "name": "O Boticario",
-    "summary": "O Boticario was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "oui",
-    "name": "O.U.I",
-    "summary": "O.U.I was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "obvs-skincare",
-    "name": "Obvs Skincare",
-    "summary": "Obvs Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "oio-lab",
-    "name": "Oio Lab",
-    "summary": "Oio Lab was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "okiki-skincare",
-    "name": "Okiki Skincare",
-    "summary": "Okiki Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "omorovicza",
-    "name": "Omorovicza",
-    "summary": "Omorovicza was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "organic-skin-australia",
-    "name": "Organic Skin Australia",
-    "summary": "Organic Skin Australia was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "organicspa",
-    "name": "Organicspa",
-    "summary": "Organicspa was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "oxx",
-    "name": "OXX",
-    "summary": "OXX was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "plouise",
-    "name": "P.Louise",
-    "summary": "P.Louise was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pai-skincare",
-    "name": "Pai Skincare",
-    "summary": "Pai Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "paixao",
-    "name": "Paixao",
-    "summary": "Paixao was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "paladone",
-    "name": "Paladone",
-    "summary": "Paladone was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pamoja",
-    "name": "Pamoja",
-    "summary": "Pamoja was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "parla",
-    "name": "PARLA",
-    "summary": "PARLA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "penneys",
-    "name": "Penneys",
-    "summary": "Penneys was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "people-of-the-earth",
-    "name": "People of the Earth",
-    "summary": "People of the Earth was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "perfect-girl",
-    "name": "Perfect Girl",
-    "summary": "Perfect Girl was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "peros",
-    "name": "Peros",
-    "summary": "Peros was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "philosophy",
-    "name": "philosophy",
-    "summary": "philosophy was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "phoenix-crown",
-    "name": "Phoenix Crown",
-    "summary": "Phoenix Crown was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pikes-pouches",
-    "name": "Pike's Pouches",
-    "summary": "Pike's Pouches was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "planted-skincare",
-    "name": "Planted Skincare",
-    "summary": "Planted Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "poppin-yang",
-    "name": "Poppin' Yang",
-    "summary": "Poppin' Yang was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "primark",
-    "name": "Primark",
-    "summary": "Primark was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "primavera-life",
-    "name": "Primavera Life",
-    "summary": "Primavera Life was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pura-vie",
-    "name": "Pura Vie",
-    "summary": "Pura Vie was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pure-argan-co",
-    "name": "Pure Argan Co",
-    "summary": "Pure Argan Co was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pure-chemistry",
-    "name": "Pure Chemistry",
-    "summary": "Pure Chemistry was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pure-project",
-    "name": "Pure Project",
-    "summary": "Pure Project was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "purearth",
-    "name": "Purearth",
-    "summary": "Purearth was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "purextracts",
-    "name": "Purextracts",
-    "summary": "Purextracts was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pyykkiarkki",
-    "name": "Pyykkiarkki",
-    "summary": "Pyykkiarkki was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "quem-disse-berenice",
-    "name": "Quem disse, Berenice",
-    "summary": "Quem disse, Berenice was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "raven-botanicals",
-    "name": "Raven Botanicals",
-    "summary": "Raven Botanicals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rebul",
-    "name": "Rebul",
-    "summary": "Rebul was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "refy",
-    "name": "REFY",
-    "summary": "REFY was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rhug-wild-beauty",
-    "name": "Rhug Wild Beauty",
-    "summary": "Rhug Wild Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "risque",
-    "name": "Risque",
-    "summary": "Risque was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rspca",
-    "name": "RSPCA",
-    "summary": "RSPCA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sable-labs",
-    "name": "S'able Labs",
-    "summary": "S'able Labs was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sacred",
-    "name": "Sacred",
-    "summary": "Sacred was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "safeway",
-    "name": "Safeway",
-    "summary": "Safeway was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "saira",
-    "name": "SAIRA",
-    "summary": "SAIRA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "samaya-ayurveda",
-    "name": "SAMAYA Ayurveda",
-    "summary": "SAMAYA Ayurveda was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sanctum",
-    "name": "Sanctum",
-    "summary": "Sanctum was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sansin",
-    "name": "Sansin",
-    "summary": "Sansin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "santaverde",
-    "name": "Santaverde",
-    "summary": "Santaverde was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sarafumi",
-    "name": "Sarafumi",
-    "summary": "Sarafumi was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sbtrct-skincare",
-    "name": "SBTRCT Skincare",
-    "summary": "SBTRCT Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "scott-and-lawson",
-    "name": "Scott & Lawson",
-    "summary": "Scott & Lawson was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sculpted-by-aimee",
-    "name": "Sculpted by Aimee",
-    "summary": "Sculpted by Aimee was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "seeds-of-colour",
-    "name": "Seeds of Colour",
-    "summary": "Seeds of Colour was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "seniha-skincare",
-    "name": "Seniha Skincare",
-    "summary": "Seniha Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sensapur",
-    "name": "Sensapur",
-    "summary": "Sensapur was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sensatia",
-    "name": "Sensatia",
-    "summary": "Sensatia was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sensilait",
-    "name": "SensiLait",
-    "summary": "SensiLait was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "seresilk",
-    "name": "Seresilk",
-    "summary": "Seresilk was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "shades-of-london",
-    "name": "Shades of London",
-    "summary": "Shades of London was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "shedid-and-parrish",
-    "name": "Shedid & Parrish",
-    "summary": "Shedid & Parrish was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sheglam",
-    "name": "SHEGLAM",
-    "summary": "SHEGLAM was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "silvan-skincare",
-    "name": "Silvan Skincare",
-    "summary": "Silvan Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "siskyn-skincare-oils",
-    "name": "Siskyn Skincare Oils",
-    "summary": "Siskyn Skincare Oils was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "siveno",
-    "name": "SIVENO",
-    "summary": "SIVENO was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "skin-deep",
-    "name": "Skin Deep",
-    "summary": "Skin Deep was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "skin-formulas",
-    "name": "Skin Formulas",
-    "summary": "Skin Formulas was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soak-sunday",
-    "name": "Soak Sunday",
-    "summary": "Soak Sunday was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soap-valley",
-    "name": "Soap Valley",
-    "summary": "Soap Valley was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soaphoria",
-    "name": "Soaphoria",
-    "summary": "Soaphoria was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soft-and-delicate",
-    "name": "SOFT & DELICATE",
-    "summary": "SOFT & DELICATE was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "softy",
-    "name": "Softy",
-    "summary": "Softy was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soho-skin",
-    "name": "Soho Skin",
-    "summary": "Soho Skin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "solitaire-uk-ltd",
-    "name": "Solitaire UK Ltd",
-    "summary": "Solitaire UK Ltd was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "soluclean",
-    "name": "soluCLEAN",
-    "summary": "soluCLEAN was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "solupak",
-    "name": "SoluPak",
-    "summary": "SoluPak was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "st-moriz",
-    "name": "St. Moriz",
-    "summary": "St. Moriz was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "stardrops",
-    "name": "Stardrops",
-    "summary": "Stardrops was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "stereo",
-    "name": "STEREO",
-    "summary": "STEREO was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "strange-luxury",
-    "name": "Strange Luxury",
-    "summary": "Strange Luxury was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "studio-gel",
-    "name": "STUDIO Gel",
-    "summary": "STUDIO Gel was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "studio-milligram",
-    "name": "Studio Milligram",
-    "summary": "Studio Milligram was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "subtle-energies",
-    "name": "Subtle Energies",
-    "summary": "Subtle Energies was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sue-marsh",
-    "name": "Sue Marsh",
-    "summary": "Sue Marsh was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sugar-coated",
-    "name": "Sugar Coated",
-    "summary": "Sugar Coated was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sundae",
-    "name": "Sundae",
-    "summary": "Sundae was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "superdrug",
-    "name": "Superdrug",
-    "summary": "Superdrug was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "swypes",
-    "name": "Swypes",
-    "summary": "Swypes was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "synergie-skin",
-    "name": "Synergie Skin",
-    "summary": "Synergie Skin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "syorell",
-    "name": "Syorell",
-    "summary": "Syorell was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "system-nature",
-    "name": "System Nature",
-    "summary": "System Nature was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tanorganic",
-    "name": "TanOrganic",
-    "summary": "TanOrganic was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "temko-cosmetics",
-    "name": "Temko Cosmetics",
-    "summary": "Temko Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "that-good-hair",
-    "name": "That Good Hair",
-    "summary": "That Good Hair was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-australian-natural-soap-company",
-    "name": "The Australian Natural Soap Company",
-    "summary": "The Australian Natural Soap Company was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-barberia",
-    "name": "THE BARBERIA",
-    "summary": "THE BARBERIA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-cheeky-panda",
-    "name": "The Cheeky Panda",
-    "summary": "The Cheeky Panda was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-cocoon-original-vietnam",
-    "name": "The COCOON ORIGINAL VIETNAM",
-    "summary": "The COCOON ORIGINAL VIETNAM was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-east-to-west-lifestyle-co",
-    "name": "THE EAST TO WEST LIFESTYLE CO",
-    "summary": "THE EAST TO WEST LIFESTYLE CO was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-gel-crew",
-    "name": "The Gel Crew",
-    "summary": "The Gel Crew was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-good-one",
-    "name": "The Good One",
-    "summary": "The Good One was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-handmade-soap-company",
-    "name": "The Handmade Soap Company",
-    "summary": "The Handmade Soap Company was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-honest-midwife",
-    "name": "The Honest Midwife",
-    "summary": "The Honest Midwife was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-konjac-sponge-co",
-    "name": "The Konjac Sponge Co",
-    "summary": "The Konjac Sponge Co was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-natural-soapworks",
-    "name": "The Natural Soapworks",
-    "summary": "The Natural Soapworks was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-powder-shampoo",
-    "name": "The Powder Shampoo",
-    "summary": "The Powder Shampoo was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-skin-edition",
-    "name": "The Skin Edition",
-    "summary": "The Skin Edition was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "thermitek-ltd",
-    "name": "Thermitek Ltd",
-    "summary": "Thermitek Ltd was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "throda-skincare",
-    "name": "Throda Skincare",
-    "summary": "Throda Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tootilab",
-    "name": "Tootilab",
-    "summary": "Tootilab was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "trigwell-cosmetics",
-    "name": "Trigwell Cosmetics",
-    "summary": "Trigwell Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "true",
-    "name": "True",
-    "summary": "True was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "true-alchemy",
-    "name": "True Alchemy",
-    "summary": "True Alchemy was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tulita",
-    "name": "Tulita",
-    "summary": "Tulita was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ukviat",
-    "name": "UKVIAT",
-    "summary": "UKVIAT was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ultra-glow",
-    "name": "Ultra Glow",
-    "summary": "Ultra Glow was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ultraceuticals",
-    "name": "Ultraceuticals",
-    "summary": "Ultraceuticals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "uniq-made",
-    "name": "UNIQ MADE",
-    "summary": "UNIQ MADE was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "unique-boutique",
-    "name": "Unique Boutique",
-    "summary": "Unique Boutique was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "upcircle-beauty",
-    "name": "UpCircle Beauty",
-    "summary": "UpCircle Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "vegantan",
-    "name": "VeganTan",
-    "summary": "VeganTan was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "viridian-nutrition",
-    "name": "Viridian Nutrition",
-    "summary": "Viridian Nutrition was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "vult",
-    "name": "Vult",
-    "summary": "Vult was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "w5",
-    "name": "W5",
-    "summary": "W5 was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "wild-science-lab",
-    "name": "WILD SCIENCE Lab",
-    "summary": "WILD SCIENCE Lab was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "wildsmith-skin",
-    "name": "Wildsmith Skin",
-    "summary": "Wildsmith Skin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "wildwash",
-    "name": "WildWash",
-    "summary": "WildWash was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "wizz",
-    "name": "Wizz",
-    "summary": "Wizz was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "yes-nurse",
-    "name": "Yes! Nurse",
-    "summary": "Yes! Nurse was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "yom-beauty",
-    "name": "YOM BEAUTY",
-    "summary": "YOM BEAUTY was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "young-epure",
-    "name": "Young ePure",
-    "summary": "Young ePure was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "zoya-goes-pretty",
-    "name": "Zoya Goes Pretty",
-    "summary": "Zoya Goes Pretty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "zuvi",
-    "name": "Zuvi",
-    "summary": "Zuvi was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "abbott",
-    "name": "Abbott",
-    "summary": "Abbott was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "acure",
-    "name": "Acure",
-    "summary": "Acure was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "alba-botanica",
-    "name": "Alba Botanica",
-    "summary": "Alba Botanica was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "aloe-up",
-    "name": "Aloe Up",
-    "summary": "Aloe Up was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "american-safety-razor",
-    "name": "American Safety Razor",
-    "summary": "American Safety Razor was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "amyris",
-    "name": "Amyris",
-    "summary": "Amyris was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "anastasia-beverly-hills",
-    "name": "Anastasia Beverly Hills",
-    "summary": "Anastasia Beverly Hills was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "andalou-naturals",
-    "name": "Andalou Naturals",
-    "summary": "Andalou Naturals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "arbonne-international",
-    "name": "Arbonne International",
-    "summary": "Arbonne International was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "aunt-fannies",
-    "name": "Aunt Fannie's",
-    "summary": "Aunt Fannie's was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "australian-gold",
-    "name": "Australian Gold",
-    "summary": "Australian Gold was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "avalon-organics",
-    "name": "Avalon Organics",
-    "summary": "Avalon Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "beauty-bay",
-    "name": "Beauty Bay",
-    "summary": "Beauty Bay was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "beekman-1802",
-    "name": "Beekman 1802",
-    "summary": "Beekman 1802 was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "benecos",
-    "name": "Benecos",
-    "summary": "Benecos was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bite-beauty",
-    "name": "Bite Beauty",
-    "summary": "Bite Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bio-ionic",
-    "name": "Bio Ionic",
-    "summary": "Bio Ionic was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "biossance",
-    "name": "Biossance",
-    "summary": "Biossance was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "boxycharm",
-    "name": "BoxyCharm",
-    "summary": "BoxyCharm was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bperfect-cosmetics",
-    "name": "BPerfect Cosmetics",
-    "summary": "BPerfect Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "brandless",
-    "name": "Brandless",
-    "summary": "Brandless was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "burts-bees",
-    "name": "Burt's Bees",
-    "summary": "Burt's Bees was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "butter-london",
-    "name": "butter LONDON",
-    "summary": "butter LONDON was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "buxom",
-    "name": "Buxom",
-    "summary": "Buxom was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bareminerals",
-    "name": "bareMinerals",
-    "summary": "bareMinerals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "black-girl-sunscreen",
-    "name": "Black Girl Sunscreen",
-    "summary": "Black Girl Sunscreen was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bobs-red-mill",
-    "name": "Bob's Red Mill",
-    "summary": "Bob's Red Mill was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bosleymd",
-    "name": "BosleyMD",
-    "summary": "BosleyMD was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "calgon",
-    "name": "Calgon",
-    "summary": "Calgon was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "carols-daughter",
-    "name": "Carol's Daughter",
-    "summary": "Carol's Daughter was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "colourpop-cosmetics",
-    "name": "ColourPop Cosmetics",
-    "summary": "ColourPop Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "concrete-minerals",
-    "name": "Concrete Minerals",
-    "summary": "Concrete Minerals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "cover-fx-skin-care",
-    "name": "Cover FX Skin Care",
-    "summary": "Cover FX Skin Care was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "crayola-beauty",
-    "name": "Crayola Beauty",
-    "summary": "Crayola Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "conair",
-    "name": "Conair",
-    "summary": "Conair was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "caswell-massey",
-    "name": "Caswell-Massey",
-    "summary": "Caswell-Massey was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "cj-olive-young",
-    "name": "CJ Olive Young",
-    "summary": "CJ Olive Young was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dabur",
-    "name": "Dabur",
-    "summary": "Dabur was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dr-hauschka-skin-care",
-    "name": "Dr. Hauschka Skin Care",
-    "summary": "Dr. Hauschka Skin Care was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dr-dennis-gross-skincare",
-    "name": "Dr. Dennis Gross Skincare",
-    "summary": "Dr. Dennis Gross Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dr-teals",
-    "name": "Dr. Teal's",
-    "summary": "Dr. Teal's was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dolce-and-gabbana-beauty",
-    "name": "Dolce & Gabbana Beauty",
-    "summary": "Dolce & Gabbana Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dossier",
-    "name": "Dossier",
-    "summary": "Dossier was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "design-essentials",
-    "name": "Design Essentials",
-    "summary": "Design Essentials was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "derma-e-natural-bodycare",
-    "name": "derma-e Natural Bodycare",
-    "summary": "derma-e Natural Bodycare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "desert-essence",
-    "name": "Desert Essence",
-    "summary": "Desert Essence was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dermablend",
-    "name": "Dermablend",
-    "summary": "Dermablend was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dermadoctor",
-    "name": "DERMAdoctor",
-    "summary": "DERMAdoctor was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ecotools",
-    "name": "EcoTools",
-    "summary": "EcoTools was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "eminence-organic-skin-care",
-    "name": "Eminence Organic Skin Care",
-    "summary": "Eminence Organic Skin Care was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "eos-products",
-    "name": "EOS Products",
-    "summary": "EOS Products was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "eugene-perma",
-    "name": "Eugene Perma",
-    "summary": "Eugene Perma was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "european-wax-center",
-    "name": "European Wax Center",
-    "summary": "European Wax Center was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "every-man-jack",
-    "name": "Every Man Jack",
-    "summary": "Every Man Jack was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "eylure",
-    "name": "Eylure",
-    "summary": "Eylure was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "earth-friendly-products",
-    "name": "Earth Friendly Products",
-    "summary": "Earth Friendly Products was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "eco-dent-international",
-    "name": "Eco-DenT International",
-    "summary": "Eco-DenT International was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "first-aid-beauty",
-    "name": "First Aid Beauty",
-    "summary": "First Aid Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "florence-by-mills",
-    "name": "Florence By Mills",
-    "summary": "Florence By Mills was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "formula-x",
-    "name": "Formula X",
-    "summary": "Formula X was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "frank-body",
-    "name": "Frank Body",
-    "summary": "Frank Body was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "freeman-beauty",
-    "name": "Freeman Beauty",
-    "summary": "Freeman Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "fruit-of-the-earth",
-    "name": "Fruit of the Earth",
-    "summary": "Fruit of the Earth was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "function-of-beauty",
-    "name": "Function of Beauty",
-    "summary": "Function of Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "fudge",
-    "name": "Fudge",
-    "summary": "Fudge was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "forest-essentials",
-    "name": "Forest Essentials",
-    "summary": "Forest Essentials was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "foamie",
-    "name": "Foamie",
-    "summary": "Foamie was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "garden-of-life",
-    "name": "Garden of Life",
-    "summary": "Garden of Life was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "gelish",
-    "name": "Gelish",
-    "summary": "Gelish was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "glo-skin-beauty",
-    "name": "Glo Skin Beauty",
-    "summary": "Glo Skin Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "go-to-skincare",
-    "name": "Go-To Skincare",
-    "summary": "Go-To Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "goli-nutrition",
-    "name": "Goli Nutrition",
-    "summary": "Goli Nutrition was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "gosh-copenhagen",
-    "name": "GOSH Copenhagen",
-    "summary": "GOSH Copenhagen was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "grande-cosmetics",
-    "name": "Grande Cosmetics",
-    "summary": "Grande Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "grisi",
-    "name": "Grisi",
-    "summary": "Grisi was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "grown-alchemist",
-    "name": "Grown Alchemist",
-    "summary": "Grown Alchemist was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "hello-products",
-    "name": "Hello Products",
-    "summary": "Hello Products was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "hims",
-    "name": "Hims",
-    "summary": "Hims was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "hismile",
-    "name": "HiSmile",
-    "summary": "HiSmile was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "holo-taco",
-    "name": "Holo Taco",
-    "summary": "Holo Taco was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "honeybee-gardens",
-    "name": "Honeybee Gardens",
-    "summary": "Honeybee Gardens was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "herbivore-botanicals",
-    "name": "Herbivore Botanicals",
-    "summary": "Herbivore Botanicals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "iconic-london",
-    "name": "Iconic London",
-    "summary": "Iconic London was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "idun-minerals",
-    "name": "IDUN Minerals",
-    "summary": "IDUN Minerals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "illamasqua",
-    "name": "Illamasqua",
-    "summary": "Illamasqua was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "image-skincare",
-    "name": "Image Skincare",
-    "summary": "Image Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "inglot-cosmetics",
-    "name": "Inglot Cosmetics",
-    "summary": "Inglot Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "isagenix",
-    "name": "Isagenix",
-    "summary": "Isagenix was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "isle-of-paradise",
-    "name": "Isle Of Paradise",
-    "summary": "Isle Of Paradise was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "invisibobble",
-    "name": "Invisibobble",
-    "summary": "Invisibobble was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "j-beverly-hills",
-    "name": "J Beverly Hills",
-    "summary": "J Beverly Hills was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "jack-black",
-    "name": "Jack Black",
-    "summary": "Jack Black was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "jane-iredale",
-    "name": "jane iredale",
-    "summary": "jane iredale was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "jeffree-star",
-    "name": "Jeffree Star",
-    "summary": "Jeffree Star was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "john-masters-organics",
-    "name": "John Masters Organics",
-    "summary": "John Masters Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "josie-maran-cosmetics",
-    "name": "Josie Maran Cosmetics",
-    "summary": "Josie Maran Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "juice-beauty",
-    "name": "Juice Beauty",
-    "summary": "Juice Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "julep-beauty",
-    "name": "Julep Beauty",
-    "summary": "Julep Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "jesses-girl-cosmetics",
-    "name": "Jesse's Girl Cosmetics",
-    "summary": "Jesse's Girl Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "jr-watkins",
-    "name": "J.R. Watkins",
-    "summary": "J.R. Watkins was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "john-paul-mitchell-systems",
-    "name": "John Paul Mitchell Systems",
-    "summary": "John Paul Mitchell Systems was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kvd-beauty",
-    "name": "KVD Beauty",
-    "summary": "KVD Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kate-somerville",
-    "name": "Kate Somerville",
-    "summary": "Kate Somerville was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "keys-soulcare",
-    "name": "Keys Soulcare",
-    "summary": "Keys Soulcare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "king-of-shaves",
-    "name": "King of Shaves",
-    "summary": "King of Shaves was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kiss-products",
-    "name": "Kiss Products",
-    "summary": "Kiss Products was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kora-organics",
-    "name": "Kora Organics",
-    "summary": "Kora Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "korres",
-    "name": "Korres",
-    "summary": "Korres was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kristin-ess-hair",
-    "name": "Kristin Ess Hair",
-    "summary": "Kristin Ess Hair was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kryolan-professional-make-up",
-    "name": "Kryolan Professional Make-up",
-    "summary": "Kryolan Professional Make-up was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kenra",
-    "name": "Kenra",
-    "summary": "Kenra was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "kevinmurphy",
-    "name": "KEVIN.MURPHY",
-    "summary": "KEVIN.MURPHY was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "krave-beauty",
-    "name": "KRAVE BEAUTY",
-    "summary": "KRAVE BEAUTY was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lavanila",
-    "name": "Lavanila",
-    "summary": "Lavanila was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lavera-naturkosmetik",
-    "name": "lavera Naturkosmetik",
-    "summary": "lavera Naturkosmetik was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lee-stafford",
-    "name": "Lee Stafford",
-    "summary": "Lee Stafford was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lime-crime",
-    "name": "Lime Crime",
-    "summary": "Lime Crime was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lip-smacker",
-    "name": "Lip Smacker",
-    "summary": "Lip Smacker was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lorac",
-    "name": "LORAC",
-    "summary": "LORAC was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "londontown",
-    "name": "Londontown",
-    "summary": "Londontown was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "luminess-air",
-    "name": "Luminess Air",
-    "summary": "Luminess Air was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lvx",
-    "name": "LVX",
-    "summary": "LVX was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lys-beauty",
-    "name": "LYS Beauty",
-    "summary": "LYS Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lucky-tiger",
-    "name": "Lucky Tiger",
-    "summary": "Lucky Tiger was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "madam-cj-walker",
-    "name": "Madam CJ Walker",
-    "summary": "Madam CJ Walker was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "malin-goetz",
-    "name": "Malin+Goetz",
-    "summary": "Malin+Goetz was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mama-mio",
-    "name": "Mama Mio",
-    "summary": "Mama Mio was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mamaearth",
-    "name": "Mamaearth",
-    "summary": "Mamaearth was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "manic-panic",
-    "name": "Manic Panic",
-    "summary": "Manic Panic was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "marc-anthony",
-    "name": "Marc Anthony",
-    "summary": "Marc Anthony was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "maple-holistics",
-    "name": "Maple Holistics",
-    "summary": "Maple Holistics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "manscaped",
-    "name": "MANSCAPED",
-    "summary": "MANSCAPED was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "milani-cosmetics",
-    "name": "Milani Cosmetics",
-    "summary": "Milani Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "milk-honey",
-    "name": "milk + honey",
-    "summary": "milk + honey was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mixed-chicks",
-    "name": "Mixed Chicks",
-    "summary": "Mixed Chicks was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "modelco",
-    "name": "ModelCo",
-    "summary": "ModelCo was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "moroccanoil",
-    "name": "Moroccanoil",
-    "summary": "Moroccanoil was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mrs-meyers-clean-day",
-    "name": "Mrs. Meyers Clean Day",
-    "summary": "Mrs. Meyers Clean Day was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mychelle-dermaceuticals",
-    "name": "MyChelle Dermaceuticals",
-    "summary": "MyChelle Dermaceuticals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "michael-todd-beauty",
-    "name": "Michael Todd Beauty",
-    "summary": "Michael Todd Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "mesauda-milano",
-    "name": "Mesauda Milano",
-    "summary": "Mesauda Milano was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "modere",
-    "name": "Modere",
-    "summary": "Modere was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "marcelle",
-    "name": "Marcelle",
-    "summary": "Marcelle was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nads",
-    "name": "Nad's",
-    "summary": "Nad's was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nails-inc",
-    "name": "Nails Inc.",
-    "summary": "Nails Inc. was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "natures-gate",
-    "name": "Nature's Gate",
-    "summary": "Nature's Gate was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "naturium",
-    "name": "Naturium",
-    "summary": "Naturium was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "newmans-own-organics",
-    "name": "Newman's Own Organics",
-    "summary": "Newman's Own Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nest-fragrances",
-    "name": "Nest Fragrances",
-    "summary": "Nest Fragrances was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "niod",
-    "name": "NIOD",
-    "summary": "NIOD was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nude-by-nature",
-    "name": "Nude by Nature",
-    "summary": "Nude by Nature was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "obsessive-compulsive-cosmetics",
-    "name": "Obsessive Compulsive Cosmetics",
-    "summary": "Obsessive Compulsive Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ole-henriksen",
-    "name": "Ole Henriksen",
-    "summary": "Ole Henriksen was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ouidad",
-    "name": "Ouidad",
-    "summary": "Ouidad was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "oribe-hair-care",
-    "name": "ORIBE Hair Care",
-    "summary": "ORIBE Hair Care was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "osea",
-    "name": "OSEA",
-    "summary": "OSEA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "organic-harvest",
-    "name": "Organic Harvest",
-    "summary": "Organic Harvest was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pacifica",
-    "name": "Pacifica",
-    "summary": "Pacifica was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pangea-organics",
-    "name": "Pangea Organics",
-    "summary": "Pangea Organics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pattern-beauty",
-    "name": "Pattern Beauty",
-    "summary": "Pattern Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "physicians-formula",
-    "name": "Physicians Formula",
-    "summary": "Physicians Formula was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pilgrim",
-    "name": "Pilgrim",
-    "summary": "Pilgrim was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pipette",
-    "name": "Pipette",
-    "summary": "Pipette was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "plum-goodness",
-    "name": "Plum Goodness",
-    "summary": "Plum Goodness was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "prai-beauty",
-    "name": "PRAI Beauty",
-    "summary": "PRAI Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pravana",
-    "name": "Pravana",
-    "summary": "Pravana was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pretty-vulgar",
-    "name": "Pretty Vulgar",
-    "summary": "Pretty Vulgar was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pura-dor",
-    "name": "PURA D'OR",
-    "summary": "PURA D'OR was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "puracy",
-    "name": "Puracy",
-    "summary": "Puracy was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pz-cussons",
-    "name": "PZ Cussons",
-    "summary": "PZ Cussons was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "queen-helene",
-    "name": "Queen Helene",
-    "summary": "Queen Helene was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rem-beauty",
-    "name": "r.e.m. beauty",
-    "summary": "r.e.m. beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "real-techniques",
-    "name": "Real Techniques",
-    "summary": "Real Techniques was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "revitalash-cosmetics",
-    "name": "RevitaLash Cosmetics",
-    "summary": "RevitaLash Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rhode-skin",
-    "name": "Rhode Skin",
-    "summary": "Rhode Skin was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rms-beauty",
-    "name": "rms beauty",
-    "summary": "rms beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "roc-skincare",
-    "name": "RoC Skincare",
-    "summary": "RoC Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "riley-rose",
-    "name": "Riley Rose",
-    "summary": "Riley Rose was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "rustic-art",
-    "name": "Rustic Art",
-    "summary": "Rustic Art was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "salon-selectives",
-    "name": "Salon Selectives",
-    "summary": "Salon Selectives was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "shani-darden",
-    "name": "Shani Darden",
-    "summary": "Shani Darden was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "shikai-products",
-    "name": "ShiKai Products",
-    "summary": "ShiKai Products was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sigma-beauty",
-    "name": "Sigma Beauty",
-    "summary": "Sigma Beauty was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "skinfix",
-    "name": "Skinfix",
-    "summary": "Skinfix was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "skyn-iceland",
-    "name": "skyn ICELAND",
-    "summary": "skyn ICELAND was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sol-de-janeiro",
-    "name": "Sol de Janeiro",
-    "summary": "Sol de Janeiro was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "solgar-vitamin-company",
-    "name": "Solgar Vitamin Company",
-    "summary": "Solgar Vitamin Company was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sparitual",
-    "name": "SpaRitual",
-    "summary": "SpaRitual was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "splat-hair-color",
-    "name": "Splat Hair Color",
-    "summary": "Splat Hair Color was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "stargazer",
-    "name": "Stargazer",
-    "summary": "Stargazer was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "stila-cosmetics",
-    "name": "Stila Cosmetics",
-    "summary": "Stila Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sugar-cosmetics",
-    "name": "Sugar Cosmetics",
-    "summary": "Sugar Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sugarpill-cosmetics",
-    "name": "Sugarpill Cosmetics",
-    "summary": "Sugarpill Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sun-bum",
-    "name": "Sun Bum",
-    "summary": "Sun Bum was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sunday-riley-modern-skincare",
-    "name": "Sunday Riley Modern Skincare",
-    "summary": "Sunday Riley Modern Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "supergoop",
-    "name": "Supergoop!",
-    "summary": "Supergoop! was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "surya-brasil",
-    "name": "Surya Brasil",
-    "summary": "Surya Brasil was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "susanne-kaufmann",
-    "name": "Susanne Kaufmann",
-    "summary": "Susanne Kaufmann was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tarte-cosmetics",
-    "name": "Tarte Cosmetics",
-    "summary": "Tarte Cosmetics was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tata-harper-skincare",
-    "name": "Tata Harper Skincare",
-    "summary": "Tata Harper Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "thayers-natural",
-    "name": "Thayers Natural",
-    "summary": "Thayers Natural was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "the-honest-company",
-    "name": "The Honest Company",
-    "summary": "The Honest Company was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "this-works",
-    "name": "This Works",
-    "summary": "This Works was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "thrive-causemetics",
-    "name": "Thrive Causemetics",
-    "summary": "Thrive Causemetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tonymoly",
-    "name": "TONYMOLY",
-    "summary": "TONYMOLY was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "trader-joes-company",
-    "name": "Trader Joe's Company",
-    "summary": "Trader Joe's Company was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tree-hut",
-    "name": "Tree Hut",
-    "summary": "Tree Hut was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "trish-mcevoy",
-    "name": "Trish McEvoy",
-    "summary": "Trish McEvoy was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "trevor-sorbie",
-    "name": "Trevor Sorbie",
-    "summary": "Trevor Sorbie was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "true-botanicals",
-    "name": "True Botanicals",
-    "summary": "True Botanicals was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tula",
-    "name": "TULA",
-    "summary": "TULA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "typology",
-    "name": "Typology",
-    "summary": "Typology was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tangle-teezer",
-    "name": "Tangle Teezer",
-    "summary": "Tangle Teezer was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tan-luxe",
-    "name": "Tan-Luxe",
-    "summary": "Tan-Luxe was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tanologist",
-    "name": "Tanologist",
-    "summary": "Tanologist was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ulta-beauty-collection",
-    "name": "Ulta Beauty Collection",
-    "summary": "Ulta Beauty Collection was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "unite-haircare",
-    "name": "UNITE Haircare",
-    "summary": "UNITE Haircare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "verb",
-    "name": "VERB",
-    "summary": "VERB was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "vasanti-cosmetics",
-    "name": "Vasanti Cosmetics",
-    "summary": "Vasanti Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "whole-foods-market-365",
-    "name": "Whole Foods Market 365",
-    "summary": "Whole Foods Market 365 was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "winky-lux",
-    "name": "Winky Lux",
-    "summary": "Winky Lux was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "ws-badger",
-    "name": "W.S. Badger",
-    "summary": "W.S. Badger was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "youth-to-the-people",
-    "name": "Youth To The People",
-    "summary": "Youth To The People was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "youngblood-mineral-cosmetics",
-    "name": "Youngblood Mineral Cosmetics",
-    "summary": "Youngblood Mineral Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "zia-natural-skincare",
-    "name": "Zia Natural Skincare",
-    "summary": "Zia Natural Skincare was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "zuzu-cosmetics",
-    "name": "Zuzu Cosmetics",
-    "summary": "Zuzu Cosmetics was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "100-pure",
-    "name": "100% Pure",
-    "summary": "100% Pure was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "3ina",
-    "name": "3INA",
-    "summary": "3INA was added (cruelty-free, check vegan status per product)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "bumble-and-bumble",
-    "name": "Bumble and Bumble",
-    "summary": "Bumble and Bumble was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "hourglass-cosmetics",
-    "name": "Hourglass Cosmetics",
-    "summary": "Hourglass Cosmetics was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "smashbox",
-    "name": "Smashbox",
-    "summary": "Smashbox was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "too-faced",
-    "name": "Too Faced",
-    "summary": "Too Faced was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "tatcha",
-    "name": "TATCHA",
-    "summary": "TATCHA was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "dermalogica",
-    "name": "Dermalogica",
-    "summary": "Dermalogica was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "living-proof",
-    "name": "Living Proof",
-    "summary": "Living Proof was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "love-beauty-and-planet",
-    "name": "Love Beauty and Planet",
-    "summary": "Love Beauty and Planet was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "lakm",
-    "name": "Lakmé",
-    "summary": "Lakmé was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nubian-heritage",
-    "name": "Nubian Heritage",
-    "summary": "Nubian Heritage was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "schmidts-naturals",
-    "name": "Schmidt's Naturals",
-    "summary": "Schmidt's Naturals was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "seventh-generation",
-    "name": "Seventh Generation",
-    "summary": "Seventh Generation was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sunsilk",
-    "name": "Sunsilk",
-    "summary": "Sunsilk was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "murad",
-    "name": "Murad",
-    "summary": "Murad was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "paulas-choice",
-    "name": "Paula's Choice",
-    "summary": "Paula's Choice was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "devacurl",
-    "name": "DevaCurl",
-    "summary": "DevaCurl was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "joico",
-    "name": "Joico",
-    "summary": "Joico was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "sexy-hair",
-    "name": "Sexy Hair",
-    "summary": "Sexy Hair was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "logona",
-    "name": "Logona",
-    "summary": "Logona was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "nyx-professional-makeup",
-    "name": "NYX Professional Makeup",
-    "summary": "NYX Professional Makeup was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "pureology",
-    "name": "Pureology",
-    "summary": "Pureology was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "urban-decay",
-    "name": "Urban Decay",
-    "summary": "Urban Decay was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "goldwell",
-    "name": "Goldwell",
-    "summary": "Goldwell was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "toms-of-maine",
-    "name": "Tom's of Maine",
-    "summary": "Tom's of Maine was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "added",
-    "slug": "hair-food",
-    "name": "Hair Food",
-    "summary": "Hair Food was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-09-09",
-    "type": "note-update",
-    "slug": "aveda",
-    "name": "Aveda",
-    "summary": "Aveda’s listing was updated: “Leaping Bunny certified since 2022, owned by Estée Lauder Companies.”"
-  },
-  {
-    "date": "2026-09-09",
-    "type": "note-update",
-    "slug": "tarte-cosmetics",
-    "name": "Tarte Cosmetics",
-    "summary": "Tarte Cosmetics’s listing was updated: “PETA certified cruelty-free, owned by Kosé Corporation. Tarte itself does not sell in mainland China.”"
-  },
-  {
-    "date": "2026-09-03",
-    "type": "note-update",
-    "slug": "nyx",
-    "name": "NYX",
-    "summary": "NYX’s listing was updated: “NYX is PETA Beauty Without Bunnies certified and cruelty-free itself, but its parent company L'Oréal is not - L'Oréal sells in mainland Chi…”"
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "treaclemoon",
-    "name": "Treaclemoon",
-    "summary": "Treaclemoon was added (worth a closer look)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "daise",
-    "name": "Daise",
-    "summary": "Daise was added (worth a closer look)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "mitchum",
-    "name": "Mitchum",
-    "summary": "Mitchum was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "ambi-pur",
-    "name": "Ambi Pur",
-    "summary": "Ambi Pur was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "bloo",
-    "name": "Bloo",
-    "summary": "Bloo was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "cristalinas",
-    "name": "Cristalinas",
-    "summary": "Cristalinas was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "pacific-wax-co",
-    "name": "Pacific Wax Co.",
-    "summary": "Pacific Wax Co. was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "yankee-candle",
-    "name": "Yankee Candle",
-    "summary": "Yankee Candle was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "harpic",
-    "name": "Harpic",
-    "summary": "Harpic was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "toilet-duck",
-    "name": "Toilet Duck",
-    "summary": "Toilet Duck was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "right-guard",
-    "name": "Right Guard",
-    "summary": "Right Guard was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "old-spice",
-    "name": "Old Spice",
-    "summary": "Old Spice was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "macleans",
-    "name": "Macleans",
-    "summary": "Macleans was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "corsodyl",
-    "name": "Corsodyl",
-    "summary": "Corsodyl was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "piz-buin",
-    "name": "Piz Buin",
-    "summary": "Piz Buin was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "hawaiian-tropic",
-    "name": "Hawaiian Tropic",
-    "summary": "Hawaiian Tropic was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "riemann-p20",
-    "name": "Riemann P20",
-    "summary": "Riemann P20 was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "vosene",
-    "name": "Vosene",
-    "summary": "Vosene was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "alberto-balsam",
-    "name": "Alberto Balsam",
-    "summary": "Alberto Balsam was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "charles-worthington",
-    "name": "Charles Worthington",
-    "summary": "Charles Worthington was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "timotei",
-    "name": "Timotei",
-    "summary": "Timotei was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "elvive",
-    "name": "Elvive",
-    "summary": "Elvive was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "e45",
-    "name": "E45",
-    "summary": "E45 was added (unverified)."
-  },
-  {
-    "date": "2026-09-02",
-    "type": "added",
-    "slug": "lush",
-    "name": "Lush",
-    "summary": "Lush was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "imperial-leather",
-    "name": "Imperial Leather",
-    "summary": "Imperial Leather’s listing was updated: “Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Imperial Leather has no independent listing with PETA, Leaping Bunny or Cruelt…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "carex",
-    "name": "Carex",
-    "summary": "Carex’s listing was updated: “Owned by PZ Cussons. PETA lists PZ Cussons as a company, but Carex has no independent listing with PETA, Leaping Bunny or Cruelty Free Inte…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "oral-b",
-    "name": "Oral-B",
-    "summary": "Oral-B’s listing was updated: “Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "colgate",
-    "name": "Colgate",
-    "summary": "Colgate’s listing was updated: “Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "peace-with-the-wild",
-    "name": "Peace With The Wild",
-    "summary": "Peace With The Wild’s listing was updated: “Peace With The Wild is a curated cruelty-free retailer, not a toothpaste manufacturer itself - it stocks a range of independently vetted cr…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "superdrug-own-brand-dental",
-    "name": "Superdrug own-brand (dental range)",
-    "summary": "Superdrug own-brand (dental range)’s listing was updated: “Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a reta…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "aquafresh",
-    "name": "Aquafresh",
-    "summary": "Aquafresh’s listing was updated: “Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, an…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "sensodyne",
-    "name": "Sensodyne",
-    "summary": "Sensodyne’s listing was updated: “Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, an…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "collection",
-    "name": "Collection",
-    "summary": "Collection’s listing was updated: “Collection says it doesn't test on animals itself and doesn't sell where testing is required by law, though it isn't Leaping Bunny or PETA…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "bic",
-    "name": "Bic",
-    "summary": "Bic’s listing was updated: “Bic tests on animals - directly, through its suppliers, or by selling into markets that require it.”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "clinique",
-    "name": "Clinique",
-    "summary": "Clinique’s listing was updated: “Owned by Estée Lauder, and sells into mainland China, where animal testing can still be legally required for imported cosmetics - the compa…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "carmex",
-    "name": "Carmex",
-    "summary": "Carmex’s listing was updated: “Carmex says it has never tested on animals. It isn't vegan though - the balm itself contains beeswax and lanolin.”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "air-wick",
-    "name": "Air Wick",
-    "summary": "Air Wick’s listing was updated: “Owned by Reckitt - the same parent company as Dettol - who test for regulatory compliance rather than refusing markets that require it.”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "cerave",
-    "name": "CeraVe",
-    "summary": "CeraVe’s listing was updated: “Owned by L'Oréal, and sold in mainland China, where animal testing can still be legally required for imported cosmetics. It also isn't vega…”"
-  },
-  {
-    "date": "2026-08-30",
-    "type": "note-update",
-    "slug": "got2b",
-    "name": "got2b",
-    "summary": "got2b’s listing was updated: “Owned by Henkel, who test on animals - directly, through suppliers, or by selling into markets that require it.”"
-  },
-  {
-    "date": "2026-08-29",
-    "type": "note-update",
-    "slug": "umberto-giannini",
-    "name": "Umberto Giannini",
-    "summary": "Umberto Giannini’s listing was updated: “PETA certified cruelty-free, 100% vegan.”"
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "avon",
-    "name": "Avon",
-    "summary": "Avon was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "the-natural-deodorant-co",
-    "name": "The Natural Deodorant Co",
-    "summary": "The Natural Deodorant Co was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "little-soap-company",
-    "name": "Little Soap Company",
-    "summary": "Little Soap Company was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "gruum",
-    "name": "gruum",
-    "summary": "gruum was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "veet",
-    "name": "Veet",
-    "summary": "Veet was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "solait-by-superdrug",
-    "name": "Solait (Superdrug)",
-    "summary": "Solait (Superdrug) was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "dr-jart-plus",
-    "name": "Dr. Jart+",
-    "summary": "Dr. Jart+ was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "vo5",
-    "name": "VO5",
-    "summary": "VO5 was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "arkive",
-    "name": "Arkive Headcare",
-    "summary": "Arkive Headcare was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "added",
-    "slug": "habi",
-    "name": "Habi",
-    "summary": "Habi was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-29",
-    "type": "tier-change",
-    "slug": "avon",
-    "name": "Avon",
-    "summary": "Avon moved from tested on animals to fully cruelty-free & vegan."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "sally-hansen",
-    "name": "Sally Hansen",
-    "summary": "Sally Hansen was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "collection",
-    "name": "Collection",
-    "summary": "Collection was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "wilkinson-sword",
-    "name": "Wilkinson Sword",
-    "summary": "Wilkinson Sword was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "bic",
-    "name": "Bic",
-    "summary": "Bic was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "clinique",
-    "name": "Clinique",
-    "summary": "Clinique was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "olay",
-    "name": "Olay",
-    "summary": "Olay was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "carmex",
-    "name": "Carmex",
-    "summary": "Carmex was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "air-wick",
-    "name": "Air Wick",
-    "summary": "Air Wick was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "cerave",
-    "name": "CeraVe",
-    "summary": "CeraVe was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "got2b",
-    "name": "got2b",
-    "summary": "got2b was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "sukin",
-    "name": "Sukin",
-    "summary": "Sukin was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "phb-ethical-beauty",
-    "name": "PHB Ethical Beauty",
-    "summary": "PHB Ethical Beauty was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "attitude",
-    "name": "Attitude",
-    "summary": "Attitude was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "ethique",
-    "name": "Ethique",
-    "summary": "Ethique was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "delphis-eco",
-    "name": "Delphis Eco",
-    "summary": "Delphis Eco was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "salt-of-the-earth",
-    "name": "Salt of the Earth",
-    "summary": "Salt of the Earth was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "hurraw",
-    "name": "Hurraw!",
-    "summary": "Hurraw! was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "beauty-kitchen",
-    "name": "Beauty Kitchen",
-    "summary": "Beauty Kitchen was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "suki",
-    "name": "Suki",
-    "summary": "Suki was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "natracare",
-    "name": "Natracare",
-    "summary": "Natracare was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "totm",
-    "name": "TOTM",
-    "summary": "TOTM was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "dame",
-    "name": "DAME",
-    "summary": "DAME was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "revolution-beauty",
-    "name": "Revolution Beauty",
-    "summary": "Revolution Beauty was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "w7-cosmetics",
-    "name": "W7 Cosmetics",
-    "summary": "W7 Cosmetics was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "technic-cosmetics",
-    "name": "Technic Cosmetics",
-    "summary": "Technic Cosmetics was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "wet-n-wild",
-    "name": "Wet n Wild",
-    "summary": "Wet n Wild was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "essence",
-    "name": "essence",
-    "summary": "essence was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "catrice",
-    "name": "Catrice",
-    "summary": "Catrice was added (worth a closer look)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "sleek-makeup",
-    "name": "Sleek MakeUP",
-    "summary": "Sleek MakeUP was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "st-ives",
-    "name": "St Ives",
-    "summary": "St Ives was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "soap-glory",
-    "name": "Soap & Glory",
-    "summary": "Soap & Glory was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "covergirl",
-    "name": "CoverGirl",
-    "summary": "CoverGirl was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "batiste",
-    "name": "Batiste",
-    "summary": "Batiste was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "john-frieda",
-    "name": "John Frieda",
-    "summary": "John Frieda was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "cetaphil",
-    "name": "Cetaphil",
-    "summary": "Cetaphil was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "bourjois",
-    "name": "Bourjois",
-    "summary": "Bourjois was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "la-roche-posay",
-    "name": "La Roche-Posay",
-    "summary": "La Roche-Posay was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "vichy",
-    "name": "Vichy",
-    "summary": "Vichy was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-28",
-    "type": "added",
-    "slug": "schwarzkopf",
-    "name": "Schwarzkopf",
-    "summary": "Schwarzkopf was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "l-oreal",
-    "name": "L'Oréal",
-    "summary": "L'Oréal was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "kingfisher",
-    "name": "Kingfisher",
-    "summary": "Kingfisher’s listing was updated: “Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formul…”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "oral-b",
-    "name": "Oral-B",
-    "summary": "Oral-B’s listing was updated: “Owned by Procter & Gamble, which sells into markets such as mainland China where animal testing can still be legally required, and has not…”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "colgate",
-    "name": "Colgate",
-    "summary": "Colgate’s listing was updated: “Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not…”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "peace-with-the-wild",
-    "name": "Peace With The Wild",
-    "summary": "Peace With The Wild was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "dr-organic",
-    "name": "Dr Organic",
-    "summary": "Dr Organic was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "gutology",
-    "name": "Gutology",
-    "summary": "Gutology was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "biomed",
-    "name": "Biomed",
-    "summary": "Biomed was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "waken",
-    "name": "Waken",
-    "summary": "Waken was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "superdrug-own-brand-dental",
-    "name": "Superdrug own-brand (dental range)",
-    "summary": "Superdrug own-brand (dental range) was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "aquafresh",
-    "name": "Aquafresh",
-    "summary": "Aquafresh was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "added",
-    "slug": "sensodyne",
-    "name": "Sensodyne",
-    "summary": "Sensodyne was added (tested on animals)."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "fabulosa",
-    "name": "Fabulosa",
-    "summary": "Fabulosa’s listing was updated: “Company states all products are 100% vegan with no animal-derived ingredients, and none are tested on animals anywhere. Endorsed by Naturew…”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "astonish",
-    "name": "Astonish",
-    "summary": "Astonish’s listing was updated: “UK-manufactured, Leaping Bunny and PETA certified cruelty-free, and states its full range is vegan.”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "the-pink-stuff",
-    "name": "The Pink Stuff",
-    "summary": "The Pink Stuff’s listing was updated: “Leaping Bunny certified worldwide, and states its range is vegan (recognised by the Vegan Society).”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "note-update",
-    "slug": "sainsbury-s",
-    "name": "Sainsbury's",
-    "summary": "Sainsbury's’s listing was updated: “Leaping Bunny certified own-brand range; own-brand beauty line has expanded to a large fully vegan makeup range.”"
-  },
-  {
-    "date": "2026-08-25",
-    "type": "tier-change",
-    "slug": "imperial-leather",
-    "name": "Imperial Leather",
-    "summary": "Imperial Leather moved from worth a closer look to cruelty-free itself, parent company isn’t."
-  },
-  {
-    "date": "2026-08-25",
-    "type": "tier-change",
-    "slug": "carex",
-    "name": "Carex",
-    "summary": "Carex moved from worth a closer look to cruelty-free itself, parent company isn’t."
-  },
-  {
-    "date": "2026-08-23",
-    "type": "added",
-    "slug": "rare-beauty",
-    "name": "Rare Beauty",
-    "summary": "Rare Beauty was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-23",
-    "type": "added",
-    "slug": "mad-hippie",
-    "name": "Mad Hippie",
-    "summary": "Mad Hippie was added (fully cruelty-free & vegan)."
-  },
-  {
-    "date": "2026-08-23",
-    "type": "added",
-    "slug": "the-body-shop",
-    "name": "The Body Shop",
-    "summary": "The Body Shop was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-23",
-    "type": "added",
-    "slug": "dr-bronners",
-    "name": "Dr Bronner's",
-    "summary": "Dr Bronner's was added (cruelty-free itself, parent company isn’t)."
-  },
-  {
-    "date": "2026-08-22",
-    "type": "note-update",
-    "slug": "nyx",
-    "name": "NYX",
-    "summary": "NYX’s listing was updated: “NYX is cruelty-free certified, but its parent company L'Oréal is not. NYX maintains independent cruelty-free status.”"
+    "slug": "savlon",
+    "name": "Savlon",
+    "summary": "Savlon was added (tested on animals)."
   }
 ]

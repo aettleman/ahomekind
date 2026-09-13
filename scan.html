@@ -138,21 +138,21 @@ body.scan-immersive .bottom-nav { z-index:940; }
 .scan-standby-hint, .scan-standby-arrow { display:none; }
 body.scan-standby .scan-brackets,
 body.scan-standby .scan-live-hint,
-body.scan-standby .scan-live-arrow { display:none !important; }
+body.scan-standby .scan-live-arrow,
 body.scan-standby .scan-standby-hint {
   display:block; position:fixed; left:24px; right:24px;
-  bottom:calc(330px + env(safe-area-inset-bottom, 0px)); text-align:center;
+  bottom:calc(252px + env(safe-area-inset-bottom, 0px)); text-align:center;
   font-family:'Cormorant Garamond',serif; font-style:italic; font-size:23px;
   color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none;
 }
 body.scan-standby .scan-standby-arrow {
   display:block; position:fixed; left:50%; transform:translateX(-50%);
-  bottom:calc(266px + env(safe-area-inset-bottom, 0px));
+  bottom:calc(188px + env(safe-area-inset-bottom, 0px));
   width:30px; height:52px; z-index:920; pointer-events:none; opacity:.9;
 }
 @media (max-height: 720px) {
-  body.scan-standby .scan-standby-hint { bottom:calc(312px + env(safe-area-inset-bottom, 0px)); font-size:20px; }
-  body.scan-standby .scan-standby-arrow { bottom:calc(264px + env(safe-area-inset-bottom, 0px)); height:40px; }
+  body.scan-standby .scan-standby-hint { bottom:calc(236px + env(safe-area-inset-bottom, 0px)); font-size:20px; }
+  body.scan-standby .scan-standby-arrow { bottom:calc(178px + env(safe-area-inset-bottom, 0px)); height:44px; }
 }
 
 /* Reached only by "see the full page" from a result, so it shows the
@@ -254,18 +254,6 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
   flex:0 0 auto; width:auto; margin:0; padding:13px 20px; border-radius:30px;
   font-size:12.5px; letter-spacing:1px; text-transform:uppercase;
 }
-.scan-live-ingredients { display:none; }
-/* While the camera is up, everything else is hidden - which took the
-   ingredient checker away at the exact moment someone is stood in a shop
-   with the bottle in their hand. This is the one thing that stays. */
-/* Sits well above #status (bottom:178px, up to two lines) so a camera-error
-   message never overlaps this link - the exact bug reported from Instagram's
-   in-app browser, where both used to sit only 6px apart. */
-body.scan-immersive .scan-live-ingredients { display:block; position:fixed; left:0; right:0;
-  bottom:calc(224px + env(safe-area-inset-bottom, 0px)); z-index:930; text-align:center;
-  font-size:12.5px; font-weight:600; color:#f4efe2; text-decoration:underline;
-  text-underline-offset:4px; text-shadow:0 1px 10px rgba(20,24,18,0.7); }
-body.scan-card-open .scan-live-ingredients { display:none !important; }
 .scan-shell-links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
 .scan-shell-links a { display:inline-flex; align-items:center; gap:8px; background:var(--ahk-card); border:0.5px solid var(--ahk-border-soft); border-radius:60px; padding:13px 20px; color:var(--ahk-heading); font-size:13px; font-weight:600; text-decoration:none; transition:border-color 0.16s ease; }
 .scan-shell-links a:hover, .scan-shell-links a:focus-visible { border-color:var(--ahk-green-soft); color:var(--ahk-heading); }
@@ -517,7 +505,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button type="button" id="torchBtn" style="display:none;">&#128161; flash</button>
 <button type="button" id="stopBtn">&#10005; stop</button>
 </div>
-<a href="ingredient-check.html" class="scan-live-ingredients">no barcode? read the ingredients instead</a>
 </div>
 
 <!-- The drawn barcode in a dark box was a picture of the thing rather than
@@ -1484,5 +1471,19 @@ show();
 })();
 </script>
 <script src="js/swap.js?v=1"></script>
+<script>
+/* The installed app should open on the home page. iOS often saves the page
+   that was showing when it was added, ignoring the manifest's start_url, so
+   this catches that case. Only fires on a cold launch (no referrer) of the
+   scanner in standalone mode; in-app navigation to the scanner is untouched. */
+(function(){
+  var standalone = window.navigator.standalone === true ||
+                   (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+  if (!standalone) return;
+  if (document.referrer) return;                       // navigated here, not launched
+  if (location.search.indexOf('source=') !== -1) return; // explicit entry point
+  location.replace('/?source=pwa');
+})();
+</script>
 </body>
 </html>
