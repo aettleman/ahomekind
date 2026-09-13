@@ -1,0 +1,8278 @@
+{
+  "100-pure": {
+    "alternates": [
+      "100pure.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "100pure.com",
+    "name": "100% Pure",
+    "tier": "check",
+    "verified": false
+  },
+  "17": {
+    "alternates": [
+      "17.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "17.com",
+    "name": "17",
+    "tier": "check",
+    "verified": false
+  },
+  "3ina": {
+    "alternates": [
+      "3ina.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "3ina.com",
+    "name": "3INA",
+    "tier": "check",
+    "verified": false
+  },
+  "7th-heaven": {
+    "alternates": [
+      "7thheaven.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "7thheaven.com",
+    "name": "7th Heaven",
+    "tier": "check",
+    "verified": false
+  },
+  "a-little-something": {
+    "alternates": [
+      "alittlesomething.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "alittlesomething.com",
+    "name": "A Little Something",
+    "tier": "check",
+    "verified": false
+  },
+  "abbott": {
+    "alternates": [
+      "abbott.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "abbott.com",
+    "name": "Abbott",
+    "tier": "check",
+    "verified": false
+  },
+  "abundant-natural-health": {
+    "alternates": [
+      "abundantnaturalhealth.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "abundantnaturalhealth.com",
+    "name": "Abundant Natural Health",
+    "tier": "check",
+    "verified": false
+  },
+  "academy-of-colour": {
+    "alternates": [
+      "academyofcolour.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "academyofcolour.com",
+    "name": "Academy of Colour",
+    "tier": "check",
+    "verified": false
+  },
+  "acure": {
+    "alternates": [
+      "acure.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "acure.com",
+    "name": "Acure",
+    "tier": "check",
+    "verified": false
+  },
+  "adaptology": {
+    "alternates": [
+      "adaptology.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "adaptology.com",
+    "name": "Adaptology",
+    "tier": "check",
+    "verified": false
+  },
+  "addition-studio": {
+    "alternates": [
+      "additionstudio.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "additionstudio.com",
+    "name": "Addition Studio",
+    "tier": "check",
+    "verified": false
+  },
+  "aesop": {
+    "alternates": [
+      "aesop.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aesop.com",
+    "name": "Aesop",
+    "tier": "check",
+    "verified": false
+  },
+  "air-wick": {
+    "alternates": [
+      "airwick.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "airwick.com",
+    "name": "Air Wick",
+    "tier": "bad",
+    "verified": false
+  },
+  "alba-botanica": {
+    "alternates": [
+      "albabotanica.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "albabotanica.com",
+    "name": "Alba Botanica",
+    "tier": "check",
+    "verified": false
+  },
+  "alberto-balsam": {
+    "alternates": [
+      "albertobalsam.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "albertobalsam.com",
+    "name": "Alberto Balsam",
+    "tier": "unverified",
+    "verified": false
+  },
+  "aldi": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "aldi.co.uk",
+    "name": "Aldi",
+    "tier": "check",
+    "verified": false
+  },
+  "almora-botanica": {
+    "alternates": [
+      "almorabotanica.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "almorabotanica.com",
+    "name": "Almora Botanica",
+    "tier": "check",
+    "verified": false
+  },
+  "aloe-up": {
+    "alternates": [
+      "aloeup.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aloeup.com",
+    "name": "Aloe Up",
+    "tier": "check",
+    "verified": false
+  },
+  "alta-marea": {
+    "alternates": [
+      "altamarea.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "altamarea.com",
+    "name": "Alta Marea",
+    "tier": "check",
+    "verified": false
+  },
+  "alter-native-by-suma": {
+    "alternates": [
+      "alternativebysuma.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "alternativebysuma.com",
+    "name": "Alter/Native by Suma",
+    "tier": "check",
+    "verified": false
+  },
+  "alucia-organics": {
+    "alternates": [
+      "aluciaorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aluciaorganics.com",
+    "name": "Alucia Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "always": {
+    "alternates": [
+      "always.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "always.com",
+    "name": "Always",
+    "tier": "bad",
+    "verified": false
+  },
+  "amaras": {
+    "alternates": [
+      "amaras.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "amaras.com",
+    "name": "Amaras",
+    "tier": "check",
+    "verified": false
+  },
+  "ambi-pur": {
+    "alternates": [
+      "ambipur.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ambipur.com",
+    "name": "Ambi Pur",
+    "tier": "bad",
+    "verified": false
+  },
+  "american-safety-razor": {
+    "alternates": [
+      "americansafetyrazor.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "americansafetyrazor.com",
+    "name": "American Safety Razor",
+    "tier": "check",
+    "verified": false
+  },
+  "amyris": {
+    "alternates": [
+      "amyris.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "amyris.com",
+    "name": "Amyris",
+    "tier": "check",
+    "verified": false
+  },
+  "anara-skincare": {
+    "alternates": [
+      "anaraskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "anaraskincare.com",
+    "name": "Anara Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "anastasia-beverly-hills": {
+    "alternates": [
+      "anastasiabeverlyhills.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "anastasiabeverlyhills.com",
+    "name": "Anastasia Beverly Hills",
+    "tier": "check",
+    "verified": false
+  },
+  "andalou-naturals": {
+    "alternates": [
+      "andalounaturals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "andalounaturals.com",
+    "name": "Andalou Naturals",
+    "tier": "check",
+    "verified": false
+  },
+  "anko": {
+    "alternates": [
+      "anko.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "anko.com",
+    "name": "Anko",
+    "tier": "check",
+    "verified": false
+  },
+  "aqua-natural": {
+    "alternates": [
+      "aquanatural.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aquanatural.com",
+    "name": "Aqua Natural",
+    "tier": "check",
+    "verified": false
+  },
+  "aquafresh": {
+    "alternates": [
+      "aquafresh.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aquafresh.com",
+    "name": "Aquafresh",
+    "tier": "bad",
+    "verified": false
+  },
+  "ar-ocean": {
+    "alternates": [
+      "arocean.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "arocean.com",
+    "name": "Ar Ocean",
+    "tier": "check",
+    "verified": false
+  },
+  "arbonne-international": {
+    "alternates": [
+      "arbonneinternational.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "arbonneinternational.com",
+    "name": "Arbonne International",
+    "tier": "check",
+    "verified": false
+  },
+  "areu-areu": {
+    "alternates": [
+      "areuareu.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "areuareu.com",
+    "name": "AREU AREU",
+    "tier": "check",
+    "verified": false
+  },
+  "argital": {
+    "alternates": [
+      "argital.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "argital.com",
+    "name": "Argital",
+    "tier": "check",
+    "verified": false
+  },
+  "ariel": {
+    "alternates": [
+      "ariel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ariel.com",
+    "name": "Ariel",
+    "tier": "bad",
+    "verified": false
+  },
+  "arithmos": {
+    "alternates": [
+      "arithmos.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "arithmos.com",
+    "name": "Arithmos",
+    "tier": "check",
+    "verified": false
+  },
+  "arkive": {
+    "alternates": [
+      "arkiveheadcare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "arkiveheadcare.com",
+    "name": "Arkive Headcare",
+    "tier": "good",
+    "verified": false
+  },
+  "aromatherapy-associates": {
+    "alternates": [
+      "aromatherapyassociates.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aromatherapyassociates.com",
+    "name": "Aromatherapy Associates",
+    "tier": "check",
+    "verified": false
+  },
+  "asperox": {
+    "alternates": [
+      "asperox.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "asperox.com",
+    "name": "Asperox",
+    "tier": "check",
+    "verified": false
+  },
+  "asperox-sparx": {
+    "alternates": [
+      "asperoxsparx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "asperoxsparx.com",
+    "name": "Asperox-Sparx",
+    "tier": "check",
+    "verified": false
+  },
+  "astonish": {
+    "alternates": [
+      "astonish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "astonish.com",
+    "name": "Astonish",
+    "tier": "good",
+    "verified": false
+  },
+  "atelier-rebul": {
+    "alternates": [
+      "atelierrebul.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "atelierrebul.com",
+    "name": "Atelier Rebul",
+    "tier": "check",
+    "verified": false
+  },
+  "atikha": {
+    "alternates": [
+      "atikha.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "atikha.com",
+    "name": "atikha",
+    "tier": "check",
+    "verified": false
+  },
+  "attitude": {
+    "alternates": [
+      "attitude.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "attitude.com",
+    "name": "Attitude",
+    "tier": "good",
+    "verified": false
+  },
+  "aunt-fannies": {
+    "alternates": [
+      "auntfannies.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "auntfannies.com",
+    "name": "Aunt Fannie's",
+    "tier": "check",
+    "verified": false
+  },
+  "aurelia-london": {
+    "alternates": [
+      "aurelialondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aurelialondon.com",
+    "name": "Aurelia London",
+    "tier": "check",
+    "verified": false
+  },
+  "aussie": {
+    "alternates": [
+      "aussie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aussie.com",
+    "name": "Aussie",
+    "tier": "warn",
+    "verified": false
+  },
+  "australian-gold": {
+    "alternates": [
+      "australiangold.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "australiangold.com",
+    "name": "Australian Gold",
+    "tier": "check",
+    "verified": false
+  },
+  "avalon-organics": {
+    "alternates": [
+      "avalonorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "avalonorganics.com",
+    "name": "Avalon Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "aveda": {
+    "alternates": [
+      "aveda.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aveda.com",
+    "name": "Aveda",
+    "tier": "warn",
+    "verified": false
+  },
+  "aveeno": {
+    "alternates": [
+      "aveeno.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "aveeno.com",
+    "name": "Aveeno",
+    "tier": "bad",
+    "verified": false
+  },
+  "avon": {
+    "alternates": [
+      "avon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "avon.com",
+    "name": "Avon",
+    "tier": "good",
+    "verified": false
+  },
+  "awake-organics": {
+    "alternates": [
+      "awakeorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "awakeorganics.com",
+    "name": "Awake Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "axe": {
+    "alternates": [
+      "axe.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "axe.com",
+    "name": "Axe",
+    "tier": "bad",
+    "verified": false
+  },
+  "b-by-superdrug": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "B. by Superdrug",
+    "tier": "good",
+    "verified": false
+  },
+  "b-skincare": {
+    "alternates": [
+      "bskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bskincare.com",
+    "name": "B Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "bakel-srl": {
+    "alternates": [
+      "bakelsrl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bakelsrl.com",
+    "name": "Bakel srl",
+    "tier": "check",
+    "verified": false
+  },
+  "bali-body": {
+    "alternates": [
+      "balibody.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "balibody.com",
+    "name": "Bali Body",
+    "tier": "check",
+    "verified": false
+  },
+  "balm-balm": {
+    "alternates": [
+      "balmbalm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "balmbalm.com",
+    "name": "Balm Balm",
+    "tier": "check",
+    "verified": false
+  },
+  "bareminerals": {
+    "alternates": [
+      "bareminerals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bareminerals.com",
+    "name": "bareMinerals",
+    "tier": "check",
+    "verified": false
+  },
+  "barry-m": {
+    "alternates": [
+      "barrym.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "barrym.com",
+    "name": "Barry M",
+    "tier": "good",
+    "verified": false
+  },
+  "batch": {
+    "alternates": [
+      "batch.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "batch.com",
+    "name": "Batch",
+    "tier": "check",
+    "verified": false
+  },
+  "bath-house": {
+    "alternates": [
+      "bathhouse.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bathhouse.com",
+    "name": "Bath House",
+    "tier": "check",
+    "verified": false
+  },
+  "batiste": {
+    "alternates": [
+      "batiste.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "batiste.com",
+    "name": "Batiste",
+    "tier": "bad",
+    "verified": false
+  },
+  "baylis-and-harding": {
+    "alternates": [
+      "baylisharding.co.uk",
+      "baylisandharding.com",
+      "baylisandharding.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "baylisharding.com",
+    "name": "Baylis & Harding",
+    "tier": "check",
+    "verified": false
+  },
+  "beautiful-brows-and-lashes": {
+    "alternates": [
+      "beautifulbrowslashes.co.uk",
+      "beautifulbrowsandlashes.com",
+      "beautifulbrowsandlashes.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "beautifulbrowslashes.com",
+    "name": "Beautiful Brows & Lashes",
+    "tier": "check",
+    "verified": false
+  },
+  "beauty-bay": {
+    "alternates": [
+      "beautybay.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "beautybay.com",
+    "name": "Beauty Bay",
+    "tier": "check",
+    "verified": false
+  },
+  "beauty-favours": {
+    "alternates": [
+      "beautyfavours.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "beautyfavours.com",
+    "name": "Beauty Favours",
+    "tier": "check",
+    "verified": false
+  },
+  "beauty-kitchen": {
+    "alternates": [
+      "beautykitchen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "beautykitchen.com",
+    "name": "Beauty Kitchen",
+    "tier": "check",
+    "verified": false
+  },
+  "beauty-without-cruelty": {
+    "alternates": [
+      "beautywithoutcruelty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "beautywithoutcruelty.com",
+    "name": "Beauty Without Cruelty",
+    "tier": "check",
+    "verified": false
+  },
+  "bed-intentions": {
+    "alternates": [
+      "bedintentions.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bedintentions.com",
+    "name": "Bed intentions",
+    "tier": "check",
+    "verified": false
+  },
+  "bedhead": {
+    "alternates": [
+      "bedhead.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bedhead.com",
+    "name": "Bedhead",
+    "tier": "bad",
+    "verified": false
+  },
+  "beekman-1802": {
+    "alternates": [
+      "beekman1802.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "beekman1802.com",
+    "name": "Beekman 1802",
+    "tier": "check",
+    "verified": false
+  },
+  "being": {
+    "alternates": [
+      "being.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "being.com",
+    "name": "Being",
+    "tier": "check",
+    "verified": false
+  },
+  "bel-rebel": {
+    "alternates": [
+      "belrebel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "belrebel.com",
+    "name": "Bel Rebel",
+    "tier": "check",
+    "verified": false
+  },
+  "bellapierre-cosmetics": {
+    "alternates": [
+      "bellapierrecosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bellapierrecosmetics.com",
+    "name": "Bellapierre Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "benecos": {
+    "alternates": [
+      "benecos.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "benecos.com",
+    "name": "Benecos",
+    "tier": "check",
+    "verified": false
+  },
+  "benefit": {
+    "alternates": [
+      "benefit.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "benefit.com",
+    "name": "Benefit",
+    "tier": "check",
+    "verified": false
+  },
+  "bic": {
+    "alternates": [
+      "bic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bic.com",
+    "name": "Bic",
+    "tier": "bad",
+    "verified": false
+  },
+  "bio-d": {
+    "alternates": [
+      "biod.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biod.com",
+    "name": "Bio-D",
+    "tier": "good",
+    "verified": false
+  },
+  "bio-ionic": {
+    "alternates": [
+      "bioionic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bioionic.com",
+    "name": "Bio Ionic",
+    "tier": "check",
+    "verified": false
+  },
+  "biohygiene": {
+    "alternates": [
+      "biohygiene.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biohygiene.com",
+    "name": "BioHygiene",
+    "tier": "check",
+    "verified": false
+  },
+  "biolage": {
+    "alternates": [
+      "biolage.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biolage.com",
+    "name": "Biolage",
+    "tier": "check",
+    "verified": false
+  },
+  "bioleon": {
+    "alternates": [
+      "bioleon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bioleon.com",
+    "name": "bioLEON",
+    "tier": "check",
+    "verified": false
+  },
+  "biolet": {
+    "alternates": [
+      "biolet.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biolet.com",
+    "name": "Biolet",
+    "tier": "check",
+    "verified": false
+  },
+  "biologi": {
+    "alternates": [
+      "biologi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biologi.com",
+    "name": "Biologi",
+    "tier": "check",
+    "verified": false
+  },
+  "biomed": {
+    "alternates": [
+      "biomed.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biomed.com",
+    "name": "Biomed",
+    "tier": "warn",
+    "verified": false
+  },
+  "biossance": {
+    "alternates": [
+      "biossance.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "biossance.com",
+    "name": "Biossance",
+    "tier": "check",
+    "verified": false
+  },
+  "bite-beauty": {
+    "alternates": [
+      "bitebeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bitebeauty.com",
+    "name": "Bite Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "black-girl-sunscreen": {
+    "alternates": [
+      "blackgirlsunscreen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "blackgirlsunscreen.com",
+    "name": "Black Girl Sunscreen",
+    "tier": "check",
+    "verified": false
+  },
+  "bleach-london": {
+    "alternates": [
+      "bleachlondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bleachlondon.com",
+    "name": "Bleach London",
+    "tier": "good",
+    "verified": false
+  },
+  "bloo": {
+    "alternates": [
+      "bloo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bloo.com",
+    "name": "Bloo",
+    "tier": "unverified",
+    "verified": false
+  },
+  "blur-london": {
+    "alternates": [
+      "blurlondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "blurlondon.com",
+    "name": "Blur London",
+    "tier": "check",
+    "verified": false
+  },
+  "bmt": {
+    "alternates": [
+      "bmt.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bmt.com",
+    "name": "BMT",
+    "tier": "check",
+    "verified": false
+  },
+  "bob": {
+    "alternates": [
+      "bob.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bob.com",
+    "name": "B.O.B.",
+    "tier": "check",
+    "verified": false
+  },
+  "bobs-red-mill": {
+    "alternates": [
+      "bobsredmill.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bobsredmill.com",
+    "name": "Bob's Red Mill",
+    "tier": "check",
+    "verified": false
+  },
+  "bold": {
+    "alternates": [
+      "bold.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bold.com",
+    "name": "Bold",
+    "tier": "bad",
+    "verified": false
+  },
+  "bondi-sands": {
+    "alternates": [
+      "bondisands.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bondisands.com",
+    "name": "Bondi Sands",
+    "tier": "warn",
+    "verified": false
+  },
+  "boots": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "boots.com",
+    "name": "Boots",
+    "tier": "check",
+    "verified": false
+  },
+  "bosleymd": {
+    "alternates": [
+      "bosleymd.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bosleymd.com",
+    "name": "BosleyMD",
+    "tier": "check",
+    "verified": false
+  },
+  "botanica-slavica": {
+    "alternates": [
+      "botanicaslavica.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "botanicaslavica.com",
+    "name": "Botanica Slavica",
+    "tier": "check",
+    "verified": false
+  },
+  "botanico-vida-skincare": {
+    "alternates": [
+      "botanicovidaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "botanicovidaskincare.com",
+    "name": "Botanico Vida Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "botanics": {
+    "alternates": [
+      "botanics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "botanics.com",
+    "name": "Botanics",
+    "tier": "check",
+    "verified": false
+  },
+  "boucleme": {
+    "alternates": [
+      "boucleme.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "boucleme.com",
+    "name": "Boucleme",
+    "tier": "check",
+    "verified": false
+  },
+  "boundary": {
+    "alternates": [
+      "boundary.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "boundary.com",
+    "name": "Boundary",
+    "tier": "check",
+    "verified": false
+  },
+  "bourjois": {
+    "alternates": [
+      "bourjois.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bourjois.com",
+    "name": "Bourjois",
+    "tier": "bad",
+    "verified": false
+  },
+  "boxycharm": {
+    "alternates": [
+      "boxycharm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "boxycharm.com",
+    "name": "BoxyCharm",
+    "tier": "check",
+    "verified": false
+  },
+  "bperfect-cosmetics": {
+    "alternates": [
+      "bperfectcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bperfectcosmetics.com",
+    "name": "BPerfect Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "brandless": {
+    "alternates": [
+      "brandless.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "brandless.com",
+    "name": "Brandless",
+    "tier": "check",
+    "verified": false
+  },
+  "bravenewhair-bravenewcare": {
+    "alternates": [
+      "bravenewhairbravenewcare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bravenewhairbravenewcare.com",
+    "name": "BRAVE.NEW.HAIR., BRAVE.NEW.CARE.",
+    "tier": "check",
+    "verified": false
+  },
+  "bulldog": {
+    "alternates": [
+      "bulldog.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bulldog.com",
+    "name": "Bulldog",
+    "tier": "warn",
+    "verified": false
+  },
+  "bumble-and-bumble": {
+    "alternates": [
+      "bumbleandbumble.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bumbleandbumble.com",
+    "name": "Bumble and Bumble",
+    "tier": "warn",
+    "verified": false
+  },
+  "burts-bees": {
+    "alternates": [
+      "burtsbees.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "burtsbees.com",
+    "name": "Burt's Bees",
+    "tier": "check",
+    "verified": false
+  },
+  "butter-london": {
+    "alternates": [
+      "butterlondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "butterlondon.com",
+    "name": "butter LONDON",
+    "tier": "check",
+    "verified": false
+  },
+  "buxom": {
+    "alternates": [
+      "buxom.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "buxom.com",
+    "name": "Buxom",
+    "tier": "check",
+    "verified": false
+  },
+  "by-sarah-london": {
+    "alternates": [
+      "bysarahlondon.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "bysarahlondon.com",
+    "name": "By Sarah London",
+    "tier": "check",
+    "verified": false
+  },
+  "byellie": {
+    "alternates": [
+      "byellie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "byellie.com",
+    "name": "Byellie",
+    "tier": "check",
+    "verified": false
+  },
+  "byk-beauty": {
+    "alternates": [
+      "bykbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "bykbeauty.com",
+    "name": "BYK Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "byoma": {
+    "alternates": [
+      "byoma.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "byoma.com",
+    "name": "BYOMA",
+    "tier": "check",
+    "verified": false
+  },
+  "byron-bay-skincare": {
+    "alternates": [
+      "byronbayskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "byronbayskincare.com",
+    "name": "Byron Bay Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "calgon": {
+    "alternates": [
+      "calgon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "calgon.com",
+    "name": "Calgon",
+    "tier": "check",
+    "verified": false
+  },
+  "callen-olive": {
+    "alternates": [
+      "callenolive.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "callenolive.com",
+    "name": "Callen Olive",
+    "tier": "good",
+    "verified": false
+  },
+  "carex": {
+    "alternates": [
+      "carex.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "carex.com",
+    "name": "Carex",
+    "tier": "warn",
+    "verified": false
+  },
+  "carmex": {
+    "alternates": [
+      "carmex.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "carmex.com",
+    "name": "Carmex",
+    "tier": "check",
+    "verified": false
+  },
+  "carols-daughter": {
+    "alternates": [
+      "carolsdaughter.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "carolsdaughter.com",
+    "name": "Carol's Daughter",
+    "tier": "check",
+    "verified": false
+  },
+  "caswell-massey": {
+    "alternates": [
+      "caswellmassey.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "caswellmassey.com",
+    "name": "Caswell-Massey",
+    "tier": "check",
+    "verified": false
+  },
+  "catrice": {
+    "alternates": [
+      "catrice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "catrice.com",
+    "name": "Catrice",
+    "tier": "check",
+    "verified": false
+  },
+  "cellis": {
+    "alternates": [
+      "cellis.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cellis.com",
+    "name": "Cellis",
+    "tier": "check",
+    "verified": false
+  },
+  "celui-by-anisa-sojka": {
+    "alternates": [
+      "celuibyanisasojka.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "celuibyanisasojka.com",
+    "name": "CELUI by Anisa Sojka",
+    "tier": "check",
+    "verified": false
+  },
+  "cenoura-and-bronze": {
+    "alternates": [
+      "cenourabronze.co.uk",
+      "cenouraandbronze.com",
+      "cenouraandbronze.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cenourabronze.com",
+    "name": "Cenoura & Bronze",
+    "tier": "check",
+    "verified": false
+  },
+  "cerave": {
+    "alternates": [
+      "cerave.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cerave.com",
+    "name": "CeraVe",
+    "tier": "bad",
+    "verified": false
+  },
+  "cetaphil": {
+    "alternates": [
+      "cetaphil.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cetaphil.com",
+    "name": "Cetaphil",
+    "tier": "bad",
+    "verified": false
+  },
+  "charles-worthington": {
+    "alternates": [
+      "charlesworthington.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "charlesworthington.com",
+    "name": "Charles Worthington",
+    "tier": "unverified",
+    "verified": false
+  },
+  "cherish": {
+    "alternates": [
+      "cherish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cherish.com",
+    "name": "Cherish",
+    "tier": "check",
+    "verified": false
+  },
+  "childs-farm": {
+    "alternates": [
+      "childsfarm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "childsfarm.com",
+    "name": "Childs Farm",
+    "tier": "check",
+    "verified": false
+  },
+  "cien": {
+    "alternates": [
+      "cien.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cien.com",
+    "name": "Cien",
+    "tier": "check",
+    "verified": false
+  },
+  "cif": {
+    "alternates": [
+      "cif.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cif.com",
+    "name": "Cif",
+    "tier": "bad",
+    "verified": false
+  },
+  "cillit-bang": {
+    "alternates": [
+      "cillitbang.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cillitbang.com",
+    "name": "Cillit Bang",
+    "tier": "bad",
+    "verified": false
+  },
+  "cj-olive-young": {
+    "alternates": [
+      "cjoliveyoung.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cjoliveyoung.com",
+    "name": "CJ Olive Young",
+    "tier": "check",
+    "verified": false
+  },
+  "clairol": {
+    "alternates": [
+      "clairol.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "clairol.com",
+    "name": "Clairol",
+    "tier": "bad",
+    "verified": false
+  },
+  "clean-and-clear": {
+    "alternates": [
+      "cleanclear.co.uk",
+      "cleanandclear.com",
+      "cleanandclear.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cleanclear.com",
+    "name": "Clean & Clear",
+    "tier": "bad",
+    "verified": false
+  },
+  "clemence-organics": {
+    "alternates": [
+      "clemenceorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "clemenceorganics.com",
+    "name": "Clemence Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "clinique": {
+    "alternates": [
+      "clinique.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "clinique.com",
+    "name": "Clinique",
+    "tier": "bad",
+    "verified": false
+  },
+  "co-op": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "coop.co.uk",
+    "name": "Co-op",
+    "tier": "check",
+    "verified": false
+  },
+  "coco-and-lola": {
+    "alternates": [
+      "cocoandlola.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cocoandlola.com",
+    "name": "Coco and Lola",
+    "tier": "check",
+    "verified": false
+  },
+  "colgate": {
+    "alternates": [
+      "colgate.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "colgate.com",
+    "name": "Colgate",
+    "tier": "bad",
+    "verified": false
+  },
+  "collection": {
+    "alternates": [
+      "collection.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "collection.com",
+    "name": "Collection",
+    "tier": "check",
+    "verified": false
+  },
+  "colourpop-cosmetics": {
+    "alternates": [
+      "colourpopcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "colourpopcosmetics.com",
+    "name": "ColourPop Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "comfort": {
+    "alternates": [
+      "comfort.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "comfort.com",
+    "name": "Comfort",
+    "tier": "bad",
+    "verified": false
+  },
+  "conair": {
+    "alternates": [
+      "conair.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "conair.com",
+    "name": "Conair",
+    "tier": "check",
+    "verified": false
+  },
+  "concrete-minerals": {
+    "alternates": [
+      "concreteminerals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "concreteminerals.com",
+    "name": "Concrete Minerals",
+    "tier": "check",
+    "verified": false
+  },
+  "copper-and-black": {
+    "alternates": [
+      "copperblack.co.uk",
+      "copperandblack.com",
+      "copperandblack.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "copperblack.com",
+    "name": "Copper & Black",
+    "tier": "check",
+    "verified": false
+  },
+  "corsodyl": {
+    "alternates": [
+      "corsodyl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "corsodyl.com",
+    "name": "Corsodyl",
+    "tier": "bad",
+    "verified": false
+  },
+  "cover-fx-skin-care": {
+    "alternates": [
+      "coverfxskincare.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "coverfxskincare.com",
+    "name": "Cover FX Skin Care",
+    "tier": "check",
+    "verified": false
+  },
+  "covergirl": {
+    "alternates": [
+      "covergirl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "covergirl.com",
+    "name": "CoverGirl",
+    "tier": "warn",
+    "verified": false
+  },
+  "cowshed": {
+    "alternates": [
+      "cowshed.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cowshed.com",
+    "name": "Cowshed",
+    "tier": "check",
+    "verified": false
+  },
+  "cozium": {
+    "alternates": [
+      "cozium.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cozium.com",
+    "name": "COZIUM",
+    "tier": "check",
+    "verified": false
+  },
+  "cranbourn": {
+    "alternates": [
+      "cranbourn.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cranbourn.com",
+    "name": "CRANBOURN",
+    "tier": "check",
+    "verified": false
+  },
+  "crayola-beauty": {
+    "alternates": [
+      "crayolabeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "crayolabeauty.com",
+    "name": "Crayola Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "cristalinas": {
+    "alternates": [
+      "cristalinas.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cristalinas.com",
+    "name": "Cristalinas",
+    "tier": "unverified",
+    "verified": false
+  },
+  "cult-candy-cosmetics": {
+    "alternates": [
+      "cultcandycosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cultcandycosmetics.com",
+    "name": "Cult Candy Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "cultivator-natural-products": {
+    "alternates": [
+      "cultivatornaturalproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cultivatornaturalproducts.com",
+    "name": "Cultivator Natural Products",
+    "tier": "check",
+    "verified": false
+  },
+  "cultured": {
+    "alternates": [
+      "cultured.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cultured.com",
+    "name": "Cultured",
+    "tier": "check",
+    "verified": false
+  },
+  "curl-jar": {
+    "alternates": [
+      "curljar.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "curljar.com",
+    "name": "Curl Jar",
+    "tier": "check",
+    "verified": false
+  },
+  "cycle": {
+    "alternates": [
+      "cycle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cycle.com",
+    "name": "CYCLE",
+    "tier": "check",
+    "verified": false
+  },
+  "cyzone": {
+    "alternates": [
+      "cyzone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "cyzone.com",
+    "name": "Cyzone",
+    "tier": "check",
+    "verified": false
+  },
+  "dabur": {
+    "alternates": [
+      "dabur.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dabur.com",
+    "name": "Dabur",
+    "tier": "check",
+    "verified": false
+  },
+  "daise": {
+    "alternates": [
+      "daise.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "daise.com",
+    "name": "Daise",
+    "tier": "check",
+    "verified": false
+  },
+  "dame": {
+    "alternates": [
+      "dame.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dame.com",
+    "name": "DAME",
+    "tier": "good",
+    "verified": false
+  },
+  "daz": {
+    "alternates": [
+      "daz.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "daz.com",
+    "name": "Daz",
+    "tier": "bad",
+    "verified": false
+  },
+  "delphis-eco": {
+    "alternates": [
+      "delphiseco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "delphiseco.com",
+    "name": "Delphis Eco",
+    "tier": "good",
+    "verified": false
+  },
+  "dentalux": {
+    "alternates": [
+      "dentalux.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dentalux.com",
+    "name": "Dentalux",
+    "tier": "check",
+    "verified": false
+  },
+  "derma-e-natural-bodycare": {
+    "alternates": [
+      "dermaenaturalbodycare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dermaenaturalbodycare.com",
+    "name": "derma-e Natural Bodycare",
+    "tier": "check",
+    "verified": false
+  },
+  "dermablend": {
+    "alternates": [
+      "dermablend.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dermablend.com",
+    "name": "Dermablend",
+    "tier": "check",
+    "verified": false
+  },
+  "dermacare": {
+    "alternates": [
+      "dermacare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dermacare.com",
+    "name": "Dermacare",
+    "tier": "check",
+    "verified": false
+  },
+  "dermadoctor": {
+    "alternates": [
+      "dermadoctor.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dermadoctor.com",
+    "name": "DERMAdoctor",
+    "tier": "check",
+    "verified": false
+  },
+  "dermalogica": {
+    "alternates": [
+      "dermalogica.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dermalogica.com",
+    "name": "Dermalogica",
+    "tier": "warn",
+    "verified": false
+  },
+  "desert-essence": {
+    "alternates": [
+      "desertessence.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "desertessence.com",
+    "name": "Desert Essence",
+    "tier": "check",
+    "verified": false
+  },
+  "design-essentials": {
+    "alternates": [
+      "designessentials.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "designessentials.com",
+    "name": "Design Essentials",
+    "tier": "check",
+    "verified": false
+  },
+  "dettol": {
+    "alternates": [
+      "dettol.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dettol.com",
+    "name": "Dettol",
+    "tier": "bad",
+    "verified": false
+  },
+  "devacurl": {
+    "alternates": [
+      "devacurl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "devacurl.com",
+    "name": "DevaCurl",
+    "tier": "warn",
+    "verified": false
+  },
+  "dial": {
+    "alternates": [
+      "dial.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dial.com",
+    "name": "Dial",
+    "tier": "check",
+    "verified": false
+  },
+  "dianne-caine-australia": {
+    "alternates": [
+      "diannecaineaustralia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "diannecaineaustralia.com",
+    "name": "Dianne Caine Australia",
+    "tier": "check",
+    "verified": false
+  },
+  "ditto-balms": {
+    "alternates": [
+      "dittobalms.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dittobalms.com",
+    "name": "Ditto Balms",
+    "tier": "check",
+    "verified": false
+  },
+  "dlas": {
+    "alternates": [
+      "dlas.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dlas.com",
+    "name": "D'las",
+    "tier": "check",
+    "verified": false
+  },
+  "dolce-and-gabbana-beauty": {
+    "alternates": [
+      "dolcegabbanabeauty.co.uk",
+      "dolceandgabbanabeauty.com",
+      "dolceandgabbanabeauty.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "dolcegabbanabeauty.com",
+    "name": "Dolce & Gabbana Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "domestos": {
+    "alternates": [
+      "domestos.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "domestos.com",
+    "name": "Domestos",
+    "tier": "bad",
+    "verified": false
+  },
+  "dossier": {
+    "alternates": [
+      "dossier.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dossier.com",
+    "name": "Dossier",
+    "tier": "check",
+    "verified": false
+  },
+  "doussy": {
+    "alternates": [
+      "doussy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "doussy.com",
+    "name": "Doussy",
+    "tier": "check",
+    "verified": false
+  },
+  "dove": {
+    "alternates": [
+      "dove.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "dove.com",
+    "name": "Dove",
+    "tier": "warn",
+    "verified": false
+  },
+  "down-to-earth": {
+    "alternates": [
+      "downtoearth.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "downtoearth.com",
+    "name": "Down to Earth",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-bronners": {
+    "alternates": [
+      "drbronners.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drbronners.com",
+    "name": "Dr Bronner's",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-dennis-gross-skincare": {
+    "alternates": [
+      "drdennisgrossskincare.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "drdennisgrossskincare.com",
+    "name": "Dr. Dennis Gross Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-hauschka-skin-care": {
+    "alternates": [
+      "drhauschkaskincare.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "drhauschkaskincare.com",
+    "name": "Dr. Hauschka Skin Care",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-heald": {
+    "alternates": [
+      "drheald.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drheald.com",
+    "name": "DR HEALD",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-jacksons": {
+    "alternates": [
+      "drjacksons.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drjacksons.com",
+    "name": "Dr Jackson's",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-jart-plus": {
+    "alternates": [
+      "drjart.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drjart.com",
+    "name": "Dr. Jart+",
+    "tier": "bad",
+    "verified": false
+  },
+  "dr-organic": {
+    "alternates": [
+      "drorganic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drorganic.com",
+    "name": "Dr Organic",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-sams": {
+    "alternates": [
+      "drsams.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drsams.com",
+    "name": "Dr Sam's",
+    "tier": "check",
+    "verified": false
+  },
+  "dr-teals": {
+    "alternates": [
+      "drteals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drteals.com",
+    "name": "Dr. Teal's",
+    "tier": "check",
+    "verified": false
+  },
+  "drunk-elephant": {
+    "alternates": [
+      "drunkelephant.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "drunkelephant.com",
+    "name": "Drunk Elephant",
+    "tier": "warn",
+    "verified": false
+  },
+  "duo": {
+    "alternates": [
+      "duo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "duo.com",
+    "name": "DUO",
+    "tier": "check",
+    "verified": false
+  },
+  "e-l-f-cosmetics": {
+    "alternates": [
+      "elfcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "elfcosmetics.com",
+    "name": "e.l.f. cosmetics",
+    "tier": "good",
+    "verified": false
+  },
+  "e45": {
+    "alternates": [
+      "e45.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "e45.com",
+    "name": "E45",
+    "tier": "unverified",
+    "verified": false
+  },
+  "earth-conscious": {
+    "alternates": [
+      "earthconscious.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "earthconscious.com",
+    "name": "Earth Conscious",
+    "tier": "check",
+    "verified": false
+  },
+  "earth-friendly-products": {
+    "alternates": [
+      "earthfriendlyproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "earthfriendlyproducts.com",
+    "name": "Earth Friendly Products",
+    "tier": "check",
+    "verified": false
+  },
+  "earth-sense": {
+    "alternates": [
+      "earthsense.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "earthsense.com",
+    "name": "Earth Sense",
+    "tier": "check",
+    "verified": false
+  },
+  "earthy-nail-polish": {
+    "alternates": [
+      "earthynailpolish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "earthynailpolish.com",
+    "name": "Earthy Nail Polish",
+    "tier": "check",
+    "verified": false
+  },
+  "eco-dent-international": {
+    "alternates": [
+      "ecodentinternational.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ecodentinternational.com",
+    "name": "Eco-DenT International",
+    "tier": "check",
+    "verified": false
+  },
+  "ecoleaf-by-suma": {
+    "alternates": [
+      "ecoleafbysuma.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "ecoleafbysuma.com",
+    "name": "Ecoleaf by Suma",
+    "tier": "check",
+    "verified": false
+  },
+  "ecotools": {
+    "alternates": [
+      "ecotools.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ecotools.com",
+    "name": "EcoTools",
+    "tier": "check",
+    "verified": false
+  },
+  "ecover": {
+    "alternates": [
+      "ecover.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ecover.com",
+    "name": "Ecover",
+    "tier": "warn",
+    "verified": false
+  },
+  "ecozone": {
+    "alternates": [
+      "ecozone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ecozone.com",
+    "name": "Ecozone",
+    "tier": "check",
+    "verified": false
+  },
+  "elegance": {
+    "alternates": [
+      "elegance.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "elegance.com",
+    "name": "Elegance",
+    "tier": "check",
+    "verified": false
+  },
+  "elemis": {
+    "alternates": [
+      "elemis.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "elemis.com",
+    "name": "Elemis",
+    "tier": "bad",
+    "verified": false
+  },
+  "elvive": {
+    "alternates": [
+      "elvive.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "elvive.com",
+    "name": "Elvive",
+    "tier": "bad",
+    "verified": false
+  },
+  "eminence-organic-skin-care": {
+    "alternates": [
+      "eminenceorganicskincare.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "eminenceorganicskincare.com",
+    "name": "Eminence Organic Skin Care",
+    "tier": "check",
+    "verified": false
+  },
+  "emma-hardie": {
+    "alternates": [
+      "emmahardie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "emmahardie.com",
+    "name": "Emma Hardie",
+    "tier": "check",
+    "verified": false
+  },
+  "eos-products": {
+    "alternates": [
+      "eosproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "eosproducts.com",
+    "name": "EOS Products",
+    "tier": "check",
+    "verified": false
+  },
+  "epiderma": {
+    "alternates": [
+      "epiderma.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "epiderma.com",
+    "name": "Epiderma",
+    "tier": "check",
+    "verified": false
+  },
+  "esika": {
+    "alternates": [
+      "esika.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "esika.com",
+    "name": "Esika",
+    "tier": "check",
+    "verified": false
+  },
+  "essence": {
+    "alternates": [
+      "essence.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "essence.com",
+    "name": "essence",
+    "tier": "check",
+    "verified": false
+  },
+  "esspire": {
+    "alternates": [
+      "esspire.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "esspire.com",
+    "name": "Esspire",
+    "tier": "check",
+    "verified": false
+  },
+  "eternal-skincare": {
+    "alternates": [
+      "eternalskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "eternalskincare.com",
+    "name": "Eternal Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "ethique": {
+    "alternates": [
+      "ethique.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ethique.com",
+    "name": "Ethique",
+    "tier": "good",
+    "verified": false
+  },
+  "eudora": {
+    "alternates": [
+      "eudora.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "eudora.com",
+    "name": "Eudora",
+    "tier": "check",
+    "verified": false
+  },
+  "eugene-perma": {
+    "alternates": [
+      "eugeneperma.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "eugeneperma.com",
+    "name": "Eugene Perma",
+    "tier": "check",
+    "verified": false
+  },
+  "european-wax-center": {
+    "alternates": [
+      "europeanwaxcenter.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "europeanwaxcenter.com",
+    "name": "European Wax Center",
+    "tier": "check",
+    "verified": false
+  },
+  "evdaimonia": {
+    "alternates": [
+      "evdaimonia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "evdaimonia.com",
+    "name": "Evdaimonia",
+    "tier": "check",
+    "verified": false
+  },
+  "every-man-jack": {
+    "alternates": [
+      "everymanjack.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "everymanjack.com",
+    "name": "Every Man Jack",
+    "tier": "check",
+    "verified": false
+  },
+  "everyandone": {
+    "alternates": [
+      "everyone.co.uk",
+      "everyandone.com",
+      "everyandone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "everyone.com",
+    "name": "every&one",
+    "tier": "check",
+    "verified": false
+  },
+  "evolve-organic-beauty": {
+    "alternates": [
+      "evolveorganicbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "evolveorganicbeauty.com",
+    "name": "Evolve Organic Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "evre": {
+    "alternates": [
+      "evre.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "evre.com",
+    "name": "Evre",
+    "tier": "check",
+    "verified": false
+  },
+  "eylure": {
+    "alternates": [
+      "eylure.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "eylure.com",
+    "name": "Eylure",
+    "tier": "check",
+    "verified": false
+  },
+  "fab-brows": {
+    "alternates": [
+      "fabbrows.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fabbrows.com",
+    "name": "FAB Brows",
+    "tier": "check",
+    "verified": false
+  },
+  "fabulosa": {
+    "alternates": [
+      "fabulosa.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fabulosa.com",
+    "name": "Fabulosa",
+    "tier": "good",
+    "verified": false
+  },
+  "facetheory": {
+    "alternates": [
+      "facetheory.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "facetheory.com",
+    "name": "Facetheory",
+    "tier": "check",
+    "verified": false
+  },
+  "fairy": {
+    "alternates": [
+      "fairy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fairy.com",
+    "name": "Fairy",
+    "tier": "bad",
+    "verified": false
+  },
+  "faith-in-nature": {
+    "alternates": [
+      "faithinnature.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "faithinnature.com",
+    "name": "Faith in Nature",
+    "tier": "check",
+    "verified": false
+  },
+  "fatface": {
+    "alternates": [
+      "fatface.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fatface.com",
+    "name": "FatFace",
+    "tier": "check",
+    "verified": false
+  },
+  "febreze": {
+    "alternates": [
+      "febreze.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "febreze.com",
+    "name": "Febreze",
+    "tier": "bad",
+    "verified": false
+  },
+  "fill-refill-co": {
+    "alternates": [
+      "fillrefillco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fillrefillco.com",
+    "name": "Fill Refill Co.",
+    "tier": "check",
+    "verified": false
+  },
+  "filter-by-molly-mae": {
+    "alternates": [
+      "filterbymollymae.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "filterbymollymae.com",
+    "name": "Filter by Molly-Mae",
+    "tier": "check",
+    "verified": false
+  },
+  "finice": {
+    "alternates": [
+      "finice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "finice.com",
+    "name": "finice",
+    "tier": "check",
+    "verified": false
+  },
+  "finish": {
+    "alternates": [
+      "finish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "finish.com",
+    "name": "Finish",
+    "tier": "bad",
+    "verified": false
+  },
+  "first-aid-beauty": {
+    "alternates": [
+      "firstaidbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "firstaidbeauty.com",
+    "name": "First Aid Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "flash": {
+    "alternates": [
+      "flash.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "flash.com",
+    "name": "Flash",
+    "tier": "bad",
+    "verified": false
+  },
+  "floralys": {
+    "alternates": [
+      "floralys.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "floralys.com",
+    "name": "Floralys",
+    "tier": "check",
+    "verified": false
+  },
+  "florence-by-mills": {
+    "alternates": [
+      "florencebymills.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "florencebymills.com",
+    "name": "Florence By Mills",
+    "tier": "check",
+    "verified": false
+  },
+  "florentine": {
+    "alternates": [
+      "florentine.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "florentine.com",
+    "name": "Florentine",
+    "tier": "check",
+    "verified": false
+  },
+  "foamie": {
+    "alternates": [
+      "foamie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "foamie.com",
+    "name": "Foamie",
+    "tier": "check",
+    "verified": false
+  },
+  "forest-and-shore": {
+    "alternates": [
+      "forestshore.co.uk",
+      "forestandshore.com",
+      "forestandshore.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "forestshore.com",
+    "name": "Forest & Shore",
+    "tier": "check",
+    "verified": false
+  },
+  "forest-essentials": {
+    "alternates": [
+      "forestessentials.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "forestessentials.com",
+    "name": "Forest Essentials",
+    "tier": "check",
+    "verified": false
+  },
+  "formil": {
+    "alternates": [
+      "formil.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "formil.com",
+    "name": "formil",
+    "tier": "check",
+    "verified": false
+  },
+  "formula-x": {
+    "alternates": [
+      "formulax.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "formulax.com",
+    "name": "Formula X",
+    "tier": "check",
+    "verified": false
+  },
+  "formulae-prescott": {
+    "alternates": [
+      "formulaeprescott.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "formulaeprescott.com",
+    "name": "Formulae Prescott",
+    "tier": "check",
+    "verified": false
+  },
+  "frank-body": {
+    "alternates": [
+      "frankbody.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "frankbody.com",
+    "name": "Frank Body",
+    "tier": "check",
+    "verified": false
+  },
+  "freeman-beauty": {
+    "alternates": [
+      "freemanbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "freemanbeauty.com",
+    "name": "Freeman Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "fresh-and-dry": {
+    "alternates": [
+      "freshdry.co.uk",
+      "freshanddry.com",
+      "freshanddry.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "freshdry.com",
+    "name": "Fresh & Dry",
+    "tier": "check",
+    "verified": false
+  },
+  "fria": {
+    "alternates": [
+      "fria.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fria.com",
+    "name": "FRIA",
+    "tier": "check",
+    "verified": false
+  },
+  "fria-1000-giorni": {
+    "alternates": [
+      "fria1000giorni.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fria1000giorni.com",
+    "name": "FRIA 1000 GIORNI",
+    "tier": "check",
+    "verified": false
+  },
+  "fria-easy": {
+    "alternates": [
+      "friaeasy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "friaeasy.com",
+    "name": "FRIA EASY",
+    "tier": "check",
+    "verified": false
+  },
+  "fria-k-beauty-inspired": {
+    "alternates": [
+      "friakbeautyinspired.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "friakbeautyinspired.com",
+    "name": "FRIA k-Beauty Inspired",
+    "tier": "check",
+    "verified": false
+  },
+  "friendly-soap": {
+    "alternates": [
+      "friendlysoap.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "friendlysoap.com",
+    "name": "Friendly Soap",
+    "tier": "check",
+    "verified": false
+  },
+  "fruit-of-the-earth": {
+    "alternates": [
+      "fruitoftheearth.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "fruitoftheearth.com",
+    "name": "Fruit of the Earth",
+    "tier": "check",
+    "verified": false
+  },
+  "fuarain-skincare": {
+    "alternates": [
+      "fuarainskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fuarainskincare.com",
+    "name": "Fuarain Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "fudge": {
+    "alternates": [
+      "fudge.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fudge.com",
+    "name": "Fudge",
+    "tier": "check",
+    "verified": false
+  },
+  "function-of-beauty": {
+    "alternates": [
+      "functionofbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "functionofbeauty.com",
+    "name": "Function of Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "furtastic": {
+    "alternates": [
+      "furtastic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "furtastic.com",
+    "name": "Furtastic",
+    "tier": "check",
+    "verified": false
+  },
+  "fushi": {
+    "alternates": [
+      "fushi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fushi.com",
+    "name": "Fushi",
+    "tier": "check",
+    "verified": false
+  },
+  "fussy": {
+    "alternates": [
+      "fussy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "fussy.com",
+    "name": "Fussy",
+    "tier": "good",
+    "verified": false
+  },
+  "gaia-skincare": {
+    "alternates": [
+      "gaiaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gaiaskincare.com",
+    "name": "Gaia Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "garden-of-life": {
+    "alternates": [
+      "gardenoflife.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gardenoflife.com",
+    "name": "Garden of Life",
+    "tier": "check",
+    "verified": false
+  },
+  "garnier": {
+    "alternates": [
+      "garnier.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "garnier.com",
+    "name": "Garnier",
+    "tier": "warn",
+    "verified": false
+  },
+  "gatineau": {
+    "alternates": [
+      "gatineau.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gatineau.com",
+    "name": "GATINEAU",
+    "tier": "check",
+    "verified": false
+  },
+  "gelish": {
+    "alternates": [
+      "gelish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gelish.com",
+    "name": "Gelish",
+    "tier": "check",
+    "verified": false
+  },
+  "gelitup-by-giup": {
+    "alternates": [
+      "gelitupbygiup.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "gelitupbygiup.com",
+    "name": "GEL.IT.UP by GIUP",
+    "tier": "check",
+    "verified": false
+  },
+  "gender-neutral": {
+    "alternates": [
+      "genderneutral.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "genderneutral.com",
+    "name": "Gender Neutral",
+    "tier": "check",
+    "verified": false
+  },
+  "genglo": {
+    "alternates": [
+      "genglo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "genglo.com",
+    "name": "GenGlo",
+    "tier": "check",
+    "verified": false
+  },
+  "ghs-direct": {
+    "alternates": [
+      "ghsdirect.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ghsdirect.com",
+    "name": "GHS Direct",
+    "tier": "check",
+    "verified": false
+  },
+  "gillette": {
+    "alternates": [
+      "gillette.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gillette.com",
+    "name": "Gillette",
+    "tier": "bad",
+    "verified": false
+  },
+  "gingingers": {
+    "alternates": [
+      "gingingers.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gingingers.com",
+    "name": "Gingingers",
+    "tier": "check",
+    "verified": false
+  },
+  "girls-with-attitude": {
+    "alternates": [
+      "girlswithattitude.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "girlswithattitude.com",
+    "name": "Girls with Attitude",
+    "tier": "check",
+    "verified": false
+  },
+  "glade": {
+    "alternates": [
+      "glade.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "glade.com",
+    "name": "Glade",
+    "tier": "bad",
+    "verified": false
+  },
+  "glaze": {
+    "alternates": [
+      "glaze.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "glaze.com",
+    "name": "Glaze",
+    "tier": "good",
+    "verified": false
+  },
+  "glo-skin-beauty": {
+    "alternates": [
+      "gloskinbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gloskinbeauty.com",
+    "name": "Glo Skin Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "glow-for-it": {
+    "alternates": [
+      "glowforit.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "glowforit.com",
+    "name": "Glow For It",
+    "tier": "check",
+    "verified": false
+  },
+  "glow-hub": {
+    "alternates": [
+      "glowhub.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "glowhub.com",
+    "name": "Glow Hub",
+    "tier": "check",
+    "verified": false
+  },
+  "go-to-skincare": {
+    "alternates": [
+      "gotoskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gotoskincare.com",
+    "name": "Go-To Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "goats-of-the-gorge": {
+    "alternates": [
+      "goatsofthegorge.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "goatsofthegorge.com",
+    "name": "Goats of the Gorge",
+    "tier": "check",
+    "verified": false
+  },
+  "goldwell": {
+    "alternates": [
+      "goldwell.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "goldwell.com",
+    "name": "Goldwell",
+    "tier": "warn",
+    "verified": false
+  },
+  "goli-nutrition": {
+    "alternates": [
+      "golinutrition.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "golinutrition.com",
+    "name": "Goli Nutrition",
+    "tier": "check",
+    "verified": false
+  },
+  "good-bubble": {
+    "alternates": [
+      "goodbubble.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "goodbubble.com",
+    "name": "Good Bubble",
+    "tier": "check",
+    "verified": false
+  },
+  "good-one": {
+    "alternates": [
+      "goodone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "goodone.com",
+    "name": "Good One",
+    "tier": "check",
+    "verified": false
+  },
+  "gosh-copenhagen": {
+    "alternates": [
+      "goshcopenhagen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "goshcopenhagen.com",
+    "name": "GOSH Copenhagen",
+    "tier": "check",
+    "verified": false
+  },
+  "got2b": {
+    "alternates": [
+      "got2b.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "got2b.com",
+    "name": "got2b",
+    "tier": "bad",
+    "verified": false
+  },
+  "grande-cosmetics": {
+    "alternates": [
+      "grandecosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "grandecosmetics.com",
+    "name": "Grande Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "green-people": {
+    "alternates": [
+      "greenpeople.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "greenpeople.com",
+    "name": "Green People",
+    "tier": "check",
+    "verified": false
+  },
+  "green-wave": {
+    "alternates": [
+      "greenwave.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "greenwave.com",
+    "name": "Green Wave",
+    "tier": "check",
+    "verified": false
+  },
+  "greenscents": {
+    "alternates": [
+      "greenscents.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "greenscents.com",
+    "name": "Greenscents",
+    "tier": "check",
+    "verified": false
+  },
+  "grisi": {
+    "alternates": [
+      "grisi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "grisi.com",
+    "name": "Grisi",
+    "tier": "check",
+    "verified": false
+  },
+  "grown-alchemist": {
+    "alternates": [
+      "grownalchemist.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "grownalchemist.com",
+    "name": "Grown Alchemist",
+    "tier": "check",
+    "verified": false
+  },
+  "gruum": {
+    "alternates": [
+      "gruum.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gruum.com",
+    "name": "gruum",
+    "tier": "warn",
+    "verified": false
+  },
+  "gutology": {
+    "alternates": [
+      "gutology.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "gutology.com",
+    "name": "Gutology",
+    "tier": "warn",
+    "verified": false
+  },
+  "habi": {
+    "alternates": [
+      "habi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "habi.com",
+    "name": "Habi",
+    "tier": "warn",
+    "verified": false
+  },
+  "hair-by-sam-mcknight": {
+    "alternates": [
+      "hairbysammcknight.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "hairbysammcknight.com",
+    "name": "Hair by Sam McKnight",
+    "tier": "check",
+    "verified": false
+  },
+  "hair-food": {
+    "alternates": [
+      "hairfood.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hairfood.com",
+    "name": "Hair Food",
+    "tier": "warn",
+    "verified": false
+  },
+  "handmade-naturals": {
+    "alternates": [
+      "handmadenaturals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "handmadenaturals.com",
+    "name": "Handmade Naturals",
+    "tier": "check",
+    "verified": false
+  },
+  "hanna-sillitoe": {
+    "alternates": [
+      "hannasillitoe.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hannasillitoe.com",
+    "name": "Hanna Sillitoe",
+    "tier": "check",
+    "verified": false
+  },
+  "hannah-natural": {
+    "alternates": [
+      "hannahnatural.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hannahnatural.com",
+    "name": "Hannah Natural",
+    "tier": "check",
+    "verified": false
+  },
+  "happy-anne": {
+    "alternates": [
+      "happyanne.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "happyanne.com",
+    "name": "HAPPY ANNE",
+    "tier": "check",
+    "verified": false
+  },
+  "harpic": {
+    "alternates": [
+      "harpic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "harpic.com",
+    "name": "Harpic",
+    "tier": "bad",
+    "verified": false
+  },
+  "hawaiian-tropic": {
+    "alternates": [
+      "hawaiiantropic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hawaiiantropic.com",
+    "name": "Hawaiian Tropic",
+    "tier": "unverified",
+    "verified": false
+  },
+  "head-and-shoulders": {
+    "alternates": [
+      "headshoulders.co.uk",
+      "headandshoulders.com",
+      "headandshoulders.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "headshoulders.com",
+    "name": "Head & Shoulders",
+    "tier": "bad",
+    "verified": false
+  },
+  "helan": {
+    "alternates": [
+      "helan.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "helan.com",
+    "name": "Helan",
+    "tier": "check",
+    "verified": false
+  },
+  "hello-products": {
+    "alternates": [
+      "helloproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "helloproducts.com",
+    "name": "Hello Products",
+    "tier": "check",
+    "verified": false
+  },
+  "herbal-elea": {
+    "alternates": [
+      "herbalelea.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "herbalelea.com",
+    "name": "Herbal Elea",
+    "tier": "check",
+    "verified": false
+  },
+  "herbal-essences": {
+    "alternates": [
+      "herbalessences.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "herbalessences.com",
+    "name": "Herbal Essences",
+    "tier": "warn",
+    "verified": false
+  },
+  "herbivore-botanicals": {
+    "alternates": [
+      "herbivorebotanicals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "herbivorebotanicals.com",
+    "name": "Herbivore Botanicals",
+    "tier": "check",
+    "verified": false
+  },
+  "hershesons": {
+    "alternates": [
+      "hershesons.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hershesons.com",
+    "name": "Hershesons",
+    "tier": "check",
+    "verified": false
+  },
+  "hiip": {
+    "alternates": [
+      "hiip.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hiip.com",
+    "name": "Hiip",
+    "tier": "check",
+    "verified": false
+  },
+  "hims": {
+    "alternates": [
+      "hims.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hims.com",
+    "name": "Hims",
+    "tier": "check",
+    "verified": false
+  },
+  "hismile": {
+    "alternates": [
+      "hismile.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hismile.com",
+    "name": "HiSmile",
+    "tier": "check",
+    "verified": false
+  },
+  "holo-taco": {
+    "alternates": [
+      "holotaco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "holotaco.com",
+    "name": "Holo Taco",
+    "tier": "check",
+    "verified": false
+  },
+  "honeybee-gardens": {
+    "alternates": [
+      "honeybeegardens.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "honeybeegardens.com",
+    "name": "Honeybee Gardens",
+    "tier": "check",
+    "verified": false
+  },
+  "hourglass-cosmetics": {
+    "alternates": [
+      "hourglasscosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hourglasscosmetics.com",
+    "name": "Hourglass Cosmetics",
+    "tier": "warn",
+    "verified": false
+  },
+  "hownd": {
+    "alternates": [
+      "hownd.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hownd.com",
+    "name": "HOWND",
+    "tier": "check",
+    "verified": false
+  },
+  "hurraw": {
+    "alternates": [
+      "hurraw.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "hurraw.com",
+    "name": "Hurraw!",
+    "tier": "good",
+    "verified": false
+  },
+  "i-m-naturkosmetik-berlin": {
+    "alternates": [
+      "imnaturkosmetikberlin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "imnaturkosmetikberlin.com",
+    "name": "i+m NATURKOSMETIK BERLIN",
+    "tier": "check",
+    "verified": false
+  },
+  "icom": {
+    "alternates": [
+      "icom.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "icom.com",
+    "name": "icom",
+    "tier": "check",
+    "verified": false
+  },
+  "iconic-london": {
+    "alternates": [
+      "iconiclondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "iconiclondon.com",
+    "name": "Iconic London",
+    "tier": "check",
+    "verified": false
+  },
+  "idun-minerals": {
+    "alternates": [
+      "idunminerals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "idunminerals.com",
+    "name": "IDUN Minerals",
+    "tier": "check",
+    "verified": false
+  },
+  "illamasqua": {
+    "alternates": [
+      "illamasqua.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "illamasqua.com",
+    "name": "Illamasqua",
+    "tier": "check",
+    "verified": false
+  },
+  "image-skincare": {
+    "alternates": [
+      "imageskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "imageskincare.com",
+    "name": "Image Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "imperial-leather": {
+    "alternates": [
+      "imperialleather.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "imperialleather.com",
+    "name": "Imperial Leather",
+    "tier": "warn",
+    "verified": false
+  },
+  "incia": {
+    "alternates": [
+      "incia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "incia.com",
+    "name": "INCIA",
+    "tier": "check",
+    "verified": false
+  },
+  "ineos": {
+    "alternates": [
+      "ineos.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ineos.com",
+    "name": "INEOS",
+    "tier": "check",
+    "verified": false
+  },
+  "inglot-cosmetics": {
+    "alternates": [
+      "inglotcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "inglotcosmetics.com",
+    "name": "Inglot Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "inhana-skincare": {
+    "alternates": [
+      "inhanaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "inhanaskincare.com",
+    "name": "Inhana Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "inlight-beauty-and-wellness": {
+    "alternates": [
+      "inlightbeautywellness.co.uk",
+      "inlightbeautyandwellness.com",
+      "inlightbeautyandwellness.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "inlightbeautywellness.com",
+    "name": "Inlight Beauty & Wellness",
+    "tier": "check",
+    "verified": false
+  },
+  "invisibobble": {
+    "alternates": [
+      "invisibobble.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "invisibobble.com",
+    "name": "Invisibobble",
+    "tier": "check",
+    "verified": false
+  },
+  "iren-shizen": {
+    "alternates": [
+      "irenshizen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "irenshizen.com",
+    "name": "IREN Shizen",
+    "tier": "check",
+    "verified": false
+  },
+  "isagenix": {
+    "alternates": [
+      "isagenix.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "isagenix.com",
+    "name": "Isagenix",
+    "tier": "check",
+    "verified": false
+  },
+  "isle-of-paradise": {
+    "alternates": [
+      "isleofparadise.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "isleofparadise.com",
+    "name": "Isle Of Paradise",
+    "tier": "check",
+    "verified": false
+  },
+  "itreatskin": {
+    "alternates": [
+      "itreatskin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "itreatskin.com",
+    "name": "itreatskin",
+    "tier": "check",
+    "verified": false
+  },
+  "j-beverly-hills": {
+    "alternates": [
+      "jbeverlyhills.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jbeverlyhills.com",
+    "name": "J Beverly Hills",
+    "tier": "check",
+    "verified": false
+  },
+  "jack-black": {
+    "alternates": [
+      "jackblack.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jackblack.com",
+    "name": "Jack Black",
+    "tier": "check",
+    "verified": false
+  },
+  "jane-iredale": {
+    "alternates": [
+      "janeiredale.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "janeiredale.com",
+    "name": "jane iredale",
+    "tier": "check",
+    "verified": false
+  },
+  "je-suis-vert": {
+    "alternates": [
+      "jesuisvert.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jesuisvert.com",
+    "name": "Je Suis Vert",
+    "tier": "check",
+    "verified": false
+  },
+  "jeffree-star": {
+    "alternates": [
+      "jeffreestar.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jeffreestar.com",
+    "name": "Jeffree Star",
+    "tier": "check",
+    "verified": false
+  },
+  "jesses-girl-cosmetics": {
+    "alternates": [
+      "jessesgirlcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jessesgirlcosmetics.com",
+    "name": "Jesse's Girl Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "jeuneora": {
+    "alternates": [
+      "jeuneora.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jeuneora.com",
+    "name": "Jeuneora",
+    "tier": "check",
+    "verified": false
+  },
+  "john-frieda": {
+    "alternates": [
+      "johnfrieda.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "johnfrieda.com",
+    "name": "John Frieda",
+    "tier": "bad",
+    "verified": false
+  },
+  "john-lewis-and-partners": {
+    "alternates": [
+      "johnlewispartners.co.uk",
+      "johnlewisandpartners.com",
+      "johnlewisandpartners.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "johnlewispartners.com",
+    "name": "John Lewis & Partners",
+    "tier": "check",
+    "verified": false
+  },
+  "john-masters-organics": {
+    "alternates": [
+      "johnmastersorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "johnmastersorganics.com",
+    "name": "John Masters Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "john-paul-mitchell-systems": {
+    "alternates": [
+      "johnpaulmitchellsystems.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "johnpaulmitchellsystems.com",
+    "name": "John Paul Mitchell Systems",
+    "tier": "check",
+    "verified": false
+  },
+  "johnson-s": {
+    "alternates": [
+      "johnsons.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "johnsons.com",
+    "name": "Johnson's",
+    "tier": "bad",
+    "verified": false
+  },
+  "joico": {
+    "alternates": [
+      "joico.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "joico.com",
+    "name": "Joico",
+    "tier": "warn",
+    "verified": false
+  },
+  "josie-maran-cosmetics": {
+    "alternates": [
+      "josiemarancosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "josiemarancosmetics.com",
+    "name": "Josie Maran Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "jr-watkins": {
+    "alternates": [
+      "jrwatkins.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "jrwatkins.com",
+    "name": "J.R. Watkins",
+    "tier": "check",
+    "verified": false
+  },
+  "juice-beauty": {
+    "alternates": [
+      "juicebeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "juicebeauty.com",
+    "name": "Juice Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "julep-beauty": {
+    "alternates": [
+      "julepbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "julepbeauty.com",
+    "name": "Julep Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "julie-clarke-candles": {
+    "alternates": [
+      "julieclarkecandles.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "julieclarkecandles.com",
+    "name": "Julie Clarke Candles",
+    "tier": "check",
+    "verified": false
+  },
+  "juvenate-skincare": {
+    "alternates": [
+      "juvenateskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "juvenateskincare.com",
+    "name": "Juvenate Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "kadalys": {
+    "alternates": [
+      "kadalys.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kadalys.com",
+    "name": "Kadalys",
+    "tier": "check",
+    "verified": false
+  },
+  "kash-beauty": {
+    "alternates": [
+      "kashbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kashbeauty.com",
+    "name": "KASH Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "kate-somerville": {
+    "alternates": [
+      "katesomerville.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "katesomerville.com",
+    "name": "Kate Somerville",
+    "tier": "check",
+    "verified": false
+  },
+  "kativa": {
+    "alternates": [
+      "kativa.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kativa.com",
+    "name": "KATIVA",
+    "tier": "check",
+    "verified": false
+  },
+  "katoa-botanicals": {
+    "alternates": [
+      "katoabotanicals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "katoabotanicals.com",
+    "name": "Katoa Botanicals",
+    "tier": "check",
+    "verified": false
+  },
+  "kenra": {
+    "alternates": [
+      "kenra.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kenra.com",
+    "name": "Kenra",
+    "tier": "check",
+    "verified": false
+  },
+  "kevinmurphy": {
+    "alternates": [
+      "kevinmurphy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kevinmurphy.com",
+    "name": "KEVIN.MURPHY",
+    "tier": "check",
+    "verified": false
+  },
+  "keys-soulcare": {
+    "alternates": [
+      "keyssoulcare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "keyssoulcare.com",
+    "name": "Keys Soulcare",
+    "tier": "check",
+    "verified": false
+  },
+  "kids-stuff": {
+    "alternates": [
+      "kidsstuff.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kidsstuff.com",
+    "name": "Kids Stuff",
+    "tier": "check",
+    "verified": false
+  },
+  "king-of-shaves": {
+    "alternates": [
+      "kingofshaves.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kingofshaves.com",
+    "name": "King of Shaves",
+    "tier": "check",
+    "verified": false
+  },
+  "kingfisher": {
+    "alternates": [
+      "kingfisher.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kingfisher.com",
+    "name": "Kingfisher",
+    "tier": "check",
+    "verified": false
+  },
+  "kireyna": {
+    "alternates": [
+      "kireyna.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kireyna.com",
+    "name": "Kireyna",
+    "tier": "check",
+    "verified": false
+  },
+  "kiss-products": {
+    "alternates": [
+      "kissproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kissproducts.com",
+    "name": "Kiss Products",
+    "tier": "check",
+    "verified": false
+  },
+  "kmart": {
+    "alternates": [
+      "kmart.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kmart.com",
+    "name": "Kmart",
+    "tier": "check",
+    "verified": false
+  },
+  "kone-care": {
+    "alternates": [
+      "konecare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "konecare.com",
+    "name": "Kone Care",
+    "tier": "check",
+    "verified": false
+  },
+  "kora-organics": {
+    "alternates": [
+      "koraorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "koraorganics.com",
+    "name": "Kora Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "korres": {
+    "alternates": [
+      "korres.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "korres.com",
+    "name": "Korres",
+    "tier": "check",
+    "verified": false
+  },
+  "kotanical": {
+    "alternates": [
+      "kotanical.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kotanical.com",
+    "name": "KOTANICAL",
+    "tier": "check",
+    "verified": false
+  },
+  "krave-beauty": {
+    "alternates": [
+      "kravebeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kravebeauty.com",
+    "name": "KRAVE BEAUTY",
+    "tier": "check",
+    "verified": false
+  },
+  "kristin-ess-hair": {
+    "alternates": [
+      "kristinesshair.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kristinesshair.com",
+    "name": "Kristin Ess Hair",
+    "tier": "check",
+    "verified": false
+  },
+  "kryolan-professional-make-up": {
+    "alternates": [
+      "kryolanprofessionalmakeup.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kryolanprofessionalmakeup.com",
+    "name": "Kryolan Professional Make-up",
+    "tier": "check",
+    "verified": false
+  },
+  "kurl-kitchen": {
+    "alternates": [
+      "kurlkitchen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kurlkitchen.com",
+    "name": "Kurl Kitchen",
+    "tier": "check",
+    "verified": false
+  },
+  "kvd-beauty": {
+    "alternates": [
+      "kvdbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kvdbeauty.com",
+    "name": "KVD Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "kvitok": {
+    "alternates": [
+      "kvitok.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kvitok.com",
+    "name": "KVITOK",
+    "tier": "check",
+    "verified": false
+  },
+  "kyushi": {
+    "alternates": [
+      "kyushi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "kyushi.com",
+    "name": "Kyushi",
+    "tier": "check",
+    "verified": false
+  },
+  "l-oreal": {
+    "alternates": [
+      "loral.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "loral.com",
+    "name": "L'Oréal",
+    "tier": "bad",
+    "verified": false
+  },
+  "la-cosmetica-srl": {
+    "alternates": [
+      "lacosmeticasrl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lacosmeticasrl.com",
+    "name": "La Cosmetica srl",
+    "tier": "check",
+    "verified": false
+  },
+  "la-roche-posay": {
+    "alternates": [
+      "larocheposay.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "larocheposay.com",
+    "name": "La Roche-Posay",
+    "tier": "bad",
+    "verified": false
+  },
+  "labbok": {
+    "alternates": [
+      "labbok.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "labbok.com",
+    "name": "LABBOK",
+    "tier": "check",
+    "verified": false
+  },
+  "lacura": {
+    "alternates": [
+      "lacura.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lacura.com",
+    "name": "Lacura",
+    "tier": "check",
+    "verified": false
+  },
+  "lakm": {
+    "alternates": [
+      "lakm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lakm.com",
+    "name": "Lakmé",
+    "tier": "warn",
+    "verified": false
+  },
+  "lanolips": {
+    "alternates": [
+      "lanolips.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lanolips.com",
+    "name": "Lanolips",
+    "tier": "check",
+    "verified": false
+  },
+  "lavanila": {
+    "alternates": [
+      "lavanila.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lavanila.com",
+    "name": "Lavanila",
+    "tier": "check",
+    "verified": false
+  },
+  "lavera-naturkosmetik": {
+    "alternates": [
+      "laveranaturkosmetik.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "laveranaturkosmetik.com",
+    "name": "lavera Naturkosmetik",
+    "tier": "check",
+    "verified": false
+  },
+  "lbel": {
+    "alternates": [
+      "lbel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lbel.com",
+    "name": "L'BEL",
+    "tier": "check",
+    "verified": false
+  },
+  "lee-stafford": {
+    "alternates": [
+      "leestafford.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "leestafford.com",
+    "name": "Lee Stafford",
+    "tier": "check",
+    "verified": false
+  },
+  "leeukopf-laboratories": {
+    "alternates": [
+      "leeukopflaboratories.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "leeukopflaboratories.com",
+    "name": "Leeukopf Laboratories",
+    "tier": "check",
+    "verified": false
+  },
+  "lefay-spa-cosmetic-line": {
+    "alternates": [
+      "lefayspacosmeticline.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "lefayspacosmeticline.com",
+    "name": "Lefay SPA Cosmetic Line",
+    "tier": "check",
+    "verified": false
+  },
+  "lemon-myrtle": {
+    "alternates": [
+      "lemonmyrtle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lemonmyrtle.com",
+    "name": "Lemon Myrtle",
+    "tier": "check",
+    "verified": false
+  },
+  "lenor": {
+    "alternates": [
+      "lenor.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lenor.com",
+    "name": "Lenor",
+    "tier": "bad",
+    "verified": false
+  },
+  "lerana": {
+    "alternates": [
+      "lerana.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lerana.com",
+    "name": "Lerana",
+    "tier": "check",
+    "verified": false
+  },
+  "lerbolario-societa-benefit-srl": {
+    "alternates": [
+      "lerbolariosocietabenefitsrl.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "lerbolariosocietabenefitsrl.com",
+    "name": "L'Erbolario Societa Benefit Srl",
+    "tier": "check",
+    "verified": false
+  },
+  "levrana": {
+    "alternates": [
+      "levrana.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "levrana.com",
+    "name": "Levrana",
+    "tier": "check",
+    "verified": false
+  },
+  "lidl": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "lidl.co.uk",
+    "name": "Lidl",
+    "tier": "check",
+    "verified": false
+  },
+  "lidl-gb": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "lidl.co.uk",
+    "name": "Lidl GB",
+    "tier": "check",
+    "verified": false
+  },
+  "lidl-ireland-and-lidl-northern-ireland": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "lidl.co.uk",
+    "name": "Lidl Ireland & Lidl Northern Ireland",
+    "tier": "check",
+    "verified": false
+  },
+  "lime-crime": {
+    "alternates": [
+      "limecrime.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "limecrime.com",
+    "name": "Lime Crime",
+    "tier": "check",
+    "verified": false
+  },
+  "lip-smacker": {
+    "alternates": [
+      "lipsmacker.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lipsmacker.com",
+    "name": "Lip Smacker",
+    "tier": "check",
+    "verified": false
+  },
+  "lipstains-gold": {
+    "alternates": [
+      "lipstainsgold.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lipstainsgold.com",
+    "name": "Lipstains Gold",
+    "tier": "check",
+    "verified": false
+  },
+  "listerine": {
+    "alternates": [
+      "listerine.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "listerine.com",
+    "name": "Listerine",
+    "tier": "bad",
+    "verified": false
+  },
+  "little-heroes": {
+    "alternates": [
+      "littleheroes.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "littleheroes.com",
+    "name": "Little Heroes",
+    "tier": "check",
+    "verified": false
+  },
+  "little-soap-company": {
+    "alternates": [
+      "littlesoapcompany.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "littlesoapcompany.com",
+    "name": "Little Soap Company",
+    "tier": "good",
+    "verified": false
+  },
+  "living-proof": {
+    "alternates": [
+      "livingproof.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "livingproof.com",
+    "name": "Living Proof",
+    "tier": "warn",
+    "verified": false
+  },
+  "liz-earle": {
+    "alternates": [
+      "lizearle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lizearle.com",
+    "name": "Liz Earle",
+    "tier": "check",
+    "verified": false
+  },
+  "lock-stock-and-barrel": {
+    "alternates": [
+      "lockstockbarrel.co.uk",
+      "lockstockandbarrel.com",
+      "lockstockandbarrel.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "lockstockbarrel.com",
+    "name": "Lock Stock & Barrel",
+    "tier": "check",
+    "verified": false
+  },
+  "logona": {
+    "alternates": [
+      "logona.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "logona.com",
+    "name": "Logona",
+    "tier": "warn",
+    "verified": false
+  },
+  "london-copyright": {
+    "alternates": [
+      "londoncopyright.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "londoncopyright.com",
+    "name": "London Copyright",
+    "tier": "check",
+    "verified": false
+  },
+  "londontown": {
+    "alternates": [
+      "londontown.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "londontown.com",
+    "name": "Londontown",
+    "tier": "check",
+    "verified": false
+  },
+  "look-fabulous-forever": {
+    "alternates": [
+      "lookfabulousforever.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lookfabulousforever.com",
+    "name": "Look Fabulous Forever",
+    "tier": "check",
+    "verified": false
+  },
+  "lorac": {
+    "alternates": [
+      "lorac.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lorac.com",
+    "name": "LORAC",
+    "tier": "check",
+    "verified": false
+  },
+  "love-beauty-and-planet": {
+    "alternates": [
+      "lovebeautyandplanet.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "lovebeautyandplanet.com",
+    "name": "Love Beauty and Planet",
+    "tier": "warn",
+    "verified": false
+  },
+  "love-ethical-beauty": {
+    "alternates": [
+      "loveethicalbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "loveethicalbeauty.com",
+    "name": "Love Ethical beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "love-katie": {
+    "alternates": [
+      "lovekatie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lovekatie.com",
+    "name": "Love Katie",
+    "tier": "check",
+    "verified": false
+  },
+  "love-pets": {
+    "alternates": [
+      "lovepets.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lovepets.com",
+    "name": "Love Pets",
+    "tier": "check",
+    "verified": false
+  },
+  "lucky-tiger": {
+    "alternates": [
+      "luckytiger.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "luckytiger.com",
+    "name": "Lucky Tiger",
+    "tier": "check",
+    "verified": false
+  },
+  "lucy-bee": {
+    "alternates": [
+      "lucybee.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lucybee.com",
+    "name": "Lucy Bee",
+    "tier": "check",
+    "verified": false
+  },
+  "luminess-air": {
+    "alternates": [
+      "luminessair.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "luminessair.com",
+    "name": "Luminess Air",
+    "tier": "check",
+    "verified": false
+  },
+  "lumity": {
+    "alternates": [
+      "lumity.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lumity.com",
+    "name": "Lumity",
+    "tier": "check",
+    "verified": false
+  },
+  "lupilu": {
+    "alternates": [
+      "lupilu.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lupilu.com",
+    "name": "Lupilu",
+    "tier": "check",
+    "verified": false
+  },
+  "lush": {
+    "alternates": [
+      "lush.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lush.com",
+    "name": "Lush",
+    "tier": "check",
+    "verified": false
+  },
+  "lvx": {
+    "alternates": [
+      "lvx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lvx.com",
+    "name": "LVX",
+    "tier": "check",
+    "verified": false
+  },
+  "lynx": {
+    "alternates": [
+      "lynx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lynx.com",
+    "name": "Lynx",
+    "tier": "warn",
+    "verified": false
+  },
+  "lys-beauty": {
+    "alternates": [
+      "lysbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "lysbeauty.com",
+    "name": "LYS Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "macleans": {
+    "alternates": [
+      "macleans.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "macleans.com",
+    "name": "Macleans",
+    "tier": "bad",
+    "verified": false
+  },
+  "mad-hippie": {
+    "alternates": [
+      "madhippie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "madhippie.com",
+    "name": "Mad Hippie",
+    "tier": "good",
+    "verified": false
+  },
+  "madam-cj-walker": {
+    "alternates": [
+      "madamcjwalker.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "madamcjwalker.com",
+    "name": "Madam CJ Walker",
+    "tier": "check",
+    "verified": false
+  },
+  "made-for-life-organics": {
+    "alternates": [
+      "madeforlifeorganics.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "madeforlifeorganics.com",
+    "name": "Made for Life Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "made-of-more": {
+    "alternates": [
+      "madeofmore.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "madeofmore.com",
+    "name": "Made Of More",
+    "tier": "check",
+    "verified": false
+  },
+  "magic-lips": {
+    "alternates": [
+      "magiclips.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "magiclips.com",
+    "name": "Magic Lips",
+    "tier": "check",
+    "verified": false
+  },
+  "magnum-guardex": {
+    "alternates": [
+      "magnumguardex.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "magnumguardex.com",
+    "name": "Magnum Guardex",
+    "tier": "check",
+    "verified": false
+  },
+  "malin-goetz": {
+    "alternates": [
+      "malingoetz.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "malingoetz.com",
+    "name": "Malin+Goetz",
+    "tier": "check",
+    "verified": false
+  },
+  "mama-mio": {
+    "alternates": [
+      "mamamio.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mamamio.com",
+    "name": "Mama Mio",
+    "tier": "check",
+    "verified": false
+  },
+  "mamaearth": {
+    "alternates": [
+      "mamaearth.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mamaearth.com",
+    "name": "Mamaearth",
+    "tier": "check",
+    "verified": false
+  },
+  "mancave": {
+    "alternates": [
+      "mancave.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mancave.com",
+    "name": "ManCave",
+    "tier": "check",
+    "verified": false
+  },
+  "manhattan": {
+    "alternates": [
+      "manhattan.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "manhattan.com",
+    "name": "Manhattan",
+    "tier": "check",
+    "verified": false
+  },
+  "manic-panic": {
+    "alternates": [
+      "manicpanic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "manicpanic.com",
+    "name": "Manic Panic",
+    "tier": "check",
+    "verified": false
+  },
+  "manscaped": {
+    "alternates": [
+      "manscaped.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "manscaped.com",
+    "name": "MANSCAPED",
+    "tier": "check",
+    "verified": false
+  },
+  "manufaktura": {
+    "alternates": [
+      "manufaktura.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "manufaktura.com",
+    "name": "Manufaktura",
+    "tier": "check",
+    "verified": false
+  },
+  "maple-holistics": {
+    "alternates": [
+      "mapleholistics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mapleholistics.com",
+    "name": "Maple Holistics",
+    "tier": "check",
+    "verified": false
+  },
+  "marc-anthony": {
+    "alternates": [
+      "marcanthony.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "marcanthony.com",
+    "name": "Marc Anthony",
+    "tier": "check",
+    "verified": false
+  },
+  "marcelle": {
+    "alternates": [
+      "marcelle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "marcelle.com",
+    "name": "Marcelle",
+    "tier": "check",
+    "verified": false
+  },
+  "maria-nila": {
+    "alternates": [
+      "marianila.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "marianila.com",
+    "name": "Maria Nila",
+    "tier": "check",
+    "verified": false
+  },
+  "mark-birch-trichlogist": {
+    "alternates": [
+      "markbirchtrichlogist.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "markbirchtrichlogist.com",
+    "name": "Mark Birch Trichlogist",
+    "tier": "check",
+    "verified": false
+  },
+  "marks-and-spencer": {
+    "alternates": [
+      "marksspencer.co.uk",
+      "marksandspencer.com",
+      "marksandspencer.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "marksspencer.com",
+    "name": "Marks & Spencer",
+    "tier": "check",
+    "verified": false
+  },
+  "maroqueen": {
+    "alternates": [
+      "maroqueen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "maroqueen.com",
+    "name": "Maroqueen",
+    "tier": "check",
+    "verified": false
+  },
+  "max-factor": {
+    "alternates": [
+      "maxfactor.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "maxfactor.com",
+    "name": "Max Factor",
+    "tier": "bad",
+    "verified": false
+  },
+  "maybelline": {
+    "alternates": [
+      "maybelline.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "maybelline.com",
+    "name": "Maybelline",
+    "tier": "bad",
+    "verified": false
+  },
+  "mazel": {
+    "alternates": [
+      "mazel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mazel.com",
+    "name": "MAZEL",
+    "tier": "check",
+    "verified": false
+  },
+  "mazillo": {
+    "alternates": [
+      "mazillo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mazillo.com",
+    "name": "Mazillo",
+    "tier": "check",
+    "verified": false
+  },
+  "mendittorosa": {
+    "alternates": [
+      "mendittorosa.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mendittorosa.com",
+    "name": "Mendittorosa",
+    "tier": "check",
+    "verified": false
+  },
+  "mervue-natural-skincare": {
+    "alternates": [
+      "mervuenaturalskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mervuenaturalskincare.com",
+    "name": "Mervue Natural Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "mesauda-milano": {
+    "alternates": [
+      "mesaudamilano.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mesaudamilano.com",
+    "name": "Mesauda Milano",
+    "tier": "check",
+    "verified": false
+  },
+  "method": {
+    "alternates": [
+      "method.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "method.com",
+    "name": "Method",
+    "tier": "warn",
+    "verified": false
+  },
+  "michael-todd-beauty": {
+    "alternates": [
+      "michaeltoddbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "michaeltoddbeauty.com",
+    "name": "Michael Todd Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "micky-day": {
+    "alternates": [
+      "mickyday.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mickyday.com",
+    "name": "Micky Day",
+    "tier": "check",
+    "verified": false
+  },
+  "mielev": {
+    "alternates": [
+      "mielev.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mielev.com",
+    "name": "MIELEV",
+    "tier": "check",
+    "verified": false
+  },
+  "mienna-cosmetics-ltd": {
+    "alternates": [
+      "miennacosmeticsltd.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "miennacosmeticsltd.com",
+    "name": "Mienna Cosmetics Ltd",
+    "tier": "check",
+    "verified": false
+  },
+  "milani-cosmetics": {
+    "alternates": [
+      "milanicosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "milanicosmetics.com",
+    "name": "Milani Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "milk-honey": {
+    "alternates": [
+      "milkhoney.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "milkhoney.com",
+    "name": "milk + honey",
+    "tier": "check",
+    "verified": false
+  },
+  "miniml": {
+    "alternates": [
+      "miniml.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "miniml.com",
+    "name": "Miniml",
+    "tier": "good",
+    "verified": false
+  },
+  "miss-organics": {
+    "alternates": [
+      "missorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "missorganics.com",
+    "name": "Miss Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "mitchum": {
+    "alternates": [
+      "mitchum.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mitchum.com",
+    "name": "Mitchum",
+    "tier": "bad",
+    "verified": false
+  },
+  "mixed-chicks": {
+    "alternates": [
+      "mixedchicks.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mixedchicks.com",
+    "name": "Mixed Chicks",
+    "tier": "check",
+    "verified": false
+  },
+  "modelco": {
+    "alternates": [
+      "modelco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "modelco.com",
+    "name": "ModelCo",
+    "tier": "check",
+    "verified": false
+  },
+  "modere": {
+    "alternates": [
+      "modere.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "modere.com",
+    "name": "Modere",
+    "tier": "check",
+    "verified": false
+  },
+  "modern-botany": {
+    "alternates": [
+      "modernbotany.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "modernbotany.com",
+    "name": "Modern Botany",
+    "tier": "check",
+    "verified": false
+  },
+  "molton-brown": {
+    "alternates": [
+      "moltonbrown.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "moltonbrown.com",
+    "name": "Molton Brown",
+    "tier": "check",
+    "verified": false
+  },
+  "monange": {
+    "alternates": [
+      "monange.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "monange.com",
+    "name": "Monange",
+    "tier": "check",
+    "verified": false
+  },
+  "monday-haircare": {
+    "alternates": [
+      "mondayhaircare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mondayhaircare.com",
+    "name": "MONDAY Haircare",
+    "tier": "check",
+    "verified": false
+  },
+  "moroccanoil": {
+    "alternates": [
+      "moroccanoil.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "moroccanoil.com",
+    "name": "Moroccanoil",
+    "tier": "check",
+    "verified": false
+  },
+  "morrisons": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "morrisons.com",
+    "name": "Morrisons",
+    "tier": "check",
+    "verified": false
+  },
+  "moss-and-adams": {
+    "alternates": [
+      "mossadams.co.uk",
+      "mossandadams.com",
+      "mossandadams.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mossadams.com",
+    "name": "Moss & Adams",
+    "tier": "check",
+    "verified": false
+  },
+  "mother-nailture": {
+    "alternates": [
+      "mothernailture.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mothernailture.com",
+    "name": "Mother Nailture",
+    "tier": "check",
+    "verified": false
+  },
+  "mothers-earth": {
+    "alternates": [
+      "mothersearth.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mothersearth.com",
+    "name": "Mother's Earth",
+    "tier": "check",
+    "verified": false
+  },
+  "mr-muscle": {
+    "alternates": [
+      "mrmuscle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mrmuscle.com",
+    "name": "Mr Muscle",
+    "tier": "bad",
+    "verified": false
+  },
+  "mrs-meyers-clean-day": {
+    "alternates": [
+      "mrsmeyerscleanday.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "mrsmeyerscleanday.com",
+    "name": "Mrs. Meyers Clean Day",
+    "tier": "check",
+    "verified": false
+  },
+  "mua": {
+    "alternates": [
+      "mua.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mua.com",
+    "name": "MUA",
+    "tier": "good",
+    "verified": false
+  },
+  "mumandyou": {
+    "alternates": [
+      "mumyou.co.uk",
+      "mumandyou.com",
+      "mumandyou.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mumyou.com",
+    "name": "Mum&You",
+    "tier": "check",
+    "verified": false
+  },
+  "murad": {
+    "alternates": [
+      "murad.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "murad.com",
+    "name": "Murad",
+    "tier": "warn",
+    "verified": false
+  },
+  "mychelle-dermaceuticals": {
+    "alternates": [
+      "mychelledermaceuticals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "mychelledermaceuticals.com",
+    "name": "MyChelle Dermaceuticals",
+    "tier": "check",
+    "verified": false
+  },
+  "nads": {
+    "alternates": [
+      "nads.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nads.com",
+    "name": "Nad's",
+    "tier": "check",
+    "verified": false
+  },
+  "nails-inc": {
+    "alternates": [
+      "nailsinc.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nailsinc.com",
+    "name": "Nails Inc.",
+    "tier": "check",
+    "verified": false
+  },
+  "nakin": {
+    "alternates": [
+      "nakin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nakin.com",
+    "name": "Nakin",
+    "tier": "check",
+    "verified": false
+  },
+  "nalas-baby": {
+    "alternates": [
+      "nalasbaby.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nalasbaby.com",
+    "name": "Nala's Baby",
+    "tier": "check",
+    "verified": false
+  },
+  "natracare": {
+    "alternates": [
+      "natracare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "natracare.com",
+    "name": "Natracare",
+    "tier": "good",
+    "verified": false
+  },
+  "natroma": {
+    "alternates": [
+      "natroma.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "natroma.com",
+    "name": "Natroma",
+    "tier": "check",
+    "verified": false
+  },
+  "natura": {
+    "alternates": [
+      "natura.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "natura.com",
+    "name": "Natura",
+    "tier": "check",
+    "verified": false
+  },
+  "natural-by-nature-oils": {
+    "alternates": [
+      "naturalbynatureoils.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "naturalbynatureoils.com",
+    "name": "Natural by Nature Oils",
+    "tier": "check",
+    "verified": false
+  },
+  "naturally-tiwa-skincare": {
+    "alternates": [
+      "naturallytiwaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "naturallytiwaskincare.com",
+    "name": "Naturally Tiwa Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "natures-divine": {
+    "alternates": [
+      "naturesdivine.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "naturesdivine.com",
+    "name": "Nature's Divine",
+    "tier": "check",
+    "verified": false
+  },
+  "natures-gate": {
+    "alternates": [
+      "naturesgate.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "naturesgate.com",
+    "name": "Nature's Gate",
+    "tier": "check",
+    "verified": false
+  },
+  "naturium": {
+    "alternates": [
+      "naturium.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "naturium.com",
+    "name": "Naturium",
+    "tier": "check",
+    "verified": false
+  },
+  "neal-and-wolf": {
+    "alternates": [
+      "nealwolf.co.uk",
+      "nealandwolf.com",
+      "nealandwolf.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nealwolf.com",
+    "name": "Neal & Wolf",
+    "tier": "check",
+    "verified": false
+  },
+  "neals-yard-remedies": {
+    "alternates": [
+      "nealsyardremedies.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nealsyardremedies.com",
+    "name": "Neal's Yard Remedies",
+    "tier": "check",
+    "verified": false
+  },
+  "nest-fragrances": {
+    "alternates": [
+      "nestfragrances.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nestfragrances.com",
+    "name": "Nest Fragrances",
+    "tier": "check",
+    "verified": false
+  },
+  "neutrogena": {
+    "alternates": [
+      "neutrogena.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "neutrogena.com",
+    "name": "Neutrogena",
+    "tier": "bad",
+    "verified": false
+  },
+  "newgen": {
+    "alternates": [
+      "newgen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "newgen.com",
+    "name": "#NEWGEN",
+    "tier": "check",
+    "verified": false
+  },
+  "newmans-own-organics": {
+    "alternates": [
+      "newmansownorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "newmansownorganics.com",
+    "name": "Newman's Own Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "nex-environment": {
+    "alternates": [
+      "nexenvironment.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nexenvironment.com",
+    "name": "NEX ENVIRONMENT",
+    "tier": "check",
+    "verified": false
+  },
+  "nice": {
+    "alternates": [
+      "nice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nice.com",
+    "name": "NICE",
+    "tier": "check",
+    "verified": false
+  },
+  "nimonths": {
+    "alternates": [
+      "nimonths.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nimonths.com",
+    "name": "nimonths+",
+    "tier": "check",
+    "verified": false
+  },
+  "niod": {
+    "alternates": [
+      "niod.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "niod.com",
+    "name": "NIOD",
+    "tier": "check",
+    "verified": false
+  },
+  "nivea": {
+    "alternates": [
+      "nivea.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nivea.com",
+    "name": "Nivea",
+    "tier": "bad",
+    "verified": false
+  },
+  "no7": {
+    "alternates": [
+      "no7.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "no7.com",
+    "name": "No7",
+    "tier": "warn",
+    "verified": false
+  },
+  "noughty": {
+    "alternates": [
+      "noughty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "noughty.com",
+    "name": "Noughty",
+    "tier": "good",
+    "verified": false
+  },
+  "nourish-london": {
+    "alternates": [
+      "nourishlondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nourishlondon.com",
+    "name": "Nourish London",
+    "tier": "check",
+    "verified": false
+  },
+  "novaretin": {
+    "alternates": [
+      "novaretin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "novaretin.com",
+    "name": "NOVARETIN",
+    "tier": "check",
+    "verified": false
+  },
+  "nsfa-beauty": {
+    "alternates": [
+      "nsfabeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nsfabeauty.com",
+    "name": "NSFA Beauty",
+    "tier": "good",
+    "verified": false
+  },
+  "nubian-heritage": {
+    "alternates": [
+      "nubianheritage.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nubianheritage.com",
+    "name": "Nubian Heritage",
+    "tier": "warn",
+    "verified": false
+  },
+  "nude-by-nature": {
+    "alternates": [
+      "nudebynature.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "nudebynature.com",
+    "name": "Nude by Nature",
+    "tier": "check",
+    "verified": false
+  },
+  "nunaia": {
+    "alternates": [
+      "nunaia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nunaia.com",
+    "name": "Nunaia",
+    "tier": "check",
+    "verified": false
+  },
+  "nursem": {
+    "alternates": [
+      "nursem.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nursem.com",
+    "name": "Nursem",
+    "tier": "check",
+    "verified": false
+  },
+  "nutmeg": {
+    "alternates": [
+      "nutmeg.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nutmeg.com",
+    "name": "Nutmeg",
+    "tier": "check",
+    "verified": false
+  },
+  "nyx": {
+    "alternates": [
+      "nyx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nyx.com",
+    "name": "NYX",
+    "tier": "warn",
+    "verified": false
+  },
+  "nyx-professional-makeup": {
+    "alternates": [
+      "nyxprofessionalmakeup.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "nyxprofessionalmakeup.com",
+    "name": "NYX Professional Makeup",
+    "tier": "warn",
+    "verified": false
+  },
+  "o-boticario": {
+    "alternates": [
+      "oboticario.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oboticario.com",
+    "name": "O Boticario",
+    "tier": "check",
+    "verified": false
+  },
+  "obsessive-compulsive-cosmetics": {
+    "alternates": [
+      "obsessivecompulsivecosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "obsessivecompulsivecosmetics.com",
+    "name": "Obsessive Compulsive Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "obvs-skincare": {
+    "alternates": [
+      "obvsskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "obvsskincare.com",
+    "name": "Obvs Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "oceansaver": {
+    "alternates": [
+      "oceansaver.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oceansaver.com",
+    "name": "OceanSaver",
+    "tier": "check",
+    "verified": false
+  },
+  "ogx": {
+    "alternates": [
+      "ogx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ogx.com",
+    "name": "OGX",
+    "tier": "bad",
+    "verified": false
+  },
+  "oio-lab": {
+    "alternates": [
+      "oiolab.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oiolab.com",
+    "name": "Oio Lab",
+    "tier": "check",
+    "verified": false
+  },
+  "okiki-skincare": {
+    "alternates": [
+      "okikiskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "okikiskincare.com",
+    "name": "Okiki Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "olay": {
+    "alternates": [
+      "olay.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "olay.com",
+    "name": "Olay",
+    "tier": "bad",
+    "verified": false
+  },
+  "old-spice": {
+    "alternates": [
+      "oldspice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oldspice.com",
+    "name": "Old Spice",
+    "tier": "bad",
+    "verified": false
+  },
+  "ole-henriksen": {
+    "alternates": [
+      "olehenriksen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "olehenriksen.com",
+    "name": "Ole Henriksen",
+    "tier": "check",
+    "verified": false
+  },
+  "omorovicza": {
+    "alternates": [
+      "omorovicza.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "omorovicza.com",
+    "name": "Omorovicza",
+    "tier": "check",
+    "verified": false
+  },
+  "oral-b": {
+    "alternates": [
+      "oralb.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oralb.com",
+    "name": "Oral-B",
+    "tier": "bad",
+    "verified": false
+  },
+  "organic-harvest": {
+    "alternates": [
+      "organicharvest.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "organicharvest.com",
+    "name": "Organic Harvest",
+    "tier": "check",
+    "verified": false
+  },
+  "organic-skin-australia": {
+    "alternates": [
+      "organicskinaustralia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "organicskinaustralia.com",
+    "name": "Organic Skin Australia",
+    "tier": "check",
+    "verified": false
+  },
+  "organicspa": {
+    "alternates": [
+      "organicspa.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "organicspa.com",
+    "name": "Organicspa",
+    "tier": "check",
+    "verified": false
+  },
+  "oribe-hair-care": {
+    "alternates": [
+      "oribehaircare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oribehaircare.com",
+    "name": "ORIBE Hair Care",
+    "tier": "check",
+    "verified": false
+  },
+  "original-source": {
+    "alternates": [
+      "originalsource.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "originalsource.com",
+    "name": "Original Source",
+    "tier": "check",
+    "verified": false
+  },
+  "osea": {
+    "alternates": [
+      "osea.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "osea.com",
+    "name": "OSEA",
+    "tier": "check",
+    "verified": false
+  },
+  "oui": {
+    "alternates": [
+      "oui.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oui.com",
+    "name": "O.U.I",
+    "tier": "check",
+    "verified": false
+  },
+  "ouidad": {
+    "alternates": [
+      "ouidad.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ouidad.com",
+    "name": "Ouidad",
+    "tier": "check",
+    "verified": false
+  },
+  "oxx": {
+    "alternates": [
+      "oxx.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "oxx.com",
+    "name": "OXX",
+    "tier": "check",
+    "verified": false
+  },
+  "pacific-wax-co": {
+    "alternates": [
+      "pacificwaxco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pacificwaxco.com",
+    "name": "Pacific Wax Co.",
+    "tier": "unverified",
+    "verified": false
+  },
+  "pacifica": {
+    "alternates": [
+      "pacifica.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pacifica.com",
+    "name": "Pacifica",
+    "tier": "check",
+    "verified": false
+  },
+  "pai-skincare": {
+    "alternates": [
+      "paiskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "paiskincare.com",
+    "name": "Pai Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "paixao": {
+    "alternates": [
+      "paixao.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "paixao.com",
+    "name": "Paixao",
+    "tier": "check",
+    "verified": false
+  },
+  "paladone": {
+    "alternates": [
+      "paladone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "paladone.com",
+    "name": "Paladone",
+    "tier": "check",
+    "verified": false
+  },
+  "palmolive": {
+    "alternates": [
+      "palmolive.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "palmolive.com",
+    "name": "Palmolive",
+    "tier": "bad",
+    "verified": false
+  },
+  "pamoja": {
+    "alternates": [
+      "pamoja.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pamoja.com",
+    "name": "Pamoja",
+    "tier": "check",
+    "verified": false
+  },
+  "pangea-organics": {
+    "alternates": [
+      "pangeaorganics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pangeaorganics.com",
+    "name": "Pangea Organics",
+    "tier": "check",
+    "verified": false
+  },
+  "pantene": {
+    "alternates": [
+      "pantene.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pantene.com",
+    "name": "Pantene",
+    "tier": "bad",
+    "verified": false
+  },
+  "parla": {
+    "alternates": [
+      "parla.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "parla.com",
+    "name": "PARLA",
+    "tier": "check",
+    "verified": false
+  },
+  "pattern-beauty": {
+    "alternates": [
+      "patternbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "patternbeauty.com",
+    "name": "Pattern Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "paulas-choice": {
+    "alternates": [
+      "paulaschoice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "paulaschoice.com",
+    "name": "Paula's Choice",
+    "tier": "warn",
+    "verified": false
+  },
+  "peace-with-the-wild": {
+    "alternates": [
+      "peacewiththewild.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "peacewiththewild.com",
+    "name": "Peace With The Wild",
+    "tier": "check",
+    "verified": false
+  },
+  "penneys": {
+    "alternates": [
+      "penneys.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "penneys.com",
+    "name": "Penneys",
+    "tier": "check",
+    "verified": false
+  },
+  "people-of-the-earth": {
+    "alternates": [
+      "peopleoftheearth.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "peopleoftheearth.com",
+    "name": "People of the Earth",
+    "tier": "check",
+    "verified": false
+  },
+  "perfect-girl": {
+    "alternates": [
+      "perfectgirl.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "perfectgirl.com",
+    "name": "Perfect Girl",
+    "tier": "check",
+    "verified": false
+  },
+  "peros": {
+    "alternates": [
+      "peros.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "peros.com",
+    "name": "Peros",
+    "tier": "check",
+    "verified": false
+  },
+  "persil": {
+    "alternates": [
+      "persil.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "persil.com",
+    "name": "Persil",
+    "tier": "bad",
+    "verified": false
+  },
+  "phb-ethical-beauty": {
+    "alternates": [
+      "phbethicalbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "phbethicalbeauty.com",
+    "name": "PHB Ethical Beauty",
+    "tier": "good",
+    "verified": false
+  },
+  "philosophy": {
+    "alternates": [
+      "philosophy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "philosophy.com",
+    "name": "philosophy",
+    "tier": "check",
+    "verified": false
+  },
+  "phoenix-crown": {
+    "alternates": [
+      "phoenixcrown.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "phoenixcrown.com",
+    "name": "Phoenix Crown",
+    "tier": "check",
+    "verified": false
+  },
+  "physicians-formula": {
+    "alternates": [
+      "physiciansformula.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "physiciansformula.com",
+    "name": "Physicians Formula",
+    "tier": "check",
+    "verified": false
+  },
+  "pikes-pouches": {
+    "alternates": [
+      "pikespouches.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pikespouches.com",
+    "name": "Pike's Pouches",
+    "tier": "check",
+    "verified": false
+  },
+  "pilgrim": {
+    "alternates": [
+      "pilgrim.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pilgrim.com",
+    "name": "Pilgrim",
+    "tier": "check",
+    "verified": false
+  },
+  "pipette": {
+    "alternates": [
+      "pipette.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pipette.com",
+    "name": "Pipette",
+    "tier": "check",
+    "verified": false
+  },
+  "piz-buin": {
+    "alternates": [
+      "pizbuin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pizbuin.com",
+    "name": "Piz Buin",
+    "tier": "unverified",
+    "verified": false
+  },
+  "planted-skincare": {
+    "alternates": [
+      "plantedskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "plantedskincare.com",
+    "name": "Planted Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "pledge": {
+    "alternates": [
+      "pledge.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pledge.com",
+    "name": "Pledge",
+    "tier": "bad",
+    "verified": false
+  },
+  "plouise": {
+    "alternates": [
+      "plouise.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "plouise.com",
+    "name": "P.Louise",
+    "tier": "check",
+    "verified": false
+  },
+  "plum-goodness": {
+    "alternates": [
+      "plumgoodness.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "plumgoodness.com",
+    "name": "Plum Goodness",
+    "tier": "check",
+    "verified": false
+  },
+  "poppin-yang": {
+    "alternates": [
+      "poppinyang.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "poppinyang.com",
+    "name": "Poppin' Yang",
+    "tier": "check",
+    "verified": false
+  },
+  "prai-beauty": {
+    "alternates": [
+      "praibeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "praibeauty.com",
+    "name": "PRAI Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "pravana": {
+    "alternates": [
+      "pravana.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pravana.com",
+    "name": "Pravana",
+    "tier": "check",
+    "verified": false
+  },
+  "pretty-vulgar": {
+    "alternates": [
+      "prettyvulgar.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "prettyvulgar.com",
+    "name": "Pretty Vulgar",
+    "tier": "check",
+    "verified": false
+  },
+  "primark": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "primark.com",
+    "name": "Primark",
+    "tier": "check",
+    "verified": false
+  },
+  "primavera-life": {
+    "alternates": [
+      "primaveralife.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "primaveralife.com",
+    "name": "Primavera Life",
+    "tier": "check",
+    "verified": false
+  },
+  "pura-dor": {
+    "alternates": [
+      "purador.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "purador.com",
+    "name": "PURA D'OR",
+    "tier": "check",
+    "verified": false
+  },
+  "pura-vie": {
+    "alternates": [
+      "puravie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "puravie.com",
+    "name": "Pura Vie",
+    "tier": "check",
+    "verified": false
+  },
+  "puracy": {
+    "alternates": [
+      "puracy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "puracy.com",
+    "name": "Puracy",
+    "tier": "check",
+    "verified": false
+  },
+  "pure-argan-co": {
+    "alternates": [
+      "purearganco.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "purearganco.com",
+    "name": "Pure Argan Co",
+    "tier": "check",
+    "verified": false
+  },
+  "pure-chemistry": {
+    "alternates": [
+      "purechemistry.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "purechemistry.com",
+    "name": "Pure Chemistry",
+    "tier": "check",
+    "verified": false
+  },
+  "pure-project": {
+    "alternates": [
+      "pureproject.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pureproject.com",
+    "name": "Pure Project",
+    "tier": "check",
+    "verified": false
+  },
+  "purearth": {
+    "alternates": [
+      "purearth.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "purearth.com",
+    "name": "Purearth",
+    "tier": "check",
+    "verified": false
+  },
+  "pureology": {
+    "alternates": [
+      "pureology.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pureology.com",
+    "name": "Pureology",
+    "tier": "warn",
+    "verified": false
+  },
+  "purextracts": {
+    "alternates": [
+      "purextracts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "purextracts.com",
+    "name": "Purextracts",
+    "tier": "check",
+    "verified": false
+  },
+  "pyykkiarkki": {
+    "alternates": [
+      "pyykkiarkki.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pyykkiarkki.com",
+    "name": "Pyykkiarkki",
+    "tier": "check",
+    "verified": false
+  },
+  "pz-cussons": {
+    "alternates": [
+      "pzcussons.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "pzcussons.com",
+    "name": "PZ Cussons",
+    "tier": "check",
+    "verified": false
+  },
+  "queen-helene": {
+    "alternates": [
+      "queenhelene.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "queenhelene.com",
+    "name": "Queen Helene",
+    "tier": "check",
+    "verified": false
+  },
+  "quem-disse-berenice": {
+    "alternates": [
+      "quemdisseberenice.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "quemdisseberenice.com",
+    "name": "Quem disse, Berenice",
+    "tier": "check",
+    "verified": false
+  },
+  "radox": {
+    "alternates": [
+      "radox.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "radox.com",
+    "name": "Radox",
+    "tier": "bad",
+    "verified": false
+  },
+  "rare-beauty": {
+    "alternates": [
+      "rarebeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rarebeauty.com",
+    "name": "Rare Beauty",
+    "tier": "good",
+    "verified": false
+  },
+  "raven-botanicals": {
+    "alternates": [
+      "ravenbotanicals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ravenbotanicals.com",
+    "name": "Raven Botanicals",
+    "tier": "check",
+    "verified": false
+  },
+  "real-techniques": {
+    "alternates": [
+      "realtechniques.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "realtechniques.com",
+    "name": "Real Techniques",
+    "tier": "check",
+    "verified": false
+  },
+  "rebul": {
+    "alternates": [
+      "rebul.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rebul.com",
+    "name": "Rebul",
+    "tier": "check",
+    "verified": false
+  },
+  "redken": {
+    "alternates": [
+      "redken.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "redken.com",
+    "name": "Redken",
+    "tier": "bad",
+    "verified": false
+  },
+  "refy": {
+    "alternates": [
+      "refy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "refy.com",
+    "name": "REFY",
+    "tier": "check",
+    "verified": false
+  },
+  "rem-beauty": {
+    "alternates": [
+      "rembeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rembeauty.com",
+    "name": "r.e.m. beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "ren": {
+    "alternates": [
+      "ren.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ren.com",
+    "name": "REN",
+    "tier": "warn",
+    "verified": false
+  },
+  "revitalash-cosmetics": {
+    "alternates": [
+      "revitalashcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "revitalashcosmetics.com",
+    "name": "RevitaLash Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "revolution-beauty": {
+    "alternates": [
+      "revolutionbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "revolutionbeauty.com",
+    "name": "Revolution Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "rhode-skin": {
+    "alternates": [
+      "rhodeskin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rhodeskin.com",
+    "name": "Rhode Skin",
+    "tier": "check",
+    "verified": false
+  },
+  "rhug-wild-beauty": {
+    "alternates": [
+      "rhugwildbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rhugwildbeauty.com",
+    "name": "Rhug Wild Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "riemann-p20": {
+    "alternates": [
+      "riemannp20.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "riemannp20.com",
+    "name": "Riemann P20",
+    "tier": "unverified",
+    "verified": false
+  },
+  "right-guard": {
+    "alternates": [
+      "rightguard.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rightguard.com",
+    "name": "Right Guard",
+    "tier": "unverified",
+    "verified": false
+  },
+  "riley-rose": {
+    "alternates": [
+      "rileyrose.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rileyrose.com",
+    "name": "Riley Rose",
+    "tier": "check",
+    "verified": false
+  },
+  "rimmel": {
+    "alternates": [
+      "rimmel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rimmel.com",
+    "name": "Rimmel",
+    "tier": "warn",
+    "verified": false
+  },
+  "risque": {
+    "alternates": [
+      "risque.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "risque.com",
+    "name": "Risque",
+    "tier": "check",
+    "verified": false
+  },
+  "rms-beauty": {
+    "alternates": [
+      "rmsbeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rmsbeauty.com",
+    "name": "rms beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "roc-skincare": {
+    "alternates": [
+      "rocskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rocskincare.com",
+    "name": "RoC Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "rspca": {
+    "alternates": [
+      "rspca.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rspca.com",
+    "name": "RSPCA",
+    "tier": "check",
+    "verified": false
+  },
+  "rustic-art": {
+    "alternates": [
+      "rusticart.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "rusticart.com",
+    "name": "Rustic Art",
+    "tier": "check",
+    "verified": false
+  },
+  "sable-labs": {
+    "alternates": [
+      "sablelabs.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sablelabs.com",
+    "name": "S'able Labs",
+    "tier": "check",
+    "verified": false
+  },
+  "sacred": {
+    "alternates": [
+      "sacred.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sacred.com",
+    "name": "Sacred",
+    "tier": "check",
+    "verified": false
+  },
+  "safeway": {
+    "alternates": [
+      "safeway.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "safeway.com",
+    "name": "Safeway",
+    "tier": "check",
+    "verified": false
+  },
+  "sainsbury-s": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "sainsburys.co.uk",
+    "name": "Sainsbury's",
+    "tier": "check",
+    "verified": false
+  },
+  "saira": {
+    "alternates": [
+      "saira.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "saira.com",
+    "name": "SAIRA",
+    "tier": "check",
+    "verified": false
+  },
+  "sally-hansen": {
+    "alternates": [
+      "sallyhansen.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sallyhansen.com",
+    "name": "Sally Hansen",
+    "tier": "bad",
+    "verified": false
+  },
+  "salon-selectives": {
+    "alternates": [
+      "salonselectives.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "salonselectives.com",
+    "name": "Salon Selectives",
+    "tier": "check",
+    "verified": false
+  },
+  "salt-of-the-earth": {
+    "alternates": [
+      "saltoftheearth.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "saltoftheearth.com",
+    "name": "Salt of the Earth",
+    "tier": "good",
+    "verified": false
+  },
+  "samaya-ayurveda": {
+    "alternates": [
+      "samayaayurveda.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "samayaayurveda.com",
+    "name": "SAMAYA Ayurveda",
+    "tier": "check",
+    "verified": false
+  },
+  "sanctum": {
+    "alternates": [
+      "sanctum.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sanctum.com",
+    "name": "Sanctum",
+    "tier": "check",
+    "verified": false
+  },
+  "sanex": {
+    "alternates": [
+      "sanex.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sanex.com",
+    "name": "Sanex",
+    "tier": "bad",
+    "verified": false
+  },
+  "sansin": {
+    "alternates": [
+      "sansin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sansin.com",
+    "name": "Sansin",
+    "tier": "check",
+    "verified": false
+  },
+  "santaverde": {
+    "alternates": [
+      "santaverde.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "santaverde.com",
+    "name": "Santaverde",
+    "tier": "check",
+    "verified": false
+  },
+  "sarafumi": {
+    "alternates": [
+      "sarafumi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sarafumi.com",
+    "name": "Sarafumi",
+    "tier": "check",
+    "verified": false
+  },
+  "satin-care": {
+    "alternates": [
+      "satincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "satincare.com",
+    "name": "Satin Care",
+    "tier": "bad",
+    "verified": false
+  },
+  "sbtrct-skincare": {
+    "alternates": [
+      "sbtrctskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sbtrctskincare.com",
+    "name": "SBTRCT Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "schmidts-naturals": {
+    "alternates": [
+      "schmidtsnaturals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "schmidtsnaturals.com",
+    "name": "Schmidt's Naturals",
+    "tier": "warn",
+    "verified": false
+  },
+  "schwarzkopf": {
+    "alternates": [
+      "schwarzkopf.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "schwarzkopf.com",
+    "name": "Schwarzkopf",
+    "tier": "bad",
+    "verified": false
+  },
+  "scott-and-lawson": {
+    "alternates": [
+      "scottlawson.co.uk",
+      "scottandlawson.com",
+      "scottandlawson.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "scottlawson.com",
+    "name": "Scott & Lawson",
+    "tier": "check",
+    "verified": false
+  },
+  "sculpted-by-aimee": {
+    "alternates": [
+      "sculptedbyaimee.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "sculptedbyaimee.com",
+    "name": "Sculpted by Aimee",
+    "tier": "check",
+    "verified": false
+  },
+  "seeds-of-colour": {
+    "alternates": [
+      "seedsofcolour.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "seedsofcolour.com",
+    "name": "Seeds of Colour",
+    "tier": "check",
+    "verified": false
+  },
+  "seniha-skincare": {
+    "alternates": [
+      "senihaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "senihaskincare.com",
+    "name": "Seniha Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "sensapur": {
+    "alternates": [
+      "sensapur.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sensapur.com",
+    "name": "Sensapur",
+    "tier": "check",
+    "verified": false
+  },
+  "sensatia": {
+    "alternates": [
+      "sensatia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sensatia.com",
+    "name": "Sensatia",
+    "tier": "check",
+    "verified": false
+  },
+  "sensilait": {
+    "alternates": [
+      "sensilait.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sensilait.com",
+    "name": "SensiLait",
+    "tier": "check",
+    "verified": false
+  },
+  "sensodyne": {
+    "alternates": [
+      "sensodyne.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sensodyne.com",
+    "name": "Sensodyne",
+    "tier": "bad",
+    "verified": false
+  },
+  "seresilk": {
+    "alternates": [
+      "seresilk.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "seresilk.com",
+    "name": "Seresilk",
+    "tier": "check",
+    "verified": false
+  },
+  "seventh-generation": {
+    "alternates": [
+      "seventhgeneration.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "seventhgeneration.com",
+    "name": "Seventh Generation",
+    "tier": "warn",
+    "verified": false
+  },
+  "sexy-hair": {
+    "alternates": [
+      "sexyhair.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sexyhair.com",
+    "name": "Sexy Hair",
+    "tier": "warn",
+    "verified": false
+  },
+  "shades-of-london": {
+    "alternates": [
+      "shadesoflondon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "shadesoflondon.com",
+    "name": "Shades of London",
+    "tier": "check",
+    "verified": false
+  },
+  "shani-darden": {
+    "alternates": [
+      "shanidarden.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "shanidarden.com",
+    "name": "Shani Darden",
+    "tier": "check",
+    "verified": false
+  },
+  "shedid-and-parrish": {
+    "alternates": [
+      "shedidparrish.co.uk",
+      "shedidandparrish.com",
+      "shedidandparrish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "shedidparrish.com",
+    "name": "Shedid & Parrish",
+    "tier": "check",
+    "verified": false
+  },
+  "sheglam": {
+    "alternates": [
+      "sheglam.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sheglam.com",
+    "name": "SHEGLAM",
+    "tier": "check",
+    "verified": false
+  },
+  "shikai-products": {
+    "alternates": [
+      "shikaiproducts.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "shikaiproducts.com",
+    "name": "ShiKai Products",
+    "tier": "check",
+    "verified": false
+  },
+  "sigma-beauty": {
+    "alternates": [
+      "sigmabeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sigmabeauty.com",
+    "name": "Sigma Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "silvan-skincare": {
+    "alternates": [
+      "silvanskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "silvanskincare.com",
+    "name": "Silvan Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "simple": {
+    "alternates": [
+      "simple.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "simple.com",
+    "name": "Simple",
+    "tier": "warn",
+    "verified": false
+  },
+  "siskyn-skincare-oils": {
+    "alternates": [
+      "siskynskincareoils.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "siskynskincareoils.com",
+    "name": "Siskyn Skincare Oils",
+    "tier": "check",
+    "verified": false
+  },
+  "siveno": {
+    "alternates": [
+      "siveno.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "siveno.com",
+    "name": "SIVENO",
+    "tier": "check",
+    "verified": false
+  },
+  "skin-deep": {
+    "alternates": [
+      "skindeep.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "skindeep.com",
+    "name": "Skin Deep",
+    "tier": "check",
+    "verified": false
+  },
+  "skin-formulas": {
+    "alternates": [
+      "skinformulas.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "skinformulas.com",
+    "name": "Skin Formulas",
+    "tier": "check",
+    "verified": false
+  },
+  "skinfix": {
+    "alternates": [
+      "skinfix.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "skinfix.com",
+    "name": "Skinfix",
+    "tier": "check",
+    "verified": false
+  },
+  "skyn-iceland": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "iceland.co.uk",
+    "name": "skyn ICELAND",
+    "tier": "check",
+    "verified": false
+  },
+  "sleek-makeup": {
+    "alternates": [
+      "sleekmakeup.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sleekmakeup.com",
+    "name": "Sleek MakeUP",
+    "tier": "warn",
+    "verified": false
+  },
+  "smashbox": {
+    "alternates": [
+      "smashbox.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "smashbox.com",
+    "name": "Smashbox",
+    "tier": "warn",
+    "verified": false
+  },
+  "smol": {
+    "alternates": [
+      "smol.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "smol.com",
+    "name": "Smol",
+    "tier": "check",
+    "verified": false
+  },
+  "soak-sunday": {
+    "alternates": [
+      "soaksunday.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soaksunday.com",
+    "name": "Soak Sunday",
+    "tier": "check",
+    "verified": false
+  },
+  "soap-glory": {
+    "alternates": [
+      "soapglory.co.uk",
+      "soapandglory.com",
+      "soapandglory.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soapglory.com",
+    "name": "Soap & Glory",
+    "tier": "warn",
+    "verified": false
+  },
+  "soap-valley": {
+    "alternates": [
+      "soapvalley.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soapvalley.com",
+    "name": "Soap Valley",
+    "tier": "check",
+    "verified": false
+  },
+  "soaphoria": {
+    "alternates": [
+      "soaphoria.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soaphoria.com",
+    "name": "Soaphoria",
+    "tier": "check",
+    "verified": false
+  },
+  "soft-and-delicate": {
+    "alternates": [
+      "softdelicate.co.uk",
+      "softanddelicate.com",
+      "softanddelicate.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "softdelicate.com",
+    "name": "SOFT & DELICATE",
+    "tier": "check",
+    "verified": false
+  },
+  "softy": {
+    "alternates": [
+      "softy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "softy.com",
+    "name": "Softy",
+    "tier": "check",
+    "verified": false
+  },
+  "soho-skin": {
+    "alternates": [
+      "sohoskin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sohoskin.com",
+    "name": "Soho Skin",
+    "tier": "check",
+    "verified": false
+  },
+  "sol-de-janeiro": {
+    "alternates": [
+      "soldejaneiro.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soldejaneiro.com",
+    "name": "Sol de Janeiro",
+    "tier": "check",
+    "verified": false
+  },
+  "solait-by-superdrug": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "Solait (Superdrug)",
+    "tier": "check",
+    "verified": false
+  },
+  "solgar-vitamin-company": {
+    "alternates": [
+      "solgarvitamincompany.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "solgarvitamincompany.com",
+    "name": "Solgar Vitamin Company",
+    "tier": "check",
+    "verified": false
+  },
+  "solitaire-uk-ltd": {
+    "alternates": [
+      "solitaireukltd.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "solitaireukltd.com",
+    "name": "Solitaire UK Ltd",
+    "tier": "check",
+    "verified": false
+  },
+  "soluclean": {
+    "alternates": [
+      "soluclean.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "soluclean.com",
+    "name": "soluCLEAN",
+    "tier": "check",
+    "verified": false
+  },
+  "solupak": {
+    "alternates": [
+      "solupak.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "solupak.com",
+    "name": "SoluPak",
+    "tier": "check",
+    "verified": false
+  },
+  "sparitual": {
+    "alternates": [
+      "sparitual.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sparitual.com",
+    "name": "SpaRitual",
+    "tier": "check",
+    "verified": false
+  },
+  "splat-hair-color": {
+    "alternates": [
+      "splathaircolor.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "splathaircolor.com",
+    "name": "Splat Hair Color",
+    "tier": "check",
+    "verified": false
+  },
+  "st-ives": {
+    "alternates": [
+      "stives.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stives.com",
+    "name": "St Ives",
+    "tier": "warn",
+    "verified": false
+  },
+  "st-moriz": {
+    "alternates": [
+      "stmoriz.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stmoriz.com",
+    "name": "St. Moriz",
+    "tier": "check",
+    "verified": false
+  },
+  "stardrops": {
+    "alternates": [
+      "stardrops.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stardrops.com",
+    "name": "Stardrops",
+    "tier": "check",
+    "verified": false
+  },
+  "stargazer": {
+    "alternates": [
+      "stargazer.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stargazer.com",
+    "name": "Stargazer",
+    "tier": "check",
+    "verified": false
+  },
+  "stereo": {
+    "alternates": [
+      "stereo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stereo.com",
+    "name": "STEREO",
+    "tier": "check",
+    "verified": false
+  },
+  "stila-cosmetics": {
+    "alternates": [
+      "stilacosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "stilacosmetics.com",
+    "name": "Stila Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "strange-luxury": {
+    "alternates": [
+      "strangeluxury.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "strangeluxury.com",
+    "name": "Strange Luxury",
+    "tier": "check",
+    "verified": false
+  },
+  "studio-gel": {
+    "alternates": [
+      "studiogel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "studiogel.com",
+    "name": "STUDIO Gel",
+    "tier": "check",
+    "verified": false
+  },
+  "studio-milligram": {
+    "alternates": [
+      "studiomilligram.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "studiomilligram.com",
+    "name": "Studio Milligram",
+    "tier": "check",
+    "verified": false
+  },
+  "subtle-energies": {
+    "alternates": [
+      "subtleenergies.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "subtleenergies.com",
+    "name": "Subtle Energies",
+    "tier": "check",
+    "verified": false
+  },
+  "sue-marsh": {
+    "alternates": [
+      "suemarsh.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "suemarsh.com",
+    "name": "Sue Marsh",
+    "tier": "check",
+    "verified": false
+  },
+  "sugar-coated": {
+    "alternates": [
+      "sugarcoated.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sugarcoated.com",
+    "name": "Sugar Coated",
+    "tier": "check",
+    "verified": false
+  },
+  "sugar-cosmetics": {
+    "alternates": [
+      "sugarcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sugarcosmetics.com",
+    "name": "Sugar Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "sugarpill-cosmetics": {
+    "alternates": [
+      "sugarpillcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sugarpillcosmetics.com",
+    "name": "Sugarpill Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "suki": {
+    "alternates": [
+      "suki.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "suki.com",
+    "name": "Suki",
+    "tier": "check",
+    "verified": false
+  },
+  "sukin": {
+    "alternates": [
+      "sukin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sukin.com",
+    "name": "Sukin",
+    "tier": "good",
+    "verified": false
+  },
+  "sun-bum": {
+    "alternates": [
+      "sunbum.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sunbum.com",
+    "name": "Sun Bum",
+    "tier": "check",
+    "verified": false
+  },
+  "sundae": {
+    "alternates": [
+      "sundae.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sundae.com",
+    "name": "Sundae",
+    "tier": "check",
+    "verified": false
+  },
+  "sunday-riley-modern-skincare": {
+    "alternates": [
+      "sundayrileymodernskincare.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "sundayrileymodernskincare.com",
+    "name": "Sunday Riley Modern Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "sunsilk": {
+    "alternates": [
+      "sunsilk.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sunsilk.com",
+    "name": "Sunsilk",
+    "tier": "warn",
+    "verified": false
+  },
+  "superdrug": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "Superdrug",
+    "tier": "check",
+    "verified": false
+  },
+  "superdrug-own-brand-dental": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "Superdrug own-brand (dental range)",
+    "tier": "check",
+    "verified": false
+  },
+  "superdrug-own-brand-wider-range": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "Superdrug own brand (wider range)",
+    "tier": "check",
+    "verified": false
+  },
+  "superdrug-pro-care": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "superdrug.com",
+    "name": "Superdrug Pro Care",
+    "tier": "check",
+    "verified": false
+  },
+  "supergoop": {
+    "alternates": [
+      "supergoop.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "supergoop.com",
+    "name": "Supergoop!",
+    "tier": "check",
+    "verified": false
+  },
+  "sure": {
+    "alternates": [
+      "sure.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "sure.com",
+    "name": "Sure",
+    "tier": "bad",
+    "verified": false
+  },
+  "surf": {
+    "alternates": [
+      "surf.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "surf.com",
+    "name": "Surf",
+    "tier": "bad",
+    "verified": false
+  },
+  "surya-brasil": {
+    "alternates": [
+      "suryabrasil.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "suryabrasil.com",
+    "name": "Surya Brasil",
+    "tier": "check",
+    "verified": false
+  },
+  "susanne-kaufmann": {
+    "alternates": [
+      "susannekaufmann.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "susannekaufmann.com",
+    "name": "Susanne Kaufmann",
+    "tier": "check",
+    "verified": false
+  },
+  "swypes": {
+    "alternates": [
+      "swypes.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "swypes.com",
+    "name": "Swypes",
+    "tier": "check",
+    "verified": false
+  },
+  "synergie-skin": {
+    "alternates": [
+      "synergieskin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "synergieskin.com",
+    "name": "Synergie Skin",
+    "tier": "check",
+    "verified": false
+  },
+  "syorell": {
+    "alternates": [
+      "syorell.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "syorell.com",
+    "name": "Syorell",
+    "tier": "check",
+    "verified": false
+  },
+  "system-nature": {
+    "alternates": [
+      "systemnature.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "systemnature.com",
+    "name": "System Nature",
+    "tier": "check",
+    "verified": false
+  },
+  "t-gel": {
+    "alternates": [
+      "tgel.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tgel.com",
+    "name": "T/Gel",
+    "tier": "bad",
+    "verified": false
+  },
+  "tampax": {
+    "alternates": [
+      "tampax.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tampax.com",
+    "name": "Tampax",
+    "tier": "bad",
+    "verified": false
+  },
+  "tan-luxe": {
+    "alternates": [
+      "tanluxe.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tanluxe.com",
+    "name": "Tan-Luxe",
+    "tier": "check",
+    "verified": false
+  },
+  "tangle-teezer": {
+    "alternates": [
+      "tangleteezer.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tangleteezer.com",
+    "name": "Tangle Teezer",
+    "tier": "check",
+    "verified": false
+  },
+  "tanologist": {
+    "alternates": [
+      "tanologist.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tanologist.com",
+    "name": "Tanologist",
+    "tier": "check",
+    "verified": false
+  },
+  "tanorganic": {
+    "alternates": [
+      "tanorganic.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tanorganic.com",
+    "name": "TanOrganic",
+    "tier": "check",
+    "verified": false
+  },
+  "tarte-cosmetics": {
+    "alternates": [
+      "tartecosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tartecosmetics.com",
+    "name": "Tarte Cosmetics",
+    "tier": "warn",
+    "verified": false
+  },
+  "tata-harper-skincare": {
+    "alternates": [
+      "tataharperskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tataharperskincare.com",
+    "name": "Tata Harper Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "tatcha": {
+    "alternates": [
+      "tatcha.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tatcha.com",
+    "name": "TATCHA",
+    "tier": "warn",
+    "verified": false
+  },
+  "technic-cosmetics": {
+    "alternates": [
+      "techniccosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "techniccosmetics.com",
+    "name": "Technic Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "temko-cosmetics": {
+    "alternates": [
+      "temkocosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "temkocosmetics.com",
+    "name": "Temko Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "tena": {
+    "alternates": [
+      "tena.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tena.com",
+    "name": "TENA",
+    "tier": "bad",
+    "verified": false
+  },
+  "that-good-hair": {
+    "alternates": [
+      "thatgoodhair.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thatgoodhair.com",
+    "name": "That Good Hair",
+    "tier": "check",
+    "verified": false
+  },
+  "thayers-natural": {
+    "alternates": [
+      "thayersnatural.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thayersnatural.com",
+    "name": "Thayers Natural",
+    "tier": "check",
+    "verified": false
+  },
+  "the-australian-natural-soap-company": {
+    "alternates": [
+      "theaustraliannaturalsoapcompany.co.uk",
+      "australiannaturalsoapcompany.com",
+      "australiannaturalsoapcompany.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "theaustraliannaturalsoapcompany.com",
+    "name": "The Australian Natural Soap Company",
+    "tier": "check",
+    "verified": false
+  },
+  "the-barberia": {
+    "alternates": [
+      "thebarberia.co.uk",
+      "barberia.com",
+      "barberia.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thebarberia.com",
+    "name": "THE BARBERIA",
+    "tier": "check",
+    "verified": false
+  },
+  "the-body-shop": {
+    "alternates": [
+      "thebodyshop.co.uk",
+      "bodyshop.com",
+      "bodyshop.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thebodyshop.com",
+    "name": "The Body Shop",
+    "tier": "warn",
+    "verified": false
+  },
+  "the-cheeky-panda": {
+    "alternates": [
+      "thecheekypanda.co.uk",
+      "cheekypanda.com",
+      "cheekypanda.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thecheekypanda.com",
+    "name": "The Cheeky Panda",
+    "tier": "check",
+    "verified": false
+  },
+  "the-cocoon-original-vietnam": {
+    "alternates": [
+      "thecocoonoriginalvietnam.co.uk",
+      "cocoonoriginalvietnam.com",
+      "cocoonoriginalvietnam.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "thecocoonoriginalvietnam.com",
+    "name": "The COCOON ORIGINAL VIETNAM",
+    "tier": "good",
+    "verified": false
+  },
+  "the-east-to-west-lifestyle-co": {
+    "alternates": [
+      "theeasttowestlifestyleco.co.uk",
+      "easttowestlifestyleco.com",
+      "easttowestlifestyleco.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "theeasttowestlifestyleco.com",
+    "name": "THE EAST TO WEST LIFESTYLE CO",
+    "tier": "check",
+    "verified": false
+  },
+  "the-gel-crew": {
+    "alternates": [
+      "thegelcrew.co.uk",
+      "gelcrew.com",
+      "gelcrew.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thegelcrew.com",
+    "name": "The Gel Crew",
+    "tier": "check",
+    "verified": false
+  },
+  "the-good-one": {
+    "alternates": [
+      "thegoodone.co.uk",
+      "goodone.com",
+      "goodone.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thegoodone.com",
+    "name": "The Good One",
+    "tier": "check",
+    "verified": false
+  },
+  "the-handmade-soap-company": {
+    "alternates": [
+      "thehandmadesoapcompany.co.uk",
+      "handmadesoapcompany.com",
+      "handmadesoapcompany.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "thehandmadesoapcompany.com",
+    "name": "The Handmade Soap Company",
+    "tier": "check",
+    "verified": false
+  },
+  "the-honest-company": {
+    "alternates": [
+      "thehonestcompany.co.uk",
+      "honestcompany.com",
+      "honestcompany.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thehonestcompany.com",
+    "name": "The Honest Company",
+    "tier": "check",
+    "verified": false
+  },
+  "the-honest-midwife": {
+    "alternates": [
+      "thehonestmidwife.co.uk",
+      "honestmidwife.com",
+      "honestmidwife.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thehonestmidwife.com",
+    "name": "The Honest Midwife",
+    "tier": "check",
+    "verified": false
+  },
+  "the-inkey-list": {
+    "alternates": [
+      "theinkeylist.co.uk",
+      "inkeylist.com",
+      "inkeylist.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "theinkeylist.com",
+    "name": "The Inkey List",
+    "tier": "check",
+    "verified": false
+  },
+  "the-konjac-sponge-co": {
+    "alternates": [
+      "thekonjacspongeco.co.uk",
+      "konjacspongeco.com",
+      "konjacspongeco.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "thekonjacspongeco.com",
+    "name": "The Konjac Sponge Co",
+    "tier": "check",
+    "verified": false
+  },
+  "the-natural-deodorant-co": {
+    "alternates": [
+      "thenaturaldeodorantco.co.uk",
+      "naturaldeodorantco.com",
+      "naturaldeodorantco.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "thenaturaldeodorantco.com",
+    "name": "The Natural Deodorant Co",
+    "tier": "good",
+    "verified": false
+  },
+  "the-natural-soapworks": {
+    "alternates": [
+      "thenaturalsoapworks.co.uk",
+      "naturalsoapworks.com",
+      "naturalsoapworks.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thenaturalsoapworks.com",
+    "name": "The Natural Soapworks",
+    "tier": "check",
+    "verified": false
+  },
+  "the-ordinary": {
+    "alternates": [
+      "theordinary.co.uk",
+      "ordinary.com",
+      "ordinary.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "theordinary.com",
+    "name": "The Ordinary",
+    "tier": "warn",
+    "verified": false
+  },
+  "the-pink-stuff": {
+    "alternates": [
+      "thepinkstuff.co.uk",
+      "pinkstuff.com",
+      "pinkstuff.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thepinkstuff.com",
+    "name": "The Pink Stuff",
+    "tier": "good",
+    "verified": false
+  },
+  "the-powder-shampoo": {
+    "alternates": [
+      "thepowdershampoo.co.uk",
+      "powdershampoo.com",
+      "powdershampoo.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thepowdershampoo.com",
+    "name": "The Powder Shampoo",
+    "tier": "check",
+    "verified": false
+  },
+  "the-skin-edition": {
+    "alternates": [
+      "theskinedition.co.uk",
+      "skinedition.com",
+      "skinedition.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "theskinedition.com",
+    "name": "The Skin Edition",
+    "tier": "check",
+    "verified": false
+  },
+  "thermitek-ltd": {
+    "alternates": [
+      "thermitekltd.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thermitekltd.com",
+    "name": "Thermitek Ltd",
+    "tier": "check",
+    "verified": false
+  },
+  "this-works": {
+    "alternates": [
+      "thisworks.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thisworks.com",
+    "name": "This Works",
+    "tier": "check",
+    "verified": false
+  },
+  "thrive-causemetics": {
+    "alternates": [
+      "thrivecausemetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "thrivecausemetics.com",
+    "name": "Thrive Causemetics",
+    "tier": "check",
+    "verified": false
+  },
+  "throda-skincare": {
+    "alternates": [
+      "throdaskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "throdaskincare.com",
+    "name": "Throda Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "timotei": {
+    "alternates": [
+      "timotei.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "timotei.com",
+    "name": "Timotei",
+    "tier": "bad",
+    "verified": false
+  },
+  "toilet-duck": {
+    "alternates": [
+      "toiletduck.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "toiletduck.com",
+    "name": "Toilet Duck",
+    "tier": "bad",
+    "verified": false
+  },
+  "toms-of-maine": {
+    "alternates": [
+      "tomsofmaine.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tomsofmaine.com",
+    "name": "Tom's of Maine",
+    "tier": "warn",
+    "verified": false
+  },
+  "tonymoly": {
+    "alternates": [
+      "tonymoly.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tonymoly.com",
+    "name": "TONYMOLY",
+    "tier": "check",
+    "verified": false
+  },
+  "too-faced": {
+    "alternates": [
+      "toofaced.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "toofaced.com",
+    "name": "Too Faced",
+    "tier": "warn",
+    "verified": false
+  },
+  "tootilab": {
+    "alternates": [
+      "tootilab.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tootilab.com",
+    "name": "Tootilab",
+    "tier": "check",
+    "verified": false
+  },
+  "totm": {
+    "alternates": [
+      "totm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "totm.com",
+    "name": "TOTM",
+    "tier": "good",
+    "verified": false
+  },
+  "trader-joes-company": {
+    "alternates": [
+      "traderjoescompany.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "traderjoescompany.com",
+    "name": "Trader Joe's Company",
+    "tier": "check",
+    "verified": false
+  },
+  "treaclemoon": {
+    "alternates": [
+      "treaclemoon.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "treaclemoon.com",
+    "name": "Treaclemoon",
+    "tier": "check",
+    "verified": false
+  },
+  "tree-hut": {
+    "alternates": [
+      "treehut.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "treehut.com",
+    "name": "Tree Hut",
+    "tier": "check",
+    "verified": false
+  },
+  "tresemm": {
+    "alternates": [
+      "tresemm.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tresemm.com",
+    "name": "TRESemmé",
+    "tier": "warn",
+    "verified": false
+  },
+  "trevor-sorbie": {
+    "alternates": [
+      "trevorsorbie.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "trevorsorbie.com",
+    "name": "Trevor Sorbie",
+    "tier": "check",
+    "verified": false
+  },
+  "trigwell-cosmetics": {
+    "alternates": [
+      "trigwellcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "trigwellcosmetics.com",
+    "name": "Trigwell Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "trish-mcevoy": {
+    "alternates": [
+      "trishmcevoy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "trishmcevoy.com",
+    "name": "Trish McEvoy",
+    "tier": "check",
+    "verified": false
+  },
+  "tropic": {
+    "alternates": [
+      "tropicskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tropicskincare.com",
+    "name": "Tropic Skincare",
+    "tier": "good",
+    "verified": false
+  },
+  "true": {
+    "alternates": [
+      "true.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "true.com",
+    "name": "True",
+    "tier": "check",
+    "verified": false
+  },
+  "true-alchemy": {
+    "alternates": [
+      "truealchemy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "truealchemy.com",
+    "name": "True Alchemy",
+    "tier": "check",
+    "verified": false
+  },
+  "true-botanicals": {
+    "alternates": [
+      "truebotanicals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "truebotanicals.com",
+    "name": "True Botanicals",
+    "tier": "check",
+    "verified": false
+  },
+  "tula": {
+    "alternates": [
+      "tula.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tula.com",
+    "name": "TULA",
+    "tier": "check",
+    "verified": false
+  },
+  "tulita": {
+    "alternates": [
+      "tulita.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "tulita.com",
+    "name": "Tulita",
+    "tier": "check",
+    "verified": false
+  },
+  "typology": {
+    "alternates": [
+      "typology.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "typology.com",
+    "name": "Typology",
+    "tier": "check",
+    "verified": false
+  },
+  "ukviat": {
+    "alternates": [
+      "ukviat.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ukviat.com",
+    "name": "UKVIAT",
+    "tier": "check",
+    "verified": false
+  },
+  "ulta-beauty-collection": {
+    "alternates": [
+      "ultabeautycollection.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ultabeautycollection.com",
+    "name": "Ulta Beauty Collection",
+    "tier": "check",
+    "verified": false
+  },
+  "ultra-glow": {
+    "alternates": [
+      "ultraglow.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ultraglow.com",
+    "name": "Ultra Glow",
+    "tier": "check",
+    "verified": false
+  },
+  "ultraceuticals": {
+    "alternates": [
+      "ultraceuticals.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "ultraceuticals.com",
+    "name": "Ultraceuticals",
+    "tier": "check",
+    "verified": false
+  },
+  "umberto-giannini": {
+    "alternates": [
+      "umbertogiannini.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "umbertogiannini.com",
+    "name": "Umberto Giannini",
+    "tier": "good",
+    "verified": false
+  },
+  "uniq-made": {
+    "alternates": [
+      "uniqmade.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "uniqmade.com",
+    "name": "UNIQ MADE",
+    "tier": "check",
+    "verified": false
+  },
+  "unique-boutique": {
+    "alternates": [
+      "uniqueboutique.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "uniqueboutique.com",
+    "name": "Unique Boutique",
+    "tier": "check",
+    "verified": false
+  },
+  "unite-haircare": {
+    "alternates": [
+      "unitehaircare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "unitehaircare.com",
+    "name": "UNITE Haircare",
+    "tier": "check",
+    "verified": false
+  },
+  "upcircle-beauty": {
+    "alternates": [
+      "upcirclebeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "upcirclebeauty.com",
+    "name": "UpCircle Beauty",
+    "tier": "check",
+    "verified": false
+  },
+  "urban-decay": {
+    "alternates": [
+      "urbandecay.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "urbandecay.com",
+    "name": "Urban Decay",
+    "tier": "warn",
+    "verified": false
+  },
+  "vanish": {
+    "alternates": [
+      "vanish.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vanish.com",
+    "name": "Vanish",
+    "tier": "bad",
+    "verified": false
+  },
+  "vasanti-cosmetics": {
+    "alternates": [
+      "vasanticosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vasanticosmetics.com",
+    "name": "Vasanti Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "vaseline": {
+    "alternates": [
+      "vaseline.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vaseline.com",
+    "name": "Vaseline",
+    "tier": "bad",
+    "verified": false
+  },
+  "veet": {
+    "alternates": [
+      "veet.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "veet.com",
+    "name": "Veet",
+    "tier": "bad",
+    "verified": false
+  },
+  "vegantan": {
+    "alternates": [
+      "vegantan.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vegantan.com",
+    "name": "VeganTan",
+    "tier": "check",
+    "verified": false
+  },
+  "venus": {
+    "alternates": [
+      "venus.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "venus.com",
+    "name": "Venus",
+    "tier": "bad",
+    "verified": false
+  },
+  "verb": {
+    "alternates": [
+      "verb.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "verb.com",
+    "name": "VERB",
+    "tier": "check",
+    "verified": false
+  },
+  "viakal": {
+    "alternates": [
+      "viakal.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "viakal.com",
+    "name": "Viakal",
+    "tier": "bad",
+    "verified": false
+  },
+  "vichy": {
+    "alternates": [
+      "vichy.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vichy.com",
+    "name": "Vichy",
+    "tier": "bad",
+    "verified": false
+  },
+  "viridian-nutrition": {
+    "alternates": [
+      "viridiannutrition.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "viridiannutrition.com",
+    "name": "Viridian Nutrition",
+    "tier": "check",
+    "verified": false
+  },
+  "vo5": {
+    "alternates": [
+      "vo5.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vo5.com",
+    "name": "VO5",
+    "tier": "bad",
+    "verified": false
+  },
+  "vosene": {
+    "alternates": [
+      "vosene.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vosene.com",
+    "name": "Vosene",
+    "tier": "unverified",
+    "verified": false
+  },
+  "vult": {
+    "alternates": [
+      "vult.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "vult.com",
+    "name": "Vult",
+    "tier": "check",
+    "verified": false
+  },
+  "w5": {
+    "alternates": [
+      "w5.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "w5.com",
+    "name": "W5",
+    "tier": "check",
+    "verified": false
+  },
+  "w7-cosmetics": {
+    "alternates": [
+      "w7cosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "w7cosmetics.com",
+    "name": "W7 Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "waitrose": {
+    "alternates": [],
+    "confidence": "retailer",
+    "domain": "waitrose.com",
+    "name": "Waitrose",
+    "tier": "check",
+    "verified": false
+  },
+  "waken": {
+    "alternates": [
+      "waken.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "waken.com",
+    "name": "Waken",
+    "tier": "warn",
+    "verified": false
+  },
+  "wet-n-wild": {
+    "alternates": [
+      "wetnwild.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wetnwild.com",
+    "name": "Wet n Wild",
+    "tier": "check",
+    "verified": false
+  },
+  "whole-foods-market-365": {
+    "alternates": [
+      "wholefoodsmarket365.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "wholefoodsmarket365.com",
+    "name": "Whole Foods Market 365",
+    "tier": "check",
+    "verified": false
+  },
+  "wild": {
+    "alternates": [
+      "wild.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wild.com",
+    "name": "Wild",
+    "tier": "warn",
+    "verified": false
+  },
+  "wild-science-lab": {
+    "alternates": [
+      "wildsciencelab.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wildsciencelab.com",
+    "name": "WILD SCIENCE Lab",
+    "tier": "check",
+    "verified": false
+  },
+  "wildsmith-skin": {
+    "alternates": [
+      "wildsmithskin.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wildsmithskin.com",
+    "name": "Wildsmith Skin",
+    "tier": "check",
+    "verified": false
+  },
+  "wildwash": {
+    "alternates": [
+      "wildwash.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wildwash.com",
+    "name": "WildWash",
+    "tier": "check",
+    "verified": false
+  },
+  "wilkinson-sword": {
+    "alternates": [
+      "wilkinsonsword.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wilkinsonsword.com",
+    "name": "Wilkinson Sword",
+    "tier": "bad",
+    "verified": false
+  },
+  "winky-lux": {
+    "alternates": [
+      "winkylux.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "winkylux.com",
+    "name": "Winky Lux",
+    "tier": "check",
+    "verified": false
+  },
+  "wizz": {
+    "alternates": [
+      "wizz.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wizz.com",
+    "name": "Wizz",
+    "tier": "check",
+    "verified": false
+  },
+  "ws-badger": {
+    "alternates": [
+      "wsbadger.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "wsbadger.com",
+    "name": "W.S. Badger",
+    "tier": "check",
+    "verified": false
+  },
+  "yankee-candle": {
+    "alternates": [
+      "yankeecandle.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "yankeecandle.com",
+    "name": "Yankee Candle",
+    "tier": "unverified",
+    "verified": false
+  },
+  "yes-nurse": {
+    "alternates": [
+      "yesnurse.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "yesnurse.com",
+    "name": "Yes! Nurse",
+    "tier": "check",
+    "verified": false
+  },
+  "yom-beauty": {
+    "alternates": [
+      "yombeauty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "yombeauty.com",
+    "name": "YOM BEAUTY",
+    "tier": "check",
+    "verified": false
+  },
+  "young-epure": {
+    "alternates": [
+      "youngepure.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "youngepure.com",
+    "name": "Young ePure",
+    "tier": "check",
+    "verified": false
+  },
+  "youngblood-mineral-cosmetics": {
+    "alternates": [
+      "youngbloodmineralcosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "youngbloodmineralcosmetics.com",
+    "name": "Youngblood Mineral Cosmetics",
+    "tier": "check",
+    "verified": false
+  },
+  "youth-to-the-people": {
+    "alternates": [
+      "youthtothepeople.co.uk"
+    ],
+    "confidence": "low",
+    "domain": "youthtothepeople.com",
+    "name": "Youth To The People",
+    "tier": "check",
+    "verified": false
+  },
+  "zia-natural-skincare": {
+    "alternates": [
+      "zianaturalskincare.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "zianaturalskincare.com",
+    "name": "Zia Natural Skincare",
+    "tier": "check",
+    "verified": false
+  },
+  "zoflora": {
+    "alternates": [
+      "zoflora.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "zoflora.com",
+    "name": "Zoflora",
+    "tier": "check",
+    "verified": false
+  },
+  "zoya-goes-pretty": {
+    "alternates": [
+      "zoyagoespretty.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "zoyagoespretty.com",
+    "name": "Zoya Goes Pretty",
+    "tier": "check",
+    "verified": false
+  },
+  "zuvi": {
+    "alternates": [
+      "zuvi.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "zuvi.com",
+    "name": "Zuvi",
+    "tier": "check",
+    "verified": false
+  },
+  "zuzu-cosmetics": {
+    "alternates": [
+      "zuzucosmetics.co.uk"
+    ],
+    "confidence": "high",
+    "domain": "zuzucosmetics.com",
+    "name": "Zuzu Cosmetics",
+    "tier": "check",
+    "verified": false
+  }
+}
