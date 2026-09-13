@@ -72,7 +72,7 @@
   background: linear-gradient(90deg, rgba(26,33,20,0.82) 0%, rgba(26,33,20,0.55) 38%, rgba(26,33,20,0.05) 68%, rgba(26,33,20,0) 100%);
 }
 .hero-x-copy { position: absolute; z-index: 2; left: 0; top: 50%; transform: translateY(-50%); padding: 0 0 0 24px; max-width: min(58%, 290px); text-align: left; }
-.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 25px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 18px rgba(20,26,16,0.55); }
+.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 18px rgba(20,26,16,0.55); }
 .hero-x h1 em { font-style: italic; color: #f0dfae; }
 .hero-x-below { padding: 22px 24px 30px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
@@ -99,19 +99,20 @@
    circles still clear the fold. Nothing is squashed; it all scales. */
 @media (max-height: 720px) {
   .hero-x-art { height: 300px; }
-  .hero-x h1 { font-size: 23px; }
+  .hero-x h1 { font-size: 27px; }
   .hero-x-below { padding: 16px 24px 22px; }
   .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
   .hero-x .hero-fact-nav { transform: scale(0.92); }
   .hero-x-link-icon { width: 46px; height: 46px; }
 }
-@media (max-width: 360px) {
-  .hero-x h1 { font-size: 21px; }
-}
 @media (max-width: 480px) {
-  .hero-x h1 { font-size: 25px; }
   .hero-x-links { gap: 8px; }
   .hero-x-link-label { font-size: 11px; }
+}
+/* Must come after the 480px block above, or it gets overridden by it and
+   the smallest phones keep the larger headline. */
+@media (max-width: 360px) {
+  .hero-x h1 { font-size: 26px; }
 }
 </style>
 </head>
