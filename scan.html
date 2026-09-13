@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260910z">
+<link rel="stylesheet" href="css/style.css?v=20260913a">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -219,8 +219,11 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 /* While the camera is up, everything else is hidden - which took the
    ingredient checker away at the exact moment someone is stood in a shop
    with the bottle in their hand. This is the one thing that stays. */
+/* Sits well above #status (bottom:178px, up to two lines) so a camera-error
+   message never overlaps this link - the exact bug reported from Instagram's
+   in-app browser, where both used to sit only 6px apart. */
 body.scan-immersive .scan-live-ingredients { display:block; position:fixed; left:0; right:0;
-  bottom:calc(172px + env(safe-area-inset-bottom, 0px)); z-index:930; text-align:center;
+  bottom:calc(224px + env(safe-area-inset-bottom, 0px)); z-index:930; text-align:center;
   font-size:12.5px; font-weight:600; color:#f4efe2; text-decoration:underline;
   text-underline-offset:4px; text-shadow:0 1px 10px rgba(20,24,18,0.7); }
 body.scan-card-open .scan-live-ingredients { display:none !important; }
