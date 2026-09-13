@@ -48,90 +48,61 @@
 @media(max-width:480px){ .rabbit-caption { font-size:17px; padding:2px 16px 20px; } }
 
 /* ============================================================
-   HERO -- one forest-green screen, not a stack of bands
+   HERO -- one photograph, with the headline on it
    ============================================================
-   The whole opening sits in a single dark section: illustration,
-   headline, rotating fact, the primary scan action and the three
-   quick links. That keeps the forest green Ash wanted right up
-   against the hero, and means the page opens on one screen rather
-   than three stacked colour blocks you have to scroll past.
+   The opening is a single full-bleed photograph running the whole
+   width of the screen, with the headline set over the quiet, shaded
+   left-hand side of it. A left-to-right gradient sits between the
+   photo and the type so the words always have a dark bed under them
+   whatever the image does, without dimming the half of the picture
+   the rabbit is actually in.
 
-   On wider screens it becomes two columns -- artwork left, words
-   right -- so a desktop browser gets a layout designed for its
-   width instead of a phone column floating in empty space. */
+   Everything else (the rotating fact and the three circles) sits in
+   the forest green directly underneath, so the page still opens on
+   one screen rather than a stack of colour blocks. */
 .hero-x { position: relative; background: var(--ahk-forest); overflow: hidden; }
-/* Optional photographic backdrop (a dark, leafy image). Until one is
-   supplied the forest green shows through on its own. */
-.hero-x-bg { position: absolute; inset: 0; }
-.hero-x-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.34; }
-.hero-x-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,48,31,0.55) 0%, rgba(38,48,31,0.8) 100%); }
-.hero-x-inner { position: relative; max-width: 1300px; margin: 0 auto; padding: 0 24px 30px; display: grid; gap: 18px; align-items: center; text-align: center; }
-/* One photograph now does the job the blurred backdrop and the illustrated
-   card used to do between them. It's feathered on every side so it melts
-   into the green instead of sitting on it, and it runs nearly the full
-   width on a phone, where most people will meet it. */
-.hero-x-art { max-width: 100%; margin: 0 -24px; }
-.hero-x-photo {
-  /* On a phone the full 16:9 frame leaves the rabbit tiny, so the crop is
-     squarer and weighted to the right, where he is. The left-hand grass is
-     what gets given up, and there's plenty of it. Runs edge to edge (the
-     art box's own -24px margin cancels the page's side padding) and a
-     touch taller, so it fills noticeably more of the screen than the old
-     small centred crop did. */
-  display: block; width: 100%; aspect-ratio: 3 / 2.55; object-fit: cover;
-  object-position: 70% 50%;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='56' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='180'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='12' y='9' width='76' height='38' rx='12'/%3E%3C/g%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
-}
+/* The height lives on the frame rather than the image, so a missing or
+   slow photo leaves a green band of the right size instead of collapsing
+   the headline onto whatever follows it. */
+.hero-x-art { position: relative; width: 100%; height: 420px; }
+.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 68% 50%; }
 .hero-x-photo[hidden] { display: none; }
-.hero-x-kicker { color: var(--ahk-gold-soft); font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 12px; }
-.hero-x h1 { color: var(--ahk-on-dark); font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 31px; line-height: 1.22; letter-spacing: 0.2px; text-transform: none; margin: 0 0 14px; text-wrap: balance; }
-.hero-x h1 em { font-style: italic; color: var(--ahk-gold); }
+.hero-x-art::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(26,33,20,0.82) 0%, rgba(26,33,20,0.55) 38%, rgba(26,33,20,0.05) 68%, rgba(26,33,20,0) 100%);
+}
+.hero-x-copy { position: absolute; z-index: 2; left: 0; top: 50%; transform: translateY(-50%); padding: 0 24px; max-width: min(88%, 560px); text-align: left; }
+.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 31px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 18px rgba(20,26,16,0.55); }
+.hero-x h1 em { font-style: italic; color: #f0dfae; }
+.hero-x-below { padding: 22px 24px 30px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
 .hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.7; min-height: 66px; margin-bottom: 12px; }
-.hero-x-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--ahk-gold); color: #3d4a3a; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 17px 34px; border-radius: 60px; margin: 26px 0 24px; box-shadow: 0 8px 22px rgba(0,0,0,0.26); transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.hero-x-cta:hover, .hero-x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 13px 28px rgba(0,0,0,0.32); color: #3d4a3a; }
-@media (prefers-reduced-motion: reduce) { .hero-x-cta { transition: none; } }
-.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 18px; }
-.hero-x-link { flex: 1; max-width: 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
+.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 4px; }
+.hero-x-link { flex: 0 1 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
 .hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(244,239,226,0.3); background: rgba(244,239,226,0.07); display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
 .hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: rgba(244,239,226,0.15); border-color: var(--ahk-gold-soft); }
 .hero-x-link-icon.is-lead { background: #c9b184; border-color: #c9b184; }
 .hero-x-link:hover .hero-x-link-icon.is-lead, .hero-x-link:focus-visible .hero-x-link-icon.is-lead { background: #d6c096; border-color: #d6c096; }
 .hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-on-dark-muted); text-align: center; line-height: 1.4; }
+@media (prefers-reduced-motion: reduce) { .hero-x-link-icon { transition: none; } }
 
 @media (min-width: 860px) {
-  /* Full-bleed left edge, not just a wider centred container. The photo
-     used to sit inside the same capped, centred box as the text (first
-     0.85fr of 1080px, then 1.15fr of 1300px), so on an actual wide monitor
-     there was still a large band of plain green on either side and the
-     photo itself never grew past a fixed cap. Removing the cap and the
-     left inset lets the image genuinely run to the true edge of the
-     browser at any width; a fixed height (rather than aspect-ratio) keeps
-     it from also getting taller and taller on ultra-wide screens. */
-  .hero-x-inner { max-width: none; margin: 0; grid-template-columns: 1.15fr 1fr; text-align: left; gap: 52px; padding: 64px 48px 66px 0; }
-  .hero-x-art { max-width: 100%; margin: 0; }
-  .hero-x-photo { aspect-ratio: auto; width: 100%; height: clamp(380px, 52vh, 560px); object-position: 60% 50%; }
-  .hero-x-copy { max-width: 480px; }
-  .hero-x h1 { font-size: 42px; }
-  .hero-x .hero-fact-carousel, .hero-x .hero-fact-text { margin-left: 0; margin-right: 0; }
-  .hero-x .hero-fact-nav { justify-content: flex-start; }
-  .hero-x-links { justify-content: flex-start; }
-  .hero-x-link { align-items: flex-start; }
-  .hero-x-link-label { text-align: left; }
+  /* Taller frame and bigger type, and the headline moves in off the very
+     edge of the screen rather than sitting flush against it. */
+  .hero-x-art { height: clamp(400px, 56vh, 580px); }
+  .hero-x-copy { padding-left: 6vw; padding-right: 24px; max-width: 640px; }
+  .hero-x h1 { font-size: 46px; line-height: 1.14; }
+  .hero-x-below { padding: 26px 24px 36px; }
 }
 /* Short screens (an iPhone SE, or any phone with a lot of browser chrome
    on show) get a shallower photo and slightly smaller type, so the three
    circles still clear the fold. Nothing is squashed; it all scales. */
 @media (max-height: 720px) {
-  .hero-x-photo { aspect-ratio: 3 / 1.7; }
-  .hero-x-inner { gap: 13px; padding-bottom: 20px; }
-  .hero-x h1 { font-size: 25px; line-height: 1.2; margin-bottom: 10px; }
-  .hero-x-kicker { margin-bottom: 9px; }
+  .hero-x-art { height: 300px; }
+  .hero-x h1 { font-size: 25px; }
+  .hero-x-below { padding: 16px 24px 22px; }
   .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
   .hero-x .hero-fact-nav { transform: scale(0.92); }
-  .hero-x-links { margin-top: 12px; }
   .hero-x-link-icon { width: 46px; height: 46px; }
 }
 @media (max-width: 480px) {
@@ -178,16 +149,15 @@
 </div>
 </header>
 <section class="hero-x">
-<div class="hero-x-inner">
 
 <div class="hero-x-art">
 <img class="hero-x-photo" src="images/hero-rabbit-meadow.jpg" alt="A rabbit sitting in long meadow grass in evening light" onerror="this.hidden=true">
+<div class="hero-x-copy">
+<h1>your shampoo didn't need to be tested on a <em>rabbit</em>.</h1>
+</div>
 </div>
 
-<div class="hero-x-copy">
-<p class="hero-x-kicker">cruelty-free &middot; vegan</p>
-<h1>your shampoo didn't need to be tested on a <em>rabbit</em>.</h1>
-
+<div class="hero-x-below">
 <div class="hero-fact-carousel" id="heroFactCarousel">
 <p class="hero-fact-text" id="heroFactText"></p>
 <div class="hero-fact-nav">
@@ -226,9 +196,8 @@
 <span class="hero-x-link-label">why it matters</span>
 </a>
 </div>
+</div>
 
-</div>
-</div>
 </section>
 
 <span class="ahk-counter-bubble" style="margin:18px auto 0;"></span>
