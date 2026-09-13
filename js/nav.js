@@ -825,10 +825,31 @@ document.addEventListener('DOMContentLoaded', function(){
       if (!isFinite(drop) || drop < 0 || drop > 120) drop = 0;
     }
 
-    root.style.setProperty('--ahk-safe-bottom', best + 'px');
+    /* The clearance under the labels. Normally the real allowance, which
+       puts the labels in exactly the same place as on every other page.
+
+       If this page reports zero and nothing has been remembered yet
+       (someone opened the app straight onto this page before any other),
+       fall back to the viewport shortfall instead of zero. Zero was the
+       bug that pushed the labels off the bottom of the screen: the bar
+       had been moved down to reach the bottom but nothing was holding
+       the labels up off it. The fallback is not always the exact figure,
+       so the bar can sit slightly taller than on other pages until a
+       real reading is taken, but nothing is ever clipped, and the moment
+       any page reports the real allowance it is remembered and used from
+       then on. */
+    var clearance = best > 0 ? best : drop;
+
+    root.style.setProperty('--ahk-safe-bottom', clearance + 'px');
     root.style.setProperty('--ahk-nav-drop', drop + 'px');
   }
 
+  /* Measure straight away if the body already exists (this script sits
+     at the end of the page, so it usually does). On the scanner that
+     matters: its own setup switches the page into camera mode, and
+     iOS then reports the allowance as zero, so the only chance to read
+     the true figure is before that happens. */
+  if (document.body) apply();
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', apply);
   } else {
