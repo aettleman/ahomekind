@@ -102,13 +102,18 @@
 .hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-on-dark-muted); text-align: center; line-height: 1.4; }
 
 @media (min-width: 860px) {
-  /* The photo used to sit in a narrower column than the text (0.85fr) inside
-     a 1080px-max container, so on an actual laptop screen it read as a small
-     block floating in a lot of spare green. Giving it the bigger share of a
-     wider container lets it fill the width properly. */
-  .hero-x-inner { grid-template-columns: 1.15fr 1fr; text-align: left; gap: 52px; padding: 64px 32px 66px; }
+  /* Full-bleed left edge, not just a wider centred container. The photo
+     used to sit inside the same capped, centred box as the text (first
+     0.85fr of 1080px, then 1.15fr of 1300px), so on an actual wide monitor
+     there was still a large band of plain green on either side and the
+     photo itself never grew past a fixed cap. Removing the cap and the
+     left inset lets the image genuinely run to the true edge of the
+     browser at any width; a fixed height (rather than aspect-ratio) keeps
+     it from also getting taller and taller on ultra-wide screens. */
+  .hero-x-inner { max-width: none; margin: 0; grid-template-columns: 1.15fr 1fr; text-align: left; gap: 52px; padding: 64px 48px 66px 0; }
   .hero-x-art { max-width: 100%; margin: 0; }
-  .hero-x-photo { aspect-ratio: 4 / 3.1; object-position: 60% 50%; }
+  .hero-x-photo { aspect-ratio: auto; width: 100%; height: clamp(380px, 52vh, 560px); object-position: 60% 50%; }
+  .hero-x-copy { max-width: 480px; }
   .hero-x h1 { font-size: 42px; }
   .hero-x .hero-fact-carousel, .hero-x .hero-fact-text { margin-left: 0; margin-right: 0; }
   .hero-x .hero-fact-nav { justify-content: flex-start; }
