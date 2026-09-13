@@ -71,7 +71,29 @@
    fills the screen, and the only things left are the framing guide and
    the shutter. The class is added when the camera opens and removed the
    moment it closes, so the normal page is always what you come back to. */
-body.scan-immersive { overflow:hidden; background:var(--ahk-forest-deep,#2f3a2d); }
+/* Two deliberate choices here, both about the bottom bar.
+
+   1. NOT overflow:hidden. Body's overflow propagates to the viewport,
+      and an unscrollable viewport makes iOS report the home-indicator
+      allowance as zero in standalone mode. Measured off a real iPhone
+      screenshot: on this page the bar came out 27px shorter than on
+      every other page AND sat 47px short of the bottom of the screen,
+      leaving a strip of the page's own dark green showing under it.
+      That is the "green banner under the bottom bar" bug. Scrolling is
+      stopped with touch-action/overscroll-behavior instead, which
+      doesn't touch the viewport. Nothing can scroll into view anyway:
+      every part of the camera UI is fixed, and the camera layer covers
+      the whole screen.
+
+   2. The page's own colour is the bar's cream, not forest green. The
+      green is painted by the camera layer on top instead. So if iOS
+      ever does leave a strip uncovered at the bottom again, that strip
+      is the same colour as the bar and there is nothing to see. The
+      page background always paints the entire screen including the
+      safe area, whatever iOS decides the viewport is, which is why
+      this one can't fail the way the previous attempts did. */
+body.scan-immersive { touch-action:none; overscroll-behavior:none; background:var(--ahk-bg,#faf5eb); }
+body.scan-immersive .camera-wrap { background:var(--ahk-forest-deep,#2f3a2d); }
 body.scan-immersive .site-header,
 body.scan-immersive .pagehead,
 body.scan-immersive .ahk-counter-bubble,
