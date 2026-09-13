@@ -146,14 +146,9 @@ if(dismissed) return;
 var slots = Array.prototype.slice.call(document.querySelectorAll('.ahk-counter-bubble'));
 // Every other page gets one added to its footer, so the bubble isn't
 // limited to the handful of pages with a scan button on them.
-var footer = document.querySelector('.site-footer');
-if(footer && !slots.length){
-var footerSlot = document.createElement('span');
-footerSlot.className = 'ahk-counter-bubble';
-footerSlot.style.marginTop = '14px';
-footer.appendChild(footerSlot);
-slots.push(footerSlot);
-}
+// No footer fallback. The pill belongs next to the scanner on pages that
+// have one; dropped into the footer it just looked like a stray badge at
+// the bottom of an unrelated page.
 if(!slots.length) return;
 
 fetch(WORKER_URL).then(function(r){ return r.json(); }).then(function(data){
@@ -475,6 +470,11 @@ sheet.innerHTML =
 '<a href="/learn.html">learn</a>' +
 '<a href="/journal/">journal</a>' +
 '<a href="/about.html">about</a>' +
+/* In the installed app there's no footer in view, so these two had
+   nowhere to live on a phone. */
+'<p class="bn-sheet-group">elsewhere</p>' +
+'<a href="https://instagram.com/ahomekind" target="_blank" rel="noopener">instagram</a>' +
+'<a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a>' +
 '<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +
 '</div>';
 document.body.appendChild(sheet);

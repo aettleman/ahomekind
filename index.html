@@ -65,7 +65,12 @@
    slow photo leaves a green band of the right size instead of collapsing
    the headline onto whatever follows it. */
 .hero-x-art { position: relative; width: 100%; height: 420px; }
-.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; }
+/* Feathered back into the green, the way the rest of the site's photos
+   are. Full-bleed left/right/top, with the bottom edge dissolving into
+   the band below instead of stopping on a hard line. */
+.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.55) 88%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.55) 88%, rgba(0,0,0,0) 100%); }
 .hero-x-photo[hidden] { display: none; }
 .hero-x-art::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
@@ -74,7 +79,7 @@
 .hero-x-copy { position: absolute; z-index: 2; left: 0; top: 50%; transform: translateY(-50%); padding: 0 0 0 24px; max-width: min(58%, 290px); text-align: left; }
 .hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 32px; line-height: 1.2; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 18px rgba(20,26,16,0.55); }
 .hero-x h1 em { font-style: italic; color: #f0dfae; }
-.hero-x-below { padding: 22px 24px 30px; text-align: center; }
+.hero-x-below { padding: 18px 24px 16px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
 .hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.7; min-height: 66px; margin-bottom: 12px; }
 .hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 4px; }
