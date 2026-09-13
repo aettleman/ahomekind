@@ -215,6 +215,22 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .scan-shell .manual input::placeholder { color:var(--ahk-text-muted); }
 .scan-shell .manual #lookupBtn { flex:0 0 auto; background:transparent; color:var(--ahk-heading); border:1px solid var(--ahk-border); border-radius:60px; padding:15px 22px; font-size:12.5px; letter-spacing:1px; text-transform:uppercase; box-shadow:none; margin:0; width:auto; }
 .scan-shell .manual #lookupBtn:hover { background:var(--ahk-surface); }
+/* The brand search shown when a barcode finds nothing. It used to reuse
+   .manual (the barcode entry bar), which meant two camera-mode rules hit
+   it by accident: one hid it whenever the result card was open, the other
+   pinned it to the top of the screen. So it only ever worked on the full
+   page. Its own class keeps it out of all that. */
+.brand-lookup { display:flex; gap:8px; margin:0 0 8px; }
+.brand-lookup input[type=text] {
+  flex:1; min-width:0; padding:13px 16px; border-radius:30px;
+  border:0.5px solid var(--ahk-border); background:var(--ahk-card);
+  color:var(--ahk-heading); font-family:'Karla',sans-serif; font-size:14px;
+}
+.brand-lookup input[type=text]::placeholder { color:var(--ahk-text-muted); }
+.brand-lookup .big-btn {
+  flex:0 0 auto; width:auto; margin:0; padding:13px 20px; border-radius:30px;
+  font-size:12.5px; letter-spacing:1px; text-transform:uppercase;
+}
 .scan-live-ingredients { display:none; }
 /* While the camera is up, everything else is hidden - which took the
    ingredient checker away at the exact moment someone is stood in a shop
@@ -860,7 +876,7 @@ return out;
 }
 function brandSearchWidget(){
 var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";
-out += "<div class=\"manual\" style=\"margin:0 0 8px;\">";
+out += "<div class=\"brand-lookup\">";
 out += "<label for=\"manualBrand\" class=\"visually-hidden\">Brand name</label>";
 out += "<input type=\"text\" id=\"manualBrand\" placeholder=\"e.g. Superdrug, Garnier, Dove...\">";
 out += "<button class=\"big-btn\" style=\"width:auto; margin:0; padding:14px 20px;\" id=\"brandLookupBtn\">check</button>";
