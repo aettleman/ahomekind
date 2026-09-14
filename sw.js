@@ -11,7 +11,7 @@
 //
 // Bump CACHE_VERSION whenever the shell files below change so old caches
 // are cleared out on the next visit.
-var CACHE_VERSION = 'ahk-shell-v44';
+var CACHE_VERSION = 'ahk-shell-v45';
 var SHELL_URLS = [
 '/offline.html',
 '/css/style.css',

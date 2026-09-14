@@ -873,6 +873,30 @@ document.addEventListener('DOMContentLoaded', function(){
     var clearance = best > 0 ? best : drop;
 
     root.style.setProperty('--ahk-safe-bottom', clearance + 'px');
+
+    // Temporary, query-string-gated readout for diagnosing the "bar is
+    // taller on the scanner" report (14 September). Visit any page with
+    // ?ahkdebug=1 on the end of the address to see the raw numbers this
+    // function is working from. Safe to remove once that's solved -- it
+    // does nothing unless that exact query string is present.
+    if (/[?&]ahkdebug=1\b/.test(location.search)) {
+      var dbg = document.getElementById('ahkDebugBox');
+      if (!dbg) {
+        dbg = document.createElement('div');
+        dbg.id = 'ahkDebugBox';
+        dbg.style.cssText = 'position:fixed;top:8px;left:8px;right:8px;z-index:99999;background:#000;color:#0f0;font:11px/1.5 monospace;padding:8px 10px;border-radius:8px;opacity:0.92;white-space:pre-wrap;';
+        document.body.appendChild(dbg);
+      }
+      dbg.textContent =
+        'page: ' + location.pathname + '\n' +
+        'standalone: ' + standalone + '\n' +
+        'raw inset (env safe-area): ' + inset + 'px\n' +
+        'stored (localStorage): ' + readStored() + 'px\n' +
+        'best (inset or stored): ' + best + 'px\n' +
+        'drop (screen.height - innerHeight): ' + drop + 'px\n' +
+        'FINAL clearance used: ' + clearance + 'px\n' +
+        'screen.height: ' + (window.screen && window.screen.height) + '  innerHeight: ' + window.innerHeight;
+    }
     root.style.setProperty('--ahk-nav-drop', drop + 'px');
   }
 
