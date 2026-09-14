@@ -518,20 +518,51 @@ if(e.key === 'Escape' && sheet.classList.contains('open')){ closeSheet(); }
 document.addEventListener('DOMContentLoaded', function(){
 var path = window.location.pathname;
 if (/impact\.html$/.test(path)) return; // already has the full counter
-var footer = document.querySelector('footer.site-footer');
-if (!footer) return;
 var RATE_PER_SECOND = 83000000000 / (365.25 * 24 * 3600);
-var wrap = document.createElement('div');
-wrap.className = 'ambient-counter';
-wrap.setAttribute('role', 'status');
-wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
-wrap.innerHTML =
-'<div class="ambient-counter-inner">' +
-'<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
-'<p class="ambient-counter-label">land animals killed for meat worldwide, since this page loaded &middot; <a href="/impact.html">see the full picture</a></p>' +
-'</div>';
-footer.parentNode.insertBefore(wrap, footer);
-var numEl = wrap.querySelector('#ambientCounterNum');
+
+// The homepage gets a dismissible bar right under the header instead of
+// the quiet footer version, so it's seen without scrolling to the very
+// bottom of the page. Every other page keeps the plain footer counter.
+var topSlot = document.getElementById('topImpactSlot');
+var wrap, numEl, labelHtml =
+  'land animals killed for meat worldwide, since this page loaded &middot; <a href="/impact.html">see the full picture</a>';
+
+if (topSlot) {
+  var DISMISS_KEY = 'ahk-impact-bar-dismissed';
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch(e){}
+  if (dismissed) return;
+  wrap = document.createElement('div');
+  wrap.className = 'ambient-counter ambient-counter-top';
+  wrap.setAttribute('role', 'status');
+  wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
+  wrap.innerHTML =
+    '<div class="ambient-counter-inner">' +
+    '<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
+    '<p class="ambient-counter-label">' + labelHtml + '</p>' +
+    '</div>' +
+    '<button type="button" class="ambient-counter-x" aria-label="Dismiss">&times;</button>';
+  topSlot.appendChild(wrap);
+  wrap.querySelector('.ambient-counter-x').addEventListener('click', function(){
+    wrap.remove();
+    try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch(e){}
+  });
+} else {
+  var footer = document.querySelector('footer.site-footer');
+  if (!footer) return;
+  wrap = document.createElement('div');
+  wrap.className = 'ambient-counter';
+  wrap.setAttribute('role', 'status');
+  wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
+  wrap.innerHTML =
+    '<div class="ambient-counter-inner">' +
+    '<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
+    '<p class="ambient-counter-label">' + labelHtml + '</p>' +
+    '</div>';
+  footer.parentNode.insertBefore(wrap, footer);
+}
+
+numEl = wrap.querySelector('#ambientCounterNum');
 var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (reduceMotion) {
 // Still an honest, real number -- just not animated: a running count
@@ -541,6 +572,7 @@ return;
 }
 var start = performance.now();
 function tick(){
+if (!document.body.contains(numEl)) return; // dismissed
 var elapsedSeconds = (performance.now() - start) / 1000;
 numEl.textContent = Math.floor(elapsedSeconds * RATE_PER_SECOND).toLocaleString();
 requestAnimationFrame(tick);

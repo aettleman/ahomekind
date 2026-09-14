@@ -59,7 +59,8 @@ const CATEGORY_MAP = {
   'household-cleaning': 'household',
   'laundry': 'household',
   'period-menstrual': 'body-shower',
-  'food-kitchen': null
+  'food-kitchen': null,
+  'stationery': 'stationery'
 };
 
 // data/brands.json has no field marking "this is a supermarket's own-brand
@@ -75,6 +76,7 @@ const SUPERMARKET_NAMES = new Set([
 
 const BEAUTY_CATS = new Set(['makeup-beauty', 'skincare', 'haircare', 'body-shower', 'period-menstrual']);
 const HOUSEHOLD_CATS = new Set(['household-cleaning', 'laundry']);
+const STATIONERY_CATS = new Set(['stationery']);
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -170,6 +172,13 @@ function classify(brand) {
     return (brand.tier === 'warn' || brand.tier === 'unverified') ? 'household-disclaimer' : 'household';
   }
 
+  // 5b. Stationery and other non-body, non-food odds and ends (pens,
+  //     office supplies). New (September) - a much smaller section than
+  //     the others while it's just getting started.
+  if (cats.some(function (c) { return STATIONERY_CATS.has(c); })) {
+    return 'stationery';
+  }
+
   // 6. Anything left over (e.g. food-kitchen-only brands, or brands with no
   //    category tags at all) has no matching section on this page yet.
   return 'other';
@@ -178,7 +187,7 @@ function classify(brand) {
 function buildCardsMarkup(brands) {
   const buckets = {
     beauty: [], 'beauty-disclaimer': [], household: [], 'household-disclaimer': [],
-    dental: [], supermarket: [], 'bad-all': [], other: []
+    stationery: [], dental: [], supermarket: [], 'bad-all': [], other: []
   };
   const unclassified = [];
 
@@ -201,6 +210,11 @@ function buildCardsMarkup(brands) {
 
   out.push('<p class="section-label warn">worth a disclaimer - household &amp; cleaning</p>');
   buckets['household-disclaimer'].forEach(function (b) { out.push(renderCard(b)); });
+
+  if (buckets.stationery.length) {
+    out.push('<p class="section-label">stationery &amp; odds and ends</p>');
+    buckets.stationery.forEach(function (b) { out.push(renderCard(b)); });
+  }
 
   out.push('<p class="section-label">dental &amp; oral care</p>');
   out.push('<div id="dentalDisclaimer" style="display:none; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5c5c4f; line-height:1.8;">');
