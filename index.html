@@ -60,7 +60,7 @@
    Everything else (the rotating fact and the three circles) sits in
    the forest green directly underneath, so the page still opens on
    one screen rather than a stack of colour blocks. */
-.hero-x { position: relative; background: var(--ahk-forest); overflow: hidden; }
+.hero-x { position: relative; background: var(--ahk-forest); overflow: hidden; padding-top: 10px; }
 /* The height lives on the frame rather than the image, so a missing or
    slow photo leaves a green band of the right size instead of collapsing
    the headline onto whatever follows it. */
@@ -69,7 +69,7 @@
    Run the photo to the edge of the screen and the fade dissolves into
    the edge of the phone instead, which reads as a hard crop however
    soft the mask is. The padding here is what makes it visible. */
-.hero-x-art { position: relative; width: 100%; height: 330px; padding: 4px 14px 0; }
+.hero-x-art { position: relative; width: 100%; height: 430px; padding: 4px 10px 0; }
 /* Feathered back into the green, the way the rest of the site's photos
    are. Full-bleed left/right/top, with the bottom edge dissolving into
    the band below instead of stopping on a hard line. */
@@ -87,9 +87,9 @@
    they are all the way round. Just a soft dark cloud sitting behind the
    headline, centred on the middle-left of the photo, so the text is
    readable without dimming the picture. */
-.hero-x-copy { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: min(88%, 340px); padding: 26px 22px; text-align: left; z-index: 2;
-  background: radial-gradient(ellipse 100% 80% at 30% 50%, rgba(20,26,18,0.55) 0%, rgba(20,26,18,0.34) 48%, rgba(20,26,18,0) 78%); }
-.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 36px; line-height: 1.16; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 10px rgba(15,20,13,0.55); }
+.hero-x-copy { position: absolute; left: 0; top: 0; bottom: 0; width: min(94%, 360px); padding: 6px 20px; text-align: left; z-index: 2; display: flex; align-items: center;
+  background: linear-gradient(100deg, rgba(20,26,18,0.6) 0%, rgba(20,26,18,0.42) 55%, rgba(20,26,18,0) 92%); }
+.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.14; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 10px rgba(15,20,13,0.55); }
 .hero-x h1 em { font-style: italic; color: #f0dfae; }
 .hero-x-below { padding: 18px 24px 16px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
@@ -106,9 +106,9 @@
 @media (min-width: 860px) {
   /* Taller frame and bigger type, and the headline moves in off the very
      edge of the screen rather than sitting flush against it. */
-  .hero-x-art { height: clamp(360px, 46vh, 520px); padding: 8px 34px 0; }
-  .hero-x-copy { width: min(66%, 560px); padding: 32px 34px; }
-  .hero-x h1 { font-size: 56px; }
+  .hero-x-art { height: clamp(420px, 58vh, 600px); padding: 8px 30px 0; }
+  .hero-x-copy { width: min(58%, 560px); padding: 8px 40px; }
+  .hero-x h1 { font-size: 64px; }
   /* Everything under the headline (the rotating fact, the three
      circles) is centred, while the headline itself stays left-aligned
      on the photo at every width, same as it always was. */
@@ -118,9 +118,9 @@
    on show) get a shallower photo and slightly smaller type, so the three
    circles still clear the fold. Nothing is squashed; it all scales. */
 @media (max-height: 720px) {
-  .hero-x-art { height: 248px; padding: 2px 12px 0; }
-  .hero-x-copy { width: min(90%, 300px); padding: 18px 16px; }
-  .hero-x h1 { font-size: 30px; }
+  .hero-x-art { height: 340px; padding: 2px 10px 0; }
+  .hero-x-copy { width: min(94%, 320px); padding: 6px 16px; }
+  .hero-x h1 { font-size: 34px; }
   .hero-x-below { padding: 16px 24px 22px; }
   .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
   .hero-x .hero-fact-nav { transform: scale(0.92); }
@@ -133,7 +133,7 @@
 /* Must come after the 480px block above, or it gets overridden by it and
    the smallest phones keep the larger headline. */
 @media (max-width: 360px) {
-  .hero-x h1 { font-size: 32px; }
+  .hero-x h1 { font-size: 38px; }
 }
 </style>
 </head>
@@ -226,7 +226,6 @@
 
 </section>
 
-<span class="ahk-counter-bubble" style="margin:18px auto 0;"></span>
 
 <script>
 (function(){

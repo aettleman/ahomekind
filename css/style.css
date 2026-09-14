@@ -1342,6 +1342,21 @@ body { animation: pageFadeIn 0.22s ease; }
 .cat-tile-x:hover, .cat-tile-x:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px var(--ahk-shadow); border-color: var(--ahk-green-soft); }
 @media (prefers-reduced-motion: reduce) { .cat-tile-x { transition: none; } }
 .cat-tile-x .ahk-slot { aspect-ratio: 1 / 1; border-radius: 0; }
+/* Same photo effect as everywhere else on the site: a soft, out-of-focus
+   fade at every edge instead of a hard crop. These tiles used to run the
+   photo edge-to-edge inside the rounded square, which is exactly the
+   "full-bleed" case that can't show a feathered edge -- there's no
+   background colour for the fade to dissolve into, so it just reads as a
+   hard crop with extra blur. A small inset plus the card's own cream
+   background behind it fixes that, same principle as .page-photo. */
+.cat-tile-x .ahk-slot { padding: 5px; box-sizing: border-box; background: var(--ahk-card, #faf5eb); }
+.cat-tile-x .ahk-slot > img {
+  border-radius: 14px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
 .cat-tile-label { display: block; padding: 13px 14px 14px; font-size: 13px; font-weight: 600; color: var(--ahk-heading); text-align: center; line-height: 1.4; }
 /* The "everything else" tile has no photo -- it's a signpost, so it
    reads as a quieter, typographic sibling of the image tiles. */
@@ -1832,8 +1847,12 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
 }
 .tile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 34px; }
-.ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; }
-.ptile img { width:100%; height:100%; object-fit:cover; display:block; }
+.ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; background: var(--ahk-card, #faf5eb); padding:5px; box-sizing:border-box; }
+.ptile img { width:100%; height:100%; object-fit:cover; display:block; border-radius:14px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
 .ptile span { position:absolute; inset:0; display:flex; align-items:flex-end; padding:12px 14px; background:linear-gradient(0deg, rgba(47,58,45,0.82), rgba(47,58,45,0.06) 62%); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:13.5px; line-height:1.25; letter-spacing:0.2px; }
 .ptile:hover img { transform:scale(1.03); }
 .ptile img { transition:transform 0.4s ease; }
