@@ -73,7 +73,7 @@
 /* Feathered back into the green, the way the rest of the site's photos
    are. Full-bleed left/right/top, with the bottom edge dissolving into
    the band below instead of stopping on a hard line. */
-.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%;
+.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%;
   /* Same soft, out-of-focus fade as every other photo on the site (see
      .hero-plain): a blurred rounded rectangle used as the mask, so the
      edges genuinely dissolve rather than cutting off on a visible line -
@@ -89,7 +89,7 @@
    readable without dimming the picture. */
 .hero-x-copy { position: absolute; left: 0; top: 0; bottom: 0; width: min(94%, 360px); padding: 6px 20px; text-align: left; z-index: 2; display: flex; align-items: center;
   background: linear-gradient(100deg, rgba(20,26,18,0.6) 0%, rgba(20,26,18,0.42) 55%, rgba(20,26,18,0) 92%); }
-.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.14; letter-spacing: 0.2px; text-transform: none; margin: 0; text-wrap: balance; text-shadow: 0 2px 10px rgba(15,20,13,0.55); }
+.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.14; letter-spacing: 0.2px; text-transform: none; margin: 0; max-width: 8.5ch; text-wrap: balance; text-shadow: 0 2px 10px rgba(15,20,13,0.55); }
 .hero-x h1 em { font-style: italic; color: #f0dfae; }
 .hero-x-below { padding: 18px 24px 16px; text-align: center; }
 .hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
@@ -418,8 +418,6 @@
 </section>
 </main>
 
-<div class="hero-banner"><img src="IMG_8501-crop.jpg" alt="A rabbit inspecting a product, unimpressed" loading="lazy" width="1296" height="576"></div>
-<p class="rabbit-caption">a home kind is the right kind</p>
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
 <p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
