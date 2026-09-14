@@ -1817,7 +1817,20 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
 /* ---- Food: category tiles and recipe cards ---------------------------
    Lifted out of food.html so the category and recipe pages can use them
    as well. */
-.page-photo { display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px; }
+/* The standard photo effect for the whole site: a soft, out-of-focus
+   fade around every edge instead of a hard crop, done with a blurred
+   rounded-rectangle mask (the same technique as the homepage hero and
+   the check-a-brand photo). This is the default look for every photo
+   on the site unless a page says otherwise -- it only reads properly
+   when the photo sits inset with page colour around it, which
+   .page-photo already does inside .page-shell's padding. */
+.page-photo {
+  display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
 .tile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 34px; }
 .ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; }
 .ptile img { width:100%; height:100%; object-fit:cover; display:block; }

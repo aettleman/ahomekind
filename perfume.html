@@ -24,7 +24,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.page-photo { display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px; }
+/* The subheading sits on the (still-feathered) photo, middle left,
+   the same treatment as the homepage hero, rather than as a big block
+   of text above it competing with the page title. */
+.perfume-photo-wrap { position:relative; margin:0 0 26px; }
+.perfume-photo-wrap .page-photo { margin:0; }
+.perfume-photo-copy { position:absolute; left:0; top:50%; transform:translateY(-50%); width:min(78%, 340px); padding:22px; z-index:2;
+  background: radial-gradient(ellipse 100% 80% at 30% 50%, rgba(20,26,18,0.55) 0%, rgba(20,26,18,0.32) 48%, rgba(20,26,18,0) 78%); }
+.perfume-photo-copy h2 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:20px; line-height:1.32; letter-spacing:0.2px; text-transform:none; color:#f7f3e7; margin:0; max-width:22ch; text-shadow:0 2px 10px rgba(15,20,13,0.55); }
+@media (min-width:900px) { .perfume-photo-copy { width:min(56%, 420px); padding:30px; } .perfume-photo-copy h2 { font-size:24px; } }
 .pull-quote { font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.5; color:#3d4a3a; border-left:3px solid var(--ahk-green); padding:4px 0 4px 20px; margin:26px 0; }
 .route { display:flex; align-items:center; justify-content:space-between; gap:14px; border-radius:18px; padding:18px 22px; margin-bottom:11px; text-decoration:none; border:1px solid; }
 .route b { font-family:'Karla',sans-serif; font-size:14.5px; font-weight:700; }
@@ -108,9 +116,12 @@
 <h1>perfume &amp; fragrance</h1>
 </div>
 
-<h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:32px; line-height:1.14; color:var(--ahk-heading); margin:0 0 18px; max-width:22ch; text-transform:none;">the name on the bottle isn't always who made it.</h2>
-
+<div class="perfume-photo-wrap">
 <img class="page-photo" src="images/perfume-hero.jpg" alt="Three plain glass perfume bottles on a stone surface in soft daylight, with dried lavender and cotton stems beside them" loading="eager" onerror="this.hidden=true">
+<div class="perfume-photo-copy">
+<h2>the name on the bottle isn't always who made it.</h2>
+</div>
+</div>
 
 <a class="route sage" href="#brands"><b>which brands are kind</b><i>&rsaquo;</i></a>
 <a class="route terra" href="brand-check.html"><b>check any other brand</b><i>&rsaquo;</i></a>
@@ -123,8 +134,8 @@
 
 <p>One more distinction worth keeping straight: <strong>cruelty-free</strong> means no animal testing, <strong>vegan</strong> means no animal ingredients. Fragrance uses more animal-derived material than people expect, musk, civet, ambergris, beeswax and honey among them, though most of it is synthetic now. A brand can be one without the other, so both are marked separately below.</p>
 
-<p class="section-label" id="brands" style="margin-top:38px;">where the brands stand</p>
-<p>A starting list rather than a complete one. Each verdict links to where it came from, so you can check it yourself rather than taking my word for it.</p>
+<p class="section-label" id="brands" style="margin-top:38px;">which brands are kind</p>
+<p>Cruelty-free fragrance brands only, not a full rundown of who does and doesn't test. A starting list rather than a complete one, and each verdict links to where it came from, so you can check it yourself rather than taking my word for it. For the ones that do test, or that are still being checked, see <a href="brand-check.html">check a brand</a>.</p>
 
 <div class="pf-filter">
 <div class="pf-filter-text"><b>hide brands sold in mainland China</b>where animal testing is still required for many imported cosmetics</div>
@@ -174,7 +185,7 @@
   function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
 
   function render(){
-    var rows = BRANDS.filter(function(b){ return !(hideChina && b.china === 'sells'); });
+    var rows = BRANDS.filter(function(b){ return b.status === 'kind' && !(hideChina && b.china === 'sells'); });
     if(!rows.length){ listEl.innerHTML = '<p class="pf-empty">Nothing left with that filter on.</p>'; return; }
     listEl.innerHTML = rows.map(function(b){
       var st = STATUS[b.status] || STATUS.checking;
