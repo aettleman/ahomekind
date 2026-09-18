@@ -336,6 +336,34 @@ io.observe(el);
 }
 });
 
+// Same idea, general-purpose: any section heading/row marked up with
+// .ahk-reveal (single element) or .ahk-reveal-group (a row whose direct
+// children should stagger in one after another) eases into place the
+// first time it's scrolled to. Off entirely with reduced motion or no
+// IntersectionObserver support -- everything just stays visible, as it
+// was before this existed.
+document.addEventListener('DOMContentLoaded', function(){
+var reduceMotion2 = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els = document.querySelectorAll('.ahk-reveal, .ahk-reveal-group');
+if (reduceMotion2 || !els.length || !('IntersectionObserver' in window)) return;
+var io2 = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if (!entry.isIntersecting) return;
+var el = entry.target;
+el.classList.add('ahk-reveal-in');
+io2.unobserve(el);
+window.setTimeout(function(){
+el.classList.remove('ahk-reveal-pre');
+el.classList.remove('ahk-reveal-in');
+}, 900);
+});
+}, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+els.forEach(function(el){
+el.classList.add('ahk-reveal-pre');
+io2.observe(el);
+});
+});
+
 // Instagram's/Facebook's in-app browser (the WebView those apps open
 // links in, rather than a real browser) routinely blocks or half-supports
 // camera access and native file pickers -- exactly the symptoms reported
