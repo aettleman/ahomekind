@@ -403,7 +403,14 @@ var io2 = new IntersectionObserver(function(entries){
 entries.forEach(function(entry){
 entry.target.classList.toggle('ahk-reveal-in', entry.isIntersecting);
 });
-}, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+}, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+// threshold: 0 rather than 0.15 here specifically -- some of these
+// auto-tagged blocks (the shop's whole product grid, for one) are
+// much taller than the screen, and 0.15 meant "15% of THIS block's
+// own height", which for a tall grid could be more than a full
+// screen of scrolling before it ever counted as visible. 0 plus the
+// rootMargin above means "as soon as its top edge is genuinely on
+// screen", regardless of how tall the block itself is.
 els.forEach(function(el){
 el.classList.add('ahk-reveal-pre');
 io2.observe(el);
