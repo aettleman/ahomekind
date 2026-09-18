@@ -104,14 +104,20 @@
 @media (prefers-reduced-motion: reduce) { .hero-x-link-icon { transition: none; } }
 
 @media (min-width: 860px) {
-  /* Taller frame and bigger type, and the headline moves in off the very
-     edge of the screen rather than sitting flush against it. */
-  .hero-x-art { height: clamp(420px, 58vh, 600px); padding: 8px 30px 0; }
-  .hero-x-copy { width: min(58%, 560px); padding: 8px 40px; }
-  .hero-x h1 { font-size: 64px; }
-  /* Everything under the headline (the rotating fact, the three
-     circles) is centred, while the headline itself stays left-aligned
-     on the photo at every width, same as it always was. */
+  /* Round three on the desktop hero (18 September). The photo itself
+     has a large, naturally dark, out-of-focus stretch of grass on the
+     left with nothing happening in it, so the words sit directly in
+     that empty space with no panel/box behind them at all, just a soft
+     shadow for legibility - the first two rounds (a boxed card, then a
+     narrower unboxed column) were both rejected. The text column is
+     wide enough that lines actually stretch across the space instead
+     of wrapping into a tall, narrow, "squashed" strip. Mobile is
+     completely unaffected by anything in this block. */
+  .hero-x-art { height: clamp(460px, 62vh, 640px); padding: 8px 30px 0; }
+  .hero-x-photo { object-position: 78% 46%; }
+  .hero-x-copy { width: 62%; padding: 0 40px 0 48px; background: none; }
+  .hero-x h1 { font-size: 58px; line-height: 1.16; max-width: 18ch; text-wrap: balance;
+    text-shadow: 0 3px 18px rgba(10,14,8,0.65), 0 1px 3px rgba(10,14,8,0.8); }
   .hero-x-below { padding: 26px 24px 36px; }
 }
 /* Short screens (an iPhone SE, or any phone with a lot of browser chrome
@@ -174,7 +180,6 @@
 </nav>
 </div>
 </header>
-<div id="topImpactSlot"></div>
 <section class="hero-x">
 
 <div class="hero-x-art">
@@ -300,6 +305,8 @@
   render();
 })();
 </script>
+
+<section class="ahk-stats-strip-wrap" id="homeStatsSlot"></section>
 
 <section class="cat-section">
 <div class="cat-inner">

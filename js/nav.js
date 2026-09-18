@@ -306,6 +306,32 @@ run();
 };
 })();
 
+// Homepage stats strip -- brands checked, and a couple of honest,
+// personal facts, sitting just above "explore by category". Ash asked
+// for this after looking at how Cruelty Free Kitty does it, but wanted
+// it to look like its own thing rather than a copy: this is a small
+// bordered card rather than a bold full-width colour bar, it's never
+// dismissible (unlike the scan-count bubble elsewhere on the site), and
+// the brand count is read live from data/brands.json every time the
+// page loads, so it updates itself as brands are added, nobody has to
+// remember to change a number by hand.
+document.addEventListener('DOMContentLoaded', function(){
+var slot = document.getElementById('homeStatsSlot');
+if (!slot) return;
+fetch('data/brands.json').then(function(r){ return r.json(); }).then(function(list){
+var count = Array.isArray(list) ? list.length : null;
+var countText = count ? count.toLocaleString() : 'over 1,000';
+slot.innerHTML =
+'<div class="ahk-stats-strip">' +
+'<div class="ahk-stats-item"><strong>' + countText + '</strong><span>brands checked</span></div>' +
+'<div class="ahk-stats-divider" aria-hidden="true"></div>' +
+'<div class="ahk-stats-item"><strong>100%</strong><span>independent</span></div>' +
+'<div class="ahk-stats-divider" aria-hidden="true"></div>' +
+'<div class="ahk-stats-item"><strong>1</strong><span>person, not a company</span></div>' +
+'</div>';
+}).catch(function(){});
+});
+
 // Subtle scroll-reveal for the homepage service cards. Progressive
 // enhancement only: .home-card has no opacity/transform in the base CSS,
 // so if this never runs (no JS, old browser, reduced motion) the cards
@@ -336,26 +362,46 @@ io.observe(el);
 }
 });
 
-// Same idea, general-purpose: any section heading/row marked up with
-// .ahk-reveal (single element) or .ahk-reveal-group (a row whose direct
-// children should stagger in one after another) eases into place the
-// first time it's scrolled to. Off entirely with reduced motion or no
-// IntersectionObserver support -- everything just stays visible, as it
-// was before this existed.
+// Same idea, site-wide (18 September - Ash asked for every page, and
+// for it to replay on the way back up too, not just the first time).
+// Applies to any element explicitly marked .ahk-reveal/.ahk-reveal-group,
+// PLUS every direct top-level block of the page's #main content on every
+// page automatically, so this doesn't need hand-adding section by
+// section as pages change. Toggles on and off as something crosses in
+// and out of view, rather than once-only, so scrolling back up over
+// something already seen settles it into place again too. Off entirely
+// with reduced motion or no IntersectionObserver support -- everything
+// just stays visible, as it was before this existed.
 document.addEventListener('DOMContentLoaded', function(){
 var reduceMotion2 = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion2 || !('IntersectionObserver' in window)) return;
+
+// Pages built around <main class="page-shell"> (brand check, shop, and
+// most others) get their direct top-level blocks tagged. The homepage
+// is laid out differently -- most of it sits directly under <body>
+// rather than inside #main, with only one small section actually inside
+// main -- so top-level <section>s and the newsletter block are picked
+// up there too. Either way this is an allow-list of real content
+// containers, not a block-list of nav.js's own injected chrome (the
+// bottom nav, its sheet, the share button, the footer counter, the
+// Ko-fi float), so none of that ever needs excluding by name here.
+var autoCandidates = document.querySelectorAll('#main > *, body > section, body > div.newsletter');
+autoCandidates.forEach(function(el){
+  if (el.matches('script, style')) return;
+  if (el.classList.contains('ahk-reveal') || el.classList.contains('ahk-reveal-group')) return;
+  // A block that's already building its own reveal (the homepage
+  // service cards), or already has a hand-placed .ahk-reveal/-group
+  // somewhere inside it (like the category and myth sections),
+  // handles itself -- don't wrap it in a second, outer animation too.
+  if (el.querySelector && el.querySelector('.home-card, .ahk-reveal, .ahk-reveal-group')) return;
+  el.classList.add('ahk-reveal');
+});
+
 var els = document.querySelectorAll('.ahk-reveal, .ahk-reveal-group');
-if (reduceMotion2 || !els.length || !('IntersectionObserver' in window)) return;
+if (!els.length) return;
 var io2 = new IntersectionObserver(function(entries){
 entries.forEach(function(entry){
-if (!entry.isIntersecting) return;
-var el = entry.target;
-el.classList.add('ahk-reveal-in');
-io2.unobserve(el);
-window.setTimeout(function(){
-el.classList.remove('ahk-reveal-pre');
-el.classList.remove('ahk-reveal-in');
-}, 900);
+entry.target.classList.toggle('ahk-reveal-in', entry.isIntersecting);
 });
 }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 els.forEach(function(el){
@@ -548,49 +594,27 @@ var path = window.location.pathname;
 if (/impact\.html$/.test(path)) return; // already has the full counter
 var RATE_PER_SECOND = 83000000000 / (365.25 * 24 * 3600);
 
-// The homepage gets a dismissible bar right under the header instead of
-// the quiet footer version, so it's seen without scrolling to the very
-// bottom of the page. Every other page keeps the plain footer counter.
-var topSlot = document.getElementById('topImpactSlot');
-var wrap, numEl, labelHtml =
+// Ash decided (18 September) that the homepage should go back to the
+// same quiet, footer-only, never-dismissed version every other page
+// already has, rather than a bar under the header - it read as too
+// busy up there. So this no longer branches on the page: every page,
+// homepage included, gets the plain footer counter.
+var labelHtml =
   'land animals killed for meat worldwide, since this page loaded &middot; <a href="/impact.html">see the full picture</a>';
+var footer = document.querySelector('footer.site-footer');
+if (!footer) return;
+var wrap = document.createElement('div');
+wrap.className = 'ambient-counter';
+wrap.setAttribute('role', 'status');
+wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
+wrap.innerHTML =
+  '<div class="ambient-counter-inner">' +
+  '<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
+  '<p class="ambient-counter-label">' + labelHtml + '</p>' +
+  '</div>';
+footer.parentNode.insertBefore(wrap, footer);
 
-if (topSlot) {
-  var DISMISS_KEY = 'ahk-impact-bar-dismissed';
-  var dismissed = false;
-  try { dismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch(e){}
-  if (dismissed) return;
-  wrap = document.createElement('div');
-  wrap.className = 'ambient-counter ambient-counter-top';
-  wrap.setAttribute('role', 'status');
-  wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
-  wrap.innerHTML =
-    '<div class="ambient-counter-inner">' +
-    '<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
-    '<p class="ambient-counter-label">' + labelHtml + '</p>' +
-    '</div>' +
-    '<button type="button" class="ambient-counter-x" aria-label="Dismiss">&times;</button>';
-  topSlot.appendChild(wrap);
-  wrap.querySelector('.ambient-counter-x').addEventListener('click', function(){
-    wrap.remove();
-    try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch(e){}
-  });
-} else {
-  var footer = document.querySelector('footer.site-footer');
-  if (!footer) return;
-  wrap = document.createElement('div');
-  wrap.className = 'ambient-counter';
-  wrap.setAttribute('role', 'status');
-  wrap.setAttribute('aria-label', 'Live estimate of land animals slaughtered for meat worldwide since this page loaded');
-  wrap.innerHTML =
-    '<div class="ambient-counter-inner">' +
-    '<span class="ambient-counter-num" id="ambientCounterNum">0</span>' +
-    '<p class="ambient-counter-label">' + labelHtml + '</p>' +
-    '</div>';
-  footer.parentNode.insertBefore(wrap, footer);
-}
-
-numEl = wrap.querySelector('#ambientCounterNum');
+var numEl = wrap.querySelector('#ambientCounterNum');
 var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (reduceMotion) {
 // Still an honest, real number -- just not animated: a running count
