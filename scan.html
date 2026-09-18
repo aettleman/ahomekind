@@ -117,7 +117,14 @@ body.scan-immersive .scan-frame { position:fixed; inset:0; max-width:none; margi
    sits behind the white "tap to start the camera" text or the controls
    along the bottom. Once the camera is live #reader covers this
    completely, so it only ever shows on the standby screen. */
-body.scan-standby .scan-frame { background-image: linear-gradient(rgba(20,26,18,0.90), rgba(20,26,18,0.93)), url('images/scan-backdrop.jpg'); background-size: cover; background-position: center 30%; }
+body.scan-immersive .scan-frame { background-image: linear-gradient(rgba(20,26,18,0.38), rgba(20,26,18,0.58)), url('images/scan-backdrop.jpg'); background-size: cover; background-position: center 30%; }
+/* Shows the moment the immersive scanner opens, standby or live -
+   most returning visits skip standby entirely because the camera
+   already has permission and starts straight away, so tying this to
+   scan-standby only meant almost nobody ever saw it. Once the live
+   camera feed covers the screen it naturally hides this again, that
+   part can't be helped, but it now shows in the brief moment before
+   the feed takes over instead of never. */
 body.scan-immersive .camera-wrap { position:fixed; inset:0; max-width:none; margin:0; }
 body.scan-immersive #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:var(--ahk-forest-deep,#2f3a2d); }
 
@@ -156,8 +163,18 @@ body.scan-immersive #torchHint { position:fixed; left:20px; right:20px; bottom:c
 }
 
 
-body.scan-standby .camera-wrap { display:block !important; }
-body.scan-standby #reader { background:var(--ahk-forest-deep,#2f3a2d); }
+body.scan-standby .camera-wrap { display:block !important; background:transparent; }
+/* .camera-wrap itself also gets an opaque background once immersive
+   (line 96, for once the camera feed is actually live) - that was
+   the other layer quietly blocking the backdrop image in standby,
+   on top of #reader's own background above. Both need to be
+   transparent for the standby screen specifically. */
+body.scan-standby #reader { background:transparent; }
+/* The camera placeholder (#reader) sits fixed over the whole screen
+   even before the camera starts, which was quietly covering the
+   scan-frame backdrop image underneath with a solid colour - that
+   was the actual reason the photo never showed. Transparent here so
+   the backdrop on .scan-frame behind it is visible during standby. */
 body.scan-immersive .bottom-nav { z-index:940; }
 /* Before the camera is running there is nothing to line up, so the
    brackets, the "line up the barcode" line and its arrow all read as a
