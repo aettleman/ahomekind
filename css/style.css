@@ -2025,3 +2025,92 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
   letter-spacing: 2px; text-transform: uppercase; padding: 13px 26px; border-radius: 30px; cursor: pointer; }
 .letter-copy-btn:hover, .letter-copy-btn:focus-visible { background: var(--ahk-clay-deep, #9a5539); }
 .letter-note { font-size: 12px; color: var(--ahk-text-muted, #7a7561); margin: 12px 0 0; }
+
+
+.rcard-owner { border-top: 0.5px dashed #cfc4a9; margin-top: 10px; padding-top: 10px; }
+
+/* A 2-item instance of .cat-grid needs to actually stay 2 columns and
+   centred at desktop widths too -- the site-wide .cat-grid switches to
+   3 columns at 760px, which left 2 tiles stranded on the left rather
+   than centred, since a 2-item grid in a 3-column template has no way
+   to centre itself. */
+.cat-grid-two { grid-template-columns: repeat(2, 1fr) !important; justify-content: center; }
+
+/* ---- going vegan panel: warmer, less wall-of-text ---- */
+.vegan-panel-intro { background: var(--ahk-sage-soft, #e4ebdd); border-radius: 16px;
+  padding: 20px 22px; margin: 0 0 22px; }
+.vegan-panel-intro p { margin: 0 0 10px; font-size: 14px; line-height: 1.75; }
+.vegan-panel-intro p:last-child { margin-bottom: 0; }
+.vegan-split { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 22px; }
+@media (min-width: 640px) { .vegan-split { grid-template-columns: 1fr 1fr; } }
+.vegan-card { border-radius: 16px; padding: 20px; }
+.vegan-card.food { background: var(--ahk-clay-soft, #f3e5dc); }
+.vegan-card.wear { background: var(--ahk-sage-soft, #e4ebdd); }
+.vegan-card img { width: 100%; height: 130px; object-fit: cover; border-radius: 12px; margin: 0 0 14px; display: block; }
+.vegan-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 21px;
+  margin: 0 0 8px; color: var(--ahk-heading, #3d4a3a); }
+.vegan-card p { font-size: 13.5px; line-height: 1.7; margin: 0; color: var(--ahk-text, #5c5c4f); }
+.vegan-guide-card { background: var(--ahk-forest, #3d4a3a); color: var(--ahk-on-dark, #f4efe2);
+  border-radius: 16px; padding: 22px; margin: 0 0 22px; text-align: center; }
+.vegan-guide-card p.kicker { color: var(--ahk-gold, #e6d4a8); font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase; margin: 0 0 10px; }
+.vegan-guide-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px;
+  margin: 0 0 10px; color: var(--ahk-on-dark, #f4efe2); }
+.vegan-guide-card p { font-size: 13.5px; line-height: 1.7; margin: 0 0 16px; color: var(--ahk-on-dark-muted, #c9d1c3); }
+.vegan-guide-card a.btn-outline { display: inline-block; border: 1.5px solid var(--ahk-gold, #e6d4a8);
+  color: var(--ahk-gold, #e6d4a8); font-weight: 600; font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; padding: 12px 24px; border-radius: 30px; text-decoration: none; }
+.vegan-guide-card a.btn-outline:hover { background: rgba(230,212,168,0.12); }
+.vegan-note { font-size: 12.5px; color: var(--ahk-text-muted, #7a7561); font-style: italic; margin: 0; }
+
+
+/* Scan <-> ingredient-check toggle. These are two separate pages under
+   the hood (different capture flows), but presented as one choice, the
+   way the redesign mockup pictured it: pick a mode, land on the right
+   page, with the choice itself always visible so switching mid-task is
+   one tap, not a trip back through the nav. */
+.scan-toggle { display: flex; background: var(--ahk-surface, #f4eede); border-radius: 14px;
+  padding: 4px; margin: 14px 0 18px; max-width: 420px; }
+.scan-toggle a { flex: 1; text-align: center; padding: 10px 8px; border-radius: 11px;
+  font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px; color: var(--ahk-text-muted, #7a7561);
+  text-decoration: none; }
+.scan-toggle a.on { background: var(--ahk-forest, #3d4a3a); color: var(--ahk-on-dark, #f4efe2); }
+@media (max-width: 480px) { .scan-toggle { max-width: none; } }
+
+/* scan.html loads straight into an immersive full-camera view
+   (enterStandby() runs on load), which hides .pagehead entirely -- so
+   the plain toggle above never appeared there. This overlay version is
+   pinned to the top of the camera view itself instead, visible in both
+   standby and live states, semi-transparent over the video feed. */
+.scan-toggle-overlay { display: none; }
+body.scan-immersive .scan-toggle-overlay {
+  display: flex; position: fixed; top: calc(env(safe-area-inset-top, 0px) + 16px);
+  left: 64px; right: 16px; max-width: 340px; margin: 0 0 0 auto;
+  background: rgba(20,24,18,0.5); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.22); z-index: 930; padding: 3px;
+}
+body.scan-immersive .scan-toggle-overlay a { color: rgba(255,255,255,0.78); font-size: 11.5px; padding: 8px 6px; }
+body.scan-immersive .scan-toggle-overlay a.on { background: rgba(255,255,255,0.92); color: var(--ahk-forest-deep, #2f3a2d); }
+@media (max-width: 420px) { body.scan-immersive .scan-toggle-overlay { left: 58px; } }
+
+
+/* The MP postcode finder, made the visual anchor of the write-to-your-MP
+   section rather than a plain link in a paragraph -- Ash asked for this
+   to be more obvious, since it is the one action that actually matters
+   on this page. GET straight to WriteToThem's own postcode search
+   ("pc" is the field their own published postcode-search embed uses),
+   opened in a new tab so the letter below stays in view. */
+.mp-finder { background: var(--ahk-forest, #3d4a3a); border-radius: 16px; padding: 22px;
+  margin: 18px 0 26px; }
+.mp-finder-label { color: var(--ahk-gold, #e6d4a8); font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase; margin: 0 0 12px; text-align: center; }
+.mp-finder-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.mp-finder-form input { flex: 1 1 160px; padding: 14px 16px; border: 0; border-radius: 12px;
+  font-family: 'Karla', sans-serif; font-size: 15px; background: #fff; color: var(--ahk-forest-deep, #2f3a2d); }
+.mp-finder-form button { flex: 0 0 auto; background: var(--ahk-gold, #e6d4a8); color: var(--ahk-forest-deep, #2f3a2d);
+  border: 0; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 14px 22px; border-radius: 12px; cursor: pointer; }
+.mp-finder-form button:hover { background: var(--ahk-gold-soft, #d9c99a); }
+.mp-finder-sub { font-size: 12px; color: var(--ahk-on-dark-muted, #c9d1c3); margin: 12px 0 0; line-height: 1.7; }
+.mp-finder-sub a { color: var(--ahk-on-dark, #f4efe2); }
+@media (max-width: 480px) { .mp-finder-form { flex-direction: column; } }

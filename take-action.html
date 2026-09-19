@@ -67,7 +67,15 @@
 <h2 class="learn-h2">write to your MP</h2>
 <p>An MP is obliged to read correspondence from people in their own constituency, and volume genuinely registers. It takes about two minutes. You don't need to be an expert, and you don't need to write anything clever. Your own words in a short, polite message count for more than a long one copied word for word, so change whatever you like below.</p>
 
-<p><a href="https://www.writetothem.com/" target="_blank" rel="noopener">WriteToThem</a> will find your MP from your postcode and send the message for you, free. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> does the same if you'd rather email directly.</p>
+<div class="mp-finder">
+<p class="mp-finder-label">find your MP and send this straight to them</p>
+<form class="mp-finder-form" action="https://www.writetothem.com/" method="get" target="_blank">
+<label for="mpPostcode" class="visually-hidden">Your postcode</label>
+<input type="text" id="mpPostcode" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
+<button type="submit">find my MP &rarr;</button>
+</form>
+<p class="mp-finder-sub">Opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
+</div>
 
 <div class="letter-block">
 <p class="letter-kicker">cosmetics testing</p>

@@ -1339,6 +1339,7 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <a href="mailto:hello@ahomekind.com?subject=something%20wrong%20on%20brand%20check" style="display:inline-block; padding:12px 24px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; color:#3d4a3a; font-size:12px; letter-spacing:1px; text-transform:uppercase;">spotted something wrong? let me know: hello@ahomekind.com</a>
 </div>
 
+<script src="js/owners.js"></script>
 <script src="js/swap.js?v=1"></script>
 <script>
 // GENERATED:PRICEMAP:START
@@ -1431,6 +1432,13 @@ if (noteHTML) {
 html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p>';
 if (tierClass === 'v-bad') {
 html += '<p class="rcard-note">What "tested on animals" actually means, most commonly: chemicals applied to a rabbit\'s eyes or shaved skin and scored for the damage they cause, doses forced on rats and mice to find how much harms or kills them, and longer studies checking for cancer or harm to unborn offspring. Almost all of the animals are killed afterwards so their organs can be examined. <a href="learn.html#testing">read the fuller explanation, still no photos or shock tactics &rarr;</a></p>';
+}
+// "Who gets your money": only appears when this specific brand is in the
+// hand-checked ownership list, right inside the same disclosure rather
+// than sending anyone to a separate page for it.
+var ownerHit = (typeof ahkFindOwner === 'function') ? ahkFindOwner(name) : null;
+if (ownerHit) {
+html += '<p class="rcard-note rcard-owner"><strong>who gets your money:</strong> owned by ' + ownerHit.parent + '. ' + ownerHit.note + '</p>';
 }
 html += '</details>';
 }

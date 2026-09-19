@@ -525,6 +525,10 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <svg class="scan-live-arrow" viewBox="0 0 64 52" fill="none" aria-hidden="true"><path d="M52 7C35 7 20 17 15 36" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M15 36l-2.5-10.5M15 36l10.5-3.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <div class="scan-brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>
+<div class="scan-toggle scan-toggle-overlay" role="tablist" aria-label="what do you want to check">
+<a href="scan.html" role="tab" aria-selected="true" class="on">scan a barcode</a>
+<a href="ingredient-check.html" role="tab" aria-selected="false">check ingredients</a>
+</div>
 <div class="scan-escape"><button type="button" id="scanEscapeBtn">type the number instead</button></div>
 <div class="scan-dim" aria-hidden="true"></div>
 <div class="scan-live-card" aria-hidden="true">

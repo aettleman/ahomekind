@@ -170,15 +170,6 @@
 </div>
 
 <div class="hero-x-below">
-<div class="hero-fact-carousel" id="heroFactCarousel">
-<p class="hero-fact-text" id="heroFactText"></p>
-<div class="hero-fact-nav">
-<button type="button" class="hero-fact-arrow" id="heroFactPrev" aria-label="previous fact">&larr;</button>
-<div class="hero-fact-dots" id="heroFactDots"></div>
-<button type="button" class="hero-fact-arrow" id="heroFactNext" aria-label="next fact">&rarr;</button>
-</div>
-</div>
-
 <div class="hero-cta-row">
 <a href="scan.html" class="hero-cta hero-cta-primary">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -198,79 +189,6 @@ check a brand
 
 </section>
 
-
-<script>
-(function(){
-  // Each visit opens on a random one of these, so returning visitors see a
-  // different fact over time -- the arrows/dots let anyone curious swipe or
-  // click through the rest right away, rather than the homepage always
-  // making the same single point about eye testing.
-  var FACTS = [
-    'Would <strong>you</strong> lock someone in place, force their eyelids open, and drip chemicals into their eyes with no pain relief?',
-    'Would <strong>you</strong> shave a patch of skin raw and rub chemicals into it, then score how red and blistered it gets?',
-    'Would <strong>you</strong> force-feed someone a chemical, a little more each day, just to find out how much it takes to kill them?',
-    'Would <strong>you</strong> dose someone with a chemical every day for months to see what it does to their organs?'
-  ];
-  var textEl = document.getElementById('heroFactText');
-  var dotsEl = document.getElementById('heroFactDots');
-  var prevBtn = document.getElementById('heroFactPrev');
-  var nextBtn = document.getElementById('heroFactNext');
-  if (!textEl) return;
-  var idx = Math.floor(Math.random() * FACTS.length);
-
-  function render(){
-    textEl.innerHTML = FACTS[idx] + ' Check if you\'re paying someone else to do it.';
-    var dotsHtml = '';
-    FACTS.forEach(function(_, i){ dotsHtml += '<span class="hero-fact-dot' + (i === idx ? ' active' : '') + '"></span>'; });
-    dotsEl.innerHTML = dotsHtml;
-  }
-
-  // Cross-fades between facts (skipped for reduced-motion) so it's obvious
-  // something changed even when two facts are a similar length.
-  function go(delta){
-    var next = (idx + delta + FACTS.length) % FACTS.length;
-    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) { idx = next; render(); return; }
-    textEl.classList.add('is-fading');
-    setTimeout(function(){
-      idx = next;
-      render();
-      textEl.classList.remove('is-fading');
-    }, 180);
-  }
-  prevBtn.addEventListener('click', function(){ go(-1); });
-  nextBtn.addEventListener('click', function(){ go(1); });
-
-  // Swipe support so this behaves like "swipe through photos" on touch
-  // devices. We track the gesture's direction as it moves: once it's
-  // clearly more horizontal than vertical, we preventDefault on further
-  // touchmove events so the page itself doesn't scroll along with an
-  // intended-horizontal swipe that drifted slightly off-axis.
-  var startX = null, startY = null, axis = null;
-  textEl.addEventListener('touchstart', function(e){
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-    axis = null;
-  }, { passive: true });
-  textEl.addEventListener('touchmove', function(e){
-    if (startX === null) return;
-    var dx = e.touches[0].clientX - startX;
-    var dy = e.touches[0].clientY - startY;
-    if (axis === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-      axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
-    }
-    if (axis === 'x') e.preventDefault();
-  }, { passive: false });
-  textEl.addEventListener('touchend', function(e){
-    if (startX === null) return;
-    var dx = e.changedTouches[0].clientX - startX;
-    if (axis === 'x' && Math.abs(dx) > 40) { go(dx < 0 ? 1 : -1); }
-    startX = null; startY = null; axis = null;
-  }, { passive: true });
-
-  render();
-})();
-</script>
 
 <section class="ahk-stats-strip-wrap" id="homeStatsSlot"></section>
 
