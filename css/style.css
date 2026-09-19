@@ -1982,10 +1982,10 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
    the animation never runs (reduced motion, old browser) the first
    line simply sits there permanently, which reads perfectly well. */
 .fact-fade { position: relative; display: flex; align-items: center; justify-content: center;
-  min-height: 86px; margin: 0 0 22px; padding: 18px 24px;
+  min-height: 56px; margin: 0 0 22px; padding: 12px 24px;
   background: var(--ahk-forest, #3d4a3a); }
 .fact-fade span { position: absolute; left: 24px; right: 24px; text-align: center;
-  font-size: 14px; line-height: 1.55; color: var(--ahk-on-dark, #f4efe2);
+  font-size: 13px; line-height: 1.4; color: var(--ahk-on-dark, #f4efe2);
   opacity: 0; animation: ahkFactFade 28s ease-in-out infinite; }
 .fact-fade span strong { color: var(--ahk-gold, #e6d4a8); font-weight: 700; }
 .fact-fade span:nth-child(1) { animation-delay: 0s; }
@@ -1996,8 +1996,8 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
   0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; }
 }
 @media (max-width: 480px) {
-  .fact-fade { min-height: 96px; padding: 16px 20px; }
-  .fact-fade span { left: 20px; right: 20px; font-size: 13.5px; }
+  .fact-fade { min-height: 64px; padding: 10px 20px; }
+  .fact-fade span { left: 20px; right: 20px; font-size: 12.5px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .fact-fade span { animation: none; }
