@@ -1162,7 +1162,7 @@ body { animation: pageFadeIn 0.22s ease; }
    js/nav.js injects the same style everywhere else, wired to real
    browser history so it always goes back to wherever you actually came
    from, worded with the page name when it can tell what that was. */
-.ahk-back-link { margin: 22px 0 0; }
+.ahk-back-link { margin: 22px 0 0; text-align: left; }
 .ahk-back-link a { display: inline-flex; align-items: center; gap: 5px; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: 0.3px; color: #4d6b4f; text-decoration: none; }
 .ahk-back-link a:hover { text-decoration: underline; }
 

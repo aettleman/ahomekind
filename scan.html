@@ -65,6 +65,12 @@
 /* One link left in this row now that ingredient checker moved to the
    toggle above - let it sit centred rather than stretching oddly. */
 .scan-frame .scan-shell-links { margin-top: 2px; }
+/* The counter bubble inherits light-page styling (transparent
+   background, dark green text on a light border) built for sitting on
+   the cream page background - inside the frame's dark green that made
+   both the text and border read as almost invisible. Same solid-cream
+   treatment as the other controls in here. */
+.scan-frame .ahk-counter-bubble { background: var(--ahk-bg, #faf5eb) !important; color: var(--ahk-heading, #3d4a3a) !important; border: 0 !important; }
 
 /* The little "point. scan. know." badge sitting at the top of the frame --
    picked out in the same cream as the rest of the frame's controls, a
