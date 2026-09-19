@@ -57,6 +57,13 @@ if(!main) return;
 var label = labelFromReferrer();
 var p = document.createElement('p');
 p.className = 'ahk-back-link';
+// Set straight on the element rather than relying on the stylesheet.
+// The .ahk-back-link rule in the shared CSS was verified present in the
+// deployed file but absent from the browser's parsed stylesheet, so its
+// text-align never applied and this link kept rendering centred on any
+// page whose container centres its text (scan.html). An inline style
+// beats every stylesheet rule and cannot be dropped in parsing.
+p.style.textAlign = 'left';
 var a = document.createElement('a');
 a.href = '#';
 a.innerHTML = '&larr; ' + (label ? ('back to ' + label) : 'back');
