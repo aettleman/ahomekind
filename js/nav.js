@@ -34,13 +34,8 @@ var PAGE_LABELS = {
 'ingredient-check.html': 'ingredient check',
 'shop.html': 'shop',
 'learn.html': 'learn',
-'quiz.html': 'quiz',
+'take-action.html': 'take action',
 'impact.html': 'your impact',
-'my-swaps.html': 'my swaps',
-'brand-watch.html': "what's changed",
-'swap-guide.html': 'swap guide',
-'food.html': 'food & kitchen',
-'fashion.html': 'fashion & accessories',
 'about.html': 'about'
 };
 
@@ -50,8 +45,6 @@ var refPath = '';
 try { refPath = new URL(document.referrer).pathname; } catch(e){ return null; }
 if(refPath === location.pathname) return null;
 if(refPath === '/' || /\/index\.html$/.test(refPath)) return PAGE_LABELS['index.html'];
-if(/\/journal\/?$/.test(refPath) || /\/journal\/index\.html$/.test(refPath)) return 'journal';
-if(/\/journal\//.test(refPath)) return 'journal';
 if(/\/brands\//.test(refPath)) return 'brand check';
 var file = refPath.split('/').filter(Boolean).pop();
 return PAGE_LABELS[file] || null;
@@ -323,11 +316,8 @@ var count = Array.isArray(list) ? list.length : null;
 var countText = count ? count.toLocaleString() : 'over 1,000';
 slot.innerHTML =
 '<div class="ahk-stats-strip">' +
-'<div class="ahk-stats-item"><strong>' + countText + '</strong><span>brands checked</span></div>' +
-'<div class="ahk-stats-divider" aria-hidden="true"></div>' +
-'<div class="ahk-stats-item"><strong>100%</strong><span>independent</span></div>' +
-'<div class="ahk-stats-divider" aria-hidden="true"></div>' +
-'<div class="ahk-stats-item"><strong>1</strong><span>person, not a company</span></div>' +
+'<strong class="ahk-stats-num">' + countText + '</strong>' +
+'<span class="ahk-stats-label">brands checked so far &middot; independently researched</span>' +
 '</div>';
 }).catch(function(){});
 });
@@ -507,7 +497,8 @@ var bnIcons = {
   scan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/></svg>',
   check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/></svg>',
   shop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8.5h11l.9 11a1.5 1.5 0 0 1-1.5 1.6H7.1a1.5 1.5 0 0 1-1.5-1.6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg>',
-  more: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18.5" cy="12" r="1.6"/></svg>'
+  learn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.2S10.4 5 7.6 5C5.6 5 4 6.3 4 6.3v11.4S5.6 16.4 7.6 16.4c2.8 0 4.4 2.2 4.4 2.2s1.6-2.2 4.4-2.2c2 0 3.6 1.3 3.6 1.3V6.3S18.4 5 16.4 5C13.6 5 12 7.2 12 7.2z"/><path d="M12 7.2v11.4"/></svg>',
+  impact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-7.5-10.3A4.2 4.2 0 0 1 12 7.6a4.2 4.2 0 0 1 7.5 2.6c0 5.7-7.5 10.3-7.5 10.3z"/></svg>'
 };
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
@@ -517,76 +508,20 @@ return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : 
 }
 var bn = document.createElement('div');
 bn.className = 'bottom-nav';
+/* Five real destinations, no Home tab and no "More" sheet. Tapping the
+   logo in the header is how you get home - that's what people reach for
+   anyway. A hidden/"More" menu was deliberately rejected: it asks people
+   to already know something is behind it before they'll find it, which
+   works against the whole point of simplifying this site. The pages that
+   used to live in the sheet are either gone or in the footer now. */
 bn.innerHTML =
-bnItem('/index.html', bnIcons.home, 'Home', 'home') +
 bnItem('/scan.html', bnIcons.scan, 'Scan', 'scan') +
-bnItem('/brand-check.html', bnIcons.check, 'Brands', 'check') +
-bnItem('/shop.html', bnIcons.shop, 'Shop', 'shop') +
-'<button type="button" class="bn-item bn-more" id="bn-more-btn">' +
-'<span class="bn-icon-wrap"><span class="bn-icon">' + bnIcons.more + '</span></span><span class="bn-label">More</span></button>';
+bnItem('/brand-check.html', bnIcons.check, 'Check', 'check') +
+bnItem('/learn.html', bnIcons.learn, 'Learn', 'learn') +
+bnItem('/impact.html', bnIcons.impact, 'Impact', 'impact') +
+bnItem('/shop.html', bnIcons.shop, 'Shop', 'shop');
 document.body.appendChild(bn);
 
-var sheet = document.createElement('div');
-sheet.className = 'bn-sheet';
-sheet.id = 'bn-sheet';
-sheet.setAttribute('role', 'dialog');
-sheet.setAttribute('aria-modal', 'true');
-sheet.setAttribute('aria-label', 'more pages');
-sheet.innerHTML =
-'<div class="bn-sheet-inner">' +
-/* Grouped rather than one long list of ten links: four short headed
-   groups are far easier to scan than a pile, and it gives the newer
-   pages (ingredient checker, food, fashion) somewhere obvious to sit. */
-'<p class="bn-sheet-group">check something</p>' +
-'<a href="/ingredient-check.html">ingredient checker</a>' +
-'<a href="/brand-watch.html">what\'s changed</a>' +
-'<p class="bn-sheet-group">explore</p>' +
-'<a href="/swap-guide.html">swap guide</a>' +
-'<a href="/food">food &amp; kitchen</a>' +
-'<a href="/fashion">fashion &amp; accessories</a>' +
-'<p class="bn-sheet-group">yours</p>' +
-'<a href="/my-swaps.html">my swaps</a>' +
-'<a href="/impact.html">your impact</a>' +
-'<p class="bn-sheet-group">read</p>' +
-'<a href="/learn.html">learn</a>' +
-'<a href="/journal/">journal</a>' +
-'<a href="/about.html">about</a>' +
-/* In the installed app there's no footer in view, so these two had
-   nowhere to live on a phone. */
-'<p class="bn-sheet-group">elsewhere</p>' +
-'<a href="https://instagram.com/ahomekind" target="_blank" rel="noopener">instagram</a>' +
-'<a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a>' +
-'<button type="button" class="bn-sheet-close" id="bn-sheet-close">close</button>' +
-'</div>';
-document.body.appendChild(sheet);
-
-var moreBtn = document.getElementById('bn-more-btn');
-var closeBtn = document.getElementById('bn-sheet-close');
-moreBtn.setAttribute('aria-haspopup', 'true');
-moreBtn.setAttribute('aria-expanded', 'false');
-function openSheet(){
-sheet.classList.add('open');
-document.body.classList.add('bn-sheet-lock');
-moreBtn.setAttribute('aria-expanded', 'true');
-/* Focusing the close button (the last child) makes the browser scroll the
-   sheet to reach it, which pushed the first and most-used item off the top.
-   Focus without scrolling, then pin the sheet to its top. */
-closeBtn.focus({ preventScroll: true });
-var inner = sheet.querySelector('.bn-sheet-inner');
-if(inner) inner.scrollTop = 0;
-}
-function closeSheet(){
-sheet.classList.remove('open');
-document.body.classList.remove('bn-sheet-lock');
-moreBtn.setAttribute('aria-expanded', 'false');
-moreBtn.focus(); // return focus to where it came from
-}
-moreBtn.addEventListener('click', openSheet);
-closeBtn.addEventListener('click', closeSheet);
-sheet.addEventListener('click', function(e){ if(e.target === sheet) closeSheet(); });
-document.addEventListener('keydown', function(e){
-if(e.key === 'Escape' && sheet.classList.contains('open')){ closeSheet(); }
-});
 });
 
 // Ambient impact counter, in-flow, just above the footer on every page
@@ -815,7 +750,7 @@ el.innerHTML =
 '<div class="swap-of-day-side"><p class="swap-label try">try</p><p class="swap-name"><a href="' + pick.tryHref + '">' + pick.tryName + '</a></p><p class="swap-note">' + pick.tryNote + '</p></div>' +
 '</div>' +
 '</div>' +
-'<p style="margin-top:22px;"><a href="/swap-guide.html" class="btn">see more swaps</a></p>';
+'<p style="margin-top:22px;"><a href="/brand-check.html" class="btn">check another brand</a></p>';
 });
 
 // Ko-fi + Instagram links, pinned to the header's right edge on every

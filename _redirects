@@ -8,4 +8,32 @@
 /start-here.html /learn.html#start 301
 /what-testing-means.html /learn.html#testing 301
 /money.html /learn.html#money 301
-/instead-of.html /swap-guide.html#swaps 301
+/instead-of.html /learn.html 301
+
+# ---------------------------------------------------------------
+# 19 September 2026: the site was stripped back to five places.
+# Everything below was removed. Its content either moved into the
+# learn page's "going vegan" section or was cut, so these 301 to the
+# nearest honest equivalent rather than dropping people on a 404.
+# Order matters: the more specific rules come before /food.
+/journal /learn.html 301
+/journal/ /learn.html 301
+/journal/* /learn.html 301
+/swap-guide.html /learn.html 301
+/swap-guide /learn.html 301
+/my-swaps.html /impact.html 301
+/my-swaps /impact.html 301
+/brand-watch.html /brand-check.html 301
+/brand-watch /brand-check.html 301
+/quiz.html /brand-check.html 301
+/quiz /brand-check.html 301
+/food-cheap.html /learn.html 301
+/food-comfort.html /learn.html 301
+/food-high-protein.html /learn.html 301
+/food-quick-easy.html /learn.html 301
+/food-sweet.html /learn.html 301
+/recipe-* /learn.html 301
+/food.html /learn.html 301
+/food /learn.html 301
+/fashion.html /learn.html 301
+/fashion /learn.html 301

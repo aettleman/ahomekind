@@ -1914,18 +1914,114 @@ body.shop-skin header.site-header { background: var(--ahk-surface); }
    forest palette rather than a bold colour bar, deliberately: it reads
    as "a home kind's own small honest note", not a lift from any other
    site's version of the same idea. Never dismissible. */
-.ahk-stats-strip { display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
-  gap: 6px 22px; max-width: 640px; margin: 0 auto; padding: 16px 26px;
-  background: var(--ahk-card, #fffdf8); border: 0.5px solid var(--ahk-border-soft, #dcd2b8);
-  border-radius: 16px; }
-.ahk-stats-item { display: flex; align-items: baseline; gap: 6px; white-space: nowrap; }
-.ahk-stats-item strong { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 19px; color: var(--ahk-forest, #3d4a3a); }
-.ahk-stats-item span { font-size: 12px; color: #8a8672; letter-spacing: 0.2px; }
-.ahk-stats-divider { width: 1px; height: 18px; background: var(--ahk-border-soft, #dcd2b8); }
-.ahk-stats-strip-wrap { padding: 0 24px 26px; }
+.ahk-stats-strip { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; width: 100%; padding: 20px 24px;
+  background: var(--ahk-forest, #3d4a3a); border: 0; border-radius: 0; text-align: center; }
+/* Plain, upright, evenly-sized numerals. The display serif's figures sit
+   at different heights (its 6 and 9 hang below the line) which reads as
+   decorative rather than factual - wrong for a count. */
+.ahk-stats-num { font-family: 'Karla', sans-serif; font-weight: 600; font-size: 27px;
+  line-height: 1.1; color: var(--ahk-gold, #e6d4a8);
+  font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+.ahk-stats-label { font-size: 12px; color: var(--ahk-on-dark-muted, #c9d1c3); letter-spacing: 0.2px; }
+.ahk-stats-strip-wrap { padding: 0; }
 @media (max-width: 480px) {
-  .ahk-stats-strip { gap: 5px 14px; padding: 14px 18px; }
-  .ahk-stats-item strong { font-size: 17px; }
-  .ahk-stats-item span { font-size: 11px; }
-  .ahk-stats-divider { display: none; }
+  .ahk-stats-strip { padding: 17px 20px; }
+  .ahk-stats-num { font-size: 24px; }
+  .ahk-stats-label { font-size: 11.5px; }
 }
+
+
+/* ============================================================
+   HERO CALL TO ACTION -- the two things the site is actually for
+   ============================================================
+   Two big, plainly-labelled buttons instead of the three small circled
+   icons that were here before. "Scan" and "Check a brand" are two
+   genuinely different everyday actions (I have the product in my hand
+   vs I want to look a brand up first), so they get equal weight and
+   equal size rather than one leading and the others trailing after it. */
+.hero-cta-row { display: flex; gap: 12px; justify-content: center; max-width: 440px;
+  margin: 2px auto 0; }
+.hero-cta { flex: 1 1 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 7px; text-decoration: none; text-align: center;
+  padding: 17px 12px; border-radius: 16px; font-family: 'Karla', sans-serif;
+  font-weight: 700; font-size: 14.5px; letter-spacing: 0.2px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.hero-cta svg { display: block; }
+.hero-cta-primary { background: var(--ahk-gold, #e6d4a8); color: var(--ahk-forest-deep, #2f3a2d);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.22); }
+.hero-cta-secondary { background: rgba(244,239,226,0.09); color: var(--ahk-on-dark, #f4efe2);
+  border: 1.5px solid rgba(244,239,226,0.34); }
+.hero-cta:hover, .hero-cta:focus-visible { transform: translateY(-2px); }
+.hero-cta-secondary:hover, .hero-cta-secondary:focus-visible { background: rgba(244,239,226,0.17);
+  border-color: var(--ahk-gold-soft, #d9c99a); }
+@media (prefers-reduced-motion: reduce) { .hero-cta { transition: none; } }
+
+/* The take-action teaser on the homepage. Quiet card, not a shouty
+   banner - this is an invitation, not a demand. */
+.action-teaser { display: block; max-width: 560px; margin: 0 auto; padding: 26px 24px 30px;
+  text-align: center; text-decoration: none; }
+.action-teaser-kicker { color: var(--ahk-clay-deep, #9a5539); font-size: 10.5px; letter-spacing: 3px;
+  text-transform: uppercase; margin: 0 0 12px; }
+.action-teaser h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px;
+  line-height: 1.22; color: var(--ahk-heading, #3d4a3a); margin: 0 0 12px; text-wrap: balance; }
+.action-teaser p { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text, #5c5c4f); margin: 0 0 20px; }
+.action-teaser-cta { display: inline-block; background: var(--ahk-clay, #b4674a); color: #fdf7f3;
+  font-weight: 600; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  padding: 13px 26px; border-radius: 30px; }
+.action-teaser:hover .action-teaser-cta, .action-teaser:focus-visible .action-teaser-cta {
+  background: var(--ahk-clay-deep, #9a5539); }
+
+
+/* ============================================================
+   FADING QUESTION BANNER (learn page)
+   ============================================================
+   One line at a time, fading in and out, rather than a strip that
+   scrolls past. Four lines on a 28s loop, 7s each. The whole thing is
+   decorative repetition of a point made elsewhere on the page, so if
+   the animation never runs (reduced motion, old browser) the first
+   line simply sits there permanently, which reads perfectly well. */
+.fact-fade { position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 86px; margin: 0 0 22px; padding: 18px 24px;
+  background: var(--ahk-forest, #3d4a3a); }
+.fact-fade span { position: absolute; left: 24px; right: 24px; text-align: center;
+  font-size: 14px; line-height: 1.55; color: var(--ahk-on-dark, #f4efe2);
+  opacity: 0; animation: ahkFactFade 28s ease-in-out infinite; }
+.fact-fade span strong { color: var(--ahk-gold, #e6d4a8); font-weight: 700; }
+.fact-fade span:nth-child(1) { animation-delay: 0s; }
+.fact-fade span:nth-child(2) { animation-delay: 7s; }
+.fact-fade span:nth-child(3) { animation-delay: 14s; }
+.fact-fade span:nth-child(4) { animation-delay: 21s; }
+@keyframes ahkFactFade {
+  0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; }
+}
+@media (max-width: 480px) {
+  .fact-fade { min-height: 96px; padding: 16px 20px; }
+  .fact-fade span { left: 20px; right: 20px; font-size: 13.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fact-fade span { animation: none; }
+  .fact-fade span:nth-child(1) { opacity: 1; }
+}
+.learn-h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px;
+  color: var(--ahk-heading, #3d4a3a); margin: 30px 0 8px; }
+
+
+/* ---- take action page ---- */
+.action-note { background: var(--ahk-sage-soft, #e4ebdd); border-radius: 14px; padding: 16px 20px; margin: 0 0 8px; }
+.action-note p { margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--ahk-text, #5c5c4f); }
+.letter-block { background: var(--ahk-card, #fff); border: 0.5px solid var(--ahk-border-soft, #e4dbc7);
+  border-radius: 16px; padding: 22px; margin: 18px 0 26px; }
+.letter-kicker { color: var(--ahk-clay-deep, #9a5539); font-size: 10.5px; letter-spacing: 3px;
+  text-transform: uppercase; margin: 0 0 10px; }
+.letter-block h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 23px;
+  line-height: 1.2; color: var(--ahk-heading, #3d4a3a); margin: 0 0 10px; }
+.letter-context { font-size: 13px; line-height: 1.7; color: var(--ahk-text-muted, #7a7561); margin: 0 0 16px; }
+.letter-body { background: var(--ahk-surface, #f4eede); border-radius: 12px; padding: 18px 20px; }
+.letter-body p { font-size: 13.5px; line-height: 1.75; margin: 0 0 12px; }
+.letter-body p:last-child { margin-bottom: 0; }
+.letter-copy-btn { display: inline-block; margin-top: 16px; background: var(--ahk-clay, #b4674a);
+  color: #fdf7f3; border: 0; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; padding: 13px 26px; border-radius: 30px; cursor: pointer; }
+.letter-copy-btn:hover, .letter-copy-btn:focus-visible { background: var(--ahk-clay-deep, #9a5539); }
+.letter-note { font-size: 12px; color: var(--ahk-text-muted, #7a7561); margin: 12px 0 0; }

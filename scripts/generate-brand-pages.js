@@ -135,28 +135,11 @@ function renderBrandPage(brand) {
   lines.push('<span>a home kind</span>');
   lines.push('</a>');
   lines.push('<nav class="main-nav">');
-  lines.push('<a href="../../index.html">home</a>');
-  lines.push('<a href="../../brand-check.html">brand check</a>');
-  lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>');
-  lines.push('<span class="dd-m">');
-  lines.push('<a href="../../scan.html">scan a barcode</a>');
-  lines.push('<a href="../../shelf.html">scan a shelf</a>');
-  lines.push('<a href="../../ingredient-check.html">ingredient checker</a>');
-  lines.push('</span></span>');
-  lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>');
-  lines.push('<span class="dd-m">');
+  lines.push('<a href="../../scan.html">scan</a>');
+  lines.push('<a href="../../brand-check.html">check a brand</a>');
   lines.push('<a href="../../learn.html">learn</a>');
-  lines.push('<a href="../../quiz.html">take the quiz</a>');
   lines.push('<a href="../../impact.html">your impact</a>');
-  lines.push('<a href="../../my-swaps.html">my swaps</a>');
-  lines.push('</span></span>');
-  lines.push('<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>');
-  lines.push('<span class="dd-m">');
-  lines.push('<a href="../../brand-watch.html">what\'s changed</a>');
-  lines.push('<a href="../../swap-guide.html">swap guide</a>');
-  lines.push('<a href="../../journal/">journal</a>');
-  lines.push('<a href="../../about.html">about</a>');
-  lines.push('</span></span>');
+  lines.push('<a href="../../shop.html" class="nav-shop-btn">shop</a>');
   lines.push('<a href="../../shop.html" class="nav-shop-btn">shop</a>');
   lines.push('</nav>');
   lines.push('</div>');
@@ -201,7 +184,9 @@ function renderBrandPage(brand) {
   
   lines.push('<div style="margin-top:36px; padding:18px 20px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; font-size:13px; color:#7a7561;">');
   if (brand.lastVerified) {
-    lines.push('<p style="margin:0 0 8px;">Checked against the source directory as of <strong>' + formatVerifiedDate(brand.lastVerified) + '</strong>.</p>');
+    lines.push('<p style="margin:0 0 8px;"><strong>Last updated ' + formatVerifiedDate(brand.lastVerified) + '.</strong> Checked against the source directory on that date.</p>');
+  } else {
+    lines.push('<p style="margin:0 0 8px;"><strong>Last updated date not recorded for this brand yet.</strong></p>');
   }
   lines.push('Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">let me know</a>.');
   lines.push('</div>');
@@ -209,7 +194,7 @@ function renderBrandPage(brand) {
   lines.push('');
   lines.push('<div class="newsletter">');
   lines.push('<p class="label3">stay in the loop</p>');
-  lines.push('<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>');
+  lines.push('<p class="sub2">occasional updates, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>');
   lines.push('<form class="newsletter-form" id="nf-' + brand.slug + '" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>');
   lines.push('<input type="hidden" value="1" name="embed">');
   lines.push('<div class="nf-row">');
@@ -224,7 +209,7 @@ function renderBrandPage(brand) {
   lines.push('<p class="nf-msg" id="nf-msg-' + brand.slug + '" role="status" aria-live="polite"></p>');
   lines.push('</form>');
   lines.push('</div>');
-  lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
+  lines.push('<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
   lines.push('<script src="../../js/nav.js?v=20260910aa"></' + 'script>');
   lines.push('<script src="../../js/newsletter.js"></' + 'script>');
   lines.push('</body>');
@@ -235,7 +220,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'my-swaps.html', 'brand-watch.html', 'swap-guide.html', 'brand-check.html', 'scan.html', 'shelf.html', 'ingredient-check.html', 'quiz.html', 'shop.html', 'journal/'];
+  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'brand-check.html', 'scan.html', 'shelf.html', 'ingredient-check.html', 'shop.html', 'take-action.html', 'perfume.html'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');

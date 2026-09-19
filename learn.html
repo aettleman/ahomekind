@@ -57,30 +57,10 @@
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="index.html">home</a>
-<a href="brand-check.html">brand check</a>
-<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">scan<span class="caret">&#9660;</span>
-<span class="dd-m">
-<a href="scan.html">scan a barcode</a>
-<a href="shelf.html">scan a shelf</a>
-</span></span>
-<a href="ingredient-check.html">ingredient checker</a>
-<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">convince me<span class="caret">&#9660;</span>
-<span class="dd-m">
+<a href="scan.html">scan</a>
+<a href="brand-check.html">check a brand</a>
 <a href="learn.html">learn</a>
 <a href="impact.html">your impact</a>
-<a href="my-swaps.html">my swaps</a>
-</span></span>
-<span class="dd" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">explore more<span class="caret">&#9660;</span>
-<span class="dd-m">
-<a href="brand-watch.html">what's changed</a>
-<a href="swap-guide.html">swap guide</a>
-<a href="food">food &amp; kitchen</a>
-<a href="fashion">fashion &amp; accessories</a>
-<a href="perfume.html">perfume &amp; fragrance</a>
-<a href="journal/">journal</a>
-<a href="about.html">about</a>
-</span></span>
 <a href="shop.html" class="nav-shop-btn">shop</a>
 </nav>
 </div>
@@ -93,17 +73,24 @@
 <h1>learn</h1>
 </div>
 </div>
+<!-- The four questions from the homepage carousel, shortened, fading in
+     and out one at a time rather than scrolling past. Every line says
+     "someone" rather than "a rabbit" or "an animal": the whole argument
+     of this site is that they are someone, and the reader fills in which
+     animal themselves, which lands harder than naming one for them. -->
+<div class="fact-fade" aria-label="what animal testing involves">
+<span>Would <strong>you</strong> force someone's eyelids open and drip chemicals into their eyes?</span>
+<span>Would <strong>you</strong> shave someone's skin raw and rub chemicals into it?</span>
+<span>Would <strong>you</strong> force-feed someone a chemical to find out how much it takes to kill them?</span>
+<span>Would <strong>you</strong> dose someone for months to see what it does to their organs?</span>
+</div>
 <p class="hero-lede">The bits worth understanding, in plain terms: what testing actually involves, where your money goes, and what the labels really mean.</p>
-
-<!-- The swap guide is the practical half of the same job this page does:
-     learn why, then find what to buy instead. It stays in the More menu on
-     its own, but it needs to be reachable from here too. -->
-<p class="xlink"><a href="swap-guide.html">already convinced? the swap guide has what to buy instead &rarr;</a></p>
 
 <div class="hub-tabs" id="hubTabs">
 <button type="button" class="hub-tab" data-tab="start">why it matters</button>
 <button type="button" class="hub-tab" data-tab="testing">what testing means</button>
 <button type="button" class="hub-tab" data-tab="money">who gets your money</button>
+<button type="button" class="hub-tab" data-tab="vegan">going vegan</button>
 </div>
 
 <div class="hub-panel" id="panel-start">
@@ -114,14 +101,6 @@
 <a href="shop.html?category=beauty" class="cat-tile-x">
 <div class="ahk-slot"><img src="images/cat-skincare.jpg" alt="" loading="lazy" onerror="this.hidden=true"><span class="ahk-slot-label">Beauty &amp; skincare</span></div>
 <span class="cat-tile-label">beauty &amp; skincare<span class="cat-tile-desc">the easiest place to begin, nobody needs animal-tested shampoo</span></span>
-</a>
-<a href="food" class="cat-tile-x">
-<div class="ahk-slot"><img src="images/cat-food.jpg" alt="" loading="lazy" onerror="this.hidden=true"><span class="ahk-slot-label">Food &amp; kitchen</span></div>
-<span class="cat-tile-label">food &amp; kitchen<span class="cat-tile-desc">a thriving way to eat, not a compromise, no overnight overhaul needed</span></span>
-</a>
-<a href="fashion" class="cat-tile-x">
-<div class="ahk-slot"><img src="images/cat-fashion.jpg" alt="" loading="lazy" onerror="this.hidden=true"><span class="ahk-slot-label">Fashion &amp; accessories</span></div>
-<span class="cat-tile-label">fashion &amp; accessories<span class="cat-tile-desc">leather, wool, silk, down and fur - what to look for instead</span></span>
 </a>
 <a href="shop.html?category=household" class="cat-tile-x">
 <div class="ahk-slot"><img src="images/cat-household.jpg" alt="" loading="lazy" onerror="this.hidden=true"><span class="ahk-slot-label">Household &amp; cleaning</span></div>
@@ -140,7 +119,7 @@
 <div class="logo-strip"><img src="images/certified-logos.jpg" alt="Six certified cruelty-free and vegan logos: Leaping Bunny, a generic not-tested-on-animals rabbit, PETA's Animal Test-Free bunny, the Vegan sunflower trademark, vegan.org's Certified Vegan heart, and the Vegetarian Society's Vegan Approved seal." loading="lazy"></div>
 <p>Leaping Bunny and Cruelty Free International's own logo are the two backed by an actual audit trail, the company has to prove it and get checked again to keep using them. The vegan seals (the sunflower, the Certified Vegan heart from vegan.org, and the Vegetarian Society's Vegan Approved) all confirm the same thing in the other direction: no animal ingredients, not whether animals were tested on to make it. A brand can carry a vegan seal and still test on animals elsewhere, which is exactly why the two questions, cruelty-free and vegan, need checking separately. A generic rabbit doodle with no certifier's name attached, no website, nothing you could look up, is the fake version: it means the brand chose some clip art, not that anyone checked anything.</p>
 
-<p style="margin-top:32px;"><a href="quiz.html" class="btn">not sure? take the quiz</a></p>
+<p style="margin-top:32px;"></p>
 </div>
 
 <div class="hub-panel" id="panel-testing">
@@ -202,9 +181,29 @@
 </div>
 </main>
 
+<div class="hub-panel" id="panel-vegan">
+<p>Most people arrive here because of animal testing, and that is a good enough reason on its own. This part is for anyone who has started wondering about the rest of it, and it is genuinely fine if that is not you yet.</p>
+
+<p>Cruelty-free and vegan are two separate questions. Cruelty-free is about testing: was anyone experimented on to make this. Vegan is about ingredients: is anyone <em>in</em> this. A brand can be certified cruelty-free and still use beeswax, lanolin, carmine or milk proteins. A product can be vegan and still come from a company that tests. Checking one does not answer the other, which is why the brand check treats them as two separate columns rather than one badge.</p>
+
+<p>I did not put those two things together for years. I bought cruelty-free cosmetics and ate exactly as I always had, and nobody had ever explained that the same question applied to both. That is not a failure of character, it is just a connection nobody makes for you. So if you are reading this having never thought about it before, you are not behind.</p>
+
+<h2 class="learn-h2">food</h2>
+<p>Nothing here asks you to overhaul your week. The swaps that actually stick are the boring ones: the milk in your tea, the spread on your toast, the mince in the thing you already cook every Tuesday. Supermarket own-brand ranges have got genuinely good and are usually cheaper than the branded versions sitting next to them.</p>
+<p>The one thing worth knowing rather than guessing at: if you eat plant-based for even a few days a week, the numbers move more than most people expect. The calculator on the impact page runs those figures on conservative UK data, so you can see your own rather than take anyone's word for it.</p>
+
+<h2 class="learn-h2">clothes and accessories</h2>
+<p>The materials to look for on a label are leather, wool, silk, down, feathers, fur and shearling. Suede, nubuck and shearling are all leather under a different name, and "real fur" turns up mislabelled as faux often enough that it is worth a second look on anything trimmed.</p>
+<p>Secondhand is the least complicated answer to almost all of this, and it is the cheapest one. Where you are buying new, the useful question is not whether a brand calls itself sustainable but whether it will tell you what the thing is actually made of.</p>
+
+<h2 class="learn-h2">where to start</h2>
+<p>Pick one category. Finish what you already own rather than throwing it out, which helps nobody and costs you money. Replace things as they run out, and check each replacement before you buy it rather than after. That is the whole method.</p>
+<p class="xlink"><a href="brand-check.html">check a brand &rarr;</a> &nbsp;&middot;&nbsp; <a href="impact.html">see your impact &rarr;</a> &nbsp;&middot;&nbsp; <a href="shop.html">shop verified products &rarr;</a></p>
+</div>
+
 <div class="newsletter">
 <p class="label3">stay in the loop</p>
-<p class="sub2">occasional updates, new journal posts, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
+<p class="sub2">occasional updates, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
 <form class="newsletter-form" id="nf-30" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
 <input type="hidden" value="1" name="embed">
 <div class="nf-row">
@@ -219,13 +218,13 @@
 <p class="nf-msg" id="nf-msg-30" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
 <script src="js/nav.js?v=20260910z"></script>
 <script src="js/newsletter.js"></script>
 <script>
 // Tab switching, hash-linkable (learn.html#testing etc).
 (function(){
-var TABS = ['start', 'testing', 'money'];
+var TABS = ['start', 'testing', 'money', 'vegan'];
 var tabButtons = document.querySelectorAll('.hub-tab');
 function show(tab){
   if (TABS.indexOf(tab) === -1) tab = 'start';
