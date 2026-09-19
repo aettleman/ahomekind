@@ -56,6 +56,15 @@
 .scan-frame .camera-wrap { margin-bottom: 16px; }
 .scan-frame .scan-or { color: var(--ahk-on-dark-muted); }
 .scan-frame .scan-shell-links a { background: rgba(244,239,226,0.94); }
+/* The manual "check" button inherits transparent-with-dark-text styling
+   built for a light page background - on the frame's dark green that
+   read as an empty, near-invisible oval. Give it the same solid cream
+   treatment as every other control inside the frame. */
+.scan-frame .manual #lookupBtn { background: var(--ahk-bg, #faf5eb) !important; color: var(--ahk-heading, #3d4a3a) !important; border: 0 !important; }
+.scan-frame .manual #lookupBtn:hover { background: var(--ahk-gold-soft, #d9c99a) !important; }
+/* One link left in this row now that ingredient checker moved to the
+   toggle above - let it sit centred rather than stretching oddly. */
+.scan-frame .scan-shell-links { margin-top: 2px; }
 
 /* The little "point. scan. know." badge sitting at the top of the frame --
    picked out in the same cream as the rest of the frame's controls, a
@@ -501,8 +510,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 </div>
 
-<span class="ahk-counter-bubble" style="margin-bottom:14px;"></span>
-
 <div id="addHome">
 <span id="addHome-icon" aria-hidden="true">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
@@ -517,7 +524,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 
 <div class="scan-frame">
-<p class="scan-tagline"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>point. scan. know.<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#c9a876" stroke-width="2"><path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9A4.6 4.6 0 0 1 20.8 8.6Z"/></svg></p>
 <div class="camera-wrap" id="cameraWrap" style="display:none;">
 <video id="reader" muted playsinline></video>
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
@@ -531,11 +537,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button type="button" class="scan-close" id="scanCloseBtn" aria-label="Leave the camera view">&#10005;</button>
 <div class="scan-escape"><button type="button" id="scanEscapeBtn">type the number instead</button></div>
 <div class="scan-dim" aria-hidden="true"></div>
-<div class="scan-live-card" aria-hidden="true">
-<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4d6b4f" stroke-width="2"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12Z"/></svg>
-<p>point. scan. know.</p>
-<svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a876" stroke="#c9a876" stroke-width="1.6"><path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9A4.6 4.6 0 0 1 20.8 8.6Z"/></svg>
-</div>
 <p id="torchHint" style="display:none;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div id="cameraControls" class="camera-controls" style="display:none;">
 <button type="button" id="snapBtn" class="snap">&#128247; snap</button>
@@ -565,14 +566,11 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <input type="text" id="manualCode" inputmode="numeric" placeholder="enter barcode manually">
 <button class="big-btn" id="lookupBtn">check</button>
 </div>
+<span class="ahk-counter-bubble" style="margin:2px auto 14px;"></span>
 <div class="scan-shell-links">
 <a href="shelf.html">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
 <span>scan a whole shelf</span>
-</a>
-<a href="ingredient-check.html">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4c0 9-5.5 14-11 14-2 0-3.5-.6-3.5-.6S5 9 12.5 6.5C16 5.3 20 4 20 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 21c1.5-4.5 4-7.5 7.5-9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-<span>ingredient checker</span>
 </a>
 </div>
 </div><!-- /.scan-frame -->
