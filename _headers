@@ -17,3 +17,19 @@
 
 /*/
   Cache-Control: no-cache, must-revalidate
+
+# css/style.css and js/nav.js are the two files most likely to change
+# under people's feet - both get a fresh "?v=" query string on every
+# change across all 1,069+ pages, but that trick only works if the CDN
+# actually treats a new query string as a new cache entry. Without an
+# explicit rule here, Cloudflare's default caching for static assets can
+# hold onto an old copy of these two specific files far longer than
+# feels sane, which is exactly what caused a confirmed, already-fixed
+# CSS bug to keep looking "not fixed" on the live site. Forcing
+# revalidation on every request for just these two small, frequently-
+# touched files is worth the tiny bit of extra latency.
+/css/style.css
+  Cache-Control: no-cache, must-revalidate
+
+/js/nav.js
+  Cache-Control: no-cache, must-revalidate
