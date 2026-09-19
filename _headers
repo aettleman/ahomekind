@@ -28,8 +28,8 @@
 # CSS bug to keep looking "not fixed" on the live site. Forcing
 # revalidation on every request for just these two small, frequently-
 # touched files is worth the tiny bit of extra latency.
-/css/style.css
+/css/app.css
   Cache-Control: no-cache, must-revalidate
 
-/js/nav.js
+/js/site.js
   Cache-Control: no-cache, must-revalidate

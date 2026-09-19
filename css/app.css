@@ -1,0 +1,2116 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { overflow-x: hidden; }
+
+/* Smooth, native page-to-page transitions. Opting in with this one rule
+   makes supporting browsers (Chrome/Edge, with Safari catching up) cross-
+   fade between pages instead of the usual hard cut -- no JS, and browsers
+   that don't support it just do the normal instant navigation, so this is
+   pure upside. The default browser cross-fade is a little flat, so we
+   override its timing to feel calmer and closer to what Apple's pages do. */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) {
+  animation-duration: 0.32s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+body {
+  background: var(--ahk-bg, #f2ede1);
+  font-family: 'Karla', sans-serif;
+  color: var(--ahk-text, #5c5c4f);
+  line-height: 1.9;
+}
+
+/* Keeps a drag on a slider thumb from being read as a page-swipe on
+   touch devices -- without this, dragging the impact-page sliders can
+   pan the whole page sideways instead of just moving the slider. */
+input[type=range] { touch-action: none; }
+
+a { color: #4d6b4f; text-decoration: none; }
+a:hover { color: #3d4a3a; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* Tile grid used for the homepage's service cards and, elsewhere, for
+   any "pick one of these" grid of options (e.g. brand-check's browse-
+   by-category screen). Kept here rather than per-page so the same look
+   and the same hover-bounce/tap-feedback apply wherever it's reused. */
+.home-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+@media(max-width:820px){ .home-grid { grid-template-columns:1fr; max-width:420px; } }
+.home-grid-2 { grid-template-columns:repeat(2, 1fr); max-width:680px; }
+@media(max-width:640px){ .home-grid-2 { grid-template-columns:1fr; max-width:420px; } }
+.home-card { display:block; background:var(--ahk-card, #fffdf8); border:0.5px solid var(--ahk-border-soft, #dcd2b8); border-radius:16px; padding:30px 24px 28px; text-align:center; text-decoration:none; transition:transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
+.home-card:hover, .home-card:focus-visible { transform:translateY(-4px); box-shadow:0 10px 24px rgba(61,74,58,0.12); border-color:#8ba284; }
+.home-card-icon { display:block; margin:0 auto 16px; transition:transform 0.18s ease; font-size:32px; line-height:1; }
+.home-card:hover .home-card-icon { transform:scale(1.06); }
+.home-card-title { color:#3d4a3a; font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
+.home-card-sub { color:#5c5c4f; font-size:13.5px; line-height:1.85; margin-bottom:20px; }
+.home-card-cta { display:inline-block; background:#4d6b4f; color:#f4efe2; font-weight:600; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:13px 24px; border-radius:3px; transition:background 0.18s ease; }
+.home-card:hover .home-card-cta { background:#3d5a3f; }
+.home-card.is-soon { cursor:default; }
+.home-card.is-soon:hover, .home-card.is-soon:focus-visible { transform:none; box-shadow:none; border-color:#dcd2b8; }
+.home-card.is-soon:hover .home-card-icon { transform:none; }
+.home-card.is-soon .home-card-icon, .home-card.is-soon .home-card-title { opacity:0.5; }
+.home-card.is-soon .home-card-sub { color:#a89f8a; font-style:italic; }
+
+/* header */
+header.site-header {
+  background: var(--ahk-bg, #faf5eb);
+  border-bottom: 0.5px solid var(--ahk-border, #e2dac6);
+}
+header.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 24px;
+  padding-top: calc(20px + env(safe-area-inset-top, 0px));
+  /* Wide enough that the full nav (six links plus the shop pill) sits on
+     one row at ordinary desktop widths instead of wrapping the shop
+     button onto its own line underneath. */
+  max-width: 1180px;
+  gap: 24px;
+}
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo span {
+  color: #3d4a3a;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+nav.main-nav { display: flex; align-items: center; gap: 18px; font-size: 11px; color: #5c6b57; letter-spacing: 1.3px; text-transform: uppercase; flex-wrap: nowrap; white-space: nowrap; }
+nav.main-nav a { color: #5c6b57; }
+nav.main-nav a:hover { color: #3d4a3a; }
+
+/* Ko-fi + Instagram, pinned to the header's right edge (injected by
+   js/nav.js on every page, so it doesn't need editing into 26 separate
+   header blocks). margin-left:auto pulls it to the far right while
+   leaving the logo/nav pair packed together on the left, same as the
+   old space-between look did with just the two of them. */
+.header-social { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0; }
+/* Same circle as the floating share button, so on a phone the three of
+   them (Ko-fi, Instagram, share) read as one row rather than three
+   separate things at three different sizes in three different colours. */
+.header-social a {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(244,239,226,0.92); color: #3d4a3a;
+  border: 0.5px solid #cfc4a9;
+  box-shadow: 0 4px 14px rgba(61,74,58,0.16);
+  transition: background 0.18s ease;
+}
+.header-social a:hover, .header-social a:focus-visible { background: #fff; }
+.header-social svg { width: 16px; height: 16px; display: block; }
+@media (prefers-reduced-motion: reduce) { .header-social a { transition: none; } }
+@media (max-width: 760px) {
+  /* Below this width the header shrinks to just the logo (the nav moves
+     to the bottom bar), and the floating share button is pinned to the
+     top-right corner of the screen. So these two get pinned to the same
+     line as the share button, immediately to its left, making one row
+     of three evenly-spaced circles instead of the icons sitting under
+     it and getting half-covered.
+     The right offset is the share button's own 14px edge margin, plus
+     its 36px width, plus an 8px gap - i.e. exactly where the next
+     circle in the row belongs. */
+  .header-social {
+    position: fixed;
+    top: calc(10px + env(safe-area-inset-top, 0px));
+    right: 58px;
+    margin-left: 0;
+    z-index: 300;
+  }
+}
+/* Above 760px the floating share button is hidden (desktop has a real
+   address bar), so these two simply sit at the end of the header row. */
+
+/* In-app browser notice -- shown on the two camera-dependent pages
+   (scan.html, shelf.html) when we detect Instagram's/Facebook's own
+   in-app WebView, since that browser routinely blocks or half-supports
+   camera access and native file pickers, and the fix (open in a real
+   browser) is on the visitor's end, not something the page can work
+   around. See js/nav.js for the detection + injection logic. */
+/* Fixed (sticky) and above everything, including the full-screen camera view
+   (scan-frame sits at z-index:900) - previously this banner was a plain
+   in-flow block, so the immersive camera UI painted straight over it and
+   it effectively vanished the moment someone tapped the camera. */
+.ig-banner { display: flex; align-items: center; gap: 12px; background: #fbeedc; border-bottom: 0.5px solid #c98a3a; padding: 12px 20px; padding-top: calc(12px + env(safe-area-inset-top, 0px)); position: sticky; top: 0; z-index: 960; }
+.ig-banner-text { flex: 1; font-size: 13px; line-height: 1.6; color: #6b4b1f; }
+.ig-banner-text strong { color: #4d3413; }
+.ig-banner-close { flex-shrink: 0; background: none; border: none; color: #8a6a2a; font-size: 20px; line-height: 1; cursor: pointer; padding: 4px; }
+.ig-banner-close:hover { color: #4d3413; }
+
+/* hero */
+.hero { padding: 60px 24px; text-align: center; background: #ece5d5; }
+.eyebrow {
+  color: #6f8768;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+h1 {
+  color: #3d4a3a;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #3d4a3a;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+h3 {
+  color: #3d4a3a;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.sub {
+  color: #5c5c4f;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.3px;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+.btn {
+  display: inline-block;
+  border: 0.5px solid #6f8768;
+  color: #3d4a3a;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 3px;
+}
+.btn:hover { background: #6f8768; color: #ece5d5; }
+
+/* photography */
+.photo-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid #cfc4a9;
+  box-shadow: 0 16px 32px -20px rgba(61, 74, 58, 0.4);
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) sepia(0.05);
+}
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(111, 135, 104, 0) 55%, rgba(61, 74, 58, 0.32) 100%);
+  pointer-events: none;
+}
+.photo-frame.hero-photo { max-width: 640px; margin: 40px auto 0; text-align: left; }
+.photo-frame.hero-photo img { height: 320px; }
+.photo-frame.quiz-photo { margin: 24px 0 28px; }
+.photo-frame.quiz-photo img { height: 180px; }
+.photo-credit {
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  color: #8a8672;
+  text-align: right;
+  margin-top: 6px;
+}
+.photo-credit a { color: #8a8672; }
+.photo-credit a:hover { color: #3d4a3a; }
+
+/* content sections */
+main { padding: 50px 0 70px; }
+.section-label {
+  color: #6f8768;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 40px 0 16px;
+}
+.section-label.warn { color: #c98a3a; }
+p { margin-bottom: 18px; font-size: 15px; }
+
+/* Brand-page status badges -- "vegan status" and "parent company" used
+   to sit as plain bold-labelled text; these give each fact its own
+   pill so the two read as distinct, scannable statuses rather than a
+   line of body copy. Colour carries meaning: green for a confirmed
+   good vegan status, amber for a mixed/partial one, red for anything
+   worth being cautious about (status unconfirmed, or a parent company
+   that tests on animals). Parent company itself is a neutral blue/
+   purple pill unless that parent is the reason the brand isn't
+   cruelty-free, in which case it switches to the same red. */
+.status-facts { display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; }
+.status-pill { display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:20px; font-size:12.5px; line-height:1.3; }
+.status-pill-label { font-size:10px; letter-spacing:1px; text-transform:uppercase; opacity:0.75; }
+.status-pill.vegan-yes { background:#dbe8d7; color:#33502f; }
+.status-pill.vegan-partial { background:#f6ecd9; color:#8a6a2a; }
+.status-pill.vegan-unknown { background:#f3ded9; color:#8a4a2a; }
+.status-pill.parent-neutral { background:#e3ddf0; color:#4a3d70; }
+.status-pill.parent-bad { background:#f3e2df; color:#8a332c; }
+.parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.parent-test-flag.bad { background:#f3e2df; color:#8a332c; }
+.parent-test-flag.good { background:#e6efe2; color:#33502f; }
+.parent-test-flag.unverified { background:#ece5d5; color:#6b6656; }
+
+/* cards */
+.card {
+  background: var(--ahk-card, #fffdf8);
+  border: 0.5px solid var(--ahk-border, #cfc4a9);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+/* brand-check: A-Z browse + pagination */
+.flex-order { display: flex; flex-direction: column; }
+.page-btn {
+  min-width: 26px;
+  padding: 6px 4px;
+  border: none;
+  background: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #4d6b4f;
+  cursor: pointer;
+}
+.page-btn:hover:not(:disabled) { color: #33502f; }
+.page-btn.active { color: #33502f; text-decoration: underline; text-underline-offset: 3px; }
+.page-btn:disabled { color: #c3cfc0; cursor: default; }
+.page-ellipsis { padding: 6px 2px; color: #7a7561; font-size: 13px; }
+.rating {
+  color: #4d6b4f;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+/* Tier color coding: green = fully cruelty-free & vegan, gold = cruelty-free
+   certified but check vegan status per product, blue = cruelty-free itself
+   but the parent company isn't, red = tested on animals (defined per-page,
+   see .rating.bad), grey = not certified either way. Kept visually distinct
+   from each other on purpose -- a brand shouldn't read as "a shade of
+   warning" just because it isn't the fully-green case. */
+.rating.good { color: #33502f; }
+.rating.check { color: #8a6a2a; }
+.rating.neutral { color: #8a6a2a; } /* legacy alias for .check, kept so older markup still resolves */
+.rating.warn { color: #3d6b78; }
+.rating.unverified { color: #6b6656; }
+.card.good { border-color: #a8c4a0; }
+.card.check { border-color: #d9c48a; }
+.card.warn { border-color: #a8c4c9; }
+.card.unverified { border-color: #cfc4a9; }
+.card p { margin-bottom: 0; font-size: 13.5px; line-height: 1.8; }
+
+/* footer / newsletter */
+.newsletter {
+  position: relative;
+  overflow: hidden;
+  background: var(--ahk-forest);
+  padding: 38px 24px;
+  text-align: center;
+  max-width: 640px;
+  margin: 34px auto;
+  border-radius: 22px;
+  box-shadow: 0 2px 4px rgba(45,55,42,0.06), 0 14px 32px rgba(45,55,42,0.10);
+}
+/* a single sprig, low-contrast, tucked into the top-right corner so the
+   block reads as a considered accent rather than a slab of dark green */
+.newsletter::after {
+  content: "";
+  position: absolute;
+  top: -26px; right: -30px;
+  width: 168px; height: 168px;
+  background: url('../images/sprig-3.png') no-repeat center / contain;
+  opacity: 0.14;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+}
+.newsletter > * { position: relative; z-index: 1; }
+@media (max-width: 560px) {
+  .newsletter { margin: 26px 14px; border-radius: 18px; padding: 32px 20px; }
+  .newsletter::after { width: 128px; height: 128px; top: -20px; right: -22px; }
+}
+.newsletter p.label3 {
+  color: #d9c99a;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.newsletter p.sub2 {
+  color: #c9d1c3;
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 300px;
+  margin: 0 auto 18px;
+}
+.newsletter .btn { border-color: #8ba284; color: #ece5d5; }
+.newsletter .btn:hover { background: #8ba284; color: #3d4a3a; }
+
+.newsletter-form { max-width: 360px; margin: 0 auto; }
+.newsletter-form .nf-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newsletter-form input[type="email"] {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 11px 14px;
+  border-radius: 30px;
+  border: 0.5px solid #8ba284;
+  background: #2f3a2f;
+  color: #ece5d5;
+  font-family: 'Karla', sans-serif;
+  font-size: 13.5px;
+}
+.newsletter-form input[type="email"]::placeholder { color: #a7ae9e; }
+.newsletter-form input[type="email"]:focus,
+.newsletter-form input[type="checkbox"]:focus {
+  outline: 2px solid #d9c99a;
+  outline-offset: 2px;
+}
+.newsletter-form input[type="email"].nf-invalid { border-color: #d99a8a; }
+.newsletter-form .btn {
+  background: transparent;
+  border: 0.5px solid #8ba284;
+  color: #ece5d5;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+}
+.newsletter-form .btn:hover { background: #8ba284; color: #3d4a3a; }
+.newsletter-form .nf-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  color: #c9d1c3;
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 14px auto 0;
+}
+.newsletter-form .nf-consent input { margin-top: 3px; flex-shrink: 0; }
+.newsletter-form .nf-consent a { color: #d9c99a; }
+.newsletter-form .nf-msg {
+  margin: 12px auto 0;
+  font-size: 12.5px;
+  color: #c9d1c3;
+  min-height: 1em;
+}
+.newsletter-form .nf-msg.nf-error { color: #e8b3a3; }
+.newsletter-form .nf-msg.nf-success { color: #b8d1ae; }
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* Visible keyboard focus everywhere -- several interactive elements on
+   the site (nav dropdown triggers, bottom-nav items, buttons) suppress
+   the browser default outline for a cleaner mouse-click look, which
+   otherwise leaves keyboard users with no visible focus indicator at
+   all. :focus-visible only shows this for keyboard/assistive-tech
+   focus, never for a mouse click, so it doesn't change the site's look
+   for anyone clicking around. */
+a:focus-visible, button:focus-visible, input:focus-visible,
+textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #4d6b4f;
+  outline-offset: 2px;
+}
+
+/* Skip-to-content link -- present on every page (added by the same
+   site-wide pass as the manifest tags), invisible until a keyboard user
+   tabs to it, so it doesn't affect the visual design at all otherwise. */
+.skip-link {
+  position: absolute;
+  top: -48px; left: 8px;
+  background: #3d4a3a;
+  color: #f4efe2;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 11px;
+  color: #8a8672;
+  letter-spacing: 0.5px;
+  background: #dcd3c0;
+}
+.footer-ig { color: #8a8672; }
+.footer-ig:hover { color: #4d6b4f; }
+
+/* App-style bottom navigation (mobile only) */
+.bottom-nav {
+  display: none;
+}
+@media (max-width: 760px) {
+  /* The bottom nav bar itself runs taller than it first looks (icon +
+     label + its own top/bottom padding + the iPhone home-indicator
+     safe area), so this has to clear all of that plus a little
+     breathing room, or the last bit of page content -- the footer,
+     most often -- sits partly hidden behind the bar. */
+  /* var() values are set by js/nav.js, which measures what iOS is
+     actually doing on this page. They fall back to the plain CSS value
+     if the script hasn't run. See the comment block in js/nav.js. */
+  body { padding-bottom: calc(86px + var(--ahk-safe-bottom, env(safe-area-inset-bottom, 0px))); }
+  .bottom-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: var(--ahk-bg, #faf5eb);
+    border-top: 0.5px solid var(--ahk-border, #e0d8c4);
+    border-radius: 22px 22px 0 0;
+    /* Two things at once. The first shadow is the soft lift above the
+       bar. The second is a solid block of the bar's own colour painted
+       200px BELOW it (no blur, no spread, just offset) - that's what
+       fills the strip under the bar on the scanner in the installed
+       app. A box-shadow is painted as part of the element itself, so
+       unlike the ::after below it can't be clipped by a parent or
+       painted over by the full-screen camera layer, which is what was
+       still letting forest green show through on iOS. */
+    box-shadow: 0 -6px 20px rgba(61,74,58,0.09),
+                0 200px 0 0 var(--ahk-bg, #faf5eb);
+    padding: 5px 6px calc(5px + var(--ahk-safe-bottom, env(safe-area-inset-bottom, 0px)));
+    /* Always flush with the real bottom of the screen. An earlier
+       version of this tried to nudge the bar down on pages where iOS
+       under-reported the viewport height, but that pushed the bar (and
+       its labels) past the bottom of the screen on the scanner instead
+       -- worse than the gap it was meant to fix. The actual cause of
+       the mismatch (overflow:hidden on the scanner's body confusing
+       iOS's safe-area reporting) is fixed at the source further up
+       this file, so the bar just sits at 0 like every other fixed
+       element on the page. */
+    bottom: 0;
+    z-index: 500;
+  }
+  /* The bar's own background stops where the element stops. On pages with
+     a dark body (the scanner) that left a strip of forest green below it
+     in the installed app. This paints the bar's colour on past the bottom
+     edge so there is never a gap, whatever the device's safe area does. */
+  .bottom-nav::after {
+    content: ''; position: absolute; left: 0; right: 0; top: 100%;
+    height: 80px; background: var(--ahk-bg, #faf5eb);
+  }
+  /* The header's full desktop dropdown nav (Scan/Convince Me/Explore
+     More, each with its own hover/tap menu) has nowhere near enough
+     width on a phone -- it wraps into a cramped multi-row header and
+     its dropdowns, anchored to whichever item triggered them, can run
+     past the edge of the screen. Every one of those links already
+     lives in the bottom "more" sheet (see js/nav.js), a full-width
+     panel built for a small screen, so the header nav is just hidden
+     here rather than squeezed in twice. */
+  header.site-header nav.main-nav { display: none; }
+}
+.bn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #7a7561;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+  padding: 2px 0;
+}
+.bn-icon-wrap {
+  width: 29px; height: 29px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.bn-icon { font-size: 18px; line-height: 1; display: flex; }
+.bn-icon svg { width: 18px; height: 18px; }
+.bn-label { font-size: 9.5px; letter-spacing: 0.2px; text-transform: uppercase; line-height: 1.2; }
+.bn-item.active { color: #3d4a3a; font-weight: 600; }
+.bn-item.active .bn-icon-wrap { background: rgba(77,107,79,0.12); }
+.bn-item.active .bn-label { color: #3d4a3a; font-weight: 700; }
+
+/* Scan sits in the bar like everything else. Raised and filled dark, it
+   read as "you are here" on every page - a permanently active tab. It's
+   still the first thing anyone needs, but the raised treatment was saying
+   the wrong thing. */
+.bn-item.bn-scan { position: relative; }
+.bn-item.bn-scan .bn-icon svg { width: 21px; height: 21px; }
+@media(prefers-reduced-motion: reduce){ .bn-icon-wrap { transition: none; } }
+
+.bn-sheet {
+  position: fixed;
+  inset: 0;
+  background: rgba(45,54,42,0.42);
+  z-index: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, visibility 0s linear 0.22s;
+}
+.bn-sheet.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.22s ease;
+}
+.bn-sheet-inner {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: #fffdf8;
+  border-radius: 18px 18px 0 0;
+  padding: 22px 24px calc(28px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateY(100%);
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.bn-sheet.open .bn-sheet-inner { transform: translateY(0); }
+.bn-sheet-inner a {
+  color: #3d4a3a;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  padding: 11px 4px;
+  border-bottom: 0.5px solid #ece5d5;
+}
+.bn-sheet-close {
+  margin-top: 14px;
+  background: #ece5d5;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5c5c4f;
+  cursor: pointer;
+}
+body.bn-sheet-lock { overflow: hidden; }
+@media (min-width: 761px) {
+  .bn-sheet { display: none !important; }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 21px; letter-spacing: 2.5px; }
+  nav.main-nav { gap: 12px; font-size: 10px; }
+  .photo-frame.hero-photo img { height: 220px; }
+  .photo-frame.quiz-photo img { height: 150px; }
+}
+
+
+/* ---- dropdown nav ---- */
+@media (max-width: 1180px) { nav.main-nav { flex-wrap: wrap; row-gap: 8px; white-space: normal; justify-content: flex-end; } }
+nav.main-nav .dd { position:relative; cursor:pointer; outline:none; color:#5c6b57; letter-spacing:1.5px; text-transform:uppercase; }
+nav.main-nav .dd:hover, nav.main-nav .dd:focus-within { color:#3d4a3a; }
+nav.main-nav .dd-m {
+  position:absolute; top:100%; left:50%; margin-top:0; padding:18px 0 8px;
+  background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px;
+  min-width:190px; box-shadow:0 12px 30px rgba(0,0,0,0.10); z-index:50; text-align:left;
+  opacity:0; visibility:hidden;
+  transform:translateX(-50%) translateY(-6px);
+  transition:opacity 0.16s ease, transform 0.16s ease, visibility 0s linear 0.16s;
+}
+nav.main-nav .dd:hover .dd-m, nav.main-nav .dd:focus-within .dd-m, nav.main-nav .dd.open .dd-m {
+  opacity:1; visibility:visible;
+  transform:translateX(-50%) translateY(0);
+  transition:opacity 0.16s ease, transform 0.16s ease;
+}
+nav.main-nav .dd-m a { display:block; padding:10px 18px; font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase; color:#5c6b57; white-space:nowrap; }
+nav.main-nav .dd-m a:hover { background:#dcd3c0; color:#3d4a3a; }
+nav.main-nav .caret { font-size:8px; margin-left:4px; vertical-align:middle; }
+nav.main-nav .nav-shop-btn { background:#4d6b4f; color:#f4efe2; padding:8px 18px; border-radius:20px; }
+nav.main-nav .nav-shop-btn:hover { background:#3d5940; color:#f4efe2; }
+
+@media (max-width: 700px) {
+  nav.main-nav { gap:10px; }
+  nav.main-nav .dd-m { left:auto; right:0; min-width:170px; transform:translateY(-6px); }
+  nav.main-nav .dd:hover .dd-m, nav.main-nav .dd:focus-within .dd-m, nav.main-nav .dd.open .dd-m { transform:translateY(0); }
+
+
+  /* ===== BRAND PAGES ===== */
+  .brand-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+  .brand-header { margin-bottom: 2rem; border-bottom: 2px solid #2a5d3f; padding-bottom: 1rem; }
+  .brand-header h1 { margin: 0 0 1rem 0; font-size: 2.5rem; }
+  .brand-meta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .tier-badge { padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+  .tier-good { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+  .tier-check { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+  .tier-warn { background-color: #ffe4c4; color: #cc5200; border: 1px solid #ffb347; }
+  .tier-bad { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+  .vegan-badge { background-color: #90EE90; color: #1a4620; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 600; }
+  .parent-company { font-size: 0.95rem; color: #666; font-style: italic; }
+  .brand-content { margin: 2rem 0; }
+  .brand-note { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; color: #333; }
+  .evidence-section, .products-section, .alternatives-section, .related-section, .links-section { margin: 1.5rem 0; padding: 1rem; background-color: #f9f9f9; border-left: 4px solid #2a5d3f; border-radius: 4px; }
+  .evidence-section h3, .products-section h3, .alternatives-section h3, .related-section h3, .links-section h3 { margin-top: 0; color: #2a5d3f; }
+  .evidence-list, .products-list, .alternatives-list, .related-brands, .links-list { list-style: disc; margin-left: 1.5rem; }
+  .evidence-list li, .products-list li, .alternatives-list li, .links-list li { margin: 0.5rem 0; }
+  .back-link { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd; }
+  .back-link a { color: #2a5d3f; text-decoration: none; font-weight: 600; }
+  .back-link a:hover { text-decoration: underline; }
+  @media (max-width: 768px) { .brand-container { padding: 1rem; } .brand-header h1 { font-size: 1.8rem; } .brand-meta { flex-direction: column; align-items: flex-start; } }
+}
+
+
+/* mobile header/nav stacking fix */
+@media (max-width: 700px) {
+  header.site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 14px;
+  }
+  .logo { flex-shrink: 0; }
+  .logo span { white-space: nowrap; }
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 100%;
+  }
+}
+
+/* product cards with image, stack on narrow screens */
+.product-row { display: flex; gap: 16px; align-items: flex-start; }
+@media (max-width: 480px) {
+  .product-row { flex-direction: column; align-items: center; text-align: center; }
+}
+
+/* Small, dismissible "buy me a coffee" float -- injected by nav.js only
+   after something on scan/brand-check has actually been useful. Sits
+   above the mobile bottom-nav; footer link stays the primary, permanent
+   way to find it. */
+.kofi-float {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4d6b4f;
+  color: #f4efe2;
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  padding: 12px 14px;
+  border-radius: 30px;
+  box-shadow: 0 8px 22px rgba(45,54,42,0.28);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  pointer-events: none;
+}
+.kofi-float.show { opacity: 1; transform: none; pointer-events: auto; }
+.kofi-float:hover { background: #3d5a3f; color: #f4efe2; }
+.kofi-float-icon { font-size: 15px; line-height: 1; }
+.kofi-float-x {
+  background: rgba(244,239,226,0.16);
+  border: none;
+  color: #f4efe2;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  margin-left: 2px;
+}
+.kofi-float-x:hover { background: rgba(244,239,226,0.28); }
+@media (max-width: 760px) {
+  /* Clear of the bottom nav, and smaller: it was landing on top of the
+     buttons inside a scan result. */
+  .kofi-float { bottom: calc(112px + env(safe-area-inset-bottom, 0px)); right: 12px; padding: 9px 14px; font-size: 11.5px; }
+}
+/* While it's on screen, let the page scroll far enough that nothing ends
+   up permanently sitting underneath it. */
+body:has(.kofi-float.show) { padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px)); }
+@media(prefers-reduced-motion: reduce){ .kofi-float { transition: none; } }
+
+/* Small, dismissible live-estimate widget -- sits opposite the kofi
+   float (bottom-left) so the two never collide. Deliberately quiet:
+   no flashing, no colour alarm, just a number that keeps counting
+   while the page is open, with its source one tap away. Dismissing it
+   only hides it for this page view, not sitewide, since the point is
+   tied to "since you've been here" rather than being a permanent nag. */
+/* Sits in the page above the footer rather than floating over it. It
+   used to be a fixed overlay pinned to the bottom-left, which meant on
+   the impact page it landed on top of the calculator -- covering the
+   exact thing it was meant to support. As an in-flow card it stops
+   fighting the content and needs no dismiss button. */
+.impact-counter {
+  max-width: 560px;
+  margin: 26px auto 0;
+  background: var(--ahk-forest, #3d4a3a);
+  color: #e6e2d3;
+  font-family: 'Karla', sans-serif;
+  padding: 20px 22px 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px var(--ahk-shadow, rgba(45,54,42,0.18));
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.impact-counter.show { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .impact-counter { transition: none; opacity: 1; transform: none; }
+}
+.impact-counter-x {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: rgba(244,239,226,0.14);
+  border: none;
+  color: #e6e2d3;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.impact-counter-x:hover { background: rgba(244,239,226,0.26); }
+.impact-counter-num { font-family: 'Cormorant Garamond', serif; font-size: 38px; color: #e6d4a8; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.impact-counter-label { font-size: 12.5px; line-height: 1.6; color: #c9d1c3; margin-top: 5px; }
+.impact-counter-line { font-size: 13px; line-height: 1.7; color: #e6e2d3; margin-top: 13px; }
+.impact-counter-source { display: block; font-size: 10px; color: #a9c2ab; margin-top: 8px; text-decoration: underline; }
+.impact-counter-source:hover { color: #c9d1c3; }
+@media (max-width: 760px) {
+  .impact-counter { max-width: 100%; }
+}
+@media(prefers-reduced-motion: reduce){ .impact-counter { transition: none; } }
+
+/* ---- site-wide subtle motion ----
+   Small, fast cues that say "something happened" -- a page settling in,
+   a button registering a tap, a card easing into view -- rather than
+   decorative effects. Everything here is additive: elements are fully
+   visible and usable with this whole block deleted or with JS disabled.
+   All of it is switched off under prefers-reduced-motion at the bottom. */
+
+@keyframes pageFadeIn { from { opacity: 0; } to { opacity: 1; } }
+body { animation: pageFadeIn 0.22s ease; }
+
+/* Tap/press feedback on the site's main tappable controls. */
+.btn, .big-btn, .scan-hero-btn, .home-card-cta, #browseAllBtn {
+  transition: transform 0.12s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+.btn:active, .big-btn:active, .scan-hero-btn:active, .home-card-cta:active, #browseAllBtn:active, .kofi-float:active {
+  transform: scale(0.96);
+}
+.home-card:active { transform: translateY(-4px) scale(0.97); }
+/* Category tiles on brand-check.html's "browse by category" grid. Resting
+   state is the lighter forest green that used to only show up on hover
+   (the darker green read as too heavy for a whole grid of tiles); tapping
+   or hovering now shifts to a warm stone beige instead -- a shade deeper
+   than the page's own stone background so it still reads as "selected",
+   not as fading into the page. */
+.home-card.cat-tile { background: #4d6b4f; border-color: #4d6b4f; }
+.home-card.cat-tile .home-card-icon { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(244,239,226,0.2); margin-bottom: 16px; font-size: 26px; }
+.home-card.cat-tile .home-card-title { color: #f4efe2; text-transform: lowercase; transition: color 0.18s ease; }
+.home-card.cat-tile:hover, .home-card.cat-tile:focus-visible, .home-card.cat-tile:active { background: #cdbfa0; border-color: #b8a67e; }
+.home-card.cat-tile:hover .home-card-icon, .home-card.cat-tile:focus-visible .home-card-icon, .home-card.cat-tile:active .home-card-icon { background: rgba(61,74,58,0.16); }
+.home-card.cat-tile:hover .home-card-title, .home-card.cat-tile:focus-visible .home-card-title, .home-card.cat-tile:active .home-card-title { color: #3d4a3a; }
+.home-card.cat-tile.is-soon .home-card-title { color: #f4efe2; opacity: 0.6; }
+.home-card.cat-tile.is-soon .home-card-sub { color: #e2ddd0; }
+/* The pills now live one level down, inside the "filter & sort" panel,
+   as a plain list of rows with a toggle switch each rather than a row of
+   loose chips -- calmer to look at, same underlying behaviour. */
+.filter-sort { margin: 0 0 22px; }
+.filter-sort-toggle { display: inline-flex; align-items: center; gap: 9px; background: var(--ahk-surface-2); border: 1px solid var(--ahk-border); border-radius: 14px; padding: 12px 16px; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.2px; color: var(--ahk-heading); cursor: pointer; transition: border-color 0.15s ease; }
+.filter-sort-toggle:hover { border-color: var(--ahk-green-soft); }
+.filter-sort-toggle svg { flex: none; }
+.filter-sort-chevron { transition: transform 0.18s ease; }
+.filter-sort-toggle.is-open .filter-sort-chevron { transform: rotate(180deg); }
+.filter-sort-count { background: var(--ahk-gold); color: var(--ahk-forest-deep); border-radius: 20px; font-size: 10.5px; font-weight: 700; padding: 1px 8px; line-height: 1.6; }
+.filter-sort-panel { margin-top: 12px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 14px; padding: 16px 16px 4px; max-width: 420px; }
+.filter-sort-panel:not([hidden]) { display: block; }
+/* The A-Z controls were three full-width rows with sentence-length labels,
+   which pushed the brands themselves off the screen. One strip of three:
+   smaller, but permanently on show rather than hidden behind anything. */
+
+/* ============================================================
+   BRAND ROWS
+   ============================================================
+   White cards on cream meant 800 brands read one line at a time. Each
+   verdict now tints its own row and carries a colour rail down the left,
+   so the list is skimmable: mostly green is reassuring, a block of rose
+   is not. Scoped to the directory so cards elsewhere are untouched. */
+#allBrands .card { position: relative; overflow: hidden; border-radius: 16px; padding-left: 18px; }
+#allBrands .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+#allBrands .card.good { background: var(--ahk-kind); border-color: var(--ahk-kind-line); }
+#allBrands .card.good::before { background: var(--ahk-kind-rail); }
+#allBrands .card.good .rating { color: var(--ahk-kind-ink); }
+#allBrands .card.check { background: var(--ahk-check); border-color: var(--ahk-check-line); }
+#allBrands .card.check::before { background: var(--ahk-check-rail); }
+#allBrands .card.check .rating { color: var(--ahk-check-ink); }
+#allBrands .card.warn { background: var(--ahk-parent); border-color: var(--ahk-parent-line); }
+#allBrands .card.warn::before { background: var(--ahk-parent-rail); }
+#allBrands .card.warn .rating { color: var(--ahk-parent-ink); }
+#allBrands .card.bad { background: var(--ahk-nokind); border-color: var(--ahk-nokind-line); }
+#allBrands .card.bad::before { background: var(--ahk-nokind-rail); }
+#allBrands .card.bad .rating { color: var(--ahk-nokind-ink); }
+#allBrands .card.unknown { background: #f3efe4; border-color: #e2dac7; }
+#allBrands .card.unknown::before { background: #b3ab94; }
+#allBrands .card.unknown .rating { color: #6b6656; }
+#allBrands .card h3 { margin-top: 2px; }
+
+/* Browse by category: the landing view, and the way in for anyone who
+   doesn't have a brand name in mind. Photo tiles rather than emoji on
+   white cards, matching the food page. */
+#categoryGridInner { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.cat-photo { position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; text-decoration: none; background: linear-gradient(150deg, #cbd6c0, #7f9070); }
+.cat-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.cat-photo:hover img, .cat-photo:focus-visible img { transform: scale(1.04); }
+.cat-photo-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 34px; opacity: 0.85; }
+.cat-photo-label { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 14px; background: linear-gradient(0deg, rgba(47,58,45,0.84), rgba(47,58,45,0.06) 62%); color: #f4efe2; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13.5px; line-height: 1.25; letter-spacing: 0.2px; }
+.cat-photo-label em { display: block; font-style: normal; font-size: 9.5px; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(244,239,226,0.78); margin-top: 4px; }
+.cat-photo.is-soon { opacity: 0.62; pointer-events: none; }
+@media(prefers-reduced-motion: reduce){ .cat-photo img { transition: none; } }
+
+/* The key, always on show instead of behind a drop-down: five colour
+   chips and one quiet line about price. */
+.verdict-key { display: flex; flex-wrap: wrap; gap: 6px; background: var(--ahk-card); border: 1px solid var(--ahk-border-soft); border-radius: 16px; padding: 11px 12px; margin: 0 0 20px; }
+.vk { display: inline-flex; align-items: center; gap: 6px; font-family: 'Karla', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.2px; padding: 5px 10px; border-radius: 20px; border: 1px solid; }
+.vk i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.vk.good { background: var(--ahk-kind); border-color: var(--ahk-kind-line); color: var(--ahk-kind-ink); }
+.vk.good i { background: var(--ahk-kind-rail); }
+.vk.check { background: var(--ahk-check); border-color: var(--ahk-check-line); color: var(--ahk-check-ink); }
+.vk.check i { background: var(--ahk-check-rail); }
+.vk.warn { background: var(--ahk-parent); border-color: var(--ahk-parent-line); color: var(--ahk-parent-ink); }
+.vk.warn i { background: var(--ahk-parent-rail); }
+.vk.bad { background: var(--ahk-nokind); border-color: var(--ahk-nokind-line); color: var(--ahk-nokind-ink); }
+.vk.bad i { background: var(--ahk-nokind-rail); }
+.vk.unknown { background: #f3efe4; border-color: #e2dac7; color: #6b6656; }
+.vk.unknown i { background: #b3ab94; }
+.verdict-key .vk-price { flex-basis: 100%; font-size: 9.5px; letter-spacing: 0.3px; color: var(--ahk-text-muted); margin: 3px 0 0; }
+
+
+.az-filters { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:16px; padding:11px 12px; margin:0 0 20px; }
+.az-filters .azf { min-width:0; }
+.az-filters label { display:block; font-family:'Karla',sans-serif; font-size:9px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase; color:var(--ahk-text-muted); margin:0 0 5px; }
+.az-filters select { width:100%; font:inherit; font-size:12.5px; padding:9px 8px; border-radius:11px; border:1px solid var(--ahk-border); background:var(--ahk-bg); color:var(--ahk-heading); }
+.az-filters select:focus { outline:2px solid var(--ahk-green); outline-offset:1px; }
+@media (max-width:380px){ .az-filters { grid-template-columns:1fr 1fr; } .az-filters .azf:first-child { grid-column:1 / -1; } }
+
+.filter-sort-label { font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; color: var(--ahk-text-muted); margin: 0 0 4px; }
+.filter-sort-label:not(:first-child) { margin-top: 14px; }
+
+.filter-pills { display: flex; flex-direction: column; margin: 0; }
+.filter-pill { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; text-align: left; background: none; border: none; border-bottom: 0.5px solid var(--ahk-border-soft); border-radius: 0; padding: 12px 2px; font-size: 13.5px; color: var(--ahk-heading); cursor: pointer; font-family: 'Karla', sans-serif; transition: color 0.15s ease; }
+.filter-pill:last-child { border-bottom: none; }
+.filter-pill:hover { color: var(--ahk-green); }
+.filter-pill:active { transform: none; }
+/* The switch itself: a track that recolours plus a thumb that slides,
+   so "on" reads at a glance without needing the row's text to change
+   colour or weight. */
+.filter-switch { flex: 0 0 auto; width: 38px; height: 22px; border-radius: 20px; background: #dcd3c0; position: relative; transition: background 0.18s ease; }
+.filter-switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.22); transition: transform 0.18s ease; }
+.filter-pill.active .filter-switch { background: #4d6b4f; }
+.filter-pill.active .filter-switch::after { transform: translateX(16px); }
+@media (prefers-reduced-motion: reduce) { .filter-switch, .filter-switch::after, .filter-sort-chevron { transition: none; } }
+
+/* Certification narrowing, as a single compact dropdown rather than its
+   own row of pills -- the pill version repeated the same visual weight
+   as the primary filters above it for something used far less often,
+   and ran long enough to wrap onto two or three lines on its own. */
+.cert-select-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 22px; font-size: 12.5px; color: #7a7561; }
+.cert-select-row label { letter-spacing: 0.2px; }
+.cert-select-row select { background: #f4efe2; border: 0.5px solid #cfc4a9; border-radius: 30px; padding: 8px 14px; font-size: 12.5px; font-family: 'Karla', sans-serif; color: #3d4a3a; cursor: pointer; max-width: 100%; }
+.cert-select-row select:hover { border-color: #8ba284; }
+.bn-item:active .bn-icon-wrap { transform: scale(0.88); }
+
+/* Shared "just appeared" reveal, reused by scan results and brand-check
+   search results so a new verdict/match eases in instead of popping. */
+@keyframes cardReveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.card-reveal { animation: cardReveal 0.28s ease both; }
+
+/* Homepage service cards ease up into view the first time they're
+   scrolled to. Progressive enhancement -- nav.js adds .reveal-pre right
+   before observing, so with JS off or IntersectionObserver unsupported
+   these stay exactly as visible as before. */
+.home-card.reveal-pre { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.home-card.reveal-pre.reveal-in { opacity: 1; transform: none; }
+/* reveal-in is stripped by nav.js once the transition finishes, so it never
+   lingers to fight the hover/active transform rules above. */
+
+/* General-purpose version of the same idea, for anything else that
+   should ease into place once (a section heading, a row of tiles)
+   rather than just appear. Same mechanics as .home-card above: nav.js
+   adds .ahk-reveal-pre right before observing, drops in .ahk-reveal-in
+   while the transition plays, then removes both once it's done, so
+   nothing is left mid-transition to fight later hover/tap states.
+   .ahk-reveal-group staggers its direct children slightly instead of
+   moving as one block, for a row of cards/tiles arriving together. */
+.ahk-reveal-pre { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.ahk-reveal-pre.ahk-reveal-in { opacity: 1; transform: none; }
+.ahk-reveal-group.ahk-reveal-pre > * { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > * { opacity: 1; transform: none; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(1) { transition-delay: 0s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(2) { transition-delay: 0.07s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(3) { transition-delay: 0.14s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(4) { transition-delay: 0.21s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(5) { transition-delay: 0.28s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(6) { transition-delay: 0.35s; }
+.ahk-reveal-group.ahk-reveal-pre.ahk-reveal-in > *:nth-child(n+7) { transition-delay: 0.4s; }
+
+/* Pulsing "still working" cue for brief loading states (e.g. the scanner
+   looking a barcode up). */
+@keyframes statusPulse { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+.status-loading { animation: statusPulse 1.1s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+  .btn, .big-btn, .scan-hero-btn, .home-card-cta, #browseAllBtn { transition: none; }
+  .btn:active, .big-btn:active, .scan-hero-btn:active, .home-card-cta:active, #browseAllBtn:active, .kofi-float:active,
+  .home-card:active, .bn-item:active .bn-icon-wrap, .filter-pill:active {
+    transform: none;
+  }
+  .filter-pill { transition: none; }
+  .card-reveal, .status-loading { animation: none; }
+  .home-card.reveal-pre { opacity: 1; transform: none; }
+  .home-card.reveal-in { transition: none; }
+  .ahk-reveal-pre, .ahk-reveal-group.ahk-reveal-pre > * { opacity: 1; transform: none; }
+  .ahk-reveal-in, .ahk-reveal-group.ahk-reveal-in > * { transition: none; }
+  nav.main-nav .dd-m, .bn-sheet, .bn-sheet-inner { transition: none; }
+  .flip-card-inner { transition: none; }
+  .flip-card.flipped .flip-card-inner { transform: none; }
+  .flip-card .flip-back { display: none; }
+  .flip-card.flipped .flip-front { display: none; }
+  .flip-card.flipped .flip-back { display: block; }
+}
+
+/* Myth vs reality flip cards -- homepage. Click/tap or Enter/Space to
+   flip a card in place; each one holds a common belief on the front and
+   the more complicated truth on the back. Reduced-motion users get an
+   instant swap instead of the 3D turn (see the block above). */
+.myth-section { background: var(--ahk-surface, #e9e2d2); padding: 54px 24px 60px; }
+.myth-section-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.myth-kicker { color: #4d6b4f; font-size: 10.5px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+.myth-heading { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; line-height: 1.25; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.2px; margin-bottom: 10px; text-wrap: balance; }
+.myth-sub { color: #5c5c4f; font-size: 13.5px; line-height: 1.8; max-width: 480px; margin: 0 auto 34px; }
+.myth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; text-align: left; }
+.flip-card { perspective: 1200px; height: 270px; }
+.flip-card-btn { display: block; width: 100%; height: 100%; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; text-align: left; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 16px; padding: 22px 22px 20px; display: flex; flex-direction: column; }
+.flip-front { background: var(--ahk-card, #fffdf8); border: 0.5px solid var(--ahk-border-soft, #dcd2b8); }
+.flip-back { background: #4d6b4f; color: #f4efe2; transform: rotateY(180deg); overflow-y: auto; }
+.flip-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.flip-front .flip-label { color: #a4894f; }
+.flip-back .flip-label { color: #cddabb; }
+.flip-text { font-size: 14px; line-height: 1.6; }
+.flip-front .flip-text { color: #3d4a3a; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; }
+.flip-back .flip-text { color: #f4efe2; font-size: 13px; line-height: 1.6; }
+.flip-hint { margin-top: auto; font-size: 11px; color: #8a8672; padding-top: 10px; }
+.flip-back .flip-hint { color: #c9d1c3; }
+.flip-card-btn:focus-visible .flip-front,
+.flip-card-btn:focus-visible .flip-back { outline: 2px solid #3d4a3a; outline-offset: 3px; }
+
+/* Ambient impact counter -- a much quieter sibling of the full one on
+   impact.html itself. Injected once, in-flow, just above the footer on
+   every other page (see js/nav.js), so it reads as a constant, factual
+   presence around the site rather than a popup that nags on every
+   navigation. Same FAO-via-Our-World-in-Data rate as impact.html. */
+.ambient-counter { background: #e6efe3; border-top: 0.5px solid #b9c7ae; padding: 22px 24px; text-align: center; }
+.ambient-counter-inner { max-width: 480px; margin: 0 auto; }
+.ambient-counter-num { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; color: #3d4a3a; }
+.ambient-counter-label { color: #5c6b57; font-size: 12px; line-height: 1.6; margin-top: 4px; }
+.ambient-counter-label a { color: #4d6b4f; font-weight: 600; text-decoration: underline; }
+/* The homepage's dismissible version, sitting right under the header
+   instead of down by the footer, so it's seen without much scrolling.
+   Same content, laid out as a slim row with a close button rather than
+   a full-width block. */
+.ambient-counter-top { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 44px 12px 20px; position: relative; text-align: left; }
+.ambient-counter-top .ambient-counter-inner { display: flex; align-items: baseline; gap: 8px; max-width: none; margin: 0; flex-wrap: wrap; justify-content: center; }
+.ambient-counter-top .ambient-counter-num { font-size: 17px; }
+.ambient-counter-top .ambient-counter-label { margin-top: 0; font-size: 12px; }
+.ambient-counter-x { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 26px; height: 26px; border-radius: 50%; border: 0; background: rgba(61,74,58,0.08); color: #4d6b4f; font-size: 16px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.ambient-counter-x:hover { background: rgba(61,74,58,0.16); }
+@media (max-width: 480px) {
+  .ambient-counter-top { padding: 10px 40px 10px 16px; }
+  .ambient-counter-top .ambient-counter-inner { flex-direction: column; gap: 2px; align-items: flex-start; text-align: left; }
+}
+
+/* "One small swap" -- a single rotating instead-of/try pair on the
+   homepage, picked deterministically from the day of the year so it's
+   stable for the whole visit and changes daily rather than flickering
+   on every reload. Content is pulled straight from instead-of.html's
+   already-verified pairs (js/nav.js or an inline script builds this on
+   index.html only). */
+.swap-of-day { background: var(--ahk-surface-2, #f7f3ea); padding: 50px 24px 56px; }
+.swap-of-day-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+.swap-of-day-card { background: var(--ahk-card, #fffdf8); border: 0.5px solid var(--ahk-border, #cfc4a9); border-radius: 16px; padding: 28px 24px; margin-top: 30px; }
+.swap-of-day-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: center; text-align: left; }
+.swap-of-day-side { flex: 1; min-width: 190px; }
+.swap-of-day-arrow { flex-shrink: 0; color: #8a8672; font-size: 22px; }
+@media (max-width: 480px) { .swap-of-day-arrow { display: none; } }
+.swap-label { font-size: 13px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 8px; }
+.swap-label.instead { color: #8a332c; }
+.swap-label.try { color: #4d6b4f; }
+.swap-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #3d4a3a; margin-bottom: 4px; }
+.swap-name a { color: inherit; }
+.swap-note { font-size: 12.5px; line-height: 1.65; color: #5c5c4f; }
+
+/* Shop page: tab bar + clean product grid (replaced the big category
+   tiles, which weren't landing well in any of the colours tried). */
+/* Six underlined words read as six separate decisions. One forest track
+   with a cream pill in it reads as a single switch with an obvious
+   position -- and it's a far bigger tap target. */
+.shop-tabbar { display: flex; flex-wrap: wrap; gap: 4px; background: var(--ahk-kind); border: 1px solid var(--ahk-kind-line); border-radius: 30px; padding: 5px; margin: 4px 0 26px; }
+.shop-tab { flex: 1 1 auto; background: none; border: none; font-family: 'Karla', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: #6d7a68; padding: 10px 14px; border-radius: 26px; cursor: pointer; white-space: nowrap; transition: background 0.18s ease, color 0.18s ease; }
+.shop-tab:hover { color: var(--ahk-heading); }
+.shop-tab.active { background: #ffffff; color: var(--ahk-heading); box-shadow: 0 2px 6px rgba(61,74,58,0.10); }
+@media(prefers-reduced-motion: reduce){ .shop-tab { transition: none; } }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px; }
+/* Product cards sit on a soft sage rather than plain white. On a cream
+   page a white card reads as a gap in the paper; a faint green one reads
+   as a card, and it ties the shop to the rest of the site's palette
+   without shouting. */
+.pcard { background: var(--ahk-kind); border: 1px solid var(--ahk-kind-line); border-radius: 18px; padding: 10px 10px 14px; display: flex; flex-direction: column; transition: opacity 0.2s ease, transform 0.2s ease; }
+.pcard.pcard-hide { opacity: 0; transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) { .pcard { transition: none; } }
+.pcard-imgwrap { background: #ffffff; border-radius: 13px; padding: 10px; margin-bottom: 11px; display: flex; align-items: center; justify-content: center; height: 120px; }
+.pcard-imgwrap img { width: 100%; height: 100%; max-height: none; object-fit: cover; display: block; }
+.pcard-imgwrap-soon { font-size: 30px; opacity: 0.6; }
+.pcard-chip { align-self: flex-start; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ahk-parent-ink, #5c5378); background: var(--ahk-parent, #eae6f0); border: 1px solid var(--ahk-parent-line, #d9d3e4); padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+.pcard h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 17px; font-weight: 700; letter-spacing: normal; text-transform: none; margin: 0 0 3px; line-height: 1.35; color: #3d4a3a; }
+.pcard h3 a { color: inherit; text-decoration: none; }
+.pcard h3 a:hover { text-decoration: underline; }
+.pcard-brand { font-size: 11.5px; color: #8a8672; margin: 0 0 12px; }
+.pcard .btn { margin-top: auto; text-align: center; background: var(--ahk-parent-ink, #5c5378); color: #fff; border-radius: 30px; }
+.pcard .btn:hover { background: #4b4463; color: #fff; }
+.pcard-soon { opacity: 0.7; }
+.pcard-soon h3 { font-style: italic; font-weight: 600; }
+.pgrid-empty { text-align: center; color: #8a8672; font-size: 13px; padding: 30px 0; }
+@media (max-width: 480px) {
+  .shop-tabbar { gap: 6px 16px; }
+  .pgrid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+
+/* Live "X products scanned today" bubble -- sits next to a scan
+   button/link, and once more in the footer site-wide (js/nav.js
+   injects the footer copy; page-specific ones are placed in the HTML).
+   Gold, to stand out as its own thing rather than blend into the
+   site's green palette -- same accent already used for the homepage's
+   scan-hero button, so it reads as "on brand" rather than an add-on.
+   Dismissible per page for this browser session only (see nav.js);
+   stays empty/hidden (no layout jump) until real data arrives. */
+/* Recoloured from a gold/tan pill to a light, neutral sage grey-green --
+   this is an encouraging little counter, not a promo badge, and the gold
+   read as more "look at this deal" than "nice, you're helping". */
+.ahk-counter-bubble { display: none; align-items: center; gap: 8px; width: fit-content; margin: 0 auto; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.3px; color: var(--ahk-heading, #3d4a3a); background: transparent; border: 1px solid var(--ahk-border, #ddd4bd); border-radius: 30px; padding: 8px 8px 8px 16px; white-space: nowrap; box-shadow: none; }
+.ahk-counter-bubble.ahk-visible { display: flex; }
+.ahk-counter-x { flex-shrink: 0; background: rgba(61,74,58,0.12); border: none; color: #3d4a3a; width: 19px; height: 19px; border-radius: 50%; font-size: 13px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.ahk-counter-x:hover { background: rgba(61,74,58,0.24); }
+
+/* "Recently checked" strip on brand-check.html -- a quiet reminder of the
+   last few brands you looked up on this device, so you can hop back
+   without re-searching. Local to the browser (localStorage), never
+   synced or shown to anyone else. */
+.ahk-recent-strip { margin: 0 0 22px; }
+.ahk-recent-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #7a7561; margin-bottom: 8px; }
+.ahk-recent-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.ahk-recent-pill { display: inline-flex; align-items: center; gap: 6px; font-family: 'Karla', sans-serif; font-size: 13px; font-weight: 500; color: #3d4a3a; background: #fff; border: 0.5px solid #cfc4a9; border-radius: 30px; padding: 7px 14px; text-decoration: none; box-shadow: 0 1px 4px rgba(61,74,58,0.06); transition: box-shadow 0.15s ease, transform 0.15s ease; }
+.ahk-recent-pill:hover { box-shadow: 0 3px 10px rgba(61,74,58,0.12); transform: translateY(-1px); }
+.ahk-recent-pill.ahk-recent-warn { border-color: #d9b06e; }
+.ahk-recent-pill.ahk-recent-bad { border-color: #c98f86; }
+.ahk-recent-pill.ahk-recent-neutral { border-color: #a9bfa3; }
+
+/* Inline "back to X" link -- replaced an earlier floating circular back
+   button that covered the site logo on some layouts. This sits in the
+   normal page flow, right at the top of the content, matching the
+   hand-written "back to brand check" link that's long lived on every
+   individual brand page (brands/*/, see generate-brand-pages.js) --
+   js/nav.js injects the same style everywhere else, wired to real
+   browser history so it always goes back to wherever you actually came
+   from, worded with the page name when it can tell what that was. */
+.ahk-back-link { margin: 22px 0 0; text-align: left; }
+.ahk-back-link a { display: inline-flex; align-items: center; gap: 5px; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: 0.3px; color: #4d6b4f; text-decoration: none; }
+.ahk-back-link a:hover { text-decoration: underline; }
+
+/* Floating "share" button -- top-right mirror of the back button.
+   Matters most for the installed home-screen app (no browser chrome,
+   so no address bar to copy a link from), but shown on every page,
+   including the homepage, since sharing is useful everywhere back
+   navigation isn't. Uses the device's real native share sheet where
+   available (js/nav.js), falling back to a copy-link + toast. */
+.ahk-share-btn {
+  position: fixed;
+  top: calc(14px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(244,239,226,0.92);
+  backdrop-filter: blur(4px);
+  border: 0.5px solid #cfc4a9;
+  box-shadow: 0 4px 14px rgba(61,74,58,0.16);
+  color: #3d4a3a;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+.ahk-share-btn:hover { background: #fff; }
+.ahk-share-btn:active { transform: scale(0.92); }
+.ahk-share-btn svg { display: block; }
+@media (max-width: 760px) {
+  .ahk-share-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 36px; height: 36px; }
+  .ahk-share-btn svg { width: 16px; height: 16px; }
+}
+/* Above 760px the full header nav shows instead of the bottom bar, and it
+   now runs close to the right edge - the floating share circle sat right
+   on top of it (clipping "explore more" and the shop pill on laptop-width
+   screens). Desktop already has a real address bar to copy or share the
+   link from, so the floating button is a mobile/installed-app affordance
+   only. */
+@media (min-width: 761px) {
+  .ahk-share-btn { display: none; }
+}
+
+/* Small "link copied" toast, shown briefly after the share fallback
+   (desktop browsers without a native share sheet) copies the URL. */
+.ahk-toast {
+  position: fixed;
+  top: calc(60px + env(safe-area-inset-top, 0px));
+  right: 14px;
+  z-index: 301;
+  background: #3d4a3a;
+  color: #f4efe2;
+  font-family: 'Karla', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+.ahk-toast.show { opacity: 1; transform: none; }
+@media(prefers-reduced-motion: reduce){ .ahk-toast { transition: none; } }
+
+/* Homepage hero: rotating "would you..." fact, one at random per visit,
+   swipeable/clickable through the rest. */
+.hero-fact-carousel { max-width: 450px; margin: 0 auto; }
+.hero-fact-text { color: #c9d1c3; font-size: 14.5px; line-height: 1.95; margin-bottom: 16px; min-height: 84px; text-wrap: balance; transition: opacity .2s ease; touch-action: pan-y; }
+.hero-fact-text.is-fading { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .hero-fact-text { transition: none; } }
+.hero-fact-nav { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.hero-fact-arrow {
+  background: none;
+  border: 0.5px solid rgba(217,201,154,0.4);
+  color: #d9c99a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.18s ease, transform 0.12s ease;
+}
+.hero-fact-arrow:hover, .hero-fact-arrow:focus-visible { border-color: #d9c99a; }
+.hero-fact-arrow:active { transform: scale(0.92); }
+.hero-fact-dots { display: flex; gap: 6px; }
+.hero-fact-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(217,201,154,0.35); }
+.hero-fact-dot.active { background: #d9c99a; }
+@media (prefers-reduced-motion: reduce) { .hero-fact-arrow { transition: none; } }
+
+/* ============================================================
+   DESIGN TOKENS + DARK MODE
+   ============================================================
+   The site was built with hard-coded hex values throughout. Rather
+   than rewrite every rule, the palette is declared once here as
+   tokens, and the dark-mode block below re-points the handful of
+   *surface* colours (backgrounds, borders, body text) that actually
+   need to flip. Meaning-carrying colours -- the brand-check tier
+   greens/golds/blues/reds -- keep their hue in dark mode and only
+   shift lightness, so a "cruelty-free" green still reads as green.
+
+   Follows the visitor's device setting automatically. No toggle,
+   no stored preference, nothing to configure. */
+:root {
+  /* Sampled straight out of the mockup: its pages and its header are both
+     #faf5eb, a very light warm cream. The site had drifted to #f2ede1 page
+     on a #e9e2d2 header, which is a good two shades heavier and is why it
+     read as muddy next to the reference. Forest green is the accent here,
+     not the ground. */
+  --ahk-bg:            #faf5eb;  /* page behind everything */
+  --ahk-surface:       #f4eede;  /* banded sections -- barely deeper */
+  --ahk-surface-2:     #f7f2e6;  /* lighter bands */
+  --ahk-card:          #ffffff;  /* raised cards -- full white, because a
+                                    near-cream card on a cream page has
+                                    almost no edge (1.08 contrast) and the
+                                    whole grid goes mushy */
+  --ahk-border:        #ddd4bd;
+  --ahk-border-soft:   #e4dbc7;
+  --ahk-text:          #5c5c4f;  /* body copy */
+  --ahk-text-muted:    #7a7561;
+  --ahk-heading:       #3d4a3a;  /* headings + deep forest */
+  --ahk-forest:        #3d4a3a;  /* the dark green, as a surface */
+  --ahk-forest-deep:   #2f3a2d;
+  --ahk-green:         #4d6b4f;  /* interactive green */
+  --ahk-green-soft:    #6f8768;
+  --ahk-gold:          #e6d4a8;  /* primary button fill */
+  --ahk-gold-deep:     #a4894f;
+  --ahk-gold-soft:     #d9c99a;
+  --ahk-on-dark:       #f4efe2;  /* text on forest */
+  --ahk-on-dark-muted: #c9d1c3;
+  --ahk-sage-soft:     #e4ebdd;  /* the pale green used for tags and tabs */
+  --ahk-clay:          #b4674a;  /* the shop's accent -- the same warm
+                                    terracotta My Swaps already uses */
+  --ahk-clay-deep:     #9a5539;
+  --ahk-clay-soft:     #f3e5dc;
+  --ahk-clay-track:    #ece1d1;
+  --ahk-shop-ground:   #f6efe4;
+  --ahk-shadow:        rgba(61,74,58,0.12);
+  --ahk-shadow-strong: rgba(61,74,58,0.22);
+
+  /* A warm terracotta-pink accent, pulled in from the Swap Guide / My
+     Swaps redesign -- used sparingly as a second accent alongside the
+     forest green, mostly on pull-quotes and warm highlight cards. */
+  /* One colour per verdict, so a page of brands has a shape before you've
+     read a word. The violet is the only new hue: "cruelty-free itself but
+     owned by a parent company that isn't" used to share amber with "check
+     the vegan status", which are two quite different things. */
+  --ahk-kind:          #e4ece0;  --ahk-kind-ink:  #3a5a3c;  --ahk-kind-line:  #cddcc6;  --ahk-kind-rail:  #6f9a6c;
+  --ahk-check:         #f7edd8;  --ahk-check-ink: #8a6a2a;  --ahk-check-line: #ecdcba;  --ahk-check-rail: #c99a45;
+  --ahk-parent:        #eae6f0;  --ahk-parent-ink:#5c5378;  --ahk-parent-line:#d9d3e4;  --ahk-parent-rail:#8a80a8;
+  --ahk-nokind:        #f7e6e1;  --ahk-nokind-ink:#8d4a30;  --ahk-nokind-line:#eed3c9;  --ahk-nokind-rail:#c4735a;
+
+  --ahk-warm:          #a97a52;
+  --ahk-warm-deep:     #8a6340;
+  --ahk-warm-soft:     #fbf3ea;
+  --ahk-warm-border:   #e9d9c4;
+}
+
+
+
+/* ============================================================
+   IMAGE SLOTS
+   ============================================================
+   Every photo on the redesigned pages sits in one of these. The
+   wrapper carries a soft tinted panel, so a slot whose image hasn't
+   been supplied yet still looks deliberate rather than broken --
+   and dropping the file in at the expected path is all that's
+   needed to fill it. `onerror` hides a missing <img> so the panel
+   shows through instead of a broken-image icon. */
+.ahk-slot { position: relative; overflow: hidden; border-radius: 20px; background: linear-gradient(135deg, #3f4d3a 0%, #2f3a2d 100%); }
+.ahk-slot > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* `display:block` above outranks the browser's [hidden] rule, so a slot
+   whose image is missing would still paint a broken-image icon over the
+   placeholder. Restore it explicitly. */
+.ahk-slot > img[hidden] { display: none; }
+.ahk-slot-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: rgba(244,239,226,0.5); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; pointer-events: none; }
+.ahk-slot > img:not([hidden]) ~ .ahk-slot-label { display: none; }
+
+/* Banded sections + variants that used to carry hard-coded inline
+   backgrounds, so they follow the light/dark tokens like everything
+   else rather than staying cream on a dark page. */
+.band-soft { background: var(--ahk-surface-2); }
+.impact-teaser.is-warm { background: #efe7d0; border-top: 0.5px solid var(--ahk-border); border-bottom: 0.5px solid var(--ahk-border); }
+
+
+/* Brand-check controls carry inline styles from when the page was
+   hand-written, so the dark theme has to override them explicitly. */
+
+
+
+
+/* ============================================================
+   CATEGORY TILES + FEATURE CARDS
+   ============================================================
+   Image-led browsing, in place of the old wall of text cards. Each
+   tile is a photo with a short label under it -- the picture does
+   the explaining, so the copy doesn't have to. */
+.cat-section { background: var(--ahk-surface-2); padding: 46px 24px 52px; }
+.cat-inner { max-width: 900px; margin: 0 auto; }
+.cat-head { text-align: center; margin-bottom: 30px; }
+.cat-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.3px; margin: 0 0 10px; }
+.cat-head p { color: var(--ahk-text); font-size: 14px; line-height: 1.75; max-width: 420px; margin: 0 auto; }
+.cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 760px) { .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.cat-tile-x { display: block; text-decoration: none; border-radius: 18px; overflow: hidden; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
+.cat-tile-x:hover, .cat-tile-x:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 24px var(--ahk-shadow); border-color: var(--ahk-green-soft); }
+@media (prefers-reduced-motion: reduce) { .cat-tile-x { transition: none; } }
+.cat-tile-x .ahk-slot { aspect-ratio: 1 / 1; border-radius: 0; }
+/* Same photo effect as everywhere else on the site: a soft, out-of-focus
+   fade at every edge instead of a hard crop. These tiles used to run the
+   photo edge-to-edge inside the rounded square, which is exactly the
+   "full-bleed" case that can't show a feathered edge -- there's no
+   background colour for the fade to dissolve into, so it just reads as a
+   hard crop with extra blur. A small inset plus the card's own cream
+   background behind it fixes that, same principle as .page-photo. */
+.cat-tile-x .ahk-slot { padding: 5px; box-sizing: border-box; background: var(--ahk-card, #faf5eb); }
+.cat-tile-x .ahk-slot > img {
+  border-radius: 14px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
+.cat-tile-label { display: block; padding: 13px 14px 14px; font-size: 13px; font-weight: 600; color: var(--ahk-heading); text-align: center; line-height: 1.4; }
+/* The "everything else" tile has no photo -- it's a signpost, so it
+   reads as a quieter, typographic sibling of the image tiles. */
+.cat-tile-x.is-more { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px 16px; background: var(--ahk-surface); min-height: 150px; }
+.cat-tile-x.is-more .cat-tile-label { padding: 0; }
+.cat-tile-desc { display: block; margin-top: 5px; font-size: 11.5px; font-weight: 400; color: var(--ahk-text-muted); line-height: 1.55; text-transform: none; letter-spacing: 0; }
+.logo-strip { max-width: 460px; margin: 18px auto 6px; border-radius: 16px; overflow: hidden; border: 0.5px solid var(--ahk-border-soft); }
+.logo-strip img { display: block; width: 100%; height: auto; }
+.cat-tile-more-arrow { font-size: 22px; color: var(--ahk-green); margin-bottom: 8px; line-height: 1; }
+
+/* A wide feature card: image one side, copy and a call to action the
+   other. Used for the quiz prompt and the journal teaser. */
+.feature-card { max-width: 900px; margin: 0 auto; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 22px; overflow: hidden; display: grid; grid-template-columns: 1fr; }
+.feature-card .ahk-slot { aspect-ratio: 16 / 9; border-radius: 0; }
+.feature-card-body { padding: 26px 24px 28px; text-align: center; }
+.feature-card-kicker { color: var(--ahk-green); font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; margin: 0 0 12px; }
+.feature-card-body h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.3px; margin: 0 0 12px; }
+.feature-card-body p { color: var(--ahk-text); font-size: 14px; line-height: 1.8; margin: 0 0 20px; }
+.feature-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--ahk-green); color: #f4efe2; font-weight: 600; font-size: 13px; letter-spacing: 0.4px; padding: 14px 26px; border-radius: 60px; text-decoration: none; transition: background 0.18s ease; }
+.feature-cta:hover, .feature-cta:focus-visible { background: var(--ahk-heading); color: #f4efe2; }
+.feature-sub-link { display: block; margin-top: 14px; font-size: 12.5px; color: var(--ahk-text-muted); }
+@media (min-width: 760px) {
+  .feature-card { grid-template-columns: 1fr 1.15fr; align-items: center; }
+  .feature-card .ahk-slot { aspect-ratio: 1 / 1; height: 100%; }
+  .feature-card-body { text-align: left; padding: 34px 34px 36px; }
+}
+.band-feature { background: var(--ahk-surface); padding: 46px 24px 52px; }
+
+
+/* The impact teaser gets the mockup's circular animal portrait above
+   the number, so the figure reads as being about a living thing
+   rather than as an abstract statistic. */
+
+/* ============================================================
+   MYTH CARDS AS A CAROUSEL
+   ============================================================
+   Six stacked flip cards made for a long scroll on a phone. They
+   now sit in a horizontal, snap-scrolling track with dots beneath
+   -- swipe on touch, drag or arrow-key on desktop -- so the whole
+   section costs one screen instead of six. Above 900px there's
+   room to lay them out as a normal grid, so the carousel is a
+   phone/tablet treatment only. */
+.myth-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 0 6px; margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+.myth-track::-webkit-scrollbar { display: none; }
+.myth-track .flip-card { flex: 0 0 84%; max-width: 340px; scroll-snap-align: center; height: 250px; }
+@media (min-width: 560px) { .myth-track .flip-card { flex-basis: 46%; } }
+.myth-dots { display: flex; justify-content: center; gap: 7px; margin-top: 18px; }
+.myth-dot { width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0; background: rgba(109,135,104,0.28); cursor: pointer; transition: background 0.18s ease, transform 0.18s ease; }
+.myth-dot.active { background: var(--ahk-green); transform: scale(1.25); }
+@media (prefers-reduced-motion: reduce) { .myth-track { scroll-behavior: auto; } .myth-dot { transition: none; } }
+@media (min-width: 900px) {
+  .myth-track { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; margin: 0; padding: 0; gap: 20px; }
+  .myth-track .flip-card { flex: none; max-width: none; height: 270px; }
+  .myth-dots { display: none; }
+}
+
+
+/* ============================================================
+   SHARED APP COMPONENTS
+   ============================================================
+   The building blocks every page is being rebuilt on, taken from
+   the app mockup. Defined once here so the pages stay consistent
+   with each other and a change lands everywhere at once, rather
+   than each page carrying its own slightly-different version.
+
+   The vocabulary:
+     .pagehead     page title block (kicker / title / sub)
+     .u-card       the standard rounded container
+     .pill-input   search field with an icon inside
+     .btn-pri      primary action -- dark green pill
+     .btn-sec      secondary action -- outlined pill
+     .btn-quiet    tertiary -- plain text link under a button
+     .listrow      icon + label + chevron navigation row
+     .statblock    big figure with a label and an action
+   ============================================================ */
+
+.page-shell { max-width: 640px; margin: 0 auto; padding: 6px 22px 40px; }
+@media (min-width: 900px) { .page-shell { max-width: 860px; padding: 14px 24px 56px; } }
+
+.pagehead { text-align: center; margin-bottom: 26px; }
+.pagehead-icon { display: block; margin: 0 auto 12px; }
+.pagehead h1, .pagehead h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 30px; line-height: 1.25; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.2px; margin: 0 0 12px; text-wrap: balance; }
+.pagehead p { color: var(--ahk-text); font-size: 14.5px; line-height: 1.75; max-width: 430px; margin: 0 auto; }
+.pagehead-kicker { color: var(--ahk-green); font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; margin: 0 0 10px; }
+@media (min-width: 900px) { .pagehead h1, .pagehead h2 { font-size: 36px; } }
+
+.u-card { background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 20px; padding: 22px 20px; }
+.u-card + .u-card { margin-top: 14px; }
+.u-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ahk-text-muted); margin: 0 0 14px; }
+
+/* search field, magnifier sitting inside the pill */
+.pill-input { position: relative; margin-bottom: 24px; }
+.pill-input input { width: 100%; padding: 16px 18px 16px 46px; border: 0.5px solid var(--ahk-border); border-radius: 60px; background: var(--ahk-card); font-family: 'Karla', sans-serif; font-size: 15px; color: var(--ahk-heading); }
+.pill-input input::placeholder { color: var(--ahk-text-muted); }
+.pill-input input:focus { outline: 2px solid var(--ahk-green-soft); outline-offset: 1px; }
+.pill-input-icon { position: absolute; left: 17px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--ahk-text-muted); display: flex; }
+
+/* buttons */
+.btn-pri, .btn-sec { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; padding: 16px 22px; border-radius: 60px; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: background 0.18s ease, transform 0.14s ease; }
+.btn-pri { background: var(--ahk-heading); color: #f4efe2; }
+.btn-pri:hover, .btn-pri:focus-visible { background: #2f3a2d; color: #f4efe2; }
+.btn-sec { background: transparent; color: var(--ahk-heading); border-color: var(--ahk-border); }
+.btn-sec:hover, .btn-sec:focus-visible { background: var(--ahk-surface); color: var(--ahk-heading); }
+.btn-pri:active, .btn-sec:active { transform: scale(0.985); }
+.btn-row { display: flex; flex-direction: column; gap: 10px; }
+@media (min-width: 560px) { .btn-row.is-side-by-side { flex-direction: row; } }
+.btn-quiet { display: block; text-align: center; margin-top: 14px; font-size: 13px; color: var(--ahk-text-muted); }
+.btn-quiet:hover { color: var(--ahk-heading); }
+@media (prefers-reduced-motion: reduce) { .btn-pri, .btn-sec { transition: none; } }
+
+
+/* (The tile/monogram grid that lived here powered brand-check's "popular
+   brands" block. That block is gone -- the search field directly above it
+   did the same job better, and a letter in a coloured circle was never
+   going to stand in for a logo. Removed rather than left dead.) */
+
+/* navigation rows -- icon, label, chevron */
+.listrow { display: flex; align-items: center; gap: 13px; padding: 15px 17px; background: var(--ahk-card); border: 0.5px solid var(--ahk-border-soft); border-radius: 15px; text-decoration: none; margin-bottom: 9px; transition: border-color 0.16s ease, background 0.16s ease; }
+.listrow:hover, .listrow:focus-visible { border-color: var(--ahk-green-soft); background: var(--ahk-surface); }
+.listrow-icon { flex-shrink: 0; display: flex; }
+.listrow-label { flex: 1; font-size: 14px; font-weight: 600; color: var(--ahk-heading); }
+.listrow-chevron { flex-shrink: 0; color: var(--ahk-text-muted); font-size: 17px; line-height: 1; }
+@media (prefers-reduced-motion: reduce) { .listrow { transition: none; } }
+
+/* big-figure block */
+.statblock { text-align: center; }
+.statblock-portrait { width: 104px; height: 104px; border-radius: 50%; overflow: hidden; margin: 0 auto 16px; }
+.statblock-portrait .ahk-slot { width: 100%; height: 100%; border-radius: 50%; }
+.statblock-num { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 52px; line-height: 1; color: var(--ahk-heading); }
+.statblock-unit { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--ahk-heading); margin-bottom: 10px; }
+.statblock-sub { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text); max-width: 380px; margin: 0 auto 22px; }
+
+/* The results block on impact.html gets the mockup's animal portrait
+   above the figures, so the number reads as being about a living thing
+   rather than as an abstract statistic. */
+
+/* Each myth card carries a photograph above its claim. The image is the
+   reason the card reads as something rather than a text box -- it sits
+   flush to the card's top edge, with the padding only on the copy. */
+.flip-front { padding: 0 0 18px; overflow: hidden; }
+.flip-front .flip-label,
+.flip-front .flip-text,
+.flip-front .flip-hint { padding-left: 20px; padding-right: 20px; }
+.flip-img { height: 104px; margin-bottom: 14px; background: linear-gradient(140deg, #46553f 0%, #2e392b 100%); }
+.flip-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.flip-img img[hidden] { display: none; }
+.flip-front .flip-label { margin-top: 0; }
+
+/* ============================================================
+   MYTH CARDS + THE REALITY PANEL
+   ============================================================
+   Replaces the flip cards. Tapping a myth opens one shared panel
+   beneath the row -- photograph beside the answer, as in the
+   mockup's "the reality" bubble -- so the claim and the correction
+   are readable at the same time. */
+.myth-card { flex: 0 0 84%; max-width: 340px; scroll-snap-align: center; }
+@media (min-width: 560px) { .myth-card { flex-basis: 46%; } }
+.myth-card-btn { display: block; width: 100%; padding: 0; border: 0.5px solid var(--ahk-border-soft); border-radius: 18px; background: var(--ahk-card); overflow: hidden; cursor: pointer; font: inherit; text-align: left; transition: border-color 0.18s ease, box-shadow 0.18s ease; }
+.myth-card-btn:hover, .myth-card-btn:focus-visible { border-color: var(--ahk-green-soft); box-shadow: 0 8px 20px var(--ahk-shadow); }
+.myth-card.is-open .myth-card-btn { border-color: var(--ahk-green); box-shadow: 0 8px 20px var(--ahk-shadow); }
+.myth-img { display: block; height: 108px; background: linear-gradient(140deg, #46553f 0%, #2e392b 100%); }
+.myth-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.myth-img img[hidden] { display: none; }
+.myth-body { display: block; padding: 14px 17px 16px; }
+.myth-tag { display: block; font-size: 9.5px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--ahk-gold-deep); margin-bottom: 8px; }
+.myth-claim { display: block; font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.38; color: var(--ahk-heading); margin-bottom: 12px; }
+.myth-hint { display: block; font-size: 11.5px; font-weight: 600; color: var(--ahk-green); }
+.myth-card.is-open .myth-hint { color: var(--ahk-gold-deep); }
+
+.myth-reality { display: flex; gap: 15px; margin-top: 18px; padding: 16px; border-radius: 18px; background: var(--ahk-card); border: 1px solid var(--ahk-green-soft); text-align: left; }
+.myth-reality[hidden] { display: none; }
+.myth-reality-img { flex: 0 0 84px; height: 84px; border-radius: 13px; overflow: hidden; background: var(--ahk-stone, #e9e2d2); }
+.myth-reality-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.myth-reality-body { flex: 1; min-width: 0; }
+.myth-reality-tag { font-size: 9.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--ahk-green); margin: 0 0 6px; }
+.myth-reality-text { font-size: 13px; line-height: 1.68; color: var(--ahk-text); margin: 0; }
+.myth-reality-close { margin-top: 11px; background: none; border: 0; padding: 0; font-family: 'Karla', sans-serif; font-size: 11.5px; font-weight: 600; color: var(--ahk-text-muted); cursor: pointer; text-decoration: underline; }
+.myth-reality-close:hover { color: var(--ahk-heading); }
+@media (max-width: 480px) {
+  .myth-reality-img { flex: 0 0 68px; height: 68px; }
+  .myth-reality-text { font-size: 12.5px; }
+}
+@media (min-width: 900px) {
+  .myth-track .myth-card { flex: none; max-width: none; }
+  .myth-reality { max-width: 720px; margin-left: auto; margin-right: auto; }
+}
+/* Same [hidden]-vs-display:block trap as the other slots. */
+.myth-reality-img img[hidden] { display: none; }
+
+/* ============================================================
+   PAGE HERO STRIP
+   ============================================================
+   A wide photograph with the page title over it, for the pages
+   that carry real weight -- brand check, the shop, the journal.
+   The dark wash isn't decoration: it's what lets the title stay
+   readable over any photograph, so pictures can be chosen on
+   whether they're good rather than whether their middle is empty. */
+/* Page heroes.
+
+   The photo is no longer a box with a dark wash and white type on top of
+   it. It's cut to an L, feathered so every edge dissolves into the page
+   ground, and the headline sits in the corner the cut clears -- standing
+   on the part of the photograph that was only wall, table or blur anyway.
+
+   Which way the L faces is set per page by a modifier class, because it's
+   decided by where each photograph happens to be empty:
+     .hero-cut-tl   quiet top-left   -- most of them
+     .hero-cut-tr   quiet top-right
+     .hero-plain    busy everywhere  -- soft all-round fade, headline above
+
+   There is no .page-hero-scrim any more; the markup drops it. */
+.page-hero { position: relative; margin: 0 0 20px; }
+.page-hero > img {
+  display: block; width: 100%; aspect-ratio: 4 / 3.3; object-fit: cover;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
+.page-hero > img[hidden] { display: none; }
+.page-hero-copy { position: absolute; top: 1%; left: 2%; z-index: 2; max-width: 58%; padding: 0; }
+.page-hero-copy h1 {
+  font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  font-weight: 500; font-size: 29px; line-height: 1.07; letter-spacing: -0.2px;
+  color: var(--ahk-heading); text-transform: none; margin: 0; text-wrap: balance;
+}
+
+.hero-cut-tl > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='50' y='8' width='35' height='77' rx='14'/%3E%3Crect x='8' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='50' y='8' width='35' height='77' rx='14'/%3E%3Crect x='8' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero-cut-tr > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='15' y='8' width='35' height='77' rx='14'/%3E%3Crect x='15' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='15' y='8' width='35' height='77' rx='14'/%3E%3Crect x='15' y='48' width='77' height='37' rx='14'/%3E%3C/g%3E%3C/svg%3E"); }
+.hero-cut-tr .page-hero-copy { left: auto; right: 2%; text-align: right; }
+
+/* No quiet corner in the photograph, so nothing is carved: the picture
+   simply fades out all round and the headline sits above it. */
+.page-hero.hero-plain { display: flex; flex-direction: column-reverse; }
+.hero-plain > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='11' y='11' width='78' height='78' rx='26'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='11' y='11' width='78' height='78' rx='26'/%3E%3C/g%3E%3C/svg%3E"); aspect-ratio: 4 / 2.6; }
+.hero-plain .page-hero-copy { position: static; max-width: none; margin: 0 0 6px; }
+
+/* The line that used to sit under the headline inside the hero now lives
+   below the photo as ordinary lead copy, where it can be read. */
+.hero-lede { font-size: 14.5px; line-height: 1.65; color: var(--ahk-text-muted); margin: 0 0 20px; max-width: 54ch; }
+
+@media (min-width: 720px) {
+  .page-hero > img { aspect-ratio: 21 / 8; }
+  .hero-plain > img { aspect-ratio: 21 / 7; }
+  .page-hero-copy { max-width: 46%; top: 3%; left: 3%; }
+  .hero-cut-tr .page-hero-copy { right: 3%; }
+  .page-hero-copy h1 { font-size: 44px; }
+  .hero-lede { font-size: 15.5px; }
+
+  /* The mask SVG is stretched to the element, so on a wide hero a mask
+     drawn on a square grid gets its blur squashed flat and the edges go
+     hard. These are the same shapes drawn on a 21:8 grid instead. */
+  .hero-cut-tl > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='56' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='56' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-cut-tr > img { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='7' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.6'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='7' y='3' width='37' height='29' rx='5'/%3E%3Crect x='5' y='16' width='88' height='16' rx='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-plain > img  { -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.8'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='5' y='3' width='90' height='29' rx='7'/%3E%3C/g%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='38' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='2.8'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='5' y='3' width='90' height='29' rx='7'/%3E%3C/g%3E%3C/svg%3E"); }
+}
+}
+
+/* Affiliate disclosure on the shop. Honest but not shouting -- it was
+   11px italic grey, which read as something being hidden in the small
+   print rather than stated plainly. */
+.shop-disclosure { display: flex; align-items: flex-start; gap: 8px; font-size: 11px; line-height: 1.55; color: var(--ahk-text-muted); opacity: 0.8; margin: -6px 0 20px; padding: 0 2px; }
+.shop-disclosure span { flex: 1; }
+.shop-disclosure-close { flex: none; border: 0; background: none; cursor: pointer; font-size: 15px; line-height: 1; color: var(--ahk-text-muted); padding: 0 2px; opacity: 0.7; }
+.shop-disclosure-close:hover { opacity: 1; }
+/* Context that used to be crammed into the page's sub-line. */
+.ic-why-note { font-size: 11.5px; line-height: 1.55; color: var(--ahk-text-muted); opacity: 0.85; text-align: center; max-width: 380px; margin: 0 auto 18px; }
+/* Retailer product shots go stale as listings rotate -- a dead one should
+   look like an empty shelf slot, not a broken page. */
+.pcard-imgwrap img[hidden] { display: none; }
+.pcard-imgwrap.is-empty::after { content: '\1F33F'; font-size: 26px; opacity: 0.32; }
+.pcard-imgwrap.is-empty { background: var(--ahk-surface); }
+/* Shop cards were the one grid that never got a dark-mode pass -- they
+   stayed bright white on the dark page, which is exactly the flash of
+   white you don't want at night. They follow the card token now, keeping
+   the green cast that the light theme gives them. */
+
+
+/* The impact portrait, sized as the mockup has it: near the full column
+   width with an arched top, rather than a small circle above the figures.
+   At that scale the animal is the first thing you see, which is the whole
+   argument of the page -- the number means more with a face over it. */
+.impact-portrait { width: 100%; max-width: 320px; height: auto; margin: 0 auto 26px; overflow: hidden; }
+.impact-portrait .ahk-slot { aspect-ratio: 1 / 0.86; border-radius: 160px 160px 18px 18px; background: linear-gradient(140deg, #cfd8c4 0%, #b9c6ac 100%); }
+.impact-portrait .ahk-slot > img { object-position: 50% 32%; }
+@media (min-width: 560px) { .impact-portrait { max-width: 360px; } }
+.pagehead h1 em { font-style: italic; color: var(--ahk-gold-deep); }
+
+
+
+/* A card sitting on a cream page needs a little lift as well as an edge --
+   on the old darker background the border alone did the separating, but at
+   #faf5eb the border is doing almost nothing on its own. */
+.card, .u-card, .home-card, .myth-card-btn, .listrow, .quiz-opt {
+  box-shadow: 0 1px 2px rgba(90,80,55,0.05), 0 6px 16px rgba(90,80,55,0.045);
+}
+
+
+/* The one line that carries the argument on the impact page, so it's set
+   like a statement rather than body copy. */
+.impact-lede { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.4; color: var(--ahk-heading); text-align: center; max-width: 24ch; margin: 0 auto 30px; text-wrap: balance; }
+@media (min-width: 560px) { .impact-lede { font-size: 25px; } }
+
+/* Headings inside the mobile "more" sheet. */
+.bn-sheet-group { font-family:'Karla',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--ahk-warm,#a97a52); margin:16px 0 2px; padding:0 2px; }
+.bn-sheet-group:first-child { margin-top:0; }
+
+/* ============================================================
+   "KNOW SOMETHING THE SCAN DOESN'T" REPORT FORM
+   ============================================================
+   The labels were display:block inside a centred container, so each
+   row centred independently and the checkboxes landed at six
+   different x-positions. They're flex rows in a left-aligned block
+   now, so the boxes line up in a single column and the text aligns
+   with them rather than hanging off the middle. */
+.report-widget { text-align: left; max-width: 460px; margin: 18px auto 0; padding-top: 18px; border-top: 0.5px solid var(--ahk-border); }
+.report-title { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ahk-text-muted); margin: 0 0 12px; }
+.report-field { display: block; width: 100%; box-sizing: border-box; padding: 12px 14px; border: 0.5px solid var(--ahk-border); border-radius: 10px; background: var(--ahk-card); font-family: 'Karla', sans-serif; font-size: 14px; color: var(--ahk-heading); margin-bottom: 12px; }
+.report-field::placeholder { color: var(--ahk-text-muted); }
+textarea.report-field { min-height: 72px; resize: vertical; line-height: 1.6; }
+.report-checks { display: flex; flex-direction: column; gap: 2px; margin-bottom: 14px; }
+.report-check { display: flex; align-items: center; gap: 10px; padding: 7px 4px; font-size: 13.5px; line-height: 1.45; color: var(--ahk-text); cursor: pointer; border-radius: 8px; }
+.report-check:hover { background: var(--ahk-surface); }
+.report-check input[type="checkbox"] { flex: 0 0 17px; width: 17px; height: 17px; margin: 0; accent-color: var(--ahk-green); cursor: pointer; }
+.report-check span { flex: 1; }
+.report-send { width: auto; padding: 13px 26px; }
+.report-foot { font-size: 12px; line-height: 1.65; color: var(--ahk-text-muted); margin: 10px 0 0; }
+
+
+/* ---- hidden-ingredient rows -------------------------------------------
+   Shared by the food & kitchen section of the swap guide and the
+   "look one up" list on the ingredient checker. Tappable rows: you scan
+   short names and open only the one you came for. */
+.ingredient-watch { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:12px; }
+/* Twenty-one ingredients, each with a paragraph, used to sit open at once
+   -- a wall of text you had to read to find the one word you came for.
+   They're tappable rows now: you scan twenty-one short names and open only
+   what you care about. Same information, a fraction of the reading. */
+.ingredient-watch { background:#e8efe2; border:1px solid #cbdcc0; border-radius:14px; padding:6px 4px; }
+.iw-row { border-radius:9px; margin:0; border:0; background:transparent; }
+.iw-row + .iw-row { border-top:1px solid rgba(109,135,104,0.18); }
+.iw-row > summary { display:flex; align-items:center; gap:9px; cursor:pointer; padding:11px 12px; font-size:13.5px; font-weight:600; color:#33502f; list-style:none; }
+.iw-row > summary::-webkit-details-marker { display:none; }
+.iw-row > summary::after { content:'+'; margin-left:auto; font-size:16px; font-weight:400; color:#6f8768; line-height:1; }
+.iw-row[open] > summary::after { content:'\2013'; }
+.iw-row > summary:hover { background:rgba(255,255,255,0.5); border-radius:9px; }
+.iw-dot { flex:0 0 8px; height:8px; border-radius:50%; }
+.iw-animal .iw-dot { background:#a5453d; }
+.iw-ambiguous .iw-dot { background:#c98a3a; }
+.iw-body { padding:0 12px 13px 29px; }
+.iw-note { display:block; font-size:13px; line-height:1.7; color:#3f4a3b; }
+.iw-key { font-size:12px; color:#7a7561; margin-bottom:10px; }
+.iw-key span { display:inline-block; margin-right:16px; }
+.iw-key .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; }
+.iw-key .dot.animal { background:#a5453d; }
+.iw-key .dot.ambiguous { background:#c98a3a; }
+.iw-why { margin-top:10px; }
+.iw-why summary { cursor:pointer; font-size:11px; letter-spacing:0.6px; text-transform:uppercase; color:#4d6b4f; font-weight:700; }
+.iw-why summary:hover { color:#33502f; }
+.iw-why p { font-size:12.5px; line-height:1.7; color:#4f5a4b; margin:8px 0 0; }
+.iw-why .iw-sources { font-size:11.5px; margin-top:8px; }
+.iw-why .iw-sources a { color:#4d6b4f; }
+
+
+/* the browsable lookup list on the ingredient checker */
+.iw-lookup { margin-top: 38px; }
+.iw-lead { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text-muted); margin: 0 0 14px; }
+.iw-search { margin-bottom: 12px; }
+/* 44 entries is a long scroll to put under a page that's already got two
+   scanners on it. Cap it into its own scrollable panel so the search box
+   stays the way in and the page doesn't balloon. */
+#iwList { max-height: 60vh; overflow-y: auto; scrollbar-width: thin; }
+.iw-empty { font-size: 13px; color: var(--ahk-text-muted); padding: 12px 8px; margin: 0; }
+/* .ingredient-watch is a grid, so display:none must win over display:block
+   -- the same [hidden] trap that bit the hero images. */
+.iw-row[hidden] { display: none !important; }
+
+/* quiet cross-links to a page's companion (brand check -> what's changed,
+   your impact -> my swaps, learn -> swap guide) */
+.xlink { margin: -6px 0 22px; font-size: 13px; }
+.xlink a { color: var(--ahk-green); text-decoration: none; border-bottom: 1px solid var(--ahk-border); padding-bottom: 1px; }
+.xlink a:hover { border-bottom-color: var(--ahk-green); }
+
+
+/* ---- Shop: clay & sage -------------------------------------------------
+   The shop is the one page allowed to look like somewhere else. It sits on
+   a slightly deeper cream than the rest of the site, the accent is warm
+   clay rather than violet, and sage is kept for the little category tags.
+   Product names are in the serif -- that alone is most of what stops the
+   grid reading like a spreadsheet. */
+body.shop-skin { background: var(--ahk-bg); }
+body.shop-skin header.site-header { background: var(--ahk-surface); }
+
+.shop-tabbar { background: none; border: 0; border-radius: 0; padding: 0;
+  gap: 7px; margin: 4px 0 16px; overflow: visible; flex-wrap: wrap; }
+.shop-tab { flex: 0 0 auto; background: transparent; border: 1px solid var(--ahk-border, #ddd4bd);
+  color: #6f6a59; border-radius: 999px; padding: 9px 15px; font-size: 12.5px; box-shadow: none; }
+.shop-tab:hover { color: var(--ahk-heading); border-color: var(--ahk-green); }
+.shop-tab.active { background: var(--ahk-forest); border-color: var(--ahk-forest);
+  color: #f4efe2; box-shadow: none; }
+
+.pcard { background: #fffdf8; border: 1px solid #ecdfcd; border-radius: 20px;
+  padding: 6px 6px 14px; }
+.pcard-imgwrap { background: #ffffff; border-radius: 15px; margin-bottom: 11px; height: 132px;
+  padding: 0; overflow: hidden; }
+.pcard-chip { color: #5e7355; background: #e6ece0; border-color: #dbe3d3; }
+.pcard-brand { color: var(--ahk-clay, #b4674a); font-size: 10px; letter-spacing: 1.1px;
+  text-transform: uppercase; font-weight: 700; margin: 0 0 3px; }
+.pcard h3 { font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+  font-size: 16px; letter-spacing: -0.2px; line-height: 1.22; color: #42342a; margin: 0 0 10px; }
+.pcard .btn { background: var(--ahk-clay, #b4674a); color: #fdf7ef; }
+.pcard .btn:hover { background: var(--ahk-clay-deep, #9a5539); color: #fdf7ef; }
+.pcard-chip, .pcard-brand, .pcard h3, .pcard .btn { padding-left: 6px; padding-right: 6px; }
+.pcard .btn { padding-left: 14px; padding-right: 14px; }
+
+/* The disclosure is small print, so it reads as one quiet line under the
+   tabs rather than a panel competing with the first row of products. */
+.shop-disclosure { background: none !important; border: 0 !important; padding: 0 !important;
+  font-size: 11.5px; line-height: 1.5; color: #9a8b78; margin: -8px 0 18px;
+  display: flex; align-items: flex-start; gap: 8px; }
+.shop-disclosure-close { color: #b3a795; }
+
+
+/* ---- Ingredient checker: the two ways in, side by side -----------------
+   Scanning is the primary route and photographing the label is the
+   fallback, but both stay on one line so the page doesn't grow. */
+.ic-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 16px; }
+.ic-tab { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; padding: 14px 8px; border: 1px solid #e0d6c2; border-radius: 16px;
+  background: #fffdf8; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px;
+  letter-spacing: 0; color: #5c5c4f; cursor: pointer; text-align: center; line-height: 1.25; }
+.ic-tab svg { display: block; }
+.ic-tab .ic-tab-sub { display: block; font-weight: 500; font-size: 11px; color: #97907f; }
+.ic-tab.active { background: var(--ahk-forest, #3d4a3a); border-color: var(--ahk-forest, #3d4a3a); color: #f4efe2; }
+.ic-tab.active .ic-tab-sub { color: rgba(244,239,226,.78); }
+
+/* The buy action is a small line of type with an arrow, not a filled
+   button -- on a grid of cards, six solid buttons shout louder than the
+   products themselves. The whole photo and the name are already links, so
+   this is a signpost rather than the only way through. */
+.pcard-foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: auto; padding: 2px 6px 0; }
+.pcard-chip { margin-bottom: 0; }
+.pcard-buy { margin-left: auto; font-size: 12px; font-weight: 700; letter-spacing: 0.2px;
+  color: var(--ahk-clay, #b4674a); text-decoration: none; white-space: nowrap; }
+.pcard-buy:hover { color: var(--ahk-clay-deep, #9a5539); text-decoration: underline;
+  text-underline-offset: 3px; }
+.pcard h3 { margin-bottom: 12px; }
+
+.shop-disclosure[hidden] { display: none !important; }
+
+/* Belt and braces: these two rules are the ones that decide whether a
+   product photo fills its frame, so they're repeated last where nothing
+   later in the file can quietly undo them. */
+.pcard-imgwrap { padding: 0; overflow: hidden; }
+.pcard-imgwrap img { width: 100%; height: 100%; max-height: none; max-width: none; object-fit: cover; }
+.pcard-imgwrap.is-empty { background: var(--ahk-surface); }
+
+/* On the dark hero the same pill is drawn in cream, so it reads as part
+   of the same family as the three circles above it. */
+.hero-x .ahk-counter-bubble { color: #f4efe2; border-color: rgba(244,239,226,0.34); background: rgba(244,239,226,0.10); }
+.hero-x .ahk-counter-bubble button, .hero-x .ahk-counter-bubble .ahk-counter-close { color: #f4efe2; }
+
+/* ---- Shop, in the site's own clothes ----------------------------------
+   Tabs match "browse by category" on brand check: sage, with a forest pill
+   for the current one. Buy links are green like every other link on the
+   site. The only warm colour left is the brand line above each product. */
+.pcard { background: var(--ahk-card, #fffdf8); border-color: var(--ahk-border-soft, #e4dbc7); }
+.pcard h3 { color: var(--ahk-heading); }
+.pcard-brand { color: var(--ahk-clay, #b4674a); }
+.pcard-chip { background: var(--ahk-sage-soft, #e4ebdd); color: #5e7355; border-color: #dbe3d3; }
+.pcard-buy { color: var(--ahk-green, #4d6b4f); }
+.pcard-buy:hover { color: var(--ahk-forest); }
+
+/* ---- Food: category tiles and recipe cards ---------------------------
+   Lifted out of food.html so the category and recipe pages can use them
+   as well. */
+/* The standard photo effect for the whole site: a soft, out-of-focus
+   fade around every edge instead of a hard crop, done with a blurred
+   rounded-rectangle mask (the same technique as the homepage hero and
+   the check-a-brand photo). This is the default look for every photo
+   on the site unless a page says otherwise -- it only reads properly
+   when the photo sits inset with page colour around it, which
+   .page-photo already does inside .page-shell's padding. */
+.page-photo {
+  display:block; width:100%; height:auto; border-radius:20px; margin:0 0 26px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+}
+.tile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 34px; }
+.ptile { position:relative; display:block; border-radius:18px; overflow:hidden; aspect-ratio:1/1; text-decoration:none; background: var(--ahk-card, #faf5eb); padding:5px; box-sizing:border-box; }
+.ptile img { width:100%; height:100%; object-fit:cover; display:block; border-radius:14px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+.ptile span { position:absolute; inset:0; display:flex; align-items:flex-end; padding:12px 14px; background:linear-gradient(0deg, rgba(47,58,45,0.82), rgba(47,58,45,0.06) 62%); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:13.5px; line-height:1.25; letter-spacing:0.2px; }
+.ptile:hover img { transform:scale(1.03); }
+.ptile img { transition:transform 0.4s ease; }
+.ptile img { transition:none; }
+.ptile.soon { border:1.5px dashed var(--ahk-border); }
+.ptile.soon span { position:static; inset:auto; height:100%; align-items:center; justify-content:center; text-align:center; background:none; color:var(--ahk-text-muted); font-size:12.5px; }
+.rcards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:18px 0 6px; align-items:start; }
+.rcard { background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:20px; overflow:hidden; }
+.rcard img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+.rcard-body { padding:16px 18px 18px; }
+.rcard-cat { display:inline-block; font-size:10px; letter-spacing:1.4px; text-transform:uppercase; font-weight:700; color:var(--ahk-warm-deep,#8a6340); background:var(--ahk-warm-soft,#fbf3ea); border-radius:20px; padding:4px 10px; margin-bottom:9px; }
+.rcard h3 { font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; color:var(--ahk-heading); margin:0 0 7px; }
+.rcard p { font-size:13px; line-height:1.7; color:var(--ahk-text); margin:0; }
+.rcard details { margin-top:12px; }
+.rcard summary { cursor:pointer; font-size:12px; font-weight:700; color:var(--ahk-green); list-style:none; }
+.rcard summary::-webkit-details-marker { display:none; }
+.rcard summary::after { content:' +'; }
+.rcard details[open] summary::after { content:' \2013'; }
+.rcard details p { margin-top:9px; font-size:12.5px; }
+
+/* Homepage stats strip (18 September) -- filled in by nav.js just above
+   "explore by category". A quiet bordered card in the site's own cream/
+   forest palette rather than a bold colour bar, deliberately: it reads
+   as "a home kind's own small honest note", not a lift from any other
+   site's version of the same idea. Never dismissible. */
+.ahk-stats-strip { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; width: 100%; padding: 20px 24px;
+  background: var(--ahk-forest, #3d4a3a); border: 0; border-radius: 0; text-align: center; }
+/* Plain, upright, evenly-sized numerals. The display serif's figures sit
+   at different heights (its 6 and 9 hang below the line) which reads as
+   decorative rather than factual - wrong for a count. */
+.ahk-stats-num { font-family: 'Karla', sans-serif; font-weight: 600; font-size: 27px;
+  line-height: 1.1; color: var(--ahk-gold, #e6d4a8);
+  font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+.ahk-stats-label { font-size: 12px; color: var(--ahk-on-dark-muted, #c9d1c3); letter-spacing: 0.2px; }
+.ahk-stats-strip-wrap { padding: 0; }
+@media (max-width: 480px) {
+  .ahk-stats-strip { padding: 17px 20px; }
+  .ahk-stats-num { font-size: 24px; }
+  .ahk-stats-label { font-size: 11.5px; }
+}
+
+
+/* ============================================================
+   HERO CALL TO ACTION -- the two things the site is actually for
+   ============================================================
+   Two big, plainly-labelled buttons instead of the three small circled
+   icons that were here before. "Scan" and "Check a brand" are two
+   genuinely different everyday actions (I have the product in my hand
+   vs I want to look a brand up first), so they get equal weight and
+   equal size rather than one leading and the others trailing after it. */
+.hero-cta-row { display: flex; gap: 12px; justify-content: center; max-width: 440px;
+  margin: 2px auto 0; }
+.hero-cta { flex: 1 1 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 7px; text-decoration: none; text-align: center;
+  padding: 17px 12px; border-radius: 16px; font-family: 'Karla', sans-serif;
+  font-weight: 700; font-size: 14.5px; letter-spacing: 0.2px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.hero-cta svg { display: block; }
+.hero-cta-primary { background: var(--ahk-gold, #e6d4a8); color: var(--ahk-forest-deep, #2f3a2d);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.22); }
+.hero-cta-secondary { background: rgba(244,239,226,0.09); color: var(--ahk-on-dark, #f4efe2);
+  border: 1.5px solid rgba(244,239,226,0.34); }
+.hero-cta:hover, .hero-cta:focus-visible { transform: translateY(-2px); }
+.hero-cta-secondary:hover, .hero-cta-secondary:focus-visible { background: rgba(244,239,226,0.17);
+  border-color: var(--ahk-gold-soft, #d9c99a); }
+@media (prefers-reduced-motion: reduce) { .hero-cta { transition: none; } }
+
+/* The take-action teaser on the homepage. Quiet card, not a shouty
+   banner - this is an invitation, not a demand. */
+.action-teaser { display: block; max-width: 560px; margin: 0 auto; padding: 26px 24px 30px;
+  text-align: center; text-decoration: none; }
+.action-teaser-kicker { color: var(--ahk-clay-deep, #9a5539); font-size: 10.5px; letter-spacing: 3px;
+  text-transform: uppercase; margin: 0 0 12px; }
+.action-teaser h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px;
+  line-height: 1.22; color: var(--ahk-heading, #3d4a3a); margin: 0 0 12px; text-wrap: balance; }
+.action-teaser p { font-size: 13.5px; line-height: 1.75; color: var(--ahk-text, #5c5c4f); margin: 0 0 20px; }
+.action-teaser-cta { display: inline-block; background: var(--ahk-clay, #b4674a); color: #fdf7f3;
+  font-weight: 600; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  padding: 13px 26px; border-radius: 30px; }
+.action-teaser:hover .action-teaser-cta, .action-teaser:focus-visible .action-teaser-cta {
+  background: var(--ahk-clay-deep, #9a5539); }
+
+
+/* ============================================================
+   FADING QUESTION BANNER (learn page)
+   ============================================================
+   One line at a time, fading in and out, rather than a strip that
+   scrolls past. Four lines on a 28s loop, 7s each. The whole thing is
+   decorative repetition of a point made elsewhere on the page, so if
+   the animation never runs (reduced motion, old browser) the first
+   line simply sits there permanently, which reads perfectly well. */
+.fact-fade { position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 56px; margin: 0 0 22px; padding: 12px 24px;
+  background: var(--ahk-forest, #3d4a3a); }
+.fact-fade span { position: absolute; left: 24px; right: 24px; text-align: center;
+  font-size: 13px; line-height: 1.4; color: var(--ahk-on-dark, #f4efe2);
+  opacity: 0; animation: ahkFactFade 28s ease-in-out infinite; }
+.fact-fade span strong { color: var(--ahk-gold, #e6d4a8); font-weight: 700; }
+.fact-fade span:nth-child(1) { animation-delay: 0s; }
+.fact-fade span:nth-child(2) { animation-delay: 7s; }
+.fact-fade span:nth-child(3) { animation-delay: 14s; }
+.fact-fade span:nth-child(4) { animation-delay: 21s; }
+@keyframes ahkFactFade {
+  0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; }
+}
+@media (max-width: 480px) {
+  .fact-fade { min-height: 64px; padding: 10px 20px; }
+  .fact-fade span { left: 20px; right: 20px; font-size: 12.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fact-fade span { animation: none; }
+  .fact-fade span:nth-child(1) { opacity: 1; }
+}
+.learn-h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 25px;
+  color: var(--ahk-heading, #3d4a3a); margin: 30px 0 8px; }
+
+
+/* ---- take action page ---- */
+.action-note { background: var(--ahk-sage-soft, #e4ebdd); border-radius: 14px; padding: 16px 20px; margin: 0 0 8px; }
+.action-note p { margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--ahk-text, #5c5c4f); }
+.letter-block { background: var(--ahk-card, #fff); border: 0.5px solid var(--ahk-border-soft, #e4dbc7);
+  border-radius: 16px; padding: 22px; margin: 18px 0 26px; }
+.letter-kicker { color: var(--ahk-clay-deep, #9a5539); font-size: 10.5px; letter-spacing: 3px;
+  text-transform: uppercase; margin: 0 0 10px; }
+.letter-block h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 23px;
+  line-height: 1.2; color: var(--ahk-heading, #3d4a3a); margin: 0 0 10px; }
+.letter-context { font-size: 13px; line-height: 1.7; color: var(--ahk-text-muted, #7a7561); margin: 0 0 16px; }
+.letter-body { background: var(--ahk-surface, #f4eede); border-radius: 12px; padding: 18px 20px; }
+.letter-body p { font-size: 13.5px; line-height: 1.75; margin: 0 0 12px; }
+.letter-body p:last-child { margin-bottom: 0; }
+.letter-copy-btn { display: inline-block; margin-top: 16px; background: var(--ahk-clay, #b4674a);
+  color: #fdf7f3; border: 0; font-family: 'Karla', sans-serif; font-weight: 600; font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase; padding: 13px 26px; border-radius: 30px; cursor: pointer; }
+.letter-copy-btn:hover, .letter-copy-btn:focus-visible { background: var(--ahk-clay-deep, #9a5539); }
+.letter-note { font-size: 12px; color: var(--ahk-text-muted, #7a7561); margin: 12px 0 0; }
+
+
+.rcard-owner { border-top: 0.5px dashed #cfc4a9; margin-top: 10px; padding-top: 10px; }
+
+/* A 2-item instance of .cat-grid needs to actually stay 2 columns and
+   centred at desktop widths too -- the site-wide .cat-grid switches to
+   3 columns at 760px, which left 2 tiles stranded on the left rather
+   than centred, since a 2-item grid in a 3-column template has no way
+   to centre itself. */
+.cat-grid-two { grid-template-columns: repeat(2, 1fr) !important; justify-content: center; }
+
+/* ---- going vegan panel: warmer, less wall-of-text ---- */
+.vegan-panel-intro { background: var(--ahk-sage-soft, #e4ebdd); border-radius: 16px;
+  padding: 20px 22px; margin: 0 0 22px; }
+.vegan-panel-intro p { margin: 0 0 10px; font-size: 14px; line-height: 1.75; }
+.vegan-panel-intro p:last-child { margin-bottom: 0; }
+.vegan-split { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 22px; }
+@media (min-width: 640px) { .vegan-split { grid-template-columns: 1fr 1fr; } }
+.vegan-card { border-radius: 16px; padding: 20px; }
+.vegan-card.food { background: var(--ahk-clay-soft, #f3e5dc); }
+.vegan-card.wear { background: var(--ahk-sage-soft, #e4ebdd); }
+.vegan-card img { width: 100%; height: 130px; object-fit: cover; border-radius: 12px; margin: 0 0 14px; display: block; }
+.vegan-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 21px;
+  margin: 0 0 8px; color: var(--ahk-heading, #3d4a3a); }
+.vegan-card p { font-size: 13.5px; line-height: 1.7; margin: 0; color: var(--ahk-text, #5c5c4f); }
+.vegan-guide-card { background: var(--ahk-forest, #3d4a3a); color: var(--ahk-on-dark, #f4efe2);
+  border-radius: 16px; padding: 22px; margin: 0 0 22px; text-align: center; }
+.vegan-guide-card p.kicker { color: var(--ahk-gold, #e6d4a8); font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase; margin: 0 0 10px; }
+.vegan-guide-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px;
+  margin: 0 0 10px; color: var(--ahk-on-dark, #f4efe2); }
+.vegan-guide-card p { font-size: 13.5px; line-height: 1.7; margin: 0 0 16px; color: var(--ahk-on-dark-muted, #c9d1c3); }
+.vegan-guide-card a.btn-outline { display: inline-block; border: 1.5px solid var(--ahk-gold, #e6d4a8);
+  color: var(--ahk-gold, #e6d4a8); font-weight: 600; font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; padding: 12px 24px; border-radius: 30px; text-decoration: none; }
+.vegan-guide-card a.btn-outline:hover { background: rgba(230,212,168,0.12); }
+.vegan-note { font-size: 12.5px; color: var(--ahk-text-muted, #7a7561); font-style: italic; margin: 0; }
+
+
+/* Scan <-> ingredient-check toggle. These are two separate pages under
+   the hood (different capture flows), but presented as one choice, the
+   way the redesign mockup pictured it: pick a mode, land on the right
+   page, with the choice itself always visible so switching mid-task is
+   one tap, not a trip back through the nav. */
+.scan-toggle { display: flex; background: var(--ahk-surface, #f4eede); border-radius: 14px;
+  padding: 4px; margin: 14px 0 18px; max-width: 420px; }
+.scan-toggle a { flex: 1; text-align: center; padding: 10px 8px; border-radius: 11px;
+  font-family: 'Karla', sans-serif; font-weight: 700; font-size: 13px; color: var(--ahk-text-muted, #7a7561);
+  text-decoration: none; }
+.scan-toggle a.on { background: var(--ahk-forest, #3d4a3a); color: var(--ahk-on-dark, #f4efe2); }
+@media (max-width: 480px) { .scan-toggle { max-width: none; } }
+
+/* scan.html loads straight into an immersive full-camera view
+   (enterStandby() runs on load), which hides .pagehead entirely -- so
+   the plain toggle above never appeared there. This overlay version is
+   pinned to the top of the camera view itself instead, visible in both
+   standby and live states, semi-transparent over the video feed. */
+.scan-toggle-overlay { display: none; }
+body.scan-immersive .scan-toggle-overlay {
+  display: flex; position: fixed; top: calc(env(safe-area-inset-top, 0px) + 16px);
+  left: 64px; right: 16px; max-width: 340px; margin: 0 0 0 auto;
+  background: rgba(20,24,18,0.5); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.22); z-index: 930; padding: 3px;
+}
+body.scan-immersive .scan-toggle-overlay a { color: rgba(255,255,255,0.78); font-size: 11.5px; padding: 8px 6px; }
+body.scan-immersive .scan-toggle-overlay a.on { background: rgba(255,255,255,0.92); color: var(--ahk-forest-deep, #2f3a2d); }
+@media (max-width: 420px) { body.scan-immersive .scan-toggle-overlay { left: 58px; } }
+
+
+/* The MP postcode finder, made the visual anchor of the write-to-your-MP
+   section rather than a plain link in a paragraph -- Ash asked for this
+   to be more obvious, since it is the one action that actually matters
+   on this page. GET straight to WriteToThem's own postcode search
+   ("pc" is the field their own published postcode-search embed uses),
+   opened in a new tab so the letter below stays in view. */
+.mp-finder { background: var(--ahk-forest, #3d4a3a); border-radius: 16px; padding: 22px;
+  margin: 18px 0 26px; }
+.mp-finder-label { color: var(--ahk-gold, #e6d4a8); font-size: 10.5px; letter-spacing: 2.5px;
+  text-transform: uppercase; margin: 0 0 12px; text-align: center; }
+.mp-finder-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.mp-finder-form input { flex: 1 1 160px; padding: 14px 16px; border: 0; border-radius: 12px;
+  font-family: 'Karla', sans-serif; font-size: 15px; background: #fff; color: var(--ahk-forest-deep, #2f3a2d); }
+.mp-finder-form button { flex: 0 0 auto; background: var(--ahk-gold, #e6d4a8); color: var(--ahk-forest-deep, #2f3a2d);
+  border: 0; font-family: 'Karla', sans-serif; font-weight: 700; font-size: 14px;
+  padding: 14px 22px; border-radius: 12px; cursor: pointer; }
+.mp-finder-form button:hover { background: var(--ahk-gold-soft, #d9c99a); }
+.mp-finder-sub { font-size: 12px; color: var(--ahk-on-dark-muted, #c9d1c3); margin: 12px 0 0; line-height: 1.7; }
+.mp-finder-sub a { color: var(--ahk-on-dark, #f4efe2); }
+@media (max-width: 480px) { .mp-finder-form { flex-direction: column; } }
