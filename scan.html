@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260913a">
+<link rel="stylesheet" href="css/style.css?v=20260919a">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -65,12 +65,9 @@
 /* One link left in this row now that ingredient checker moved to the
    toggle above - let it sit centred rather than stretching oddly. */
 .scan-frame .scan-shell-links { margin-top: 2px; }
-/* The counter bubble inherits light-page styling (transparent
-   background, dark green text on a light border) built for sitting on
-   the cream page background - inside the frame's dark green that made
-   both the text and border read as almost invisible. Same solid-cream
-   treatment as the other controls in here. */
-.scan-frame .ahk-counter-bubble { background: var(--ahk-bg, #faf5eb) !important; color: var(--ahk-heading, #3d4a3a) !important; border: 0 !important; }
+/* The counter bubble moved out of the frame entirely (see pagehead
+   above) rather than being restyled to survive on a dark background -
+   it belongs on the ordinary cream page like it does everywhere else. */
 
 /* The little "point. scan. know." badge sitting at the top of the frame --
    picked out in the same cream as the rest of the frame's controls, a
@@ -509,11 +506,11 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <main class="wrap scan-shell" id="main">
 <div class="pagehead">
 <h1 class="scan-h1"><svg class="scan-h1-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="5.6" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="8" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/><rect x="11.5" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="14" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="17" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="19.4" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/></svg>scan a barcode</h1>
-<p>Point your camera at the product's barcode, or any barcode you like.</p>
 <div class="scan-toggle" role="tablist" aria-label="what do you want to check">
 <a href="scan.html" role="tab" aria-selected="true" class="on">scan a barcode</a>
 <a href="ingredient-check.html" role="tab" aria-selected="false">check ingredients</a>
 </div>
+<span class="ahk-counter-bubble" style="margin:16px auto 0;"></span>
 </div>
 
 <div id="addHome">
@@ -566,13 +563,12 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </span>
 </button>
 
-<p class="scan-or">or</p>
-<div class="manual">
+<p class="scan-or" id="scanOr" style="display:none;">or</p>
+<div class="manual" id="scanManual" style="display:none;">
 <label for="manualCode" class="visually-hidden">Barcode number</label>
 <input type="text" id="manualCode" inputmode="numeric" placeholder="enter barcode manually">
 <button class="big-btn" id="lookupBtn">check</button>
 </div>
-<span class="ahk-counter-bubble" style="margin:2px auto 14px;"></span>
 <div class="scan-shell-links">
 <a href="shelf.html">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
@@ -601,7 +597,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
      making the bar on this page sit taller than every other page. On
      every other page this timing doesn't matter, so nav.js stays at
      the bottom there as usual. -->
-<script src="js/nav.js?v=20260918a"></script>
+<script src="js/nav.js?v=20260919a"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 <script>
 var BRANDS = [
@@ -1156,6 +1152,8 @@ if(codeReader){ try { codeReader.reset(); } catch(e){} }
 if(rotateTimer){ clearInterval(rotateTimer); rotateTimer = null; }
 el("startBtn").style.display = "flex";
 el("cameraWrap").style.display = "none";
+el("scanOr").style.display = "none";
+el("scanManual").style.display = "none";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "flex";
 el("cameraControls").style.display = "none";
 // Back out of immersive mode and give the buttons their words back.
@@ -1278,6 +1276,8 @@ if(result){ onBarcodeDecoded(result.getText()); }
 setStatus("Point at a barcode - it reads automatically, or line it up in the guide and tap snap.");
 el("startBtn").style.display = "none";
 el("cameraWrap").style.display = "block";
+el("scanOr").style.display = "block";
+el("scanManual").style.display = "flex";
 if(el("scanPlaceholder")) el("scanPlaceholder").style.display = "none";
 el("cameraControls").style.display = "flex";
 // The camera opens inline, in its own contained box - no full-screen
