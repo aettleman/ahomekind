@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=3">
+<link rel="stylesheet" href="css/app.css?v=4">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d4a3a">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -31,6 +31,21 @@
 .hub-tab.active::after { content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#4d6b4f; }
 .hub-panel { display:none; }
 .hub-panel.active { display:block; }
+.learn-rows { display:flex; flex-direction:column; gap:10px; margin:22px 0 30px; }
+.learn-row { display:flex; align-items:center; gap:14px; border:0.5px solid #e4dbc7; border-radius:16px;
+  padding:16px 15px; background:#fffdf8; box-shadow:0 1px 4px rgba(61,74,58,0.05); cursor:pointer;
+  font:inherit; text-align:left; width:100%; transition:background 0.15s ease, border-color 0.15s ease; }
+.learn-row:hover { border-color:#c9bd9e; }
+.learn-row.active { background:#ece5d5; border-color:#c9bd9e; }
+.learn-row-ic { flex:none; width:40px; height:40px; border-radius:50%; background:#e4ebdd; display:flex; align-items:center; justify-content:center; }
+.learn-row-tx { flex:1; min-width:0; font-family:'Karla',sans-serif; font-weight:700; font-size:14.5px; color:#3d4a3a; }
+.learn-row-ch { flex:none; font-size:16px; color:#3d4a3a; transition:transform 0.15s ease; }
+.learn-row.active .learn-row-ch { transform:rotate(90deg); }
+.qa { padding:14px 0; border-bottom:0.5px solid #e4dbc7; }
+.qa:last-child { border-bottom:0; }
+.qa p.q { margin:0 0 6px; font-weight:700; font-size:13.5px; color:#3d4a3a; }
+.qa p.a { margin:0; font-size:13px; color:#5c5c4f; line-height:1.7; }
+.qa p.a b { color:#3d4a3a; }
 .hero-banner { width:100%; background:#efe7d0; display:flex; align-items:center; justify-content:center; overflow:hidden; }
 .hero-banner img { display:block; max-width:100%; width:auto; height:auto; max-height:320px; margin:0 auto; }
 @media(max-width:700px){ .hero-banner img { max-height:190px; } }
@@ -67,7 +82,7 @@
 </header>
 
 <main class="page-shell" id="main">
-<div class="page-hero hero-cut-tl">
+<div class="page-hero hero-plain">
 <img src="images/hero-learn.jpg" alt="" onerror="this.hidden=true">
 <div class="page-hero-copy">
 <h1>learn</h1>
@@ -86,10 +101,27 @@
 </div>
 <p class="hero-lede">The bits worth understanding, in plain terms: what testing actually involves, where your money goes, and what the labels really mean.</p>
 
-<div class="hub-tabs" id="hubTabs">
-<button type="button" class="hub-tab" data-tab="start">why it matters</button>
-<button type="button" class="hub-tab" data-tab="testing">what testing means</button>
-<button type="button" class="hub-tab" data-tab="vegan">going vegan</button>
+<div class="learn-rows" id="hubTabs">
+<button type="button" class="learn-row" data-tab="start">
+<span class="learn-row-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d4a3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-7.5-10.3A4.2 4.2 0 0 1 12 7.6a4.2 4.2 0 0 1 7.5 2.6c0 5.7-7.5 10.3-7.5 10.3z"/></svg></span>
+<span class="learn-row-tx">why it matters</span>
+<span class="learn-row-ch">&rsaquo;</span>
+</button>
+<button type="button" class="learn-row" data-tab="testing">
+<span class="learn-row-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d4a3a" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+<span class="learn-row-tx">what testing means</span>
+<span class="learn-row-ch">&rsaquo;</span>
+</button>
+<button type="button" class="learn-row" data-tab="vegan">
+<span class="learn-row-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d4a3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c-4 0-7-3-7-7 4 0 7 3 7 7Z"/><path d="M12 13c4 0 7-3 7-7-4 0-7 3-7 7Z"/></svg></span>
+<span class="learn-row-tx">going vegan</span>
+<span class="learn-row-ch">&rsaquo;</span>
+</button>
+<button type="button" class="learn-row" data-tab="questions">
+<span class="learn-row-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d4a3a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span>
+<span class="learn-row-tx">common questions</span>
+<span class="learn-row-ch">&rsaquo;</span>
+</button>
 </div>
 
 <div class="hub-panel" id="panel-start">
@@ -183,6 +215,32 @@
 <p class="xlink" style="text-align:center;"><a href="brand-check.html">check a brand &rarr;</a> &nbsp;&middot;&nbsp; <a href="impact.html">see your impact &rarr;</a> &nbsp;&middot;&nbsp; <a href="shop.html">shop verified products &rarr;</a></p>
 </div>
 
+<div class="hub-panel" id="panel-questions">
+<p class="section-label">the ones I actually get asked</p>
+
+<div class="qa">
+<p class="q">Do I have to do all of it at once?</p>
+<p class="a">No, and I didn't. I started with shampoo, of all things, and it took me about two years to get as far as the fridge. Nobody is marking this.</p>
+</div>
+
+<div class="qa">
+<p class="q">Isn't it expensive?</p>
+<p class="a">The cruelty-free part, mostly not. A lot of the brands cost the same or less than what they replace. The expensive bit is the fancy stuff, and the fancy stuff was always expensive.</p>
+</div>
+
+<div class="qa">
+<p class="q">What about protein?</p>
+<p class="a">Easily the question I get most, which says a lot about how the eyelid-testing chat usually goes down. So, sourced this time: a Cambridge researcher (<b>Dr Chris Macdonald</b>, the university's Better Protein Institute) ranked twenty protein sources this summer on health, cost and environmental impact <span style="white-space:nowrap">&mdash; tofu came first</span>, beef nowhere near it, using a fraction of the land and water per gram of protein. Beans, lentils and peanut butter weren't far behind. You will not shrivel up. I didn't, and I eat beige food on purpose.</p>
+</div>
+
+<div class="qa">
+<p class="q">Am I a hypocrite if I only do some of it?</p>
+<p class="a">If that were the rule, nobody would qualify, me least of all. Something is not the same as nothing.</p>
+</div>
+
+<p style="text-align:center; margin-top:26px;"><a href="brand-check.html">check a brand &rarr;</a></p>
+</div>
+
 </main>
 
 <div class="newsletter">
@@ -208,8 +266,8 @@
 <script>
 // Tab switching, hash-linkable (learn.html#testing etc).
 (function(){
-var TABS = ['start', 'testing', 'vegan'];
-var tabButtons = document.querySelectorAll('.hub-tab');
+var TABS = ['start', 'testing', 'vegan', 'questions'];
+var tabButtons = document.querySelectorAll('.learn-row');
 function show(tab){
   if (TABS.indexOf(tab) === -1) tab = 'start';
   tabButtons.forEach(function(btn){ btn.classList.toggle('active', btn.dataset.tab === tab); });

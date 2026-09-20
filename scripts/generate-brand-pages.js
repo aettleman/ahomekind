@@ -111,7 +111,7 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:site_name" content="a home kind">');
   lines.push('<meta name="twitter:card" content="summary_large_image">');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/app.css?v=3">');
+  lines.push('<link rel="stylesheet" href="../../css/app.css?v=4">');
   lines.push('<link rel="manifest" href="../../manifest.json">');
   lines.push('<meta name="theme-color" content="#3d4a3a">');
   lines.push('<link rel="icon" href="../../favicon.ico" sizes="any">');
