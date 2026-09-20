@@ -1158,7 +1158,7 @@ body { animation: pageFadeIn 0.22s ease; }
    button that covered the site logo on some layouts. This sits in the
    normal page flow, right at the top of the content, matching the
    hand-written "back to brand check" link that's long lived on every
-   individual brand page (brands/*/, see generate-brand-pages.js) --
+   individual brand page (brands/<slug>/, see generate-brand-pages.js) -
    js/nav.js injects the same style everywhere else, wired to real
    browser history so it always goes back to wherever you actually came
    from, worded with the page name when it can tell what that was. */
