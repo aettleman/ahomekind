@@ -1026,6 +1026,7 @@ body { animation: pageFadeIn 0.22s ease; }
 .myth-heading { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; line-height: 1.25; color: var(--ahk-heading); text-transform: none; letter-spacing: 0.2px; margin-bottom: 10px; text-wrap: balance; }
 .myth-sub { color: #5c5c4f; font-size: 13.5px; line-height: 1.8; max-width: 480px; margin: 0 auto 34px; }
 .myth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; text-align: left; }
+.myth-section-inner .myth-heading { margin-bottom: 30px; }
 .flip-card { perspective: 1200px; height: 270px; }
 .flip-card-btn { display: block; width: 100%; height: 100%; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; text-align: left; }
 .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }

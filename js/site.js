@@ -583,9 +583,12 @@ requestAnimationFrame(tick);
 
 // Myth vs reality flip cards -- homepage only, built from a container
 // div id="mythGrid" left empty in the markup. Click, tap or Enter/Space
-// flips a card between the common belief and the fuller truth. Kept as
-// plain, sourceable statements -- nothing here is a "gotcha", just the
-// more complete version of something a lot of people have heard.
+// flips a card to reveal the fuller truth on the back -- the same
+// flip-card pattern already used on the Learn page's testing tab, so
+// the interaction is consistent site-wide. Long reality text scrolls
+// within the card back (see .flip-back overflow-y in css/app.css)
+// rather than needing to shrink the type to fit on a phone, which is
+// what sent this section to a tap-opens-panel-below layout before.
 document.addEventListener('DOMContentLoaded', function(){
 var grid = document.getElementById('mythGrid');
 if (!grid) return;
@@ -617,68 +620,20 @@ reality: 'Every swap is a real, cumulative reduction, not an all-or-nothing swit
 ];
 var html = '';
 MYTHS.forEach(function(m, i){
-html += '<div class="myth-card" data-myth="' + i + '">' +
-'<button type="button" class="myth-card-btn" id="mythCard' + i + '" aria-expanded="false" aria-controls="mythReality' + i + '">' +
-'<span class="myth-img"><img src="images/myth-' + (i + 1) + '.jpg" alt="" loading="lazy" onerror="this.hidden=true"></span>' +
-'<span class="myth-body">' +
-'<span class="myth-tag">the myth</span>' +
-'<span class="myth-claim">' + m.myth + '</span>' +
-'<span class="myth-hint">tap to see the reality <span aria-hidden="true">&rarr;</span></span>' +
-'</span>' +
-'</button>' +
-'</div>';
+html += '<div class="flip-card">' +
+'<button type="button" class="flip-card-btn" id="mythCard' + i + '" aria-label="Flip to see the reality">' +
+'<div class="flip-card-inner">' +
+'<div class="flip-front"><p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap for the reality &rarr;</p></div>' +
+'<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint">tap to flip back</p></div>' +
+'</div></button></div>';
 });
 grid.innerHTML = html;
 grid.classList.add('myth-track');
-var cards = Array.prototype.slice.call(grid.querySelectorAll('.myth-card'));
-
-// The reality opens in a panel beneath the row -- image beside the
-// answer -- rather than on the back of a flip. Flipping hid the myth at
-// the moment you wanted to compare it against the correction, and the
-// answers are too long to fit a card back on a phone without shrinking
-// the type. One panel is reused for whichever card is open.
-var reality = document.createElement('div');
-reality.className = 'myth-reality';
-reality.hidden = true;
-reality.innerHTML =
-'<span class="myth-reality-img"><img alt="" id="mythRealityImg" hidden></span>' +
-'<div class="myth-reality-body">' +
-'<p class="myth-reality-tag">the reality</p>' +
-'<p class="myth-reality-text" id="mythRealityText"></p>' +
-'<button type="button" class="myth-reality-close">close</button>' +
-'</div>';
-grid.parentNode.insertBefore(reality, grid.nextSibling);
-var rText = reality.querySelector('#mythRealityText');
-var rImg = reality.querySelector('#mythRealityImg');
-var openIndex = null;
-
-function closeReality(){
-reality.hidden = true;
-if (openIndex !== null) {
-var prev = cards[openIndex];
-if (prev) {
-prev.classList.remove('is-open');
-prev.querySelector('.myth-card-btn').setAttribute('aria-expanded', 'false');
-}
-}
-openIndex = null;
-}
-function openReality(i){
-if (openIndex === i) { closeReality(); return; }
-closeReality();
-openIndex = i;
-reality.id = 'mythReality' + i;
-rText.textContent = MYTHS[i].reality;
-rImg.src = 'images/myth-' + (i + 1) + '.jpg';
-rImg.hidden = false;
-reality.hidden = false;
-cards[i].classList.add('is-open');
-cards[i].querySelector('.myth-card-btn').setAttribute('aria-expanded', 'true');
-}
-cards.forEach(function(card, i){
-card.querySelector('.myth-card-btn').addEventListener('click', function(){ openReality(i); });
+var cards = Array.prototype.slice.call(grid.querySelectorAll('.flip-card'));
+cards.forEach(function(card){
+var btn = card.querySelector('.flip-card-btn');
+btn.addEventListener('click', function(){ card.classList.toggle('flipped'); });
 });
-reality.querySelector('.myth-reality-close').addEventListener('click', closeReality);
 
 // Dots for the carousel. They only mean anything while the track is
 // actually scrollable -- above 900px CSS lays the cards out as a grid
@@ -771,7 +726,6 @@ document.addEventListener('DOMContentLoaded', function(){
   var div = document.createElement('div');
   div.className = 'header-social';
   div.innerHTML =
-    '<a href="/index.html" aria-label="Back to the homepage"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9.6V19a1 1 0 0 0 1 1h3.2v-4.4h3.6V20H17a1 1 0 0 0 1-1V9.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
     '<a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener" aria-label="Support a home kind on Ko-fi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h13v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 8h1.5a2.5 2.5 0 0 1 0 5H17" stroke="currentColor" stroke-width="1.6"/><path d="M8 3.5c-.6.6-.6 1.4 0 2M11.5 3.5c-.6.6-.6 1.4 0 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>' +
     '<a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a>';
   wrap.appendChild(div);
