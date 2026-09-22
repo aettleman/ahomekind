@@ -9,18 +9,18 @@
 <meta property="og:description" content="Scan a product barcode to check whether it's cruelty-free, vegan and ethically made.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/scan.html">
-<meta property="og:image" content="https://ahomekind.com/images/share-default.jpg">
+<meta property="og:image" content="https://ahomekind.com/images/share-default.jpg?v=2">
 <meta property="og:image:alt" content="Scan a Barcode">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=5">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16-v2.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v2.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
@@ -489,22 +489,24 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
-<a href="index.html" class="logo">
+<a href="/" class="logo" aria-label="a home kind, home">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="scan.html">scan</a>
-<a href="brand-check.html">check a brand</a>
-<a href="learn.html">learn</a>
-<a href="impact.html">your impact</a>
-<a href="shop.html" class="nav-shop-btn">shop</a>
+<a href="/brand-check.html">Check</a>
+<a href="/learn.html">Learn</a>
+<a href="/impact.html">Impact</a>
+<a href="/shop.html">Shop</a>
+<a href="/take-action.html">Take action</a>
+<a href="/scan.html" class="nav-scan-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a product</a>
 </nav>
 </div>
 </header>
 
 <main class="wrap scan-shell" id="main">
-<div class="pagehead">
-<h1 class="scan-h1"><svg class="scan-h1-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="5.6" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="8" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/><rect x="11.5" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="14" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="17" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="19.4" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/></svg>scan a barcode</h1>
+<div class="pagehead k-scan-head">
+<p class="k-kick">scan</p>
+<h1 class="scan-h1 k-h1"><svg class="scan-h1-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="5.6" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="8" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/><rect x="11.5" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="14" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="17" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="19.4" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/></svg>Scan a product</h1>
 <div class="scan-toggle" role="tablist" aria-label="what do you want to check">
 <a href="scan.html" role="tab" aria-selected="true" class="on">scan a barcode</a>
 <a href="ingredient-check.html" role="tab" aria-selected="false">check ingredients</a>
@@ -590,7 +592,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
      making the bar on this page sit taller than every other page. On
      every other page this timing doesn't matter, so nav.js stays at
      the bottom there as usual. -->
-<script src="js/site.js?v=5"></script>
+<script src="js/site.js?v=6"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 <script>
 var BRANDS = [
@@ -892,36 +894,54 @@ if(siteBtn) siteBtn.addEventListener("click", function(){
 doShare({ title: "A Home Kind", text: "A Home Kind - scan a product, know it's cruelty-free and vegan.", url: location.origin + "/" });
 });
 }
+// Full brand data (slug, owner, category, price) for the scan result,
+// loaded once in the background so the result can show the ownership
+// chain and link through to the brand's own page, as in the mockup.
+var AHK_ALL = [];
+fetch("data/brands.json").then(function(r){ return r.json(); }).then(function(d){ AHK_ALL = d || []; }).catch(function(){});
+function kNorm(t){ return String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+var K_ICONS = {
+  good: '<path d="M6 18c-1-7 3-12 13-13 .5 9-4 14-11 13.5"/><path d="M6 18c2-3 5-6 8-7.5"/>',
+  check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+  warn: '<path d="M12 4 2.8 19.5h18.4L12 4Z"/><path d="M12 10v4.2M12 17.2v.1"/>',
+  bad: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
+  unverified: '<path d="M9.2 9a3 3 0 1 1 4.3 2.7c-1 .5-1.5 1.2-1.5 2.3M12 17.5v.1"/>'
+};
+function kStamp(tier, size){
+  var t = K_ICONS[tier] ? tier : "unverified";
+  return '<span class="ahk-stamp tier-' + t + '" style="width:' + (size || 34) + 'px;height:' + (size || 34) + 'px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' + K_ICONS[t] + '</svg></span>';
+}
+var K_SHORT = { good: "CF + vegan", check: "Cruelty-free", warn: "Owner isn't", bad: "Tested", unverified: "Not certified" };
+var K_STAMP = { good: "<b>CF +</b>vegan", check: "<b>cruelty</b>free", warn: "<b>owner</b>isn't", bad: "<b>tested</b>", unverified: "<b>not</b>certified" };
+var K_HEAD = { good: "Cruelty-free and vegan.", check: "Cruelty-free. Vegan status varies by product.", warn: "Cruelty-free, but its owner isn't.", bad: "Tests on animals, or sells where it's required.", unverified: "Not certified either way, yet." };
+var K_WASH = { good: "#DCE6D6", check: "#DCE6D6", warn: "#FBE3D3", bad: "#F5D3D6", unverified: "#EFDDD3" };
 function verdictHTML(brand){
-var cls = brand.tier === "good" ? "v-good" : (brand.tier === "warn" ? "v-warn" : (brand.tier === "bad" ? "v-bad" : "v-unknown"));
-var headline = brand.tier === "good" ? "on the good list" : (brand.tier === "warn" ? "worth a disclaimer" : (brand.tier === "bad" ? "tested on animals" : (brand.tier === "unknown" ? "status not yet confirmed" : "cruelty-free, check the product")));
-var initial = (brand.name || "?").replace(/[^A-Za-z0-9]/g, "").charAt(0).toUpperCase() || "?";
-
-// "check" means the brand itself IS certified/confirmed cruelty-free --
-// it's only the vegan status that varies by product -- so cruelty-free
-// reads "yes" there, same as "good". Only "warn" (cruelty-free itself
-// but the parent company isn't, or an unverified claim) gets "mostly".
-var cfValue, cfClass;
-if(brand.tier === "good" || brand.tier === "check"){ cfValue = "&#10003; yes"; cfClass = "yes"; }
-else if(brand.tier === "warn"){ cfValue = "&#9998; mostly"; cfClass = "maybe"; }
-else if(brand.tier === "bad"){ cfValue = "&#10007; no"; cfClass = "no"; }
-else { cfValue = "? unclear"; cfClass = "na"; }
-
-var noteLower = (brand.note || "").toLowerCase();
-var veganValue, veganClass;
-if(noteLower.indexOf("100% vegan") !== -1 || noteLower.indexOf("fully vegan") !== -1){ veganValue = "&#10003; fully vegan"; veganClass = "yes"; }
-else if(noteLower.indexOf("vegan") !== -1){ veganValue = "&#9998; check product"; veganClass = "maybe"; }
-else { veganValue = "not stated"; veganClass = "na"; }
-
-var out = "<div class=\"rcard " + cls + "\">";
-out += "<div class=\"rcard-top\"><div class=\"rcard-badge\" aria-hidden=\"true\">" + initial + "</div><div><div class=\"rcard-name\">" + brand.name + "</div><div class=\"rcard-headline\">" + headline + "</div></div></div>";
-out += "<div class=\"rstatus-row\">";
-out += "<div class=\"rstatus\"><div class=\"rstatus-label\">cruelty-free</div><div class=\"rstatus-value " + cfClass + "\">" + cfValue + "</div></div>";
-out += "<div class=\"rstatus\"><div class=\"rstatus-label\">vegan</div><div class=\"rstatus-value " + veganClass + "\">" + veganValue + "</div></div>";
-out += "</div>";
-out += "<p class=\"rcard-note\">" + brand.note + "</p>";
-out += "</div>";
-return out;
+  var tier = brand.tier === "unknown" ? "unverified" : (K_ICONS[brand.tier] ? brand.tier : "unverified");
+  var full = null, nb = kNorm(brand.name);
+  for (var i = 0; i < AHK_ALL.length; i++) { if (kNorm(AHK_ALL[i].name) === nb) { full = AHK_ALL[i]; break; } }
+  if (!full) for (var j = 0; j < AHK_ALL.length; j++) { var an = kNorm(AHK_ALL[j].name); if (an && (nb.indexOf(an) === 0 || an.indexOf(nb) === 0)) { full = AHK_ALL[j]; break; } }
+  var cat = full && full.category && full.category[0] || "";
+  var shape = cat === "skincare" ? "jar" : cat === "makeup-beauty" ? "tube" : cat === "body-shower" ? "pump" : (cat === "household-cleaning" || cat === "laundry") ? "spray" : cat === "dental" ? "tube" : "bottle";
+  var cols = ["#6E9B5B","#F2C94C","#F6C9B8","#D9B98A","#8FB3D9","#E8A57A","#B9A3D0","#9DBB98","#7C9A78","#C9546A"];
+  var h = 0, key = (full && full.slug) || nb; for (var k = 0; k < key.length; k++) h = (h * 31 + key.charCodeAt(k)) >>> 0;
+  var catLabel = full && full.category ? full.category.map(function(c){ return c.replace(/-/g, " ").replace("makeup beauty", "makeup").replace("household cleaning", "household"); }).join(" &middot; ") : "brand check";
+  var sub = K_SHORT[tier];
+  var nl = String(brand.note || "").toLowerCase();
+  if (tier !== "bad") { if (/leaping bunny/.test(nl)) sub = "Leaping Bunny certified"; else if (/cruelty free international/.test(nl)) sub = "Cruelty Free International"; else if (/\bpeta\b/.test(nl)) sub = "PETA certified"; }
+  if (full && full.price) sub += " &middot; " + full.price;
+  var out = '<div class="k-brand k-scanres">';
+  out += '<div class="bp"><div class="k-arch-box" style="background:' + K_WASH[tier] + '"><div class="pk ' + shape + '" style="--c:' + cols[h % cols.length] + ';--cap:#3A1F3D"><i></i></div></div><div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeAttr(brand.name) + '</h1><p>' + sub + '</p></div></div>';
+  out += '<div class="vcard tier-' + tier + '"><div class="bigst"><span>' + K_STAMP[tier] + '</span></div><h2>' + K_HEAD[tier] + '</h2><p>' + brand.note + '</p></div>';
+  if (full && full.parentCompany) {
+    var pn = kNorm(full.parentCompany), fam = AHK_ALL.filter(function(b){ return kNorm(b.parentCompany) === pn; }).length;
+    var prec = null; for (var q = 0; q < AHK_ALL.length; q++) { if (kNorm(AHK_ALL[q].name) === pn) { prec = AHK_ALL[q]; break; } }
+    var ptier = prec ? prec.tier : (tier === "warn" || tier === "bad" ? "bad" : null);
+    out += '<div class="chain"><p class="chain-kick">who owns who</p><div class="chain-node">' + kStamp(tier) + '<b>' + escapeAttr(brand.name) + '</b><span>' + K_SHORT[tier] + '</span></div><div class="chain-link">owned by</div>';
+    out += '<div class="chain-node">' + (ptier ? kStamp(ptier) : '<span class="chain-dot"></span>') + '<b>' + escapeAttr(full.parentCompany) + '</b><span>' + fam + ' brand' + (fam === 1 ? '' : 's') + ' on here</span></div></div>';
+  }
+  if (full && full.slug) out += '<p style="margin:14px 0 0;"><a class="k-btn-p" href="/brands/' + full.slug + '/">See the full page &rarr;</a></p>';
+  out += '</div>';
+  return out;
 }
 function brandSearchWidget(){
 var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8C7580; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";

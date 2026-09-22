@@ -9,107 +9,132 @@
 <meta property="og:description" content="Cruelty-free and vegan swaps, honest brand checks, and a starter guide, without the lectures.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/">
-<meta property="og:image" content="https://ahomekind.com/images/share-home.jpg">
+<meta property="og:image" content="https://ahomekind.com/images/share-home.jpg?v=2">
 <meta property="og:image:alt" content="a home kind - cruelty-free, vegan living">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=5">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16-v2.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v2.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-/* ---------- Kindred, remade: home page ---------- */
+/* ---------- Kindred, remade: home page (mockup .r1 home + desktop .dh) ---------- */
+.k-dsk { display: none !important; }
 .kick-dot { display:inline-flex; align-items:center; gap:8px; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ahk-text-muted); }
-.kick-dot::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--ahk-green-soft); box-shadow:0 0 0 3px var(--ahk-sage-soft); }
-
-.k-hero { padding:14px 24px 0; }
-.k-hero h1 { font:400 39px/1.05 'Gloock',serif; margin:14px 0 0; max-width:11ch; text-wrap:balance; }
-.k-hero h1 em { font-style:normal; color:var(--ahk-gold); }
-@media (min-width:560px){ .k-hero h1 { font-size:48px; max-width:13ch; } }
-
-.k-win { position:relative; margin:20px 24px 0; max-width:640px; }
-.k-win img { display:block; width:100%; height:260px; object-fit:cover; object-position:50% 30%; border-radius:999px 999px 26px 26px; }
-@media (min-width:560px){ .k-win img { height:340px; } }
-.k-win-stamp {
-  position:absolute; right:8px; top:-16px; width:92px; height:92px; border-radius:50%;
-  background:var(--ahk-gold); color:#fff; display:grid; place-items:center; text-align:center;
-  transform:rotate(9deg); box-shadow:0 10px 24px -10px rgba(42,22,48,0.5); z-index:3;
-}
-.k-win-stamp span { font:400 13px/1.15 'Gloock',serif; }
-.k-win-stamp b { display:block; font:400 19px/1 'Gloock',serif; margin-bottom:2px; }
-
-.k-sbox {
-  position:relative; margin:-28px 16px 0; z-index:5; display:flex; align-items:center; gap:10px;
-  background:var(--ahk-card); border-radius:99px; padding:7px 7px 7px 20px;
-  box-shadow:0 14px 30px -14px rgba(42,22,48,0.45); font:400 17px 'Gloock',serif; color:var(--ahk-text-muted);
-  text-decoration:none;
-}
-.k-sbox span { flex:1; }
-.k-sbox b { width:46px; height:46px; border-radius:50%; background:var(--ahk-forest); color:#fff; display:grid; place-items:center; flex:none; }
-.k-sbox svg { width:19px; height:19px; }
-
-.k-quick { display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:14px 24px 0; }
+.kick-dot::before { content:""; width:7px; height:7px; border-radius:50%; background:#7C9A78; box-shadow:0 0 0 3px #DCE6D6; flex:none; }
+.k-dh { display:grid; grid-template-columns:1fr; grid-template-areas:"head" "win" "sbox" "quick"; padding:6px 22px 0; }
+.k-hero { grid-area:head; }
+.k-hero h1 { font:400 39px/1.03 'Gloock',serif !important; margin:12px 0 0 !important; letter-spacing:-0.01em !important; text-transform:none !important; color:var(--ahk-heading); text-wrap:balance; }
+.k-hero h1 em { font-style:normal; color:#E8804C; }
+.k-win { grid-area:win; position:relative; margin:18px 0 0; }
+.k-win img { display:block; width:100%; height:250px; object-fit:cover; object-position:50% 58%; border-radius:999px 999px 26px 26px; background:#2a2a2e; }
+.k-win-stamp { position:absolute; right:-6px; top:-14px; width:92px; height:92px; border-radius:50%; background:#E8804C; color:#fff; display:grid; place-items:center; text-align:center; transform:rotate(10deg); box-shadow:0 10px 24px -10px rgba(42,22,48,0.45); z-index:3; }
+.k-win-stamp > span { font:400 13px/1.1 'Gloock',serif; }
+.k-win-stamp b { display:block; font:400 19px/1 'Gloock',serif; margin-bottom:3px; }
+.k-sbox { grid-area:sbox; position:relative; margin:-30px -8px 0; z-index:5; display:flex; align-items:center; gap:10px; background:var(--ahk-card); border-radius:99px; padding:7px 7px 7px 18px; box-shadow:0 14px 30px -14px rgba(42,22,48,0.45); }
+.k-sbox > svg { width:20px; height:20px; color:var(--ahk-heading); flex:none; }
+.k-sbox input { flex:1; min-width:0; border:0; background:none; outline:none; font:400 18px 'Gloock',serif; color:var(--ahk-heading); padding:6px 0; -webkit-appearance:none; }
+.k-sbox input::placeholder { color:var(--ahk-text-muted); }
+.k-sbox input::-webkit-search-cancel-button { display:none; }
+.k-sbox-scan { width:46px; height:46px; border-radius:50%; background:#3A1F3D; color:#fff !important; display:grid; place-items:center; flex:none; }
+.k-sbox-scan svg { width:20px; height:20px; }
+.k-quick { grid-area:quick; display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:14px 0 0; }
 .k-quick small { font-size:12px; color:var(--ahk-text-muted); margin-right:2px; }
-.k-quick a { font:600 12.5px 'Hanken Grotesk',sans-serif; padding:6px 12px; border-radius:99px; border:1px solid var(--ahk-border); background:var(--ahk-card); color:var(--ahk-heading); text-decoration:none; }
+.k-quick a { font:600 12.5px 'Hanken Grotesk',sans-serif; padding:6px 11px; border-radius:99px; border:1px solid rgba(42,22,48,0.13); background:var(--ahk-card); color:var(--ahk-heading); text-decoration:none; }
 .k-quick a:hover { border-color:var(--ahk-heading); }
+.k-quick .ahk-hand { font-size:19px; margin-left:4px; }
 
-.k-four-wrap { padding:34px 24px 0; }
-.k-four { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; max-width:640px; }
-.k-four > div { background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:20px; padding:14px; display:flex; flex-direction:column; gap:9px; }
-.k-four b { display:block; font:400 17px/1.15 'Gloock',serif; color:var(--ahk-heading); }
-.k-four span { font-size:12px; color:var(--ahk-text-muted); line-height:1.4; }
+.k-four-wrap { padding:34px 22px 0; }
+.k-four { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; }
+.k-four > div { background:var(--ahk-card); border:1px solid rgba(42,22,48,0.13); border-radius:20px; padding:13px; display:flex; flex-direction:column; gap:10px; }
+.k-four b { display:block; font:400 17px/1.1 'Gloock',serif; color:var(--ahk-heading); }
+.k-four span:not(.ahk-stamp) { font-size:12px; color:var(--ahk-text-muted); line-height:1.4; }
 
-.k-count { margin-top:34px; background:var(--ahk-forest); color:var(--ahk-on-dark); padding:28px 24px; }
-.k-count-kick { color:var(--ahk-gold-soft); font:700 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; }
-.k-count-num { font:400 62px/0.9 'Gloock',serif; margin-top:8px; }
-.k-count-num .ahk-hand { font-size:22px; margin-left:8px; vertical-align:2px; }
-.k-bars { display:flex; height:10px; gap:3px; margin:18px 0 12px; max-width:640px; }
+.k-count { margin-top:32px; background:#3A1F3D; color:#FBF4EF; padding:24px 22px; }
+.k-count-kick { color:#F6C6A8; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; }
+.k-count-num { font:400 68px/0.9 'Gloock',serif; margin-top:10px; }
+.k-count-num .ahk-hand { font-size:22px; color:#F6C6A8; margin-left:8px; }
+.k-bars { display:flex; height:10px; gap:3px; margin:16px 0 10px; }
 .k-bars i { border-radius:3px; display:block; }
-.k-count-row { display:flex; gap:20px; font-size:12px; opacity:0.92; flex-wrap:wrap; }
-.k-count-row b { display:block; font:400 24px 'Gloock',serif; }
+.k-count-row { display:flex; gap:14px; font-size:12px; opacity:0.9; }
+.k-count-row b { display:block; font:400 22px 'Gloock',serif; }
 
-.k-idea { padding:34px 24px 0; }
-.k-idea h2 { font:400 27px/1.15 'Gloock',serif; margin:8px 0 8px; }
-.k-idea p { font-size:13.5px; color:var(--ahk-text-muted); line-height:1.7; max-width:52ch; }
-
-.k-strip { display:flex; gap:12px; overflow-x:auto; padding:18px 24px 4px; scrollbar-width:none; }
+.k-idea { padding:34px 22px 0; }
+.k-idea h2 { font:400 30px/1.05 'Gloock',serif !important; margin:8px 0 10px !important; text-transform:none !important; letter-spacing:-0.01em !important; color:var(--ahk-heading); }
+.k-idea p { color:var(--ahk-text); font-size:15px; line-height:1.5; max-width:52ch; margin:0; }
+.k-strip { display:flex; gap:12px; overflow-x:auto; padding:18px 22px 4px; scrollbar-width:none; }
 .k-strip::-webkit-scrollbar { display:none; }
 .k-strip figure { margin:0; flex:none; width:140px; }
 .k-strip img { display:block; width:100%; height:186px; object-fit:cover; border-radius:999px 999px 26px 26px; }
-.k-strip figcaption { font:400 16px 'Gloock',serif; margin-top:9px; color:var(--ahk-heading); }
+.k-strip figcaption { font:400 16px 'Gloock',serif; margin-top:8px; color:var(--ahk-heading); }
 .k-strip figcaption span { display:block; font:500 12px 'Hanken Grotesk',sans-serif; color:var(--ahk-text-muted); }
 
-.k-letter { margin:34px 24px 0; display:flex; gap:16px; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:26px; padding:20px; align-items:flex-start; max-width:640px; }
-.k-letter-kick { font:700 10.5px 'Hanken Grotesk',sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:var(--ahk-text-muted); }
-.k-letter h3 { font:400 22px 'Gloock',serif; margin:4px 0 8px; }
-.k-letter p { font-size:13.5px; color:var(--ahk-text); line-height:1.65; }
-.k-letter .ahk-hand { display:block; font-size:24px; margin-top:8px; }
+.k-duo { padding:34px 22px 0; display:grid; gap:14px; }
+.k-letter { display:flex; gap:14px; background:var(--ahk-card); border-radius:26px; border:1px solid rgba(42,22,48,0.13); padding:18px; align-items:flex-start; }
+.k-letter-img { width:88px; height:110px; flex:none; border-radius:999px 999px 26px 26px; object-fit:cover; object-position:50% 40%; }
+.k-letter-kick { font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ahk-text-muted); }
+.k-letter h3 { font:400 23px 'Gloock',serif !important; margin:4px 0 0 !important; text-transform:none !important; letter-spacing:-0.01em !important; color:var(--ahk-heading); }
+.k-letter p { font-size:14px; color:var(--ahk-text); margin:6px 0 0; line-height:1.5; }
+.k-letter .ahk-hand { font-size:26px; display:block; margin-top:6px; }
+.k-impact { display:flex; gap:16px; align-items:center; background:#DCE6D6; border-radius:26px; padding:18px; text-decoration:none; }
+.k-impact-num { font:400 58px/1 'Gloock',serif; color:#35523a; flex:none; }
+.k-impact p { font-size:14px; color:#35523a; margin:0; line-height:1.45; }
+.k-impact b { display:block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; margin-top:8px; color:#35523a; }
+.myth-section { padding-top:34px; }
 
-.k-impact { margin:20px 24px 0; display:flex; gap:16px; align-items:center; background:var(--ahk-sage-soft); border-radius:26px; padding:20px; max-width:640px; text-decoration:none; }
-.k-impact-num { font:400 56px/1 'Gloock',serif; color:#2d4a2f; flex:none; }
-.k-impact p { font-size:13.5px; color:#2d4a2f; margin:0; }
-.k-impact b { display:block; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; margin-top:8px; color:#2d4a2f; }
-
-@media (min-width:900px){
-  .k-hero, .k-quick, .k-four-wrap, .k-idea, .k-strip { max-width:1080px; margin-left:auto; margin-right:auto; padding-left:24px; padding-right:24px; }
-  .k-hero h1 { font-size:64px; max-width:14ch; }
-  .k-win { max-width:1032px; margin-left:auto; margin-right:auto; }
-  .k-win img { height:440px; }
-  .k-sbox { max-width:640px; margin-left:max(40px, calc((100% - 1032px)/2 + 16px)); margin-right:auto; }
-  .k-four { max-width:none; grid-template-columns:repeat(4,1fr); gap:14px; }
-  .k-count { padding-left:max(24px, calc((100% - 1032px)/2)); padding-right:max(24px, calc((100% - 1032px)/2)); }
-  .k-bars { max-width:none; }
-  .k-strip { overflow:visible; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+@media (min-width:900px) {
+  .k-dsk { display: revert !important; }
+  .k-four b.k-n { display: block !important; }
+  .k-mob { display: none !important; }
+  .k-dh { max-width:1240px; margin:0 auto; padding:56px 40px 40px; grid-template-columns:1.05fr .95fr; column-gap:56px;
+    grid-template-areas:"head win" "sbox win" "quick win"; grid-template-rows:auto auto 1fr; align-items:start; }
+  .k-hero { align-self:end; }
+  .k-hero h1 { font-size:clamp(64px, 6vw, 86px) !important; line-height:.96 !important; margin-top:18px !important; }
+  .k-win { margin:0; }
+  .k-win img { height:560px; object-position:50% 50%; }
+  .k-win-stamp { width:140px; height:140px; left:-40px; right:auto; top:auto; bottom:60px; transform:rotate(-8deg); }
+  .k-win-stamp > span { font-size:16px; }
+  .k-win-stamp b { font-size:30px; }
+  .k-sbox { margin:34px 0 0; max-width:560px; padding:9px 9px 9px 26px; }
+  .k-sbox input { font-size:22px; }
+  .k-sbox-scan { width:56px; height:56px; }
+  .k-sbox-scan svg { width:24px; height:24px; }
+  .k-quick { padding:16px 0 0; }
+  .k-four-wrap, .k-idea, .k-duo { max-width:1240px; margin:0 auto; padding:64px 40px 0; }
+  .k-d-h2 { font:400 52px/1 'Gloock',serif !important; margin:10px 0 0 !important; text-transform:none !important; letter-spacing:-0.01em !important; color:var(--ahk-heading); }
+  .k-four { grid-template-columns:repeat(4,1fr); gap:16px; margin-top:28px; }
+  .k-four > div { padding:22px; border-radius:26px; gap:0; }
+  .k-four .ahk-stamp { width:52px; height:52px; }
+  .k-four .ahk-stamp svg { width:22px; height:22px; }
+  .k-four b.k-n { font:400 48px/1 'Gloock',serif; margin:18px 0 6px; }
+  .k-four b:not(.k-n) { font-size:20px; }
+  .k-four span:not(.ahk-stamp) { font-size:14px; margin-top:4px; }
+  .k-count { display:none; }
+  .k-idea h2 { font-size:52px !important; line-height:1 !important; }
+  .k-idea p { font-size:17px; }
+  .k-strip { max-width:1240px; margin:0 auto; padding:28px 40px 0; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; overflow:visible; }
   .k-strip figure { width:auto; }
   .k-strip img { height:320px; }
-  .k-letter, .k-impact { max-width:1032px; margin-left:auto; margin-right:auto; }
+  .k-strip figcaption { font-size:22px; margin-top:12px; }
+  .k-strip figcaption span { font-size:14px; }
+  .k-duo { grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+  .k-letter { padding:30px; border-radius:32px; gap:26px; }
+  .k-letter-img { width:180px; height:230px; }
+  .k-letter h3 { font-size:42px !important; margin-top:8px !important; }
+  .k-letter p { font-size:17px; }
+  .k-letter .ahk-hand { font-size:36px; }
+  .k-impact { padding:34px; border-radius:32px; }
+  .k-impact-num { font-size:150px; line-height:.8; }
+  .k-impact p { font-size:19px; }
+  .k-impact b { font-size:13px; }
+  .myth-section { padding-top:64px; }
 }
 </style>
 </head>
@@ -117,68 +142,73 @@
 <a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
-<a href="index.html" class="logo">
+<a href="/" class="logo" aria-label="a home kind, home">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="scan.html">scan</a>
-<a href="brand-check.html">check a brand</a>
-<a href="learn.html">learn</a>
-<a href="impact.html">your impact</a>
-<a href="shop.html" class="nav-shop-btn">shop</a>
+<a href="/brand-check.html">Check</a>
+<a href="/learn.html">Learn</a>
+<a href="/impact.html">Impact</a>
+<a href="/shop.html">Shop</a>
+<a href="/take-action.html">Take action</a>
+<a href="/scan.html" class="nav-scan-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a product</a>
 </nav>
 </div>
 </header>
 
+<section class="k-dh">
 <div class="k-hero">
 <span class="kick-dot">1,069 brands, checked by hand</span>
 <h1>Your shampoo didn't need to <em>hurt anyone.</em></h1>
 </div>
-
 <div class="k-win">
-<img src="images/hero-two-rabbits.jpg" alt="Two rabbits" onerror="this.hidden=true">
-<div class="k-win-stamp"><span><b>by hand</b>every brand</span></div>
+<img src="images/hero-two-rabbits.jpg" alt="Two rabbits side by side against a dark background">
+<div class="k-win-stamp"><span><b>by hand</b>every <span class="k-dsk">single </span><br>brand</span></div>
 </div>
-
 <form class="k-sbox" action="brand-check.html" method="get" role="search">
-<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg>
 <label for="homeSearch" class="visually-hidden">Search any brand</label>
-<input type="text" id="homeSearch" name="q" placeholder="Search any brand, e.g. Garnier" style="border:0;background:none;flex:1;font:400 17px 'Gloock',serif;color:var(--ahk-heading);outline:none;padding:0;" autocomplete="off">
-<button type="submit" aria-label="Search">
-<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/></svg>
-</button>
+<input type="search" id="homeSearch" name="q" placeholder="Search any brand" autocomplete="off" enterkeyhint="search">
+<a href="scan.html" class="k-sbox-scan" aria-label="Scan a barcode instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></a>
 </form>
-
 <div class="k-quick">
 <small>Popular:</small>
 <a href="brand-check.html?q=Dove">Dove</a>
 <a href="brand-check.html?q=Garnier">Garnier</a>
 <a href="brand-check.html?q=Lush">Lush</a>
 <a href="brand-check.html?q=e.l.f.">e.l.f.</a>
+<a class="k-dsk" href="brand-check.html?q=Faith%20in%20Nature">Faith in Nature</a>
+<span class="ahk-hand k-mob">try one</span>
 </div>
+</section>
 
 <div class="k-four-wrap ahk-reveal">
-<span class="kick-dot" style="margin-left:0">four possible answers</span>
+<span class="kick-dot"><span class="k-mob">four possible answers</span><span class="k-dsk">what 1,069 checks found</span></span>
+<h2 class="k-dsk k-d-h2">Four possible answers.</h2>
 <div class="k-four">
 <div>
-<span class="ahk-stamp tier-good"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg></span>
+<span class="ahk-stamp tier-good"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18c-1-7 3-12 13-13 .5 9-4 14-11 13.5"/><path d="M6 18c2-3 5-6 8-7.5"/></svg></span>
+<b class="k-n k-dsk">38</b>
 <b>Cruelty-free &amp; vegan</b>
 <span>Not tested, nothing from animals.</span>
 </div>
 <div>
-<span class="ahk-stamp tier-check"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+<span class="ahk-stamp tier-check"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+<b class="k-n k-dsk">643</b>
 <b>Cruelty-free</b>
 <span>Not tested. Vegan varies by product.</span>
 </div>
 <div>
-<span class="ahk-stamp tier-warn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg></span>
+<span class="ahk-stamp tier-warn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.8 19.5h18.4L12 4Z"/><path d="M12 10v4.2M12 17.2v.1"/></svg></span>
+<b class="k-n k-dsk">57</b>
 <b>Owner isn't</b>
-<span>The brand's fine, the parent company tests.</span>
+<span>Certified brand, but the parent tests.</span>
 </div>
 <div>
-<span class="ahk-stamp tier-bad"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+<span class="ahk-stamp tier-bad"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span>
+<b class="k-n k-dsk">317</b>
 <b>Tested</b>
-<span>Tests on animals, or sells where it's required.</span>
+<span>Tests, or sells where it's required.</span>
 </div>
 </div>
 </div>
@@ -219,8 +249,9 @@
 </div>
 </div>
 
+<div class="k-duo">
 <div class="k-letter ahk-reveal">
-<img src="images/hero-about.jpg" alt="" style="width:88px;height:110px;flex:none;border-radius:999px 999px 26px 26px;object-fit:cover;object-position:50% 25%;" onerror="this.hidden=true">
+<img src="images/letter-rabbit.jpg" alt="" class="k-letter-img" onerror="this.hidden=true">
 <div>
 <span class="k-letter-kick">a note from me</span>
 <h3>Hi, I'm Ash.</h3>
@@ -232,10 +263,11 @@
 <a href="impact.html" class="k-impact ahk-reveal">
 <div class="k-impact-num" id="impactTeaserNum">7</div>
 <div>
-<p>animals a year not farmed for you, from three plant-based days a week, based on conservative UK figures.</p>
-<b>work out yours &rarr;</b>
+<p>animals a year never farmed for you, from three plant-based days a week.</p>
+<b>Work out yours &rarr;</b>
 </div>
 </a>
+</div>
 
 <main id="main">
 <a href="take-action.html" class="action-teaser ahk-reveal">
@@ -264,7 +296,7 @@
 </form>
 </div>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=5"></script>
+<script src="js/site.js?v=6"></script>
 <script src="js/newsletter.js"></script>
 
 <!-- Begin TradeTracker SuperTag Code -->

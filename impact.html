@@ -9,18 +9,18 @@
 <meta property="og:description" content="An honest calculator for the impact of eating fewer animal products, using conservative UK figures.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/impact.html">
-<meta property="og:image" content="https://ahomekind.com/images/share-impact.jpg">
+<meta property="og:image" content="https://ahomekind.com/images/share-impact.jpg?v=2">
 <meta property="og:image:alt" content="What's your impact?">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=5">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16-v2.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v2.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
@@ -71,72 +71,50 @@ input[type=range]:disabled { opacity:0.45; }
 <a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
-<a href="index.html" class="logo">
+<a href="/" class="logo" aria-label="a home kind, home">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="scan.html">scan</a>
-<a href="brand-check.html">check a brand</a>
-<a href="learn.html">learn</a>
-<a href="impact.html">your impact</a>
-<a href="shop.html" class="nav-shop-btn">shop</a>
+<a href="/brand-check.html">Check</a>
+<a href="/learn.html">Learn</a>
+<a href="/impact.html">Impact</a>
+<a href="/shop.html">Shop</a>
+<a href="/take-action.html">Take action</a>
+<a href="/scan.html" class="nav-scan-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a product</a>
 </nav>
 </div>
 </header>
 
-<main class="page-shell" id="main">
-<div class="pagehead">
-<h1>what's <em>your</em> impact?</h1>
+<main class="page-shell k-page" id="main">
+<div class="k-split">
+<div class="k-split-l">
+<div class="k-ph"><p class="k-kick">your impact</p><h1 class="k-h1">A real number, not a guilt trip.</h1></div>
+<p class="k-iq">How many days a week do you eat plant-based?</p>
+<div class="k-dseg" id="daySeg" role="radiogroup" aria-label="Plant-based days a week"></div>
+<div class="k-sentence">
+<p id="impactSentence">Three days a week means about <b>7</b> animals a year are never farmed for you.</p>
+<div class="k-hearts" id="hearts" aria-hidden="true"></div>
+<small>Out of roughly 17 per person, per year, in the UK.</small>
 </div>
-
-<div class="impact-portrait">
-<div class="ahk-slot">
-<img src="images/impact-animal.jpg" alt="" loading="lazy" onerror="this.hidden=true">
-<span class="ahk-slot-label">animal</span>
+</div>
+<div class="k-split-r">
+<div class="k-shc">
+<canvas id="shareCanvas" width="1080" height="1920" class="k-shc-card" aria-label="Your share card"></canvas>
+<div>
+<b class="k-shc-t">Your share card</b>
+<p>Made with your own number, ready for stories or a group chat.</p>
+<button type="button" class="k-btn-p" id="shareCardBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M6 11.5H5v8.5h14v-8.5h-1"/></svg>Share</button>
+<p id="shareMsg" class="k-shc-msg" role="status" aria-live="polite"></p>
 </div>
 </div>
-
-
-<p class="preset-note" style="margin-top:26px;">how would you describe how you eat?</p>
-<div class="preset-row">
-<button type="button" class="preset-btn" data-cat="meat eater">meat eater</button>
-<button type="button" class="preset-btn active" data-cat="flexitarian">flexitarian</button>
-<button type="button" class="preset-btn" data-cat="plant based">plant based</button>
+<div class="k-two">
+<div><b id="carbonStat">31%</b>off your food's carbon</div>
+<div><b id="fiveStat">37</b>animals over five years</div>
 </div>
-<p class="preset-note" id="sliderHint">how many days a week?</p>
-
-<div class="slider-row" style="margin-top:22px;">
-<label id="daysLabel">as a <span id="catWord">flexitarian</span>, you eat plant-based <span class="slider-val" id="daysVal">3</span> days a week</label>
-<input type="range" id="days" min="0" max="7" step="1" value="3">
+<p class="k-fn">Built on 1.20 billion animals slaughtered in the UK in 2023, about 17.4 per person. The popular "365 a year" figure doesn't hold up, so it isn't used. How it's worked out is below.</p>
 </div>
-
-<div class="slider-row">
-<label>for how many years: <span class="slider-val" id="yearsVal">1</span></label>
-<input type="range" id="years" min="1" max="60" step="1" value="1">
 </div>
-
-<div class="results">
-<div class="big-num" id="stillFarmed">10</div>
-<div class="big-lbl">still farmed for you at this rate</div>
-<div class="sub-num" id="animals">7</div>
-<div class="sub-lbl">land animals not farmed for you</div>
-<div class="sub-num" id="footprint">31%</div>
-<div class="sub-lbl">smaller food carbon footprint</div>
-<div class="sub-num" id="land">33%</div>
-<div class="sub-lbl">less farmland needed to feed you</div>
-</div>
-
-<p id="framing" style="font-size:15px; line-height:1.9;"></p>
-<button type="button" class="share-result-btn" id="shareResultBtn">share my number</button>
-<p id="shareMsg" role="status" aria-live="polite" style="text-align:center; font-size:12px; color:#3A1F3D; margin-top:10px;"></p>
-
-<!-- These numbers are a projection from sliders; my swaps is the record of
-     what someone has actually done. Each is more convincing next to the
-     other, so the two pages point at each other rather than sitting apart
-     in a menu. -->
-<p class="xlink" style="text-align:center; margin-top:30px;"></p>
-</main>
-<div class="wrap">
+<section class="k-method">
 <p class="section-label">where these numbers come from</p>
 
 <p>You will see "going vegan saves 365 animals a year" all over the internet. I have not used it - I would rather give you a number that holds up when someone challenges it. Here's exactly how these numbers are built, tap any of these for the sourcing.</p>
@@ -170,105 +148,88 @@ input[type=range]:disabled { opacity:0.45; }
 
 <p class="section-label">why going vegan matters</p>
 
-<p>Everything above is about food specifically. If the numbers made you curious rather than defensive, the honest next step isn't a lecture, it's a starting point: <a href="https://www.peta.org/lifestyle/food/free-vegan-starter-kit/" target="_blank" rel="noopener">PETA's free vegan starter kit</a> has recipes, meal plans and tips to make the first weeks easier. Or read a little more on the  here first.</p>
+<p>Everything above is about food specifically. If the numbers made you curious rather than defensive, the honest next step isn't a lecture, it's a starting point: <a href="https://www.peta.org/lifestyle/food/free-vegan-starter-kit/" target="_blank" rel="noopener">PETA's free vegan starter kit</a> has recipes, meal plans and tips to make the first weeks easier. Or read a little more on the <a href="learn.html">Learn page</a> first.</p>
 
-<p>And if food isn't where you want to start at all, that's fine too - <a href="brand-check.html">brand check</a> and the  cover the cosmetics and household side, no kitchen changes required.</p>
-</div>
+<p>And if food isn't where you want to start at all, that's fine too - <a href="brand-check.html">brand check</a> and the <a href="shop.html">shop</a> cover the cosmetics and household side, no kitchen changes required.</p>
+</section>
+</main>
+
 
 <script>
-var ANIMALS_PER_YEAR = 17.4;
-var MAX_CARBON_CUT = 73;
-var MAX_LAND_CUT = 76;
-
-function el(id){ return document.getElementById(id); }
-
-function fmt(n){
-return n < 10 ? (Math.round(n * 10) / 10) : Math.round(n);
+(function(){
+var PER_YEAR = 17.4, CARBON = 73;
+var WORDS = ['Zero','One','Two','Three','Four','Five','Six','Seven'];
+var days = 3;
+try { var saved = parseInt(localStorage.getItem('ahk-impact-days'), 10); if (saved >= 0 && saved <= 7) days = saved; } catch(e) {}
+var seg = document.getElementById('daySeg');
+for (var d = 0; d <= 7; d++) {
+  var b = document.createElement('button'); b.type = 'button'; b.textContent = d; b.setAttribute('role','radio'); b.dataset.d = d;
+  b.addEventListener('click', function(){ days = parseInt(this.dataset.d, 10); try { localStorage.setItem('ahk-impact-days', days); } catch(e) {} update(); });
+  seg.appendChild(b);
 }
-
-var currentCategory = 'flexitarian';
-
+var HEART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20Z"/></svg>';
+var HEARTF = HEART.replace('fill="none"','fill="currentColor"');
+function r1(n){ return n < 10 ? Math.round(n * 10) / 10 : Math.round(n); }
+var cowImg = new Image(); cowImg.src = 'images/impact-animal.jpg'; cowImg.onload = function(){ draw(); };
 function update(){
-var days = parseInt(el('days').value, 10);
-var years = parseInt(el('years').value, 10);
-var frac = days / 7;
-
-el('daysVal').textContent = days;
-el('yearsVal').textContent = years;
-el('catWord').textContent = currentCategory === 'plant based' ? 'plant-based eater' : currentCategory;
-
-var animalsSaved = ANIMALS_PER_YEAR * frac * years;
-var animalsStill = ANIMALS_PER_YEAR * (1 - frac) * years;
-var shownSaved = fmt(animalsSaved);
-var shownStill = fmt(animalsStill);
-el('animals').textContent = shownSaved.toLocaleString();
-el('stillFarmed').textContent = shownStill.toLocaleString();
-el('stillFarmed').classList.toggle('warn-num', animalsStill > 0);
-el('animals').classList.toggle('good-num', animalsSaved > 0);
-
-el('footprint').textContent = Math.round(MAX_CARBON_CUT * frac) + '%';
-el('land').textContent = Math.round(MAX_LAND_CUT * frac) + '%';
-
-var catSentence = currentCategory === 'plant based' ? 'plant-based eater' : currentCategory;
-var asA = 'As a ' + catSentence + ', ';
-var f = '';
-if(days === 0){
-f = asA + 'right now roughly ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ', with none spared at zero plant-based days a week. Nobody is standing over you, though. Move the slider and see what one day a week does.';
-} else if(days === 7){
-f = asA + 'eating fully plant-based every day, over ' + years + (years === 1 ? ' year' : ' years') + ' that is none still farmed for you, and around ' + shownSaved + ' animals that were never farmed for you, plus roughly three quarters off the carbon and land your food demands.';
-} else if(days <= 2){
-f = asA + 'roughly ' + shownStill + ' animals are still farmed for you at this rate over ' + years + (years === 1 ? ' year' : ' years') + ', even though ' + days + (days === 1 ? ' day' : ' days') + ' a week plant-based already spares ' + shownSaved + '. Not nothing. Not a hurricane either. Just a real number that was not there before.';
-} else {
-f = asA + 'about ' + shownStill + ' animals are still farmed for you over ' + years + (years === 1 ? ' year' : ' years') + ' at this rate, against roughly ' + shownSaved + ' spared thanks to ' + days + ' days a week plant-based, and about ' + Math.round(MAX_CARBON_CUT * frac) + '% off your food carbon footprint.';
+  seg.querySelectorAll('button').forEach(function(b){ var on = +b.dataset.d === days; b.classList.toggle('on', on); b.setAttribute('aria-checked', String(on)); });
+  var saved = PER_YEAR * days / 7, n = Math.round(saved);
+  var sent = document.getElementById('impactSentence');
+  if (days === 0) sent.innerHTML = 'Zero days a week for now. Even <b>one</b> would mean about 2 animals a year never farmed for you.';
+  else if (days === 7) sent.innerHTML = 'Every day plant-based means about <b>' + n + '</b> animals a year are never farmed for you.';
+  else sent.innerHTML = WORDS[days] + ' day' + (days === 1 ? '' : 's') + ' a week means about <b>' + n + '</b> animals a year are never farmed for you.';
+  var filled = Math.round(saved), h = '';
+  for (var i = 0; i < 17; i++) h += '<span class="' + (i < filled ? 'on' : '') + '">' + (i < filled ? HEARTF : HEART) + '</span>';
+  document.getElementById('hearts').innerHTML = h;
+  document.getElementById('carbonStat').textContent = Math.round(CARBON * days / 7) + '%';
+  document.getElementById('fiveStat').textContent = Math.round(saved * 5);
+  draw();
 }
-el('framing').textContent = f;
+function wrap(ctx, text, x, y, maxW, lh){
+  var words = text.split(' '), line = '', lines = [];
+  words.forEach(function(w){ var t = line ? line + ' ' + w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t; });
+  if (line) lines.push(line);
+  lines.forEach(function(l, i){ ctx.fillText(l, x, y + i * lh); });
+  return lines.length;
 }
-
-
-el('days').addEventListener('input', update);
-el('years').addEventListener('input', update);
-
-var presetBtns = document.querySelectorAll('.preset-btn');
-var lastDays = el('days').value;
-presetBtns.forEach(function(btn){
-btn.addEventListener('click', function(){
-currentCategory = btn.getAttribute('data-cat');
-presetBtns.forEach(function(b){ b.classList.remove('active'); });
-btn.classList.add('active');
-if(currentCategory === 'plant based'){
-lastDays = el('days').value;
-el('days').value = 7;
-el('days').disabled = true;
-el('sliderHint').textContent = 'fixed at 7 days a week';
-} else {
-el('days').disabled = false;
-if(el('days').value == 7){ el('days').value = lastDays; }
-el('sliderHint').textContent = 'how many days a week?';
+function draw(){
+  var c = document.getElementById('shareCanvas'), ctx = c.getContext('2d'), W = 1080, H = 1920;
+  ctx.fillStyle = '#3A1F3D'; ctx.fillRect(0, 0, W, H);
+  var ax = 140, ay = 170, aw = 800, ah = 900, r = aw / 2;
+  ctx.save(); ctx.beginPath(); ctx.moveTo(ax, ay + ah); ctx.lineTo(ax, ay + r); ctx.arc(ax + r, ay + r, r, Math.PI, 0); ctx.lineTo(ax + aw, ay + ah - 40);
+  ctx.quadraticCurveTo(ax + aw, ay + ah, ax + aw - 40, ay + ah); ctx.lineTo(ax + 40, ay + ah); ctx.quadraticCurveTo(ax, ay + ah, ax, ay + ah - 40); ctx.closePath(); ctx.clip();
+  ctx.fillStyle = '#EFDDD3'; ctx.fillRect(ax, ay, aw, ah);
+  if (cowImg.complete && cowImg.naturalWidth) {
+    var s = Math.max(aw / cowImg.naturalWidth, ah / cowImg.naturalHeight), iw = cowImg.naturalWidth * s, ih = cowImg.naturalHeight * s;
+    ctx.drawImage(cowImg, ax + (aw - iw) / 2, ay + (ah - ih) * 0.35, iw, ih);
+  }
+  ctx.restore();
+  var n = Math.round(PER_YEAR * days / 7);
+  ctx.fillStyle = '#F6C6A8'; ctx.font = '400 300px Gloock, Georgia, serif'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText(String(n), ax, 1400);
+  ctx.fillStyle = '#FBF4EF'; ctx.font = '500 52px "Hanken Grotesk", sans-serif';
+  wrap(ctx, 'animals a year not farmed for me, from ' + days + ' plant-based day' + (days === 1 ? '' : 's') + ' a week', ax, 1500, 800, 68);
+  ctx.font = '400 56px Gloock, Georgia, serif'; ctx.fillStyle = '#FBF4EF';
+  ctx.fillText('a home kind', ax, 1790); var wmw = ctx.measureText('a home kind').width;
+  ctx.fillStyle = '#E8804C'; ctx.fillText('.', ax + wmw, 1790);
+  ctx.fillStyle = 'rgba(251,244,239,0.6)'; ctx.font = '500 34px "Hanken Grotesk", sans-serif'; ctx.fillText('ahomekind.com/impact', ax, 1850);
 }
-update();
+document.getElementById('shareCardBtn').addEventListener('click', function(){
+  var c = document.getElementById('shareCanvas'), msg = document.getElementById('shareMsg');
+  var text = 'Eating plant-based ' + days + ' day' + (days === 1 ? '' : 's') + ' a week means about ' + Math.round(PER_YEAR * days / 7) + ' animals a year not farmed for me. Work out yours:';
+  c.toBlob(function(blob){
+    var file = blob ? new File([blob], 'my-impact-a-home-kind.png', { type: 'image/png' }) : null;
+    if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], text: text + ' ' + location.origin + '/impact.html' }).catch(function(){});
+    } else if (blob) {
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'my-impact-a-home-kind.png'; document.body.appendChild(a); a.click(); a.remove();
+      msg.textContent = 'Saved as an image, ready to post.';
+    }
+  }, 'image/png');
 });
-});
-
+(document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(update);
 update();
-
-var shareBtn = el('shareResultBtn');
-var shareMsg = el('shareMsg');
-if(shareBtn) shareBtn.addEventListener('click', function(){
-var days = el('days').value;
-var years = el('years').value;
-var animals = el('animals').textContent;
-var text = 'Eating plant-based ' + days + ' day' + (days == 1 ? '' : 's') + ' a week for ' + years + ' year' + (years == 1 ? '' : 's') + ' means ' + animals + ' animals not farmed for me. I checked my own number with A Home Kind.';
-var shareData = { title: 'A Home Kind - your impact', text: text, url: location.origin + '/impact.html' };
-if(navigator.share){
-navigator.share(shareData).catch(function(){});
-} else if(navigator.clipboard && navigator.clipboard.writeText){
-navigator.clipboard.writeText(text + ' ' + shareData.url).then(function(){
-if(shareMsg) shareMsg.textContent = 'copied - paste it anywhere';
-}).catch(function(){});
-}
-});
-
-update();
+})();
 </script>
 
 <div class="newsletter">
@@ -289,7 +250,7 @@ update();
 </form>
 </div>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=5"></script>
+<script src="js/site.js?v=6"></script>
 <script src="js/newsletter.js"></script>
 <script src="js/impact-counter.js"></script>
 <script>if (window.ahkShowImpactCounter) ahkShowImpactCounter();</script>

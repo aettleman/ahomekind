@@ -25,6 +25,9 @@ person_profiles: 'identified_only'
 var path = location.pathname;
 var isHome = path === '/' || /\/index\.html$/.test(path) || path === '/ahomekind' || path === '';
 if(isHome) return;
+// The five tab pages are top-level destinations (the bottom nav and header
+// already get you anywhere), so the mockup has no back link on them.
+if(/\/(brand-check|learn|impact|shop|scan)(\.html)?$/.test(path) || /^\/brands\//.test(path)) return;
 
 var PAGE_LABELS = {
 'index.html': 'home',
@@ -500,12 +503,12 @@ return paths.some(function(p){ return normalizePath(p) === current; });
 // Clean line-art icons (stroke-based SVG, 24x24) instead of emoji glyphs --
 // these read consistently across every OS/browser, unlike system emoji fonts.
 var bnIcons = {
-  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1H9.5a1 1 0 0 0 1-1v-4.5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1V20a1 1 0 0 0 1 1H17.5a1 1 0 0 0 1-1V9.5"/></svg>',
-  scan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/></svg>',
-  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/></svg>',
-  shop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8.5h11l.9 11a1.5 1.5 0 0 1-1.5 1.6H7.1a1.5 1.5 0 0 1-1.5-1.6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg>',
-  learn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.2S10.4 5 7.6 5C5.6 5 4 6.3 4 6.3v11.4S5.6 16.4 7.6 16.4c2.8 0 4.4 2.2 4.4 2.2s1.6-2.2 4.4-2.2c2 0 3.6 1.3 3.6 1.3V6.3S18.4 5 16.4 5C13.6 5 12 7.2 12 7.2z"/><path d="M12 7.2v11.4"/></svg>',
-  impact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-7.5-10.3A4.2 4.2 0 0 1 12 7.6a4.2 4.2 0 0 1 7.5 2.6c0 5.7-7.5 10.3-7.5 10.3z"/></svg>'
+  /* The exact icons from the approved Kindred remade mockup. */
+  scan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg>',
+  learn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5 7.8 4.5 4 4.5v13c3.8 0 6.3.5 8 2 1.7-1.5 4.2-2 8-2v-13c-3.8 0-6.3.5-8 2Z"/><path d="M12 6.5v13"/></svg>',
+  impact: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></svg>',
+  shop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>'
 };
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
@@ -623,8 +626,8 @@ MYTHS.forEach(function(m, i){
 html += '<div class="flip-card">' +
 '<button type="button" class="flip-card-btn" id="mythCard' + i + '" aria-label="Flip to see the reality">' +
 '<div class="flip-card-inner">' +
-'<div class="flip-front"><p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint">tap for the reality &rarr;</p></div>' +
-'<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint">tap to flip back</p></div>' +
+'<div class="flip-front"><p class="flip-label">the myth</p><p class="flip-text">' + m.myth + '</p><p class="flip-hint"><span>Tap for the reality</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p></div>' +
+'<div class="flip-back"><p class="flip-label">the reality</p><p class="flip-text">' + m.reality + '</p><p class="flip-hint"><span>Tap to flip back</span></p></div>' +
 '</div></button></div>';
 });
 grid.innerHTML = html;
@@ -650,6 +653,16 @@ cards[i].scrollIntoView({ block: 'nearest', inline: 'center' });
 });
 dots.appendChild(d);
 });
+var nextBtn = document.createElement('button');
+nextBtn.type = 'button';
+nextBtn.className = 'myth-next';
+nextBtn.innerHTML = 'Next myth <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+nextBtn.addEventListener('click', function(){
+  var cur = 0; Array.prototype.forEach.call(dots.querySelectorAll('.myth-dot'), function(d, i){ if (d.classList.contains('active')) cur = i; });
+  var nxt = (cur + 1) % cards.length;
+  cards[nxt].scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+});
+dots.appendChild(nextBtn);
 grid.parentNode.insertBefore(dots, grid.nextSibling);
 
 // Mark the dot for whichever card is nearest the middle of the track.
@@ -871,3 +884,16 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('orientationchange', apply);
   window.addEventListener('pageshow', apply);
 })();
+
+// Marks the current page in the desktop header nav (orange, as the
+// mockup has it). Same clean-URL normalising as the bottom nav.
+document.addEventListener('DOMContentLoaded', function(){
+  function norm(p){ p = p.replace(/index\.html$/, '').replace(/\.html$/, ''); if (p.length > 1) p = p.replace(/\/$/, ''); return p || '/'; }
+  var here = norm(location.pathname);
+  var onBrand = /^\/brands\//.test(location.pathname);
+  document.querySelectorAll('nav.main-nav a').forEach(function(a){
+    if (a.classList.contains('nav-scan-btn')) return;
+    var h = norm(a.getAttribute('href') || '');
+    if (h === here || (onBrand && h === '/brand-check')) a.classList.add('on');
+  });
+});

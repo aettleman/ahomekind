@@ -9,62 +9,59 @@
 <meta property="og:description" content="Cruelty-free and vegan product recommendations from Home Kind.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/shop.html">
-<meta property="og:image" content="https://ahomekind.com/images/share-shop.jpg">
+<meta property="og:image" content="https://ahomekind.com/images/share-shop.jpg?v=2">
 <meta property="og:image:alt" content="Shop">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=5">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16-v2.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v2.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 </head>
-<body class="shop-skin">
+<body>
 <a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
-<a href="./index.html" class="logo">
+<a href="/" class="logo" aria-label="a home kind, home">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="scan.html">scan</a>
-<a href="brand-check.html">check a brand</a>
-<a href="learn.html">learn</a>
-<a href="impact.html">your impact</a>
-<a href="shop.html" class="nav-shop-btn">shop</a>
+<a href="/brand-check.html">Check</a>
+<a href="/learn.html">Learn</a>
+<a href="/impact.html">Impact</a>
+<a href="/shop.html">Shop</a>
+<a href="/take-action.html">Take action</a>
+<a href="/scan.html" class="nav-scan-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a product</a>
 </nav>
 </div>
 </header>
 
-<main class="page-shell" id="main">
-<div class="page-hero hero-cut-tl">
-<img src="images/hero-shop.jpg" alt="" onerror="this.hidden=true">
-<div class="page-hero-copy">
-<h1>shop</h1>
+<main class="page-shell k-page" id="main">
+<div class="k-shop-head">
+<div class="k-ph"><p class="k-kick">the kind shelf</p><h1 class="k-h1">Shop</h1><p class="k-lede">Only brands that passed the check.</p></div>
+<div class="k-tags" id="shopTabbar">
+<button type="button" class="k-tag on" data-cat="all">All</button>
+<button type="button" class="k-tag" data-cat="haircare">Hair</button>
+<button type="button" class="k-tag" data-cat="skincare">Skin</button>
+<button type="button" class="k-tag" data-cat="makeup">Makeup</button>
+<button type="button" class="k-tag" data-cat="household">Home</button>
+<button type="button" class="k-tag" data-cat="home-goods">Tees</button>
 </div>
 </div>
-<p class="hero-lede">Cruelty-free and vegan things worth buying, picked from the brand check rather than from whoever pays the most.</p>
-<div class="shop-tabbar" id="shopTabbar">
-<button class="shop-tab active" data-cat="all">all</button>
-<button class="shop-tab" data-cat="skincare">skincare</button>
-<button class="shop-tab" data-cat="makeup">makeup</button>
-<button class="shop-tab" data-cat="haircare">haircare</button>
-<button class="shop-tab" data-cat="household">household &amp; cleaning</button>
-<button class="shop-tab" data-cat="home-goods">a home kind goods</button>
-</div>
-
-<p class="shop-disclosure" id="shopDisclosure"><span>Some links earn me a commission, at no extra cost to you.</span><button type="button" class="shop-disclosure-close" id="shopDisclosureClose" aria-label="Dismiss this notice">&times;</button></p>
-
-<div class="pgrid ahk-reveal-group" id="shopProducts">
-<p class="kswap-loading" id="shopLoading">loading products&hellip;</p>
-</div>
-<p id="shopEmpty" class="pgrid-empty" style="display:none;">Nothing in this category yet - check back soon.</p>
+<button type="button" class="k-teec" id="teeCard">
+<span class="k-arch-box k-teec-img" id="teeImg"><span class="pk tee" style="--c:#FBF4EF"><i></i></span></span>
+<span><span class="k-kick k-teec-k">new</span><b>a home kind tees</b><span>Organic cotton, printed on demand, so nothing's wasted.</span></span>
+</button>
+<div class="k-sgrid" id="shopProducts"><p class="kswap-loading" id="shopLoading">loading products&hellip;</p></div>
+<p id="shopEmpty" class="k-fn" style="display:none; text-align:center;">Nothing in this category yet - check back soon.</p>
+<p class="k-fn" style="text-align:center;">Paid links are marked, and help keep the site free. Some links earn me a commission, at no extra cost to you.</p>
 </main>
 
 <div class="newsletter">
@@ -85,148 +82,73 @@
 </form>
 </div>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="./js/site.js?v=5"></script>
+<script src="./js/site.js?v=6"></script>
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
-// Groups a single deep-link category (e.g. shop.html?category=beauty,
-// still used by start-here.html) onto the set of tabs/cards it actually
-// covers -- kept from the old category-grid version so those links
-// still work with the new tab bar.
-// The Amazon disclosure is small print, not a headline -- it stays
-// dismissed (remembered per-browser) once someone's closed it, since
-// nobody needs to read it twice.
-(function(){
-var d = document.getElementById('shopDisclosure');
-var closeBtn = document.getElementById('shopDisclosureClose');
-if (!d || !closeBtn) { return; }
-try {
-if (localStorage.getItem('ahk-shop-disclosure-dismissed') === '1') { d.hidden = true; }
-} catch(e) {}
-closeBtn.addEventListener('click', function(){
-d.hidden = true;
-try { localStorage.setItem('ahk-shop-disclosure-dismissed', '1'); } catch(e) {}
-});
-})();
-
-var GROUP_KEYS = { "beauty": ["skincare", "makeup", "haircare"] };
-var CATEGORY_LABELS = { skincare: "skincare", makeup: "makeup", haircare: "haircare", household: "household &amp; cleaning", "home-goods": "a home kind goods" };
-
-function escapeHtml(s){
-return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;").split("'").join("&#x27;");
+function esc(t){ return String(t || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+var WASH = { haircare: '#DCE6D6', skincare: '#F5D3D6', makeup: '#EBDCEC', household: '#F7DCC6', 'home-goods': '#E9D7C8' };
+var RETAIL = { 'amazon-associates': 'Amazon', 'own-store': 'Teemill' };
+function whyLine(p, b){
+  if (p.category === 'home-goods') return 'My own designs, organic cotton';
+  if (!b) return p.vegan ? 'Vegan' : 'Cruelty-free';
+  var n = (b.note || '').toLowerCase(), bits = [];
+  if (!b.parentCompany) bits.push('Independent');
+  if (/leaping bunny/.test(n)) bits.push('Leaping Bunny');
+  else if (/cruelty free international/.test(n)) bits.push('Cruelty Free International');
+  if (/vegan society/.test(n)) bits.push('Vegan Society');
+  else if (/\bpeta\b/.test(n)) bits.push('PETA');
+  if (b.price === '£') bits.push('budget-friendly');
+  return bits.slice(0, 2).join(', ') || 'Checked and listed';
 }
-
-// Everything shoppable on this page comes from data/products.json --
-// the same file the scanner/swap side could eventually draw from too --
-// so adding, pausing or removing a product is a data edit, not a page
-// edit. A product only renders as a shoppable card when it has an
-// affiliateUrl on file; without one it still shows, just without a
-// "shop on X" link, same rule as everywhere else on the site. Setting
-// active:false on a product hides it entirely -- for a rejected
-// programme, an expired link, or a product that's no longer suitable.
-// The shop button used to be hard-coded to "shop on amazon", which was
-// fine while Amazon was the only retailer and wrong the moment it wasn't.
-// It now reads the product's own network, so A Home Kind's Teemill merch
-// says "shop on teemill" and anything added later gets a sensible label
-// rather than sending people somewhere the button didn't name.
-var CTA_LABELS = { "amazon-associates": "shop on amazon", "own-store": "shop on teemill" };
-function ctaLabel(p){
-return CTA_LABELS[p.network] || (p.retailer ? ("shop at " + escapeHtml(String(p.retailer).toLowerCase())) : "shop now");
+function pill(p, b){
+  if (p.category === 'home-goods') return '<span class="k-v g">Vegan</span>';
+  var t = b ? b.tier : (p.vegan ? 'good' : 'check');
+  return t === 'good' ? '<span class="k-v g">CF + vegan</span>' : '<span class="k-v c">Cruelty-free</span>';
 }
-// nofollow is the right signal for a paid affiliate link. A Home Kind's own
-// shop isn't one -- it's our store -- so those links are plain outbound.
-function ctaRel(p){
-return p.network === "own-store" ? "noopener" : "nofollow noopener";
+function card(p, b){
+  var url = p.affiliateUrl, rel = p.network === 'own-store' ? 'noopener' : 'sponsored nofollow noopener';
+  var retail = RETAIL[p.network] || p.retailer || '';
+  var tag = url ? 'a href="' + esc(url) + '" target="_blank" rel="' + rel + '"' : 'div';
+  var o = '<' + tag + ' class="k-sp" data-category="' + esc(p.category) + '">';
+  var shape = { haircare: 'bottle', skincare: 'jar', makeup: 'tube', household: 'spray', 'home-goods': 'tee' }[p.category] || 'bottle';
+  var cols = ['#6E9B5B','#F2C94C','#F6C9B8','#D9B98A','#8FB3D9','#E8A57A','#B9A3D0','#9DBB98'];
+  var h = 0; for (var i = 0; i < p.id.length; i++) h = (h * 31 + p.id.charCodeAt(i)) >>> 0;
+  var pk = '<span class="pk ' + shape + '" style="--c:' + (shape === 'tee' ? '#FBF4EF' : cols[h % cols.length]) + ';--cap:#3A1F3D"><i></i></span>';
+  o += '<span class="k-arch-box k-sp-img" style="background:' + (WASH[p.category] || '#EFDDD3') + '" data-pk="' + esc(pk) + '"><img src="' + esc(p.image) + '" alt="" loading="lazy" onerror="var b=this.parentNode;b.classList.add(\'is-pk\');b.innerHTML=b.getAttribute(\'data-pk\');"></span>';
+  o += '<small>' + esc(p.brand) + '</small><b>' + esc(p.name) + '</b>';
+  o += '<span class="k-why">' + esc(whyLine(p, b)) + '</span>';
+  o += '<span class="k-sp-foot">' + pill(p, b) + (url && p.network !== 'own-store' ? '<span class="k-paid">' + esc(retail) + ' &middot; paid link</span>' : (url ? '<span class="k-paid">' + esc(retail) + '</span>' : '')) + '</span>';
+  o += '</' + (url ? 'a' : 'div') + '>';
+  return o;
 }
-
-function pcardHTML(p){
-var catLabel = CATEGORY_LABELS[p.category] || escapeHtml(p.category);
-var name = escapeHtml(p.name);
-var brand = escapeHtml(p.brand);
-var url = p.active !== false ? p.affiliateUrl : null;
-// Product shots are hotlinked from the retailer, so they go stale as
-// listings rotate. A dead one used to leave a broken-image icon with the
-// full product name spilling out of it; now it falls back to a quiet
-// placeholder mark and the name below the card does the work.
-var img = "<img src=\"" + p.image + "\" alt=\"" + name + "\" loading=\"lazy\" onerror=\"this.hidden=true;this.parentNode.classList.add('is-empty');\">";
-var out = "<div class=\"pcard\" data-category=\"" + p.category + "\" data-product-id=\"" + p.id + "\">";
-out += url ? ("<a href=\"" + url + "\" class=\"pcard-imgwrap\" rel=\"nofollow noopener\" target=\"_blank\">" + img + "</a>") : ("<div class=\"pcard-imgwrap\">" + img + "</div>");
-out += "<p class=\"pcard-brand\">" + brand + "</p>";
-out += "<h3>" + (url ? ("<a href=\"" + url + "\" rel=\"nofollow noopener\" target=\"_blank\">" + name + "</a>") : name) + "</h3>";
-out += "<div class=\"pcard-foot\"><span class=\"pcard-chip\">" + catLabel + "</span>";
-if(url) out += "<a href=\"" + url + "\" class=\"pcard-buy\" rel=\"" + ctaRel(p) + "\" target=\"_blank\">" + ctaLabel(p) + " &rarr;</a>";
-out += "</div>";
-out += "</div>";
-return out;
-}
-
-// The "reserved for future launches" placeholder lived here until the
-// A Home Kind goods tab had real products in it. It now only appears if
-// that tab is somehow empty, so the tab is never a dead end.
-var comingSoonHTML = "" +
-"<div class=\"pcard pcard-soon\" data-category=\"home-goods\">" +
-"<div class=\"pcard-imgwrap pcard-imgwrap-soon\">&#127968;</div>" +
-"<p class=\"pcard-brand\">coming soon</p>" +
-"<h3>more on the way</h3>" +
-"<div class=\"pcard-foot\"><span class=\"pcard-chip\">a home kind goods</span></div>" +
-"</div>";
-
-var grid = document.getElementById("shopProducts");
-
-fetch("data/products.json").then(function(r){ return r.json(); }).then(function(products){
-var visible = (products || []).filter(function(p){ return p.active !== false; });
-var hasGoods = visible.some(function(p){ return p.category === "home-goods"; });
-grid.innerHTML = visible.map(pcardHTML).join("") + (hasGoods ? "" : comingSoonHTML);
-initFilters();
-}).catch(function(){
-grid.innerHTML = "<p class=\"pgrid-empty\">Couldn't load the shop right now - try refreshing.</p>" + comingSoonHTML;
-initFilters();
-});
-
-function initFilters(){
-var tabbar = document.getElementById("shopTabbar");
-var tabs = tabbar.querySelectorAll(".shop-tab");
-var cards = document.querySelectorAll("#shopProducts .pcard");
-var emptyMsg = document.getElementById("shopEmpty");
-
-function applyFilter(keys){
-var anyVisible = false;
-cards.forEach(function(card){
-var match = keys.indexOf("all") !== -1 || keys.indexOf(card.getAttribute("data-category")) !== -1;
-if (match) {
-anyVisible = true;
-card.style.display = "";
-requestAnimationFrame(function(){ card.classList.remove("pcard-hide"); });
-} else {
-card.classList.add("pcard-hide");
-setTimeout(function(){ if (card.classList.contains("pcard-hide")) card.style.display = "none"; }, 220);
-}
-});
-emptyMsg.style.display = anyVisible ? "none" : "block";
-}
-
-function setActiveTabs(keys){
-tabs.forEach(function(tab){
-tab.classList.toggle("active", keys.indexOf(tab.getAttribute("data-cat")) !== -1);
-});
-}
-
-tabs.forEach(function(tab){
-tab.addEventListener("click", function(){
-var key = tab.getAttribute("data-cat");
-setActiveTabs([key]);
-applyFilter([key]);
-});
-});
-
-var urlCat = new URLSearchParams(window.location.search).get("category");
-if (urlCat) {
-var keys = GROUP_KEYS[urlCat] || [urlCat];
-setActiveTabs(keys);
-applyFilter(keys);
-} else {
-applyFilter(["all"]);
-}
+var grid = document.getElementById('shopProducts');
+Promise.all([
+  fetch('data/products.json').then(function(r){ return r.json(); }),
+  fetch('data/brands.json').then(function(r){ return r.json(); }).catch(function(){ return []; })
+]).then(function(res){
+  var products = (res[0] || []).filter(function(p){ return p.active !== false; });
+  var bySlug = {}; (res[1] || []).forEach(function(b){ bySlug[b.slug] = b; });
+  grid.innerHTML = products.map(function(p){ return card(p, bySlug[p.brandSlug]); }).join('');
+  var tee = products.filter(function(p){ return p.category === 'home-goods'; })[0];
+  if (tee && tee.image) { var ti = document.getElementById('teeImg'); var keep = ti.innerHTML; ti.innerHTML = '<img src="' + esc(tee.image) + '" alt="" loading="lazy">'; ti.firstChild.onerror = function(){ ti.innerHTML = keep; }; }
+  init();
+}).catch(function(){ grid.innerHTML = '<p class="k-fn">Couldn\'t load the shop right now - try refreshing.</p>'; });
+function init(){
+  var tabs = document.querySelectorAll('#shopTabbar .k-tag');
+  var cards = grid.querySelectorAll('.k-sp');
+  function apply(cat){
+    var any = false;
+    cards.forEach(function(c){ var m = cat === 'all' || c.dataset.category === cat; c.style.display = m ? '' : 'none'; if (m) any = true; });
+    tabs.forEach(function(t){ t.classList.toggle('on', t.dataset.cat === cat); });
+    document.getElementById('shopEmpty').style.display = any ? 'none' : 'block';
+    document.getElementById('teeCard').style.display = (cat === 'all') ? '' : 'none';
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ apply(t.dataset.cat); history.replaceState(null, '', t.dataset.cat === 'all' ? location.pathname : '?category=' + t.dataset.cat); }); });
+  document.getElementById('teeCard').addEventListener('click', function(){ apply('home-goods'); grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+  var m = location.search.match(/[?&]category=([a-z-]+)/);
+  var key = m ? m[1] : 'all'; if (key === 'beauty') key = 'skincare';
+  apply(document.querySelector('#shopTabbar .k-tag[data-cat="' + key + '"]') ? key : 'all');
 }
 })();
 </script>

@@ -9,18 +9,18 @@
 <meta property="og:description" content="Check whether a brand is cruelty-free and vegan before you buy.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahomekind.com/brand-check.html">
-<meta property="og:image" content="https://ahomekind.com/images/share-brandcheck.jpg">
+<meta property="og:image" content="https://ahomekind.com/images/share-brandcheck.jpg?v=2">
 <meta property="og:image:alt" content="Check a brand">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=5">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32-v2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16-v2.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon-v2.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
@@ -107,53 +107,41 @@
 <a href="#main" class="skip-link">skip to content</a>
 <header class="site-header">
 <div class="wrap">
-<a href="index.html" class="logo">
+<a href="/" class="logo" aria-label="a home kind, home">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
-<a href="scan.html">scan</a>
-<a href="brand-check.html">check a brand</a>
-<a href="learn.html">learn</a>
-<a href="impact.html">your impact</a>
-<a href="shop.html" class="nav-shop-btn">shop</a>
+<a href="/brand-check.html">Check</a>
+<a href="/learn.html">Learn</a>
+<a href="/impact.html">Impact</a>
+<a href="/shop.html">Shop</a>
+<a href="/take-action.html">Take action</a>
+<a href="/scan.html" class="nav-scan-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg>Scan a product</a>
 </nav>
 </div>
 </header>
 
-<main class="page-shell" id="main">
+<main class="page-shell k-page" id="main">
 
-<div class="page-hero hero-cut-tl">
-<img src="images/brandcheck-hero.jpg" alt="" onerror="this.hidden=true">
-<div class="page-hero-copy">
-<h1>check a brand</h1>
+<div class="k-check-head">
+<div class="k-ph"><p class="k-kick">the index</p><h1 class="k-h1">Check a brand</h1><p class="k-lede">All <span id="brandTotal">1,069</span>, in plain English.</p></div>
+<div class="k-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg><label for="ratingSearch" class="visually-hidden">Search a brand</label><input type="search" id="ratingSearch" placeholder="Type a brand..." autocomplete="off" enterkeyhint="search"><a href="/scan.html" class="k-field-scan" aria-label="Scan a barcode instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></a></div>
 </div>
-</div>
-<p class="hero-lede">See who's cruelty-free, who's vegan, and who still tests on animals, before you buy.</p>
-<p class="xlink ic-from-brand"><a href="ingredient-check.html">or check one product's ingredients &rarr;</a></p>
-
-<div class="pill-input">
-<span class="pill-input-icon" aria-hidden="true">
-<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-</span>
-<label for="ratingSearch" class="visually-hidden">Search a brand</label>
-<input type="text" id="ratingSearch" placeholder="Search a brand&hellip;">
-</div>
-
-<div class="k-ans" id="answerFilters">
+<div class="k-ans" id="answerFilters" aria-label="Filter by answer">
 <button type="button" class="k-ans-btn" data-answer="cf-vegan">
-<span class="ahk-stamp tier-good" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg></span>
+<span class="ahk-stamp tier-good" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18c-1-7 3-12 13-13 .5 9-4 14-11 13.5"/><path d="M6 18c2-3 5-6 8-7.5"/></svg></span>
 <span class="k-ans-label">CF +<br>vegan</span>
 </button>
 <button type="button" class="k-ans-btn" data-answer="cf">
-<span class="ahk-stamp tier-check" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+<span class="ahk-stamp tier-check" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
 <span class="k-ans-label">cruelty-<br>free</span>
 </button>
 <button type="button" class="k-ans-btn" data-answer="owner">
-<span class="ahk-stamp tier-warn" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg></span>
+<span class="ahk-stamp tier-warn" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.8 19.5h18.4L12 4Z"/><path d="M12 10v4.2M12 17.2v.1"/></svg></span>
 <span class="k-ans-label">owner<br>isn't</span>
 </button>
 <button type="button" class="k-ans-btn" data-answer="tested">
-<span class="ahk-stamp tier-bad" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+<span class="ahk-stamp tier-bad" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span>
 <span class="k-ans-label">tested</span>
 </button>
 </div>
@@ -163,39 +151,13 @@
 .k-ans-btn.on { border-color:var(--ahk-heading); box-shadow:inset 0 0 0 1px var(--ahk-heading); }
 .k-ans-label { font:700 8.5px/1.2 'Hanken Grotesk',sans-serif; letter-spacing:0.06em; text-transform:uppercase; color:var(--ahk-text-muted); text-align:center; }
 </style>
-
-<div class="btn-row" style="margin-bottom:20px;">
-<button type="button" class="btn-pri" id="browseAllBtn" style="display:none;" hidden>browse by category</button>
-<button type="button" class="btn-pri" id="browseAZBtn">browse A&ndash;Z</button>
-</div>
-
-<!-- "what's changed" used to be its own entry in the More menu, where it
-     meant nothing to anyone who hadn't already used the brand check. It
-     belongs here, next to the thing it's a history of. -->
-<p class="xlink"></p>
-
-<!-- The key used to be a drop-down, which meant the colours on the page
-     were unexplained until you went looking. It's five chips and one line
-     now: always on show, and smaller than the closed drop-down was. -->
-<div class="verdict-key">
-<span class="vk good"><i></i>kind</span>
-<span class="vk check"><i></i>check vegan</span>
-<span class="vk warn"><i></i>parent co.</span>
-<span class="vk bad"><i></i>not kind</span>
-<span class="vk unknown"><i></i>not certified</span>
-<p class="vk-price">&pound; budget &middot; &pound;&pound; mid &middot; &pound;&pound;&pound; premium &middot; &pound;&pound;&pound;&pound; luxury - a rough guide to where a brand sits, not exact pricing.</p>
-</div>
-
-<!-- The pills + certification dropdown used to sit open on the page at
-     all times -- fine with three options, cluttered once certification
-     was added alongside them. They now live inside one "filter & sort"
-     panel, collapsed by default; the pills themselves are unchanged
-     underneath (same data-filter buttons, same click handlers below),
-     just restyled as a list of switches instead of a row of chips. -->
+<div class="k-tags" id="catTags"><button type="button" class="k-tag on" data-cat="">Everything</button><button type="button" class="k-tag" data-cat="skin-care">Skin</button><button type="button" class="k-tag" data-cat="hair-care">Hair</button><button type="button" class="k-tag" data-cat="makeup">Makeup</button><button type="button" class="k-tag" data-cat="body-shower">Body</button><button type="button" class="k-tag" data-cat="mouth-care">Mouth</button><button type="button" class="k-tag" data-cat="household">Home</button><button type="button" class="k-tag" data-cat="supermarket">Supermarket</button><a class="k-tag" href="/perfume.html">Perfume</a></div>
+<div class="k-saved" id="savedBrands" hidden></div>
+<div style="display:none"><button type="button" id="browseAllBtn" hidden></button><button type="button" id="browseAZBtn" hidden></button></div>
 <div class="filter-sort">
 <button type="button" class="filter-sort-toggle" id="filterSortToggle" aria-expanded="false" aria-controls="filterSortPanel">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-<span>filter &amp; sort</span>
+<span>More filters</span>
 <span class="filter-sort-count" id="filterSortCount" hidden></span>
 <svg class="filter-sort-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
@@ -1444,54 +1406,29 @@ card.dataset.initial = /[0-9]/.test(initial) ? '#' : initial;
 var price = priceMap[name];
 
 var STAMP_ICONS = {
-'v-good': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg>',
-'v-check': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
-'v-warn': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg>',
-'v-bad': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
-'v-unverified': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 16h.01M9.5 9.5a2.5 2.5 0 0 1 4.6-1.4c.4.7.3 1.5-.3 2.1L12 12v1"/></svg>'
+'v-good': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18c-1-7 3-12 13-13 .5 9-4 14-11 13.5"/><path d="M6 18c2-3 5-6 8-7.5"/></svg>',
+'v-check': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+'v-warn': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.8 19.5h18.4L12 4Z"/><path d="M12 10v4.2M12 17.2v.1"/></svg>',
+'v-bad': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>',
+'v-unverified': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.2 9a3 3 0 1 1 4.3 2.7c-1 .5-1.5 1.2-1.5 2.3M12 17.5v.1"/></svg>'
 };
-var html = '<div class="rcard-top">';
-html += '<div class="rcard-badge ahk-stamp-solid" aria-hidden="true">' + (STAMP_ICONS[tierClass] || initial) + '</div>';
-html += '<div class="rcard-name-wrap"><div class="rcard-name">' + nameHTML + '</div><div class="rcard-headline">' + headline + '</div></div>';
-if (price) { html += '<span class="rcard-price">' + price + '</span>'; }
-html += '</div>';
-html += '<div class="rstatus-row">';
-html += '<div class="rstatus"><div class="rstatus-label">cruelty-free</div><div class="rstatus-value ' + cfClass + '">' + cfValue + '</div></div>';
-html += '<div class="rstatus"><div class="rstatus-label">vegan</div><div class="rstatus-value ' + veganClass + '">' + veganValue + '</div></div>';
-html += '</div>';
-if (noteHTML) {
-html += '<details class="rcard-details"><summary>why</summary><p class="rcard-note">' + noteHTML + '</p>';
-if (tierClass === 'v-bad') {
-html += '<p class="rcard-note">What "tested on animals" actually means, most commonly: chemicals applied to a rabbit\'s eyes or shaved skin and scored for the damage they cause, doses forced on rats and mice to find how much harms or kills them, and longer studies checking for cancer or harm to unborn offspring. Almost all of the animals are killed afterwards so their organs can be examined. <a href="learn.html#testing">read the fuller explanation, still no photos or shock tactics &rarr;</a></p>';
-}
-// "Who gets your money": only appears when this specific brand is in the
-// hand-checked ownership list, right inside the same disclosure rather
-// than sending anyone to a separate page for it.
-var ownerHit = (typeof ahkFindOwner === 'function') ? ahkFindOwner(name) : null;
-if (ownerHit) {
-html += '<p class="rcard-note rcard-owner"><strong>who gets your money:</strong> owned by ' + ownerHit.parent + '. ' + ownerHit.note + '</p>';
-}
-html += '</details>';
-}
-
-var tierValue = tierClass === 'v-bad' ? 'bad' : tierClass === 'v-warn' ? 'warn' : tierClass === 'v-unverified' ? 'unverified' : tierClass === 'v-check' ? 'check' : 'good';
-// "check" here is certified cruelty-free itself, only the vegan status
-// varies by product -- so it belongs alongside "good": no "looking for
-// something kinder?" prompt on a brand that's already cruelty-free.
-if (tierValue !== 'good' && tierValue !== 'check') {
-var swapSlotId = 'kswap-' + normalizeSearch(name).replace(/[^a-z0-9]/g, '') + '-' + Math.random().toString(36).slice(2, 7);
-html += '<div id="' + swapSlotId + '" class="rcard-swap-slot"></div>';
-}
-
+var href = (h3.querySelector('a') || {}).getAttribute ? h3.querySelector('a').getAttribute('href') : '';
+var plain = (noteEl ? noteEl.textContent : '').trim();
+var firstSentence = (plain.match(/^.*?[.!?](\s|$)/) || [plain])[0].trim();
+if (firstSentence.length > 90) firstSentence = firstSentence.slice(0, 87).replace(/\s+\S*$/, '') + '...';
+var VT = { 'v-good': 'CF + vegan', 'v-check': 'cruelty-free', 'v-warn': "owner isn't", 'v-bad': 'tested', 'v-unverified': 'not certified' };
+var TIERK = { 'v-good': 'good', 'v-check': 'check', 'v-warn': 'warn', 'v-bad': 'bad', 'v-unverified': 'unverified' };
+var html = '<a class="rr" href="' + href + '">';
+html += '<span class="rr-n"><b class="rcard-name">' + name.replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</b><span>' + firstSentence.replace(/&/g,'&amp;').replace(/</g,'&lt;') + (price ? ' &middot; ' + price : '') + '</span></span>';
+html += '<span class="rr-end"><span class="ahk-stamp tier-' + TIERK[tierClass] + '">' + (STAMP_ICONS[tierClass] || '') + '</span><span class="rr-vt">' + VT[tierClass] + '</span></span>';
+html += '</a>';
+var tierValue = TIERK[tierClass];
 card.className = 'card rcard ' + tierClass;
 card.innerHTML = html;
 card.dataset.cf = cfClass;
 card.dataset.vegan = veganClass;
 
-if (tierValue !== 'good' && tierValue !== 'check') {
-var slotEl = card.querySelector('.rcard-swap-slot');
-if (slotEl && window.AHKSwap) AHKSwap.render(slotEl, { name: name, tier: tierValue });
-}
+
 });
 
 // Categories to browse by. "food" and "clothing" have no brands tagged
@@ -2020,6 +1957,49 @@ saveState({ mode: 'search', searchQuery: q });
 // over from a previous session.
 // A ?category=<key> link (used by the homepage category tiles) opens
 // straight into that category rather than the default landing view.
+// The mockup opens straight onto the whole list, alphabetical, rather
+// than a grid of category tiles; the tags above narrow it.
+(function(){
+var tagWrap = document.getElementById('catTags');
+function setTag(key){ tagWrap.querySelectorAll('button.k-tag').forEach(function(t){ t.classList.toggle('on', (t.dataset.cat || '') === (key || '')); }); }
+showCategoryGrid = function(){
+  searchInput.value = '';
+  activeCategory = null; activeRegion = null; if (azRegionSelect) azRegionSelect.value = 'all';
+  activeFilter = activeFilter || 'all'; azMode = false; azLetter = 'all'; currentPage = 1;
+  setActivePills(); setTag('');
+  var was = restoringState; restoringState = true; renderBrandList(); restoringState = was;
+};
+var _showCategory = showCategory;
+showCategory = function(key){ _showCategory(key); setTag(key); };
+tagWrap.querySelectorAll('button.k-tag').forEach(function(t){
+  t.addEventListener('click', function(){
+    var key = t.dataset.cat || '';
+    if (!key) { showCategoryGrid(); return; }
+    searchInput.value = '';
+    activeCategory = key; azMode = false; currentPage = 1; setTag(key);
+    renderBrandList();
+  });
+});
+document.getElementById('brandTotal').textContent = allCardsArr.length.toLocaleString();
+// the letter + region pickers live inside "More filters" now
+var panel = document.getElementById('filterSortPanel');
+if (panel && azJumpBar) { azJumpBar.style.display = ''; azJumpBar.classList.add('in-panel'); panel.appendChild(azJumpBar); if (azLetterSelect.children.length <= 1) buildAzLetterSelect(); }
+var _render = renderBrandList;
+renderBrandList = function(){ _render(); if (azJumpBar) azJumpBar.style.display = ''; categoryBack.style.display = 'none'; };
+if (azLetterSelect) azLetterSelect.addEventListener('change', function(){ azMode = azLetterSelect.value !== 'all'; });
+if (!/[?&](q|category)=/.test(location.search)) { restoringState = true; showCategoryGrid(); restoringState = false; }
+// Saved brands (from the Save button on each brand page)
+try {
+  var saved = JSON.parse(localStorage.getItem('ahk-saved-brands') || '[]');
+  if (saved.length) {
+    var box = document.getElementById('savedBrands');
+    box.innerHTML = '<span class="k-saved-l">Saved</span>' + saved.slice(0, 12).map(function(b){ return '<a class="k-tag" href="/brands/' + b.slug + '/">' + b.name.replace(/</g,'&lt;') + '</a>'; }).join('');
+    box.hidden = false;
+  }
+} catch(e) {}
+})();
+
+
 // Runs before restoreState so a genuine back-navigation still wins.
 (function categoryFromUrl(){
   var m = location.search.match(/[?&]category=([a-z-]+)/);
@@ -2126,7 +2106,7 @@ saveState({ mode: 'search', searchQuery: q });
 </form>
 </div>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=5"></script>
+<script src="js/site.js?v=6"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>
