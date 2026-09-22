@@ -208,6 +208,15 @@ function renderBrandPage(brand) {
   lines.push('<meta property="og:image:alt" content="' + escapeHtml(brand.name) + ' on a home kind">');
   lines.push('<meta property="og:site_name" content="a home kind">');
   lines.push('<meta name="twitter:card" content="summary_large_image">');
+  lines.push('<script type="application/ld+json">' + JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL + '/' },
+      { "@type": "ListItem", "position": 2, "name": "Check a brand", "item": SITE_URL + '/brand-check.html' },
+      { "@type": "ListItem", "position": 3, "name": brand.name, "item": canonical }
+    ]
+  }) + '</script>');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">');
   lines.push('<link rel="stylesheet" href="../../css/app.css?v=6">');
   lines.push('<link rel="manifest" href="../../manifest.json?v=2">');
