@@ -2484,6 +2484,7 @@ header.site-header .wrap { max-width: 1200px; padding: 18px 24px; padding-top: c
 /* ---- Learn: the reading path (mockup .path/.st) ---- */
 .k-learn-arch { object-position: 50% 30%; }
 .k-arch-wrap .k-learn-arch { height: 230px; }
+.k-pull { margin-left: 18px; }
 .k-path { padding: 22px 0 0; }
 .k-st { position: relative; padding-bottom: 16px; }
 .k-st::before { content: ""; position: absolute; left: 17px; top: 38px; bottom: 0; width: 2px; background: rgba(42,22,48,0.15); }
