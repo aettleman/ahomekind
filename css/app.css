@@ -2577,6 +2577,13 @@ header.site-header .wrap { max-width: 1200px; padding: 18px 24px; padding-top: c
 #allBrands { margin-top: 8px; }
 main .card.rcard { background: none !important; border: 0 !important; border-bottom: 1px solid rgba(42,22,48,0.13) !important; border-radius: 0 !important;
   padding: 0 !important; margin: 0 !important; box-shadow: none !important; }
+/* Search results specifically (not the plain browse/A-Z list) get a card
+   treatment so a typed search reads as "here's your result" rather than
+   just another line of body text. */
+#allBrands.is-search-active .card.rcard { background: var(--ahk-card) !important; border: 1px solid var(--ahk-border-soft) !important;
+  border-radius: 16px !important; padding: 4px 16px !important; margin: 0 0 10px !important;
+  box-shadow: 0 1px 2px rgba(42,22,48,0.05), 0 6px 16px rgba(42,22,48,0.045) !important; }
+#allBrands.is-search-active .card.rcard:last-child { margin-bottom: 0 !important; }
 .rr { display: flex; align-items: center; gap: 12px; padding: 14px 0; text-decoration: none; color: inherit; }
 .rr:hover .rcard-name { color: #C8622F; }
 .rr-n { flex: 1; min-width: 0; display: block; }

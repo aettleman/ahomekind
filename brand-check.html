@@ -1630,6 +1630,7 @@ else { count.hidden = true; }
 // narrowing the list (no category picked, no filter applied).
 function showCategoryGrid() {
 searchInput.value = '';
+allBrands.classList.remove('is-search-active');
 categoryGrid.style.display = 'block';
 allBrands.style.display = 'none';
 categoryBack.style.display = 'none';
@@ -1894,6 +1895,7 @@ azJumpBar.style.display = 'none';
 listControls.style.display = 'none';
 paginationNav.style.display = 'none';
 allBrands.style.display = 'flex';
+allBrands.classList.add('is-search-active');
 browseBtn.style.display = 'none';
 browseAZBtn.style.display = 'none';
 browseBtn.textContent = 'browse all brands';
