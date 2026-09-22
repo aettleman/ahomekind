@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>a home kind Post Studio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@500;600;700&display=swap">
+<style>
+:root {
+  --bg: #F4E6DE;
+  --paper: #FBF4EF;
+  --ink: #2A1630;
+  --ink-muted: #5A4550;
+  --muted: #80686F;
+  --border: #E4D0C6;
+  --apricot: #E8804C;
+  --apricot-deep: #C8622F;
+  --sage: #7C9A78;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #241522;
+    --border: #3c2a3a;
+    --muted: #b09aa8;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #241522;
+  --border: #3c2a3a;
+  --muted: #b09aa8;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', sans-serif;
+  padding-inline: 16px;
+  padding-block: 22px 40px;
+}
+h1, h2 { font-family: 'Gloock', serif; font-weight: 400; margin: 0; }
+
+.app { max-width: 1180px; margin: 0 auto; }
+
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+.top h1 { font-size: 26px; color: var(--ink); }
+.top h1 .dot { color: var(--apricot); }
+.top p { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); max-width: 46ch; }
+
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: start; }
+@media (max-width: 780px) { .layout { grid-template-columns: 1fr; } }
+
+.rail {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 16px;
+}
+@media (max-width: 780px) { .rail { position: static; order: 2; } }
+
+.field-group label {
+  display: block;
+  font: 700 10.5px 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.seg { display: flex; background: var(--bg); border-radius: 12px; padding: 3px; gap: 3px; }
+.seg button {
+  flex: 1; border: 0; background: none; padding: 9px 0; border-radius: 9px;
+  font: 600 13px 'Hanken Grotesk', sans-serif; color: var(--ink-muted); cursor: pointer;
+}
+.seg button.active { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(42,22,48,0.08); }
+
+.tools { display: flex; gap: 8px; flex-wrap: wrap; }
+.tool-btn {
+  border: 1px solid var(--border); background: var(--bg); color: var(--ink);
+  font: 600 12.5px 'Hanken Grotesk', sans-serif; padding: 9px 12px; border-radius: 10px; cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+}
+.tool-btn:hover { border-color: var(--apricot); }
+.tool-btn .swatch { width: 11px; height: 11px; border-radius: 50%; background: var(--apricot); display: inline-block; }
+
+.toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.toggle-row span { font: 600 13px 'Hanken Grotesk', sans-serif; color: var(--ink-muted); }
+.switch { position: relative; width: 38px; height: 22px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch .track {
+  position: absolute; inset: 0; background: var(--border); border-radius: 999px; transition: background .15s ease; pointer-events: none;
+}
+.switch .knob {
+  position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--paper);
+  transition: transform .15s ease; pointer-events: none; box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.switch input:checked + .track { background: var(--sage); }
+.switch input:checked + .track + .knob { transform: translateX(16px); }
+
+.handle-input {
+  width: 100%; border: 1px solid var(--border); background: var(--bg); color: var(--ink);
+  font: 500 13px 'Hanken Grotesk', sans-serif; padding: 9px 11px; border-radius: 10px; margin-top: 8px;
+}
+
+.reset-btn, .download-btn {
+  width: 100%; border: 0; border-radius: 12px; padding: 13px 0; font: 700 14px 'Hanken Grotesk', sans-serif; cursor: pointer;
+}
+.reset-btn { background: var(--bg); color: var(--ink-muted); border: 1px solid var(--border); }
+.download-btn { background: var(--ink); color: var(--paper); }
+.download-btn:hover { background: var(--apricot-deep); }
+.download-btn:disabled { opacity: 0.55; cursor: default; }
+.hint { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+.status-msg { font-size: 12px; color: var(--sage); min-height: 14px; }
+.status-msg.err { color: #A8324E; }
+
+.stage-wrap { display: flex; justify-content: center; }
+.stage-outer {
+  width: 100%;
+  max-width: 560px;
+  container-type: inline-size;
+}
+.stage {
+  position: relative;
+  width: 100%;
+  background: var(--bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(42,22,48,0.08), 0 18px 40px -20px rgba(42,22,48,0.35);
+  border: 1px solid var(--border);
+}
+.stage[data-format="square"] { aspect-ratio: 1 / 1; }
+.stage[data-format="story"] { aspect-ratio: 9 / 16; }
+
+.wash { position: absolute; right: -18cqw; top: -18cqw; width: 62cqw; height: 62cqw; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(232,128,76,0.16), rgba(232,128,76,0) 70%); pointer-events: none; }
+.wash2 { position: absolute; left: -20cqw; bottom: -20cqw; width: 58cqw; height: 58cqw; border-radius: 50%;
+  background: radial-gradient(circle at 70% 70%, rgba(124,154,120,0.14), rgba(124,154,120,0) 70%); pointer-events: none; display: none; }
+.stage[data-format="story"] .wash2 { display: block; }
+
+.wordmark { position: absolute; top: 5.9cqw; left: 5.9cqw; font: 400 3.15cqw/1 'Gloock', serif; color: var(--ink); letter-spacing: -0.01em; }
+.wordmark::after { content: '.'; color: var(--apricot); }
+
+.frame { position: absolute; left: 5.9cqw; right: 5.9cqw; top: 21cqw; bottom: 14cqw; display: flex; flex-direction: column; justify-content: center; }
+.stage[data-format="story"] .frame { top: 0; bottom: 0; }
+
+.eyebrow { font: 700 1.85cqw/1 'Hanken Grotesk', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--apricot-deep); margin-bottom: 2.4cqw; outline: none; }
+.headline { font: 400 6.85cqw/1.18 'Gloock', serif; color: var(--ink); outline: none; text-wrap: balance; }
+.stage[data-format="story"] .headline { font-size: 8.5cqw; }
+.headline .hl { color: var(--apricot); }
+.sub { margin-top: 2.8cqw; font: 500 2.4cqw/1.55 'Hanken Grotesk', sans-serif; color: var(--ink-muted); outline: none; max-width: 88%; }
+.stage[data-format="story"] .sub { font-size: 3cqw; }
+
+.handle { position: absolute; left: 5.9cqw; bottom: 5.6cqw; font: 700 1.85cqw/1 'Hanken Grotesk', sans-serif; color: var(--muted); }
+.handle b { color: #3A1F3D; }
+
+[contenteditable]:empty:before { content: attr(data-placeholder); color: var(--muted); opacity: 0.6; }
+[contenteditable]:focus { box-shadow: 0 0 0 3px rgba(232,128,76,0.25); border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div>
+      <h1>a home kind<span class="dot">.</span> post studio</h1>
+      <p>Click any text on the card to edit it. Select a word and tap "Highlight" to pick it out in apricot, same as the site.</p>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="rail">
+      <div class="field-group">
+        <label>Format</label>
+        <div class="seg" id="formatSeg">
+          <button type="button" data-format="square" class="active">Square</button>
+          <button type="button" data-format="story">Story</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Selected text</label>
+        <div class="tools">
+          <button type="button" class="tool-btn" id="highlightBtn"><span class="swatch"></span>Highlight</button>
+          <button type="button" class="tool-btn" id="clearHlBtn">Clear</button>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Credit line</label>
+        <div class="toggle-row">
+          <span>Show in corner</span>
+          <label class="switch">
+            <input type="checkbox" id="handleToggle" checked>
+            <span class="track"></span>
+            <span class="knob"></span>
+          </label>
+        </div>
+        <input type="text" class="handle-input" id="handleText" value="ahomekind.com" maxlength="60">
+      </div>
+
+      <div class="field-group">
+        <button type="button" class="reset-btn" id="resetBtn">Reset to example text</button>
+      </div>
+
+      <div class="field-group">
+        <button type="button" class="download-btn" id="downloadBtn">Download PNG</button>
+        <div class="status-msg" id="statusMsg"></div>
+        <div class="hint">Exports at 1080px wide — full Instagram resolution.</div>
+      </div>
+    </aside>
+
+    <main class="stage-wrap">
+      <div class="stage-outer">
+        <div class="stage" id="stage" data-format="square">
+          <div class="wash"></div>
+          <div class="wash2"></div>
+          <div class="wordmark">a home kind</div>
+          <div class="frame">
+            <div class="eyebrow" id="eyebrow" contenteditable="true" data-placeholder="Eyebrow label">did you know</div>
+            <div class="headline" id="headline" contenteditable="true" data-placeholder="Your headline">Pigs beat <span class="hl">dogs</span> and great apes on cognitive tests.</div>
+            <div class="sub" id="sub" contenteditable="true" data-placeholder="Supporting line">And they're still ranked as "just" livestock. Something to think about next time you're choosing what's on your plate.</div>
+          </div>
+          <div class="handle" id="handle"><b>a home kind</b> &nbsp;·&nbsp; ahomekind.com</div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var stage = document.getElementById('stage');
+  var eyebrow = document.getElementById('eyebrow');
+  var headline = document.getElementById('headline');
+  var sub = document.getElementById('sub');
+  var handle = document.getElementById('handle');
+  var handleText = document.getElementById('handleText');
+  var handleToggle = document.getElementById('handleToggle');
+  var statusMsg = document.getElementById('statusMsg');
+
+  var DEFAULTS = {
+    format: 'square',
+    eyebrow: 'did you know',
+    headlineHTML: 'Pigs beat <span class="hl">dogs</span> and great apes on cognitive tests.',
+    sub: "And they're still ranked as \"just\" livestock. Something to think about next time you're choosing what's on your plate.",
+    handleText: 'ahomekind.com',
+    handleOn: true
+  };
+
+  // ---- per-viewer draft convenience ----
+  var STORE_KEY = 'ahk_post_studio_draft_v2';
+  function saveDraft() {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        format: stage.dataset.format,
+        eyebrow: eyebrow.innerHTML,
+        headlineHTML: headline.innerHTML,
+        sub: sub.innerHTML,
+        handleText: handleText.value,
+        handleOn: handleToggle.checked
+      }));
+    } catch (e) { /* private mode / storage unavailable: skip persistence */ }
+  }
+  function loadDraft() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function applyState(state) {
+    setFormat(state.format || 'square');
+    eyebrow.innerHTML = state.eyebrow || '';
+    headline.innerHTML = state.headlineHTML || '';
+    sub.innerHTML = state.sub || '';
+    handleText.value = state.handleText || DEFAULTS.handleText;
+    handleToggle.checked = state.handleOn !== false;
+    updateHandle();
+  }
+
+  function setFormat(fmt) {
+    stage.dataset.format = fmt;
+    document.querySelectorAll('#formatSeg button').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.format === fmt);
+    });
+  }
+
+  document.getElementById('formatSeg').addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-format]');
+    if (!btn) return;
+    setFormat(btn.dataset.format);
+    saveDraft();
+  });
+
+  function updateHandle() {
+    handle.textContent = handleToggle.checked ? handleText.value.trim() : '';
+    handle.style.display = handleToggle.checked ? '' : 'none';
+  }
+  handleText.addEventListener('input', function () { updateHandle(); saveDraft(); });
+  handleToggle.addEventListener('change', function () { updateHandle(); saveDraft(); });
+
+  [eyebrow, headline, sub].forEach(function (el) {
+    el.addEventListener('input', saveDraft);
+    el.addEventListener('blur', saveDraft);
+  });
+
+  // ---- highlight / clear highlight on selection inside the headline ----
+  function selectionWithin(container) {
+    var sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
+    var range = sel.getRangeAt(0);
+    if (!container.contains(range.commonAncestorContainer)) return null;
+    return range;
+  }
+
+  document.getElementById('highlightBtn').addEventListener('click', function () {
+    var range = selectionWithin(headline);
+    if (!range) { flash('Select a word in the headline first', true); return; }
+    try {
+      var span = document.createElement('span');
+      span.className = 'hl';
+      range.surroundContents(span);
+      window.getSelection().removeAllRanges();
+      saveDraft();
+      flash('Highlighted');
+    } catch (e) {
+      flash('Select within a single word or phrase', true);
+    }
+  });
+
+  document.getElementById('clearHlBtn').addEventListener('click', function () {
+    var sel = window.getSelection();
+    var node = sel && sel.anchorNode ? sel.anchorNode : null;
+    var el = node && node.nodeType === 3 ? node.parentElement : node;
+    var span = el ? el.closest('span.hl') : null;
+    if (!span) { flash('Click inside a highlighted word first', true); return; }
+    var text = document.createTextNode(span.textContent);
+    span.replaceWith(text);
+    headline.normalize();
+    saveDraft();
+    flash('Cleared');
+  });
+
+  var flashTimer = null;
+  function flash(msg, isErr) {
+    statusMsg.textContent = msg;
+    statusMsg.className = 'status-msg' + (isErr ? ' err' : '');
+    clearTimeout(flashTimer);
+    flashTimer = setTimeout(function () { statusMsg.textContent = ''; }, 2200);
+  }
+
+  document.getElementById('resetBtn').addEventListener('click', function () {
+    applyState(DEFAULTS);
+    saveDraft();
+    flash('Reset to example text');
+  });
+
+  // ---- restore draft on load ----
+  var draft = loadDraft();
+  applyState(draft || DEFAULTS);
+
+  // ============ PNG export (canvas, fixed 1080px basis) ============
+  var W = 1080;
+  var TOKENS = { ink: '#2A1630', inkMuted: '#5A4550', muted: '#80686F', apricot: '#E8804C', apricotDeep: '#C8622F', bg: '#F4E6DE', sage: '#7C9A78' };
+
+  function runsFromNode(node, defaultColor) {
+    var runs = [];
+    node.childNodes.forEach(function (n) {
+      if (n.nodeType === 3) {
+        if (n.textContent) runs.push({ text: n.textContent, color: defaultColor });
+      } else if (n.nodeType === 1) {
+        var color = n.classList && n.classList.contains('hl') ? TOKENS.apricot : defaultColor;
+        runs.push({ text: n.textContent, color: color });
+      }
+    });
+    return runs;
+  }
+
+  function tokenize(runs) {
+    var tokens = [];
+    runs.forEach(function (run) {
+      var parts = run.text.split(/(\s+)/).filter(function (p) { return p.length; });
+      parts.forEach(function (p) { tokens.push({ text: p, color: run.color }); });
+    });
+    return tokens;
+  }
+
+  function wrapTokens(ctx, tokens, maxWidth, font) {
+    ctx.font = font;
+    var lines = [];
+    var current = [];
+    var currentWidth = 0;
+    tokens.forEach(function (tok) {
+      var w = ctx.measureText(tok.text).width;
+      var isSpace = /^\s+$/.test(tok.text);
+      if (!isSpace && currentWidth + w > maxWidth && current.length) {
+        while (current.length && /^\s+$/.test(current[current.length - 1].text)) current.pop();
+        lines.push(current);
+        current = [];
+        currentWidth = 0;
+      }
+      current.push(tok);
+      currentWidth += w;
+    });
+    if (current.length) {
+      while (current.length && /^\s+$/.test(current[current.length - 1].text)) current.pop();
+      lines.push(current);
+    }
+    return lines;
+  }
+
+  function drawLines(ctx, lines, x, y, lineHeight, font) {
+    ctx.font = font;
+    ctx.textBaseline = 'alphabetic';
+    lines.forEach(function (line) {
+      var cx = x;
+      line.forEach(function (tok) {
+        ctx.fillStyle = tok.color;
+        ctx.fillText(tok.text, cx, y);
+        cx += ctx.measureText(tok.text).width;
+      });
+      y += lineHeight;
+    });
+    return y;
+  }
+
+  function buildCanvas() {
+    var fmt = stage.dataset.format;
+    var H = fmt === 'story' ? 1920 : 1080;
+    var canvas = document.createElement('canvas');
+    canvas.width = W; canvas.height = H;
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = TOKENS.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    var g = ctx.createRadialGradient(W * 0.82, H * 0.02, 10, W * 0.82, H * 0.02, W * 0.42);
+    g.addColorStop(0, 'rgba(232,128,76,0.14)');
+    g.addColorStop(1, 'rgba(232,128,76,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+    if (fmt === 'story') {
+      var g2 = ctx.createRadialGradient(W * 0.05, H * 0.96, 10, W * 0.05, H * 0.96, W * 0.48);
+      g2.addColorStop(0, 'rgba(124,154,120,0.12)');
+      g2.addColorStop(1, 'rgba(124,154,120,0)');
+      ctx.fillStyle = g2;
+      ctx.fillRect(0, 0, W, H);
+    }
+
+    var pad = W * 0.059;
+
+    ctx.fillStyle = TOKENS.ink;
+    var wmSize = Math.round(W * 0.0315);
+    ctx.font = '400 ' + wmSize + 'px Gloock, serif';
+    ctx.textBaseline = 'alphabetic';
+    var wmY = fmt === 'story' ? H * 0.05 + wmSize : pad + wmSize;
+    var wmX = fmt === 'story' ? W * 0.07 : pad;
+    ctx.fillText('a home kind', wmX, wmY);
+    var wmW = ctx.measureText('a home kind').width;
+    ctx.fillStyle = TOKENS.apricot;
+    ctx.fillText('.', wmX + wmW, wmY);
+
+    var contentX = fmt === 'story' ? W * 0.07 : pad;
+    var maxWidth = W - contentX * 2;
+    var cursorY = fmt === 'story' ? H * 0.36 : H * 0.30;
+
+    var eb = eyebrow.textContent.trim();
+    if (eb) {
+      var ebSize = Math.round(W * 0.0185) * (fmt === 'story' ? 1.15 : 1);
+      ctx.font = '700 ' + ebSize + 'px "Hanken Grotesk", sans-serif';
+      ctx.fillStyle = TOKENS.apricotDeep;
+      ctx.fillText(eb.toUpperCase(), contentX, cursorY);
+      cursorY += ebSize * 1.9;
+    }
+
+    var hlSize = Math.round(W * (fmt === 'story' ? 0.085 : 0.0685));
+    var hlFont = '400 ' + hlSize + 'px Gloock, serif';
+    var hlRuns = runsFromNode(headline, TOKENS.ink);
+    var hlTokens = tokenize(hlRuns);
+    var hlLines = wrapTokens(ctx, hlTokens, maxWidth, hlFont);
+    var hlLineHeight = hlSize * 1.18;
+    cursorY += hlSize * 0.86;
+    cursorY = drawLines(ctx, hlLines, contentX, cursorY, hlLineHeight, hlFont);
+
+    var subText = sub.textContent.trim();
+    if (subText) {
+      var subSize = Math.round(W * (fmt === 'story' ? 0.03 : 0.024));
+      var subFont = '500 ' + subSize + 'px "Hanken Grotesk", sans-serif';
+      var subMaxWidth = maxWidth * 0.88;
+      var subTokens = tokenize([{ text: subText, color: TOKENS.inkMuted }]);
+      var subLines = wrapTokens(ctx, subTokens, subMaxWidth, subFont);
+      var subLineHeight = subSize * 1.55;
+      cursorY += subSize * 1.3;
+      drawLines(ctx, subLines, contentX, cursorY, subLineHeight, subFont);
+    }
+
+    if (handleToggle.checked) {
+      var handleLine = handleText.value.trim();
+      var hSize = Math.round(W * 0.0185) * (fmt === 'story' ? 1.15 : 1);
+      var hY = H - (fmt === 'story' ? H * 0.05 : pad);
+      ctx.font = '700 ' + hSize + 'px "Hanken Grotesk", sans-serif';
+      ctx.fillStyle = TOKENS.muted;
+      ctx.fillText(handleLine, contentX, hY);
+    }
+
+    return canvas;
+  }
+
+  document.getElementById('downloadBtn').addEventListener('click', function () {
+    var btn = this;
+    if (!document.fonts || !document.fonts.ready) { doExport(btn); return; }
+    document.fonts.ready.then(function () { doExport(btn); });
+  });
+
+  function doExport(btn) {
+    btn.disabled = true;
+    flash('Building image…');
+    setTimeout(function () {
+      try {
+        var canvas = buildCanvas();
+        canvas.toBlob(function (blob) {
+          btn.disabled = false;
+          if (!blob) { flash('Could not build the image', true); return; }
+          var fmt = stage.dataset.format;
+          var filename = 'ahomekind-' + fmt + '-' + Date.now() + '.png';
+          try {
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url; a.download = filename;
+            document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+            flash('Saved');
+          } catch (err) {
+            flash('Could not save the file', true);
+          }
+        }, 'image/png');
+      } catch (e) {
+        btn.disabled = false;
+        flash('Something went wrong building the image', true);
+      }
+    }, 30);
+  }
+})();
+</script>
+</body>
+</html>
