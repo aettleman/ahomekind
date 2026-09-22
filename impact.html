@@ -88,7 +88,7 @@ input[type=range]:disabled { opacity:0.45; }
 <main class="page-shell k-page" id="main">
 <div class="k-split">
 <div class="k-split-l">
-<div class="k-ph"><p class="k-kick">your impact</p><h1 class="k-h1">A real number, not a guilt trip.</h1></div>
+<div class="k-ph"><p class="k-kick">your impact</p><h1 class="k-h1">A number that actually holds up.</h1></div>
 <p class="k-iq">How many days a week do you eat plant-based?</p>
 <div class="k-dseg" id="daySeg" role="radiogroup" aria-label="Plant-based days a week"></div>
 <div class="k-sentence">
@@ -98,6 +98,11 @@ input[type=range]:disabled { opacity:0.45; }
 </div>
 </div>
 <div class="k-split-r">
+<div class="k-two" id="twoStats">
+<div><b id="carbonStat">31%</b>off your food's carbon</div>
+<div><b id="fiveStat">37</b>animals over five years</div>
+</div>
+<p class="k-two-zero-note" id="twoZeroNote" hidden>That's nothing saved yet, not a result. Pick at least one day above to see these change.</p>
 <div class="k-shc">
 <canvas id="shareCanvas" width="1080" height="1920" class="k-shc-card" aria-label="Your share card"></canvas>
 <div>
@@ -106,10 +111,6 @@ input[type=range]:disabled { opacity:0.45; }
 <button type="button" class="k-btn-p" id="shareCardBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M6 11.5H5v8.5h14v-8.5h-1"/></svg>Share</button>
 <p id="shareMsg" class="k-shc-msg" role="status" aria-live="polite"></p>
 </div>
-</div>
-<div class="k-two">
-<div><b id="carbonStat">31%</b>off your food's carbon</div>
-<div><b id="fiveStat">37</b>animals over five years</div>
 </div>
 <p class="k-fn">Built on 1.20 billion animals slaughtered in the UK in 2023, about 17.4 per person. The popular "365 a year" figure doesn't hold up, so it isn't used. How it's worked out is below.</p>
 </div>
@@ -183,6 +184,9 @@ function update(){
   document.getElementById('hearts').innerHTML = h;
   document.getElementById('carbonStat').textContent = Math.round(CARBON * days / 7) + '%';
   document.getElementById('fiveStat').textContent = Math.round(saved * 5);
+  var isZero = days === 0;
+  document.getElementById('twoStats').classList.toggle('is-zero', isZero);
+  document.getElementById('twoZeroNote').hidden = !isZero;
   draw();
 }
 function wrap(ctx, text, x, y, maxW, lh){

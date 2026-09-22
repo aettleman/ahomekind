@@ -2524,6 +2524,13 @@ header.site-header .wrap { max-width: 1200px; padding: 18px 24px; padding-top: c
 .k-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 0; }
 .k-two > div { background: var(--ahk-sage-soft); border-radius: 20px; padding: 16px; color: #3f6a3d; font-size: 12.5px; }
 .k-two b { display: block; font: 400 32px 'Gloock', serif; }
+/* Zero-days state: at 0% / 0 animals there is nothing to celebrate, so this
+   must not read as the same "good news" green as every other value. Neutral
+   card colour + a plain-language note underneath instead. */
+.k-two.is-zero > div { background: var(--ahk-card); border: 1px solid rgba(42,22,48,0.15); color: var(--ahk-text-muted); }
+.k-two.is-zero b { color: var(--ahk-heading); }
+.k-two-zero-note { font-size: 12.5px; line-height: 1.5; color: var(--ahk-text-muted); font-style: italic; margin: 10px 0 0; }
+.k-two-zero-note:not([hidden]) { display: block; }
 .k-method { margin: 40px 0 0; }
 .k-method .section-label { font: 700 11px 'Hanken Grotesk', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--ahk-text-muted); }
 .k-method .method-acc { background: var(--ahk-card); border: 1px solid rgba(42,22,48,0.13); border-radius: 16px; }

@@ -23,7 +23,7 @@
     chrome.storage.local.get(CACHE_META_KEY).then(function (data) {
       var meta = data[CACHE_META_KEY];
       if (!meta) {
-        statusEl.innerHTML = "<strong>Not loaded yet</strong>Brand list hasn't been fetched yet — try refreshing.";
+        statusEl.innerHTML = "<strong>Not loaded yet</strong>Brand list hasn't been fetched yet. Try refreshing.";
         return;
       }
       if (meta.ok === false) {

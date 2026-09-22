@@ -3,8 +3,8 @@
 // so Buttondown's "RSS to email" automation can watch it and auto-send new
 // journal posts to the mailing list.
 //
-// Publish dates come from each file's earliest git commit (its "added" date) —
-// there's no separate CMS/date field on this static site, so git history is
+// Publish dates come from each file's earliest git commit (its "added" date).
+// There's no separate CMS/date field on this static site, so git history is
 // the most honest source of truth available. Run this again any time a new
 // journal post is added:
 //
@@ -44,7 +44,7 @@ function firstAddedDate(filePath) {
     const lines = out.split('\n').filter(Boolean);
     if (lines.length) return new Date(lines[lines.length - 1]);
   } catch (e) {
-    // not tracked yet, or git unavailable — fall through
+    // not tracked yet, or git unavailable: fall through
   }
   return new Date();
 }
@@ -99,7 +99,7 @@ function main() {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<rss version="2.0">',
     '<channel>',
-    '  <title>a home kind — journal</title>',
+    '  <title>a home kind: journal</title>',
     '  <link>' + SITE_URL + '/journal/</link>',
     '  <description>Swaps, ratings, and honest takes on cruelty-free and vegan living.</description>',
     '  <language>en-gb</language>',

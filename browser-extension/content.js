@@ -101,7 +101,7 @@
     wrap.setAttribute("data-ahk-loc", locationKey);
     wrap.innerHTML =
       '<span class="ahk-badge-emoji" aria-hidden="true">' + meta.emoji + "</span>" +
-      '<span class="ahk-badge-text"><strong>' + escapeHtml(match.name) + "</strong> — " + escapeHtml(meta.label) + "</span>" +
+      '<span class="ahk-badge-text"><strong>' + escapeHtml(match.name) + "</strong> - " + escapeHtml(meta.label) + "</span>" +
       '<a class="ahk-badge-link" href="https://ahomekind.com/brands/' + encodeURIComponent(match.slug) + '/" target="_blank" rel="noopener">details</a>' +
       '<button type="button" class="ahk-badge-close" aria-label="dismiss">&times;</button>';
     wrap.querySelector(".ahk-badge-close").addEventListener("click", function () {
