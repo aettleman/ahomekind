@@ -13,10 +13,10 @@
 <meta property="og:image:alt" content="Scan a Barcode">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
@@ -26,12 +26,12 @@
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
 .camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
-#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#E5CFC4; }
 #reader { object-fit:cover; }
-.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 16px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:700; font-size:15px; letter-spacing:2.5px; text-transform:uppercase; padding:40px 16px; border:none; border-radius:22px; cursor:pointer; box-shadow:0 10px 26px rgba(61,74,58,0.28); transition:transform 0.15s ease, box-shadow 0.15s ease; }
-.big-btn:active { transform:scale(0.98); box-shadow:0 6px 16px rgba(61,74,58,0.24); }
+.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 16px; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:15px; letter-spacing:2.5px; text-transform:uppercase; padding:40px 16px; border:none; border-radius:22px; cursor:pointer; box-shadow:0 10px 26px rgba(42,22,48,0.28); transition:transform 0.15s ease, box-shadow 0.15s ease; }
+.big-btn:active { transform:scale(0.98); box-shadow:0 6px 16px rgba(42,22,48,0.24); }
 @media(prefers-reduced-motion: reduce){ .big-btn { transition:none; } }
-.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.big-btn.alt { background:transparent; color:#3A1F3D; border:1px solid #7C9A78; }
 
 /* ============================================================
    SCAN PAGE
@@ -55,13 +55,13 @@
 .scan-frame .scan-cta { margin-bottom: 16px; }
 .scan-frame .camera-wrap { margin-bottom: 16px; }
 .scan-frame .scan-or { color: var(--ahk-on-dark-muted); }
-.scan-frame .scan-shell-links a { background: rgba(244,239,226,0.94); }
+.scan-frame .scan-shell-links a { background: rgba(251,244,239,0.94); }
 /* The manual "check" button inherits transparent-with-dark-text styling
    built for a light page background - on the frame's dark green that
    read as an empty, near-invisible oval. Give it the same solid cream
    treatment as every other control inside the frame. */
-.scan-frame .manual #lookupBtn { background: var(--ahk-bg, #faf5eb) !important; color: var(--ahk-heading, #3d4a3a) !important; border: 0 !important; }
-.scan-frame .manual #lookupBtn:hover { background: var(--ahk-gold-soft, #d9c99a) !important; }
+.scan-frame .manual #lookupBtn { background: var(--ahk-bg, #F4E6DE) !important; color: var(--ahk-heading, #3A1F3D) !important; border: 0 !important; }
+.scan-frame .manual #lookupBtn:hover { background: var(--ahk-gold-soft, #F2B896) !important; }
 /* One link left in this row now that ingredient checker moved to the
    toggle above - let it sit centred rather than stretching oddly. */
 .scan-frame .scan-shell-links { margin-top: 2px; }
@@ -72,7 +72,7 @@
 /* The little "point. scan. know." badge sitting at the top of the frame --
    picked out in the same cream as the rest of the frame's controls, a
    quiet bit of personality above the camera itself. */
-.scan-tagline { display:inline-flex; align-items:center; gap:7px; background:rgba(244,239,226,0.94); border-radius:30px; padding:9px 18px; margin:0 auto 16px; font-family:'Cormorant Garamond',serif; font-size:14.5px; color:#3d4a3a; letter-spacing:0.2px; }
+.scan-tagline { display:inline-flex; align-items:center; gap:7px; background:rgba(251,244,239,0.94); border-radius:30px; padding:9px 18px; margin:0 auto 16px; font-family:'Gloock',serif; font-size:14.5px; color:#3A1F3D; letter-spacing:0.2px; }
 .scan-tagline svg { flex:none; }
 
 /* ============================================================
@@ -104,8 +104,8 @@
       page background always paints the entire screen including the
       safe area, whatever iOS decides the viewport is, which is why
       this one can't fail the way the previous attempts did. */
-body.scan-immersive { touch-action:none; overscroll-behavior:none; background:var(--ahk-bg,#faf5eb); }
-body.scan-immersive .camera-wrap { background:var(--ahk-forest-deep,#2f3a2d); }
+body.scan-immersive { touch-action:none; overscroll-behavior:none; background:var(--ahk-bg,#F4E6DE); }
+body.scan-immersive .camera-wrap { background:var(--ahk-forest-deep,#2A1630); }
 body.scan-immersive .site-header,
 body.scan-immersive .pagehead,
 body.scan-immersive .ahk-counter-bubble,
@@ -123,7 +123,7 @@ body.scan-immersive #results,
 body.scan-immersive .barcode-guide,
 body.scan-immersive .barcode-guide-numbers { display:none !important; }
 
-body.scan-immersive .scan-frame { position:fixed; inset:0; max-width:none; margin:0; padding:0; border-radius:0; background:var(--ahk-forest-deep,#2f3a2d); z-index:900; }
+body.scan-immersive .scan-frame { position:fixed; inset:0; max-width:none; margin:0; padding:0; border-radius:0; background:var(--ahk-forest-deep,#2A1630); z-index:900; }
 /* A quiet photo behind the standby screen, dimmed almost all the way
    back so it reads as texture rather than a picture -- nothing bright
    sits behind the white "tap to start the camera" text or the controls
@@ -138,7 +138,7 @@ body.scan-immersive .scan-frame { background-image: linear-gradient(rgba(20,26,1
    part can't be helped, but it now shows in the brief moment before
    the feed takes over instead of never. */
 body.scan-immersive .camera-wrap { position:fixed; inset:0; max-width:none; margin:0; }
-body.scan-immersive #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:var(--ahk-forest-deep,#2f3a2d); }
+body.scan-immersive #reader { position:fixed; inset:0; width:100vw; height:100vh; border-radius:0; object-fit:cover; background:var(--ahk-forest-deep,#2A1630); }
 
 /* The framing guide: four corner brackets rather than a dashed box --
    less like a form field, more like a camera. */
@@ -149,7 +149,7 @@ body.scan-immersive .scan-brackets i:nth-child(1) { top:0; left:0; border-right:
 body.scan-immersive .scan-brackets i:nth-child(2) { top:0; right:0; border-left:0; border-bottom:0; border-radius:0 15px 0 0; }
 body.scan-immersive .scan-brackets i:nth-child(3) { bottom:0; right:0; border-left:0; border-top:0; border-radius:0 0 15px 0; }
 body.scan-immersive .scan-brackets i:nth-child(4) { bottom:0; left:0; border-right:0; border-top:0; border-radius:0 0 0 15px; }
-body.scan-immersive .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 190px); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
+body.scan-immersive .scan-live-hint { display:block; position:fixed; left:30px; right:30px; top:calc(50% - 190px); text-align:center; font-family:'Gloock',serif; font-style:italic; font-size:21px; line-height:1.25; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none; }
 body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(50% - 84px); top:calc(50% - 152px); width:56px; height:44px; z-index:920; pointer-events:none; opacity:0.92; }
 
 /* The card the shutter sits on, carrying the line. */
@@ -159,7 +159,7 @@ body.scan-immersive .scan-live-arrow { display:block; position:fixed; left:calc(
 
 /* The three controls become a shutter plus two glass chips. */
 body.scan-immersive .camera-controls { position:static; display:block; }
-body.scan-immersive #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(102px + env(safe-area-inset-bottom, 0px)); width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#f4efe2; z-index:930; }
+body.scan-immersive #snapBtn { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(102px + env(safe-area-inset-bottom, 0px)); width:68px; height:68px; padding:0; border-radius:50%; background:var(--ahk-forest,#3A1F3D); border:4px solid var(--ahk-bg,#F4E6DE); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; color:#FBF4EF; z-index:930; }
 body.scan-immersive #snapBtn:active { transform:translateX(-50%) scale(0.95); }
 body.scan-immersive #stopBtn { display:none !important; }
 body.scan-immersive #torchBtn { position:fixed; bottom:calc(116px + env(safe-area-inset-bottom, 0px)); right:38px; width:44px; height:44px; font-size:0 !important; padding:0; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; letter-spacing:0; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; }
@@ -207,7 +207,7 @@ body.scan-standby .scan-live-arrow { display:none !important; }
 body.scan-standby .scan-standby-hint {
   display:block; position:fixed; left:24px; right:24px;
   bottom:calc(252px + env(safe-area-inset-bottom, 0px)); text-align:center;
-  font-family:'Cormorant Garamond',serif; font-style:italic; font-size:23px;
+  font-family:'Gloock',serif; font-style:italic; font-size:23px;
   color:#fff; text-shadow:0 2px 12px rgba(0,0,0,0.5); margin:0; z-index:920; pointer-events:none;
 }
 body.scan-standby .scan-standby-arrow {
@@ -243,29 +243,29 @@ body.scan-card-open #torchBtn,
 body.scan-card-open .manual,
 body.scan-card-open #status { display:none !important; }
 
-body.scan-card-open #results { display:block !important; position:fixed; left:0; right:0; bottom:0; max-height:74vh; overflow-y:auto; -webkit-overflow-scrolling:touch; background:var(--ahk-bg,#faf5eb); border-radius:26px 26px 0 0; box-shadow:0 -16px 44px rgba(0,0,0,0.36); padding:8px 18px calc(22px + env(safe-area-inset-bottom, 0px)); z-index:950; overscroll-behavior:contain; }
+body.scan-card-open #results { display:block !important; position:fixed; left:0; right:0; bottom:0; max-height:74vh; overflow-y:auto; -webkit-overflow-scrolling:touch; background:var(--ahk-bg,#F4E6DE); border-radius:26px 26px 0 0; box-shadow:0 -16px 44px rgba(0,0,0,0.36); padding:8px 18px calc(22px + env(safe-area-inset-bottom, 0px)); z-index:950; overscroll-behavior:contain; }
 body.scan-card-open #results .result-in { animation:none; }
-.rescard-top { position:sticky; top:0; background:var(--ahk-bg,#faf5eb); padding:6px 0 10px; margin:0 0 4px; z-index:2; }
+.rescard-top { position:sticky; top:0; background:var(--ahk-bg,#F4E6DE); padding:6px 0 10px; margin:0 0 4px; z-index:2; }
 .rescard-grab { display:block; width:38px; height:4px; border-radius:4px; background:#d9d0bb; margin:0 auto; }
-.rescard-close { position:absolute; top:2px; right:0; width:28px; height:28px; border-radius:50%; background:rgba(61,74,58,0.08); border:0; color:var(--ahk-heading,#3d4a3a); font-size:13px; line-height:1; cursor:pointer; }
+.rescard-close { position:absolute; top:2px; right:0; width:28px; height:28px; border-radius:50%; background:rgba(42,22,48,0.08); border:0; color:var(--ahk-heading,#3A1F3D); font-size:13px; line-height:1; cursor:pointer; }
 .rescard-foot { margin:14px 0 0; text-align:center; }
-.rescard-full { background:none; border:0; font-family:'Karla',sans-serif; font-weight:700; font-size:12px; color:var(--ahk-green,#4d6b4f); text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:6px; }
-.rescard-hint { font-size:10px; letter-spacing:1.2px; text-transform:uppercase; color:var(--ahk-text-muted,#8a8672); margin:6px 0 0; }
+.rescard-full { background:none; border:0; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12px; color:var(--ahk-green,#3A1F3D); text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:6px; }
+.rescard-hint { font-size:10px; letter-spacing:1.2px; text-transform:uppercase; color:var(--ahk-text-muted,#8C7580); margin:6px 0 0; }
 
 /* Manual entry lives on the same screen, up in the empty space above the
    guide, rather than being a reason to leave it. */
 body.scan-immersive #status { position:fixed; left:24px; right:24px; bottom:calc(178px + env(safe-area-inset-bottom, 0px)); text-align:center; color:#fff !important; font-size:12.5px; line-height:1.5; text-shadow:0 2px 10px rgba(0,0,0,0.6); z-index:930; min-height:0; }
 body.scan-immersive .manual { position:fixed; top:calc(env(safe-area-inset-top, 0px) + 52px); left:16px; right:16px; display:flex; gap:8px; margin:0; max-width:none; z-index:930; }
-body.scan-immersive .manual input[type=text] { flex:1; min-width:0; padding:12px 16px; border-radius:30px; border:1px solid rgba(255,255,255,0.3); background:rgba(20,24,18,0.5); backdrop-filter:blur(6px); color:#fff; font-family:'Karla',sans-serif; font-size:13.5px; }
+body.scan-immersive .manual input[type=text] { flex:1; min-width:0; padding:12px 16px; border-radius:30px; border:1px solid rgba(255,255,255,0.3); background:rgba(28,14,32,0.5); backdrop-filter:blur(6px); color:#fff; font-family:'Hanken Grotesk',sans-serif; font-size:13.5px; }
 body.scan-immersive .manual input[type=text]::placeholder { color:rgba(255,255,255,0.62); }
-body.scan-immersive .manual .big-btn { flex:none; width:auto; margin:0; padding:13px 22px; border-radius:30px; font-size:11.5px; font-weight:700; letter-spacing:1.4px; background:#faf5eb !important; color:#3d4a3a !important; border:0 !important; box-shadow:none; }
+body.scan-immersive .manual .big-btn { flex:none; width:auto; margin:0; padding:13px 22px; border-radius:30px; font-size:11.5px; font-weight:700; letter-spacing:1.4px; background:#F4E6DE !important; color:#3A1F3D !important; border:0 !important; box-shadow:none; }
 
 /* ---- standby: arrived, camera not open yet ----
    The page you land on is already the viewfinder, as in the mockup. The
    green shutter starts the camera in place; nothing moves when it does. */
-body.scan-standby .scan-cta { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(102px + env(safe-area-inset-bottom, 0px)); width:68px; height:68px; max-width:none; height:68px; margin:0; padding:0; border-radius:50%; background:var(--ahk-forest,#3d4a3a); border:4px solid var(--ahk-bg,#faf5eb); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; overflow:hidden; z-index:930; }
+body.scan-standby .scan-cta { position:fixed; left:50%; transform:translateX(-50%); bottom:calc(102px + env(safe-area-inset-bottom, 0px)); width:68px; height:68px; max-width:none; height:68px; margin:0; padding:0; border-radius:50%; background:var(--ahk-forest,#3A1F3D); border:4px solid var(--ahk-bg,#F4E6DE); box-shadow:0 8px 22px rgba(0,0,0,0.38); display:flex; align-items:center; justify-content:center; overflow:hidden; z-index:930; }
 body.scan-standby .scan-cta > img, body.scan-standby .scan-cta-scrim { display:none; }
-body.scan-standby .scan-cta .scan-cta-label { position:static; display:flex; align-items:center; justify-content:center; padding:0; margin:0; color:#f4efe2; }
+body.scan-standby .scan-cta .scan-cta-label { position:static; display:flex; align-items:center; justify-content:center; padding:0; margin:0; color:#FBF4EF; }
 body.scan-standby .scan-cta .scan-cta-label span { display:none; }
 body.scan-standby .scan-cta .scan-cta-label svg { width:27px; height:27px; }
 body.scan-standby .scan-cta:active { transform:translateX(-50%) scale(0.95); }
@@ -273,7 +273,7 @@ body.scan-immersive .scan-brackets { display:block; }
 /* a way out, so the rest of the page is never unreachable */
 .scan-escape { display:none; }
 body.scan-standby .scan-escape { display:none; position:fixed; left:0; right:0; bottom:calc(186px + env(safe-area-inset-bottom, 0px)); text-align:center; z-index:930; }
-body.scan-standby .scan-escape button { background:none; border:0; color:rgba(255,255,255,0.82); font-family:'Karla',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px; padding:8px 14px; cursor:pointer; }
+body.scan-standby .scan-escape button { background:none; border:0; color:rgba(255,255,255,0.82); font-family:'Hanken Grotesk',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; text-decoration:underline; text-underline-offset:3px; padding:8px 14px; cursor:pointer; }
 body.scan-standby #stopBtn, body.scan-standby #torchBtn, body.scan-standby #cameraControls { display:none !important; }
 body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-area-inset-top, 0px) + 16px); left:16px; width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.32); color:#fff; font-size:15px; align-items:center; justify-content:center; backdrop-filter:blur(4px); z-index:930; cursor:pointer; }
 .scan-close { display:none; }
@@ -282,15 +282,15 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 /* The scan control: one photographic block, not a drawn barcode plus a
    button underneath. JS toggles display between "flex" and "none" when the
    camera opens, so flex is the shown state. */
-.scan-cta { position:relative; display:flex; align-items:center; justify-content:center; width:100%; max-width:460px; height:210px; margin:0 auto 18px; padding:0; border:0; border-radius:22px; overflow:hidden; cursor:pointer; background:var(--ahk-heading); box-shadow:0 10px 26px rgba(61,74,58,0.24); transition:transform 0.15s ease, box-shadow 0.15s ease; }
+.scan-cta { position:relative; display:flex; align-items:center; justify-content:center; width:100%; max-width:460px; height:210px; margin:0 auto 18px; padding:0; border:0; border-radius:22px; overflow:hidden; cursor:pointer; background:var(--ahk-heading); box-shadow:0 10px 26px rgba(42,22,48,0.24); transition:transform 0.15s ease, box-shadow 0.15s ease; }
 .scan-cta > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.6; filter:blur(5px) saturate(0.75); transform:scale(1.09); }
 .scan-cta > img[hidden] { display:none; }
 .scan-cta-scrim { position:absolute; inset:0; background:linear-gradient(to top, rgba(28,35,26,0.58) 0%, rgba(28,35,26,0.30) 55%, rgba(28,35,26,0.24) 100%); }
 /* The photo is light, so white type alone loses against it. The label sits
    in a solid pill: guaranteed contrast whatever the image does, and it
    reads as the tappable thing rather than a caption. */
-.scan-cta-label { position:relative; display:flex; align-items:center; gap:10px; background:var(--ahk-heading); color:#f7f3e7; font-family:'Karla',sans-serif; font-weight:700; font-size:17px; letter-spacing:3px; text-transform:lowercase; padding:15px 34px; border-radius:60px; box-shadow:0 6px 20px rgba(20,26,18,0.34); }
-.scan-cta:hover { transform:translateY(-1px); box-shadow:0 14px 30px rgba(61,74,58,0.3); }
+.scan-cta-label { position:relative; display:flex; align-items:center; gap:10px; background:var(--ahk-heading); color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:17px; letter-spacing:3px; text-transform:lowercase; padding:15px 34px; border-radius:60px; box-shadow:0 6px 20px rgba(20,26,18,0.34); }
+.scan-cta:hover { transform:translateY(-1px); box-shadow:0 14px 30px rgba(42,22,48,0.3); }
 .scan-cta:active { transform:scale(0.99); }
 .scan-cta:focus-visible { outline:3px solid var(--ahk-gold); outline-offset:3px; }
 @media(prefers-reduced-motion: reduce){ .scan-cta { transition:none; } }
@@ -312,7 +312,7 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .brand-lookup input[type=text] {
   flex:1; min-width:0; padding:13px 16px; border-radius:30px;
   border:0.5px solid var(--ahk-border); background:var(--ahk-card);
-  color:var(--ahk-heading); font-family:'Karla',sans-serif; font-size:14px;
+  color:var(--ahk-heading); font-family:'Hanken Grotesk',sans-serif; font-size:14px;
 }
 .brand-lookup input[type=text]::placeholder { color:var(--ahk-text-muted); }
 .brand-lookup .big-btn {
@@ -332,11 +332,11 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
    your eye already is while lining up a barcode, instead of living below
    the fold where a tall portrait camera preview pushes them out of view. */
 .camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; pointer-events:none; }
-.camera-controls button { pointer-events:auto; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
-.camera-controls button:hover { background:rgba(20,24,18,0.78); }
-.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
-.camera-controls button.snap:hover { background:#dcc78f; }
-#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
+.camera-controls button { pointer-events:auto; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(251,244,239,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button:hover { background:rgba(28,14,32,0.78); }
+.camera-controls button.snap { background:#F6C6A8; color:#3A1F3D; border-color:#F6C6A8; }
+.camera-controls button.snap:hover { background:#F2B896; }
+#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#FBF4EF; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
 
 /* Barcode alignment guide -- a dashed band roughly where a barcode's
    bars sit, with a faint row of "ghost" digits underneath standing in
@@ -344,30 +344,30 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
    framing aid (the decoder still reads the whole frame) so someone can
    see at a glance whether they're lined up before it fires, rather than
    only finding out after a misread. */
-.barcode-guide { position:absolute; left:9%; right:9%; top:34%; height:20%; border:2px dashed rgba(244,239,226,0.85); border-radius:6px; pointer-events:none; }
-.barcode-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#f4efe2; background:rgba(20,24,18,0.72); padding:5px 10px; border-radius:20px; }
-.barcode-guide-numbers { position:absolute; left:9%; right:9%; top:calc(34% + 20% + 6px); text-align:center; font-family:'Karla',sans-serif; font-size:13px; letter-spacing:3px; color:rgba(244,239,226,0.55); pointer-events:none; margin:0; }
+.barcode-guide { position:absolute; left:9%; right:9%; top:34%; height:20%; border:2px dashed rgba(251,244,239,0.85); border-radius:6px; pointer-events:none; }
+.barcode-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#FBF4EF; background:rgba(28,14,32,0.72); padding:5px 10px; border-radius:20px; }
+.barcode-guide-numbers { position:absolute; left:9%; right:9%; top:calc(34% + 20% + 6px); text-align:center; font-family:'Hanken Grotesk',sans-serif; font-size:13px; letter-spacing:3px; color:rgba(251,244,239,0.55); pointer-events:none; margin:0; }
 .scan-again-wrap { text-align:center; margin-bottom:16px; }
 .manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
-.manual input { flex:1; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.manual input { flex:1; padding:14px 16px; border:0.5px solid #E0C9BE; border-radius:6px; background:#F1E0D7; font-family:'Hanken Grotesk',sans-serif; font-size:15px; color:#3A1F3D; }
 .verdict { border-radius:12px; padding:22px; margin-bottom:16px; }
-.v-good { background:#e6efe3; border:1px solid #6f8768; }
-.v-warn { background:#f6ecd9; border:1px solid #d9b06e; }
-.v-bad { background:#f3e2df; border:1px solid #a5453d; }
-.v-unknown { background:#ece5d5; border:1px solid #cfc4a9; }
-.v-title { font-family:'Cormorant Garamond',serif; font-size:19px; letter-spacing:1.5px; text-transform:uppercase; color:#3d4a3a; margin-bottom:6px; }
-.chip { display:inline-block; font-size:11px; letter-spacing:0.5px; padding:6px 12px; border-radius:20px; margin:0 6px 6px 0; background:#ece5d5; border:0.5px solid #cfc4a9; color:#5c5c4f; }
-.chip.yes { background:#dbe8d7; border-color:#6f8768; color:#33502f; }
-.chip.no { background:#f3ded9; border-color:#c98a3a; color:#8a4a2a; }
-.ingredient-watch { margin-top:12px; padding-top:12px; border-top:0.5px solid #e0d8c4; }
-.iw-title { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#8a8672; margin-bottom:8px; }
+.v-good { background:#DCE6D6; border:1px solid #7C9A78; }
+.v-warn { background:#FBE3D3; border:1px solid #E8A57A; }
+.v-bad { background:#F5D3D6; border:1px solid #C9546A; }
+.v-unknown { background:#F1E0D7; border:1px solid #E0C9BE; }
+.v-title { font-family:'Gloock',serif; font-size:19px; letter-spacing:1.5px; text-transform:uppercase; color:#3A1F3D; margin-bottom:6px; }
+.chip { display:inline-block; font-size:11px; letter-spacing:0.5px; padding:6px 12px; border-radius:20px; margin:0 6px 6px 0; background:#F1E0D7; border:0.5px solid #E0C9BE; color:#5A4550; }
+.chip.yes { background:#DCE6D6; border-color:#7C9A78; color:#33502f; }
+.chip.no { background:#F5D3D6; border-color:#D9703C; color:#A85523; }
+.ingredient-watch { margin-top:12px; padding-top:12px; border-top:0.5px solid #E8D4CA; }
+.iw-title { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#8C7580; margin-bottom:8px; }
 .iw-row { border-radius:8px; padding:9px 12px; margin-bottom:6px; font-size:13px; line-height:1.5; }
 .iw-row:last-child { margin-bottom:0; }
-.iw-name { display:block; font-weight:600; color:#3d4a3a; margin-bottom:2px; }
-.iw-note { color:#5c5c4f; }
-.iw-animal { background:#f3e2df; border:1px solid #d9a89f; }
-.iw-ambiguous { background:#f6ecd9; border:1px solid #dfc491; }
-.srclink { display:block; padding:12px 0; border-bottom:0.5px solid #e0d8c4; font-size:14px; }
+.iw-name { display:block; font-weight:600; color:#3A1F3D; margin-bottom:2px; }
+.iw-note { color:#5A4550; }
+.iw-animal { background:#F5D3D6; border:1px solid #d9a89f; }
+.iw-ambiguous { background:#FBE3D3; border:1px solid #dfc491; }
+.srclink { display:block; padding:12px 0; border-bottom:0.5px solid #E8D4CA; font-size:14px; }
 .srclink:last-of-type { border-bottom:none; }
 
 /* Redesigned scan result card */
@@ -376,62 +376,62 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 @media(prefers-reduced-motion: reduce){ .result-in { animation:none; } }
 .rcard { border-radius:16px; padding:26px 24px; margin-bottom:16px; }
 .rcard-top { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
-.rcard-badge { flex-shrink:0; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#f4efe2; background:#6f8768; }
-.v-good .rcard-badge { background:#4d6b4f; }
-.v-warn .rcard-badge { background:#c99a45; }
-.v-bad .rcard-badge { background:#a5453d; }
-.v-unknown .rcard-badge { background:#8a8672; }
-.rcard-name { font-family:'Cormorant Garamond',serif; font-size:21px; color:#3d4a3a; line-height:1.2; }
-.rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#5c5c4f; margin-top:2px; }
+.rcard-badge { flex-shrink:0; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Gloock',serif; font-size:22px; font-weight:600; color:#FBF4EF; background:#7C9A78; }
+.v-good .rcard-badge { background:#3A1F3D; }
+.v-warn .rcard-badge { background:#E8804C; }
+.v-bad .rcard-badge { background:#C9546A; }
+.v-unknown .rcard-badge { background:#8C7580; }
+.rcard-name { font-family:'Gloock',serif; font-size:21px; color:#3A1F3D; line-height:1.2; }
+.rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#5A4550; margin-top:2px; }
 .rstatus-row { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
 .rstatus { flex:1; min-width:130px; border-radius:10px; padding:12px 14px; background:rgba(255,255,255,0.55); }
-.rstatus-label { font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#5c5c4f; margin-bottom:4px; }
+.rstatus-label { font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#5A4550; margin-bottom:4px; }
 .rstatus-value { font-size:15px; font-weight:700; display:flex; align-items:center; gap:6px; }
 .rstatus-value.yes { color:#33502f; }
-.rstatus-value.no { color:#8a332c; }
-.rstatus-value.maybe { color:#8a6a2a; }
-.rstatus-value.na { color:#7a7561; }
-.rcard-note { font-size:14px; line-height:1.7; color:#3d4a3a; margin:0; }
+.rstatus-value.no { color:#A8324E; }
+.rstatus-value.maybe { color:#A85523; }
+.rstatus-value.na { color:#80686F; }
+.rcard-note { font-size:14px; line-height:1.7; color:#3A1F3D; margin:0; }
 
 /* Kind Swaps + Cruelty Freebies -- see js/swap.js for the logic. Styled
    to sit quietly alongside the verdict card above it, not compete with
    it: same radius/border language as .card, no new colour of its own. */
 #swapSection { margin-top:4px; }
-.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:20px; }
-.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:11px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:11px 20px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
 .kswap-summary::before { content:"\1F343"; font-size:13px; }
-.kswap-summary:hover { background:#e2d9bd; }
+.kswap-summary:hover { background:#E5CFC4; }
 .kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
 .kswap-details-body { padding-top:16px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
-.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
-.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
-.kswap-alt-note { font-size:13px; line-height:1.6; color:#5c5c4f; margin-bottom:12px; }
-.kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#f4efe2; border:0.5px solid #dcd2b8; }
-.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
-.kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5c5c4f; margin-bottom:0; }
-.kswap-compare-verified { background:#e6efe3; border-color:#b9c7ae; }
-.kswap-compare-verified .kswap-compare-title { color:#4d6b4f; }
-.kswap-compare-link { display:inline-block; margin-top:8px; font-size:12px; font-weight:600; color:#4d6b4f; }
+.kswap-alt-card { border:0.5px solid #E0C9BE; border-radius:12px; padding:16px 18px; background:#fff; }
+.kswap-alt-name { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:4px; }
+.kswap-alt-note { font-size:13px; line-height:1.6; color:#5A4550; margin-bottom:12px; }
+.kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
+.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5A4550; margin-bottom:0; }
+.kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
+.kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
+.kswap-compare-link { display:inline-block; margin-top:8px; font-size:12px; font-weight:600; color:#3A1F3D; }
 .kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-.kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #dcd2b8; }
-.kswap-shop-link { display:block; font-family:'Karla',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#4d6b4f; text-decoration:none; }
+.kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #E5CFC4; }
+.kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10.5px; color:#a39d87; letter-spacing:0.2px; margin-top:3px; }
-.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#6f8768; }
-.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
-.kswap-swap-btn:hover { background:#3d5a3f; }
-.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:26px 22px; }
-.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
-.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #cfc4a9; }
-.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:6px; }
-.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:10px; }
-.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:22px 20px; text-align:center; }
-.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
+.kswap-affiliate-note { display:block; font-size:10.5px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
+.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#7C9A78; }
+.kswap-swap-btn { background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#2A1630; }
+.kswap-unlock { text-align:center; border:0.5px solid #C5D6BE; background:#F1E0D7; border-radius:14px; padding:26px 22px; }
+.kswap-unlock-title { font-family:'Gloock',serif; font-size:19px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:16px; }
+.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #E0C9BE; }
+.kswap-freebie-title { font-family:'Gloock',serif; font-size:16px; color:#3A1F3D; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #E0C9BE; background:#F1E0D7; border-radius:14px; padding:22px 20px; text-align:center; }
+.kswap-none-title { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:16px; }
 
 /* When launched as an installed app, drop the full site header --
    the bottom nav already covers getting anywhere else -- so the
@@ -451,15 +451,15 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
    it only when installing is actually possible (or, on iOS, since
    every iOS browser can add to the home screen via its own Share
    sheet) and the person hasn't dismissed it before. */
-#addHome { position:relative; display:none; align-items:flex-start; gap:10px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.2px; padding:14px 16px; border-radius:16px; max-width:420px; margin:0 auto 20px; cursor:pointer; }
+#addHome { position:relative; display:none; align-items:flex-start; gap:10px; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.2px; padding:14px 16px; border-radius:16px; max-width:420px; margin:0 auto 20px; cursor:pointer; }
 #addHome.show { display:flex; }
-#addHome::after { content:""; position:absolute; top:-8px; left:32px; width:16px; height:16px; background:#4d6b4f; clip-path:polygon(0% 100%, 100% 100%, 50% 0%); }
+#addHome::after { content:""; position:absolute; top:-8px; left:32px; width:16px; height:16px; background:#3A1F3D; clip-path:polygon(0% 100%, 100% 100%, 50% 0%); }
 #addHome-icon { flex-shrink:0; width:16px; height:16px; display:flex; align-items:center; justify-content:center; margin-top:1px; }
 #addHome-body { flex:1; min-width:0; }
 #addHome-text { line-height:1.45; }
 #addHome-text strong { font-weight:700; }
-#addHome-dismiss { flex-shrink:0; background:rgba(244,239,226,0.16); border:none; color:#f4efe2; width:20px; height:20px; border-radius:50%; font-size:14px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:2px; }
-#addHome-dismiss:hover { background:rgba(244,239,226,0.28); }
+#addHome-dismiss { flex-shrink:0; background:rgba(251,244,239,0.16); border:none; color:#FBF4EF; width:20px; height:20px; border-radius:50%; font-size:14px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; margin-left:2px; }
+#addHome-dismiss:hover { background:rgba(251,244,239,0.28); }
 
 /* Scan page hierarchy: the scanner itself should be the first thing
    anyone lands on, so the heading is bigger/tighter than the site
@@ -468,21 +468,21 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 .scan-h1-icon { flex-shrink:0; }
 @media (max-width:480px){ .scan-h1 { font-size:25px; margin-top:16px; } .scan-h1-icon { width:22px; height:22px; } }
 .scan-sub { text-align:center; max-width:360px; margin:0 auto 22px; font-size:15px; line-height:1.6; }
-.manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:16px 0 10px; }
+.manual-lead { text-align:center; font-size:12px; color:#8C7580; margin:16px 0 10px; }
 .shelf-cta-wrap { text-align:center; margin:18px 0 4px; }
-.shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #6f8768; border-radius:30px; padding:8px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3d4a3a; }
-.shelf-cta:hover, .shelf-cta:focus-visible { background:#eef1e9; color:#3d4a3a; }
+.shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #7C9A78; border-radius:30px; padding:8px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3A1F3D; }
+.shelf-cta:hover, .shelf-cta:focus-visible { background:#F1E0D7; color:#3A1F3D; }
 
 /* Anything below this point (home-screen install, how-this-works, the
    report form) is a secondary feature -- present, but visually quieter
    than the scan/manual-entry flow above it. */
 .secondary-block { margin-top:18px; }
-.secondary-label { font-family:'Cormorant Garamond',serif; font-size:16.5px; color:#3d4a3a; margin-bottom:6px; }
-.secondary-sub { font-size:13px; color:#5c5c4f; line-height:1.6; margin-bottom:0; }
-.quiet-details { margin-top:26px; padding-top:18px; border-top:0.5px solid #dcd3c0; }
-.quiet-details summary { cursor:pointer; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#8a8672; list-style:revert; }
-.quiet-details summary:hover { color:#3d4a3a; }
-.quiet-details p { font-size:12.5px; color:#8a8672; line-height:1.9; margin:12px 0 0; }
+.secondary-label { font-family:'Gloock',serif; font-size:16.5px; color:#3A1F3D; margin-bottom:6px; }
+.secondary-sub { font-size:13px; color:#5A4550; line-height:1.6; margin-bottom:0; }
+.quiet-details { margin-top:26px; padding-top:18px; border-top:0.5px solid #E5CFC4; }
+.quiet-details summary { cursor:pointer; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#8C7580; list-style:revert; }
+.quiet-details summary:hover { color:#3A1F3D; }
+.quiet-details p { font-size:12.5px; color:#8C7580; line-height:1.9; margin:12px 0 0; }
 </style>
 </head>
 <body>
@@ -490,7 +490,6 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
@@ -516,8 +515,8 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <div id="addHome">
 <span id="addHome-icon" aria-hidden="true">
 <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-<path d="M12 3v12M12 3l-4 4M12 3l4 4" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#f4efe2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 3v12M12 3l-4 4M12 3l4 4" stroke="#FBF4EF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#FBF4EF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </span>
 <span id="addHome-body">
@@ -571,7 +570,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 </div><!-- /.scan-frame -->
 
-<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
+<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
 
 <details class="quiet-details">
@@ -591,7 +590,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
      making the bar on this page sit taller than every other page. On
      every other page this timing doesn't matter, so nav.js stays at
      the bottom there as usual. -->
-<script src="js/site.js?v=4"></script>
+<script src="js/site.js?v=5"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 <script>
 var BRANDS = [
@@ -820,7 +819,7 @@ window.location.href = "mailto:hello@ahomekind.com?subject=" + encodeURIComponen
 function sourceBlock(brandText){
 var b = (brandText || "").split(",")[0].trim();
 var q = encodeURIComponent(b);
-var h = "<div class=\"card\" style=\"border-color:#8ba284;\">";
+var h = "<div class=\"card\" style=\"border-color:#9DBB98;\">";
 if(b){
 h += "<h3>check " + b + " elsewhere</h3>";
 h += "<p style=\"margin-bottom:8px;\">Sources that cover far more brands than I do:</p>";
@@ -866,7 +865,7 @@ var h = "<div class=\"share-row\" style=\"display:flex; gap:10px; flex-wrap:wrap
 h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-result\">share this result</button>";
 h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-site\">share a home kind</button>";
 h += "</div>";
-h += "<p id=\"" + p + "-share-msg\" style=\"font-size:12.5px; color:#7a7561; margin:8px 0 0; min-height:16px;\"></p>";
+h += "<p id=\"" + p + "-share-msg\" style=\"font-size:12.5px; color:#80686F; margin:8px 0 0; min-height:16px;\"></p>";
 return h;
 }
 function wireShareWidget(idPrefix, brand){
@@ -925,7 +924,7 @@ out += "</div>";
 return out;
 }
 function brandSearchWidget(){
-var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";
+var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8C7580; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";
 out += "<div class=\"brand-lookup\">";
 out += "<label for=\"manualBrand\" class=\"visually-hidden\">Brand name</label>";
 out += "<input type=\"text\" id=\"manualBrand\" placeholder=\"e.g. Superdrug, Garnier, Dove...\">";
@@ -942,7 +941,7 @@ function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
 ? verdictHTML(brand) + (brand.tier !== "good" && brand.tier !== "check" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
-: "<p style=\"font-size:13.5px; color:#7a7561; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+: "<p style=\"font-size:13.5px; color:#80686F; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
 if(brand) wireShareWidget("share2", brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
@@ -1003,7 +1002,7 @@ if(!brand && identified){
 // before it.
 out += "<div class=\"card\">";
 out += "<p class=\"section-label\" style=\"margin-top:0;\">cruelty-free status</p>";
-out += "<p style=\"font-size:13.5px; color:#5c5c4f; margin-bottom:14px;\">I don't have this brand in my cruelty-free list yet, so I can't give a verdict on it. You can also <a href=\"ingredient-check.html\">photograph the ingredients list</a> to check what's actually in it.</p>";
+out += "<p style=\"font-size:13.5px; color:#5A4550; margin-bottom:14px;\">I don't have this brand in my cruelty-free list yet, so I can't give a verdict on it. You can also <a href=\"ingredient-check.html\">photograph the ingredients list</a> to check what's actually in it.</p>";
 out += brandSearchWidget();
 out += "</div>";
 }
@@ -1422,7 +1421,7 @@ if(!sharedName) return;
 var brand = findBrandExact(sharedName) || findBrand(sharedName);
 if(!brand) return;
 var out = "<div class=\"result-in\">";
-out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#8a8672; margin-bottom:10px;\">shared result</p>";
+out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#8C7580; margin-bottom:10px;\">shared result</p>";
 out += verdictHTML(brand);
 if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
@@ -1452,7 +1451,7 @@ if(window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 <p class="nf-msg" id="nf-msg-11" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
 <script src="js/newsletter.js"></script>
 <script>
 // "Add to home screen" -- shown only when it's actually possible (or, on

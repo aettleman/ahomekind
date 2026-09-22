@@ -13,10 +13,10 @@
 <meta property="og:image:alt" content="Check a brand">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
@@ -25,82 +25,82 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.card.bad { border-color:#a5453d; background:#f3e2df; }
-.rating.bad { color:#8a332c; }
-.v-good { background:#e6efe3; border:1px solid #6f8768; }
-.v-check { background:#f6ecd9; border:1px solid #d9b06e; }
-.v-warn { background:#dde9ea; border:1px solid #a8c4c9; }
-.v-bad { background:#f3e2df; border:1px solid #a5453d; }
-.v-unverified { background:#ece5d5; border:1px solid #cfc4a9; }
+.card.bad { border-color:#C9546A; background:#F5D3D6; }
+.rating.bad { color:#A8324E; }
+.v-good { background:#DCE6D6; border:1px solid #7C9A78; }
+.v-check { background:#FBE3D3; border:1px solid #E8A57A; }
+.v-warn { background:#DCE6D6; border:1px solid #EFC0A0; }
+.v-bad { background:#F5D3D6; border:1px solid #C9546A; }
+.v-unverified { background:#F1E0D7; border:1px solid #E0C9BE; }
 .rcard { border-radius:16px; padding:22px 22px 20px; margin-bottom:14px; }
 .rcard-top { display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
-.rcard-badge { flex-shrink:0; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:#f4efe2; background:#6f8768; }
-.v-good .rcard-badge { background:#4d6b4f; }
-.v-check .rcard-badge { background:#c99a45; }
-.v-warn .rcard-badge { background:#3d6b78; }
-.v-bad .rcard-badge { background:#a5453d; }
-.v-unverified .rcard-badge { background:#8a8672; }
+.rcard-badge { flex-shrink:0; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Gloock',serif; font-size:19px; font-weight:600; color:#FBF4EF; background:#7C9A78; }
+.v-good .rcard-badge { background:#3A1F3D; }
+.v-check .rcard-badge { background:#E8804C; }
+.v-warn .rcard-badge { background:#A85523; }
+.v-bad .rcard-badge { background:#C9546A; }
+.v-unverified .rcard-badge { background:#8C7580; }
 .rcard-name-wrap { flex:1; min-width:0; }
-.rcard-name { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; line-height:1.25; }
+.rcard-name { font-family:'Gloock',serif; font-size:19px; color:#3A1F3D; line-height:1.25; }
 .rcard-name a { color:inherit; }
-.rcard-headline { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#5c5c4f; margin-top:2px; }
-.rcard-price { flex-shrink:0; padding:2px 10px; background:#e6d4a8; border-radius:12px; font-size:11.5px; color:#3d4a3a; margin-top:2px; }
+.rcard-headline { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#5A4550; margin-top:2px; }
+.rcard-price { flex-shrink:0; padding:2px 10px; background:#F6C6A8; border-radius:12px; font-size:11.5px; color:#3A1F3D; margin-top:2px; }
 .rstatus-row { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
 .rstatus { flex:1; min-width:130px; border-radius:10px; padding:10px 14px; background:rgba(255,255,255,0.55); }
-.rstatus-label { font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#5c5c4f; margin-bottom:3px; }
+.rstatus-label { font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#5A4550; margin-bottom:3px; }
 .rstatus-value { font-size:14px; font-weight:700; display:flex; align-items:center; gap:6px; }
 .rstatus-value.yes { color:#33502f; }
-.rstatus-value.no { color:#8a332c; }
-.rstatus-value.maybe { color:#8a6a2a; }
-.rstatus-value.parent { color:#3d6b78; }
-.rstatus-value.na { color:#7a7561; }
+.rstatus-value.no { color:#A8324E; }
+.rstatus-value.maybe { color:#A85523; }
+.rstatus-value.parent { color:#A85523; }
+.rstatus-value.na { color:#80686F; }
 .parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
-.parent-test-flag.bad { background:#f3e2df; color:#8a332c; }
-.parent-test-flag.good { background:#e6efe2; color:#33502f; }
-.parent-test-flag.unverified { background:#ece5d5; color:#6b6656; }
-.rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#7a7561; list-style:revert; }
-.rcard-details summary:hover { color:#3d4a3a; }
-.rcard-note { font-size:13.5px; line-height:1.75; color:#3d4a3a; margin:10px 0 0; }
+.parent-test-flag.bad { background:#F5D3D6; color:#A8324E; }
+.parent-test-flag.good { background:#DCE6D6; color:#33502f; }
+.parent-test-flag.unverified { background:#F1E0D7; color:#6E5660; }
+.rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#80686F; list-style:revert; }
+.rcard-details summary:hover { color:#3A1F3D; }
+.rcard-note { font-size:13.5px; line-height:1.75; color:#3A1F3D; margin:10px 0 0; }
 .browse-btn-row { display:flex; justify-content:center; gap:14px; margin:0 auto 28px; max-width:480px; }
 .browse-btn-row button { flex:1; }
 /* Browse buttons now use the shared .btn-pri / .btn-sec components --
    the old per-ID colours are gone so they can't outrank them. */
 @media (max-width:480px) { .browse-btn-row { flex-direction:column; max-width:320px; } }
-.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:20px; }
-.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:11px 20px; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:11px 20px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
 .kswap-summary::before { content:"\1F343"; font-size:13px; }
-.kswap-summary:hover { background:#e2d9bd; }
+.kswap-summary:hover { background:#E5CFC4; }
 .kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
 .kswap-details-body { padding-top:16px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:16px; }
-.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:16px 18px; background:#fff; }
-.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
-.kswap-alt-note { font-size:13px; line-height:1.6; color:#5c5c4f; margin-bottom:12px; }
-.kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#f4efe2; border:0.5px solid #dcd2b8; }
-.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
-.kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5c5c4f; margin-bottom:0; }
-.kswap-compare-verified { background:#e6efe3; border-color:#b9c7ae; }
-.kswap-compare-verified .kswap-compare-title { color:#4d6b4f; }
-.kswap-compare-link { display:inline-block; margin-top:8px; font-size:12px; font-weight:600; color:#4d6b4f; }
+.kswap-alt-card { border:0.5px solid #E0C9BE; border-radius:12px; padding:16px 18px; background:#fff; }
+.kswap-alt-name { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:4px; }
+.kswap-alt-note { font-size:13px; line-height:1.6; color:#5A4550; margin-bottom:12px; }
+.kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
+.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5A4550; margin-bottom:0; }
+.kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
+.kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
+.kswap-compare-link { display:inline-block; margin-top:8px; font-size:12px; font-weight:600; color:#3A1F3D; }
 .kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-.kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #dcd2b8; }
-.kswap-shop-link { display:block; font-family:'Karla',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#4d6b4f; text-decoration:none; }
+.kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #E5CFC4; }
+.kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10.5px; color:#a39d87; letter-spacing:0.2px; margin-top:3px; }
-.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#6f8768; }
-.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
-.kswap-swap-btn:hover { background:#3d5a3f; }
-.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:26px 22px; }
-.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
-.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #cfc4a9; }
-.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:6px; }
-.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:10px; }
-.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:22px 20px; text-align:center; }
-.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5c5c4f; margin-bottom:16px; }
+.kswap-affiliate-note { display:block; font-size:10.5px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
+.kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#7C9A78; }
+.kswap-swap-btn { background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#2A1630; }
+.kswap-unlock { text-align:center; border:0.5px solid #C5D6BE; background:#F1E0D7; border-radius:14px; padding:26px 22px; }
+.kswap-unlock-title { font-family:'Gloock',serif; font-size:19px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:16px; }
+.kswap-freebie-card { margin-top:18px; padding-top:18px; border-top:0.5px solid #E0C9BE; }
+.kswap-freebie-title { font-family:'Gloock',serif; font-size:16px; color:#3A1F3D; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #E0C9BE; background:#F1E0D7; border-radius:14px; padding:22px 20px; text-align:center; }
+.kswap-none-title { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-none-body { font-size:13.5px; line-height:1.7; color:#5A4550; margin-bottom:16px; }
 </style>
 </head>
 <body>
@@ -108,7 +108,6 @@
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
@@ -139,6 +138,31 @@
 <label for="ratingSearch" class="visually-hidden">Search a brand</label>
 <input type="text" id="ratingSearch" placeholder="Search a brand&hellip;">
 </div>
+
+<div class="k-ans" id="answerFilters">
+<button type="button" class="k-ans-btn" data-answer="cf-vegan">
+<span class="ahk-stamp tier-good" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg></span>
+<span class="k-ans-label">CF +<br>vegan</span>
+</button>
+<button type="button" class="k-ans-btn" data-answer="cf">
+<span class="ahk-stamp tier-check" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+<span class="k-ans-label">cruelty-<br>free</span>
+</button>
+<button type="button" class="k-ans-btn" data-answer="owner">
+<span class="ahk-stamp tier-warn" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg></span>
+<span class="k-ans-label">owner<br>isn't</span>
+</button>
+<button type="button" class="k-ans-btn" data-answer="tested">
+<span class="ahk-stamp tier-bad" style="width:32px;height:32px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+<span class="k-ans-label">tested</span>
+</button>
+</div>
+<style>
+.k-ans { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:0 0 20px; }
+.k-ans-btn { display:flex; flex-direction:column; align-items:center; gap:6px; padding:10px 4px; border-radius:16px; border:1px solid var(--ahk-border-soft); background:var(--ahk-card); cursor:pointer; font:inherit; }
+.k-ans-btn.on { border-color:var(--ahk-heading); box-shadow:inset 0 0 0 1px var(--ahk-heading); }
+.k-ans-label { font:700 8.5px/1.2 'Hanken Grotesk',sans-serif; letter-spacing:0.06em; text-transform:uppercase; color:var(--ahk-text-muted); text-align:center; }
+</style>
 
 <div class="btn-row" style="margin-bottom:20px;">
 <button type="button" class="btn-pri" id="browseAllBtn" style="display:none;" hidden>browse by category</button>
@@ -230,7 +254,7 @@
 </div>
 
 <div id="listControls" style="display:none; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
-<p id="resultCount" style="margin:0; font-size:13px; color:#7a7561;"></p>
+<p id="resultCount" style="margin:0; font-size:13px; color:#80686F;"></p>
 <div class="cert-select-row" style="margin:0;">
 <label for="pageSizeSelect">show</label>
 <select id="pageSizeSelect">
@@ -239,7 +263,7 @@
 <option value="100">100</option>
 <option value="all">all</option>
 </select>
-<span style="font-size:13px; color:#7a7561;">per page</span>
+<span style="font-size:13px; color:#80686F;">per page</span>
 </div>
 </div>
 
@@ -981,7 +1005,7 @@
 <div class="card unverified" data-category="stationery"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/zebra-pen/">Zebra Pen</a></h3><p>Zebra says it does not test on animals itself, but its own statement stops short of a guarantee for its suppliers and manufacturers, saying it can't confirm they hold to the same standard. That gap is exactly what a firm no-testing policy is supposed to close, so this is marked still checking rather than cruelty-free.</p><p class="parent-test-flag unverified">&#128269; parent company's testing policy is also unverified</p></div>
 <div class="card unverified" data-category="stationery"><p class="rating unverified">&#128269; unverified claim</p><h3><a href="brands/paper-mate/">Paper Mate</a></h3><p>Paper Mate (made by Newell Brands) gives the same kind of answer as Zebra: no testing on animals themselves, but no guarantee that third parties in their supply chain don't. Marked still checking until that's resolved one way or the other.</p><p class="parent-test-flag unverified">&#128269; parent company's testing policy is also unverified</p></div>
 <p class="section-label">dental &amp; oral care</p>
-<div id="dentalDisclaimer" style="display:none; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5c5c4f; line-height:1.8;">
+<div id="dentalDisclaimer" style="display:none; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5A4550; line-height:1.8;">
 Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a company that isn't cruelty-free still financially supports that company - even though these are non-edible, everyday items. That's a different claim from saying any specific product was itself personally tested on an animal: it's about where your money goes, not a claim about that individual item's testing history.
 </div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/aim/">Aim</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
@@ -1022,8 +1046,8 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card check" data-category="household" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/morrisons/">Morrisons</a></h3><p>Leaping Bunny certified own-brand range.</p></div>
 <div class="card check" data-category="household" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/sainsbury-s/">Sainsbury's</a></h3><p>Leaping Bunny certified own-brand range; own-brand beauty line has expanded to a large fully vegan makeup range.</p></div>
 <div class="card check" data-category="household" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/waitrose/">Waitrose</a></h3><p>Leaping Bunny certified own-brand range.</p></div>
-<p class="section-label" style="color:#8a332c;">tested on animals</p>
-<p class="section-label-note" style="font-size:13.5px; color:#7a7561; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>
+<p class="section-label" style="color:#A8324E;">tested on animals</p>
+<p class="section-label-note" style="font-size:13.5px; color:#80686F; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>
 <div class="card bad" data-category="skin-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/acuvue/">Acuvue</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
 <div class="card bad" data-category="household" data-region="uk-europe usa-canada australia-nz asia africa-middle-east south-central-america"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/air-wick/">Air Wick</a></h3><p>Owned by Reckitt - the same parent company as Dettol - who test for regulatory compliance rather than refusing markets that require it.</p></div>
 <div class="card bad" data-category="skin-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/algenist/">Algenist</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
@@ -1328,15 +1352,15 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card check" data-category=""><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/solgar-vitamin-company/">Solgar Vitamin Company</a></h3><p>Listed by PETA as not testing on animals.</p></div>
 <div class="card check" data-category="" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/viridian-nutrition/">Viridian Nutrition</a></h3><p>A family-owned UK ethical company founded on Purity, Charity and the Environment, 220+ range of supplements. Cruelty-free approved by Cruelty Free International.</p></div>
 <!-- GENERATED:BRAND-CARDS:END -->
-<p id="noResults" style="display:none; text-align:center; color:#7a7561; font-size:14px; padding:24px 0;">Nothing here yet for that one.</p>
+<p id="noResults" style="display:none; text-align:center; color:#80686F; font-size:14px; padding:24px 0;">Nothing here yet for that one.</p>
 </div>
 
 <div id="paginationNav" style="display:none; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; margin-top:8px;"></div>
 
-<p style="margin-top:36px; font-size:13px; color:#7a7561; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
+<p style="margin-top:36px; font-size:13px; color:#80686F; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
 
 <div style="text-align:center; margin:28px 0 8px;">
-<a href="mailto:hello@ahomekind.com?subject=something%20wrong%20on%20brand%20check" style="display:inline-block; padding:12px 24px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; color:#3d4a3a; font-size:12px; letter-spacing:1px; text-transform:uppercase;">spotted something wrong? let me know: hello@ahomekind.com</a>
+<a href="mailto:hello@ahomekind.com?subject=something%20wrong%20on%20brand%20check" style="display:inline-block; padding:12px 24px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; color:#3A1F3D; font-size:12px; letter-spacing:1px; text-transform:uppercase;">spotted something wrong? let me know: hello@ahomekind.com</a>
 </div>
 
 <script src="js/owners.js"></script>
@@ -1419,8 +1443,15 @@ var initial = (name.replace(/[^A-Za-z0-9]/g, '').charAt(0) || '?').toUpperCase()
 card.dataset.initial = /[0-9]/.test(initial) ? '#' : initial;
 var price = priceMap[name];
 
+var STAMP_ICONS = {
+'v-good': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg>',
+'v-check': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+'v-warn': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg>',
+'v-bad': '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+'v-unverified': '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 16h.01M9.5 9.5a2.5 2.5 0 0 1 4.6-1.4c.4.7.3 1.5-.3 2.1L12 12v1"/></svg>'
+};
 var html = '<div class="rcard-top">';
-html += '<div class="rcard-badge" aria-hidden="true">' + initial + '</div>';
+html += '<div class="rcard-badge ahk-stamp-solid" aria-hidden="true">' + (STAMP_ICONS[tierClass] || initial) + '</div>';
 html += '<div class="rcard-name-wrap"><div class="rcard-name">' + nameHTML + '</div><div class="rcard-headline">' + headline + '</div></div>';
 if (price) { html += '<span class="rcard-price">' + price + '</span>'; }
 html += '</div>';
@@ -1627,6 +1658,8 @@ return regions.indexOf(regionKey) !== -1;
 function cardMatchesFilter(card, filterKey) {
 if (filterKey === 'cf-vegan') return card.dataset.cf === 'yes' && card.dataset.vegan === 'yes';
 if (filterKey === 'cf') return card.dataset.cf === 'yes' && card.dataset.vegan !== 'yes';
+if (filterKey === 'owner') return card.dataset.cf === 'parent';
+if (filterKey === 'tested') return card.dataset.cf === 'no';
 return true;
 }
 
@@ -1839,6 +1872,24 @@ filterPills.forEach(function(p){
 p.addEventListener('click', function(){ applyFilter(p.getAttribute('data-filter')); });
 });
 
+// The four stamp buttons above the search box are a second, quicker way
+// into the same four-way filter the "filter & sort" panel already offers
+// (all/cf-vegan/cf, plus the two new owner/tested keys). Clicking an
+// already-active stamp clears back to "all", same as the pills.
+var answerBtns = document.querySelectorAll('#answerFilters .k-ans-btn');
+function setActiveAnswerBtns(){
+answerBtns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-answer') === activeFilter); });
+}
+answerBtns.forEach(function(b){
+b.addEventListener('click', function(){
+var key = b.getAttribute('data-answer');
+applyFilter(activeFilter === key ? 'all' : key);
+setActiveAnswerBtns();
+});
+});
+var _setActivePillsOrig = setActivePills;
+setActivePills = function(){ _setActivePillsOrig(); setActiveAnswerBtns(); };
+
 var filterSortToggle = document.getElementById('filterSortToggle');
 var filterSortPanel = document.getElementById('filterSortPanel');
 if (filterSortToggle && filterSortPanel) {
@@ -1979,6 +2030,18 @@ saveState({ mode: 'search', searchQuery: q });
   showCategory(key);
 })();
 
+// A ?q=<term> link (used by the homepage search box and its "popular
+// brands" chips) drops straight into the full list with that term typed
+// into the search field, exactly as if someone had typed it themselves.
+(function searchFromUrl(){
+  var m = location.search.match(/[?&]q=([^&]+)/);
+  if (!m || !searchInput) return;
+  var term = decodeURIComponent(m[1].replace(/\+/g, ' '));
+  if (!term) return;
+  searchInput.value = term;
+  searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+})();
+
 (function restoreState(){
   var raw;
   try { raw = sessionStorage.getItem(AHK_STATE_KEY); } catch (e) { raw = null; }
@@ -2039,9 +2102,9 @@ saveState({ mode: 'search', searchQuery: q });
 <p>Rabbit-approved. &#128007;</p>
 </div>
 <style>
-.rabbit-stamp { display:flex; align-items:center; gap:18px; background:var(--ahk-warm-soft,#fbf3ea); border:1px solid var(--ahk-warm-border,#e9d9c4); border-radius:22px; padding:20px 24px; margin:38px auto 8px; max-width:520px; }
+.rabbit-stamp { display:flex; align-items:center; gap:18px; background:var(--ahk-warm-soft,#FBEDE4); border:1px solid var(--ahk-warm-border,#EBDAD1); border-radius:22px; padding:20px 24px; margin:38px auto 8px; max-width:520px; }
 .rabbit-stamp img { width:76px; height:76px; border-radius:50%; object-fit:cover; flex:none; }
-.rabbit-stamp p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; line-height:1.35; color:var(--ahk-warm-deep,#8a6340); margin:0; }
+.rabbit-stamp p { font-family:'Gloock',serif; font-style:italic; font-size:22px; line-height:1.35; color:var(--ahk-warm-deep,#A0582E); margin:0; }
 @media (max-width:480px){ .rabbit-stamp { gap:14px; padding:16px 18px; } .rabbit-stamp img { width:60px; height:60px; } .rabbit-stamp p { font-size:19px; } }
 </style>
 </main>
@@ -2062,8 +2125,8 @@ saveState({ mode: 'search', searchQuery: q });
 <p class="nf-msg" id="nf-msg-2" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=4"></script>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="js/site.js?v=5"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>

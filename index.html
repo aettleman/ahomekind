@@ -13,10 +13,10 @@
 <meta property="og:image:alt" content="a home kind - cruelty-free, vegan living">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
@@ -25,121 +25,91 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.hero-banner { width:100%; background:var(--ahk-surface); display:flex; align-items:center; justify-content:center; overflow:hidden; }
-.hero-banner img { display:block; max-width:100%; width:auto; height:auto; max-height:320px; margin:0 auto; }
-@media(max-width:700px){ .hero-banner img { max-height:190px; } }
-.scan-hero { background:#3d4a3a; padding:8px 24px 40px; text-align:center; }
-.scan-hero-kicker { color:#d9c99a; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin:0 0 18px; }
-.scan-hero-btn { display:inline-flex; align-items:center; justify-content:center; gap:12px; background:#e6d4a8; color:#3d4a3a; font-family:'Karla',sans-serif; font-weight:700; font-size:16px; letter-spacing:0.5px; text-decoration:none; padding:22px 40px; border-radius:60px; box-shadow:0 10px 26px rgba(0,0,0,0.22); transition:transform 0.18s ease, box-shadow 0.18s ease; }
-.scan-hero-btn:hover, .scan-hero-btn:focus-visible { transform:translateY(-2px) scale(1.02); box-shadow:0 14px 30px rgba(0,0,0,0.28); }
-.scan-hero-icon svg circle, .scan-hero-icon svg rect, .scan-hero-icon svg path { stroke:#3d4a3a; }
-.scan-hero-sub { color:#c9d1c3; font-size:13px; margin:18px 0 0; }
-@media(prefers-reduced-motion: reduce){ .scan-hero-btn { transition:none; } }
-.impact-teaser { display:block; background:var(--ahk-impact-bg, #e6efe3); border-top:0.5px solid var(--ahk-impact-line, #b9c7ae); border-bottom:0.5px solid var(--ahk-impact-line, #b9c7ae); text-decoration:none; transition:background 0.18s ease; }
-.impact-teaser:hover, .impact-teaser:focus-visible { background:var(--ahk-impact-bg-hover, #dbe8d6); }
-.impact-teaser-inner { max-width:460px; margin:0 auto; padding:34px 24px; text-align:center; }
-.impact-teaser-kicker { color:var(--ahk-green); font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px; }
-.impact-teaser-num { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:44px; color:var(--ahk-heading); line-height:1; margin-bottom:12px; }
-.impact-teaser-num span { color:var(--ahk-heading); }
-.impact-teaser-sub { color:var(--ahk-text); font-size:13.5px; line-height:1.8; margin-bottom:20px; }
-.impact-teaser-cta { display:inline-block; background:#4d6b4f; color:#f4efe2; font-weight:600; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:13px 26px; border-radius:30px; }
-.impact-teaser:hover .impact-teaser-cta { background:#3d5a3f; }
-.rabbit-caption { text-align:center; font-family:'Dancing Script',cursive; font-weight:600; font-size:21px; line-height:1.2; color:var(--ahk-gold-deep); background:var(--ahk-surface); margin:0; padding:2px 24px 22px; }
-@media(max-width:480px){ .rabbit-caption { font-size:17px; padding:2px 16px 20px; } }
+/* ---------- Kindred, remade: home page ---------- */
+.kick-dot { display:inline-flex; align-items:center; gap:8px; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:var(--ahk-text-muted); }
+.kick-dot::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--ahk-green-soft); box-shadow:0 0 0 3px var(--ahk-sage-soft); }
 
-/* ============================================================
-   HERO -- one photograph, with the headline on it
-   ============================================================
-   The opening is a single full-bleed photograph running the whole
-   width of the screen, with the headline set over the quiet, shaded
-   left-hand side of it. A left-to-right gradient sits between the
-   photo and the type so the words always have a dark bed under them
-   whatever the image does, without dimming the half of the picture
-   the rabbit is actually in.
+.k-hero { padding:14px 24px 0; }
+.k-hero h1 { font:400 39px/1.05 'Gloock',serif; margin:14px 0 0; max-width:11ch; text-wrap:balance; }
+.k-hero h1 em { font-style:normal; color:var(--ahk-gold); }
+@media (min-width:560px){ .k-hero h1 { font-size:48px; max-width:13ch; } }
 
-   Everything else (the rotating fact and the three circles) sits in
-   the forest green directly underneath, so the page still opens on
-   one screen rather than a stack of colour blocks. */
-.hero-x { position: relative; background: var(--ahk-forest); overflow: hidden; padding-top: 10px; }
-/* The height lives on the frame rather than the image, so a missing or
-   slow photo leaves a green band of the right size instead of collapsing
-   the headline onto whatever follows it. */
-/* Inset, not full-bleed. This is the whole point of the feathering: a
-   fading edge needs page colour on the other side of it to fade into.
-   Run the photo to the edge of the screen and the fade dissolves into
-   the edge of the phone instead, which reads as a hard crop however
-   soft the mask is. The padding here is what makes it visible. */
-.hero-x-art { position: relative; width: 100%; height: 430px; padding: 4px 10px 0; }
-/* Feathered back into the green, the way the rest of the site's photos
-   are. Full-bleed left/right/top, with the bottom edge dissolving into
-   the band below instead of stopping on a hard line. */
-.hero-x-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 66% 50%;
-  /* Same soft, out-of-focus fade as every other photo on the site (see
-     .hero-plain): a blurred rounded rectangle used as the mask, so the
-     edges genuinely dissolve rather than cutting off on a visible line -
-     no hard gradient stop anywhere. */
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='f' filterUnits='userSpaceOnUse' x='-60' y='-60' width='220' height='220'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3Cg filter='url(%23f)' fill='white'%3E%3Crect x='9' y='9' width='82' height='82' rx='16'/%3E%3C/g%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
-.hero-x-photo[hidden] { display: none; }
-/* No wash over the photo itself, the feathered edges stay exactly as
-   they are all the way round. Just a soft dark cloud sitting behind the
-   headline, centred on the middle-left of the photo, so the text is
-   readable without dimming the picture. */
-.hero-x-copy { position: absolute; left: 0; top: 0; bottom: 0; width: min(94%, 360px); padding: 6px 20px; text-align: left; z-index: 2; display: flex; align-items: center;
-  background: linear-gradient(100deg, rgba(20,26,18,0.6) 0%, rgba(20,26,18,0.42) 55%, rgba(20,26,18,0) 92%); }
-.hero-x h1 { color: #f7f3e7; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.14; letter-spacing: 0.2px; text-transform: none; margin: 0; max-width: 8.5ch; text-wrap: balance; text-shadow: 0 2px 10px rgba(15,20,13,0.55); }
-.hero-x h1 em { font-style: italic; color: #f0dfae; }
-.hero-x-below { padding: 18px 24px 16px; text-align: center; }
-.hero-x .hero-fact-carousel { margin-left: auto; margin-right: auto; }
-.hero-x .hero-fact-text { max-width: 400px; margin-left: auto; margin-right: auto; font-size: 13.5px; line-height: 1.7; min-height: 66px; margin-bottom: 12px; }
-.hero-x-links { display: flex; justify-content: center; gap: 14px; margin-top: 4px; }
-.hero-x-link { flex: 0 1 118px; display: flex; flex-direction: column; align-items: center; gap: 9px; text-decoration: none; }
-.hero-x-link-icon { width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(244,239,226,0.3); background: rgba(244,239,226,0.07); display: flex; align-items: center; justify-content: center; transition: background 0.18s ease, border-color 0.18s ease; }
-.hero-x-link:hover .hero-x-link-icon, .hero-x-link:focus-visible .hero-x-link-icon { background: rgba(244,239,226,0.15); border-color: var(--ahk-gold-soft); }
-.hero-x-link-icon.is-lead { background: #c9b184; border-color: #c9b184; }
-.hero-x-link:hover .hero-x-link-icon.is-lead, .hero-x-link:focus-visible .hero-x-link-icon.is-lead { background: #d6c096; border-color: #d6c096; }
-.hero-x-link-label { font-size: 11.5px; letter-spacing: 0.4px; color: var(--ahk-on-dark-muted); text-align: center; line-height: 1.4; }
-@media (prefers-reduced-motion: reduce) { .hero-x-link-icon { transition: none; } }
+.k-win { position:relative; margin:20px 24px 0; max-width:640px; }
+.k-win img { display:block; width:100%; height:260px; object-fit:cover; object-position:50% 30%; border-radius:999px 999px 26px 26px; }
+@media (min-width:560px){ .k-win img { height:340px; } }
+.k-win-stamp {
+  position:absolute; right:8px; top:-16px; width:92px; height:92px; border-radius:50%;
+  background:var(--ahk-gold); color:#fff; display:grid; place-items:center; text-align:center;
+  transform:rotate(9deg); box-shadow:0 10px 24px -10px rgba(42,22,48,0.5); z-index:3;
+}
+.k-win-stamp span { font:400 13px/1.15 'Gloock',serif; }
+.k-win-stamp b { display:block; font:400 19px/1 'Gloock',serif; margin-bottom:2px; }
 
-@media (min-width: 860px) {
-  /* Round three on the desktop hero (18 September). The photo itself
-     has a large, naturally dark, out-of-focus stretch of grass on the
-     left with nothing happening in it, so the words sit directly in
-     that empty space with no panel/box behind them at all, just a soft
-     shadow for legibility - the first two rounds (a boxed card, then a
-     narrower unboxed column) were both rejected. The text column is
-     wide enough that lines actually stretch across the space instead
-     of wrapping into a tall, narrow, "squashed" strip. Mobile is
-     completely unaffected by anything in this block. */
-  .hero-x-art { height: clamp(460px, 62vh, 640px); padding: 8px 30px 0; }
-  .hero-x-photo { object-position: 78% 46%; }
-  .hero-x-copy { width: 62%; padding: 0 40px 0 48px; background: none; }
-  .hero-x h1 { font-size: 58px; line-height: 1.16; max-width: 18ch; text-wrap: balance;
-    text-shadow: 0 3px 18px rgba(10,14,8,0.65), 0 1px 3px rgba(10,14,8,0.8); }
-  .hero-x-below { padding: 26px 24px 36px; }
+.k-sbox {
+  position:relative; margin:-28px 16px 0; z-index:5; display:flex; align-items:center; gap:10px;
+  background:var(--ahk-card); border-radius:99px; padding:7px 7px 7px 20px;
+  box-shadow:0 14px 30px -14px rgba(42,22,48,0.45); font:400 17px 'Gloock',serif; color:var(--ahk-text-muted);
+  text-decoration:none;
 }
-/* Short screens (an iPhone SE, or any phone with a lot of browser chrome
-   on show) get a shallower photo and slightly smaller type, so the three
-   circles still clear the fold. Nothing is squashed; it all scales. */
-@media (max-height: 720px) {
-  .hero-x-art { height: 340px; padding: 2px 10px 0; }
-  .hero-x-copy { width: min(94%, 320px); padding: 6px 16px; }
-  .hero-x h1 { font-size: 34px; }
-  .hero-x-below { padding: 16px 24px 22px; }
-  .hero-x .hero-fact-text { font-size: 12.5px; line-height: 1.6; min-height: 58px; margin-bottom: 8px; }
-  .hero-x .hero-fact-nav { transform: scale(0.92); }
-  .hero-x-link-icon { width: 46px; height: 46px; }
-}
-@media (max-width: 480px) {
-  .hero-x-links { gap: 8px; }
-  .hero-x-link-label { font-size: 11px; }
-}
-/* Must come after the 480px block above, or it gets overridden by it and
-   the smallest phones keep the larger headline. */
-@media (max-width: 360px) {
-  .hero-x h1 { font-size: 38px; }
+.k-sbox span { flex:1; }
+.k-sbox b { width:46px; height:46px; border-radius:50%; background:var(--ahk-forest); color:#fff; display:grid; place-items:center; flex:none; }
+.k-sbox svg { width:19px; height:19px; }
+
+.k-quick { display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:14px 24px 0; }
+.k-quick small { font-size:12px; color:var(--ahk-text-muted); margin-right:2px; }
+.k-quick a { font:600 12.5px 'Hanken Grotesk',sans-serif; padding:6px 12px; border-radius:99px; border:1px solid var(--ahk-border); background:var(--ahk-card); color:var(--ahk-heading); text-decoration:none; }
+.k-quick a:hover { border-color:var(--ahk-heading); }
+
+.k-four-wrap { padding:34px 24px 0; }
+.k-four { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; max-width:640px; }
+.k-four > div { background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:20px; padding:14px; display:flex; flex-direction:column; gap:9px; }
+.k-four b { display:block; font:400 17px/1.15 'Gloock',serif; color:var(--ahk-heading); }
+.k-four span { font-size:12px; color:var(--ahk-text-muted); line-height:1.4; }
+
+.k-count { margin-top:34px; background:var(--ahk-forest); color:var(--ahk-on-dark); padding:28px 24px; }
+.k-count-kick { color:var(--ahk-gold-soft); font:700 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; }
+.k-count-num { font:400 62px/0.9 'Gloock',serif; margin-top:8px; }
+.k-count-num .ahk-hand { font-size:22px; margin-left:8px; vertical-align:2px; }
+.k-bars { display:flex; height:10px; gap:3px; margin:18px 0 12px; max-width:640px; }
+.k-bars i { border-radius:3px; display:block; }
+.k-count-row { display:flex; gap:20px; font-size:12px; opacity:0.92; flex-wrap:wrap; }
+.k-count-row b { display:block; font:400 24px 'Gloock',serif; }
+
+.k-idea { padding:34px 24px 0; }
+.k-idea h2 { font:400 27px/1.15 'Gloock',serif; margin:8px 0 8px; }
+.k-idea p { font-size:13.5px; color:var(--ahk-text-muted); line-height:1.7; max-width:52ch; }
+
+.k-strip { display:flex; gap:12px; overflow-x:auto; padding:18px 24px 4px; scrollbar-width:none; }
+.k-strip::-webkit-scrollbar { display:none; }
+.k-strip figure { margin:0; flex:none; width:140px; }
+.k-strip img { display:block; width:100%; height:186px; object-fit:cover; border-radius:999px 999px 26px 26px; }
+.k-strip figcaption { font:400 16px 'Gloock',serif; margin-top:9px; color:var(--ahk-heading); }
+.k-strip figcaption span { display:block; font:500 12px 'Hanken Grotesk',sans-serif; color:var(--ahk-text-muted); }
+
+.k-letter { margin:34px 24px 0; display:flex; gap:16px; background:var(--ahk-card); border:1px solid var(--ahk-border-soft); border-radius:26px; padding:20px; align-items:flex-start; max-width:640px; }
+.k-letter-kick { font:700 10.5px 'Hanken Grotesk',sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:var(--ahk-text-muted); }
+.k-letter h3 { font:400 22px 'Gloock',serif; margin:4px 0 8px; }
+.k-letter p { font-size:13.5px; color:var(--ahk-text); line-height:1.65; }
+.k-letter .ahk-hand { display:block; font-size:24px; margin-top:8px; }
+
+.k-impact { margin:20px 24px 0; display:flex; gap:16px; align-items:center; background:var(--ahk-sage-soft); border-radius:26px; padding:20px; max-width:640px; text-decoration:none; }
+.k-impact-num { font:400 56px/1 'Gloock',serif; color:#2d4a2f; flex:none; }
+.k-impact p { font-size:13.5px; color:#2d4a2f; margin:0; }
+.k-impact b { display:block; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; margin-top:8px; color:#2d4a2f; }
+
+@media (min-width:900px){
+  .k-hero, .k-quick, .k-four-wrap, .k-idea, .k-strip { max-width:1080px; margin-left:auto; margin-right:auto; padding-left:24px; padding-right:24px; }
+  .k-hero h1 { font-size:64px; max-width:14ch; }
+  .k-win { max-width:1032px; margin-left:auto; margin-right:auto; }
+  .k-win img { height:440px; }
+  .k-sbox { max-width:640px; margin-left:max(40px, calc((100% - 1032px)/2 + 16px)); margin-right:auto; }
+  .k-four { max-width:none; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .k-count { padding-left:max(24px, calc((100% - 1032px)/2)); padding-right:max(24px, calc((100% - 1032px)/2)); }
+  .k-bars { max-width:none; }
+  .k-strip { overflow:visible; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .k-strip figure { width:auto; }
+  .k-strip img { height:320px; }
+  .k-letter, .k-impact { max-width:1032px; margin-left:auto; margin-right:auto; }
 }
 </style>
 </head>
@@ -148,7 +118,6 @@
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
@@ -160,37 +129,88 @@
 </nav>
 </div>
 </header>
-<section class="hero-x">
 
-<div class="hero-x-art">
-<img class="hero-x-photo" src="images/hero-rabbit-meadow.jpg" alt="A rabbit sitting in long meadow grass in evening light" onerror="this.hidden=true">
-<div class="hero-x-copy">
-<h1>your shampoo doesn't need to hurt <em>anyone</em>.</h1>
+<div class="k-hero">
+<span class="kick-dot">1,069 brands, checked by hand</span>
+<h1>Your shampoo didn't need to <em>hurt anyone.</em></h1>
+</div>
+
+<div class="k-win">
+<img src="images/hero-two-rabbits.jpg" alt="Two rabbits" onerror="this.hidden=true">
+<div class="k-win-stamp"><span><b>by hand</b>every brand</span></div>
+</div>
+
+<form class="k-sbox" action="brand-check.html" method="get" role="search">
+<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/></svg>
+<label for="homeSearch" class="visually-hidden">Search any brand</label>
+<input type="text" id="homeSearch" name="q" placeholder="Search any brand, e.g. Garnier" style="border:0;background:none;flex:1;font:400 17px 'Gloock',serif;color:var(--ahk-heading);outline:none;padding:0;" autocomplete="off">
+<button type="submit" aria-label="Search">
+<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/></svg>
+</button>
+</form>
+
+<div class="k-quick">
+<small>Popular:</small>
+<a href="brand-check.html?q=Dove">Dove</a>
+<a href="brand-check.html?q=Garnier">Garnier</a>
+<a href="brand-check.html?q=Lush">Lush</a>
+<a href="brand-check.html?q=e.l.f.">e.l.f.</a>
+</div>
+
+<div class="k-four-wrap ahk-reveal">
+<span class="kick-dot" style="margin-left:0">four possible answers</span>
+<div class="k-four">
+<div>
+<span class="ahk-stamp tier-good"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 7-7c0 5-3 9-3 9s6-1 8-6a9 9 0 0 1-2 11 7 7 0 0 1-6 0Z"/></svg></span>
+<b>Cruelty-free &amp; vegan</b>
+<span>Not tested, nothing from animals.</span>
+</div>
+<div>
+<span class="ahk-stamp tier-check"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+<b>Cruelty-free</b>
+<span>Not tested. Vegan varies by product.</span>
+</div>
+<div>
+<span class="ahk-stamp tier-warn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.7 17.3A1.6 1.6 0 0 0 4.1 20h15.8a1.6 1.6 0 0 0 1.4-2.7L13.7 3.9a1.6 1.6 0 0 0-2.8 0Z"/></svg></span>
+<b>Owner isn't</b>
+<span>The brand's fine, the parent company tests.</span>
+</div>
+<div>
+<span class="ahk-stamp tier-bad"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+<b>Tested</b>
+<span>Tests on animals, or sells where it's required.</span>
+</div>
+</div>
+</div>
+
+<div class="k-count ahk-reveal">
+<span class="k-count-kick">what 1,069 checks found</span>
+<div class="k-count-num">1,069<span class="ahk-hand">so far</span></div>
+<div class="k-bars">
+<i style="flex:681;background:#9DBB98"></i>
+<i style="flex:57;background:#E8804C"></i>
+<i style="flex:317;background:#D7708A"></i>
+<i style="flex:14;background:#8C7A88"></i>
+</div>
+<div class="k-count-row">
+<div><b>681</b>cruelty-free</div>
+<div><b>57</b>owner isn't</div>
+<div><b>317</b>tested</div>
 </div>
 </div>
 
-<div class="hero-x-below">
-<div class="hero-cta-row">
-<a href="scan.html" class="hero-cta hero-cta-primary">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/>
-<path d="M20 16v2a2 2 0 0 1-2 2h-2"/><path d="M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.2"/>
-</svg>
-scan a product
-</a>
-<a href="brand-check.html" class="hero-cta hero-cta-secondary">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<circle cx="10.5" cy="10.5" r="6.2"/><path d="m19.5 19.5-4.2-4.2"/>
-</svg>
-check a brand
-</a>
-</div>
+<div class="k-idea ahk-reveal">
+<span class="kick-dot" style="margin-left:0">the idea behind this</span>
+<h2>Someone, not something.</h2>
+<p>Every product has a story behind it. Check that story in seconds, and choose kindly without it taking over your life.</p>
 </div>
 
-</section>
-
-
-<section class="ahk-stats-strip-wrap" id="homeStatsSlot"></section>
+<div class="k-strip">
+<figure><img src="images/animal-lamb.jpg" alt="A lamb"><figcaption>Curious<span>a lamb</span></figcaption></figure>
+<figure><img src="images/animal-piglet.jpg" alt="A piglet" style="object-position:40% center;"><figcaption>Muddy<span>a piglet</span></figcaption></figure>
+<figure><img src="images/animal-cow.jpg" alt="A cow"><figcaption>Patient<span>a cow</span></figcaption></figure>
+<figure><img src="images/animal-beagle.jpg" alt="A beagle"><figcaption>Hopeful<span>a beagle</span></figcaption></figure>
+</div>
 
 <div class="myth-section">
 <div class="myth-section-inner ahk-reveal">
@@ -199,18 +219,21 @@ check a brand
 </div>
 </div>
 
-<a href="impact.html" class="impact-teaser">
-<div class="impact-teaser-inner">
-<div class="impact-portrait">
-<div class="ahk-slot">
-<img src="images/impact-animal.jpg" alt="" loading="lazy" onerror="this.hidden=true">
-<span class="ahk-slot-label">animal</span>
+<div class="k-letter ahk-reveal">
+<img src="images/hero-about.jpg" alt="" style="width:88px;height:110px;flex:none;border-radius:999px 999px 26px 26px;object-fit:cover;object-position:50% 25%;" onerror="this.hidden=true">
+<div>
+<span class="k-letter-kick">a note from me</span>
+<h3>Hi, I'm Ash.</h3>
+<p>Every brand here was looked up by me: who owns it, which certification backs it, and what that means for you. No lectures, just what's true.</p>
+<span class="ahk-hand">Ash x</span>
 </div>
 </div>
-<p class="impact-teaser-kicker">your impact, calculated</p>
-<p class="impact-teaser-num"><span id="impactTeaserNum">7</span> animals</p>
-<p class="impact-teaser-sub">not farmed for you, over a year, eating plant-based just 3 days a week - based on conservative UK figures. See your own number.</p>
-<span class="impact-teaser-cta">try the calculator</span>
+
+<a href="impact.html" class="k-impact ahk-reveal">
+<div class="k-impact-num" id="impactTeaserNum">7</div>
+<div>
+<p>animals a year not farmed for you, from three plant-based days a week, based on conservative UK figures.</p>
+<b>work out yours &rarr;</b>
 </div>
 </a>
 
@@ -240,8 +263,8 @@ check a brand
 <p class="nf-msg" id="nf-msg-5" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=4"></script>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="js/site.js?v=5"></script>
 <script src="js/newsletter.js"></script>
 
 <!-- Begin TradeTracker SuperTag Code -->

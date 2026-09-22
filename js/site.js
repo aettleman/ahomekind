@@ -702,7 +702,7 @@ var startOfYear = new Date(now.getFullYear(), 0, 0);
 var dayOfYear = Math.floor((now - startOfYear) / 86400000);
 var pick = SWAPS[dayOfYear % SWAPS.length];
 el.innerHTML =
-'<p class="swap-of-day-kicker" style="color:#4d6b4f; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">one small swap</p>' +
+'<p class="swap-of-day-kicker" style="color:#3A1F3D; font-size:10.5px; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">one small swap</p>' +
 '<h2 class="myth-heading" style="font-size:24px;">today’s swap, made for you</h2>' +
 '<p class="myth-sub" style="margin-bottom:0;">A different genuine, certified alternative each day, straight from the brand check - no need to change everything at once.</p>' +
 '<div class="swap-of-day-card">' +

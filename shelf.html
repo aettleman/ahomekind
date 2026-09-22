@@ -13,10 +13,10 @@
 <meta property="og:image:alt" content="Scan a whole shelf">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
@@ -25,72 +25,72 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.drop { border:1.5px dashed #cfc4a9; border-radius:14px; padding:36px 20px; text-align:center; background:#ece5d5; margin-bottom:16px; }
-.big-btn { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
-.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.drop { border:1.5px dashed #E0C9BE; border-radius:14px; padding:36px 20px; text-align:center; background:#F1E0D7; margin-bottom:16px; }
+.big-btn { display:inline-block; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3A1F3D; border:1px solid #7C9A78; }
 #preview { max-width:100%; border-radius:12px; margin-bottom:16px; display:none; }
-.bar { height:6px; background:#dcd3c0; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
-.bar span { display:block; height:100%; width:0%; background:#6f8768; transition:width 0.3s; }
+.bar { height:6px; background:#E5CFC4; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
+.bar span { display:block; height:100%; width:0%; background:#7C9A78; transition:width 0.3s; }
 .hit { border-radius:12px; padding:18px 20px; margin-bottom:12px; }
-.hit.good { background:#e6efe3; border:1px solid #6f8768; }
-.hit.warn { background:#f6ecd9; border:1px solid #d9b06e; }
-.hit.bad { background:#f3e2df; border:1px solid #a5453d; }
-.hit.check { background:#ece5d5; border:1px solid #cfc4a9; }
+.hit.good { background:#DCE6D6; border:1px solid #7C9A78; }
+.hit.warn { background:#FBE3D3; border:1px solid #E8A57A; }
+.hit.bad { background:#F5D3D6; border:1px solid #C9546A; }
+.hit.check { background:#F1E0D7; border:1px solid #E0C9BE; }
 .hit h3 { margin-bottom:6px; }
 
 /* Kind Swaps -- same shared widget/logic as scan.html and brand-check.html
    (see js/swap.js), just not previously wired up here. Styled to sit
    quietly inside each brand's own result card rather than as a separate
    block, since a shelf photo can turn up several brands at once. */
-.kswap-loading { font-size:13px; color:#8a8672; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:14px; }
-.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:30px; padding:9px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.5px; color:#3d4a3a; }
+.kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:9px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
 .kswap-summary::before { content:"\1F343"; font-size:12px; }
-.kswap-summary:hover { background:#e2d9bd; }
+.kswap-summary:hover { background:#E5CFC4; }
 .kswap-details[open] .kswap-summary { border-radius:14px 14px 0 0; }
 .kswap-details-body { padding-top:14px; }
 .kswap-alts { display:flex; flex-direction:column; gap:10px; margin-bottom:12px; }
-.kswap-alt-card { border:0.5px solid #cfc4a9; border-radius:12px; padding:14px 16px; background:#fff; }
-.kswap-alt-name { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:4px; }
-.kswap-alt-note { font-size:12.5px; line-height:1.6; color:#5c5c4f; margin-bottom:10px; }
-.kswap-compare { margin:4px 0 10px; padding:10px 12px; border-radius:10px; background:#f4efe2; border:0.5px solid #dcd2b8; }
-.kswap-compare-title { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
-.kswap-compare-body { font-size:12px; line-height:1.6; color:#5c5c4f; margin-bottom:0; }
-.kswap-compare-verified { background:#e6efe3; border-color:#b9c7ae; }
-.kswap-compare-verified .kswap-compare-title { color:#4d6b4f; }
-.kswap-compare-link { display:inline-block; margin-top:8px; font-size:11.5px; font-weight:600; color:#4d6b4f; }
+.kswap-alt-card { border:0.5px solid #E0C9BE; border-radius:12px; padding:14px 16px; background:#fff; }
+.kswap-alt-name { font-family:'Gloock',serif; font-size:16px; color:#3A1F3D; margin-bottom:4px; }
+.kswap-alt-note { font-size:12.5px; line-height:1.6; color:#5A4550; margin-bottom:10px; }
+.kswap-compare { margin:4px 0 10px; padding:10px 12px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
+.kswap-compare-title { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-body { font-size:12px; line-height:1.6; color:#5A4550; margin-bottom:0; }
+.kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
+.kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
+.kswap-compare-link { display:inline-block; margin-top:8px; font-size:11.5px; font-weight:600; color:#3A1F3D; }
 .kswap-alt-actions { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-.kswap-alt-link { font-size:11.5px; letter-spacing:0.5px; color:#6f8768; }
-.kswap-swap-btn { background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; text-transform:uppercase; padding:9px 14px; border:none; border-radius:30px; cursor:pointer; }
-.kswap-swap-btn:hover { background:#3d5a3f; }
-.kswap-unlock { text-align:center; border:0.5px solid #b9c7ae; background:#eef1e9; border-radius:14px; padding:22px 18px; }
-.kswap-unlock-title { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-unlock-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:14px; }
-.kswap-freebie-card { margin-top:16px; padding-top:16px; border-top:0.5px solid #cfc4a9; }
-.kswap-freebie-title { font-family:'Cormorant Garamond',serif; font-size:15px; color:#3d4a3a; margin-bottom:6px; }
-.kswap-freebie-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:10px; }
-.kswap-none { border:0.5px solid #cfc4a9; background:#ece5d5; border-radius:14px; padding:18px 16px; text-align:center; }
-.kswap-none-title { font-family:'Cormorant Garamond',serif; font-size:16px; color:#3d4a3a; margin-bottom:8px; }
-.kswap-none-body { font-size:13px; line-height:1.65; color:#5c5c4f; margin-bottom:14px; }
-.kswap-affiliate-row { margin:10px 0 0; padding-top:10px; border-top:0.5px dashed #dcd2b8; }
-.kswap-shop-link { display:block; font-family:'Karla',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; color:#4d6b4f; text-decoration:none; }
+.kswap-alt-link { font-size:11.5px; letter-spacing:0.5px; color:#7C9A78; }
+.kswap-swap-btn { background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; text-transform:uppercase; padding:9px 14px; border:none; border-radius:30px; cursor:pointer; }
+.kswap-swap-btn:hover { background:#2A1630; }
+.kswap-unlock { text-align:center; border:0.5px solid #C5D6BE; background:#F1E0D7; border-radius:14px; padding:22px 18px; }
+.kswap-unlock-title { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-unlock-body { font-size:13px; line-height:1.65; color:#5A4550; margin-bottom:14px; }
+.kswap-freebie-card { margin-top:16px; padding-top:16px; border-top:0.5px solid #E0C9BE; }
+.kswap-freebie-title { font-family:'Gloock',serif; font-size:15px; color:#3A1F3D; margin-bottom:6px; }
+.kswap-freebie-body { font-size:13px; line-height:1.65; color:#5A4550; margin-bottom:10px; }
+.kswap-none { border:0.5px solid #E0C9BE; background:#F1E0D7; border-radius:14px; padding:18px 16px; text-align:center; }
+.kswap-none-title { font-family:'Gloock',serif; font-size:16px; color:#3A1F3D; margin-bottom:8px; }
+.kswap-none-body { font-size:13px; line-height:1.65; color:#5A4550; margin-bottom:14px; }
+.kswap-affiliate-row { margin:10px 0 0; padding-top:10px; border-top:0.5px dashed #E5CFC4; }
+.kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10px; color:#a39d87; letter-spacing:0.2px; margin-top:3px; }
+.kswap-affiliate-note { display:block; font-size:10px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
 
 /* Live shelf camera: a viewfinder with a guide frame and a running tip
    line, so you know where to point and when the shot is actually good
    enough to read, instead of guessing after the fact. */
-.camera-wrap { position:relative; max-width:420px; margin:0 auto 14px; border-radius:14px; overflow:hidden; background:#20261d; display:none; }
-#shelfVideo { width:100%; aspect-ratio:3/4; display:block; object-fit:cover; background:#20261d; }
-.shelf-guide { position:absolute; top:16%; left:8%; right:8%; bottom:32%; border:2px dashed rgba(244,239,226,0.85); border-radius:10px; pointer-events:none; }
-.shelf-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#f4efe2; background:rgba(20,24,18,0.72); padding:5px 10px; border-radius:20px; }
-.shelf-tip { position:absolute; left:10px; right:10px; bottom:70px; text-align:center; font-size:12.5px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:8px 10px; transition:background 0.2s ease; }
-.shelf-tip.good { background:rgba(77,107,79,0.85); }
+.camera-wrap { position:relative; max-width:420px; margin:0 auto 14px; border-radius:14px; overflow:hidden; background:#1E0F22; display:none; }
+#shelfVideo { width:100%; aspect-ratio:3/4; display:block; object-fit:cover; background:#1E0F22; }
+.shelf-guide { position:absolute; top:16%; left:8%; right:8%; bottom:32%; border:2px dashed rgba(251,244,239,0.85); border-radius:10px; pointer-events:none; }
+.shelf-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#FBF4EF; background:rgba(28,14,32,0.72); padding:5px 10px; border-radius:20px; }
+.shelf-tip { position:absolute; left:10px; right:10px; bottom:70px; text-align:center; font-size:12.5px; line-height:1.5; color:#FBF4EF; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:8px 10px; transition:background 0.2s ease; }
+.shelf-tip.good { background:rgba(58,31,61,0.85); }
 .shelf-tip.warn { background:rgba(158,90,42,0.8); }
 .camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; align-items:center; gap:10px; }
-.camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
-.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; padding:13px 26px; }
+.camera-controls button { background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(251,244,239,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button.snap { background:#F6C6A8; color:#3A1F3D; border-color:#F6C6A8; padding:13px 26px; }
 .camera-controls button:hover { filter:brightness(1.08); }
 
 /* Forest-green frame around the whole shelf-scan control, matching the
@@ -99,17 +99,17 @@
 .shelf-frame { background: var(--ahk-forest); border-radius: 26px; padding: 20px 16px 22px; margin: 0 auto 22px; max-width: 460px; }
 @media (min-width: 860px) { .shelf-frame { max-width: 520px; } }
 .shelf-frame .camera-wrap { margin-bottom:14px; }
-.shelf-frame .shelf-controls, .shelf-frame .drop { color: var(--ahk-on-dark, #f4efe2); }
-.shelf-frame .live-scan-caption { color: rgba(244,239,226,0.75); }
-.shelf-frame #shelfCancel { color: #f4efe2; }
+.shelf-frame .shelf-controls, .shelf-frame .drop { color: var(--ahk-on-dark, #FBF4EF); }
+.shelf-frame .live-scan-caption { color: rgba(251,244,239,0.75); }
+.shelf-frame #shelfCancel { color: #FBF4EF; }
 .shelf-stats { display:flex; gap:8px; margin:0 0 16px; }
-.shelf-stat { flex:1; text-align:center; background:rgba(244,239,226,0.94); border-radius:14px; padding:10px 6px; }
-.shelf-stat-num { display:block; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:22px; line-height:1; margin-bottom:3px; }
-.shelf-stat-num.good { color:#3d5a3f; }
-.shelf-stat-num.check { color:#9e5a2a; }
-.shelf-stat-num.bad { color:#a5453d; }
-.shelf-stat-label { font-size:9px; letter-spacing:0.6px; text-transform:uppercase; color:#5c5c4f; }
-.live-pulse { display:inline-block; width:7px; height:7px; border-radius:50%; background:#c9433a; margin-right:6px; animation:livePulse 1.2s ease-in-out infinite; }
+.shelf-stat { flex:1; text-align:center; background:rgba(251,244,239,0.94); border-radius:14px; padding:10px 6px; }
+.shelf-stat-num { display:block; font-family:'Gloock',serif; font-weight:600; font-size:22px; line-height:1; margin-bottom:3px; }
+.shelf-stat-num.good { color:#2A1630; }
+.shelf-stat-num.check { color:#B85A2A; }
+.shelf-stat-num.bad { color:#C9546A; }
+.shelf-stat-label { font-size:9px; letter-spacing:0.6px; text-transform:uppercase; color:#5A4550; }
+.live-pulse { display:inline-block; width:7px; height:7px; border-radius:50%; background:#C9546A; margin-right:6px; animation:livePulse 1.2s ease-in-out infinite; }
 @keyframes livePulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
 @media(prefers-reduced-motion: reduce){ .live-pulse { animation:none; } }
 
@@ -118,13 +118,13 @@
    only carries the guide box and the running tip, and every control lives
    in its own clear group underneath. */
 .shelf-controls { max-width:420px; margin:0 auto 16px; display:none; }
-.live-scan-card { border:1px solid #6f8768; border-radius:12px; padding:14px 16px; margin-bottom:12px; text-align:center; background:#eef1e9; }
-.live-scan-toggle { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; padding:10px 22px; border:none; border-radius:24px; cursor:pointer; margin-bottom:8px; }
-.live-scan-toggle.on { background:#a5453d; }
-.live-scan-caption { font-size:12px; color:#5c5c4f; line-height:1.5; margin:0; }
+.live-scan-card { border:1px solid #7C9A78; border-radius:12px; padding:14px 16px; margin-bottom:12px; text-align:center; background:#F1E0D7; }
+.live-scan-toggle { display:inline-block; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; padding:10px 22px; border:none; border-radius:24px; cursor:pointer; margin-bottom:8px; }
+.live-scan-toggle.on { background:#C9546A; }
+.live-scan-caption { font-size:12px; color:#5A4550; line-height:1.5; margin:0; }
 .shelf-controls-row { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
-.shelf-controls-row button { background:transparent; border:1px solid #cfc4a9; border-radius:24px; padding:9px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; color:#3d4a3a; cursor:pointer; }
-.shelf-controls-row button:hover { background:#ece5d5; }
+.shelf-controls-row button { background:transparent; border:1px solid #E0C9BE; border-radius:24px; padding:9px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; color:#3A1F3D; cursor:pointer; }
+.shelf-controls-row button:hover { background:#F1E0D7; }
 </style>
 </head>
 <body>
@@ -132,7 +132,6 @@
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
@@ -187,10 +186,10 @@
 </div><!-- /.shelf-frame -->
 
 <div class="bar" id="bar"><span id="barfill"></span></div>
-<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:22px;"></div>
 <div id="results"></div>
 
-<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
+<p style="margin-top:30px; font-size:12.5px; color:#8C7580; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
 </main>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="js/swap.js?v=1"></script>
@@ -414,7 +413,7 @@ return c.toDataURL("image/jpeg", 0.82);
 
 function renderLiveResults(){
 var list = Object.keys(liveFound).map(function(k){ return liveFound[k]; });
-var out = "<p style=\"text-align:center; color:#8a8672; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
+var out = "<p style=\"text-align:center; color:#8C7580; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
 (list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far - keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
 "</p>";
 if(list.length){
@@ -423,7 +422,7 @@ list.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
 list.forEach(function(b){
 var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
 out += "<div class=\"hit " + b.tier + "\">";
-out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
+out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5A4550;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
 out += "<p style=\"margin-bottom:0; font-size:14px;\">" + b.note + "</p>";
 out += "</div>";
@@ -577,7 +576,7 @@ found.forEach(function(b, i){
 var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
 var swapId = "shelfSwap" + i;
 out += "<div class=\"hit " + b.tier + "\">";
-out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5c5c4f;\">" + head + "</p>";
+out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5A4550;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
 out += "<p style=\"margin-bottom:0; font-size:14px;\">" + b.note + "</p>";
 if(b.tier !== "good" && b.tier !== "check"){ out += "<div id=\"" + swapId + "\" style=\"margin-top:14px;\"></div>"; swapTargets.push({ id: swapId, brand: b }); }
@@ -712,8 +711,8 @@ setStatus("Could not read that image. A closer, straighter photo usually helps."
 <p class="nf-msg" id="nf-msg-9" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="js/site.js?v=4"></script>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="js/site.js?v=5"></script>
 <script src="js/newsletter.js"></script>
 </body>
 </html>

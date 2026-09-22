@@ -217,7 +217,7 @@ function buildCardsMarkup(brands) {
   }
 
   out.push('<p class="section-label">dental &amp; oral care</p>');
-  out.push('<div id="dentalDisclaimer" style="display:none; background:#ece5d5; border:0.5px solid #cfc4a9; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5c5c4f; line-height:1.8;">');
+  out.push('<div id="dentalDisclaimer" style="display:none; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:10px; padding:16px 18px; margin-bottom:16px; font-size:13px; color:#5A4550; line-height:1.8;">');
   out.push("Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a company that isn't cruelty-free still financially supports that company - even though these are non-edible, everyday items. That's a different claim from saying any specific product was itself personally tested on an animal: it's about where your money goes, not a claim about that individual item's testing history.");
   out.push('</div>');
   buckets.dental.forEach(function (b) { out.push(renderCard(b)); });
@@ -225,8 +225,8 @@ function buildCardsMarkup(brands) {
   out.push('<p class="section-label">supermarket own brand</p>');
   buckets.supermarket.forEach(function (b) { out.push(renderCard(b)); });
 
-  out.push('<p class="section-label" style="color:#8a332c;">tested on animals</p>');
-  out.push('<p class="section-label-note" style="font-size:13.5px; color:#7a7561; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
+  out.push('<p class="section-label" style="color:#A8324E;">tested on animals</p>');
+  out.push('<p class="section-label-note" style="font-size:13.5px; color:#80686F; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
   buckets['bad-all'].forEach(function (b) { out.push(renderCard(b)); });
 
   if (buckets.other.length) {

@@ -5,41 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>add a barcode - a home kind</title>
 <meta name="robots" content="noindex, nofollow">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="icon" href="favicon.ico" sizes="any">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <style>
 .camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
-#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+#reader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#E5CFC4; }
 #reader { object-fit:cover; }
-.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px; border:none; border-radius:6px; cursor:pointer; }
-.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.big-btn { display:block; width:100%; max-width:420px; margin:0 auto 12px; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3A1F3D; border:1px solid #7C9A78; }
 .camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; pointer-events:none; }
-.camera-controls button { pointer-events:auto; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
-.camera-controls button:hover { background:rgba(20,24,18,0.78); }
-#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
+.camera-controls button { pointer-events:auto; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(251,244,239,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button:hover { background:rgba(28,14,32,0.78); }
+#torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#FBF4EF; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
 
 .field { margin-bottom:14px; }
-.field label { display:block; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8a8672; margin-bottom:6px; }
-.field input, .field select, .field textarea { width:100%; box-sizing:border-box; padding:12px 14px; border:0.5px solid #cfc4a9; border-radius:8px; background:#fff; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.field label { display:block; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.field input, .field select, .field textarea { width:100%; box-sizing:border-box; padding:12px 14px; border:0.5px solid #E0C9BE; border-radius:8px; background:#fff; font-family:'Hanken Grotesk',sans-serif; font-size:15px; color:#3A1F3D; }
 .field textarea { min-height:70px; resize:vertical; }
-.field .hint { font-size:12px; color:#8a8672; margin-top:5px; line-height:1.5; }
+.field .hint { font-size:12px; color:#8C7580; margin-top:5px; line-height:1.5; }
 
-.batch-row { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:0.5px solid #e0d8c4; }
+.batch-row { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:0.5px solid #E8D4CA; }
 .batch-row:last-child { border-bottom:none; }
 .batch-row-body { flex:1; min-width:0; }
 .batch-row-top { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px; }
 .batch-tier { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; padding:3px 9px; border-radius:20px; }
-.batch-tier.good { background:#dbe8d7; color:#33502f; }
-.batch-tier.check { background:#ece5d5; color:#5c5c4f; }
-.batch-tier.warn { background:#f6ecd9; color:#8a6a2a; }
-.batch-tier.bad { background:#f3e2df; color:#8a332c; }
-.batch-tier.unverified { background:#e4e0d4; color:#6b6656; }
-.batch-tier.unknown { background:#e4e0d4; color:#6b6656; }
-.batch-remove { flex-shrink:0; background:none; border:none; color:#a5453d; font-size:20px; line-height:1; cursor:pointer; padding:2px 6px; }
-#batchExport { width:100%; box-sizing:border-box; min-height:140px; font-family:monospace; font-size:12px; padding:12px; border:0.5px solid #cfc4a9; border-radius:8px; background:#ece5d5; color:#3d4a3a; }
-#copyMsg { font-size:12.5px; color:#4d6b4f; margin-top:8px; min-height:16px; }
+.batch-tier.good { background:#DCE6D6; color:#33502f; }
+.batch-tier.check { background:#F1E0D7; color:#5A4550; }
+.batch-tier.warn { background:#FBE3D3; color:#A85523; }
+.batch-tier.bad { background:#F5D3D6; color:#A8324E; }
+.batch-tier.unverified { background:#EFDDD3; color:#6E5660; }
+.batch-tier.unknown { background:#EFDDD3; color:#6E5660; }
+.batch-remove { flex-shrink:0; background:none; border:none; color:#C9546A; font-size:20px; line-height:1; cursor:pointer; padding:2px 6px; }
+#batchExport { width:100%; box-sizing:border-box; min-height:140px; font-family:monospace; font-size:12px; padding:12px; border:0.5px solid #E0C9BE; border-radius:8px; background:#F1E0D7; color:#3A1F3D; }
+#copyMsg { font-size:12.5px; color:#3A1F3D; margin-top:8px; min-height:16px; }
 </style>
 </head>
 <body>
@@ -47,7 +47,6 @@
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 </div>
@@ -68,7 +67,7 @@
 </div>
 <canvas id="captureCanvas" style="display:none;"></canvas>
 <button class="big-btn" id="startBtn">scan a barcode</button>
-<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:20px;"></div>
+<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:20px;"></div>
 
 <div class="card" style="margin-top:8px;">
 <div class="field">
@@ -78,14 +77,14 @@
 </div>
 <div class="field" id="photoPreviewWrap" style="display:none;">
 <label>product photo</label>
-<img id="photoPreview" alt="" style="max-width:160px; border-radius:8px; display:block; border:0.5px solid #cfc4a9;">
+<img id="photoPreview" alt="" style="max-width:160px; border-radius:8px; display:block; border:0.5px solid #E0C9BE;">
 <button type="button" id="retakeBtn" class="big-btn alt" style="max-width:160px; margin-top:8px; padding:8px; font-size:11px;">retake</button>
 </div>
 <p class="hint" id="noPhotoHint">No photo yet - scan a barcode above, then tap "photo" while the camera's open to capture the front of the pack.</p>
 <button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
-<p id="addMsg" style="font-size:13px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+<p id="addMsg" style="font-size:13px; color:#3A1F3D; margin-top:8px; min-height:16px;"></p>
 <details style="margin-top:16px;">
-<summary style="cursor:pointer; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8a8672;">know the name or status already? (optional)</summary>
+<summary style="cursor:pointer; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8C7580;">know the name or status already? (optional)</summary>
 <div style="margin-top:12px;">
 <div class="field">
 <label for="f-product">product name</label>
@@ -119,24 +118,24 @@
 
 <h2 style="font-size:16px; margin-top:32px;">this batch (<span id="batchCount">0</span>)</h2>
 <div id="batchList" class="card" style="display:none;"></div>
-<p id="batchEmpty" style="color:#8a8672; font-size:13.5px;">Nothing queued yet.</p>
+<p id="batchEmpty" style="color:#8C7580; font-size:13.5px;">Nothing queued yet.</p>
 
 <div id="exportSection" style="display:none; margin-top:20px;">
 <button type="button" class="big-btn alt" id="copyBtn" style="max-width:none;">copy batch as JSON</button>
 <p id="copyMsg"></p>
 <textarea id="batchExport" readonly></textarea>
-<p style="font-size:12.5px; color:#8a8672; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too - each one's filename is its barcode, so they'll match up automatically.</p>
+<p style="font-size:12.5px; color:#8C7580; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too - each one's filename is its barcode, so they'll match up automatically.</p>
 
 <div id="photoShareWrap" style="display:none; margin-top:14px;">
 <button type="button" class="big-btn alt" id="sharePhotosBtn" style="max-width:none;">share photos (<span id="photoCount">0</span>)</button>
-<p id="shareMsg" style="font-size:12.5px; color:#4d6b4f; margin-top:8px; min-height:16px;"></p>
+<p id="shareMsg" style="font-size:12.5px; color:#3A1F3D; margin-top:8px; min-height:16px;"></p>
 <div id="photoFallback" style="display:none;">
 <p class="hint">Your browser can't share several photos at once here - long-press (or tap) each one below to save it, then send them all together.</p>
 <div id="photoFallbackGrid" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
 </div>
 </div>
 
-<button type="button" class="big-btn alt" id="clearBtn" style="max-width:none; margin-top:14px; border-color:#a5453d; color:#8a332c;">clear this batch</button>
+<button type="button" class="big-btn alt" id="clearBtn" style="max-width:none; margin-top:14px; border-color:#C9546A; color:#A8324E;">clear this batch</button>
 </div>
 </main>
 
@@ -193,10 +192,10 @@ var lastCheckedCode = "";
 function showListMatch(name, tier){
 var s = el("matchStatus");
 if(tier === "good"){
-s.style.color = "#4d6b4f";
+s.style.color = "#3A1F3D";
 s.textContent = "Already on the list: " + name + " -- fully cruelty-free & vegan. Probably no need to add this one.";
 } else {
-s.style.color = "#8a6a2a";
+s.style.color = "#A85523";
 s.textContent = "Already on the list: " + name + " (" + (TIER_LABEL[tier] || tier) + "). Still fine to add if anything's changed.";
 }
 }
@@ -205,7 +204,7 @@ code = (code || "").replace(/[^0-9]/g, "");
 var s = el("matchStatus");
 if(code.length < 6 || code === lastCheckedCode){ return; }
 lastCheckedCode = code;
-s.style.color = "#8a8672";
+s.style.color = "#8C7580";
 s.textContent = "checking if this one's already on the list…";
 Promise.all([localBarcodesPromise, brandsPromise]).then(function(results){
 if(code !== lastCheckedCode) return; // a newer scan has come in since
@@ -217,15 +216,15 @@ fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_
 .then(function(d){
 if(code !== lastCheckedCode) return;
 var brandText = d && d.status === 1 && d.product && d.product.brands;
-if(!brandText){ s.style.color = "#8a8672"; s.textContent = "Couldn't find this one online yet -- worth adding."; return; }
+if(!brandText){ s.style.color = "#8C7580"; s.textContent = "Couldn't find this one online yet -- worth adding."; return; }
 var firstBrand = brandText.split(",")[0].trim();
 var rec = findBrandRecord(brands, brandText) || findBrandRecord(brands, firstBrand);
 if(rec){ showListMatch(rec.name, rec.tier); }
-else { s.style.color = "#4d6b4f"; s.textContent = "\"" + firstBrand + "\" doesn't look like it's on the list yet -- worth adding."; }
+else { s.style.color = "#3A1F3D"; s.textContent = "\"" + firstBrand + "\" doesn't look like it's on the list yet -- worth adding."; }
 })
 .catch(function(){
 if(code !== lastCheckedCode) return;
-s.style.color = "#8a8672";
+s.style.color = "#8C7580";
 s.textContent = "Couldn't check right now (signal?) -- still fine to add.";
 });
 });
@@ -265,8 +264,8 @@ html += "<img src=\"" + item.photo + "\" alt=\"\" style=\"width:52px; height:52p
 }
 html += "<div class=\"batch-row-body\">";
 html += "<div class=\"batch-row-top\"><strong>" + (item.brand || (item.photo ? "(from photo)" : "(no brand)")) + "</strong><span class=\"batch-tier " + item.tier + "\">" + TIER_LABEL[item.tier] + "</span></div>";
-html += "<div style=\"font-size:13px; color:#5c5c4f;\">" + (item.product || "") + " &middot; " + item.barcode + "</div>";
-if(item.note) html += "<div style=\"font-size:12.5px; color:#7a7561; margin-top:4px;\">" + item.note + "</div>";
+html += "<div style=\"font-size:13px; color:#5A4550;\">" + (item.product || "") + " &middot; " + item.barcode + "</div>";
+if(item.note) html += "<div style=\"font-size:12.5px; color:#80686F; margin-top:4px;\">" + item.note + "</div>";
 html += "</div><button type=\"button\" class=\"batch-remove\" data-i=\"" + i + "\" aria-label=\"remove\">&times;</button></div>";
 });
 listEl.innerHTML = html;
@@ -301,12 +300,12 @@ var product = el("f-product").value.trim();
 var tier = el("f-tier").value;
 var note = el("f-note").value.trim();
 var msg = el("addMsg");
-if(barcode.length < 6){ msg.style.color = "#8a332c"; msg.textContent = "That barcode doesn't look right -- check the digits."; return; }
-if(!brand && !product && !pendingPhoto){ msg.style.color = "#8a332c"; msg.textContent = "Take a photo of the pack, or type a brand/product, before queuing this one."; return; }
+if(barcode.length < 6){ msg.style.color = "#A8324E"; msg.textContent = "That barcode doesn't look right -- check the digits."; return; }
+if(!brand && !product && !pendingPhoto){ msg.style.color = "#A8324E"; msg.textContent = "Take a photo of the pack, or type a brand/product, before queuing this one."; return; }
 batch.push({ barcode: barcode, brand: brand, product: product, tier: tier, note: note, photo: pendingPhoto });
 saveBatch(batch);
 renderBatch();
-msg.style.color = "#4d6b4f";
+msg.style.color = "#3A1F3D";
 msg.textContent = "Added. Scan the next one when you're ready.";
 el("f-barcode").value = "";
 el("f-product").value = "";
@@ -356,7 +355,7 @@ a.download = item.barcode + ".jpg";
 var img = document.createElement("img");
 img.src = item.photo;
 img.alt = item.barcode;
-img.style.cssText = "width:70px; height:70px; object-fit:cover; border-radius:8px; border:0.5px solid #cfc4a9;";
+img.style.cssText = "width:70px; height:70px; object-fit:cover; border-radius:8px; border:0.5px solid #E0C9BE;";
 a.appendChild(img);
 grid.appendChild(a);
 });

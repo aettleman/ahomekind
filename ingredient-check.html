@@ -13,10 +13,10 @@
 <meta property="og:image:alt" content="Check the ingredients">
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Cormorant+Garamond:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css?v=5">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#3d4a3a">
+<meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
@@ -25,67 +25,67 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
-.drop { border:1.5px dashed #cfc4a9; border-radius:14px; padding:36px 20px; text-align:center; background:#ece5d5; margin-bottom:16px; }
-.big-btn { display:inline-block; background:#4d6b4f; color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
-.big-btn.alt { background:transparent; color:#3d4a3a; border:1px solid #6f8768; }
+.drop { border:1.5px dashed #E0C9BE; border-radius:14px; padding:36px 20px; text-align:center; background:#F1E0D7; margin-bottom:16px; }
+.big-btn { display:inline-block; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
+.big-btn.alt { background:transparent; color:#3A1F3D; border:1px solid #7C9A78; }
 #preview { max-width:100%; border-radius:12px; margin-bottom:16px; display:none; }
-.bar { height:6px; background:#dcd3c0; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
-.bar span { display:block; height:100%; width:0%; background:#6f8768; transition:width 0.3s; }
+.bar { height:6px; background:#E5CFC4; border-radius:4px; overflow:hidden; margin:14px 0; display:none; }
+.bar span { display:block; height:100%; width:0%; background:#7C9A78; transition:width 0.3s; }
 
 /* Two ways in: a photo of the label, or a barcode scan. Same page, same
    dictionary underneath -- someone reaching for the barcode scanner by
    habit lands in the right place either way. */
 .ic-tabs { display:flex; gap:8px; margin-bottom:18px; }
-.ic-tab { flex:1; padding:12px 10px; border:1px solid #cfc4a9; border-radius:10px; background:#ece5d5; font-family:'Karla',sans-serif; font-weight:600; font-size:12.5px; letter-spacing:0.5px; color:#5c5c4f; cursor:pointer; text-align:center; }
-.ic-tab.active { background:#4d6b4f; color:#f4efe2; border-color:#4d6b4f; }
+.ic-tab { flex:1; padding:12px 10px; border:1px solid #E0C9BE; border-radius:10px; background:#F1E0D7; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12.5px; letter-spacing:0.5px; color:#5A4550; cursor:pointer; text-align:center; }
+.ic-tab.active { background:#3A1F3D; color:#FBF4EF; border-color:#3A1F3D; }
 .ic-panel { display:none; }
 .ic-panel.active { display:block; }
 .camera-wrap { position:relative; max-width:420px; margin:0 auto 12px; }
-#bcReader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#dcd3c0; }
+#bcReader { width:100%; display:block; border-radius:12px; overflow:hidden; background:#E5CFC4; }
 .camera-controls { position:absolute; left:0; right:0; bottom:14px; display:flex; justify-content:center; gap:10px; }
-.camera-controls button { background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); color:#f4efe2; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(244,239,226,0.4); border-radius:30px; cursor:pointer; }
-.camera-controls button.snap { background:#e6d4a8; color:#3d4a3a; border-color:#e6d4a8; }
-.camera-controls button.snap:hover { background:#dcc78f; }
+.camera-controls button { background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1.2px; text-transform:uppercase; padding:11px 18px; border:1px solid rgba(251,244,239,0.4); border-radius:30px; cursor:pointer; }
+.camera-controls button.snap { background:#F6C6A8; color:#3A1F3D; border-color:#F6C6A8; }
+.camera-controls button.snap:hover { background:#F2B896; }
 .manual { display:flex; gap:8px; max-width:420px; margin:0 auto 20px; }
 /* min-width:0 matters: a text input has a built-in minimum width, and
    without this a flex item refuses to shrink below it. On a 320px
    phone (an iPhone SE) that pushed the "check" button 36px off the
    right-hand edge of the screen. */
-.manual input { flex:1 1 0; min-width:0; padding:14px 16px; border:0.5px solid #cfc4a9; border-radius:6px; background:#ece5d5; font-family:'Karla',sans-serif; font-size:15px; color:#3d4a3a; }
+.manual input { flex:1 1 0; min-width:0; padding:14px 16px; border:0.5px solid #E0C9BE; border-radius:6px; background:#F1E0D7; font-family:'Hanken Grotesk',sans-serif; font-size:15px; color:#3A1F3D; }
 .manual .big-btn { flex:0 0 auto; }
 @media (max-width:360px){ .manual .big-btn { padding:14px 14px !important; } .manual input { font-size:14px; } }
-.manual-lead { text-align:center; font-size:12px; color:#8a8672; margin:0 0 10px; }
+.manual-lead { text-align:center; font-size:12px; color:#8C7580; margin:0 0 10px; }
 
 /* Same barcode alignment guide as scan.html: a dashed band roughly
    where the bars sit, with a faint row of "ghost" digits standing in
    for the number line most barcodes print underneath. */
-.barcode-guide { position:absolute; left:9%; right:9%; top:34%; height:20%; border:2px dashed rgba(244,239,226,0.85); border-radius:6px; pointer-events:none; }
-.barcode-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#f4efe2; background:rgba(20,24,18,0.72); padding:5px 10px; border-radius:20px; }
-.barcode-guide-numbers { position:absolute; left:9%; right:9%; top:calc(34% + 20% + 6px); text-align:center; font-family:'Karla',sans-serif; font-size:13px; letter-spacing:3px; color:rgba(244,239,226,0.55); pointer-events:none; margin:0; }
-.shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #6f8768; border-radius:30px; padding:8px 16px; font-family:'Karla',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3d4a3a; background:none; cursor:pointer; }
-.shelf-cta:hover, .shelf-cta:focus-visible { background:#eef1e9; color:#3d4a3a; }
+.barcode-guide { position:absolute; left:9%; right:9%; top:34%; height:20%; border:2px dashed rgba(251,244,239,0.85); border-radius:6px; pointer-events:none; }
+.barcode-guide-label { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:#FBF4EF; background:rgba(28,14,32,0.72); padding:5px 10px; border-radius:20px; }
+.barcode-guide-numbers { position:absolute; left:9%; right:9%; top:calc(34% + 20% + 6px); text-align:center; font-family:'Hanken Grotesk',sans-serif; font-size:13px; letter-spacing:3px; color:rgba(251,244,239,0.55); pointer-events:none; margin:0; }
+.shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #7C9A78; border-radius:30px; padding:8px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3A1F3D; background:none; cursor:pointer; }
+.shelf-cta:hover, .shelf-cta:focus-visible { background:#F1E0D7; color:#3A1F3D; }
 
 /* Overall verdict banner -- the one thing someone standing in an aisle
    actually needs at a glance, before they read the ingredient-by-
    ingredient breakdown underneath. */
 .verdict { border-radius:14px; padding:20px; margin-bottom:18px; text-align:center; }
-.verdict.bad { background:#f3e2df; border:1px solid #a5453d; }
-.verdict.warn { background:#f6ecd9; border:1px solid #d9b06e; }
-.verdict.good { background:#e6efe3; border:1px solid #6f8768; }
-.verdict-title { font-family:'Cormorant Garamond',serif; font-size:19px; color:#3d4a3a; margin-bottom:6px; }
-.verdict-body { font-size:13.5px; line-height:1.6; color:#5c5c4f; }
+.verdict.bad { background:#F5D3D6; border:1px solid #C9546A; }
+.verdict.warn { background:#FBE3D3; border:1px solid #E8A57A; }
+.verdict.good { background:#DCE6D6; border:1px solid #7C9A78; }
+.verdict-title { font-family:'Gloock',serif; font-size:19px; color:#3A1F3D; margin-bottom:6px; }
+.verdict-body { font-size:13.5px; line-height:1.6; color:#5A4550; }
 
-.ing-hit { border-radius:12px; padding:16px 18px; margin-bottom:10px; background:#fff; border:0.5px solid #cfc4a9; }
-.ing-hit.always { border-left:4px solid #a5453d; }
-.ing-hit.sometimes { border-left:4px solid #d9b06e; }
-.ing-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:4px; }
+.ing-hit { border-radius:12px; padding:16px 18px; margin-bottom:10px; background:#fff; border:0.5px solid #E0C9BE; }
+.ing-hit.always { border-left:4px solid #C9546A; }
+.ing-hit.sometimes { border-left:4px solid #E8A57A; }
+.ing-name { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:4px; }
 .ing-badge { display:inline-block; font-size:10px; letter-spacing:0.8px; text-transform:uppercase; padding:3px 9px; border-radius:20px; margin-left:8px; vertical-align:middle; position:relative; top:-2px; }
-.ing-badge.always { background:#f3e2df; color:#8a332c; }
-.ing-badge.sometimes { background:#f6ecd9; color:#8a6a2a; }
-.ing-origin { font-size:13px; line-height:1.6; color:#5c5c4f; }
-.ing-raw { font-size:12px; color:#8a8672; margin-top:16px; padding-top:14px; border-top:0.5px solid #dcd2b8; }
-.ing-raw summary { cursor:pointer; font-weight:600; color:#5c5c4f; }
-.ing-raw pre { white-space:pre-wrap; word-break:break-word; margin-top:8px; font-family:inherit; font-size:12px; color:#8a8672; }
+.ing-badge.always { background:#F5D3D6; color:#A8324E; }
+.ing-badge.sometimes { background:#FBE3D3; color:#A85523; }
+.ing-origin { font-size:13px; line-height:1.6; color:#5A4550; }
+.ing-raw { font-size:12px; color:#8C7580; margin-top:16px; padding-top:14px; border-top:0.5px solid #E5CFC4; }
+.ing-raw summary { cursor:pointer; font-weight:600; color:#5A4550; }
+.ing-raw pre { white-space:pre-wrap; word-break:break-word; margin-top:8px; font-family:inherit; font-size:12px; color:#8C7580; }
 </style>
 </head>
 <body>
@@ -93,7 +93,6 @@
 <header class="site-header">
 <div class="wrap">
 <a href="index.html" class="logo">
-<img src="icons/logo-mark.png" alt="" width="30" height="30" style="display:block;">
 <span>a home kind</span>
 </a>
 <nav class="main-nav">
@@ -133,7 +132,7 @@
 </div>
 <button class="big-btn" id="go" style="display:none; width:100%;">read the ingredients</button>
 <div class="bar" id="bar"><span id="barfill"></span></div>
-<div id="status" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
+<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:22px;"></div>
 </div>
 
 <div class="ic-panel active" id="panelBarcode">
@@ -141,7 +140,7 @@
 <video id="bcReader" muted playsinline></video>
 <div class="barcode-guide" aria-hidden="true"><span class="barcode-guide-label">line up the barcode</span></div>
 <p class="barcode-guide-numbers" aria-hidden="true">0 123456 789012</p>
-<p id="bcTorchHint" style="display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#f4efe2; background:rgba(20,24,18,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
+<p id="bcTorchHint" style="display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#FBF4EF; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px;">Too dark? This device won't let me switch the flash on from here - try turning your flashlight on from Control Center instead, then come back and scan.</p>
 <div class="camera-controls" id="bcCameraControls" style="display:none;">
 <button type="button" id="bcSnapBtn" class="snap">&#128247; snap</button>
 <button type="button" id="bcTorchBtn" style="display:none;">&#128161; flash</button>
@@ -155,8 +154,8 @@
 <input type="text" id="bcManualCode" inputmode="numeric" placeholder="e.g. 3600542525831">
 <button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="bcLookupBtn">check</button>
 </div>
-<div id="bcStatus" style="text-align:center; color:#8a8672; font-size:13px; min-height:22px;"></div>
-<p style="font-size:12px; color:#8a8672; margin-top:4px;">This only checks the ingredients, not brand policy - for the full cruelty-free verdict too, use the <a href="scan.html">brand scanner</a> instead.</p>
+<div id="bcStatus" style="text-align:center; color:#8C7580; font-size:13px; min-height:22px;"></div>
+<p style="font-size:12px; color:#8C7580; margin-top:4px;">This only checks the ingredients, not brand policy - for the full cruelty-free verdict too, use the <a href="scan.html">brand scanner</a> instead.</p>
 </div>
 
 <div id="results"></div>
@@ -180,7 +179,7 @@
 <p class="iw-empty" id="iwNone" hidden>Nothing matching that. It might still be animal-derived - this list isn't exhaustive.</p>
 </section>
 
-<p style="margin-top:30px; font-size:12.5px; color:#8a8672; line-height:1.9;">For the clearest read: fill the frame with just the ingredients text, hold the phone straight-on rather than at an angle, and make sure there's no glare across the panel. This only recognises ingredient names already in my dictionary and can miss things a photo reads badly - it's a helpful first pass, not a guarantee, and it's not a substitute for a brand's own vegan claim. "Fragrance"/"parfum" can legally hide undisclosed ingredients that no OCR tool can see. Nothing leaves your phone - the reading happens in your browser.</p>
+<p style="margin-top:30px; font-size:12.5px; color:#8C7580; line-height:1.9;">For the clearest read: fill the frame with just the ingredients text, hold the phone straight-on rather than at an angle, and make sure there's no glare across the panel. This only recognises ingredient names already in my dictionary and can miss things a photo reads badly - it's a helpful first pass, not a guarantee, and it's not a substitute for a brand's own vegan claim. "Fragrance"/"parfum" can legally hide undisclosed ingredients that no OCR tool can see. Nothing leaves your phone - the reading happens in your browser.</p>
 </main>
 
 <div class="newsletter">
@@ -200,8 +199,8 @@
 <p class="nf-msg" id="nf-msg-ic" role="status" aria-live="polite"></p>
 </form>
 </div>
-<footer class="site-footer">a home kind is the right kind &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
-<script src="./js/site.js?v=4"></script>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
+<script src="./js/site.js?v=5"></script>
 <script src="js/newsletter.js"></script>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
@@ -513,7 +512,7 @@ handleBarcodeProduct(p, code);
 })
 .catch(function(){
 bcSetStatus("");
-el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#7a7561;\">Could not reach the product database. Try the photo instead, or check back shortly.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#80686F;\">Could not reach the product database. Try the photo instead, or check back shortly.</p>";
 wireBcScanAgain();
 });
 }
@@ -529,17 +528,17 @@ else { tryBeauty(); }
 function handleBarcodeProduct(product, code){
 if(!product){
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_barcode', outcome: 'not_found' }); } catch(e){}
-el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#7a7561;\">Nothing found for that barcode in the public database. This can also mean a barcode was misread rather than genuinely missing, especially if the scan happened quickly - scanning again often fixes it. Otherwise, try photographing the ingredients list instead - it works on anything, database or not.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + "<p style=\"font-size:13.5px; color:#80686F;\">Nothing found for that barcode in the public database. This can also mean a barcode was misread rather than genuinely missing, especially if the scan happened quickly - scanning again often fixes it. Otherwise, try photographing the ingredients list instead - it works on anything, database or not.</p>";
 wireBcScanAgain();
 return;
 }
 var name = product.product_name || product.generic_name || "";
 var text = product.ingredients_text || "";
 var header = "";
-if(name) header = "<p style=\"font-family:'Cormorant Garamond',serif; font-size:17px; color:#3d4a3a; margin-bottom:10px;\">" + escapeHtml(name) + "</p>";
+if(name) header = "<p style=\"font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:10px;\">" + escapeHtml(name) + "</p>";
 if(!text){
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_barcode', outcome: 'no_ingredients_listed' }); } catch(e){}
-el("results").innerHTML = bcScanAgainMarkup() + header + "<p style=\"font-size:13.5px; color:#7a7561;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
+el("results").innerHTML = bcScanAgainMarkup() + header + "<p style=\"font-size:13.5px; color:#80686F;\">Found the product, but it has no ingredients list on file. Try photographing the pack instead.</p>";
 wireBcScanAgain();
 return;
 }
