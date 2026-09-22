@@ -37,6 +37,19 @@ input[type=range] { touch-action: none; }
 
 a { color: #3A1F3D; text-decoration: none; }
 a:hover { color: #3A1F3D; }
+/* Inline links inside body copy (prose, footnotes, citations) need to read
+   as obviously clickable on their own, without a hover to reveal it. Nav,
+   buttons and card-level links all set their own text-decoration and are
+   unaffected by this. */
+p a, .k-fn a, .photo-credit a, .iw-why .iw-sources a, .mp-finder-sub a, .k-inline-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+p a:hover, .k-fn a:hover, .photo-credit a:hover, .iw-why .iw-sources a:hover, .mp-finder-sub a:hover, .k-inline-link:hover {
+  color: #C8622F;
+}
 
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
