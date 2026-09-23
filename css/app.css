@@ -2499,7 +2499,7 @@ header.site-header .wrap { max-width: 1200px; padding: 18px 24px; padding-top: c
 .k-st-head:hover .k-st-card { border-color: rgba(42,22,48,0.3); }
 .k-st-card small { display: block; font: 700 10px 'Hanken Grotesk', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #C8622F; }
 .k-st-card b { display: block; font: 400 19px/1.15 'Gloock', serif; color: var(--ahk-heading); margin: 3px 0 2px; }
-.k-st-meta { display: block; font-size: 12px; color: var(--ahk-text-muted); }
+.k-st-meta { display: block; font: 600 13.5px 'Hanken Grotesk', sans-serif; color: #5A4550; margin-top: 4px; }
 .k-bar { display: none; height: 4px; border-radius: 2px; background: rgba(42,22,48,0.1); margin-top: 10px; overflow: hidden; }
 .k-bar i { display: block; height: 100%; width: 0; background: #E8804C; border-radius: 2px; transition: width .3s ease; }
 .k-st-body { margin: 14px 0 6px 50px; background: var(--ahk-card); border: 1px solid rgba(42,22,48,0.1); border-radius: 22px; padding: 20px 18px; }
