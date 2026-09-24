@@ -92,7 +92,7 @@ input[type=range]:disabled { opacity:0.45; }
 <p class="k-iq">How many days a week do you eat plant-based?</p>
 <div class="k-dseg" id="daySeg" role="radiogroup" aria-label="Plant-based days a week"></div>
 <div class="k-sentence">
-<p id="impactSentence">Three days a week means about <b>7</b> animals a year are never farmed for you.</p>
+<p id="impactSentence">Three days a week means about <b>7</b> animals a year are not killed for you.</p>
 <div class="k-hearts" id="hearts" aria-hidden="true"></div>
 <small>Out of roughly 17 per person, per year, in the UK.</small>
 </div>
@@ -100,9 +100,10 @@ input[type=range]:disabled { opacity:0.45; }
 <div class="k-split-r">
 <div class="k-two" id="twoStats">
 <div><b id="carbonStat">31%</b>less carbon from your food</div>
-<div><b id="fiveStat">37</b>animals never farmed for you, over five years</div>
+<div><b id="fiveStat">37</b>animals not killed for you, over five years</div>
 </div>
 <p class="k-two-zero-note" id="twoZeroNote" hidden>That's zero because nothing's chosen yet - pick at least one day above and watch both change.</p>
+<p class="k-fn" style="margin-top:8px;">"Carbon" here means the greenhouse gases released growing, transporting and producing your food - the gases that heat up the planet. Less carbon means less of that, from what's on your plate.</p>
 <div class="k-shc">
 <canvas id="shareCanvas" width="1080" height="1920" class="k-shc-card" aria-label="Your share card"></canvas>
 <div>
@@ -176,9 +177,9 @@ function update(){
   seg.querySelectorAll('button').forEach(function(b){ var on = +b.dataset.d === days; b.classList.toggle('on', on); b.setAttribute('aria-checked', String(on)); });
   var saved = PER_YEAR * days / 7, n = Math.round(saved);
   var sent = document.getElementById('impactSentence');
-  if (days === 0) sent.innerHTML = 'Zero days a week for now. Even <b>one</b> would mean about 2 animals a year never farmed for you.';
-  else if (days === 7) sent.innerHTML = 'Every day plant-based means about <b>' + n + '</b> animals a year are never farmed for you.';
-  else sent.innerHTML = WORDS[days] + ' day' + (days === 1 ? '' : 's') + ' a week means about <b>' + n + '</b> animals a year are never farmed for you.';
+  if (days === 0) sent.innerHTML = 'Zero days a week for now. Even <b>one</b> would mean about 2 animals a year not killed for you.';
+  else if (days === 7) sent.innerHTML = 'Every day plant-based means about <b>' + n + '</b> animals a year are not killed for you.';
+  else sent.innerHTML = WORDS[days] + ' day' + (days === 1 ? '' : 's') + ' a week means about <b>' + n + '</b> animals a year are not killed for you.';
   var filled = Math.round(saved), h = '';
   for (var i = 0; i < 17; i++) h += '<span class="' + (i < filled ? 'on' : '') + '">' + (i < filled ? HEARTF : HEART) + '</span>';
   document.getElementById('hearts').innerHTML = h;
@@ -212,7 +213,7 @@ function draw(){
   ctx.fillStyle = '#F6C6A8'; ctx.font = '400 300px Gloock, Georgia, serif'; ctx.textBaseline = 'alphabetic';
   ctx.fillText(String(n), ax, 1400);
   ctx.fillStyle = '#FBF4EF'; ctx.font = '500 52px "Hanken Grotesk", sans-serif';
-  wrap(ctx, 'animals a year not farmed for me, from ' + days + ' plant-based day' + (days === 1 ? '' : 's') + ' a week', ax, 1500, 800, 68);
+  wrap(ctx, 'animals a year not killed for me, from ' + days + ' plant-based day' + (days === 1 ? '' : 's') + ' a week', ax, 1500, 800, 68);
   ctx.font = '400 56px Gloock, Georgia, serif'; ctx.fillStyle = '#FBF4EF';
   ctx.fillText('a home kind', ax, 1790); var wmw = ctx.measureText('a home kind').width;
   ctx.fillStyle = '#E8804C'; ctx.fillText('.', ax + wmw, 1790);
@@ -220,7 +221,7 @@ function draw(){
 }
 document.getElementById('shareCardBtn').addEventListener('click', function(){
   var c = document.getElementById('shareCanvas'), msg = document.getElementById('shareMsg');
-  var text = 'Eating plant-based ' + days + ' day' + (days === 1 ? '' : 's') + ' a week means about ' + Math.round(PER_YEAR * days / 7) + ' animals a year not farmed for me. Work out yours:';
+  var text = 'Eating plant-based ' + days + ' day' + (days === 1 ? '' : 's') + ' a week means about ' + Math.round(PER_YEAR * days / 7) + ' animals a year not killed for me. Work out yours:';
   c.toBlob(function(blob){
     var file = blob ? new File([blob], 'my-impact-a-home-kind.png', { type: 'image/png' }) : null;
     if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
