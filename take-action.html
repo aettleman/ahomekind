@@ -69,12 +69,13 @@
 
 <div class="mp-finder">
 <p class="mp-finder-label">find your MP and send this straight to them</p>
-<form class="mp-finder-form" action="https://www.writetothem.com/" method="get" target="_blank">
+<form class="mp-finder-form" id="mpFinderForm" action="https://www.writetothem.com/" method="get" target="_blank">
 <label for="mpPostcode" class="visually-hidden">Your postcode</label>
 <input type="text" id="mpPostcode" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
-<button type="submit">find my MP &rarr;</button>
+<button type="submit" id="mpFinderBtn">copy letter &amp; find my MP &rarr;</button>
 </form>
-<p class="mp-finder-sub">Opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
+<p class="mp-finder-sub">Copies the letter below, then opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed - just paste it into the message box. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
+<p class="mp-finder-status" id="mpFinderStatus" role="status" aria-live="polite" style="min-height:1.4em;"></p>
 </div>
 
 <div class="letter-block">
@@ -120,25 +121,52 @@
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
-  var btn = document.getElementById('letterCopyBtn');
   var body = document.getElementById('letterBody');
-  if (!btn || !body) return;
-  btn.addEventListener('click', function(){
-    var text = Array.prototype.map.call(body.querySelectorAll('p'), function(p){
+  if (!body) return;
+
+  function letterText(){
+    return Array.prototype.map.call(body.querySelectorAll('p'), function(p){
       return p.innerText;
     }).join('\n\n');
-    function done(){ btn.textContent = 'copied'; setTimeout(function(){ btn.textContent = 'copy this letter'; }, 2200); }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done, fallback);
-    } else { fallback(); }
+  }
+
+  function copyLetter(onDone){
+    var text = letterText();
     function fallback(){
       var ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); done(); } catch(e){ btn.textContent = 'select and copy above'; }
+      var ok = false;
+      try { document.execCommand('copy'); ok = true; } catch(e){}
       document.body.removeChild(ta);
+      onDone(ok);
     }
-  });
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ onDone(true); }, fallback);
+    } else { fallback(); }
+  }
+
+  var btn = document.getElementById('letterCopyBtn');
+  if (btn) {
+    btn.addEventListener('click', function(){
+      copyLetter(function(ok){
+        btn.textContent = ok ? 'copied' : 'select and copy above';
+        setTimeout(function(){ btn.textContent = 'copy this letter'; }, 2200);
+      });
+    });
+  }
+
+  var form = document.getElementById('mpFinderForm');
+  var status = document.getElementById('mpFinderStatus');
+  if (form && status) {
+    form.addEventListener('submit', function(){
+      copyLetter(function(ok){
+        status.textContent = ok
+          ? 'Letter copied - paste it into the message box on the next page.'
+          : 'Couldn\u2019t copy automatically - use the "copy this letter" button below instead.';
+      });
+    });
+  }
 })();
 </script>
 </body>
