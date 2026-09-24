@@ -66,25 +66,7 @@
 <script>(function(){var b=document.getElementById("bpSave"),k="ahk-saved-brands";function get(){try{return JSON.parse(localStorage.getItem(k)||"[]")}catch(e){return[]}}function paint(){var on=get().some(function(x){return x.slug===b.dataset.slug});b.classList.toggle("is-saved",on);b.querySelector("span").textContent=on?"Saved":"Save";}b.addEventListener("click",function(){var l=get().filter(function(x){return x.slug!==b.dataset.slug});if(!b.classList.contains("is-saved"))l.unshift({slug:b.dataset.slug,name:b.dataset.name});try{localStorage.setItem(k,JSON.stringify(l.slice(0,50)))}catch(e){}paint();});paint();var s=document.getElementById("bpShare");s.addEventListener("click",function(){var d={title:document.title,url:location.href};if(navigator.share){navigator.share(d).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(location.href);s.classList.add("is-copied");setTimeout(function(){s.classList.remove("is-copied")},1500);}});})();</script>
 </main>
 
-<div class="newsletter">
-<p class="label3">stay in the loop</p>
-<p class="sub2">occasional updates, brand-check updates and cruelty-free finds - no inbox spam, unsubscribe whenever you like.</p>
-<form class="newsletter-form" id="nf-benefit" action="https://buttondown.com/api/emails/embed-subscribe/ahomekind" method="post" target="_blank" novalidate>
-<input type="hidden" value="1" name="embed">
-<div class="nf-row">
-<label for="nf-email-benefit" class="visually-hidden">Email address</label>
-<input type="email" id="nf-email-benefit" name="email" placeholder="you@example.com" autocomplete="email" required>
-<button type="submit" class="btn">join the list</button>
-</div>
-<label class="nf-consent">
-<input type="checkbox" id="nf-consent-benefit" required>
-<span>I'd like to receive emails from a home kind. See the <a href="../../privacy.html">privacy policy</a>.</span>
-</label>
-<p class="nf-msg" id="nf-msg-benefit" role="status" aria-live="polite"></p>
-</form>
-</div>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
 <script src="../../js/site.js?v=6"></script>
-<script src="../../js/newsletter.js"></script>
 </body>
 </html>
