@@ -27,6 +27,24 @@
 @media (min-width:760px){
   .about-portrait { float:right; max-width:330px; margin:6px 0 22px 32px; }
 }
+
+/* Letter topic cards: a "link in bio" style index so more letters can be
+   added later without the page turning into one long scroll of everything
+   at once. Real topics link to their own section below; not-yet-written
+   topics show as a quiet placeholder so growth is visible without apologising for it. */
+.letter-cards { display:grid; grid-template-columns:1fr; gap:14px; margin:22px 0 34px; }
+@media (min-width:640px){ .letter-cards { grid-template-columns:1fr 1fr; } }
+.letter-card { display:block; background:var(--ahk-card,#fff); border:0.5px solid var(--ahk-border-soft,#EBDAD1); border-radius:16px; padding:20px; text-decoration:none; transition:box-shadow .15s ease, transform .15s ease; }
+.letter-card:hover, .letter-card:focus-visible { box-shadow:0 6px 20px rgba(58,31,61,0.1); transform:translateY(-2px); }
+.letter-card .letter-kicker { margin-bottom:6px; }
+.letter-card h3 { font-family:'Gloock',serif; font-weight:500; font-size:18px; color:var(--ahk-heading,#2A1630); margin:4px 0 8px; line-height:1.35; }
+.letter-card p { font-size:13px; line-height:1.6; color:var(--ahk-text-muted,#8C7580); margin:0; }
+.letter-card-cta { display:inline-block; margin-top:12px; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--ahk-clay-deep,#B85A2A); }
+.letter-card.is-soon { cursor:default; background:var(--ahk-sage-soft,#DCE6D6); border-style:dashed; }
+.letter-card.is-soon h3, .letter-card.is-soon p { color:var(--ahk-text-muted,#8C7580); }
+.letter-card.is-soon .letter-card-cta { color:var(--ahk-text-muted,#8C7580); }
+.letter-item { scroll-margin-top:24px; }
+.letter-item + .letter-item { margin-top:40px; padding-top:40px; border-top:1px solid var(--ahk-border-soft,#EBDAD1); }
 </style>
 <link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
@@ -60,24 +78,34 @@
 <div class="k-ph"><p class="k-kick">take action</p><h1 class="k-h1">Your voice reaches further than <em>your basket.</em></h1></div>
 <p class="hero-lede">Where you shop matters. What's legal matters more. This is the part that changes the rules rather than working around them.</p>
 
-<div class="action-note">
-<p><strong>This page is just getting started.</strong> Right now there's one letter here. More are coming, along with current consultations and bills worth knowing about, as I work through which issues are actually live and where a letter genuinely lands rather than disappearing.</p>
+<h2 class="learn-h2">pick a topic</h2>
+<p>Each one below is a ready-made letter to your MP on a specific, current gap in UK animal welfare law. Read it, change anything you like, then send it in about two minutes. More topics are added as they're researched and checked.</p>
+
+<div class="letter-cards">
+<a href="#letter-cosmetics-testing" class="letter-card">
+<p class="letter-kicker">cosmetics testing</p>
+<h3>The gap between the ban and what still happens</h3>
+<p>Cosmetic ingredients can still be tested on animals under REACH, even though finished cosmetic products can't.</p>
+<span class="letter-card-cta">read the letter &darr;</span>
+</a>
+<div class="letter-card is-soon" aria-disabled="true">
+<p class="letter-kicker">coming soon</p>
+<h3>Another live gap, in progress</h3>
+<p>A second letter template is being researched and checked before it goes up here.</p>
+<span class="letter-card-cta">not yet ready</span>
+</div>
+<div class="letter-card is-soon" aria-disabled="true">
+<p class="letter-kicker">coming soon</p>
+<h3>Another live gap, in progress</h3>
+<p>A third letter template is being researched and checked before it goes up here.</p>
+<span class="letter-card-cta">not yet ready</span>
+</div>
 </div>
 
 <h2 class="learn-h2">write to your MP</h2>
 <p>An MP is obliged to read correspondence from people in their own constituency, and volume genuinely registers. It takes about two minutes. You don't need to be an expert, and you don't need to write anything clever. Your own words in a short, polite message count for more than a long one copied word for word, so change whatever you like below.</p>
 
-<div class="mp-finder">
-<p class="mp-finder-label">find your MP and send this straight to them</p>
-<form class="mp-finder-form" id="mpFinderForm" action="https://www.writetothem.com/" method="get" target="_blank">
-<label for="mpPostcode" class="visually-hidden">Your postcode</label>
-<input type="text" id="mpPostcode" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
-<button type="submit" id="mpFinderBtn">copy letter &amp; find my MP &rarr;</button>
-</form>
-<p class="mp-finder-sub">Copies the letter below, then opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed - just paste it into the message box. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
-<p class="mp-finder-status" id="mpFinderStatus" role="status" aria-live="polite" style="min-height:1.4em;"></p>
-</div>
-
+<section class="letter-item" id="letter-cosmetics-testing">
 <div class="letter-block">
 <p class="letter-kicker">cosmetics testing</p>
 <h3>On the gap between the cosmetics testing ban and what still happens</h3>
@@ -95,6 +123,18 @@
 <button type="button" class="letter-copy-btn" id="letterCopyBtn">copy this letter</button>
 <p class="letter-note">Change anything you like before sending. A letter in your own words is worth more than a perfect one that reads like a form.</p>
 </div>
+
+<div class="mp-finder">
+<p class="mp-finder-label">find your MP and send this straight to them</p>
+<form class="mp-finder-form" id="mpFinderForm" action="https://www.writetothem.com/" method="get" target="_blank">
+<label for="mpPostcode" class="visually-hidden">Your postcode</label>
+<input type="text" id="mpPostcode" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
+<button type="submit" id="mpFinderBtn">copy letter &amp; find my MP &rarr;</button>
+</form>
+<p class="mp-finder-sub">Copies the letter above, then opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed - just paste it into the message box. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
+<p class="mp-finder-status" id="mpFinderStatus" role="status" aria-live="polite" style="min-height:1.4em;"></p>
+</div>
+</section>
 
 <h2 class="learn-h2">a note on accuracy</h2>
 <p>Anything on this page that describes the law is written from the actual rules as far as I can establish them, and I have tried to keep what is fact separate from what is my own opinion. If you spot something out of date or wrong, please tell me, and I will correct it.</p>
