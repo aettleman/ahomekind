@@ -43,8 +43,36 @@
 .letter-card.is-soon { cursor:default; background:var(--ahk-sage-soft,#DCE6D6); border-style:dashed; }
 .letter-card.is-soon h3, .letter-card.is-soon p { color:var(--ahk-text-muted,#8C7580); }
 .letter-card.is-soon .letter-card-cta { color:var(--ahk-text-muted,#8C7580); }
-.letter-item { scroll-margin-top:24px; }
-.letter-item + .letter-item { margin-top:40px; padding-top:40px; border-top:1px solid var(--ahk-border-soft,#EBDAD1); }
+article.letter-card { display:flex; flex-direction:column; }
+article.letter-card:hover { transform:none; }
+.lc-read { align-self:flex-start; margin:14px 0 0; background:none; border:0; padding:4px 0; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--ahk-clay-deep,#C8622F); cursor:pointer; border-bottom:1.5px solid var(--ahk-gold-soft,#F6C6A8); }
+.lc-read:hover { color:var(--ahk-heading,#2A1630); border-bottom-color:var(--ahk-clay,#E8804C); }
+.lc-mp { display:flex; flex-wrap:wrap; gap:6px; background:var(--ahk-forest,#3A1F3D); border-radius:14px; padding:6px; margin-top:auto; }
+article.letter-card .lc-mp { margin-top:16px; }
+.lc-mp input { flex:1 1 110px; min-width:0; border:0; border-radius:10px; padding:11px 12px; font:500 13px 'Hanken Grotesk',sans-serif; background:var(--ahk-card,#FBF4EF); color:var(--ahk-heading,#2A1630); }
+.lc-mp button { flex:1 1 auto; border:0; border-radius:10px; padding:11px 12px; background:var(--ahk-gold-soft,#F6C6A8); color:var(--ahk-forest-deep,#2A1630); font:600 10.5px 'Hanken Grotesk',sans-serif; letter-spacing:1.2px; text-transform:uppercase; cursor:pointer; white-space:nowrap; }
+.lc-mp button:hover { background:#F2B896; }
+.lc-mp input:focus-visible, .lc-mp button:focus-visible, .lc-read:focus-visible, .lm-close:focus-visible { outline:2px solid var(--ahk-clay,#E8804C); outline-offset:2px; }
+.lc-status { font-size:12px; line-height:1.5; color:var(--ahk-kind-ink,#3f6a3d); margin:8px 0 0; min-height:1em; }
+.lc-status:empty { margin:0; }
+.lc-foot { font-size:12.5px; color:var(--ahk-text-muted,#80686F); margin:-18px 0 30px; }
+
+dialog.letter-modal { position:fixed; inset:0; margin:auto; padding:0; border:0; border-radius:22px; width:min(640px, calc(100vw - 32px)); max-height:min(88vh, 900px); background:var(--ahk-card,#FBF4EF); color:var(--ahk-text,#5A4550); box-shadow:0 24px 60px rgba(42,22,48,0.3); overflow:hidden; }
+dialog.letter-modal[open] { display:flex; flex-direction:column; animation:lm-in .22s ease; }
+dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
+@keyframes lm-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce){ dialog.letter-modal[open] { animation:none; } }
+.lm-head { display:flex; gap:14px; align-items:flex-start; justify-content:space-between; padding:22px 22px 14px; border-bottom:1px solid var(--ahk-border-soft,#EBDAD1); }
+.lm-head h3 { font-family:'Gloock',serif; font-weight:500; font-size:21px; line-height:1.25; color:var(--ahk-heading,#2A1630); margin:4px 0 0; text-wrap:balance; }
+.lm-close { flex:0 0 40px; width:40px; height:40px; border-radius:50%; border:0; background:var(--ahk-surface,#EFDDD3); color:var(--ahk-heading,#2A1630); font-size:24px; line-height:1; cursor:pointer; }
+.lm-close:hover { background:var(--ahk-border,#E4D0C6); }
+.lm-scroll { overflow-y:auto; padding:18px 22px; -webkit-overflow-scrolling:touch; }
+.lm-foot { padding:14px 22px 18px; border-top:1px solid var(--ahk-border-soft,#EBDAD1); display:grid; gap:10px; background:var(--ahk-card,#FBF4EF); }
+.lm-foot .letter-copy-btn { margin:0; justify-self:start; }
+@media (max-width:560px){
+  dialog.letter-modal { width:100vw; max-width:100vw; max-height:92vh; margin:auto 0 0; border-radius:22px 22px 0 0; }
+  .lm-head { padding:18px 18px 12px; } .lm-scroll { padding:16px 18px; } .lm-foot { padding:12px 18px calc(16px + env(safe-area-inset-bottom)); }
+}
 </style>
 <link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
@@ -79,15 +107,21 @@
 <p class="hero-lede">Where you shop matters. What's legal matters more. This is the part that changes the rules rather than working around them.</p>
 
 <h2 class="learn-h2">pick a topic</h2>
-<p>Each one below is a ready-made letter to your MP on a specific, current gap in UK animal welfare law. Read it, change anything you like, then send it in about two minutes. More topics are added as they're researched and checked.</p>
+<p>Each one is a ready-made letter to your MP on a specific, current gap in UK animal welfare law. MPs are obliged to read letters from their own constituents, and volume genuinely registers. Read a letter, change anything you like, then pop your postcode in underneath: it copies the letter for you and opens WriteToThem, a free, independent service that finds your MP and sends it to them. Just paste it into the message box. Two minutes, no expertise needed.</p>
 
 <div class="letter-cards">
-<a href="#letter-cosmetics-testing" class="letter-card">
+<article class="letter-card">
 <p class="letter-kicker">cosmetics testing</p>
 <h3>Cosmetics testing is banned. Ingredient testing isn&rsquo;t.</h3>
-<p>Cosmetic ingredients can still be tested on animals under REACH, even though finished cosmetic products can't.</p>
-<span class="letter-card-cta">read the letter &darr;</span>
-</a>
+<p>Cosmetic ingredients can still be tested on animals under REACH, even though finished cosmetic products can&rsquo;t.</p>
+<button type="button" class="lc-read" data-open="letter-cosmetics-testing">read the letter <span aria-hidden="true">&#8599;</span></button>
+<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/" method="get" target="_blank">
+<label for="pc-cosmetics" class="visually-hidden">Your postcode</label>
+<input type="text" id="pc-cosmetics" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
+<button type="submit">copy letter &amp; find my MP &rarr;</button>
+</form>
+<p class="lc-status" role="status" aria-live="polite"></p>
+</article>
 <div class="letter-card is-soon" aria-disabled="true">
 <p class="letter-kicker">coming soon</p>
 <h3>Another live gap, in progress</h3>
@@ -101,16 +135,19 @@
 <span class="letter-card-cta">not yet ready</span>
 </div>
 </div>
+<p class="lc-foot">Rather email your MP yourself? <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament&rsquo;s own lookup</a> gives you their address. A short letter in your own words counts for more than a long one copied word for word.</p>
 
-<h2 class="learn-h2">write to your MP</h2>
-<p>An MP is obliged to read correspondence from people in their own constituency, and volume genuinely registers. It takes about two minutes. You don't need to be an expert, and you don't need to write anything clever. Your own words in a short, polite message count for more than a long one copied word for word, so change whatever you like below.</p>
-
-<section class="letter-item" id="letter-cosmetics-testing">
-<div class="letter-block">
-<p class="letter-kicker">cosmetics testing</p>
-<h3>Cosmetics testing is banned in the UK. Testing the ingredients inside them isn&rsquo;t.</h3>
+<!-- One dialog per letter. To add a letter: copy a card above and a dialog below,
+     give both the same id in data-open / data-letter / id. -->
+<dialog class="letter-modal" id="letter-cosmetics-testing" aria-labelledby="lm-t-cosmetics">
+<div class="lm-head">
+<div><p class="letter-kicker">cosmetics testing</p>
+<h3 id="lm-t-cosmetics">Cosmetics testing is banned in the UK. Testing the ingredients inside them isn&rsquo;t.</h3></div>
+<button type="button" class="lm-close" data-close aria-label="Close letter">&times;</button>
+</div>
+<div class="lm-scroll">
 <p class="letter-context">The UK banned animal testing for cosmetics in 1998, and for cosmetic ingredients in 1998 as well. But ingredients used in cosmetics can still be tested on animals when they're assessed under chemicals regulation (REACH) rather than as cosmetics, which is the gap this asks about. Licences of that kind have been granted in recent years.</p>
-<div class="letter-body" id="letterBody">
+<div class="letter-body">
 <p>Dear [MP's name],</p>
 <p>I am writing as one of your constituents in [your constituency].</p>
 <p>The UK is rightly proud of having banned animal testing for cosmetics and cosmetic ingredients. However, I understand that ingredients destined for cosmetics can still be tested on animals when they are assessed for chemical safety under REACH rather than under cosmetics rules, and that licences permitting this have been granted in recent years.</p>
@@ -120,21 +157,17 @@
 <p>Thank you for your time.</p>
 <p>Yours sincerely,<br>[your name]<br>[your address, including postcode]</p>
 </div>
-<button type="button" class="letter-copy-btn" id="letterCopyBtn">copy this letter</button>
-<p class="letter-note">Change anything you like before sending. A letter in your own words is worth more than a perfect one that reads like a form.</p>
 </div>
-
-<div class="mp-finder">
-<p class="mp-finder-label">find your MP and send this straight to them</p>
-<form class="mp-finder-form" id="mpFinderForm" action="https://www.writetothem.com/" method="get" target="_blank">
-<label for="mpPostcode" class="visually-hidden">Your postcode</label>
-<input type="text" id="mpPostcode" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
-<button type="submit" id="mpFinderBtn">copy letter &amp; find my MP &rarr;</button>
+<div class="lm-foot">
+<button type="button" class="letter-copy-btn" data-copy="letter-cosmetics-testing">copy this letter</button>
+<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/" method="get" target="_blank">
+<label for="pc-cosmetics-m" class="visually-hidden">Your postcode</label>
+<input type="text" id="pc-cosmetics-m" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
+<button type="submit">copy letter &amp; find my MP &rarr;</button>
 </form>
-<p class="mp-finder-sub">Copies the letter above, then opens WriteToThem in a new tab, a free, independent service that looks up your MP from your postcode and sends your message on to them directly, no email app needed - just paste it into the message box. <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament's own lookup</a> works too if you'd rather email your MP yourself.</p>
-<p class="mp-finder-status" id="mpFinderStatus" role="status" aria-live="polite" style="min-height:1.4em;"></p>
+<p class="lc-status" role="status" aria-live="polite"></p>
 </div>
-</section>
+</dialog>
 
 <h2 class="learn-h2">a note on accuracy</h2>
 <p>Anything on this page that describes the law is written from the actual rules as far as I can establish them, and I have tried to keep what is fact separate from what is my own opinion. If you spot something out of date or wrong, please tell me, and I will correct it.</p>
@@ -161,52 +194,66 @@
 <script src="js/newsletter.js"></script>
 <script>
 (function(){
-  var body = document.getElementById('letterBody');
-  if (!body) return;
-
-  function letterText(){
-    return Array.prototype.map.call(body.querySelectorAll('p'), function(p){
-      return p.innerText;
+  function letterText(id){
+    var dlg = document.getElementById(id);
+    if (!dlg) return '';
+    var ps = dlg.querySelectorAll('.letter-body p');
+    return Array.prototype.map.call(ps, function(p){
+      var c = p.cloneNode(true);
+      c.querySelectorAll('br').forEach(function(br){ br.replaceWith('\n'); });
+      return c.textContent.trim();
     }).join('\n\n');
   }
-
-  function copyLetter(onDone){
-    var text = letterText();
+  function copyText(text, done){
     function fallback(){
       var ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      var ok = false;
-      try { document.execCommand('copy'); ok = true; } catch(e){}
-      document.body.removeChild(ta);
-      onDone(ok);
+      var ok = false; try { ok = document.execCommand('copy'); } catch(e){}
+      document.body.removeChild(ta); done(ok);
     }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function(){ onDone(true); }, fallback);
-    } else { fallback(); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function(){ done(true); }, fallback);
+    else fallback();
   }
 
-  var btn = document.getElementById('letterCopyBtn');
-  if (btn) {
-    btn.addEventListener('click', function(){
-      copyLetter(function(ok){
-        btn.textContent = ok ? 'copied' : 'select and copy above';
-        setTimeout(function(){ btn.textContent = 'copy this letter'; }, 2200);
-      });
-    });
+  // open / close letters
+  function openLetter(id){
+    var d = document.getElementById(id);
+    if (!d || !d.showModal) return;
+    d.showModal(); document.documentElement.style.overflow = 'hidden';
+    var sc = d.querySelector('.lm-scroll'); if (sc) sc.scrollTop = 0;
   }
+  document.querySelectorAll('[data-open]').forEach(function(b){
+    b.addEventListener('click', function(){ openLetter(b.dataset.open); });
+  });
+  document.querySelectorAll('dialog.letter-modal').forEach(function(d){
+    d.addEventListener('close', function(){ document.documentElement.style.overflow = ''; });
+    d.addEventListener('click', function(e){ if (e.target === d) d.close(); });
+    d.querySelectorAll('[data-close]').forEach(function(c){ c.addEventListener('click', function(){ d.close(); }); });
+  });
+  if (location.hash && /^#letter-/.test(location.hash)) openLetter(location.hash.slice(1));
 
-  var form = document.getElementById('mpFinderForm');
-  var status = document.getElementById('mpFinderStatus');
-  if (form && status) {
-    form.addEventListener('submit', function(){
-      copyLetter(function(ok){
-        status.textContent = ok
-          ? 'Letter copied - paste it into the message box on the next page.'
-          : 'Couldn\u2019t copy automatically - use the "copy this letter" button below instead.';
+  // copy buttons inside letters
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      copyText(letterText(b.dataset.copy), function(ok){
+        b.textContent = ok ? 'copied' : 'select and copy above';
+        setTimeout(function(){ b.textContent = 'copy this letter'; }, 2200);
       });
     });
-  }
+  });
+
+  // postcode forms: copy the right letter, then let WriteToThem open
+  document.querySelectorAll('form.lc-mp').forEach(function(f){
+    var status = f.nextElementSibling && f.nextElementSibling.classList.contains('lc-status') ? f.nextElementSibling : null;
+    f.addEventListener('submit', function(){
+      copyText(letterText(f.dataset.letter), function(ok){
+        if (status) status.textContent = ok
+          ? 'Letter copied - paste it into the message box on the WriteToThem page.'
+          : 'Couldn’t copy automatically - open the letter and use "copy this letter" instead.';
+      });
+    });
+  });
 })();
 </script>
 </body>
