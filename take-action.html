@@ -55,6 +55,7 @@ article.letter-card .lc-mp { margin-top:16px; }
 .lc-mp input:focus-visible, .lc-mp button:focus-visible, .lc-read:focus-visible, .lm-close:focus-visible { outline:2px solid var(--ahk-clay,#E8804C); outline-offset:2px; }
 .lc-status { font-size:12px; line-height:1.5; color:var(--ahk-kind-ink,#3f6a3d); margin:8px 0 0; min-height:1em; }
 .lc-status:empty { margin:0; }
+.lc-note { font-size:13px; line-height:1.6; color:var(--ahk-text,#5A4550); background:var(--ahk-clay-soft,#FBE3D3); border-radius:12px; padding:10px 14px; margin:0 0 4px; }
 .lc-foot { font-size:12.5px; color:var(--ahk-text-muted,#80686F); margin:-18px 0 30px; }
 
 dialog.letter-modal { position:fixed; inset:0; margin:auto; padding:0; border:0; border-radius:22px; width:min(640px, calc(100vw - 32px)); max-height:min(88vh, 900px); background:var(--ahk-card,#FBF4EF); color:var(--ahk-text,#5A4550); box-shadow:0 24px 60px rgba(42,22,48,0.3); overflow:hidden; }
@@ -108,6 +109,7 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 
 <h2 class="learn-h2">pick a topic</h2>
 <p>Each one is a ready-made letter to your MP on a specific, current gap in UK animal welfare law. MPs are obliged to read letters from their own constituents, and volume genuinely registers. Read a letter, change anything you like, then pop your postcode in underneath: it copies the letter for you and opens WriteToThem, a free, independent service that finds your MP and sends it to them. Just paste it into the message box. Two minutes, no expertise needed.</p>
+<p class="lc-note">These letters go to your MP, not your local councillor. Councils have no say over animal testing or farming law, so a councillor can only pass it on.</p>
 
 <div class="letter-cards">
 <article class="letter-card">
@@ -115,7 +117,8 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 <h3>Cosmetics testing is banned. Ingredient testing isn&rsquo;t.</h3>
 <p>Cosmetic ingredients can still be tested on animals under REACH, even though finished cosmetic products can&rsquo;t.</p>
 <button type="button" class="lc-read" data-open="letter-cosmetics-testing">read the letter <span aria-hidden="true">&#8599;</span></button>
-<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/" method="get" target="_blank">
+<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/who" method="get" target="_blank">
+<input type="hidden" name="a" value="WMC">
 <label for="pc-cosmetics" class="visually-hidden">Your postcode</label>
 <input type="text" id="pc-cosmetics" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
 <button type="submit">copy letter &amp; find my MP &rarr;</button>
@@ -160,7 +163,8 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 </div>
 <div class="lm-foot">
 <button type="button" class="letter-copy-btn" data-copy="letter-cosmetics-testing">copy this letter</button>
-<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/" method="get" target="_blank">
+<form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/who" method="get" target="_blank">
+<input type="hidden" name="a" value="WMC">
 <label for="pc-cosmetics-m" class="visually-hidden">Your postcode</label>
 <input type="text" id="pc-cosmetics-m" name="pc" placeholder="your postcode" autocapitalize="characters" autocomplete="postal-code" required>
 <button type="submit">copy letter &amp; find my MP &rarr;</button>
