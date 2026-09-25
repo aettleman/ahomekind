@@ -7,6 +7,90 @@
     "summary": "No7 moved from cruelty-free itself, parent company isn’t to not certified."
   },
   {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "b-by-superdrug",
+    "name": "B. by Superdrug",
+    "summary": "B. by Superdrug’s listing was updated: “100% vegan own-brand line. Superdrug's own brand is Leaping Bunny certified.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "barry-m",
+    "name": "Barry M",
+    "summary": "Barry M’s listing was updated: “PETA certified. UK, 100% vegan since 2020.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "carmex",
+    "name": "Carmex",
+    "summary": "Carmex moved from worth a closer look to not certified."
+  },
+  {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "catrice",
+    "name": "Catrice",
+    "summary": "Catrice moved from worth a closer look to not certified."
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "drunk-elephant",
+    "name": "Drunk Elephant",
+    "summary": "Drunk Elephant’s listing was updated: “Leaping Bunny certified itself, but owned by Shiseido, which isn't cruelty-free.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "ecover",
+    "name": "Ecover",
+    "summary": "Ecover’s listing was updated: “Leaping Bunny certified itself, but owned by SC Johnson, which isn't cruelty-free.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "essence",
+    "name": "essence",
+    "summary": "essence moved from worth a closer look to not certified."
+  },
+  {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "fabulosa",
+    "name": "Fabulosa",
+    "summary": "Fabulosa moved from fully cruelty-free & vegan to not certified."
+  },
+  {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "sleek-makeup",
+    "name": "Sleek MakeUP",
+    "summary": "Sleek MakeUP moved from cruelty-free itself, parent company isn’t to not certified."
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "superdrug-pro-care",
+    "name": "Superdrug Pro Care",
+    "summary": "Superdrug Pro Care’s listing was updated: “Superdrug's own range. Superdrug's own brand is Leaping Bunny certified; vegan products are marked individually.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "the-ordinary",
+    "name": "The Ordinary",
+    "summary": "The Ordinary’s listing was updated: “PETA certified. Owned by Estée Lauder, which isn't cruelty-free.”"
+  },
+  {
+    "date": "2026-09-25",
+    "type": "note-update",
+    "slug": "wild",
+    "name": "Wild",
+    "summary": "Wild’s listing was updated: “Leaping Bunny certified and vegan itself. Bought by Unilever in April 2025, which isn't cruelty-free.”"
+  },
+  {
     "date": "2026-09-14",
     "type": "added",
     "slug": "zebra-pen",
@@ -1314,89 +1398,5 @@
     "slug": "ralph-lauren-fragrances",
     "name": "Ralph Lauren Fragrances",
     "summary": "Ralph Lauren Fragrances was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "reach",
-    "name": "Reach",
-    "summary": "Reach was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "reckitt-benckiser",
-    "name": "Reckitt Benckiser",
-    "summary": "Reckitt Benckiser was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "rembrandt",
-    "name": "Rembrandt",
-    "summary": "Rembrandt was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "renuzit",
-    "name": "Renuzit",
-    "summary": "Renuzit was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "resolve",
-    "name": "Resolve",
-    "summary": "Resolve was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "revlon",
-    "name": "Revlon",
-    "summary": "Revlon was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "rid-x",
-    "name": "Rid-X",
-    "summary": "Rid-X was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "roberto-cavalli",
-    "name": "Roberto Cavalli",
-    "summary": "Roberto Cavalli was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "rogaine",
-    "name": "Rogaine",
-    "summary": "Rogaine was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "rossi-and-rossa",
-    "name": "Rossi & Rossa",
-    "summary": "Rossi & Rossa was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "s-c-johnson",
-    "name": "S.C. Johnson",
-    "summary": "S.C. Johnson was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "s-o-s",
-    "name": "S.O.S.",
-    "summary": "S.O.S. was added (tested on animals)."
   }
 ]
