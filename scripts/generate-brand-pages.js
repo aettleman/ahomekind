@@ -84,6 +84,15 @@ const VERDICT_HEADLINE = {
   bad: 'Tests on animals, or sells where it\'s required.',
   unverified: 'Not certified either way, yet.'
 };
+const CLAIM_HEADLINE = 'Says it\'s cruelty-free. Not certified.';
+function claimBox(brand) {
+  if (!brand.claim) return '';
+  return '<div class="claim-box" style="margin-top:16px; padding:16px 18px; background:#FBF4EF; border:1px solid #E4D0C6; border-radius:14px; font-size:13.5px; line-height:1.7; color:#5A4550;">'
+    + '<p style="margin:0 0 10px;"><strong style="color:#2A1630;">What they say:</strong> ' + escapeHtml(brand.claim) + '</p>'
+    + '<p style="margin:0;"><strong style="color:#2A1630;">The reality:</strong> ' + escapeHtml(brand.name) + ' isn\'t certified by Leaping Bunny, Cruelty Free International or PETA, so nobody independent has checked that claim. Getting certified is free, so until ' + escapeHtml(brand.name) + ' does, a home kind can\'t call it cruelty-free. If you buy it, you\'re taking the brand\'s word for it.</p>'
+    + '</div>';
+}
+
 
 const STAMP_TEXT = {
   good: '<b>CF +</b>vegan', check: '<b>cruelty</b>free', warn: '<b>owner</b>isn\'t', bad: '<b>tested</b>', unverified: '<b>not</b>certified'
@@ -248,10 +257,11 @@ function renderBrandPage(brand) {
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
   lines.push('<div class="bp"><div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div><div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
   lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified) + '</span></div>');
-  lines.push('<h2>' + (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified) + '</h2>');
+  lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified)) + '</h2>');
   lines.push('<p>' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
   lines.push('</div>');
+  if (brand.claim) lines.push(claimBox(brand));
   lines.push(veganButNotCrueltyFreeWarning);
   lines.push('<dl class="k-facts"><div><dt>Vegan</dt><i></i><dd>' + veganLine + '</dd></div><div><dt>Owner</dt><i></i><dd>' + (brand.parentCompany ? escapeHtml(brand.parentCompany) : 'Independent') + '</dd></div>' + (brand.price ? '<div><dt>Price</dt><i></i><dd>' + escapeHtml(brand.price) + '</dd></div>' : '') + '</dl>');
   lines.push('</div><div class="k-bp-r">');

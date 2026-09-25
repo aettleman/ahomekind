@@ -32,7 +32,7 @@ const TIER_META = {
   good:       { cardClass: 'good', ratingClass: 'good', emoji: '&#127807;', label: 'fully cruelty-free &amp; vegan' },
   check:      { cardClass: 'check', ratingClass: 'check', emoji: '&#128048;', label: 'cruelty-free, check vegan status per product' },
   warn:       { cardClass: 'warn', ratingClass: 'warn', emoji: '&#9888;&#65039;', label: 'cruelty-free itself, parent company isn\'t' },
-  unverified: { cardClass: 'unverified', ratingClass: 'unverified', emoji: '&#128269;', label: 'unverified claim' },
+  unverified: { cardClass: 'unverified', ratingClass: 'unverified', emoji: '&#128269;', label: 'not certified' },
   bad:        { cardClass: 'bad', ratingClass: 'bad', emoji: '&#10060;', label: 'tested on animals' }
 };
 
@@ -137,7 +137,7 @@ function renderCard(brand) {
       : '<p class="parent-test-flag unverified">&#128269; parent company\'s testing policy is also unverified</p>';
   }
   return '<div class="' + cardClass + '" data-category="' + dataCategory + '"' + (dataRegion ? ' data-region="' + dataRegion + '"' : '') + '>' +
-    '<p class="' + ratingClass + '">' + tier.emoji + ' ' + tier.label + '</p>' +
+    '<p class="' + ratingClass + '">' + tier.emoji + ' ' + (brand.tier === 'unverified' && brand.claim ? 'says it\'s cruelty-free, not certified' : tier.label) + '</p>' +
     '<h3>' + nameHtml + '</h3>' +
     '<p>' + escapeHtml(brand.note) + '</p>' + parentNote + '</div>';
 }

@@ -12405,8 +12405,8 @@
   {
     "slug": "no7",
     "name": "No7",
-    "tier": "warn",
-    "note": "Cruelty-free, owned by Walgreens Boots Alliance.",
+    "tier": "unverified",
+    "note": "No7 isn't certified by Leaping Bunny, Cruelty Free International or PETA. It isn't on Boots' own list of Leaping Bunny approved brands either. Owned by Walgreens Boots Alliance, which isn't cruelty-free.",
     "parentCompany": "Walgreens Boots Alliance",
     "vegan": "partial",
     "evidence": "",
@@ -12419,7 +12419,9 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Europe"
+    "region": "Europe",
+    "claim": "No7 says it doesn't test its products or ingredients on animals, and nor do its suppliers.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "noughty",

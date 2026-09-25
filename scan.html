@@ -618,7 +618,8 @@ var BRANDS = [
 {match:["rimmel"], name:"Rimmel", tier:"warn", note:"Leaping Bunny certified itself, owned by Coty."},
 {match:["l'oreal","loreal","elvive","elseve","revitalift","infallible","true match","casting creme gloss","magic retouch","age perfect","men expert","studio line"], name:"L'Oréal", tier:"bad", note:"The world's largest cosmetics company. Sells into mainland China, where animal testing can still be legally required, and has lobbied against a full EU testing ban. Parent company of Maybelline, Garnier, Redken, NYX and more. Recognised here by product-line names too (Elvive, Revitalift, Infallible and others), since the L'Oréal name doesn't always appear on the front of the pack."},
 {match:["garnier","ambre solaire","belle color","ultimate blends","fructis","nutrisse","moisture bomb","skinactive"], name:"Garnier", tier:"warn", note:"Leaping Bunny certified, owned by LOreal."},
-{match:["no7","no.7","no 7","no seven","number 7","number seven","boots"], name:"No7 / Boots own brand", tier:"warn", note:"No7 is cruelty-free itself, owned by Walgreens Boots Alliance. Wider Boots-branded ranges vary - check the specific product where possible."},
+{match:["no7","no.7","no 7","no seven","number 7","number seven"], name:"No7", tier:"unverified", note:"No7 says it doesn't test on animals, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA, so nobody independent has checked. Owned by Walgreens Boots Alliance, which isn't cruelty-free."},
+{match:["boots"], name:"Boots own brand", tier:"check", note:"Many Boots own-brand beauty ranges are Leaping Bunny approved, including Botanics, Boots Ingredients, Soltan, Tea Tree & Witch Hazel and Boots Vitamin C. Not every Boots product is, and No7 isn't certified - look for the Leaping Bunny logo on the pack."},
 {match:["simple"], name:"Simple", tier:"warn", note:"PETA certified, owned by Unilever."},
 {match:["the ordinary"], name:"The Ordinary", tier:"warn", note:"Cruelty-free itself, owned by Estee Lauder."},
 {match:["drunk elephant"], name:"Drunk Elephant", tier:"warn", note:"Owned by Shiseido, not cruelty-free."},
@@ -931,7 +932,7 @@ function verdictHTML(brand){
   if (full && full.price) sub += " &middot; " + full.price;
   var out = '<div class="k-brand k-scanres">';
   out += '<div class="bp"><div class="k-arch-box" style="background:' + K_WASH[tier] + '"><div class="pk ' + shape + '" style="--c:' + cols[h % cols.length] + ';--cap:#3A1F3D"><i></i></div></div><div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeAttr(brand.name) + '</h1><p>' + sub + '</p></div></div>';
-  out += '<div class="vcard tier-' + tier + '"><div class="bigst"><span>' + K_STAMP[tier] + '</span></div><h2>' + K_HEAD[tier] + '</h2><p>' + brand.note + '</p></div>';
+  out += '<div class="vcard tier-' + tier + '"><div class="bigst"><span>' + K_STAMP[tier] + '</span></div><h2>' + (tier === 'unverified' && full && full.claim ? 'Says it\'s cruelty-free. Not certified.' : K_HEAD[tier]) + '</h2><p>' + brand.note + '</p></div>';
   if (full && full.parentCompany) {
     var pn = kNorm(full.parentCompany), fam = AHK_ALL.filter(function(b){ return kNorm(b.parentCompany) === pn; }).length;
     var prec = null; for (var q = 0; q < AHK_ALL.length; q++) { if (kNorm(AHK_ALL[q].name) === pn) { prec = AHK_ALL[q]; break; } }
