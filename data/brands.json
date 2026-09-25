@@ -1279,7 +1279,7 @@
     "slug": "b-by-superdrug",
     "name": "B. by Superdrug",
     "tier": "good",
-    "note": "100% vegan, cruelty-free own-brand line.",
+    "note": "100% vegan own-brand line. Superdrug's own brand is Leaping Bunny certified.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -1293,7 +1293,8 @@
       "body-shower"
     ],
     "veganConfidence": "high",
-    "region": "Europe"
+    "region": "Europe",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "bob",
@@ -1446,7 +1447,7 @@
     "slug": "barry-m",
     "name": "Barry M",
     "tier": "good",
-    "note": "UK, 100% vegan since 2020.",
+    "note": "PETA certified. UK, 100% vegan since 2020.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -1479,7 +1480,8 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Europe"
+    "region": "Europe",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "batch",
@@ -2953,8 +2955,8 @@
   {
     "slug": "carmex",
     "name": "Carmex",
-    "tier": "check",
-    "note": "Carmex says it has never tested on animals. It isn't vegan though - the balm itself contains beeswax and lanolin.",
+    "tier": "unverified",
+    "note": "Carmex isn't certified by Leaping Bunny, Cruelty Free International or PETA. PETA's database says Carmex hasn't signed its cruelty-free pledge. Not vegan either: the balm contains beeswax and lanolin.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -2966,7 +2968,9 @@
       "skincare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "claim": "Carmex says it has never tested on animals.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "carols-daughter",
@@ -3007,8 +3011,8 @@
   {
     "slug": "catrice",
     "name": "Catrice",
-    "tier": "check",
-    "note": "Cruelty-free, but not every product is vegan -- check the individual product.",
+    "tier": "unverified",
+    "note": "Catrice isn't certified by Leaping Bunny, Cruelty Free International or PETA. Not every product is vegan either, so check the individual product.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -3020,7 +3024,9 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Europe, USA & Canada"
+    "region": "Europe, USA & Canada",
+    "claim": "Catrice says it's cruelty-free.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "caudalie-usa",
@@ -4880,7 +4886,7 @@
     "slug": "drunk-elephant",
     "name": "Drunk Elephant",
     "tier": "warn",
-    "note": "Owned by Shiseido, not cruelty-free.",
+    "note": "Leaping Bunny certified itself, but owned by Shiseido, which isn't cruelty-free.",
     "parentCompany": "Shiseido",
     "vegan": "partial",
     "evidence": "",
@@ -4892,7 +4898,8 @@
       "skincare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "dtrt",
@@ -5176,7 +5183,7 @@
     "slug": "ecover",
     "name": "Ecover",
     "tier": "warn",
-    "note": "Cruelty-free, owned by SC Johnson.",
+    "note": "Leaping Bunny certified itself, but owned by SC Johnson, which isn't cruelty-free.",
     "parentCompany": "SC Johnson",
     "vegan": "partial",
     "evidence": "",
@@ -5189,7 +5196,8 @@
       "laundry"
     ],
     "veganConfidence": "medium",
-    "region": "Europe"
+    "region": "Europe",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "ecozone",
@@ -5491,8 +5499,8 @@
   {
     "slug": "essence",
     "name": "essence",
-    "tier": "check",
-    "note": "Cruelty-free, including in mainland China, but not every product is vegan -- around 50 lines are marked vegan individually.",
+    "tier": "unverified",
+    "note": "essence isn't certified by Leaping Bunny, Cruelty Free International or PETA. Around 50 products are marked vegan individually.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -5504,7 +5512,9 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Europe, USA & Canada"
+    "region": "Europe, USA & Canada",
+    "claim": "essence says it's cruelty-free, including in mainland China.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "esspire",
@@ -5784,8 +5794,8 @@
   {
     "slug": "fabulosa",
     "name": "Fabulosa",
-    "tier": "good",
-    "note": "Company states all products are 100% vegan with no animal-derived ingredients, and none are tested on animals anywhere. Endorsed by Naturewatch Foundation's Compassionate Shopping Guide.",
+    "tier": "unverified",
+    "note": "Fabulosa isn't certified by Leaping Bunny or PETA. It's in Naturewatch Foundation's Compassionate Shopping Guide, which is a shopping guide rather than a certification.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -5808,7 +5818,9 @@
       "household-cleaning"
     ],
     "veganConfidence": "high",
-    "region": "Europe"
+    "region": "Europe",
+    "claim": "Fabulosa says all its products are 100% vegan and never tested on animals anywhere.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "facetheory",
@@ -16311,8 +16323,8 @@
   {
     "slug": "sleek-makeup",
     "name": "Sleek MakeUP",
-    "tier": "warn",
-    "note": "Cruelty-free itself, but owned by Walgreens Boots Alliance, who do test on animals, and doesn't currently offer vegan products.",
+    "tier": "unverified",
+    "note": "Sleek isn't certified by Leaping Bunny, Cruelty Free International or PETA. Owned by Walgreens Boots Alliance, which isn't cruelty-free. No vegan products at the moment.",
     "parentCompany": "Walgreens Boots Alliance",
     "vegan": "unknown",
     "evidence": "",
@@ -16324,7 +16336,9 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "claim": "Sleek says it doesn't test its products on animals.",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "smashbox",
@@ -17113,7 +17127,7 @@
     "slug": "superdrug-pro-care",
     "name": "Superdrug Pro Care",
     "tier": "check",
-    "note": "Superdrug's own cruelty-free range, vegan products marked individually.",
+    "note": "Superdrug's own range. Superdrug's own brand is Leaping Bunny certified; vegan products are marked individually.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -17125,7 +17139,8 @@
       "dental"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "supergoop",
@@ -17907,8 +17922,8 @@
     "slug": "the-ordinary",
     "name": "The Ordinary",
     "tier": "warn",
-    "note": "DECIEM is cruelty-free and vegan. Owned by Estée Lauder.",
-    "parentCompany": null,
+    "note": "PETA certified. Owned by Estée Lauder, which isn't cruelty-free.",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "full",
     "evidence": "",
     "products": [],
@@ -17919,7 +17934,8 @@
       "skincare"
     ],
     "veganConfidence": "high",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "the-pink-stuff",
@@ -19398,8 +19414,8 @@
     "slug": "wild",
     "name": "Wild",
     "tier": "warn",
-    "note": "Cruelty-free and vegan itself, acquired by Unilever in April 2025.",
-    "parentCompany": null,
+    "note": "Leaping Bunny certified and vegan itself. Bought by Unilever in April 2025, which isn't cruelty-free.",
+    "parentCompany": "Unilever",
     "vegan": "full",
     "evidence": "",
     "products": [],
@@ -19410,7 +19426,8 @@
       "body-shower"
     ],
     "veganConfidence": "high",
-    "region": "Europe"
+    "region": "Europe",
+    "lastVerified": "2026-09-25"
   },
   {
     "slug": "wild-science-lab",

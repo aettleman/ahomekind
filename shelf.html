@@ -36,6 +36,7 @@
 .hit.warn { background:#FBE3D3; border:1px solid #E8A57A; }
 .hit.bad { background:#F5D3D6; border:1px solid #C9546A; }
 .hit.check { background:#F1E0D7; border:1px solid #E0C9BE; }
+.hit.unverified { background:#EFDDD3; border:1px dashed #C9B3A9; }
 .hit h3 { margin-bottom:6px; }
 
 /* Kind Swaps -- same shared widget/logic as scan.html and brand-check.html
@@ -200,7 +201,7 @@ var BRANDS = [
 {terms:["elf","e.l.f"], name:"e.l.f. Cosmetics", tier:"good", note:"Independently owned, PETA and Vegan Society certified."},
 {terms:["faith in nature","faith"], name:"Faith in Nature", tier:"good", note:"Leaping Bunny certified, budget-friendly."},
 {terms:["byoma"], name:"BYOMA", tier:"good", note:"Leaping Bunny certified."},
-{terms:["barry m","barrym"], name:"Barry M", tier:"good", note:"100% vegan since 2020."},
+{terms:["barry m","barrym"], name:"Barry M", tier:"good", note:"PETA certified. UK, 100% vegan since 2020."},
 {terms:["astonish"], name:"Astonish", tier:"good", note:"Cruelty Free International approved, Vegan Society certified."},
 {terms:["pink stuff"], name:"The Pink Stuff", tier:"good", note:"Leaping Bunny certified worldwide."},
 {terms:["bio-d","biod"], name:"Bio-D", tier:"good", note:"Vegan Society and Cruelty Free International certified."},
@@ -220,10 +221,10 @@ var BRANDS = [
 {terms:["l'oreal","loreal","elvive","elseve","revitalift","infallible","true match","casting creme gloss","magic retouch","age perfect","men expert","studio line"], name:"L'Oreal", tier:"bad", note:"World's largest cosmetics company, sells into mainland China where testing can be required. Recognised here by product-line names too (Elvive, Revitalift, Infallible and others), since the L'Oreal name doesn't always appear on the front of the pack."},
 {terms:["no7","no.7"], name:"No7", tier:"unverified", note:"Says it doesn't test on animals, but isn't certified by Leaping Bunny, Cruelty Free International or PETA. Owned by Walgreens Boots Alliance."},
 {terms:["simple"], name:"Simple", tier:"warn", note:"PETA certified, owned by Unilever."},
-{terms:["the ordinary","ordinary"], name:"The Ordinary", tier:"warn", note:"Cruelty-free itself, owned by Estee Lauder."},
-{terms:["drunk elephant"], name:"Drunk Elephant", tier:"warn", note:"Owned by Shiseido, not cruelty-free."},
+{terms:["the ordinary","ordinary"], name:"The Ordinary", tier:"warn", note:"PETA certified. Owned by Estée Lauder, which isn't cruelty-free."},
+{terms:["drunk elephant"], name:"Drunk Elephant", tier:"warn", note:"Leaping Bunny certified itself, but owned by Shiseido, which isn't cruelty-free."},
 {terms:["method"], name:"Method", tier:"warn", note:"Leaping Bunny certified, owned by SC Johnson."},
-{terms:["ecover"], name:"Ecover", tier:"warn", note:"Cruelty-free, owned by SC Johnson."},
+{terms:["ecover"], name:"Ecover", tier:"warn", note:"Leaping Bunny certified itself, but owned by SC Johnson, which isn't cruelty-free."},
 {terms:["elemis"], name:"Elemis", tier:"bad", note:"Tests on animals directly, owned by LOccitane."},
 {terms:["ariel"], name:"Ariel (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
 {terms:["daz"], name:"Daz (P&G)", tier:"bad", note:"Procter & Gamble tests where legally required."},
@@ -286,8 +287,8 @@ var BRANDS = [
 {terms:["glaze"], name:"Glaze", tier:"good", note:"PETA certified, vegan, independent brand."},
 {terms:["kingfisher"], name:"Kingfisher", tier:"good", note:"Cruelty-free, vegan, independent. PETA-listed."},
 {terms:["bleach london"], name:"Bleach London", tier:"good", note:"PETA-approved, 100% vegan since 2017."},
-{terms:["pro care","procare"], name:"Superdrug Pro Care", tier:"check", note:"Superdrug's own cruelty-free range, vegan products marked individually."},
-{terms:["wild"], name:"Wild", tier:"warn", note:"Cruelty-free and vegan itself, acquired by Unilever in April 2025."}
+{terms:["pro care","procare"], name:"Superdrug Pro Care", tier:"check", note:"Superdrug's own range. Superdrug's own brand is Leaping Bunny certified; vegan products are marked individually."},
+{terms:["wild"], name:"Wild", tier:"warn", note:"Leaping Bunny certified and vegan itself. Bought by Unilever in April 2025, which isn't cruelty-free."}
 ];
 
 function el(id){ return document.getElementById(id); }
@@ -419,10 +420,10 @@ var out = "<p style=\"text-align:center; color:#8C7580; font-size:12.5px; margin
 (list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far - keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
 "</p>";
 if(list.length){
-var order = {good:0, check:1, warn:2, bad:3};
+var order = {good:0, check:1, unverified:2, unknown:2, warn:3, bad:4};
 list.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
 list.forEach(function(b){
-var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
+var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : (b.tier === "unverified" ? "&#128269; says it's cruelty-free, not certified" : "&#128048; cruelty-free, check the product"))));
 out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5A4550;\">" + head + "</p>";
 out += "<h3>" + b.name + "</h3>";
@@ -563,10 +564,10 @@ try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'shelf', b
 if(found.length){
 if(navigator.vibrate) navigator.vibrate(60);
 setStatus("Found " + found.length + (found.length === 1 ? " brand" : " brands") + " I know.");
-var order = {good:0, check:1, warn:2, bad:3};
+var order = {good:0, check:1, unverified:2, unknown:2, warn:3, bad:4};
 found.sort(function(a,b){ return order[a.tier] - order[b.tier]; });
 var kindCount = found.filter(function(b){ return b.tier === "good"; }).length;
-var checkCount = found.filter(function(b){ return b.tier === "check" || b.tier === "unknown"; }).length;
+var checkCount = found.filter(function(b){ return b.tier === "check" || b.tier === "unknown" || b.tier === "unverified"; }).length;
 var notKindCount = found.filter(function(b){ return b.tier === "warn" || b.tier === "bad"; }).length;
 out += "<div class=\"shelf-stats\">";
 out += "<div class=\"shelf-stat\"><span class=\"shelf-stat-num good\">" + kindCount + "</span><span class=\"shelf-stat-label\">kind</span></div>";
@@ -575,7 +576,7 @@ out += "<div class=\"shelf-stat\"><span class=\"shelf-stat-num bad\">" + notKind
 out += "</div>";
 var swapTargets = [];
 found.forEach(function(b, i){
-var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : "&#128048; cruelty-free, check the product")));
+var head = b.tier === "good" ? "&#127807; worth picking up" : (b.tier === "warn" ? "&#9888;&#65039; worth a disclaimer" : (b.tier === "bad" ? "&#10060; tested on animals" : (b.tier === "unknown" ? "&#10067; status not yet confirmed" : (b.tier === "unverified" ? "&#128269; says it's cruelty-free, not certified" : "&#128048; cruelty-free, check the product"))));
 var swapId = "shelfSwap" + i;
 out += "<div class=\"hit " + b.tier + "\">";
 out += "<p style=\"font-size:12px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#5A4550;\">" + head + "</p>";
