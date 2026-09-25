@@ -84,6 +84,22 @@
 .k-four b { display:block; font:400 17px/1.1 'Gloock',serif; color:var(--ahk-heading); }
 .k-four span:not(.ahk-stamp) { font-size:12px; color:var(--ahk-text-muted); line-height:1.4; }
 
+.k-kl { margin-top:14px; background:#3A1F3D; color:#FBF4EF; border-radius:26px; padding:20px; display:flex; gap:16px; align-items:flex-start; }
+.k-kl-arch { flex:none; width:78px; height:96px; border-radius:999px 999px 16px 16px; background:#F6C6A8; color:#3A1F3D; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:12px; }
+.k-kl-arch b { font:400 28px/1 'Gloock',serif; }
+.k-kl-arch span { font:600 9px 'Hanken Grotesk',sans-serif; letter-spacing:.18em; text-transform:uppercase; margin-top:3px; }
+.k-kl-kick { font:600 10.5px 'Hanken Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#F6C6A8; }
+.k-kl h3 { font:400 26px/1.05 'Gloock',serif !important; margin:6px 0 0 !important; text-transform:none !important; letter-spacing:-0.01em !important; color:#FBF4EF !important; }
+.k-kl p { font-size:13.5px; line-height:1.5; color:#D9C3CF; margin:6px 0 0; }
+.k-kl-btns { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.k-kl-dl, .k-kl-read { display:inline-flex; align-items:center; border-radius:99px; padding:10px 16px; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; }
+.k-kl-dl { background:#E8804C; color:#fff !important; }
+.k-kl-dl:hover { background:#C8622F; }
+.k-kl-read { border:1.5px solid rgba(251,244,239,.5); color:#FBF4EF !important; }
+.k-kl-read:hover { border-color:#FBF4EF; }
+.k-kl-dl:focus-visible, .k-kl-read:focus-visible { outline:2px solid #F6C6A8; outline-offset:3px; }
+.k-kl-hand { display:block; font-size:22px; color:#F6C6A8 !important; margin-top:10px; transform:rotate(-2deg); transform-origin:left; }
+
 .k-count { margin-top:32px; background:#3A1F3D; color:#FBF4EF; padding:24px 22px; }
 .k-count-kick { color:#F6C6A8; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:0.16em; text-transform:uppercase; }
 .k-count-num { font:400 68px/0.9 'Gloock',serif; margin-top:10px; }
@@ -144,6 +160,20 @@
   .k-four b.k-n { font:400 48px/1 'Gloock',serif; margin:18px 0 6px; }
   .k-four b:not(.k-n) { font-size:20px; }
   .k-four span:not(.ahk-stamp) { font-size:14px; margin-top:4px; }
+  .k-four-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr); gap:32px; align-items:end; }
+  .k-four-wrap .k-four { grid-template-columns:1fr 1fr; gap:12px; margin-top:24px; }
+  .k-four-wrap .k-four > div { padding:18px; border-radius:22px; }
+  .k-four-wrap .k-four .ahk-stamp { width:40px; height:40px; }
+  .k-four-wrap .k-four .ahk-stamp svg { width:18px; height:18px; }
+  .k-four-wrap .k-four b.k-n { font-size:36px; margin:12px 0 4px; }
+  .k-four-wrap .k-four b:not(.k-n) { font-size:18px; }
+  .k-four-wrap .k-four span:not(.ahk-stamp) { font-size:13px; }
+  .k-kl { margin-top:0; flex-direction:column; padding:30px; border-radius:32px; gap:20px; height:100%; }
+  .k-kl-arch { width:120px; height:150px; padding-bottom:18px; }
+  .k-kl-arch b { font-size:44px; }
+  .k-kl h3 { font-size:40px !important; }
+  .k-kl p { font-size:15px; }
+  .k-kl-hand { font-size:28px; }
   .k-count { display:none; }
   .k-idea h2 { font-size:52px !important; line-height:1 !important; }
   .k-idea p { font-size:17px; }
@@ -213,6 +243,8 @@
 </section>
 
 <div class="k-four-wrap ahk-reveal">
+<div class="k-four-grid">
+<div class="k-four-main">
 <span class="kick-dot"><span class="k-mob">four possible answers</span><span class="k-dsk">what 1,069 checks found</span></span>
 <h2 class="k-dsk k-d-h2">Four possible answers.</h2>
 <div class="k-four">
@@ -240,6 +272,21 @@
 <b>Tested</b>
 <span>Tests on animals, or sells where it's legally required. <a href="take-action.html" class="k-inline-link">That's a law we can change</a>.</span>
 </div>
+</div>
+</div>
+<aside class="k-kl" aria-labelledby="klTitle">
+<div class="k-kl-arch" aria-hidden="true"><b>677</b><span>brands</span></div>
+<div class="k-kl-body">
+<span class="k-kl-kick">free download &middot; updated monthly</span>
+<h3 id="klTitle">The kind list.</h3>
+<p>Every certified cruelty-free brand checked so far, sorted by what you&rsquo;re buying. A printable A4 PDF, no sign-up.</p>
+<div class="k-kl-btns">
+<a class="k-kl-dl" href="downloads/the-kind-list.pdf" download="the-kind-list-a-home-kind.pdf">download the PDF</a>
+<a class="k-kl-read" href="downloads/the-kind-list.pdf" target="_blank" rel="noopener">read it first &#8599;</a>
+</div>
+<span class="ahk-hand k-kl-hand">stick me on the fridge x</span>
+</div>
+</aside>
 </div>
 </div>
 
@@ -286,13 +333,6 @@
 </a>
 </div>
 
-<div class="myth-section">
-<div class="myth-section-inner ahk-reveal">
-<h2 class="myth-heading">myth versus reality</h2>
-<div class="myth-grid" id="mythGrid"></div>
-</div>
-</div>
-
 <main id="main">
 <a href="take-action.html" class="action-teaser ahk-reveal">
 <p class="action-teaser-kicker">take action</p>
@@ -301,6 +341,15 @@
 <span class="action-teaser-cta">see what you can do</span>
 </a>
 </main>
+
+<div class="myth-section">
+<div class="myth-section-inner ahk-reveal">
+<h2 class="myth-heading">myth versus reality</h2>
+<div class="myth-grid" id="mythGrid"></div>
+</div>
+</div>
+
+
 
 <div class="k-duo solo">
 <div class="k-letter ahk-reveal">
