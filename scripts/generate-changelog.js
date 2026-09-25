@@ -96,7 +96,7 @@ function tierLabel(tier) {
     check: 'worth a closer look',
     warn: 'cruelty-free itself, parent company isn’t',
     bad: 'tested on animals',
-    unverified: 'unverified'
+    unverified: 'not certified'
   }[tier] || tier;
 }
 

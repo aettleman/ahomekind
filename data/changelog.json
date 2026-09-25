@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-09-25",
+    "type": "tier-change",
+    "slug": "no7",
+    "name": "No7",
+    "summary": "No7 moved from cruelty-free itself, parent company isn’t to not certified."
+  },
+  {
+    "date": "2026-09-14",
+    "type": "added",
+    "slug": "zebra-pen",
+    "name": "Zebra Pen",
+    "summary": "Zebra Pen was added (not certified)."
+  },
+  {
+    "date": "2026-09-14",
+    "type": "added",
+    "slug": "paper-mate",
+    "name": "Paper Mate",
+    "summary": "Paper Mate was added (not certified)."
+  },
+  {
     "date": "2026-09-13",
     "type": "added",
     "slug": "arctic-fox",
@@ -1377,26 +1398,5 @@
     "slug": "s-o-s",
     "name": "S.O.S.",
     "summary": "S.O.S. was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "safeguard",
-    "name": "Safeguard",
-    "summary": "Safeguard was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "salvatore-ferragamo",
-    "name": "Salvatore Ferragamo",
-    "summary": "Salvatore Ferragamo was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "savlon",
-    "name": "Savlon",
-    "summary": "Savlon was added (tested on animals)."
   }
 ]
