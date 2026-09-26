@@ -65,13 +65,15 @@
 .k-win-stamp { position:absolute; right:-6px; top:-14px; width:92px; height:92px; border-radius:50%; background:#E8804C; color:#fff; display:grid; place-items:center; text-align:center; transform:rotate(10deg); box-shadow:0 10px 24px -10px rgba(42,22,48,0.45); z-index:3; }
 .k-win-stamp > span { font:400 13px/1.1 'Gloock',serif; }
 .k-win-stamp b { display:block; font:400 19px/1 'Gloock',serif; margin-bottom:3px; }
-.k-sbox { grid-area:sbox; position:relative; margin:-30px -8px 0; z-index:5; display:flex; align-items:center; gap:10px; background:var(--ahk-card); border-radius:99px; padding:7px 7px 7px 18px; box-shadow:0 14px 30px -14px rgba(42,22,48,0.45); }
+.k-search-block { grid-area:sbox; position:relative; margin:-30px -8px 0; z-index:5; }
+.k-sbox { position:relative; display:flex; align-items:center; gap:10px; background:var(--ahk-card); border-radius:99px; padding:7px 7px 7px 18px; box-shadow:0 14px 30px -14px rgba(42,22,48,0.45); }
 .k-sbox > svg { width:20px; height:20px; color:var(--ahk-heading); flex:none; }
 .k-sbox input { flex:1; min-width:0; border:0; background:none; outline:none; font:400 18px 'Gloock',serif; color:var(--ahk-heading); padding:6px 0; -webkit-appearance:none; }
 .k-sbox input::placeholder { color:var(--ahk-text-muted); }
 .k-sbox input::-webkit-search-cancel-button { display:none; }
 .k-sbox-scan { width:46px; height:46px; border-radius:50%; background:#3A1F3D; color:#fff !important; display:grid; place-items:center; flex:none; }
 .k-sbox-scan svg { width:20px; height:20px; }
+.k-sbox-hint { margin:6px 0 0 10px; font-size:18px; color:var(--ahk-gold); transform:rotate(-2deg); transform-origin:left center; }
 .k-quick { grid-area:quick; display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:14px 0 0; }
 .k-quick small { font-size:12px; color:var(--ahk-text-muted); margin-right:2px; }
 .k-quick a { font:600 12.5px 'Hanken Grotesk',sans-serif; padding:6px 11px; border-radius:99px; border:1px solid rgba(42,22,48,0.13); background:var(--ahk-card); color:var(--ahk-heading); text-decoration:none; }
@@ -146,10 +148,12 @@
   .k-win-stamp { width:140px; height:140px; left:-40px; right:auto; top:auto; bottom:60px; transform:rotate(-8deg); }
   .k-win-stamp > span { font-size:16px; }
   .k-win-stamp b { font-size:30px; }
-  .k-sbox { margin:34px 0 0; max-width:560px; padding:9px 9px 9px 26px; }
+  .k-search-block { margin:34px 0 0; max-width:560px; }
+  .k-sbox { padding:9px 9px 9px 26px; }
   .k-sbox input { font-size:22px; }
   .k-sbox-scan { width:56px; height:56px; }
   .k-sbox-scan svg { width:24px; height:24px; }
+  .k-sbox-hint { font-size:20px; margin-left:16px; }
   .k-quick { padding:16px 0 0; }
   .k-four-wrap, .k-idea, .k-duo { max-width:1240px; margin:0 auto; padding:64px 40px 0; }
   .k-d-h2 { font:400 52px/1 'Gloock',serif !important; margin:10px 0 0 !important; text-transform:none !important; letter-spacing:-0.01em !important; color:var(--ahk-heading); }
@@ -225,23 +229,15 @@
 <img src="images/hero-two-rabbits.jpg" alt="Two rabbits side by side against a dark background">
 <div class="k-win-stamp"><span><b>by hand</b>every <span class="k-dsk">single </span><br>brand</span></div>
 </div>
+<div class="k-search-block">
 <form class="k-sbox" action="brand-check.html" method="get" role="search">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg>
-<label for="homeSearch" class="visually-hidden">Search a brand to see if they test on animals</label>
-<input type="search" id="homeSearch" name="q" placeholder="Search a brand — is it cruelty-free?" autocomplete="off" enterkeyhint="search">
+<label for="homeSearch" class="visually-hidden">Search any brand</label>
+<input type="search" id="homeSearch" name="q" placeholder="Search any brand" autocomplete="off" enterkeyhint="search">
 <a href="scan.html" class="k-sbox-scan" aria-label="Scan a barcode instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></a>
 </form>
-<script>
-(function(){
-  var i = document.getElementById('homeSearch');
-  if (!i) return;
-  var full = 'Search a brand to see if they test on animals';
-  var mob = i.getAttribute('placeholder');
-  function set(){ i.placeholder = window.innerWidth >= 900 ? full : mob; }
-  set();
-  window.addEventListener('resize', set);
-})();
-</script>
+<p class="k-sbox-hint ahk-hand">check if they test on animals</p>
+</div>
 <div class="k-quick">
 <small>Popular:</small>
 <a href="brand-check.html?q=Dove">Dove</a>
