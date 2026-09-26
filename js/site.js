@@ -27,7 +27,7 @@ var isHome = path === '/' || /\/index\.html$/.test(path) || path === '/ahomekind
 if(isHome) return;
 // The five tab pages are top-level destinations (the bottom nav and header
 // already get you anywhere), so the mockup has no back link on them.
-if(/\/(brand-check|learn|impact|shop|scan)(\.html)?$/.test(path) || /^\/brands\//.test(path)) return;
+if(/\/(brand-check|learn|impact|shop|scan|quiz)(\.html)?$/.test(path) || /^\/brands\//.test(path)) return;
 
 var PAGE_LABELS = {
 'index.html': 'home',
