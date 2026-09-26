@@ -19861,5 +19861,43 @@
     ],
     "veganConfidence": "low",
     "region": ""
+  },
+  {
+    "slug": "margaret-dabbs-london",
+    "name": "Margaret Dabbs London",
+    "tier": "warn",
+    "note": "UK podiatry-led beauty brand. States it does not test on animals, but its separate “PURE Vegan” line suggests the wider range isn't fully vegan.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "Cruelty Free International listing",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "£££",
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "Europe",
+    "lastVerified": "2026-09-26"
+  },
+  {
+    "slug": "mo-and-marine",
+    "name": "Mo & Marine",
+    "tier": "check",
+    "note": "UK-made, plastic-free sensitive wipes. Cruelty Free International listed; vegan status not yet confirmed.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "Cruelty Free International listing",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "lastVerified": "2026-09-26"
   }
 ]
