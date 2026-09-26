@@ -153,7 +153,7 @@ h2{font-family:'Gloock',serif;font-weight:400;color:var(--ink);font-size:6.4cqw;
 <div class="n">{{CF}}</div><div class="l">cruelty-free brands</div></div>
 <h1>The kind list<i>.</i></h1>
 <p class="sub">Every certified cruelty-free brand checked so far, sorted by what you&rsquo;re buying. Free to print, save and share.</p>
-<div class="hand">stick me on the fridge x</div>
+<div class="hand">your annoying vegan friend x</div>
 <div class="ed"><span>{{EDITION}} edition</span><span>correct as of {{ASOF}}</span></div>
 </div></section>
 
