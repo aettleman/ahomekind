@@ -826,7 +826,7 @@ var h = "<div class=\"card\" style=\"border-color:#9DBB98;\">";
 if(b){
 h += "<h3>check " + b + " elsewhere</h3>";
 h += "<p style=\"margin-bottom:8px;\">Sources that cover far more brands than I do:</p>";
-h += "<a class=\"srclink\" href=\"https://crueltyfree.peta.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">PETA Beauty Without Bunnies &rarr;</a>";
+h += "<a class=\"srclink\" href=\"https://crueltyfree.peta.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">PETA's Ultimate Cruelty-Free List &rarr;</a>";
 h += "<a class=\"srclink\" href=\"https://www.leapingbunny.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny &rarr;</a>";
 h += "<a class=\"srclink\" href=\"https://crueltyfreeinternational.org/?s=" + q + "\" target=\"_blank\" rel=\"noopener\">Cruelty Free International &rarr;</a>";
 } else {
@@ -962,7 +962,7 @@ function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
 ? verdictHTML(brand) + (brand.tier !== "good" && brand.tier !== "check" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
-: "<p style=\"font-size:13.5px; color:#80686F; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Beauty Without Bunnies</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+: "<p style=\"font-size:13.5px; color:#80686F; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Ultimate Cruelty-Free List</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
 if(brand) wireShareWidget("share2", brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
