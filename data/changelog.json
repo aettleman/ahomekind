@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-26",
+    "type": "added",
+    "slug": "margaret-dabbs-london",
+    "name": "Margaret Dabbs London",
+    "summary": "Margaret Dabbs London was added (cruelty-free itself, parent company isn’t)."
+  },
+  {
+    "date": "2026-09-26",
+    "type": "added",
+    "slug": "mo-and-marine",
+    "name": "Mo & Marine",
+    "summary": "Mo & Marine was added (worth a closer look)."
+  },
+  {
     "date": "2026-09-25",
     "type": "tier-change",
     "slug": "no7",
@@ -1384,19 +1398,5 @@
     "slug": "purpose",
     "name": "Purpose",
     "summary": "Purpose was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "raid",
-    "name": "Raid",
-    "summary": "Raid was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "ralph-lauren-fragrances",
-    "name": "Ralph Lauren Fragrances",
-    "summary": "Ralph Lauren Fragrances was added (tested on animals)."
   }
 ]
