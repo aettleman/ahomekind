@@ -124,7 +124,7 @@
 <main class="page-shell k-page" id="main">
 
 <div class="k-check-head">
-<div class="k-ph"><p class="k-kick">the index</p><h1 class="k-h1">Check a brand</h1><p class="k-lede">All <span id="brandTotal">1,069</span>, in plain English.</p></div>
+<div class="k-ph"><p class="k-kick">the index</p><h1 class="k-h1">Check a brand</h1></div>
 <div class="k-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg><label for="ratingSearch" class="visually-hidden">Search a brand</label><input type="search" id="ratingSearch" placeholder="Type a brand..." autocomplete="off" enterkeyhint="search"><a href="/scan.html" class="k-field-scan" aria-label="Scan a barcode instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></a></div>
 </div>
 <div class="k-ans" id="answerFilters" aria-label="Filter by answer">
@@ -1982,7 +1982,6 @@ tagWrap.querySelectorAll('button.k-tag').forEach(function(t){
     renderBrandList();
   });
 });
-document.getElementById('brandTotal').textContent = allCardsArr.length.toLocaleString();
 // the letter + region pickers live inside "More filters" now
 var panel = document.getElementById('filterSortPanel');
 if (panel && azJumpBar) { azJumpBar.style.display = ''; azJumpBar.classList.add('in-panel'); panel.appendChild(azJumpBar); if (azLetterSelect.children.length <= 1) buildAzLetterSelect(); }
