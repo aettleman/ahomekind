@@ -85,6 +85,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
 @media (max-width: 820px) { .stage-col { position: static; } }
 #cv { display: block; height: min(74vh, 780px); width: auto; max-width: 100%; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 1px 2px rgba(42,22,48,0.08), 0 18px 40px -20px rgba(42,22,48,0.35); background: var(--bg); }
 #cv.feed { height: min(62vh, 640px); }
+.music-name { font: 600 12.5px 'Hanken Grotesk'; color: var(--ink-muted); margin: 8px 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-name.empty { color: var(--muted); font-weight: 500; }
+.music input[type=range] { width: 100%; accent-color: var(--apricot); margin-top: 8px; }
+.tick-row { display: flex; align-items: center; gap: 8px; font: 600 12.5px 'Hanken Grotesk'; color: var(--ink-muted); margin-top: 10px; cursor: pointer; }
+.tick-row input { accent-color: var(--sage); width: 16px; height: 16px; }
 .controls { display: flex; align-items: center; gap: 12px; width: min(100%, 460px); }
 .play { width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--ink); color: var(--paper); cursor: pointer; font-size: 15px; flex-shrink: 0; }
 .controls input[type=range] { flex: 1; accent-color: var(--apricot); }
@@ -121,6 +126,21 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
         </div>
       </div>
 
+      <div class="music">
+        <span class="lbl">Background music</span>
+        <div class="img-row">
+          <button type="button" class="small-btn" id="musicPick">Upload a song</button>
+          <button type="button" class="small-btn" id="musicRemove">Remove</button>
+          <input type="file" id="musicFile" accept="audio/*" style="display:none">
+        </div>
+        <div class="music-name empty" id="musicName">No song added</div>
+        <div class="row2">
+          <label class="field"><span>Start song at (secs)</span><input type="number" id="musicOffset" min="0" step="0.5"></label>
+          <label class="field"><span>Volume</span><input type="range" id="musicVol" min="0" max="1" step="0.05"></label>
+        </div>
+        <label class="tick-row"><input type="checkbox" id="musicFade"> Fade out at the end</label>
+      </div>
+
       <div>
         <span class="lbl">Bottom corner text</span>
         <input type="text" id="handleText" maxlength="60">
@@ -129,7 +149,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
       <div>
         <button type="button" class="main-btn export-btn" id="exportBtn">Export video</button>
         <div class="status" id="status"></div>
-        <p class="hint">Export plays the reel through once in real time, so keep this tab open and in front until it downloads. Chrome and Safari save an MP4 that goes straight onto Instagram.</p>
+        <p class="hint">Export plays the reel through once in real time (with your song, if you've added one), so keep this tab open and in front until it downloads. Chrome and Safari save an MP4 that goes straight onto Instagram.</p>
       </div>
 
       <button type="button" class="main-btn reset-btn" id="resetBtn">Reset to the example reel</button>
@@ -495,14 +515,16 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
   // ---------- playback ----------
   var t = 0, playing = false, last = 0, exporting = false, recorder = null;
   var playBtn = document.getElementById('playBtn'), scrub = document.getElementById('scrub'), timeEl = document.getElementById('time');
+  var wasPlaying = false;
   function tick(now) {
+    if (playing !== wasPlaying) { wasPlaying = playing; if (playing) startAudio(t); else stopAudio(); }
     if (playing) {
       var dt = (now - last) / 1000; last = now;
       t += dt;
       var total = totalDur();
       if (t >= total) {
         if (exporting) { t = total; draw(t); finishExport(); }
-        else t = t % total;
+        else { t = t % total; startAudio(t); }
       }
     }
     draw(t);
@@ -658,7 +680,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
 
   document.getElementById('resetBtn').addEventListener('click', function () {
     if (exporting) return;
-    state = clone(DEFAULTS); handleText.value = state.handle; setSize(); syncSeg(); openIdx = 0; t = 0; playing = false;
+    state = Object.assign(clone(DEFAULTS), { musicOffset: state.musicOffset || 0, musicVol: state.musicVol == null ? 0.8 : state.musicVol, musicFade: state.musicFade !== false }); handleText.value = state.handle; setSize(); syncSeg(); openIdx = 0; t = 0; playing = false;
     changed(true); flash('Back to the example reel');
   });
 
@@ -668,12 +690,91 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
     clearTimeout(flashTimer); if (!exporting) flashTimer = setTimeout(function () { statusEl.textContent = ''; }, 2600);
   }
 
+  // ---------- background music ----------
+  if (state.musicOffset == null) state.musicOffset = 0;
+  if (state.musicVol == null) state.musicVol = 0.8;
+  if (state.musicFade == null) state.musicFade = true;
+  var musicBuf = null, actx = null, gainNode = null, srcNode = null, recDest = null;
+  function ensureCtx() {
+    if (!actx) {
+      var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+      actx = new AC(); gainNode = actx.createGain(); gainNode.connect(actx.destination);
+    }
+    if (actx.state === 'suspended') actx.resume();
+    return actx;
+  }
+  function stopAudio() {
+    if (srcNode) { try { srcNode.stop(); } catch (e) {} try { srcNode.disconnect(); } catch (e) {} srcNode = null; }
+  }
+  function startAudio(fromT) {
+    stopAudio();
+    if (!musicBuf || !ensureCtx()) return;
+    var remaining = totalDur() - fromT;
+    var off = (+state.musicOffset || 0) + fromT;
+    if (remaining <= 0.05 || off >= musicBuf.duration) return;
+    var now = actx.currentTime + 0.02, v = +state.musicVol, g = gainNode.gain;
+    g.cancelScheduledValues(0);
+    var fadeLen = 1.6;
+    if (state.musicFade && remaining < fadeLen) {
+      g.setValueAtTime(v * remaining / fadeLen, now); g.linearRampToValueAtTime(0, now + remaining);
+    } else {
+      g.setValueAtTime(v, now);
+      if (state.musicFade) { g.setValueAtTime(v, now + remaining - fadeLen); g.linearRampToValueAtTime(0, now + remaining); }
+    }
+    srcNode = actx.createBufferSource(); srcNode.buffer = musicBuf; srcNode.connect(gainNode);
+    srcNode.start(now, off, remaining);
+  }
+
+  // remember the song between visits (IndexedDB, falls back quietly)
+  function idb(mode, fn) {
+    try {
+      var req = indexedDB.open('ahk-reel-studio', 1);
+      req.onupgradeneeded = function () { req.result.createObjectStore('files'); };
+      req.onsuccess = function () { try { var tx = req.result.transaction('files', mode); fn(tx.objectStore('files')); } catch (e) {} };
+    } catch (e) {}
+  }
+  var musicName = document.getElementById('musicName');
+  function showName(n) { musicName.textContent = n || 'No song added'; musicName.className = 'music-name' + (n ? '' : ' empty'); }
+  function useSong(arrayBuf, name, remember) {
+    if (!ensureCtx()) { flash('This browser can\'t play audio here', true); return; }
+    actx.decodeAudioData(arrayBuf.slice(0), function (buf) {
+      musicBuf = buf; showName(name + '  (' + buf.duration.toFixed(0) + 's)');
+      if (remember) idb('readwrite', function (st) { st.put({ name: name, data: arrayBuf }, 'music'); });
+      if (playing) startAudio(t);
+      if (remember) flash('Song added');
+    }, function () { flash('Couldn\'t read that file. Try an MP3 or M4A.', true); });
+  }
+  document.getElementById('musicPick').addEventListener('click', function () { ensureCtx(); document.getElementById('musicFile').click(); });
+  document.getElementById('musicFile').addEventListener('change', function (e) {
+    var f = e.target.files && e.target.files[0]; if (!f) return;
+    var fr = new FileReader();
+    fr.onload = function () { useSong(fr.result, f.name.replace(/\.[^.]+$/, ''), true); };
+    fr.readAsArrayBuffer(f);
+    e.target.value = '';
+  });
+  document.getElementById('musicRemove').addEventListener('click', function () {
+    stopAudio(); musicBuf = null; showName('');
+    idb('readwrite', function (st) { st.delete('music'); });
+    flash('Song removed');
+  });
+  var mOff = document.getElementById('musicOffset'), mVol = document.getElementById('musicVol'), mFade = document.getElementById('musicFade');
+  function syncMusicInputs() { mOff.value = state.musicOffset; mVol.value = state.musicVol; mFade.checked = !!state.musicFade; }
+  syncMusicInputs();
+  mOff.addEventListener('input', function () { var v = parseFloat(mOff.value); if (v >= 0) { state.musicOffset = v; save(); if (playing) startAudio(t); } });
+  mVol.addEventListener('input', function () { state.musicVol = parseFloat(mVol.value); save(); if (gainNode && !exporting) gainNode.gain.setValueAtTime(state.musicVol, actx.currentTime); });
+  mFade.addEventListener('change', function () { state.musicFade = mFade.checked; save(); if (playing) startAudio(t); });
+  idb('readonly', function (st) {
+    var r = st.get('music');
+    r.onsuccess = function () { if (r.result && r.result.data) useSong(r.result.data, r.result.name, false); };
+  });
+
   // ---------- export ----------
   var exportBtn = document.getElementById('exportBtn');
   var chunks = [], mime = '';
   function pickMime() {
     if (!window.MediaRecorder) return null;
-    var list = ['video/mp4;codecs=avc1.640028', 'video/mp4;codecs=avc1.4d002a', 'video/mp4;codecs=avc1', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm'];
+    var withAudio = musicBuf ? ['video/mp4;codecs=avc1.640028,mp4a.40.2', 'video/mp4;codecs=avc1,mp4a.40.2', 'video/mp4;codecs=avc1.4d002a,mp4a.40.2'] : [];
+    var list = withAudio.concat(['video/mp4;codecs=avc1.640028', 'video/mp4;codecs=avc1.4d002a', 'video/mp4;codecs=avc1', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm']);
     for (var i = 0; i < list.length; i++) if (MediaRecorder.isTypeSupported(list[i])) return list[i];
     return '';
   }
@@ -682,6 +783,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
     mime = pickMime();
     if (mime === null || !cv.captureStream) { flash('This browser can\'t record video. Try Chrome or Safari on a laptop.', true); return; }
     var stream = cv.captureStream(30);
+    if (musicBuf && ensureCtx()) {
+      recDest = actx.createMediaStreamDestination();
+      gainNode.connect(recDest);
+      stream = new MediaStream(stream.getVideoTracks().concat(recDest.stream.getAudioTracks()));
+    }
     try { recorder = new MediaRecorder(stream, mime ? { mimeType: mime, videoBitsPerSecond: 12000000 } : undefined); }
     catch (e) { flash('Recording failed to start. Try Chrome or Safari.', true); return; }
     chunks = [];
@@ -695,6 +801,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
       a.download = 'a-home-kind-' + (state.format === 'reel' ? 'reel' : 'post') + '.' + ext;
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+      if (recDest) { try { gainNode.disconnect(recDest); } catch (e) {} recDest = null; }
       exporting = false; exportBtn.disabled = false; exportBtn.textContent = 'Export video';
       flash(ext === 'mp4' ? 'Downloaded. Ready for Instagram.' : 'Downloaded as WebM. For Instagram, export again in Safari to get an MP4.', ext !== 'mp4');
     };
