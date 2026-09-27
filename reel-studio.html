@@ -130,6 +130,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
         <span class="lbl">Background music</span>
         <div class="img-row">
           <button type="button" class="small-btn" id="musicPick">Upload a song</button>
+          <button type="button" class="small-btn" id="musicPreset">Use "Breezy Afternoon"</button>
           <button type="button" class="small-btn" id="musicRemove">Remove</button>
           <input type="file" id="musicFile" accept="audio/*" style="display:none">
         </div>
@@ -745,6 +746,12 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--a
     }, function () { flash('Couldn\'t read that file. Try an MP3 or M4A.', true); });
   }
   document.getElementById('musicPick').addEventListener('click', function () { ensureCtx(); document.getElementById('musicFile').click(); });
+  document.getElementById('musicPreset').addEventListener('click', function () {
+    ensureCtx();
+    fetch('audio/breezy-afternoon.mp3').then(function (r) { return r.arrayBuffer(); }).then(function (buf) {
+      useSong(buf, 'Breezy Afternoon', true);
+    }).catch(function () { flash('Couldn\'t load Breezy Afternoon', true); });
+  });
   document.getElementById('musicFile').addEventListener('change', function (e) {
     var f = e.target.files && e.target.files[0]; if (!f) return;
     var fr = new FileReader();
