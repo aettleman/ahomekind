@@ -110,20 +110,20 @@ nav.main-nav a:hover { color: #3A1F3D; }
    header blocks). margin-left:auto pulls it to the far right while
    leaving the logo/nav pair packed together on the left, same as the
    old space-between look did with just the two of them. */
-.header-social { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0; }
-/* Same circle as the floating share button, so on a phone the three of
-   them (Ko-fi, Instagram, share) read as one row rather than three
-   separate things at three different sizes in three different colours. */
+.header-social { display: flex; align-items: center; gap: 4px; margin-left: auto; flex-shrink: 0; }
+/* No circle/background any more -- just the line-drawn icons, closer
+   together, so on a phone the four of them (Home, Ko-fi, Instagram,
+   share) read as one neat row of small icons rather than four separate
+   filled buttons. */
 .header-social a {
-  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  width: 30px; height: 30px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(251,244,239,0.92); color: #3A1F3D;
-  border: 0.5px solid #E0C9BE;
-  box-shadow: 0 4px 14px rgba(42,22,48,0.16);
-  transition: background 0.18s ease;
+  background: none; color: var(--ahk-heading, #3A1F3D);
+  border: none; box-shadow: none;
+  transition: color 0.18s ease;
 }
-.header-social a:hover, .header-social a:focus-visible { background: #fff; }
-.header-social svg { width: 16px; height: 16px; display: block; }
+.header-social a:hover, .header-social a:focus-visible { color: var(--ahk-gold, #E8804C); }
+.header-social svg { width: 18px; height: 18px; display: block; }
 @media (prefers-reduced-motion: reduce) { .header-social a { transition: none; } }
 @media (max-width: 760px) {
   /* Below this width the header shrinks to just the logo (the nav moves
@@ -138,7 +138,7 @@ nav.main-nav a:hover { color: #3A1F3D; }
   .header-social {
     position: fixed;
     top: calc(10px + env(safe-area-inset-top, 0px));
-    right: 58px;
+    right: 46px;
     margin-left: 0;
     z-index: 300;
   }
@@ -1200,22 +1200,20 @@ body { animation: pageFadeIn 0.22s ease; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(251,244,239,0.92);
-  backdrop-filter: blur(4px);
-  border: 0.5px solid #E0C9BE;
-  box-shadow: 0 4px 14px rgba(42,22,48,0.16);
-  color: #3A1F3D;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: var(--ahk-heading, #3A1F3D);
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.12s ease;
+  transition: color 0.15s ease, transform 0.12s ease;
 }
-.ahk-share-btn:hover { background: #fff; }
-.ahk-share-btn:active { transform: scale(0.92); }
-.ahk-share-btn svg { display: block; }
+.ahk-share-btn:hover { color: var(--ahk-gold, #E8804C); }
+.ahk-share-btn:active { transform: scale(0.9); }
+.ahk-share-btn svg { display: block; width: 18px; height: 18px; }
 @media (max-width: 760px) {
-  .ahk-share-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 36px; height: 36px; }
+  .ahk-share-btn { top: calc(10px + env(safe-area-inset-top, 0px)); width: 26px; height: 26px; }
   .ahk-share-btn svg { width: 16px; height: 16px; }
 }
 /* Above 760px the full header nav shows instead of the bottom bar, and it
@@ -2158,7 +2156,7 @@ header.site-header { background: var(--ahk-bg); border-bottom: none; }
 nav.main-nav { color: var(--ahk-text-muted); letter-spacing: 0.12em; }
 nav.main-nav a { color: var(--ahk-text-muted); }
 nav.main-nav a:hover { color: var(--ahk-heading); }
-.header-social a { background: var(--ahk-card); border-color: var(--ahk-border-soft); color: var(--ahk-heading); }
+.header-social a { background: none; border: none; box-shadow: none; color: var(--ahk-heading); }
 
 /* ---- footer: plain, quiet, matches the mockup's ".foot" -- a single
    line of Gloock rather than the small-caps utility footer ---- */
@@ -2478,8 +2476,8 @@ header.site-header .wrap { max-width: 1200px; padding: 18px 24px; padding-top: c
   nav.main-nav a.nav-scan-btn svg { width: 18px; height: 18px; }
   .header-social { margin-left: 20px; }
 }
-.header-social a { width: 40px; height: 40px; background: var(--ahk-card); border: 1px solid rgba(42,22,48,0.13); box-shadow: none; color: var(--ahk-heading); }
-.ahk-share-btn { background: var(--ahk-card) !important; border: 1px solid rgba(42,22,48,0.13) !important; color: var(--ahk-heading) !important; box-shadow: none !important; }
+.header-social a { width: 30px; height: 30px; background: none; border: none; box-shadow: none; color: var(--ahk-heading); }
+.ahk-share-btn { background: none !important; border: none !important; box-shadow: none !important; color: var(--ahk-heading) !important; }
 
 /* ---- Learn: the reading path (mockup .path/.st) ---- */
 .k-learn-arch { object-position: 50% 30%; }
