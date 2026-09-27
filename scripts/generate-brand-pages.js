@@ -227,7 +227,7 @@ function renderBrandPage(brand) {
     ]
   }) + '</script>');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">');
-  lines.push('<link rel="stylesheet" href="../../css/app.css?v=7">');
+  lines.push('<link rel="stylesheet" href="../../css/app.css?v=8">');
   lines.push('<link rel="manifest" href="../../manifest.json?v=2">');
   lines.push('<meta name="theme-color" content="#3A1F3D">');
   lines.push('<link rel="icon" href="../../favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="../../icons/favicon.svg">');
@@ -276,7 +276,7 @@ function renderBrandPage(brand) {
   lines.push('</main>');
   lines.push('');
   lines.push('<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
-  lines.push('<script src="../../js/site.js?v=7"></' + 'script>');
+  lines.push('<script src="../../js/site.js?v=8"></' + 'script>');
   lines.push('</body>');
   lines.push('</html>');
   lines.push('');
