@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-27",
+    "type": "added",
+    "slug": "harrys",
+    "name": "Harry's",
+    "summary": "Harry's was added (not certified)."
+  },
+  {
+    "date": "2026-09-27",
+    "type": "added",
+    "slug": "estrid",
+    "name": "Estrid",
+    "summary": "Estrid was added (not certified)."
+  },
+  {
     "date": "2026-09-26",
     "type": "added",
     "slug": "margaret-dabbs-london",
@@ -1384,19 +1398,5 @@
     "slug": "pure-heal-s",
     "name": "Pure Heal's",
     "summary": "Pure Heal's was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "purex",
-    "name": "Purex",
-    "summary": "Purex was added (tested on animals)."
-  },
-  {
-    "date": "2026-09-13",
-    "type": "added",
-    "slug": "purpose",
-    "name": "Purpose",
-    "summary": "Purpose was added (tested on animals)."
   }
 ]
