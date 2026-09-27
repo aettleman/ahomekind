@@ -19899,5 +19899,45 @@
     "veganConfidence": "low",
     "region": "Europe",
     "lastVerified": "2026-09-26"
+  },
+  {
+    "slug": "harrys",
+    "name": "Harry's",
+    "tier": "unverified",
+    "note": "Harry's isn't certified by Leaping Bunny, Cruelty Free International or PETA. Not sold in mainland China. Not fully vegan either, its Texturizing Putty contains animal-derived ingredients.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada, Europe",
+    "claim": "Harry's says it doesn't test its finished products or ingredients on animals, and nor do its suppliers or any third parties.",
+    "lastVerified": "2026-09-27"
+  },
+  {
+    "slug": "estrid",
+    "name": "Estrid",
+    "tier": "unverified",
+    "note": "Estrid isn't certified by Leaping Bunny, Cruelty Free International or PETA, though Cruelty Free Kitty verified its policy by contacting the brand directly. Fully vegan.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "price": "££",
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "high",
+    "region": "Europe",
+    "claim": "Estrid says it doesn't test its finished products or ingredients on animals, and nor do its suppliers or any third parties.",
+    "lastVerified": "2026-09-27"
   }
 ]
