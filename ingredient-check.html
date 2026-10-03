@@ -86,6 +86,7 @@
 .ing-raw { font-size:12px; color:#8C7580; margin-top:16px; padding-top:14px; border-top:0.5px solid #E5CFC4; }
 .ing-raw summary { cursor:pointer; font-weight:600; color:#5A4550; }
 .ing-raw pre { white-space:pre-wrap; word-break:break-word; margin-top:8px; font-family:inherit; font-size:12px; color:#8C7580; }
+.ahk-back-link { display:none !important; }
 </style>
 </head>
 <body>
@@ -107,13 +108,15 @@
 </header>
 
 <main class="page-shell" id="main">
-<div class="k-ph"><p class="k-kick">ingredients</p><h1 class="k-h1">Check the ingredients</h1></div>
-<div class="k-arch-wrap"><img class="k-arch" src="images/hero-ingredients.jpg" alt="Shampoo bars and bamboo toothbrushes" style="height:200px"></div>
-<p class="hero-lede">Scan a barcode or photograph a label, and I'll name what's in it plainly.</p>
+<div class="pagehead k-scan-head">
+<p class="k-kick">scan</p>
+<h1 class="scan-h1 k-h1">Scan a product</h1>
 <div class="scan-toggle" role="tablist" aria-label="what do you want to check">
 <a href="scan.html" role="tab" aria-selected="false">scan a barcode</a>
 <a href="ingredient-check.html" role="tab" aria-selected="true" class="on">check ingredients</a>
 </div>
+</div>
+<p class="hero-lede">Scan a barcode or photograph a label, and I'll name what's in it plainly.</p>
 
 <div class="ic-tabs">
 <button type="button" class="ic-tab active" id="tabBarcode"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>scan a barcode<span class="ic-tab-sub">quickest, most accurate</span></button>
