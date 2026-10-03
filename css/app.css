@@ -2899,3 +2899,17 @@ main.wrap#main { max-width: 760px; }
   .k-mpills li { justify-content: center; text-align: center; font-size: 14px !important; }
   .k-mpills li::before { display: none !important; }
 }
+
+/* v3 hero: slim banner (headline + button), facts as tags underneath */
+.k-mtext { padding: 26px 20px 24px !important; }
+.k-mtext h2 { font-size: 28px !important; }
+.k-mtext .k-mbtn { margin-top: 16px !important; }
+.k-tags2 { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.k-tags2 li { display: inline-flex; align-items: center; gap: 8px; background: #FBF4EF; color: #2A1630; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 99px; }
+.k-tags2 i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+@media (min-width: 900px) {
+  .k-mtext { padding: 40px 40px 38px !important; }
+  .k-mtext h2 { font-size: 46px !important; }
+  .k-tags2 { margin-top: 18px; gap: 12px; }
+  .k-tags2 li { font-size: 15px; padding: 10px 20px; }
+}
