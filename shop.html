@@ -51,14 +51,14 @@
 <button type="button" class="k-tag" data-cat="haircare">Hair</button>
 <button type="button" class="k-tag" data-cat="skincare">Skin</button>
 <button type="button" class="k-tag" data-cat="makeup">Makeup</button>
-<button type="button" class="k-tag" data-cat="household">Home</button>
-<button type="button" class="k-tag" data-cat="home-goods">Tees</button>
+<button type="button" class="k-tag" data-cat="household">Household</button>
+<a class="k-tag k-tag-ext" href="https://ahomekind.teemill.com" target="_blank" rel="noopener">a home kind</a>
 </div>
 </div>
-<button type="button" class="k-teec" id="teeCard">
+<a class="k-teec" id="teeCard" href="https://ahomekind.teemill.com" target="_blank" rel="noopener">
 <span class="k-arch-box k-teec-img" id="teeImg"><span class="pk tee" style="--c:#FBF4EF"><i></i></span></span>
 <span><span class="k-kick k-teec-k">new</span><b>a home kind tees</b><span>Organic cotton, printed on demand, so nothing's wasted.</span></span>
-</button>
+</a>
 <div class="k-sgrid" id="shopProducts"><p class="kswap-loading" id="shopLoading">loading products&hellip;</p></div>
 <p id="shopEmpty" class="k-fn" style="display:none; text-align:center;">Nothing in this category yet - check back soon.</p>
 <p class="k-fn" style="text-align:center;">Paid links are marked, and help keep the site free. Some links earn me a commission, at no extra cost to you.</p>
@@ -117,7 +117,7 @@ Promise.all([
   init();
 }).catch(function(){ grid.innerHTML = '<p class="k-fn">Couldn\'t load the shop right now - try refreshing.</p>'; });
 function init(){
-  var tabs = document.querySelectorAll('#shopTabbar .k-tag');
+  var tabs = document.querySelectorAll('#shopTabbar .k-tag:not(.k-tag-ext)');
   var cards = grid.querySelectorAll('.k-sp');
   function apply(cat){
     var any = false;
@@ -127,7 +127,6 @@ function init(){
     document.getElementById('teeCard').style.display = (cat === 'all') ? '' : 'none';
   }
   tabs.forEach(function(t){ t.addEventListener('click', function(){ apply(t.dataset.cat); history.replaceState(null, '', t.dataset.cat === 'all' ? location.pathname : '?category=' + t.dataset.cat); }); });
-  document.getElementById('teeCard').addEventListener('click', function(){ apply('home-goods'); grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   var m = location.search.match(/[?&]category=([a-z-]+)/);
   var key = m ? m[1] : 'all'; if (key === 'beauty') key = 'skincare';
   apply(document.querySelector('#shopTabbar .k-tag[data-cat="' + key + '"]') ? key : 'all');
