@@ -2950,3 +2950,16 @@ main.wrap#main { max-width: 760px; }
   .k-mcta { margin-top: 30px; } .k-mcta .k-mbtn { font-size: 18px; padding: 17px 44px; }
 }
 .k-pc-img { display: flex; align-items: center; justify-content: center; } .k-pc-img img { object-fit: contain; width: 88%; height: 88%; }
+
+/* v6: button on top as the title, 2 per row on phones, 4 on desktop */
+.k-mcta-top { margin: 6px 0 0; }
+.k-mcta-top .k-mbtn { font-size: 18px; padding: 17px 40px; }
+.k-pgrid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; margin-top: 20px !important; }
+.k-pc b { font-size: 14px !important; margin-top: 9px !important; }
+.k-pc > span:last-child { font-size: 13px !important; }
+.k-merch .k-tags2 { margin-top: 22px; }
+@media (min-width: 900px) {
+  .k-mcta-top .k-mbtn { font-size: 21px; padding: 20px 56px; }
+  .k-pgrid { grid-template-columns: repeat(4, 1fr) !important; gap: 22px !important; margin-top: 28px !important; }
+  .k-pc b { font-size: 16px !important; } .k-pc > span:last-child { font-size: 14px !important; }
+}
