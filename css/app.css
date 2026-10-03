@@ -2840,3 +2840,22 @@ main.wrap#main { max-width: 760px; }
   .k-mimg { margin: 14px auto 0; width: 62%; border-radius: 120px 120px 0 0; }
   .k-mimg img { width: 92%; margin-top: 18px; }
 }
+
+/* mobile hero = strict banner with a row of animals along the bottom */
+.k-mrow { display: none; }
+@media (max-width: 899px) {
+  .k-mimg { display: none; }
+  .k-mtext { padding: 20px 20px 14px; }
+  .k-mtext h2 { font-size: 28px; margin: 8px 0 0; }
+  .k-mtext .k-mpills { margin-top: 10px; gap: 2px 0; }
+  .k-mpills li { background: none; border: 0; padding: 0; font-size: 11.5px; font-weight: 400; color: #E9D7D0; }
+  .k-mpills li:first-child { font-weight: 700; color: #F5BA82; }
+  .k-mpills li::before { width: 4px; height: 4px; margin: 0 6px 0 6px; }
+  .k-mpills li:first-child::before { display: none; }
+  .k-mtext .k-mbtn { margin-top: 12px; padding: 9px 18px; font-size: 13px; }
+  .k-mrow { display: flex; gap: 6px; padding: 0 14px; align-items: flex-end; }
+  .k-mrow span { flex: 1; background: #F5BA82; border-radius: 40px 40px 0 0; height: 78px; overflow: hidden; display: flex; align-items: flex-end; }
+  .k-mrow span:nth-child(even) { background: #F6C6A8; height: 64px; }
+  .k-mrow img { width: 100%; height: auto; display: block; }
+}
+@media (max-width: 899px) { .k-mpills li:nth-child(3)::before { display: none; } .k-mpills li:nth-child(3) { flex-basis: 100%; } }
