@@ -2913,3 +2913,23 @@ main.wrap#main { max-width: 760px; }
   .k-tags2 { margin-top: 18px; gap: 12px; }
   .k-tags2 li { font-size: 15px; padding: 10px 20px; }
 }
+
+/* v4: button-only banner, small clan arches */
+.k-mtext { padding: 30px 20px !important; }
+.k-mtext .k-mbtn { margin-top: 0 !important; font-size: 17px !important; padding: 16px 36px !important; }
+.k-mh2 { font-size: 22px !important; margin: 26px 0 12px !important; }
+.k-mgrid { display: flex !important; justify-content: center; gap: 12px !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; max-width: none !important; }
+.k-mcard { flex: 0 0 76px !important; width: 76px; background: none !important; padding: 0 !important; text-align: center; }
+.k-march { aspect-ratio: 1/1.15 !important; border-radius: 999px 999px 10px 10px !important; }
+.k-mcard b { font-size: 12px !important; margin-top: 7px !important; line-height: 1.2; }
+.k-mcard .k-full { display: none; }
+@media (min-width: 900px) {
+  .k-mtext { padding: 44px !important; }
+  .k-mtext .k-mbtn { font-size: 19px !important; padding: 18px 48px !important; }
+  .k-mh2 { font-size: 28px !important; margin-top: 34px !important; }
+  .k-mgrid { gap: 28px !important; }
+  .k-mcard { flex: 0 0 120px !important; width: 120px; }
+  .k-mcard b { font-size: 14px !important; }
+  .k-mcard .k-full { display: inline; } .k-mcard .k-short { display: none; }
+}
+@media (max-width: 899px) { .k-tags2 { gap: 6px; } .k-tags2 li { font-size: 12px; padding: 7px 12px; gap: 6px; } .k-tags2 i { width: 8px; height: 8px; } }
