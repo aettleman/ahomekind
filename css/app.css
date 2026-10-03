@@ -2790,3 +2790,34 @@ main.wrap#main { max-width: 760px; }
   .page-shell > .k-arch-wrap .k-arch { height: 520px !important; }
   main.scan-shell { max-width: 600px !important; }
 }
+
+/* shop: merch feature */
+.k-merch { margin: 8px 0 34px; }
+.k-mhero { background: #3A1F3D; color: #FBF4EF; border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 1fr; }
+.k-mtext { padding: 26px 22px 6px; }
+.k-mk { font: 700 11px 'Hanken Grotesk', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #F5BA82; margin: 0; }
+.k-mtext h2 { font: 400 34px/1.04 'Gloock', serif; margin: 12px 0 12px; text-wrap: balance; color: #FBF4EF; }
+.k-mtext p { color: #E9D7D0; font-size: 14.5px; line-height: 1.5; margin: 0; max-width: 440px; }
+.k-mtext .k-mbtn { display: inline-block; margin-top: 20px; background: #E8804C; color: #3A1F3D; font-weight: 700; font-size: 14px; padding: 13px 24px; border-radius: 99px; text-decoration: none; }
+.k-mimg { background: #F5BA82; border-radius: 160px 160px 0 0; margin: 20px 22px 0; display: flex; justify-content: center; }
+.k-mimg img { width: 88%; display: block; margin-top: 26px; }
+.k-mfacts { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0; margin: 14px 2px 0; font-size: 12.5px; color: #5A4550; }
+.k-mfacts b { color: #2A1630; }
+.k-mh2 { font: 400 24px/1.1 'Gloock', serif; margin: 26px 0 12px; }
+.k-mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.k-mcard { background: #FBF4EF; border-radius: 20px; padding: 10px; display: block; text-decoration: none; color: #2A1630; }
+.k-march { border-radius: 999px 999px 12px 12px; aspect-ratio: 1/1.1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.k-march img { max-width: 80%; max-height: 84%; }
+.k-mcard b { display: block; margin-top: 10px; font-size: 13px; }
+.k-mcard > span:last-child { font-size: 12px; color: #5A4550; }
+@media (min-width: 900px) {
+  .k-mhero { grid-template-columns: 1.1fr 1fr; border-radius: 28px; }
+  .k-mtext { padding: 54px 50px; }
+  .k-mtext h2 { font-size: 56px; }
+  .k-mtext p { font-size: 17px; }
+  .k-mimg { margin: 34px 40px 0; border-radius: 200px 200px 0 0; }
+  .k-mfacts { font-size: 14px; gap: 6px 30px; margin-top: 20px; }
+  .k-mh2 { font-size: 32px; margin-top: 34px; }
+  .k-mgrid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .k-mcard { padding: 14px; } .k-mcard b { font-size: 15px; }
+}
