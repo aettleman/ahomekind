@@ -140,6 +140,26 @@
 .k-quiz-teaser h3 { font:400 19px/1.15 'Gloock',serif !important; margin:0 0 6px !important; color:#2A1630 !important; text-transform:none !important; letter-spacing:-0.01em !important; }
 .k-quiz-teaser b { display:block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; margin-top:8px; color:#C8622F; }
 
+.k-kl-wrap { padding:24px 22px 0; }
+.k-kl-wrap .k-kl { margin-top:0; }
+.k-act-wrap { padding:34px 22px 0; }
+.k-act { display:block; background:#E8804C; color:#2A1630; border-radius:26px; padding:28px 22px 30px; text-decoration:none; }
+.k-act-kick { font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:#2A1630; }
+.k-act h2 { font:400 48px/1 'Gloock',serif !important; margin:10px 0 12px !important; color:#2A1630 !important; text-transform:none !important; letter-spacing:-0.01em !important; }
+.k-act p { font-size:15px; line-height:1.5; color:#2A1630; margin:0 0 20px; max-width:46ch; }
+.k-act-btn { display:inline-block; background:#2A1630; color:#FBF4EF; font:600 12px 'Hanken Grotesk',sans-serif; letter-spacing:.14em; text-transform:uppercase; padding:14px 24px; border-radius:99px; }
+.k-act:hover .k-act-btn { background:#3A1F3D; }
+.k-act:focus-visible { outline:3px solid #2A1630; outline-offset:3px; }
+@media (min-width:900px) {
+  .k-kl-wrap { max-width:1240px; margin:0 auto; padding:40px 40px 0; }
+  .k-kl-wrap .k-kl { flex-direction:row; align-items:center; height:auto; }
+  .k-act-wrap { max-width:1240px; margin:0 auto; padding:64px 40px 0; }
+  .k-act { padding:56px 56px 60px; border-radius:32px; }
+  .k-act h2 { font-size:84px !important; }
+  .k-act p { font-size:19px; }
+  .k-act-btn { font-size:14px; padding:18px 34px; }
+}
+
 .myth-section { padding-top:34px; }
 
 @media (min-width:900px) {
@@ -173,14 +193,7 @@
   .k-four b.k-n { font:400 48px/1 'Gloock',serif; margin:18px 0 6px; }
   .k-four b:not(.k-n) { font-size:20px; }
   .k-four span:not(.ahk-stamp) { font-size:14px; margin-top:4px; }
-  .k-four-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr); gap:32px; align-items:end; }
-  .k-four-wrap .k-four { grid-template-columns:1fr 1fr; gap:12px; margin-top:24px; }
-  .k-four-wrap .k-four > div { padding:18px; border-radius:22px; }
-  .k-four-wrap .k-four .ahk-stamp { width:40px; height:40px; }
-  .k-four-wrap .k-four .ahk-stamp svg { width:18px; height:18px; }
-  .k-four-wrap .k-four b.k-n { font-size:36px; margin:12px 0 4px; }
-  .k-four-wrap .k-four b:not(.k-n) { font-size:18px; }
-  .k-four-wrap .k-four span:not(.ahk-stamp) { font-size:13px; }
+  .k-four-grid { display:block; }
   .k-kl { margin-top:0; flex-direction:column; padding:30px; border-radius:32px; gap:20px; height:100%; }
   .k-kl-arch { width:120px; height:150px; padding-bottom:18px; }
   .k-kl-arch b { font-size:44px; }
@@ -300,34 +313,8 @@
 </div>
 </div>
 </div>
-<aside class="k-kl" aria-labelledby="klTitle">
-<div class="k-kl-arch" aria-hidden="true"><b>677</b><span>brands</span></div>
-<div class="k-kl-body">
-<span class="k-kl-kick">free download &middot; updated monthly</span>
-<h3 id="klTitle">The kind list.</h3>
-<p>Every certified cruelty-free brand checked so far, sorted by what you&rsquo;re buying. A printable A4 PDF, no sign-up.</p>
-<div class="k-kl-btns">
-<a class="k-kl-dl" href="downloads/the-kind-list.pdf" download="the-kind-list-a-home-kind.pdf">download the PDF</a>
-<a class="k-kl-read" href="downloads/the-kind-list.pdf" target="_blank" rel="noopener">read it first &#8599;</a>
-</div>
-<span class="ahk-hand k-kl-hand">your annoying vegan friend x</span>
-</div>
-</aside>
 </div>
 </div>
-
-<div class="k-duo solo">
-<a href="quiz.html" class="k-quiz-teaser ahk-reveal">
-<div class="k-quiz-teaser-mark" aria-hidden="true">?</div>
-<div>
-<span class="k-quiz-teaser-kick">a two-minute quiz</span>
-<h3>Where do you draw the line?</h3>
-<p>Some quick questions about right, wrong, and the everyday choices in between. Just for you, nothing saved or sent.</p>
-<b>take the quiz &rarr;</b>
-</div>
-</a>
-</div>
-
 <div class="k-count ahk-reveal">
 <span class="k-count-kick">what 1,069 checks found</span>
 <div class="k-count-num">1,069<span class="ahk-hand">so far</span></div>
@@ -343,6 +330,42 @@
 <div><b>317</b>tested</div>
 </div>
 </div>
+<div class="k-kl-wrap ahk-reveal">
+<aside class="k-kl" aria-labelledby="klTitle">
+<div class="k-kl-arch" aria-hidden="true"><b>677</b><span>brands</span></div>
+<div class="k-kl-body">
+<span class="k-kl-kick">free download &middot; updated monthly</span>
+<h3 id="klTitle">The kind list.</h3>
+<p>Every certified cruelty-free brand checked so far, sorted by what you&rsquo;re buying. A printable A4 PDF, no sign-up.</p>
+<div class="k-kl-btns">
+<a class="k-kl-dl" href="downloads/the-kind-list.pdf" download="the-kind-list-a-home-kind.pdf">download the PDF</a>
+<a class="k-kl-read" href="downloads/the-kind-list.pdf" target="_blank" rel="noopener">read it first &#8599;</a>
+</div>
+<span class="ahk-hand k-kl-hand">your annoying vegan friend x</span>
+</div>
+</aside>
+</div>
+<main id="main" class="k-act-wrap">
+<a href="take-action.html" class="k-act ahk-reveal">
+<span class="k-act-kick">petitions &amp; letters</span>
+<h2>Take action.</h2>
+<p>Your voice reaches further than your basket. Sign a live petition or write to your MP in two minutes.</p>
+<span class="k-act-btn">take action &rarr;</span>
+</a>
+</main>
+<div class="k-duo solo">
+<a href="quiz.html" class="k-quiz-teaser ahk-reveal">
+<div class="k-quiz-teaser-mark" aria-hidden="true">?</div>
+<div>
+<span class="k-quiz-teaser-kick">a two-minute quiz</span>
+<h3>Where do you draw the line?</h3>
+<p>Some quick questions about right, wrong, and the everyday choices in between. Just for you, nothing saved or sent.</p>
+<b>take the quiz &rarr;</b>
+</div>
+</a>
+</div>
+
+
 
 <div class="k-idea ahk-reveal">
 <span class="kick-dot" style="margin-left:0">the idea behind this</span>
@@ -371,14 +394,6 @@
 </a>
 </div>
 
-<main id="main">
-<a href="take-action.html" class="action-teaser ahk-reveal">
-<p class="action-teaser-kicker">take action</p>
-<h2>Your voice reaches further than your basket.</h2>
-<p>Where you shop matters, but what's legal matters more. A ready-made letter to your MP on a live animal welfare issue takes about two minutes to send.</p>
-<span class="action-teaser-cta">see what you can do</span>
-</a>
-</main>
 
 <div class="myth-section">
 <div class="myth-section-inner ahk-reveal">

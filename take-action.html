@@ -58,6 +58,13 @@ article.letter-card .lc-mp { margin-top:16px; }
 .lc-note { font-size:13px; line-height:1.6; color:var(--ahk-text,#5A4550); background:var(--ahk-clay-soft,#FBE3D3); border-radius:12px; padding:10px 14px; margin:0 0 4px; }
 .lc-foot { font-size:12.5px; color:var(--ahk-text-muted,#80686F); margin:-18px 0 30px; }
 
+.letter-cards.one { grid-template-columns:1fr; max-width:560px; margin:14px 0 8px; }
+.ta-section { margin-top:34px; }
+.ta-sub { font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--ahk-text-muted,#80686F); margin:14px 0 0; }
+.ta-intro { font-size:14px; line-height:1.6; color:var(--ahk-text,#5A4550); margin:8px 0 0; max-width:52ch; }
+.ta-accuracy { font-size:13px; color:var(--ahk-text-muted,#80686F); margin:40px 0 10px; }
+.ta-accuracy a { color:var(--ahk-clay-deep,#C8622F); }
+
 dialog.letter-modal { position:fixed; inset:0; margin:auto; padding:0; border:0; border-radius:22px; width:min(640px, calc(100vw - 32px)); max-height:min(88vh, 900px); background:var(--ahk-card,#FBF4EF); color:var(--ahk-text,#5A4550); box-shadow:0 24px 60px rgba(42,22,48,0.3); overflow:hidden; }
 dialog.letter-modal[open] { display:flex; flex-direction:column; animation:lm-in .22s ease; }
 dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
@@ -105,17 +112,29 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 
 <main class="page-shell" id="main">
 <div class="k-ph"><p class="k-kick">take action</p><h1 class="k-h1">Your voice reaches further than <em>your basket.</em></h1></div>
-<p class="hero-lede">Where you shop matters. What's legal matters more. This is the part that changes the rules rather than working around them.</p>
 
-<h2 class="learn-h2">pick a topic</h2>
-<p>Each one is a ready-made letter to your MP on a specific, current gap in UK animal welfare law. MPs are obliged to read letters from their own constituents, and volume genuinely registers. Read a letter, change anything you like, then pop your postcode in underneath: it copies the letter for you and opens WriteToThem, a free, independent service that finds your MP and sends it to them. Just paste it into the message box. Two minutes, no expertise needed.</p>
-<p class="lc-note">These letters go to your MP, not your local councillor. Councils have no say over animal testing or farming law, so a councillor can only pass it on.</p>
+<section class="ta-section" aria-labelledby="ta-petitions">
+<h2 class="learn-h2" id="ta-petitions">current petitions</h2>
+<!-- UK Parliament petitions: add a section here (h3.ta-sub "UK Parliament petitions"
+     plus a .letter-cards.one card) as soon as one is live. -->
+<h3 class="ta-sub">Change.org and other sites</h3>
+<div class="letter-cards one">
+<a class="letter-card" href="https://www.change.org/p/require-transparent-advertising-for-products-currently-tested-on-animals-621b3c17-b4bf-486d-aaff-79997cb5f613" target="_blank" rel="noopener noreferrer">
+<p class="letter-kicker">advertising</p>
+<h3>Adverts don&rsquo;t say when a product is tested on animals</h3>
+<p>Asks the UK advertising rule-makers to require a clear symbol on adverts for products tested on animals. 2,000+ signatures (3 Oct 2026).</p>
+<span class="letter-card-cta">sign on Change.org &#8599;</span>
+</a>
+</div>
+</section>
 
-<div class="letter-cards">
+<section class="ta-section" aria-labelledby="ta-mp">
+<h2 class="learn-h2" id="ta-mp">write to your MP</h2>
+<p class="ta-intro">Read the letter, add your postcode, and it copies the letter and opens WriteToThem so you can send it.</p>
+<div class="letter-cards one">
 <article class="letter-card">
 <p class="letter-kicker">cosmetics testing</p>
 <h3>Cosmetics testing is banned. Ingredient testing isn&rsquo;t.</h3>
-<p>Cosmetic ingredients can still be tested on animals under REACH, even though finished cosmetic products can&rsquo;t.</p>
 <button type="button" class="lc-read" data-open="letter-cosmetics-testing">read the letter <span aria-hidden="true">&#8599;</span></button>
 <form class="lc-mp" data-letter="letter-cosmetics-testing" action="https://www.writetothem.com/who" method="get" target="_blank">
 <input type="hidden" name="a" value="WMC">
@@ -125,35 +144,9 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 </form>
 <p class="lc-status" role="status" aria-live="polite"></p>
 </article>
-<div class="letter-card is-soon" aria-disabled="true">
-<p class="letter-kicker">coming soon</p>
-<h3>Another live gap, in progress</h3>
-<p>A second letter template is being researched and checked before it goes up here.</p>
-<span class="letter-card-cta">not yet ready</span>
 </div>
-<div class="letter-card is-soon" aria-disabled="true">
-<p class="letter-kicker">coming soon</p>
-<h3>Another live gap, in progress</h3>
-<p>A third letter template is being researched and checked before it goes up here.</p>
-<span class="letter-card-cta">not yet ready</span>
-</div>
-</div>
-<p class="lc-foot">Rather email your MP yourself? <a href="https://members.parliament.uk/FindYourMP" target="_blank" rel="noopener">Parliament&rsquo;s own lookup</a> gives you their address. A short letter in your own words counts for more than a long one copied word for word.</p>
+</section>
 
-<h2 class="learn-h2">or add your name</h2>
-<p>Not every action is a letter. This one is a petition that someone else started, and it covers something these letters don&rsquo;t: what adverts do and don&rsquo;t tell you.</p>
-<div class="letter-cards">
-<a class="letter-card" href="https://www.change.org/p/require-transparent-advertising-for-products-currently-tested-on-animals-621b3c17-b4bf-486d-aaff-79997cb5f613" target="_blank" rel="noopener noreferrer">
-<p class="letter-kicker">advertising</p>
-<h3>Adverts don&rsquo;t say when a product is tested on animals</h3>
-<p>This petition asks the body that writes the UK advertising rules (CAP) to require a clear, standard symbol on adverts for products currently tested on animals, in print, online, on social media and on posters. More than 2,000 people had signed when I checked on 3 October 2026.</p>
-<p style="margin-top:8px;">It&rsquo;s on Change.org, not a Parliament petition, so it doesn&rsquo;t trigger an official government response. It asks the advertising rule-makers to change their code.</p>
-<span class="letter-card-cta">sign on Change.org &#8599;</span>
-</a>
-</div>
-
-<!-- One dialog per letter. To add a letter: copy a card above and a dialog below,
-     give both the same id in data-open / data-letter / id. -->
 <dialog class="letter-modal" id="letter-cosmetics-testing" aria-labelledby="lm-t-cosmetics">
 <div class="lm-head">
 <div><p class="letter-kicker">cosmetics testing</p>
@@ -185,8 +178,7 @@ dialog.letter-modal::backdrop { background:rgba(42,22,48,0.55); }
 </div>
 </dialog>
 
-<h2 class="learn-h2">a note on accuracy</h2>
-<p>Anything on this page that describes the law is written from the actual rules as far as I can establish them, and I have tried to keep what is fact separate from what is my own opinion. If you spot something out of date or wrong, please tell me, and I will correct it.</p>
+<p class="ta-accuracy">Spotted something out of date? <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener">Message me on Instagram</a> and I&rsquo;ll fix it.</p>
 </main>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
 <script src="js/site.js?v=8"></script>
