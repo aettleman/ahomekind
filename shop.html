@@ -87,6 +87,7 @@ var WASH = { haircare: '#DCE6D6', skincare: '#F5D3D6', makeup: '#EBDCEC', househ
 var RETAIL = { 'amazon-associates': 'Amazon', 'own-store': 'Teemill' };
 function whyLine(p, b){
   if (p.category === 'home-goods') return 'My own designs, organic cotton';
+  if (p.certs) return p.certs;
   if (!b) return p.vegan ? 'Vegan' : 'Cruelty-free';
   var n = (b.note || '').toLowerCase(), bits = [];
   if (!b.parentCompany) bits.push('Independent');
@@ -99,7 +100,7 @@ function whyLine(p, b){
 }
 function pill(p, b){
   if (p.category === 'home-goods') return '<span class="k-v g">Vegan</span>';
-  var t = b ? b.tier : (p.vegan ? 'good' : 'check');
+  var t = (p.vegan && p.crueltyFree !== false) ? 'good' : (b ? b.tier : 'check');
   return t === 'good' ? '<span class="k-v g">CF + vegan</span>' : '<span class="k-v c">Cruelty-free</span>';
 }
 function card(p, b){

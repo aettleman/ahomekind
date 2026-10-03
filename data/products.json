@@ -82,7 +82,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Leaping Bunny, Vegan Society"
   },
   {
     "id": "mad-hippie-retinol-serum",
@@ -133,7 +134,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Leaping Bunny, Vegan Society"
   },
   {
     "id": "faith-in-nature-coconut-conditioner",
@@ -150,7 +152,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Leaping Bunny, Vegan Society"
   },
   {
     "id": "dr-bronners-citrus-soap",
@@ -167,7 +170,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Leaping Bunny, certified vegan"
   },
   {
     "id": "byoma-hydrating-serum",
@@ -184,7 +188,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "PETA cruelty-free, vegan"
   },
   {
     "id": "byoma-moisturising-gel-cream",
@@ -201,7 +206,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "PETA cruelty-free, vegan"
   },
   {
     "id": "mua-eyeshadow-palette-bronzed",
@@ -303,7 +309,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Not tested on animals, vegan"
   },
   {
     "id": "fabulosa-4in1-disinfectant",
@@ -320,7 +327,8 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": true,
+    "certs": "Not tested on animals, vegan"
   },
   {
     "id": "zoflora-linen-fresh-disinfectant",
@@ -329,7 +337,7 @@
     "brandSlug": "zoflora",
     "category": "household",
     "asin": "B07SBZ3L81",
-    "vegan": true,
+    "vegan": false,
     "crueltyFree": true,
     "blurb": "A ready-to-use multipurpose disinfectant spray that kills 99.9% of germs.",
     "image": "https://m.media-amazon.com/images/I/51pH491LzuL._AC_SX679_.jpg",
@@ -337,6 +345,7 @@
     "retailer": "Amazon UK",
     "network": "amazon-associates",
     "dateAdded": "2026-09-01",
-    "active": true
+    "active": false,
+    "hiddenReason": "Vegan status unconfirmed for this spray (Oct 2026); ask zofloraenquiries@thorntonross.com"
   }
 ]
