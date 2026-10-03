@@ -2890,3 +2890,6 @@ main.wrap#main { max-width: 760px; }
 .k-mcard { flex: 0 0 52%; scroll-snap-align: center; }
 @media (min-width: 900px) { .k-mgrid { margin: 0 auto; padding: 4px 0 14px; max-width: 860px; justify-content: center; } .k-mcard { flex: 1 1 0; min-width: 0; } }
 @media (max-width: 899px) { .k-mpills li:nth-child(3)::before { display: none !important; } .k-mpills li:nth-child(3) { flex-basis: 100% !important; text-align: center; } }
+.k-mpills li:nth-child(2) { color: #9DBF98 !important; }
+.k-mpills li:nth-child(3) { color: #8FB8DE !important; }
+.logo-shop { margin-left: -9px; }
