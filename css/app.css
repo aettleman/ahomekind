@@ -2893,3 +2893,9 @@ main.wrap#main { max-width: 760px; }
 .k-mpills li:nth-child(2) { color: #9DBF98 !important; }
 .k-mpills li:nth-child(3) { color: #8FB8DE !important; }
 .logo-shop { margin-left: -9px; }
+
+@media (max-width: 899px) {
+  .k-mtext .k-mpills { flex-direction: column !important; align-items: center !important; gap: 6px !important; }
+  .k-mpills li { justify-content: center; text-align: center; font-size: 14px !important; }
+  .k-mpills li::before { display: none !important; }
+}
