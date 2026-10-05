@@ -1080,6 +1080,7 @@ out += "</div>";
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + head + out + "</div>";
 showResultCard();
+resultOnly();
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
@@ -1151,6 +1152,7 @@ el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + "<di
 showResultCard();
 wireBrandLookup();
 wireScanAgain();
+resultOnly();
 });
 });
 }
@@ -1473,10 +1475,19 @@ document.addEventListener("keydown", function(e){
 function scanAgainMarkup(){
 return "<div class=\"scan-again-wrap\"><button type=\"button\" class=\"shelf-cta\" id=\"scanAgainBtn\">&#8635; scan again</button></div>";
 }
+// Once a result is showing, the scanner itself steps out of the way so the
+// answer is the whole page; "scan again" brings the scanner back.
+function resultOnly(){
+document.body.classList.add("scan-result-page");
+window.scrollTo({ top: 0, behavior: "auto" });
+}
 function wireScanAgain(){
 var btn = el("scanAgainBtn");
 if(!btn) return;
 btn.addEventListener("click", function(){
+document.body.classList.remove("scan-result-page");
+el("results").innerHTML = "";
+var sb = el("startBtn"); if(sb) sb.style.display = "flex";
 window.scrollTo({ top: 0, behavior: "smooth" });
 startScan();
 });
