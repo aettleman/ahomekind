@@ -3022,3 +3022,11 @@ main.wrap#main { max-width: 760px; }
 @media (min-width: 900px) { .k-stabs .t-cf { font-size: 26px !important; gap: 8px; flex-direction: row; } .k-stabs .t-cf-leaf { width: 26px; height: 26px; } }
 
 img.k-lou-port { object-fit: cover; border: 3px solid #FBF4EF; box-shadow: 0 2px 10px rgba(58,31,61,.15); }
+
+/* shop: cruelty-free + vegan stamp on product tiles; pills above grid, button below */
+.k-pc-img { position: relative; }
+.k-pc-stamp { position: absolute; top: 8%; right: 10%; width: 28px; height: 28px; z-index: 2; box-shadow: 0 1px 4px rgba(42,22,48,.18); }
+.k-pc-stamp::after { inset: 2px; }
+@media (min-width: 900px) { .k-pc-stamp { width: 34px; height: 34px; } .k-pc-stamp svg { width: 16px; height: 16px; } }
+.k-tags-top { margin: 6px 0 18px; }
+.k-mcta-bottom { margin-top: 28px; }
