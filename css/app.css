@@ -3030,3 +3030,8 @@ img.k-lou-port { object-fit: cover; border: 3px solid #FBF4EF; box-shadow: 0 2px
 @media (min-width: 900px) { .k-pc-stamp { width: 34px; height: 34px; } .k-pc-stamp svg { width: 16px; height: 16px; } }
 .k-tags-top { margin: 6px 0 18px; }
 .k-mcta-bottom { margin-top: 28px; }
+/* shop: CF stamp sits on the product like a button, never clipped by the arch */
+.k-pc-img { overflow: visible; }
+.k-pc-stamp { top: auto; bottom: 10px; right: 10px; border: 2px solid #FBF4EF; box-shadow: 0 2px 6px rgba(42,22,48,.28); box-sizing: content-box; }
+.k-pc-stamp::after { inset: 2px; }
+@media (min-width: 900px) { .k-pc-stamp { bottom: 14px; right: 14px; } }
