@@ -19746,10 +19746,10 @@
   {
     "slug": "zoflora",
     "name": "Zoflora",
-    "tier": "check",
-    "note": "Confirms no animal testing.",
+    "tier": "unverified",
+    "note": "Zoflora says it's cruelty-free and vegan, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA, and it has no vegan certification.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "unclear",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -19770,7 +19770,9 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "claim": "Zoflora says it doesn't test its products or ingredients on animals, nor do its suppliers, and that none of its ingredients are animal-derived.",
+    "lastVerified": "2026-10-05"
   },
   {
     "slug": "zoya-goes-pretty",

@@ -3020,3 +3020,5 @@ main.wrap#main { max-width: 760px; }
 .k-stabs .t-cf-leaf { color: #7C9A78; --cf-vein: #DCE6D6; width: 16px; height: 16px; }
 .k-stabs button.cf.on .t-cf-leaf { color: #DCE6D6; --cf-vein: #5E7A57; }
 @media (min-width: 900px) { .k-stabs .t-cf { font-size: 26px !important; gap: 8px; flex-direction: row; } .k-stabs .t-cf-leaf { width: 26px; height: 26px; } }
+
+img.k-lou-port { object-fit: cover; border: 3px solid #FBF4EF; box-shadow: 0 2px 10px rgba(58,31,61,.15); }
