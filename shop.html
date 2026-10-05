@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="a home kind">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css?v=14">
+<link rel="stylesheet" href="css/app.css?v=15">
 <link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
@@ -44,7 +44,12 @@
 </header>
 
 <main class="page-shell k-page" id="main">
-<section class="k-merch" aria-label="The collection">
+<div class="k-stabs" role="tablist" aria-label="Shop sections">
+<button type="button" role="tab" class="on" data-panel="hk" aria-selected="true">a home kind collection</button>
+<button type="button" role="tab" class="lou" data-panel="lou" aria-selected="false">Lou Lawrence collection</button>
+<button type="button" role="tab" data-panel="picks" aria-selected="false">Cruelty-free picks</button>
+</div>
+<section class="k-merch k-spanel" id="panel-hk" role="tabpanel" aria-label="a home kind collection">
 <div class="k-mcta k-mcta-top"><a class="k-mbtn" href="https://ahomekind.teemill.com/collection/all-products/" target="_blank" rel="noopener">Shop the collection <span aria-hidden="true">&rarr;</span></a></div>
 <div class="k-pgrid">
 <a class="k-pc" href="https://ahomekind.teemill.com/product/peggy-the-cow-tee-unisex-oversized/?colour=Oat" target="_blank" rel="noopener"><span class="k-pc-img"><img src="https://images.podos.io/acabe7dd717ae7a423caf33c8f8911bfd963317130df7e01.png.webp?w=600&amp;fit=contain" alt="Peggy the Cow Tee" loading="lazy"></span><b>Peggy the Cow</b><span>Tee</span></a>
@@ -62,6 +67,13 @@
 </div>
 <ul class="k-tags2"><li><i style="background:#F5BA82"></i>100% organic cotton</li><li><i style="background:#9DBF98"></i>Vegan and cruelty free</li><li><i style="background:#8FB8DE"></i>Environmentally friendly</li></ul>
 </section>
+<section class="k-spanel k-lou" id="panel-lou" role="tabpanel" aria-label="Lou Lawrence collection" hidden>
+<div class="k-lou-head"><span class="k-lou-port" aria-hidden="true">LL</span><div><h2>Lou Lawrence collection</h2><span class="k-lou-soon">coming soon</span></div></div>
+<p class="k-lou-hand">warm characters from everyday moments</p>
+<p class="k-lou-sub">Original artwork by illustrator Lou Lawrence, printed on organic cotton.</p>
+<a class="k-lou-btn" href="https://loulawrence.com" target="_blank" rel="noopener">See more of Lou's work <span aria-hidden="true">&rarr;</span></a>
+</section>
+<div class="k-spanel" id="panel-picks" role="tabpanel" aria-label="Cruelty-free picks" hidden>
 <div class="k-shop-head">
 <div class="k-ph"><p class="k-kick">the kind shelf</p><h1 class="k-h1">Shop</h1><p class="k-lede">Only brands that passed the check.</p></div>
 <div class="k-tags" id="shopTabbar">
@@ -76,6 +88,7 @@
 <div class="k-sgrid" id="shopProducts"><p class="kswap-loading" id="shopLoading">loading products&hellip;</p></div>
 <p id="shopEmpty" class="k-fn" style="display:none; text-align:center;">Nothing in this category yet - check back soon.</p>
 <p class="k-fn" style="text-align:center;">Paid links are marked, and help keep the site free. Some links earn me a commission, at no extra cost to you.</p>
+</div>
 </main>
 
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
@@ -143,6 +156,19 @@ function init(){
   var key = m ? m[1] : 'all'; if (key === 'beauty') key = 'skincare';
   apply(document.querySelector('#shopTabbar .k-tag[data-cat="' + key + '"]') ? key : 'all');
 }
+})();
+</script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.k-stabs button');
+  function show(id){
+    btns.forEach(function(b){ var on=b.dataset.panel===id; b.classList.toggle('on',on); b.setAttribute('aria-selected',on?'true':'false'); });
+    ['hk','lou','picks'].forEach(function(k){ var el=document.getElementById('panel-'+k); if(el) el.hidden=(k!==id); });
+  }
+  btns.forEach(function(b){ b.addEventListener('click',function(){ show(b.dataset.panel); history.replaceState(null,'',b.dataset.panel==='hk'?location.pathname:'#'+b.dataset.panel); }); });
+  var h=location.hash.replace('#','');
+  if(/[?&]category=/.test(location.search)) h='picks';
+  if(h==='lou'||h==='picks') show(h);
 })();
 </script>
 </body>

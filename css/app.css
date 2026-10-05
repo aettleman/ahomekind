@@ -2963,3 +2963,26 @@ main.wrap#main { max-width: 760px; }
   .k-pgrid { grid-template-columns: repeat(4, 1fr) !important; gap: 22px !important; margin-top: 28px !important; }
   .k-pc b { font-size: 16px !important; } .k-pc > span:last-child { font-size: 14px !important; }
 }
+
+/* shop tabs: a home kind / Lou Lawrence / cruelty-free picks */
+.k-stabs { display: flex; gap: 4px; background: #EAD5CB; border-radius: 16px; padding: 4px; margin: 8px 0 18px; }
+.k-stabs button { flex: 1; border: 0; background: none; font: 700 12.5px/1.2 'Hanken Grotesk', sans-serif; color: #5A4550; padding: 11px 6px; border-radius: 12px; cursor: pointer; }
+.k-stabs button.on { background: #3A1F3D; color: #FBF4EF; }
+.k-stabs button.lou.on { background: #6E4E78; }
+.k-stabs button:focus-visible { outline: 2px solid #E8804C; outline-offset: 2px; }
+.k-spanel[hidden] { display: none !important; }
+.k-lou { background: #EFE3F1; border-radius: 22px; padding: 22px 18px 24px; }
+.k-lou-head { display: flex; gap: 14px; align-items: center; }
+.k-lou-port { width: 60px; height: 60px; border-radius: 50%; background: #DCC7E0; color: #6E4E78; font: 400 22px 'Gloock', serif; display: flex; align-items: center; justify-content: center; flex: none; }
+.k-lou h2 { font: 400 26px/1.1 'Gloock', serif; margin: 0; color: #2A1630; }
+.k-lou-soon { display: inline-block; margin-top: 8px; background: #6E4E78; color: #FBF4EF; font: 700 10.5px 'Hanken Grotesk', sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 99px; }
+.k-lou-hand { font: 700 23px 'Caveat', cursive; color: #C8622F; margin: 14px 0 0; }
+.k-lou-sub { font-size: 14px; color: #5A4550; margin: 4px 0 0; }
+.k-lou-btn { display: inline-block; margin-top: 18px; background: #6E4E78; color: #FBF4EF; font-weight: 700; font-size: 15px; padding: 13px 26px; border-radius: 99px; text-decoration: none; }
+@media (min-width: 900px) {
+  .k-stabs { max-width: 660px; margin: 14px auto 28px; }
+  .k-stabs button { font-size: 15px; padding: 13px 8px; }
+  .k-lou { padding: 40px 44px; }
+  .k-lou-port { width: 84px; height: 84px; font-size: 30px; }
+  .k-lou h2 { font-size: 36px; } .k-lou-hand { font-size: 28px; } .k-lou-sub { font-size: 16px; }
+}
