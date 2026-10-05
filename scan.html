@@ -819,7 +819,33 @@ for(var j=0;j<BRANDS[i].match.length;j++){
 if(t.indexOf(normalizeSearch(BRANDS[i].match[j])) !== -1) return BRANDS[i];
 }
 }
-return null;
+return findInFullList(text);
+}
+// The short hand-written list above only covers a few dozen brands. Anything
+// else falls back to the full brand list (the same data the brand search
+// uses), so a brand that shows up on brand-check never comes back "not on my
+// list" here. Exact name wins; otherwise a whole-word match of a longer name.
+function findInFullList(text){
+if(!AHK_ALL || !AHK_ALL.length) return null;
+var raw = String(text || "");
+var parts = raw.split(/[,;\/|]/).map(normalizeSearch).filter(Boolean);
+var whole = normalizeSearch(raw);
+var i, n;
+var cands = parts.length ? parts : [whole];
+for(var p=0;p<cands.length;p++){
+for(i=0;i<AHK_ALL.length;i++){
+n = normalizeSearch(AHK_ALL[i].name);
+if(n && n === cands[p]) return AHK_ALL[i];
+}
+}
+var words = " " + raw.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() + " ";
+var best = null, bestLen = 0;
+for(i=0;i<AHK_ALL.length;i++){
+var nm = " " + String(AHK_ALL[i].name || "").normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() + " ";
+var L = nm.trim().length;
+if(L > bestLen && ((L >= 4 && words.indexOf(nm) !== -1) || (L >= 2 && words.indexOf(nm) === 0))){ best = AHK_ALL[i]; bestLen = L; }
+}
+return best;
 }
 function escapeAttr(s){
 return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;");
@@ -1004,6 +1030,28 @@ out += "</div>";
 out += "<div id=\"brandResult\"></div>";
 return out;
 }
+// Every time someone scans a barcode that isn't recognised and then finds
+// the brand by name, that's a barcode -> brand link. It's saved on this
+// device (so the same barcode answers instantly next time) and sent,
+// anonymously, as an event so the links can be gathered and added to
+// data/barcodes.json (see scripts/merge-linked-barcodes.py).
+function linkBarcodeToBrand(brand, typed){
+var code = window.AHK_LAST_CODE;
+if(!code) return;
+try {
+if(brand){
+var all = JSON.parse(localStorage.getItem("ahk-linked-barcodes") || "{}");
+all[code] = { brand: brand.name, product: window.AHK_LAST_NAME || "", tier: brand.tier, note: brand.note || "" };
+localStorage.setItem("ahk-linked-barcodes", JSON.stringify(all));
+}
+} catch(e){}
+try {
+if(window.posthog){
+if(brand) posthog.capture('barcode_linked', { barcode: code, brand: brand.name, slug: brand.slug || "", tier: brand.tier, product_name: window.AHK_LAST_NAME || "" });
+else posthog.capture('barcode_unmatched_brand', { barcode: code, typed: String(typed || "").slice(0, 80), product_name: window.AHK_LAST_NAME || "" });
+}
+} catch(e){}
+}
 function wireBrandLookup(){
 var input = el("manualBrand");
 var btn = el("brandLookupBtn");
@@ -1013,15 +1061,41 @@ var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
 ? verdictHTML(brand) + (brand.tier !== "good" && brand.tier !== "check" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
 : "<p style=\"font-size:13.5px; color:#80686F; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Ultimate Cruelty-Free List</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+linkBarcodeToBrand(brand, input.value);
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
+if(!brand) linkBarcodeToBrand(null, input.value);
 if(brand) wireShareWidget("share2", brand);
 if (brand && window.ahkShowKofiFloat) window.ahkShowKofiFloat();
 }
 btn.addEventListener("click", run);
 input.addEventListener("keydown", function(e){ if(e.key === "Enter") run(); });
 }
+function sendBarcodeWidget(code, brandText, name){
+var h = "<div class=\"card\" id=\"sendBarcode\" style=\"border-color:#E8804C;\">";
+h += "<h3>help me add this one</h3>";
+h += "<p style=\"margin-bottom:10px;\">Send me this product and I'll check the brand and add it to the list.</p>";
+h += "<p class=\"report-foot\" style=\"margin:0 0 8px;\">barcode: <b>" + escapeAttr(code || "(none)") + "</b></p>";
+h += "<input type=\"text\" class=\"report-field\" id=\"sb-brand\" placeholder=\"brand name (as printed on the pack)\" value=\"" + escapeAttr(brandText) + "\">";
+h += "<input type=\"text\" class=\"report-field\" id=\"sb-product\" placeholder=\"product (e.g. air freshener)\" value=\"" + escapeAttr(name) + "\">";
+h += "<button class=\"btn-pri report-send\" id=\"sb-btn\">send this to me</button>";
+h += "<p class=\"report-foot\">This opens your email app with the barcode number and details filled in. Please attach a photo of the barcode and the front of the pack before you send.</p>";
+h += "</div>";
+return h;
+}
+function wireSendBarcode(code){
+var btn = el("sb-btn");
+if(!btn) return;
+btn.addEventListener("click", function(){
+var brand = el("sb-brand").value.trim() || "unknown brand";
+var prod = el("sb-product").value.trim() || "(not given)";
+var body = "Barcode: " + (code || "(none)") + "\nBrand: " + brand + "\nProduct: " + prod + "\n\n(Please attach a photo of the barcode and the front of the pack before sending.)";
+try { if(window.posthog) posthog.capture('barcode_sent_to_owner', { barcode: code, brand: brand }); } catch(e){}
+window.location.href = "mailto:hello@ahomekind.com?subject=" + encodeURIComponent("Barcode to add: " + brand + " " + (code || "")) + "&body=" + encodeURIComponent(body);
+});
+}
 function render(product, code, knownBrand){
 var out = "";
+window.AHK_LAST_CODE = code; window.AHK_LAST_NAME = (product && (product.product_name || product.generic_name)) || "";
 var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
@@ -1077,6 +1151,10 @@ out += "<p style=\"font-size:13.5px; color:#5A4550; margin-bottom:14px;\">I don'
 out += brandSearchWidget();
 out += "</div>";
 }
+if(!brand){
+out += sendBarcodeWidget(code, brandText, name);
+try { if(window.posthog) posthog.capture('barcode_not_listed', { barcode: code, brand_text: brandText, product_name: name }); } catch(e){}
+}
 out += sourceBlock(brandText);
 el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + head + out + "</div>";
 showResultCard();
@@ -1085,6 +1163,7 @@ if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) A
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
+if(!brand) wireSendBarcode(code);
 wireScanAgain();
 if(product && product.ingredients_text) renderIngredientWatch(product.ingredients_text, "ingredientWatch");
 }
@@ -1138,6 +1217,7 @@ setStatus("looking it up…", true);
 el("results").innerHTML = "";
 LOCAL_BARCODES_PROMISE.then(function(localBarcodes){
 var local = localBarcodes && localBarcodes[code];
+if(!local){ try { local = (JSON.parse(localStorage.getItem("ahk-linked-barcodes") || "{}"))[code]; } catch(x){} }
 if(local){
 setStatus("");
 render({ product_name: local.product || "", brands: local.brand || "" }, code, { name: local.brand, tier: local.tier, note: local.note });
