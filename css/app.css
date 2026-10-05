@@ -3012,3 +3012,6 @@ main.wrap#main { max-width: 760px; }
   .k-stabs button small { font-size: 11px; }
   .k-stabs .t-hk { font-size: 26px; } .k-stabs .t-lou { font-size: 32px; } .k-stabs .t-cf { font-size: 17px; }
 }
+
+.k-lou-label { font: 700 15px 'Hanken Grotesk', sans-serif; color: #6E4E78; margin-right: 4px; }
+@media (min-width: 900px) { .k-lou-label { font-size: 16px; } }
