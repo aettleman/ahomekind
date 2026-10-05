@@ -2986,3 +2986,29 @@ main.wrap#main { max-width: 760px; }
   .k-lou-port { width: 84px; height: 84px; font-size: 30px; }
   .k-lou h2 { font-size: 36px; } .k-lou-hand { font-size: 28px; } .k-lou-sub { font-size: 16px; }
 }
+
+.k-lou-links { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+.k-lou-links .k-lou-btn { margin-top: 0; }
+.k-lou-ig { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #6E4E78; color: #6E4E78; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.k-lou-ig:hover { background: #6E4E78; color: #FBF4EF; }
+
+.k-stabs { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px !important; background: none !important; padding: 0 !important; }
+.k-stabs button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 82px; border-radius: 18px !important; padding: 12px 6px 11px !important; }
+.k-stabs button small { display: block; font: 800 9px 'Hanken Grotesk', sans-serif; letter-spacing: .18em; text-transform: uppercase; margin-top: 5px; }
+.k-stabs button[data-panel="hk"] { background: #EAD5CB; color: #3A1F3D; }
+.k-stabs button[data-panel="hk"].on { background: #3A1F3D; color: #FBF4EF; }
+.k-stabs .t-hk { font: 400 15.5px/1 'Gloock', serif; white-space: nowrap; }
+.k-stabs .t-hk em { font-style: normal; color: #E8804C; }
+.k-stabs button.lou { background: #EFE3F1; color: #6E4E78; }
+.k-stabs button.lou.on { background: #6E4E78 !important; color: #FBF4EF; }
+.k-stabs .t-lou { font: 700 25px/.85 'Caveat', cursive; }
+.k-stabs button.cf { background: #DCE6D6; color: #46613F; }
+.k-stabs button.cf.on { background: #5E7A57; color: #FBF4EF; }
+.k-stabs .t-cf { font: 800 12.5px/1.1 'Hanken Grotesk', sans-serif; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.k-stabs button.on::after { content: ""; position: absolute; bottom: -7px; left: 50%; width: 14px; height: 14px; transform: translateX(-50%) rotate(45deg); background: inherit; border-radius: 3px; }
+@media (min-width: 900px) {
+  .k-stabs { gap: 16px !important; max-width: 760px; }
+  .k-stabs button { min-height: 104px; border-radius: 22px !important; }
+  .k-stabs button small { font-size: 11px; }
+  .k-stabs .t-hk { font-size: 26px; } .k-stabs .t-lou { font-size: 32px; } .k-stabs .t-cf { font-size: 17px; }
+}
