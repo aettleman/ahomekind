@@ -91,7 +91,7 @@ function claimBox(brand) {
   if (!brand.claim) return '';
   return '<div class="claim-box" style="margin-top:16px; padding:16px 18px; background:#FBF4EF; border:1px solid #E4D0C6; border-radius:14px; font-size:13.5px; line-height:1.7; color:#5A4550;">'
     + '<p style="margin:0 0 10px;"><strong style="color:#2A1630;">What they say:</strong> ' + escapeHtml(brand.claim) + '</p>'
-    + '<p style="margin:0;"><strong style="color:#2A1630;">The reality:</strong> ' + escapeHtml(brand.name) + ' isn\'t certified by Leaping Bunny, Cruelty Free International or PETA, so nobody independent has checked that claim. Getting certified is free, so until ' + escapeHtml(brand.name) + ' does, a home kind can\'t call it cruelty-free. If you buy it, you\'re taking the brand\'s word for it.</p>'
+    + '<p style="margin:0;"><strong style="color:#2A1630;">The reality:</strong> ' + escapeHtml(brand.name) + ' isn\'t certified by Leaping Bunny, Cruelty Free International or PETA, so nobody independent has checked that claim. Getting certified is free (only using the logo costs a one-time fee), so until ' + escapeHtml(brand.name) + ' does, a home kind can\'t call it cruelty-free. If you buy it, you\'re taking the brand\'s word for it.</p>'
     + '</div>';
 }
 
@@ -116,7 +116,7 @@ function certLine(brand) {
   const n = String(brand.note || '').toLowerCase();
   const out = [];
   if (brand.tier === 'bad') out.push('Tests, or sells where required');
-  else {
+  else if (brand.tier !== 'unverified') {
     if (/leaping bunny/.test(n)) out.push('Leaping Bunny');
     else if (/cruelty free international/.test(n)) out.push('Cruelty Free International');
     if (/\bpeta\b/.test(n) && !/company that tests/.test(n)) out.push('PETA');
