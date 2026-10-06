@@ -641,7 +641,7 @@
     "slug": "ann-summers",
     "name": "Ann Summers",
     "tier": "unverified",
-    "note": "Ann Summers says its products are free from animal testing, and some are labelled vegan, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA. Vegan status varies by product, so check each label.",
+    "note": "Ann Summers says some products are free from animal testing or vegan, but it has no certification from Leaping Bunny, Cruelty Free International or PETA, and no published animal testing policy. It confirmed this to us by email. Vegan status varies by product, so check each label.",
     "parentCompany": null,
     "vegan": "unclear",
     "evidence": "",
@@ -650,7 +650,7 @@
     "links": [],
     "veganConfidence": "low",
     "region": "Europe",
-    "claim": "Ann Summers lists some of its products as 'Free From Animal Testing' and 'Vegan Friendly'. Vegan status varies by product.",
+    "claim": "Ann Summers labels specific products (such as some lubricants, gels, fragrances, body paint and cleaning wipes) as Free From Animal Testing, Vegan Friendly or Vegan and Cruelty-Free. Its SEDEX membership covers general supply chain ethics, not animal testing.",
     "lastVerified": "2026-10-06",
     "category": [
       "body-shower"
