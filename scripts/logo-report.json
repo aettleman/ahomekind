@@ -1,0 +1,6625 @@
+{
+ "counts": {
+  "saved": 80,
+  "needs_credit": 13,
+  "no_match": 586,
+  "ambiguous": 28,
+  "no_logo": 156,
+  "not_brand": 210,
+  "error": 0
+ },
+ "total": 1073,
+ "results": [
+  {
+   "status": "no_match",
+   "slug": "newgen",
+   "name": "#NEWGEN"
+  },
+  {
+   "status": "no_match",
+   "slug": "100-pure",
+   "name": "100% Pure"
+  },
+  {
+   "status": "not_brand",
+   "slug": "17",
+   "name": "17"
+  },
+  {
+   "status": "no_match",
+   "slug": "3ina",
+   "name": "3INA"
+  },
+  {
+   "status": "not_brand",
+   "slug": "7th-heaven",
+   "name": "7th Heaven"
+  },
+  {
+   "status": "no_match",
+   "slug": "a-little-something",
+   "name": "A Little Something"
+  },
+  {
+   "status": "not_brand",
+   "slug": "abbott",
+   "name": "Abbott"
+  },
+  {
+   "status": "no_match",
+   "slug": "abundant-natural-health",
+   "name": "Abundant Natural Health"
+  },
+  {
+   "status": "no_match",
+   "slug": "academy-of-colour",
+   "name": "Academy of Colour"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134974132",
+   "description": "Japanese brand of drink vending machine",
+   "slug": "acure",
+   "name": "Acure"
+  },
+  {
+   "wikidata": "Q3288413",
+   "description": "disposable contact lens brand",
+   "commons_file": "Acuvue logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Acuvue_logo.svg",
+   "author": "Acuvue",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Acuvue_logo.svg/330px-Acuvue_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "acuvue",
+   "name": "Acuvue",
+   "file": "scripts/logo-candidates/acuvue.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "adaptology",
+   "name": "Adaptology"
+  },
+  {
+   "status": "no_match",
+   "slug": "addition-studio",
+   "name": "Addition Studio"
+  },
+  {
+   "wikidata": "Q4688560",
+   "description": "Australian luxury cosmetics brand that produces skincare, haircare and fragrance products",
+   "commons_file": "Aesop logo 2013.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Aesop_logo_2013.svg",
+   "author": "Aesop",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Aesop_logo_2013.svg/330px-Aesop_logo_2013.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "aesop",
+   "name": "Aesop",
+   "file": "scripts/logo-candidates/aesop.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "aim",
+   "name": "Aim"
+  },
+  {
+   "status": "not_brand",
+   "slug": "air-wick",
+   "name": "Air Wick"
+  },
+  {
+   "status": "no_match",
+   "slug": "alba-botanica",
+   "name": "Alba Botanica"
+  },
+  {
+   "status": "no_match",
+   "slug": "alberto-balsam",
+   "name": "Alberto Balsam"
+  },
+  {
+   "wikidata": "Q125054",
+   "description": "brand name of two global discount supermarket chains",
+   "commons_file": "AldiNord-WorldwideLogo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:AldiNord-WorldwideLogo.svg",
+   "author": "Adrio",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/AldiNord-WorldwideLogo.svg/330px-AldiNord-WorldwideLogo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "aldi",
+   "name": "Aldi",
+   "file": "scripts/logo-candidates/aldi.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "algenist",
+   "name": "Algenist"
+  },
+  {
+   "status": "no_match",
+   "slug": "almora-botanica",
+   "name": "Almora Botanica"
+  },
+  {
+   "status": "no_match",
+   "slug": "aloe-up",
+   "name": "Aloe Up"
+  },
+  {
+   "status": "not_brand",
+   "slug": "alta-marea",
+   "name": "Alta Marea"
+  },
+  {
+   "status": "no_match",
+   "slug": "alter-native-by-suma",
+   "name": "Alter/Native by Suma"
+  },
+  {
+   "status": "no_match",
+   "slug": "alucia-organics",
+   "name": "Alucia Organics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "always",
+   "name": "Always"
+  },
+  {
+   "status": "not_brand",
+   "slug": "amaras",
+   "name": "Amaras"
+  },
+  {
+   "status": "no_match",
+   "slug": "ambi",
+   "name": "Ambi"
+  },
+  {
+   "status": "not_brand",
+   "slug": "ambi-pur",
+   "name": "Ambi Pur"
+  },
+  {
+   "status": "no_match",
+   "slug": "american-safety-razor",
+   "name": "American Safety Razor"
+  },
+  {
+   "status": "not_brand",
+   "slug": "amyris",
+   "name": "Amyris"
+  },
+  {
+   "status": "no_match",
+   "slug": "anara-skincare",
+   "name": "Anara Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q56274930",
+   "description": "American cosmetics company",
+   "slug": "anastasia-beverly-hills",
+   "name": "Anastasia Beverly Hills"
+  },
+  {
+   "status": "no_match",
+   "slug": "andalou-naturals",
+   "name": "Andalou Naturals"
+  },
+  {
+   "status": "not_brand",
+   "slug": "anko",
+   "name": "Anko"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q262789",
+   "description": "American fashion designer (born 1964)",
+   "slug": "anna-sui",
+   "name": "Anna Sui"
+  },
+  {
+   "status": "no_match",
+   "slug": "aqua-di-parma",
+   "name": "Aqua di Parma"
+  },
+  {
+   "status": "no_match",
+   "slug": "aqua-natural",
+   "name": "Aqua Natural"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2324366",
+   "description": "brand of oral healthcare products produced by GlaxoSmithKline",
+   "slug": "aquafresh",
+   "name": "Aquafresh"
+  },
+  {
+   "status": "no_match",
+   "slug": "ar-ocean",
+   "name": "Ar Ocean"
+  },
+  {
+   "status": "not_brand",
+   "slug": "aramis",
+   "name": "Aramis"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q29964082",
+   "description": "American multi-level marketing company",
+   "slug": "arbonne-international",
+   "name": "Arbonne International"
+  },
+  {
+   "status": "not_brand",
+   "slug": "arctic-fox",
+   "name": "Arctic Fox"
+  },
+  {
+   "status": "no_match",
+   "slug": "areu-areu",
+   "name": "AREU AREU"
+  },
+  {
+   "status": "no_match",
+   "slug": "argital",
+   "name": "Argital"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q658915",
+   "description": "brand of laundry detergent",
+   "slug": "ariel",
+   "name": "Ariel"
+  },
+  {
+   "status": "not_brand",
+   "slug": "arithmos",
+   "name": "Arithmos"
+  },
+  {
+   "status": "no_match",
+   "slug": "arkive",
+   "name": "Arkive Headcare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4792455",
+   "description": "brand of baking soda products by Church & Dwight",
+   "slug": "arm-and-hammer",
+   "name": "Arm & Hammer"
+  },
+  {
+   "status": "no_match",
+   "slug": "aromatherapy-associates",
+   "name": "Aromatherapy Associates"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4795973",
+   "description": "American antiperspirant and deodorant brand",
+   "slug": "arrid",
+   "name": "Arrid"
+  },
+  {
+   "status": "no_match",
+   "slug": "asperox",
+   "name": "Asperox"
+  },
+  {
+   "status": "no_match",
+   "slug": "asperox-sparx",
+   "name": "Asperox-Sparx"
+  },
+  {
+   "status": "not_brand",
+   "slug": "astonish",
+   "name": "Astonish"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q104865463",
+   "description": "perfume company",
+   "slug": "atelier-cologne",
+   "name": "Atelier Cologne"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q126811307",
+   "description": "Turkish cosmetics, fragrance and personal care brand",
+   "slug": "atelier-rebul",
+   "name": "Atelier Rebul"
+  },
+  {
+   "status": "no_match",
+   "slug": "atikha",
+   "name": "atikha"
+  },
+  {
+   "status": "not_brand",
+   "slug": "attitude",
+   "name": "Attitude"
+  },
+  {
+   "status": "no_match",
+   "slug": "aunt-fannies",
+   "name": "Aunt Fannie's"
+  },
+  {
+   "status": "no_match",
+   "slug": "aurelia-london",
+   "name": "Aurelia London"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4822808",
+   "description": "brand of shampoo",
+   "slug": "aussie",
+   "name": "Aussie"
+  },
+  {
+   "status": "no_match",
+   "slug": "australian-gold",
+   "name": "Australian Gold"
+  },
+  {
+   "status": "no_match",
+   "slug": "avalon-organics",
+   "name": "Avalon Organics"
+  },
+  {
+   "wikidata": "Q4827965",
+   "description": "American cosmetics company",
+   "commons_file": "Aveda Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Aveda_Logo.svg",
+   "author": "Aveda",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Aveda_Logo.svg/330px-Aveda_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "aveda",
+   "name": "Aveda",
+   "file": "scripts/logo-candidates/aveda.png"
+  },
+  {
+   "wikidata": "Q4827975",
+   "description": "brand of skin care and hair care products",
+   "commons_file": "Aveeno logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Aveeno_logo.svg",
+   "author": "Aveeno",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Aveeno_logo.svg/330px-Aveeno_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "aveeno",
+   "name": "Aveeno",
+   "file": "scripts/logo-candidates/aveeno.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "avon",
+   "name": "Avon"
+  },
+  {
+   "status": "no_match",
+   "slug": "awake-organics",
+   "name": "Awake Organics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "axe",
+   "name": "Axe"
+  },
+  {
+   "status": "no_match",
+   "slug": "b-skincare",
+   "name": "B Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "b-by-superdrug",
+   "name": "B. by Superdrug"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bob",
+   "name": "B.O.B."
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4848521",
+   "description": "discontinued brand of sunscreen",
+   "slug": "bain-de-soleil",
+   "name": "Bain de Soleil"
+  },
+  {
+   "status": "no_match",
+   "slug": "bakel-srl",
+   "name": "Bakel srl"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1530892",
+    "Q125017132"
+   ],
+   "slug": "balenciaga",
+   "name": "Balenciaga"
+  },
+  {
+   "status": "no_match",
+   "slug": "bali-body",
+   "name": "Bali Body"
+  },
+  {
+   "status": "no_match",
+   "slug": "balm-balm",
+   "name": "Balm Balm"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2737652",
+   "description": "brand name of adhesive bandages and related products",
+   "slug": "band-aid",
+   "name": "Band-Aid"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q66740659",
+   "description": "Cosmetics company",
+   "slug": "bareminerals",
+   "name": "bareMinerals"
+  },
+  {
+   "status": "no_match",
+   "slug": "barry-m",
+   "name": "Barry M"
+  },
+  {
+   "status": "not_brand",
+   "slug": "batch",
+   "name": "Batch"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bath-house",
+   "name": "Bath House"
+  },
+  {
+   "status": "not_brand",
+   "slug": "batiste",
+   "name": "Batiste"
+  },
+  {
+   "status": "no_match",
+   "slug": "bausch-lomb",
+   "name": "Bausch + Lomb"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141052334",
+   "description": "British soap company",
+   "slug": "baylis-and-harding",
+   "name": "Baylis & Harding"
+  },
+  {
+   "status": "no_match",
+   "slug": "beautiful-brows-and-lashes",
+   "name": "Beautiful Brows & Lashes"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q140702074",
+   "description": "British cosmetic company",
+   "slug": "beauty-bay",
+   "name": "Beauty Bay"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134876991",
+   "description": "UK-based cruelty-free cosmetics brand specialising in eco friendly beauty products",
+   "slug": "beauty-favours",
+   "name": "Beauty Favours"
+  },
+  {
+   "status": "no_match",
+   "slug": "beauty-kitchen",
+   "name": "Beauty Kitchen"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4877905",
+   "description": "British cosmetics company",
+   "slug": "beauty-without-cruelty",
+   "name": "Beauty Without Cruelty"
+  },
+  {
+   "status": "no_match",
+   "slug": "bed-intentions",
+   "name": "Bed intentions"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bedhead",
+   "name": "Bedhead"
+  },
+  {
+   "status": "no_match",
+   "slug": "beekman-1802",
+   "name": "Beekman 1802"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q201691",
+    "Q55095970"
+   ],
+   "slug": "beiersdorf",
+   "name": "Beiersdorf"
+  },
+  {
+   "status": "not_brand",
+   "slug": "being",
+   "name": "Being"
+  },
+  {
+   "status": "no_match",
+   "slug": "bel-rebel",
+   "name": "Bel Rebel"
+  },
+  {
+   "status": "no_match",
+   "slug": "bellapierre-cosmetics",
+   "name": "Bellapierre Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "benecos",
+   "name": "Benecos"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q131584498",
+   "description": "German fitness center chain",
+   "slug": "benefit",
+   "name": "Benefit"
+  },
+  {
+   "wikidata": "Q4887719",
+   "description": "Brand of analgesic heat rub",
+   "commons_file": "Bengay logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Bengay_logo.png",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bengay_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "bengay",
+   "name": "BENGAY",
+   "file": "scripts/logo-candidates/bengay.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bic",
+   "name": "Bic"
+  },
+  {
+   "status": "no_match",
+   "slug": "bic-corporation",
+   "name": "Bic Corporation"
+  },
+  {
+   "status": "no_match",
+   "slug": "bio-ionic",
+   "name": "Bio Ionic"
+  },
+  {
+   "status": "no_match",
+   "slug": "bio-d",
+   "name": "Bio-D"
+  },
+  {
+   "status": "no_match",
+   "slug": "biohygiene",
+   "name": "BioHygiene"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134788842",
+   "description": "cosmetics brand",
+   "slug": "biolage",
+   "name": "Biolage"
+  },
+  {
+   "status": "no_match",
+   "slug": "bioleon",
+   "name": "bioLEON"
+  },
+  {
+   "status": "not_brand",
+   "slug": "biolet",
+   "name": "Biolet"
+  },
+  {
+   "status": "no_match",
+   "slug": "biologi",
+   "name": "Biologi"
+  },
+  {
+   "status": "no_match",
+   "slug": "biomed",
+   "name": "Biomed"
+  },
+  {
+   "status": "no_match",
+   "slug": "biossance",
+   "name": "Biossance"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4915345",
+   "description": "dental hygiene brand",
+   "slug": "biotene",
+   "name": "Biotene"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2494771",
+   "description": "French luxury skin care company",
+   "slug": "biotherm",
+   "name": "Biotherm"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q39086893",
+   "description": "Canadian cosmetics company",
+   "slug": "bite-beauty",
+   "name": "Bite Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "black-girl-sunscreen",
+   "name": "Black Girl Sunscreen"
+  },
+  {
+   "status": "no_match",
+   "slug": "bleach-london",
+   "name": "Bleach London"
+  },
+  {
+   "status": "no_match",
+   "slug": "bloo",
+   "name": "Bloo"
+  },
+  {
+   "status": "no_match",
+   "slug": "blue-buffalo",
+   "name": "Blue Buffalo"
+  },
+  {
+   "status": "no_match",
+   "slug": "blur-london",
+   "name": "Blur London"
+  },
+  {
+   "status": "no_match",
+   "slug": "bmt",
+   "name": "BMT"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4931591",
+   "description": "brand of whole-grain foods",
+   "slug": "bobs-red-mill",
+   "name": "Bob's Red Mill"
+  },
+  {
+   "wikidata": "Q105132734",
+   "description": "American cosmetics retailer",
+   "commons_file": "Bobbi Brown logo 2013.gif",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Bobbi_Brown_logo_2013.gif",
+   "author": "Bobbi Brown",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bobbi_Brown_logo_2013.gif/330px-Bobbi_Brown_logo_2013.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "bobbi-brown",
+   "name": "Bobbi Brown",
+   "file": "scripts/logo-candidates/bobbi-brown.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bold",
+   "name": "Bold"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q85845553",
+   "description": "Australian self-tan and sunscreen brand",
+   "slug": "bondi-sands",
+   "name": "Bondi Sands"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q6123139",
+   "description": "UK based pharmacy shop chain",
+   "slug": "boots",
+   "name": "Boots"
+  },
+  {
+   "status": "no_match",
+   "slug": "bosleymd",
+   "name": "BosleyMD"
+  },
+  {
+   "status": "no_match",
+   "slug": "botanica-slavica",
+   "name": "Botanica Slavica"
+  },
+  {
+   "status": "no_match",
+   "slug": "botanico-vida-skincare",
+   "name": "Botanico Vida Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "botanics",
+   "name": "Botanics"
+  },
+  {
+   "status": "no_match",
+   "slug": "boucleme",
+   "name": "Boucleme"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bounce",
+   "name": "Bounce"
+  },
+  {
+   "status": "not_brand",
+   "slug": "boundary",
+   "name": "Boundary"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q895167",
+   "description": "chocolate bar manufactured by Mars, Incorporated",
+   "slug": "bounty",
+   "name": "Bounty"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2922382",
+   "description": "French cosmetics brand",
+   "slug": "bourjois",
+   "name": "Bourjois"
+  },
+  {
+   "status": "no_match",
+   "slug": "boxycharm",
+   "name": "BoxyCharm"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141456294",
+   "description": "Irish cosmetics brand",
+   "slug": "bperfect-cosmetics",
+   "name": "BPerfect Cosmetics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q46996029",
+   "description": "American e-commerce company",
+   "slug": "brandless",
+   "name": "Brandless"
+  },
+  {
+   "wikidata": "Q631220",
+   "description": "German consumer products company based in Kronberg",
+   "commons_file": "Braun logo 1990er.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Braun_logo_1990er.svg",
+   "author": "Braun",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Braun_logo_1990er.svg/330px-Braun_logo_1990er.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "braun",
+   "name": "Braun",
+   "file": "scripts/logo-candidates/braun.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "bravenewhair-bravenewcare",
+   "name": "BRAVE.NEW.HAIR., BRAVE.NEW.CARE."
+  },
+  {
+   "status": "not_brand",
+   "slug": "breathe-right",
+   "name": "Breathe Right"
+  },
+  {
+   "status": "not_brand",
+   "slug": "bulldog",
+   "name": "Bulldog"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2928140",
+   "description": "hair care product company owned by Est\u00e9e Lauder Companies, Inc.",
+   "slug": "bumble-and-bumble",
+   "name": "Bumble and Bumble"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q390107",
+    "Q125053202"
+   ],
+   "slug": "burberry",
+   "name": "Burberry"
+  },
+  {
+   "wikidata": "Q5000673",
+   "description": "American personal care products subsidiary of Clorox",
+   "commons_file": "Burt's Bees Hand Salve, Sep 2012.JPG",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Burt%27s_Bees_Hand_Salve%2C_Sep_2012.JPG",
+   "author": "WestportWiki",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "burts-bees",
+   "name": "Burt's Bees"
+  },
+  {
+   "status": "no_match",
+   "slug": "butter-london",
+   "name": "butter LONDON"
+  },
+  {
+   "status": "no_match",
+   "slug": "buxom",
+   "name": "Buxom"
+  },
+  {
+   "status": "no_match",
+   "slug": "bvlgari-parfums",
+   "name": "BVLGARI parfums"
+  },
+  {
+   "status": "no_match",
+   "slug": "by-sarah-london",
+   "name": "By Sarah London"
+  },
+  {
+   "status": "no_match",
+   "slug": "byellie",
+   "name": "Byellie"
+  },
+  {
+   "status": "no_match",
+   "slug": "byk-beauty",
+   "name": "BYK Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "byoma",
+   "name": "BYOMA"
+  },
+  {
+   "status": "no_match",
+   "slug": "byron-bay-skincare",
+   "name": "Byron Bay Skincare"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q2932498",
+    "Q576316",
+    "Q28940537"
+   ],
+   "slug": "cacharel",
+   "name": "Cacharel"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q857445",
+   "description": "American brand of bath and beauty products",
+   "slug": "calgon",
+   "name": "Calgon"
+  },
+  {
+   "status": "no_match",
+   "slug": "calgon-water-softener",
+   "name": "Calgon Water Softener"
+  },
+  {
+   "status": "no_match",
+   "slug": "callen-olive",
+   "name": "Callen Olive"
+  },
+  {
+   "status": "no_match",
+   "slug": "calvin-klein-cosmetics",
+   "name": "Calvin Klein Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cantu",
+   "name": "Cantu"
+  },
+  {
+   "status": "not_brand",
+   "slug": "carex",
+   "name": "Carex"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5043651",
+   "description": "brand of lip balm",
+   "slug": "carmex",
+   "name": "Carmex"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5044206",
+   "description": "American beauty brand",
+   "slug": "carols-daughter",
+   "name": "Carol's Daughter"
+  },
+  {
+   "wikidata": "Q5050948",
+   "description": "American perfumer",
+   "commons_file": "Caswell-Massey Lockup 10BL.png",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Caswell-Massey_Lockup_10BL.png",
+   "author": "Caswell Massey",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "caswell-massey",
+   "name": "Caswell-Massey"
+  },
+  {
+   "status": "not_brand",
+   "slug": "catrice",
+   "name": "Catrice"
+  },
+  {
+   "status": "no_match",
+   "slug": "caudalie-usa",
+   "name": "Caudalie USA"
+  },
+  {
+   "status": "no_match",
+   "slug": "cellis",
+   "name": "Cellis"
+  },
+  {
+   "status": "no_match",
+   "slug": "celui-by-anisa-sojka",
+   "name": "CELUI by Anisa Sojka"
+  },
+  {
+   "status": "no_match",
+   "slug": "cenoura-and-bronze",
+   "name": "Cenoura & Bronze"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q23731275",
+   "description": "Dermatology and skin care company",
+   "slug": "cerave",
+   "name": "CeraVe"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5065628",
+   "description": "line of skin care products from Galderma Laboratories",
+   "slug": "cetaphil",
+   "name": "Cetaphil"
+  },
+  {
+   "status": "no_match",
+   "slug": "chapstick",
+   "name": "Chapstick"
+  },
+  {
+   "status": "not_brand",
+   "slug": "charles-worthington",
+   "name": "Charles Worthington"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cheer",
+   "name": "Cheer"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cherish",
+   "name": "Cherish"
+  },
+  {
+   "status": "no_match",
+   "slug": "childs-farm",
+   "name": "Childs Farm"
+  },
+  {
+   "wikidata": "Q1075391",
+   "description": "French fashion house created by Gaby Aghion",
+   "commons_file": "Chloe 2024 Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Chloe_2024_Logo.svg",
+   "author": "Chloe SAS",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chloe_2024_Logo.svg/330px-Chloe_2024_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "chloe",
+   "name": "Chloe",
+   "file": "scripts/logo-candidates/chloe.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "christina-aguilera-perfumes",
+   "name": "Christina Aguilera Perfumes"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5116536",
+   "description": "American consumer goods company",
+   "slug": "church-and-dwight",
+   "name": "Church & Dwight"
+  },
+  {
+   "status": "no_match",
+   "slug": "cien",
+   "name": "Cien"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2972358",
+   "description": "unilever cleaning product",
+   "slug": "cif",
+   "name": "Cif"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2972393",
+   "description": "Range of cleaning product",
+   "slug": "cillit-bang",
+   "name": "Cillit Bang"
+  },
+  {
+   "status": "no_match",
+   "slug": "citre-shine",
+   "name": "Citre Shine"
+  },
+  {
+   "status": "no_match",
+   "slug": "cj-olive-young",
+   "name": "CJ Olive Young"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3678986",
+   "description": "hair care product",
+   "slug": "clairol",
+   "name": "Clairol"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q2975619",
+    "Q125057238"
+   ],
+   "slug": "clarins",
+   "name": "Clarins"
+  },
+  {
+   "status": "no_match",
+   "slug": "clarins-of-paris",
+   "name": "Clarins of Paris"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5127056",
+   "description": "company that produces the Clarisonic line of skin care products",
+   "slug": "clarisonic",
+   "name": "Clarisonic"
+  },
+  {
+   "wikidata": "Q3502747",
+   "description": "line of dermatology products owned by Johnson & Johnson",
+   "commons_file": "Clean and clear logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Clean_and_clear_logo.svg",
+   "author": "Clean and clear",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Clean_and_clear_logo.svg/330px-Clean_and_clear_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "clean-and-clear",
+   "name": "Clean & Clear",
+   "file": "scripts/logo-candidates/clean-and-clear.png"
+  },
+  {
+   "wikidata": "Q247527",
+   "description": "brand of skin care and acne medication",
+   "commons_file": "Clearasil logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Clearasil_logo.png",
+   "author": "The original uploader was Wiki-Piki at Finnish Wikipedia.",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Clearasil_logo.png/330px-Clearasil_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "clearasil",
+   "name": "Clearasil",
+   "file": "scripts/logo-candidates/clearasil.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "clemence-organics",
+   "name": "Clemence Organics"
+  },
+  {
+   "status": "no_match",
+   "slug": "clinique",
+   "name": "Clinique"
+  },
+  {
+   "wikidata": "Q910368",
+   "description": "American worldwide manufacturer and marketer of consumer and professional products",
+   "commons_file": "The Clorox Company logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Clorox_Company_logo.svg",
+   "author": "The Clorox Company",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/The_Clorox_Company_logo.svg/330px-The_Clorox_Company_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "clorox",
+   "name": "Clorox",
+   "file": "scripts/logo-candidates/clorox.png"
+  },
+  {
+   "wikidata": "Q5135167",
+   "description": "American brand of toothpaste",
+   "commons_file": "Close-Up logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Close-Up_logo.svg",
+   "author": "Church &amp; Dwight",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Close-Up_logo.svg/330px-Close-Up_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "close-up",
+   "name": "Close-up",
+   "file": "scripts/logo-candidates/close-up.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "co-op",
+   "name": "Co-op"
+  },
+  {
+   "status": "no_match",
+   "slug": "coco-and-lola",
+   "name": "Coco and Lola"
+  },
+  {
+   "wikidata": "Q2523492",
+   "description": "brand of toothpaste",
+   "commons_file": "Colgate logo red.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Colgate_logo_red.svg",
+   "author": "Colgate",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Colgate_logo_red.svg/330px-Colgate_logo_red.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "colgate",
+   "name": "Colgate",
+   "file": "scripts/logo-candidates/colgate.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "collection",
+   "name": "Collection"
+  },
+  {
+   "status": "not_brand",
+   "slug": "collistar",
+   "name": "Collistar"
+  },
+  {
+   "wikidata": "Q54959010",
+   "description": "American\u00a0cosmetics\u00a0brand",
+   "commons_file": "Colourpop.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Colourpop.png",
+   "author": "I do not know--however, it is a part of the Colourpop Cosmetics company",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Colourpop.png/330px-Colourpop.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "colourpop-cosmetics",
+   "name": "ColourPop Cosmetics",
+   "file": "scripts/logo-candidates/colourpop-cosmetics.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "comet",
+   "name": "Comet"
+  },
+  {
+   "status": "not_brand",
+   "slug": "comfort",
+   "name": "Comfort"
+  },
+  {
+   "status": "not_brand",
+   "slug": "command",
+   "name": "Command"
+  },
+  {
+   "status": "no_match",
+   "slug": "conair",
+   "name": "Conair"
+  },
+  {
+   "status": "no_match",
+   "slug": "concrete-minerals",
+   "name": "Concrete Minerals"
+  },
+  {
+   "status": "no_match",
+   "slug": "condense-paris",
+   "name": "Condense Paris"
+  },
+  {
+   "status": "no_match",
+   "slug": "copper-and-black",
+   "name": "Copper & Black"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q77466790",
+   "description": "brand name for an American sunscreen",
+   "slug": "coppertone",
+   "name": "Coppertone"
+  },
+  {
+   "status": "no_match",
+   "slug": "corsodyl",
+   "name": "Corsodyl"
+  },
+  {
+   "status": "no_match",
+   "slug": "coty-inc",
+   "name": "Coty Inc."
+  },
+  {
+   "status": "no_match",
+   "slug": "cover-fx-skin-care",
+   "name": "Cover FX Skin Care"
+  },
+  {
+   "wikidata": "Q1629990",
+   "description": "American cosmetics brand",
+   "commons_file": "COVERGIRL logo 2017.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:COVERGIRL_logo_2017.svg",
+   "author": "Covergirl",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/COVERGIRL_logo_2017.svg/330px-COVERGIRL_logo_2017.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "covergirl",
+   "name": "CoverGirl",
+   "file": "scripts/logo-candidates/covergirl.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cowshed",
+   "name": "Cowshed"
+  },
+  {
+   "status": "no_match",
+   "slug": "cozium",
+   "name": "COZIUM"
+  },
+  {
+   "status": "no_match",
+   "slug": "cranbourn",
+   "name": "CRANBOURN"
+  },
+  {
+   "status": "no_match",
+   "slug": "crayola-beauty",
+   "name": "Crayola Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "crest",
+   "name": "Crest"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cristalinas",
+   "name": "Cristalinas"
+  },
+  {
+   "status": "no_match",
+   "slug": "cult-candy-cosmetics",
+   "name": "Cult Candy Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "cultivator-natural-products",
+   "name": "Cultivator Natural Products"
+  },
+  {
+   "status": "no_match",
+   "slug": "cultured",
+   "name": "Cultured"
+  },
+  {
+   "status": "no_match",
+   "slug": "curl-jar",
+   "name": "Curl Jar"
+  },
+  {
+   "status": "not_brand",
+   "slug": "cycle",
+   "name": "CYCLE"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141131763",
+   "description": "cosmetic company",
+   "slug": "cyzone",
+   "name": "Cyzone"
+  },
+  {
+   "status": "no_match",
+   "slug": "dlas",
+   "name": "D'las"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2723075",
+   "description": "Indian manufacturer",
+   "slug": "dabur",
+   "name": "Dabur"
+  },
+  {
+   "status": "not_brand",
+   "slug": "daise",
+   "name": "Daise"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dame",
+   "name": "DAME"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q501422",
+    "Q135659654"
+   ],
+   "slug": "davidoff",
+   "name": "Davidoff"
+  },
+  {
+   "status": "not_brand",
+   "slug": "daz",
+   "name": "Daz"
+  },
+  {
+   "status": "no_match",
+   "slug": "delphis-eco",
+   "name": "Delphis Eco"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dentalux",
+   "name": "Dentalux"
+  },
+  {
+   "status": "no_match",
+   "slug": "derma-e-natural-bodycare",
+   "name": "derma-e Natural Bodycare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134890556",
+   "description": "American cosmetics brand",
+   "slug": "dermablend",
+   "name": "Dermablend"
+  },
+  {
+   "status": "no_match",
+   "slug": "dermacare",
+   "name": "Dermacare"
+  },
+  {
+   "status": "no_match",
+   "slug": "dermadoctor",
+   "name": "DERMAdoctor"
+  },
+  {
+   "status": "no_match",
+   "slug": "dermalogica",
+   "name": "Dermalogica"
+  },
+  {
+   "status": "no_match",
+   "slug": "desert-essence",
+   "name": "Desert Essence"
+  },
+  {
+   "status": "no_match",
+   "slug": "design-essentials",
+   "name": "Design Essentials"
+  },
+  {
+   "wikidata": "Q15061688",
+   "description": "brand of antiseptic and cleaning supplies",
+   "commons_file": "Dettol brand wordmark.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Dettol_brand_wordmark.png",
+   "author": "Reckitt Benckiser",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Dettol_brand_wordmark.png/330px-Dettol_brand_wordmark.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "dettol",
+   "name": "Dettol",
+   "file": "scripts/logo-candidates/dettol.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q65117064",
+   "description": "hair care brand",
+   "slug": "devacurl",
+   "name": "DevaCurl"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dial",
+   "name": "Dial"
+  },
+  {
+   "status": "no_match",
+   "slug": "dianne-caine-australia",
+   "name": "Dianne Caine Australia"
+  },
+  {
+   "status": "not_brand",
+   "slug": "diesel",
+   "name": "Diesel"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dior",
+   "name": "Dior"
+  },
+  {
+   "status": "no_match",
+   "slug": "ditto-balms",
+   "name": "Ditto Balms"
+  },
+  {
+   "status": "no_match",
+   "slug": "dolce-and-gabbana-beauty",
+   "name": "Dolce & Gabbana Beauty"
+  },
+  {
+   "wikidata": "Q2089295",
+   "description": "Range of bleach-based household cleaning products originally from UK",
+   "commons_file": "Domestos logo.png",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Domestos_logo.png",
+   "author": "Unilever",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "domestos",
+   "name": "Domestos"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q464497",
+   "description": "American fashion designer (born 1948)",
+   "slug": "donna-karan",
+   "name": "Donna Karan"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dossier",
+   "name": "Dossier"
+  },
+  {
+   "status": "no_match",
+   "slug": "doussy",
+   "name": "Doussy"
+  },
+  {
+   "status": "not_brand",
+   "slug": "dove",
+   "name": "Dove"
+  },
+  {
+   "status": "not_brand",
+   "slug": "down-to-earth",
+   "name": "Down to Earth"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q903922",
+   "description": "brand name of fabric softener produced by Procter & Gamble",
+   "slug": "downy",
+   "name": "Downy"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-bronners",
+   "name": "Dr Bronner's"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-heald",
+   "name": "DR HEALD"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-jacksons",
+   "name": "Dr Jackson's"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-organic",
+   "name": "Dr Organic"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-pawpaw",
+   "name": "Dr PawPaw"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-sams",
+   "name": "Dr Sam's"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-dennis-gross-skincare",
+   "name": "Dr. Dennis Gross Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-hauschka-skin-care",
+   "name": "Dr. Hauschka Skin Care"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q85845827",
+   "description": "South Korean skin care brand",
+   "slug": "dr-jart-plus",
+   "name": "Dr. Jart+"
+  },
+  {
+   "status": "no_match",
+   "slug": "dr-teals",
+   "name": "Dr. Teal's"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5305817",
+   "description": "Drain cleaner",
+   "slug": "drano",
+   "name": "Drano"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q124547645",
+   "description": "Houston-based skincare brand",
+   "slug": "drunk-elephant",
+   "name": "Drunk Elephant"
+  },
+  {
+   "status": "no_match",
+   "slug": "dtrt",
+   "name": "DTRT"
+  },
+  {
+   "status": "no_match",
+   "slug": "dunhill-fragrances",
+   "name": "Dunhill Fragrances"
+  },
+  {
+   "status": "not_brand",
+   "slug": "duo",
+   "name": "DUO"
+  },
+  {
+   "wikidata": "Q1267311",
+   "description": "brand of condoms and lubricants",
+   "commons_file": "New Logo Durex.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:New_Logo_Durex.svg",
+   "author": "Durex - upload: Giov.c",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/New_Logo_Durex.svg/330px-New_Logo_Durex.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "durex",
+   "name": "Durex",
+   "file": "scripts/logo-candidates/durex.png"
+  },
+  {
+   "wikidata": "Q5422801",
+   "description": "cosmetics company",
+   "commons_file": "Elf new logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Elf_new_logo.png",
+   "author": "St\u00f6rm",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Elf_new_logo.png/330px-Elf_new_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "e-l-f-cosmetics",
+   "name": "e.l.f. cosmetics",
+   "file": "scripts/logo-candidates/e-l-f-cosmetics.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "e45",
+   "name": "E45"
+  },
+  {
+   "status": "not_brand",
+   "slug": "earth-conscious",
+   "name": "Earth Conscious"
+  },
+  {
+   "status": "no_match",
+   "slug": "earth-friendly-products",
+   "name": "Earth Friendly Products"
+  },
+  {
+   "status": "no_match",
+   "slug": "earth-sense",
+   "name": "Earth Sense"
+  },
+  {
+   "status": "no_match",
+   "slug": "earthy-nail-polish",
+   "name": "Earthy Nail Polish"
+  },
+  {
+   "status": "no_match",
+   "slug": "easy-off",
+   "name": "Easy-Off"
+  },
+  {
+   "status": "no_match",
+   "slug": "eco-dent-international",
+   "name": "Eco-DenT International"
+  },
+  {
+   "status": "no_match",
+   "slug": "ecoleaf-by-suma",
+   "name": "Ecoleaf by Suma"
+  },
+  {
+   "status": "no_match",
+   "slug": "ecotools",
+   "name": "EcoTools"
+  },
+  {
+   "wikidata": "Q1282167",
+   "description": "Belgian company",
+   "commons_file": "Ecover Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Ecover_Logo.svg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ecover_Logo.svg/330px-Ecover_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "ecover",
+   "name": "Ecover",
+   "file": "scripts/logo-candidates/ecover.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "ecozone",
+   "name": "Ecozone"
+  },
+  {
+   "wikidata": "Q16966916",
+   "description": "French fragrance brand",
+   "commons_file": "Eisenberg Paris Logo.jpg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Eisenberg_Paris_Logo.jpg",
+   "author": "Eisenberg Paris",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Eisenberg_Paris_Logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "eisenberg-paris",
+   "name": "Eisenberg Paris",
+   "file": "scripts/logo-candidates/eisenberg-paris.png"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1207152",
+    "Q26982017"
+   ],
+   "slug": "elegance",
+   "name": "Elegance"
+  },
+  {
+   "status": "no_match",
+   "slug": "elemis",
+   "name": "Elemis"
+  },
+  {
+   "wikidata": "Q456638",
+   "description": "Lebanese fashion designer (born 1964)",
+   "commons_file": "Ellie Saab Logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Ellie_Saab_Logo.png",
+   "author": "Elie Saab",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Ellie_Saab_Logo.png/330px-Ellie_Saab_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "elie-saab",
+   "name": "Elie Saab",
+   "file": "scripts/logo-candidates/elie-saab.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5362329",
+   "description": "cosmetics company founded by Elizabeth Arden",
+   "slug": "elizabeth-arden",
+   "name": "Elizabeth Arden"
+  },
+  {
+   "status": "no_match",
+   "slug": "ellegirl",
+   "name": "ELLEgirl"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3723774",
+   "description": "L'Oreal hair care range",
+   "slug": "elvive",
+   "name": "Elvive"
+  },
+  {
+   "status": "no_match",
+   "slug": "eminence-organic-skin-care",
+   "name": "Eminence Organic Skin Care"
+  },
+  {
+   "status": "not_brand",
+   "slug": "emma-hardie",
+   "name": "Emma Hardie"
+  },
+  {
+   "status": "not_brand",
+   "slug": "eos",
+   "name": "eos"
+  },
+  {
+   "status": "no_match",
+   "slug": "eos-products",
+   "name": "EOS Products"
+  },
+  {
+   "status": "no_match",
+   "slug": "epiderma",
+   "name": "Epiderma"
+  },
+  {
+   "status": "not_brand",
+   "slug": "era",
+   "name": "Era"
+  },
+  {
+   "status": "no_match",
+   "slug": "escada-fragrances",
+   "name": "Escada Fragrances"
+  },
+  {
+   "status": "not_brand",
+   "slug": "esika",
+   "name": "Esika"
+  },
+  {
+   "status": "not_brand",
+   "slug": "essence",
+   "name": "essence"
+  },
+  {
+   "status": "no_match",
+   "slug": "esspire",
+   "name": "Esspire"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141314252",
+   "description": "Founding brand of the Est\u00e9e Lauder Companies",
+   "slug": "estee-lauder",
+   "name": "Estee Lauder"
+  },
+  {
+   "status": "no_match",
+   "slug": "eternal-skincare",
+   "name": "Eternal Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "ethique",
+   "name": "Ethique"
+  },
+  {
+   "status": "not_brand",
+   "slug": "eudora",
+   "name": "Eudora"
+  },
+  {
+   "status": "not_brand",
+   "slug": "eugene-perma",
+   "name": "Eugene Perma"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5413426",
+   "description": "American chain of hair removal salons",
+   "slug": "european-wax-center",
+   "name": "European Wax Center"
+  },
+  {
+   "status": "no_match",
+   "slug": "evdaimonia",
+   "name": "Evdaimonia"
+  },
+  {
+   "status": "no_match",
+   "slug": "ever-clean",
+   "name": "Ever Clean"
+  },
+  {
+   "status": "no_match",
+   "slug": "every-man-jack",
+   "name": "Every Man Jack"
+  },
+  {
+   "status": "no_match",
+   "slug": "everyandone",
+   "name": "every&one"
+  },
+  {
+   "status": "no_match",
+   "slug": "evolve-organic-beauty",
+   "name": "Evolve Organic Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "evre",
+   "name": "Evre"
+  },
+  {
+   "status": "no_match",
+   "slug": "eylure",
+   "name": "Eylure"
+  },
+  {
+   "status": "no_match",
+   "slug": "fab-brows",
+   "name": "FAB Brows"
+  },
+  {
+   "status": "not_brand",
+   "slug": "fabulosa",
+   "name": "Fabulosa"
+  },
+  {
+   "status": "no_match",
+   "slug": "facetheory",
+   "name": "Facetheory"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1393460",
+   "description": "brand of dishwashing liquid",
+   "slug": "fairy",
+   "name": "Fairy"
+  },
+  {
+   "status": "no_match",
+   "slug": "faith-in-nature",
+   "name": "Faith in Nature"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q104840698",
+   "description": "branded cleaning product(s)",
+   "slug": "fantastik",
+   "name": "Fantastik"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5437186",
+   "description": "lifestyle clothing and accessories retailer, based in the UK",
+   "slug": "fatface",
+   "name": "FatFace"
+  },
+  {
+   "wikidata": "Q910264",
+   "description": "brand of household odor eliminators manufactured by Procter & Gamble",
+   "commons_file": "Febreze Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Febreze_Logo.svg",
+   "author": "Febreze",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Febreze_Logo.svg/330px-Febreze_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "febreze",
+   "name": "Febreze",
+   "file": "scripts/logo-candidates/febreze.png"
+  },
+  {
+   "wikidata": "Q926575",
+   "description": "Italian enterprise and fashion house",
+   "commons_file": "Fendi logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Fendi_logo.svg",
+   "author": "Fendi",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Fendi_logo.svg/330px-Fendi_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "fendi",
+   "name": "Fendi",
+   "file": "scripts/logo-candidates/fendi.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "fill-refill-co",
+   "name": "Fill Refill Co."
+  },
+  {
+   "status": "no_match",
+   "slug": "filter-by-molly-mae",
+   "name": "Filter by Molly-Mae"
+  },
+  {
+   "status": "no_match",
+   "slug": "finice",
+   "name": "finice"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q621707",
+    "Q21169666"
+   ],
+   "slug": "finish",
+   "name": "Finish"
+  },
+  {
+   "status": "no_match",
+   "slug": "first-aid-beauty",
+   "name": "First Aid Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "fixodent",
+   "name": "Fixodent"
+  },
+  {
+   "status": "not_brand",
+   "slug": "flash",
+   "name": "Flash"
+  },
+  {
+   "status": "no_match",
+   "slug": "floralys",
+   "name": "Floralys"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q123554208",
+   "description": "American cosmetics brand",
+   "slug": "florence-by-mills",
+   "name": "Florence By Mills"
+  },
+  {
+   "status": "not_brand",
+   "slug": "florentine",
+   "name": "Florentine"
+  },
+  {
+   "status": "no_match",
+   "slug": "foamie",
+   "name": "Foamie"
+  },
+  {
+   "status": "no_match",
+   "slug": "for-beloved-one",
+   "name": "For Beloved One"
+  },
+  {
+   "status": "no_match",
+   "slug": "forest-and-shore",
+   "name": "Forest & Shore"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q65084754",
+   "description": "Indian Skin Care Brand",
+   "slug": "forest-essentials",
+   "name": "Forest Essentials"
+  },
+  {
+   "status": "not_brand",
+   "slug": "formil",
+   "name": "formil"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5470270",
+   "description": "Clorox brand cleaning product",
+   "slug": "formula-409",
+   "name": "Formula 409"
+  },
+  {
+   "status": "not_brand",
+   "slug": "formula-x",
+   "name": "Formula X"
+  },
+  {
+   "status": "no_match",
+   "slug": "formulae-prescott",
+   "name": "Formulae Prescott"
+  },
+  {
+   "status": "no_match",
+   "slug": "frank-body",
+   "name": "Frank Body"
+  },
+  {
+   "status": "no_match",
+   "slug": "freeman-beauty",
+   "name": "Freeman Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "fresh-and-dry",
+   "name": "Fresh & Dry"
+  },
+  {
+   "status": "no_match",
+   "slug": "fresh-step",
+   "name": "Fresh Step"
+  },
+  {
+   "status": "not_brand",
+   "slug": "fria",
+   "name": "FRIA"
+  },
+  {
+   "status": "no_match",
+   "slug": "fria-1000-giorni",
+   "name": "FRIA 1000 GIORNI"
+  },
+  {
+   "status": "no_match",
+   "slug": "fria-easy",
+   "name": "FRIA EASY"
+  },
+  {
+   "status": "no_match",
+   "slug": "fria-k-beauty-inspired",
+   "name": "FRIA k-Beauty Inspired"
+  },
+  {
+   "status": "no_match",
+   "slug": "friendly-soap",
+   "name": "Friendly Soap"
+  },
+  {
+   "status": "no_match",
+   "slug": "fruit-of-the-earth",
+   "name": "Fruit of the Earth"
+  },
+  {
+   "status": "no_match",
+   "slug": "fuarain-skincare",
+   "name": "Fuarain Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5507060",
+   "description": "brand of chocolate bar by Cadbury",
+   "slug": "fudge",
+   "name": "Fudge"
+  },
+  {
+   "status": "no_match",
+   "slug": "function-of-beauty",
+   "name": "Function of Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "furtastic",
+   "name": "Furtastic"
+  },
+  {
+   "status": "no_match",
+   "slug": "fushi",
+   "name": "Fushi"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q19873589",
+   "description": "2008 single by End of Fashion",
+   "slug": "fussy",
+   "name": "Fussy"
+  },
+  {
+   "status": "no_match",
+   "slug": "gaia-skincare",
+   "name": "Gaia Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "gain",
+   "name": "Gain"
+  },
+  {
+   "status": "not_brand",
+   "slug": "garden-of-life",
+   "name": "Garden of Life"
+  },
+  {
+   "status": "not_brand",
+   "slug": "garnier",
+   "name": "Garnier"
+  },
+  {
+   "status": "not_brand",
+   "slug": "gatineau",
+   "name": "GATINEAU"
+  },
+  {
+   "status": "no_match",
+   "slug": "gelitup-by-giup",
+   "name": "GEL.IT.UP by GIUP"
+  },
+  {
+   "status": "no_match",
+   "slug": "gelish",
+   "name": "Gelish"
+  },
+  {
+   "status": "no_match",
+   "slug": "gender-neutral",
+   "name": "Gender Neutral"
+  },
+  {
+   "status": "no_match",
+   "slug": "genglo",
+   "name": "GenGlo"
+  },
+  {
+   "status": "no_match",
+   "slug": "ghs-direct",
+   "name": "GHS Direct"
+  },
+  {
+   "wikidata": "Q503592",
+   "description": "American brand of men's safety razors and other personal care products",
+   "commons_file": "Gillette.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Gillette.svg",
+   "author": "Procter &amp; Gamble",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Gillette.svg/330px-Gillette.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "gillette",
+   "name": "Gillette",
+   "file": "scripts/logo-candidates/gillette.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "gillette-co",
+   "name": "Gillette Co."
+  },
+  {
+   "status": "no_match",
+   "slug": "gingingers",
+   "name": "Gingingers"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q157054",
+    "Q635484",
+    "Q125182769",
+    "Q20971337"
+   ],
+   "slug": "giorgio-armani",
+   "name": "Giorgio Armani"
+  },
+  {
+   "status": "no_match",
+   "slug": "girls-with-attitude",
+   "name": "Girls with Attitude"
+  },
+  {
+   "status": "no_match",
+   "slug": "givenchy-inc",
+   "name": "Givenchy Inc."
+  },
+  {
+   "status": "not_brand",
+   "slug": "glad",
+   "name": "Glad"
+  },
+  {
+   "wikidata": "Q5566223",
+   "description": "S. C. Johnson & Son brand of household air fresheners",
+   "commons_file": "Glade logo 2.gif",
+   "license": "Copyrighted free use",
+   "page": "https://commons.wikimedia.org/wiki/File:Glade_logo_2.gif",
+   "author": "Glade Company",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "glade",
+   "name": "Glade"
+  },
+  {
+   "status": "no_match",
+   "slug": "glamglow",
+   "name": "GLAMGLOW"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q15223654",
+   "description": "coating of a glossy, often sweet, sometimes savoury, substance applied to food typically by dipping, dripping, or with a brush",
+   "slug": "glaze",
+   "name": "Glaze"
+  },
+  {
+   "status": "no_match",
+   "slug": "glo-skin-beauty",
+   "name": "Glo Skin Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "glow-for-it",
+   "name": "Glow For It"
+  },
+  {
+   "status": "no_match",
+   "slug": "glow-hub",
+   "name": "Glow Hub"
+  },
+  {
+   "status": "no_match",
+   "slug": "go-to-skincare",
+   "name": "Go-To Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "goats-of-the-gorge",
+   "name": "Goats of the Gorge"
+  },
+  {
+   "status": "not_brand",
+   "slug": "goldwell",
+   "name": "Goldwell"
+  },
+  {
+   "status": "no_match",
+   "slug": "goli-nutrition",
+   "name": "Goli Nutrition"
+  },
+  {
+   "status": "no_match",
+   "slug": "good-bubble",
+   "name": "Good Bubble"
+  },
+  {
+   "status": "not_brand",
+   "slug": "good-one",
+   "name": "Good One"
+  },
+  {
+   "status": "no_match",
+   "slug": "gosh-copenhagen",
+   "name": "GOSH Copenhagen"
+  },
+  {
+   "status": "not_brand",
+   "slug": "got2b",
+   "name": "got2b"
+  },
+  {
+   "status": "no_match",
+   "slug": "grande-cosmetics",
+   "name": "Grande Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "green-people",
+   "name": "Green People"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141243882",
+   "description": "Dutch online retailer of plug-in home batteries",
+   "slug": "green-wave",
+   "name": "Green Wave"
+  },
+  {
+   "status": "not_brand",
+   "slug": "green-works",
+   "name": "Green Works"
+  },
+  {
+   "status": "no_match",
+   "slug": "greenscents",
+   "name": "Greenscents"
+  },
+  {
+   "status": "not_brand",
+   "slug": "grisi",
+   "name": "Grisi"
+  },
+  {
+   "status": "no_match",
+   "slug": "grown-alchemist",
+   "name": "Grown Alchemist"
+  },
+  {
+   "status": "no_match",
+   "slug": "gruum",
+   "name": "gruum"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q178516",
+    "Q125130580"
+   ],
+   "slug": "gucci",
+   "name": "Gucci"
+  },
+  {
+   "status": "no_match",
+   "slug": "gucci-fragrances",
+   "name": "Gucci Fragrances"
+  },
+  {
+   "wikidata": "Q1553251",
+   "description": "French perfume, cosmetics, and skincare house",
+   "commons_file": "Guerlain - logo (France, 2022-).svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Guerlain_-_logo_%28France%2C_2022-%29.svg",
+   "author": "Guerlain",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Guerlain_-_logo_%28France%2C_2022-%29.svg/330px-Guerlain_-_logo_%28France%2C_2022-%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "guerlain",
+   "name": "Guerlain",
+   "file": "scripts/logo-candidates/guerlain.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "gutology",
+   "name": "Gutology"
+  },
+  {
+   "status": "not_brand",
+   "slug": "habi",
+   "name": "Habi"
+  },
+  {
+   "status": "no_match",
+   "slug": "hair-by-sam-mcknight",
+   "name": "Hair by Sam McKnight"
+  },
+  {
+   "status": "no_match",
+   "slug": "hair-food",
+   "name": "Hair Food"
+  },
+  {
+   "status": "no_match",
+   "slug": "handmade-naturals",
+   "name": "Handmade Naturals"
+  },
+  {
+   "status": "no_match",
+   "slug": "hanna-sillitoe",
+   "name": "Hanna Sillitoe"
+  },
+  {
+   "status": "no_match",
+   "slug": "hannah-natural",
+   "name": "Hannah Natural"
+  },
+  {
+   "status": "no_match",
+   "slug": "happy-anne",
+   "name": "HAPPY ANNE"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q10293986",
+   "description": "brand name of a toilet bowl cleaner",
+   "slug": "harpic",
+   "name": "Harpic"
+  },
+  {
+   "wikidata": "Q16994968",
+   "description": "American brand of suntan lotion",
+   "commons_file": "Hawaiian Tropic brand logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Hawaiian_Tropic_brand_logo.svg",
+   "author": "EDGEWELL",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Hawaiian_Tropic_brand_logo.svg/330px-Hawaiian_Tropic_brand_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "hawaiian-tropic",
+   "name": "Hawaiian Tropic",
+   "file": "scripts/logo-candidates/hawaiian-tropic.png"
+  },
+  {
+   "wikidata": "Q555900",
+   "description": "brand of anti-dandruff shampoo produced by Procter & Gamble",
+   "commons_file": "Head&shoulders-Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Head%26shoulders-Logo.svg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Head%26shoulders-Logo.svg/330px-Head%26shoulders-Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "head-and-shoulders",
+   "name": "Head & Shoulders",
+   "file": "scripts/logo-candidates/head-and-shoulders.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "helan",
+   "name": "Helan"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3129665",
+   "description": "Cosmetics company and brand",
+   "slug": "helena-rubinstein",
+   "name": "Helena Rubinstein"
+  },
+  {
+   "status": "no_match",
+   "slug": "hello-products",
+   "name": "Hello Products"
+  },
+  {
+   "status": "no_match",
+   "slug": "herbal-elea",
+   "name": "Herbal Elea"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3785130",
+   "description": "brand of hair coloring and haircare products line by Clairol",
+   "slug": "herbal-essences",
+   "name": "Herbal Essences"
+  },
+  {
+   "status": "no_match",
+   "slug": "herbivore-botanicals",
+   "name": "Herbivore Botanicals"
+  },
+  {
+   "status": "no_match",
+   "slug": "hershesons",
+   "name": "Hershesons"
+  },
+  {
+   "status": "no_match",
+   "slug": "hiip",
+   "name": "Hiip"
+  },
+  {
+   "status": "no_match",
+   "slug": "hims",
+   "name": "Hims"
+  },
+  {
+   "wikidata": "Q56473863",
+   "description": "Oral Cosmetics company",
+   "commons_file": "HiSmileTeeth Logo(2014).svg",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:HiSmileTeeth_Logo%282014%29.svg",
+   "author": "Nik Mirkovic and Alex Tomic",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "hismile",
+   "name": "HiSmile"
+  },
+  {
+   "status": "no_match",
+   "slug": "holo-taco",
+   "name": "Holo Taco"
+  },
+  {
+   "status": "no_match",
+   "slug": "honeybee-gardens",
+   "name": "Honeybee Gardens"
+  },
+  {
+   "status": "no_match",
+   "slug": "hourglass-cosmetics",
+   "name": "Hourglass Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "hownd",
+   "name": "HOWND"
+  },
+  {
+   "status": "not_brand",
+   "slug": "hoyu",
+   "name": "Hoyu"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q491627",
+    "Q63219",
+    "Q132127937"
+   ],
+   "slug": "hugo-boss",
+   "name": "Hugo Boss"
+  },
+  {
+   "status": "no_match",
+   "slug": "hurraw",
+   "name": "Hurraw!"
+  },
+  {
+   "status": "no_match",
+   "slug": "i-m-naturkosmetik-berlin",
+   "name": "i+m NATURKOSMETIK BERLIN"
+  },
+  {
+   "status": "no_match",
+   "slug": "icom",
+   "name": "icom"
+  },
+  {
+   "status": "no_match",
+   "slug": "iconic-london",
+   "name": "Iconic London"
+  },
+  {
+   "status": "no_match",
+   "slug": "idun-minerals",
+   "name": "IDUN Minerals"
+  },
+  {
+   "status": "no_match",
+   "slug": "illamasqua",
+   "name": "Illamasqua"
+  },
+  {
+   "status": "no_match",
+   "slug": "image-skincare",
+   "name": "Image Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q11154630",
+   "description": "British soap and toiletries brand",
+   "slug": "imperial-leather",
+   "name": "Imperial Leather"
+  },
+  {
+   "status": "no_match",
+   "slug": "incia",
+   "name": "INCIA"
+  },
+  {
+   "wikidata": "Q673231",
+   "description": "privately owned multinational chemicals company",
+   "commons_file": "INEOS logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:INEOS_logo.svg",
+   "author": "Ineos",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/INEOS_logo.svg/330px-INEOS_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "ineos",
+   "name": "INEOS",
+   "file": "scripts/logo-candidates/ineos.png"
+  },
+  {
+   "wikidata": "Q5420712",
+   "description": "Polish cosmetics company",
+   "commons_file": "Inglot Cosmetics Logo.jpg",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Inglot_Cosmetics_Logo.jpg",
+   "author": "Farrennibhroin",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "inglot-cosmetics",
+   "name": "Inglot Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "inhana-skincare",
+   "name": "Inhana Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "inlight-beauty-and-wellness",
+   "name": "Inlight Beauty & Wellness"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q30273584",
+   "description": "French skincare brand",
+   "slug": "institut-esthederm",
+   "name": "Institut Esthederm"
+  },
+  {
+   "status": "no_match",
+   "slug": "invisibobble",
+   "name": "Invisibobble"
+  },
+  {
+   "status": "no_match",
+   "slug": "iren-shizen",
+   "name": "IREN Shizen"
+  },
+  {
+   "status": "no_match",
+   "slug": "isagenix",
+   "name": "Isagenix"
+  },
+  {
+   "status": "no_match",
+   "slug": "isle-of-paradise",
+   "name": "Isle Of Paradise"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q469027",
+    "Q136792595"
+   ],
+   "slug": "issey-miyake",
+   "name": "Issey Miyake"
+  },
+  {
+   "status": "no_match",
+   "slug": "itreatskin",
+   "name": "itreatskin"
+  },
+  {
+   "status": "not_brand",
+   "slug": "ivory",
+   "name": "Ivory"
+  },
+  {
+   "status": "no_match",
+   "slug": "j-beverly-hills",
+   "name": "J Beverly Hills"
+  },
+  {
+   "status": "no_match",
+   "slug": "jr-watkins",
+   "name": "J.R. Watkins"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q11269092",
+   "description": "brand of personal grooming products",
+   "slug": "jack-black",
+   "name": "Jack Black"
+  },
+  {
+   "status": "no_match",
+   "slug": "jane-iredale",
+   "name": "jane iredale"
+  },
+  {
+   "status": "no_match",
+   "slug": "je-suis-vert",
+   "name": "Je Suis Vert"
+  },
+  {
+   "status": "not_brand",
+   "slug": "jeffree-star",
+   "name": "Jeffree Star"
+  },
+  {
+   "status": "no_match",
+   "slug": "jesses-girl-cosmetics",
+   "name": "Jesse's Girl Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "jeuneora",
+   "name": "Jeuneora"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q362249",
+    "Q125096954"
+   ],
+   "slug": "jimmy-choo",
+   "name": "Jimmy Choo"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q20716050",
+   "description": "British perfume entrepreneur",
+   "slug": "jo-malone",
+   "name": "Jo Malone"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3181541",
+   "description": "British celebrity hairstylist",
+   "slug": "john-frieda",
+   "name": "John Frieda"
+  },
+  {
+   "status": "not_brand",
+   "slug": "john-lewis-and-partners",
+   "name": "John Lewis & Partners"
+  },
+  {
+   "status": "no_match",
+   "slug": "john-masters-organics",
+   "name": "John Masters Organics"
+  },
+  {
+   "wikidata": "Q1597610",
+   "description": "American company",
+   "commons_file": "Paul Mitchell logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Paul_Mitchell_logo.svg",
+   "author": "John Paul Mitchell Systems",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Paul_Mitchell_logo.svg/330px-Paul_Mitchell_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "john-paul-mitchell-systems",
+   "name": "John Paul Mitchell Systems",
+   "file": "scripts/logo-candidates/john-paul-mitchell-systems.png"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q333718",
+    "Q102543513",
+    "Q58196345",
+    "Q30268901",
+    "Q137203619"
+   ],
+   "slug": "johnson-and-johnson",
+   "name": "Johnson & Johnson"
+  },
+  {
+   "status": "no_match",
+   "slug": "johnson-s",
+   "name": "Johnson's"
+  },
+  {
+   "status": "no_match",
+   "slug": "joico",
+   "name": "Joico"
+  },
+  {
+   "status": "no_match",
+   "slug": "josie-maran-cosmetics",
+   "name": "Josie Maran Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "juice-beauty",
+   "name": "Juice Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "julep-beauty",
+   "name": "Julep Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "julie-clarke-candles",
+   "name": "Julie Clarke Candles"
+  },
+  {
+   "status": "no_match",
+   "slug": "jurlique-pure-skin-care",
+   "name": "Jurlique Pure Skin Care"
+  },
+  {
+   "status": "no_match",
+   "slug": "juvenate-skincare",
+   "name": "Juvenate Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "k-y",
+   "name": "K.Y."
+  },
+  {
+   "status": "not_brand",
+   "slug": "kaboom",
+   "name": "Kaboom"
+  },
+  {
+   "status": "no_match",
+   "slug": "kadalys",
+   "name": "Kadalys"
+  },
+  {
+   "status": "no_match",
+   "slug": "kao-usa",
+   "name": "Kao USA"
+  },
+  {
+   "status": "no_match",
+   "slug": "kash-beauty",
+   "name": "KASH Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "kate-somerville",
+   "name": "Kate Somerville"
+  },
+  {
+   "status": "not_brand",
+   "slug": "kativa",
+   "name": "KATIVA"
+  },
+  {
+   "status": "no_match",
+   "slug": "katoa-botanicals",
+   "name": "Katoa Botanicals"
+  },
+  {
+   "status": "no_match",
+   "slug": "kenra",
+   "name": "Kenra"
+  },
+  {
+   "status": "no_match",
+   "slug": "kenzo-parfums",
+   "name": "Kenzo Parfums"
+  },
+  {
+   "wikidata": "Q1999812",
+   "description": "French hair care brand",
+   "commons_file": "Kerastase logo.gif",
+   "license": "Copyrighted free use",
+   "page": "https://commons.wikimedia.org/wiki/File:Kerastase_logo.gif",
+   "author": "kerastase",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "kerastase",
+   "name": "Kerastase"
+  },
+  {
+   "status": "no_match",
+   "slug": "kevinmurphy",
+   "name": "KEVIN.MURPHY"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q117305625",
+   "description": "American lifestyle brand",
+   "slug": "keys-soulcare",
+   "name": "Keys Soulcare"
+  },
+  {
+   "status": "no_match",
+   "slug": "kids-stuff",
+   "name": "Kids Stuff"
+  },
+  {
+   "wikidata": "Q3196447",
+   "description": "American cosmetics brand retailer",
+   "commons_file": "Kiehl's SVG logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Kiehl%27s_SVG_logo.svg",
+   "author": "Kiehl's",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Kiehl%27s_SVG_logo.svg/330px-Kiehl%27s_SVG_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "kiehl-s",
+   "name": "Kiehl's",
+   "file": "scripts/logo-candidates/kiehl-s.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q6412293",
+   "description": "British toiletries company",
+   "slug": "king-of-shaves",
+   "name": "King of Shaves"
+  },
+  {
+   "status": "not_brand",
+   "slug": "kingfisher",
+   "name": "Kingfisher"
+  },
+  {
+   "status": "no_match",
+   "slug": "kireyna",
+   "name": "Kireyna"
+  },
+  {
+   "status": "no_match",
+   "slug": "kiss-products",
+   "name": "Kiss Products"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1753080",
+    "Q73205798"
+   ],
+   "slug": "kmart",
+   "name": "Kmart"
+  },
+  {
+   "status": "no_match",
+   "slug": "kone-care",
+   "name": "Kone Care"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q17009207",
+   "description": "Australian-made skincare products, co-founded by Miranda Kerr",
+   "slug": "kora-organics",
+   "name": "Kora Organics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1605453",
+   "description": "KORRES is a Greek beauty brand, born out of Athens\u2019 oldest homeopathic pharmacy in 1996.",
+   "slug": "korres",
+   "name": "Korres"
+  },
+  {
+   "status": "not_brand",
+   "slug": "kose",
+   "name": "Kose"
+  },
+  {
+   "status": "no_match",
+   "slug": "kotanical",
+   "name": "KOTANICAL"
+  },
+  {
+   "status": "no_match",
+   "slug": "krave-beauty",
+   "name": "KRAVE BEAUTY"
+  },
+  {
+   "status": "no_match",
+   "slug": "kristin-ess-hair",
+   "name": "Kristin Ess Hair"
+  },
+  {
+   "status": "no_match",
+   "slug": "kryolan-professional-make-up",
+   "name": "Kryolan Professional Make-up"
+  },
+  {
+   "status": "no_match",
+   "slug": "kurl-kitchen",
+   "name": "Kurl Kitchen"
+  },
+  {
+   "status": "no_match",
+   "slug": "kvd-beauty",
+   "name": "KVD Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "kvitok",
+   "name": "KVITOK"
+  },
+  {
+   "status": "no_match",
+   "slug": "kyushi",
+   "name": "Kyushi"
+  },
+  {
+   "status": "no_match",
+   "slug": "lbel",
+   "name": "L'BEL"
+  },
+  {
+   "status": "no_match",
+   "slug": "lerbolario-societa-benefit-srl",
+   "name": "L'Erbolario Societa Benefit Srl"
+  },
+  {
+   "status": "no_match",
+   "slug": "l-occitane",
+   "name": "L'Occitane"
+  },
+  {
+   "wikidata": "Q156077",
+   "description": "international cosmetics and beauty company",
+   "commons_file": "L'Or\u00e9al logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:L%27Or%C3%A9al_logo.svg",
+   "author": "L'Or\u00e9al",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/L%27Or%C3%A9al_logo.svg/330px-L%27Or%C3%A9al_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "l-oreal",
+   "name": "L'Or\u00e9al",
+   "file": "scripts/logo-candidates/l-oreal.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "la-cosmetica-srl",
+   "name": "La Cosmetica srl"
+  },
+  {
+   "status": "not_brand",
+   "slug": "la-mer",
+   "name": "La Mer"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1356442",
+   "description": "Skin care company with paraben-free, fragrance-free products tested for sensitive skin.",
+   "slug": "la-roche-posay",
+   "name": "La Roche-Posay"
+  },
+  {
+   "status": "no_match",
+   "slug": "lab-series-for-men",
+   "name": "Lab Series for Men"
+  },
+  {
+   "status": "no_match",
+   "slug": "labbok",
+   "name": "LABBOK"
+  },
+  {
+   "status": "no_match",
+   "slug": "lacoste-fragrances",
+   "name": "Lacoste Fragrances"
+  },
+  {
+   "status": "no_match",
+   "slug": "lacura",
+   "name": "Lacura"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q137203045",
+   "description": "performing arts production during the season 1948/49",
+   "slug": "lakm",
+   "name": "Lakm\u00e9"
+  },
+  {
+   "status": "no_match",
+   "slug": "lancaster-beauty",
+   "name": "Lancaster Beauty"
+  },
+  {
+   "wikidata": "Q1541268",
+   "description": "French luxury perfumes and cosmetics house",
+   "commons_file": "Lanc\u00f4me logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Lanc%C3%B4me_logo.svg",
+   "author": "Lanc\u00f4me",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Lanc%C3%B4me_logo.svg/330px-Lanc%C3%B4me_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "lancome",
+   "name": "Lancome",
+   "file": "scripts/logo-candidates/lancome.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "lanolips",
+   "name": "Lanolips"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q866899",
+    "Q3217668",
+    "Q125406183"
+   ],
+   "slug": "lanvin",
+   "name": "Lanvin"
+  },
+  {
+   "status": "no_match",
+   "slug": "lavanila",
+   "name": "Lavanila"
+  },
+  {
+   "status": "no_match",
+   "slug": "lavera-naturkosmetik",
+   "name": "lavera Naturkosmetik"
+  },
+  {
+   "status": "no_match",
+   "slug": "leaders-cosmetics",
+   "name": "Leaders Cosmetics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4441320",
+   "description": "British hairdresser (born 1966)",
+   "slug": "lee-stafford",
+   "name": "Lee Stafford"
+  },
+  {
+   "status": "no_match",
+   "slug": "leeukopf-laboratories",
+   "name": "Leeukopf Laboratories"
+  },
+  {
+   "status": "no_match",
+   "slug": "lefay-spa-cosmetic-line",
+   "name": "Lefay SPA Cosmetic Line"
+  },
+  {
+   "status": "no_match",
+   "slug": "lemon-myrtle",
+   "name": "Lemon Myrtle"
+  },
+  {
+   "status": "no_match",
+   "slug": "lenor",
+   "name": "Lenor"
+  },
+  {
+   "status": "no_match",
+   "slug": "lerana",
+   "name": "Lerana"
+  },
+  {
+   "status": "no_match",
+   "slug": "levrana",
+   "name": "Levrana"
+  },
+  {
+   "wikidata": "Q151954",
+   "description": "German global discount supermarket chain",
+   "commons_file": "Lidl-Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Lidl-Logo.svg",
+   "author": "Lidl Stiftung &amp; Co. KG",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Lidl-Logo.svg/330px-Lidl-Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "lidl",
+   "name": "Lidl",
+   "file": "scripts/logo-candidates/lidl.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "lidl-gb",
+   "name": "Lidl GB"
+  },
+  {
+   "status": "no_match",
+   "slug": "lidl-ireland-and-lidl-northern-ireland",
+   "name": "Lidl Ireland & Lidl Northern Ireland"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q65041168",
+   "description": "American cosmetics brand",
+   "slug": "lime-crime",
+   "name": "Lime Crime"
+  },
+  {
+   "status": "no_match",
+   "slug": "lip-smacker",
+   "name": "Lip Smacker"
+  },
+  {
+   "status": "no_match",
+   "slug": "lipstains-gold",
+   "name": "Lipstains Gold"
+  },
+  {
+   "status": "not_brand",
+   "slug": "liquid-plumr",
+   "name": "Liquid Plumr"
+  },
+  {
+   "wikidata": "Q944073",
+   "description": "brand of mouthwash",
+   "commons_file": "Listerine logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Listerine_logo.svg",
+   "author": "Listerine",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Listerine_logo.svg/330px-Listerine_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "listerine",
+   "name": "Listerine",
+   "file": "scripts/logo-candidates/listerine.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "little-heroes",
+   "name": "Little Heroes"
+  },
+  {
+   "status": "no_match",
+   "slug": "little-soap-company",
+   "name": "Little Soap Company"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q125562780",
+   "description": "brand of haircare products",
+   "slug": "living-proof",
+   "name": "Living Proof"
+  },
+  {
+   "status": "not_brand",
+   "slug": "liz-earle",
+   "name": "Liz Earle"
+  },
+  {
+   "status": "not_brand",
+   "slug": "lock-stock-and-barrel",
+   "name": "Lock Stock & Barrel"
+  },
+  {
+   "wikidata": "Q966905",
+   "description": "fashion house specialising in leather goods, clothing, perfumes and other fashion accessories",
+   "commons_file": "Loewe logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Loewe_logo.svg",
+   "author": "Loewe",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Loewe_logo.svg/330px-Loewe_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "loewe",
+   "name": "Loewe",
+   "file": "scripts/logo-candidates/loewe.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3258067",
+   "description": "German natural cosmetics company based in Salzhemmendorf (1978\u2013)",
+   "slug": "logona",
+   "name": "Logona"
+  },
+  {
+   "status": "no_match",
+   "slug": "london-copyright",
+   "name": "London Copyright"
+  },
+  {
+   "status": "no_match",
+   "slug": "londontown",
+   "name": "Londontown"
+  },
+  {
+   "status": "no_match",
+   "slug": "look-fabulous-forever",
+   "name": "Look Fabulous Forever"
+  },
+  {
+   "status": "no_match",
+   "slug": "lorac",
+   "name": "LORAC"
+  },
+  {
+   "status": "no_match",
+   "slug": "love-beauty-and-planet",
+   "name": "Love Beauty and Planet"
+  },
+  {
+   "status": "no_match",
+   "slug": "love-ethical-beauty",
+   "name": "Love Ethical beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "love-katie",
+   "name": "Love Katie"
+  },
+  {
+   "status": "no_match",
+   "slug": "love-pets",
+   "name": "Love Pets"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q25004530",
+   "description": "Brand of hand and body lotion",
+   "slug": "lubriderm",
+   "name": "Lubriderm"
+  },
+  {
+   "status": "no_match",
+   "slug": "lucky-tiger",
+   "name": "Lucky Tiger"
+  },
+  {
+   "status": "no_match",
+   "slug": "lucy-bee",
+   "name": "Lucy Bee"
+  },
+  {
+   "status": "no_match",
+   "slug": "luminess-air",
+   "name": "Luminess Air"
+  },
+  {
+   "status": "no_match",
+   "slug": "lumity",
+   "name": "Lumity"
+  },
+  {
+   "status": "no_match",
+   "slug": "lupilu",
+   "name": "Lupilu"
+  },
+  {
+   "wikidata": "Q1585448",
+   "description": "cosmetics company",
+   "commons_file": "Lush Logo.png",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lush_Logo.png",
+   "author": "Rubyleevh",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "lush",
+   "name": "Lush"
+  },
+  {
+   "status": "no_match",
+   "slug": "lvx",
+   "name": "LVX"
+  },
+  {
+   "status": "not_brand",
+   "slug": "lynx",
+   "name": "Lynx"
+  },
+  {
+   "status": "no_match",
+   "slug": "lys-beauty",
+   "name": "LYS Beauty"
+  },
+  {
+   "wikidata": "Q1879006",
+   "description": "brand name of cleaning and disinfecting products distributed by Reckitt Benckiser",
+   "commons_file": "Lysol Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Lysol_Logo.svg",
+   "author": "Lysol",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Lysol_Logo.svg/330px-Lysol_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "lysol",
+   "name": "Lysol",
+   "file": "scripts/logo-candidates/lysol.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "m-a-c-cosmetics",
+   "name": "M.A.C. Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mac",
+   "name": "MAC"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q125535189",
+   "description": "dental hygiene product",
+   "slug": "macleans",
+   "name": "Macleans"
+  },
+  {
+   "status": "no_match",
+   "slug": "mad-hippie",
+   "name": "Mad Hippie"
+  },
+  {
+   "status": "no_match",
+   "slug": "madam-cj-walker",
+   "name": "Madam CJ Walker"
+  },
+  {
+   "status": "no_match",
+   "slug": "made-for-life-organics",
+   "name": "Made for Life Organics"
+  },
+  {
+   "status": "no_match",
+   "slug": "made-of-more",
+   "name": "Made Of More"
+  },
+  {
+   "status": "not_brand",
+   "slug": "magic-lips",
+   "name": "Magic Lips"
+  },
+  {
+   "status": "no_match",
+   "slug": "magnum-guardex",
+   "name": "Magnum Guardex"
+  },
+  {
+   "status": "no_match",
+   "slug": "makeup-forever",
+   "name": "Makeup Forever"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q11230957",
+   "description": "American cosmetics company and perfume brand",
+   "slug": "malin-goetz",
+   "name": "Malin+Goetz"
+  },
+  {
+   "status": "no_match",
+   "slug": "mama-mio",
+   "name": "Mama Mio"
+  },
+  {
+   "status": "no_match",
+   "slug": "mamaearth",
+   "name": "Mamaearth"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mancave",
+   "name": "ManCave"
+  },
+  {
+   "status": "not_brand",
+   "slug": "manhattan",
+   "name": "Manhattan"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q4043688",
+   "description": "New York City hair color and cosmetics line",
+   "slug": "manic-panic",
+   "name": "Manic Panic"
+  },
+  {
+   "wikidata": "Q109236238",
+   "description": "male grooming product company and brand",
+   "commons_file": "Manscaped logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Manscaped_logo.svg",
+   "author": "Freebie Supply; Manscaped",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Manscaped_logo.svg/330px-Manscaped_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "manscaped",
+   "name": "MANSCAPED",
+   "file": "scripts/logo-candidates/manscaped.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "manufaktura",
+   "name": "Manufaktura"
+  },
+  {
+   "status": "no_match",
+   "slug": "maple-holistics",
+   "name": "Maple Holistics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "marc-anthony",
+   "name": "Marc Anthony"
+  },
+  {
+   "status": "no_match",
+   "slug": "marc-jacobs-fragrances",
+   "name": "Marc Jacobs Fragrances"
+  },
+  {
+   "status": "not_brand",
+   "slug": "marcelle",
+   "name": "Marcelle"
+  },
+  {
+   "status": "no_match",
+   "slug": "maria-nila",
+   "name": "Maria Nila"
+  },
+  {
+   "status": "no_match",
+   "slug": "mark-birch-trichlogist",
+   "name": "Mark Birch Trichlogist"
+  },
+  {
+   "wikidata": "Q714491",
+   "description": "British retailer",
+   "commons_file": "M&S logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:M%26S_logo.svg",
+   "author": "Marks &amp; Spencer\n",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/M%26S_logo.svg/330px-M%26S_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "marks-and-spencer",
+   "name": "Marks & Spencer",
+   "file": "scripts/logo-candidates/marks-and-spencer.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "maroqueen",
+   "name": "Maroqueen"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mary-kay",
+   "name": "Mary Kay"
+  },
+  {
+   "status": "not_brand",
+   "slug": "matrix",
+   "name": "Matrix"
+  },
+  {
+   "wikidata": "Q2354647",
+   "description": "line of cosmetics",
+   "commons_file": "MaxFactor logo.svg",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:MaxFactor_logo.svg",
+   "author": "Max Factor",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "max-factor",
+   "name": "Max Factor"
+  },
+  {
+   "wikidata": "Q1351054",
+   "description": "cosmetics company",
+   "commons_file": "Maybelline-Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Maybelline-Logo.svg",
+   "author": "L\u2019Or\u00e9al",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Maybelline-Logo.svg/330px-Maybelline-Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "maybelline",
+   "name": "Maybelline",
+   "file": "scripts/logo-candidates/maybelline.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mazel",
+   "name": "MAZEL"
+  },
+  {
+   "status": "no_match",
+   "slug": "mazillo",
+   "name": "Mazillo"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mead",
+   "name": "Mead"
+  },
+  {
+   "status": "no_match",
+   "slug": "mediplorer",
+   "name": "Mediplorer"
+  },
+  {
+   "status": "not_brand",
+   "slug": "melaleuca",
+   "name": "Melaleuca"
+  },
+  {
+   "status": "no_match",
+   "slug": "menard-cosmetics",
+   "name": "Menard Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "mendittorosa",
+   "name": "Mendittorosa"
+  },
+  {
+   "wikidata": "Q3854745",
+   "description": "Toothpaste brand of Unilever",
+   "commons_file": "Mentadent.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Mentadent.svg",
+   "author": "Unilever",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Mentadent.svg/330px-Mentadent.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "mentadent",
+   "name": "Mentadent",
+   "file": "scripts/logo-candidates/mentadent.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q96472579",
+   "description": "public company in Indonesia",
+   "slug": "merck",
+   "name": "Merck"
+  },
+  {
+   "status": "no_match",
+   "slug": "mervue-natural-skincare",
+   "name": "Mervue Natural Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "mesauda-milano",
+   "name": "Mesauda Milano"
+  },
+  {
+   "status": "not_brand",
+   "slug": "method",
+   "name": "Method"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q134612138",
+    "Q717618"
+   ],
+   "slug": "michael-kors",
+   "name": "Michael Kors"
+  },
+  {
+   "status": "no_match",
+   "slug": "michael-todd-beauty",
+   "name": "Michael Todd Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "micky-day",
+   "name": "Micky Day"
+  },
+  {
+   "status": "no_match",
+   "slug": "mielev",
+   "name": "MIELEV"
+  },
+  {
+   "status": "no_match",
+   "slug": "mienna-cosmetics-ltd",
+   "name": "Mienna Cosmetics Ltd"
+  },
+  {
+   "status": "not_brand",
+   "slug": "milani",
+   "name": "Milani"
+  },
+  {
+   "status": "no_match",
+   "slug": "milani-cosmetics",
+   "name": "Milani Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "milk-honey",
+   "name": "milk + honey"
+  },
+  {
+   "status": "no_match",
+   "slug": "miniml",
+   "name": "Miniml"
+  },
+  {
+   "status": "no_match",
+   "slug": "miss-organics",
+   "name": "Miss Organics"
+  },
+  {
+   "wikidata": "Q1400977",
+   "description": "Italian fashion house",
+   "commons_file": "Missoni logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Missoni_logo.svg",
+   "author": "Missoni",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Missoni_logo.svg/330px-Missoni_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "missoni",
+   "name": "Missoni",
+   "file": "scripts/logo-candidates/missoni.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q6881518",
+   "description": "antiperspirant-deodorant brand",
+   "slug": "mitchum",
+   "name": "Mitchum"
+  },
+  {
+   "status": "no_match",
+   "slug": "mitchum-deodorant",
+   "name": "Mitchum Deodorant"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q552230",
+    "Q134789067"
+   ],
+   "slug": "miu-miu",
+   "name": "miu miu"
+  },
+  {
+   "status": "no_match",
+   "slug": "mixed-chicks",
+   "name": "Mixed Chicks"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134890762",
+   "description": "American cosmetic brand",
+   "slug": "mizani",
+   "name": "Mizani"
+  },
+  {
+   "status": "no_match",
+   "slug": "modelco",
+   "name": "ModelCo"
+  },
+  {
+   "wikidata": "Q620881",
+   "description": "American multi-level marketing company",
+   "commons_file": "ModereLogo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:ModereLogo.png",
+   "author": "Modere",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/ModereLogo.png/330px-ModereLogo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "modere",
+   "name": "Modere",
+   "file": "scripts/logo-candidates/modere.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "modern-botany",
+   "name": "Modern Botany"
+  },
+  {
+   "wikidata": "Q17100584",
+   "description": "personal care company",
+   "commons_file": "Molton Brown logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Molton_Brown_logo.png",
+   "author": "Molton Brown Limited",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Molton_Brown_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "molton-brown",
+   "name": "Molton Brown",
+   "file": "scripts/logo-candidates/molton-brown.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "monange",
+   "name": "Monange"
+  },
+  {
+   "status": "no_match",
+   "slug": "monday-haircare",
+   "name": "MONDAY Haircare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "mont-blanc",
+   "name": "Mont Blanc"
+  },
+  {
+   "status": "no_match",
+   "slug": "moroccanoil",
+   "name": "Moroccanoil"
+  },
+  {
+   "wikidata": "Q922344",
+   "description": "chain of supermarkets in the United Kingdom",
+   "commons_file": "Wm Morrison Supermarkets logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Wm_Morrison_Supermarkets_logo.svg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Wm_Morrison_Supermarkets_logo.svg/330px-Wm_Morrison_Supermarkets_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "morrisons",
+   "name": "Morrisons",
+   "file": "scripts/logo-candidates/morrisons.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "moss-and-adams",
+   "name": "Moss & Adams"
+  },
+  {
+   "status": "no_match",
+   "slug": "mother-nailture",
+   "name": "Mother Nailture"
+  },
+  {
+   "status": "no_match",
+   "slug": "mothers-earth",
+   "name": "Mother's Earth"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q6929437",
+   "description": "cleaner brand",
+   "slug": "mr-muscle",
+   "name": "Mr Muscle"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3321458",
+   "description": "brand name and mascot fully owned by Procter & Gamble used for a cleaning solution and related products",
+   "slug": "mr-clean",
+   "name": "Mr. Clean"
+  },
+  {
+   "status": "no_match",
+   "slug": "mrs-meyers-clean-day",
+   "name": "Mrs. Meyers Clean Day"
+  },
+  {
+   "status": "no_match",
+   "slug": "mua",
+   "name": "MUA"
+  },
+  {
+   "status": "no_match",
+   "slug": "mumandyou",
+   "name": "Mum&You"
+  },
+  {
+   "status": "not_brand",
+   "slug": "murad",
+   "name": "Murad"
+  },
+  {
+   "status": "no_match",
+   "slug": "my-trendy-kit",
+   "name": "My Trendy Kit"
+  },
+  {
+   "status": "no_match",
+   "slug": "mychelle-dermaceuticals",
+   "name": "MyChelle Dermaceuticals"
+  },
+  {
+   "status": "no_match",
+   "slug": "nads",
+   "name": "Nad's"
+  },
+  {
+   "wikidata": "Q6959628",
+   "description": "English nail care chain",
+   "commons_file": "Nails Inc London logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Nails_Inc_London_logo.svg",
+   "author": "Nails Inc London",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Nails_Inc_London_logo.svg/330px-Nails_Inc_London_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "nails-inc",
+   "name": "Nails Inc.",
+   "file": "scripts/logo-candidates/nails-inc.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nair",
+   "name": "Nair"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nakin",
+   "name": "Nakin"
+  },
+  {
+   "status": "no_match",
+   "slug": "nalas-baby",
+   "name": "Nala's Baby"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nars",
+   "name": "Nars"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3869356",
+   "description": "Skin care company",
+   "slug": "nars-cosmetics",
+   "name": "Nars Cosmetics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3337032",
+   "description": "personal care products brand, part of Bodywise (UK) Ltd",
+   "slug": "natracare",
+   "name": "Natracare"
+  },
+  {
+   "status": "no_match",
+   "slug": "natroma",
+   "name": "Natroma"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q41567436",
+   "description": "company in Havl\u00ed\u010dk\u016fv Brod, Czechia",
+   "slug": "natura",
+   "name": "Natura"
+  },
+  {
+   "status": "no_match",
+   "slug": "natural-balance-pet-foods-inc",
+   "name": "Natural Balance Pet Foods Inc."
+  },
+  {
+   "status": "no_match",
+   "slug": "natural-by-nature-oils",
+   "name": "Natural by Nature Oils"
+  },
+  {
+   "status": "not_brand",
+   "slug": "natural-instincts",
+   "name": "Natural Instincts"
+  },
+  {
+   "status": "no_match",
+   "slug": "naturally-tiwa-skincare",
+   "name": "Naturally Tiwa Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "natures-divine",
+   "name": "Nature's Divine"
+  },
+  {
+   "status": "no_match",
+   "slug": "natures-gate",
+   "name": "Nature's Gate"
+  },
+  {
+   "status": "no_match",
+   "slug": "nature-s-source",
+   "name": "Nature's Source"
+  },
+  {
+   "status": "no_match",
+   "slug": "naturium",
+   "name": "Naturium"
+  },
+  {
+   "status": "no_match",
+   "slug": "neal-and-wolf",
+   "name": "Neal & Wolf"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q6984027",
+   "description": "a UK-based multi-level marketing company",
+   "slug": "neals-yard-remedies",
+   "name": "Neal's Yard Remedies"
+  },
+  {
+   "status": "no_match",
+   "slug": "nest-fragrances",
+   "name": "Nest Fragrances"
+  },
+  {
+   "wikidata": "Q2451589",
+   "description": "Cosmetics company",
+   "commons_file": "Neutrogena logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Neutrogena_logo.svg",
+   "author": "Brands of the World (original logo by Neutrogena)",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Neutrogena_logo.svg/330px-Neutrogena_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "neutrogena",
+   "name": "Neutrogena",
+   "file": "scripts/logo-candidates/neutrogena.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "new-dana-perfumes",
+   "name": "New Dana Perfumes"
+  },
+  {
+   "status": "no_match",
+   "slug": "newmans-own-organics",
+   "name": "Newman's Own Organics"
+  },
+  {
+   "status": "no_match",
+   "slug": "nex-environment",
+   "name": "NEX ENVIRONMENT"
+  },
+  {
+   "wikidata": "Q16930787",
+   "description": "Personal health care brand",
+   "commons_file": "Nexcare Logo.jpg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Nexcare_Logo.jpg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Nexcare_Logo.jpg/330px-Nexcare_Logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "nexcare",
+   "name": "Nexcare",
+   "file": "scripts/logo-candidates/nexcare.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nice",
+   "name": "NICE"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7024637",
+   "description": "shampoo-in permanent hair-coloring",
+   "slug": "nice-n-easy",
+   "name": "Nice 'n Easy"
+  },
+  {
+   "status": "no_match",
+   "slug": "nimonths",
+   "name": "nimonths+"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q234503",
+    "Q1439858"
+   ],
+   "slug": "nina-ricci",
+   "name": "Nina Ricci"
+  },
+  {
+   "status": "no_match",
+   "slug": "niod",
+   "name": "NIOD"
+  },
+  {
+   "status": "no_match",
+   "slug": "nioxin",
+   "name": "Nioxin"
+  },
+  {
+   "wikidata": "Q337408",
+   "description": "German personal care brand that specializes in skin and body care",
+   "commons_file": "NIVEA logo 2021.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:NIVEA_logo_2021.svg",
+   "author": "Beiersdof AG",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/NIVEA_logo_2021.svg/330px-NIVEA_logo_2021.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "nivea",
+   "name": "Nivea",
+   "file": "scripts/logo-candidates/nivea.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "no7",
+   "name": "No7"
+  },
+  {
+   "status": "no_match",
+   "slug": "noughty",
+   "name": "Noughty"
+  },
+  {
+   "status": "no_match",
+   "slug": "nourish-london",
+   "name": "Nourish London"
+  },
+  {
+   "status": "no_match",
+   "slug": "novaretin",
+   "name": "NOVARETIN"
+  },
+  {
+   "status": "no_match",
+   "slug": "nsfa-beauty",
+   "name": "NSFA Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "nu-skin-international",
+   "name": "Nu Skin International"
+  },
+  {
+   "status": "no_match",
+   "slug": "nubian-heritage",
+   "name": "Nubian Heritage"
+  },
+  {
+   "status": "no_match",
+   "slug": "nude-by-nature",
+   "name": "Nude by Nature"
+  },
+  {
+   "status": "no_match",
+   "slug": "nunaia",
+   "name": "Nunaia"
+  },
+  {
+   "status": "no_match",
+   "slug": "nursem",
+   "name": "Nursem"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nutmeg",
+   "name": "Nutmeg"
+  },
+  {
+   "status": "not_brand",
+   "slug": "nyx",
+   "name": "NYX"
+  },
+  {
+   "wikidata": "Q23671513",
+   "description": "cosmetics company",
+   "commons_file": "NYX Professional Makeup Logo.jpeg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:NYX_Professional_Makeup_Logo.jpeg",
+   "author": "L'Or\u00e9al",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/NYX_Professional_Makeup_Logo.jpeg/330px-NYX_Professional_Makeup_Logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "nyx-professional-makeup",
+   "name": "NYX Professional Makeup",
+   "file": "scripts/logo-candidates/nyx-professional-makeup.png"
+  },
+  {
+   "wikidata": "Q7073219",
+   "description": "Brazilian multinational cosmetics company",
+   "commons_file": "Logotipo do O Botic\u00e1rio.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Logotipo_do_O_Botic%C3%A1rio.svg",
+   "author": "O Botic\u00e1rio",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Logotipo_do_O_Botic%C3%A1rio.svg/330px-Logotipo_do_O_Botic%C3%A1rio.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "o-boticario",
+   "name": "O Boticario",
+   "file": "scripts/logo-candidates/o-boticario.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "oui",
+   "name": "O.U.I"
+  },
+  {
+   "status": "no_match",
+   "slug": "obsessive-compulsive-cosmetics",
+   "name": "Obsessive Compulsive Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "obvs-skincare",
+   "name": "Obvs Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "oceansaver",
+   "name": "OceanSaver"
+  },
+  {
+   "wikidata": "Q47212805",
+   "description": "2008 video game developed by Unproductive Fun Time",
+   "commons_file": "Off-logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Off-logo.png",
+   "author": "Mortis Ghost",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Off-logo.png/330px-Off-logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "off",
+   "name": "Off",
+   "file": "scripts/logo-candidates/off.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "ogx",
+   "name": "OGX"
+  },
+  {
+   "status": "no_match",
+   "slug": "oio-lab",
+   "name": "Oio Lab"
+  },
+  {
+   "status": "no_match",
+   "slug": "okiki-skincare",
+   "name": "Okiki Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "olay",
+   "name": "Olay"
+  },
+  {
+   "status": "not_brand",
+   "slug": "old-english",
+   "name": "Old English"
+  },
+  {
+   "wikidata": "Q2325626",
+   "description": "American brand of male grooming products",
+   "commons_file": "Old Spice wordmark.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_Spice_wordmark.svg",
+   "author": "Old Spice",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Old_Spice_wordmark.svg/330px-Old_Spice_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "old-spice",
+   "name": "Old Spice",
+   "file": "scripts/logo-candidates/old-spice.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "ole-henriksen",
+   "name": "Ole Henriksen"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141599992",
+   "description": "Hungarian skincare brand",
+   "slug": "omorovicza",
+   "name": "Omorovicza"
+  },
+  {
+   "status": "not_brand",
+   "slug": "oomph",
+   "name": "Oomph!"
+  },
+  {
+   "wikidata": "Q1987067",
+   "description": "brand of oral hygiene products",
+   "commons_file": "Oral-B Logo 2024.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Oral-B_Logo_2024.svg",
+   "author": "Procter &amp; Gamble",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Oral-B_Logo_2024.svg/330px-Oral-B_Logo_2024.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "oral-b",
+   "name": "Oral-B",
+   "file": "scripts/logo-candidates/oral-b.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "orange-glo",
+   "name": "Orange Glo"
+  },
+  {
+   "status": "no_match",
+   "slug": "organic-harvest",
+   "name": "Organic Harvest"
+  },
+  {
+   "status": "no_match",
+   "slug": "organic-skin-australia",
+   "name": "Organic Skin Australia"
+  },
+  {
+   "status": "no_match",
+   "slug": "organicspa",
+   "name": "Organicspa"
+  },
+  {
+   "status": "no_match",
+   "slug": "oribe-hair-care",
+   "name": "ORIBE Hair Care"
+  },
+  {
+   "status": "not_brand",
+   "slug": "oriflame",
+   "name": "Oriflame"
+  },
+  {
+   "status": "no_match",
+   "slug": "original-source",
+   "name": "Original Source"
+  },
+  {
+   "status": "not_brand",
+   "slug": "origins",
+   "name": "Origins"
+  },
+  {
+   "status": "not_brand",
+   "slug": "osea",
+   "name": "OSEA"
+  },
+  {
+   "status": "not_brand",
+   "slug": "osiao",
+   "name": "Osiao"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q5768580",
+   "description": "American hairdresser",
+   "slug": "ouidad",
+   "name": "Ouidad"
+  },
+  {
+   "status": "not_brand",
+   "slug": "oust",
+   "name": "Oust"
+  },
+  {
+   "wikidata": "Q7115618",
+   "description": "brand of household cleaners by Church & Dwight, formerly owned by Orange Glo International",
+   "commons_file": "OxiClean logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:OxiClean_logo.svg",
+   "author": "Church &amp; Dwight Co., Inc.",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/OxiClean_logo.svg/330px-OxiClean_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "oxiclean",
+   "name": "OxiClean",
+   "file": "scripts/logo-candidates/oxiclean.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "oxx",
+   "name": "OXX"
+  },
+  {
+   "status": "no_match",
+   "slug": "plouise",
+   "name": "P.Louise"
+  },
+  {
+   "status": "no_match",
+   "slug": "pacific-wax-co",
+   "name": "Pacific Wax Co."
+  },
+  {
+   "status": "not_brand",
+   "slug": "pacifica",
+   "name": "Pacifica"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q467754",
+   "description": "Spanish-French fashion designer (1934-2023)",
+   "slug": "paco-rabanne",
+   "name": "Paco Rabanne"
+  },
+  {
+   "status": "no_match",
+   "slug": "pai-skincare",
+   "name": "Pai Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q33133746",
+   "description": "Portuguese soap opera",
+   "slug": "paixao",
+   "name": "Paixao"
+  },
+  {
+   "status": "no_match",
+   "slug": "paladone",
+   "name": "Paladone"
+  },
+  {
+   "wikidata": "Q6059081",
+   "description": "American multinational brand of a\u00a0line of products",
+   "commons_file": "Palmolive logo 2019.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Palmolive_logo_2019.png",
+   "author": "Newjajadelera01",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Palmolive_logo_2019.png/330px-Palmolive_logo_2019.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "palmolive",
+   "name": "Palmolive",
+   "file": "scripts/logo-candidates/palmolive.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "pamoja",
+   "name": "Pamoja"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2340498",
+   "description": "American brand of baby and toddler products",
+   "slug": "pampers",
+   "name": "Pampers"
+  },
+  {
+   "status": "no_match",
+   "slug": "pangea-organics",
+   "name": "Pangea Organics"
+  },
+  {
+   "wikidata": "Q1353013",
+   "description": "brand of hair care products owned by Procter & Gamble",
+   "commons_file": "Pantene.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Pantene.svg",
+   "author": "Procter &amp; Gamble",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Pantene.svg/330px-Pantene.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "pantene",
+   "name": "Pantene",
+   "file": "scripts/logo-candidates/pantene.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "parla",
+   "name": "PARLA"
+  },
+  {
+   "status": "no_match",
+   "slug": "pattern-beauty",
+   "name": "Pattern Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "paulas-choice",
+   "name": "Paula's Choice"
+  },
+  {
+   "status": "no_match",
+   "slug": "peace-with-the-wild",
+   "name": "Peace With The Wild"
+  },
+  {
+   "status": "not_brand",
+   "slug": "pearl-drops",
+   "name": "Pearl Drops"
+  },
+  {
+   "status": "no_match",
+   "slug": "penneys",
+   "name": "Penneys"
+  },
+  {
+   "status": "not_brand",
+   "slug": "people-of-the-earth",
+   "name": "People of the Earth"
+  },
+  {
+   "wikidata": "Q2709613",
+   "description": "American brand of toothpaste",
+   "commons_file": "Pepsodent logo 2018.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Pepsodent_logo_2018.svg",
+   "author": "Unilever",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Pepsodent_logo_2018.svg/330px-Pepsodent_logo_2018.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "pepsodent",
+   "name": "Pepsodent",
+   "file": "scripts/logo-candidates/pepsodent.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "perfect-girl",
+   "name": "Perfect Girl"
+  },
+  {
+   "status": "not_brand",
+   "slug": "peros",
+   "name": "Peros"
+  },
+  {
+   "wikidata": "Q2071993",
+   "description": "brand of laundry detergent",
+   "commons_file": "Persil Logo.svg",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Persil_Logo.svg",
+   "author": "Frau Herzog",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "persil",
+   "name": "Persil"
+  },
+  {
+   "status": "not_brand",
+   "slug": "peter-thomas-roth",
+   "name": "Peter Thomas Roth"
+  },
+  {
+   "status": "no_match",
+   "slug": "phb-ethical-beauty",
+   "name": "PHB Ethical Beauty"
+  },
+  {
+   "status": "not_brand",
+   "slug": "philosophy",
+   "name": "philosophy"
+  },
+  {
+   "status": "not_brand",
+   "slug": "phoenix-crown",
+   "name": "Phoenix Crown"
+  },
+  {
+   "status": "no_match",
+   "slug": "physicians-formula",
+   "name": "Physicians Formula"
+  },
+  {
+   "status": "not_brand",
+   "slug": "physique",
+   "name": "Physique"
+  },
+  {
+   "status": "not_brand",
+   "slug": "phyto",
+   "name": "Phyto"
+  },
+  {
+   "status": "no_match",
+   "slug": "pikes-pouches",
+   "name": "Pike's Pouches"
+  },
+  {
+   "status": "not_brand",
+   "slug": "pilgrim",
+   "name": "Pilgrim"
+  },
+  {
+   "wikidata": "Q7195047",
+   "description": "household cleaning product",
+   "commons_file": "Pine-Sol 2024 logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Pine-Sol_2024_logo.svg",
+   "author": "The Clorox Company",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Pine-Sol_2024_logo.svg/330px-Pine-Sol_2024_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "pine-sol",
+   "name": "Pine-Sol",
+   "file": "scripts/logo-candidates/pine-sol.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "pipette",
+   "name": "Pipette"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q16935660",
+   "description": "suncream brand",
+   "slug": "piz-buin",
+   "name": "Piz Buin"
+  },
+  {
+   "status": "no_match",
+   "slug": "planted-skincare",
+   "name": "Planted Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7204423",
+   "description": "cleaning product made by S. C. Johnson & Son.",
+   "slug": "pledge",
+   "name": "Pledge"
+  },
+  {
+   "status": "no_match",
+   "slug": "plum-goodness",
+   "name": "Plum Goodness"
+  },
+  {
+   "status": "no_match",
+   "slug": "pola-cosmetics",
+   "name": "POLA Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "polident",
+   "name": "Polident"
+  },
+  {
+   "status": "no_match",
+   "slug": "poppin-yang",
+   "name": "Poppin' Yang"
+  },
+  {
+   "status": "not_brand",
+   "slug": "post-it",
+   "name": "Post-It"
+  },
+  {
+   "wikidata": "Q193136",
+   "description": "Italian luxury fashion house",
+   "commons_file": "Prada-Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Prada-Logo.svg",
+   "author": "Prada S.p.A.",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Prada-Logo.svg/330px-Prada-Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "prada",
+   "name": "Prada",
+   "file": "scripts/logo-candidates/prada.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q108928663",
+   "description": "cosmetics company that was one of the first to advertise that they didn't do animal testing",
+   "slug": "prai-beauty",
+   "name": "PRAI Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "pravana",
+   "name": "Pravana"
+  },
+  {
+   "status": "no_match",
+   "slug": "pretty-vulgar",
+   "name": "Pretty Vulgar"
+  },
+  {
+   "wikidata": "Q137023",
+   "description": "Irish clothing retailer",
+   "commons_file": "Primark Stores Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Primark_Stores_Logo.svg",
+   "author": "Primark Stores Limited",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Primark_Stores_Logo.svg/330px-Primark_Stores_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "primark",
+   "name": "Primark",
+   "file": "scripts/logo-candidates/primark.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "primavera-life",
+   "name": "Primavera Life"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q30291276",
+   "description": "company in Pomezia, Italy",
+   "slug": "procter-and-gamble",
+   "name": "Procter & Gamble"
+  },
+  {
+   "status": "no_match",
+   "slug": "pronamel",
+   "name": "Pronamel"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7258886",
+   "description": "American tissue paper and napkin brand",
+   "slug": "puffs",
+   "name": "Puffs"
+  },
+  {
+   "status": "no_match",
+   "slug": "pura-dor",
+   "name": "PURA D'OR"
+  },
+  {
+   "status": "no_match",
+   "slug": "pura-vie",
+   "name": "Pura Vie"
+  },
+  {
+   "status": "no_match",
+   "slug": "puracy",
+   "name": "Puracy"
+  },
+  {
+   "status": "no_match",
+   "slug": "pure-argan-co",
+   "name": "Pure Argan Co"
+  },
+  {
+   "status": "no_match",
+   "slug": "pure-chemistry",
+   "name": "Pure Chemistry"
+  },
+  {
+   "status": "no_match",
+   "slug": "pure-heal-s",
+   "name": "Pure Heal's"
+  },
+  {
+   "status": "no_match",
+   "slug": "pure-project",
+   "name": "Pure Project"
+  },
+  {
+   "status": "no_match",
+   "slug": "purearth",
+   "name": "Purearth"
+  },
+  {
+   "status": "not_brand",
+   "slug": "pureology",
+   "name": "Pureology"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7261188",
+   "description": "the brand name of a popular laundry detergent in the United States, Canada and other countries",
+   "slug": "purex",
+   "name": "Purex"
+  },
+  {
+   "status": "no_match",
+   "slug": "purextracts",
+   "name": "Purextracts"
+  },
+  {
+   "status": "not_brand",
+   "slug": "purpose",
+   "name": "Purpose"
+  },
+  {
+   "status": "no_match",
+   "slug": "pyykkiarkki",
+   "name": "Pyykkiarkki"
+  },
+  {
+   "wikidata": "Q7121247",
+   "description": "manufacturer of personal healthcare products and consumer goods",
+   "commons_file": "PZ Cussons logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:PZ_Cussons_logo.svg",
+   "author": "PZ Cussons",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/PZ_Cussons_logo.svg/330px-PZ_Cussons_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "pz-cussons",
+   "name": "PZ Cussons",
+   "file": "scripts/logo-candidates/pz-cussons.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "queen-helene",
+   "name": "Queen Helene"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q110249404",
+   "description": "cosmetics chain store in Brazil",
+   "slug": "quem-disse-berenice",
+   "name": "Quem disse, Berenice"
+  },
+  {
+   "wikidata": "Q117086143",
+   "description": "cosmetics brand",
+   "commons_file": "REM Beauty cosmetics brand logo.webp",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:REM_Beauty_cosmetics_brand_logo.webp",
+   "author": "R.E.M. Beauty",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/REM_Beauty_cosmetics_brand_logo.webp/330px-REM_Beauty_cosmetics_brand_logo.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "rem-beauty",
+   "name": "r.e.m. beauty",
+   "file": "scripts/logo-candidates/rem-beauty.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7281681",
+   "description": "brand of personal care products",
+   "slug": "radox",
+   "name": "Radox"
+  },
+  {
+   "status": "not_brand",
+   "slug": "raid",
+   "name": "Raid"
+  },
+  {
+   "status": "no_match",
+   "slug": "ralph-lauren-fragrances",
+   "name": "Ralph Lauren Fragrances"
+  },
+  {
+   "wikidata": "Q116030556",
+   "description": "American cosmetics company",
+   "commons_file": "Rare beauty.webp",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Rare_beauty.webp",
+   "author": "Rare Beauty LLC, Selena G\u00f3mez",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Rare_beauty.webp/330px-Rare_beauty.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "rare-beauty",
+   "name": "Rare Beauty",
+   "file": "scripts/logo-candidates/rare-beauty.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "raven-botanicals",
+   "name": "Raven Botanicals"
+  },
+  {
+   "status": "not_brand",
+   "slug": "reach",
+   "name": "Reach"
+  },
+  {
+   "status": "no_match",
+   "slug": "real-techniques",
+   "name": "Real Techniques"
+  },
+  {
+   "status": "no_match",
+   "slug": "rebul",
+   "name": "Rebul"
+  },
+  {
+   "status": "no_match",
+   "slug": "reckitt-benckiser",
+   "name": "Reckitt Benckiser"
+  },
+  {
+   "wikidata": "Q7305998",
+   "description": "American hair care brand owned by L'Or\u00e9al Group",
+   "commons_file": "Redken logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Redken_logo.svg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Redken_logo.svg/330px-Redken_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "redken",
+   "name": "Redken",
+   "file": "scripts/logo-candidates/redken.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "refy",
+   "name": "REFY"
+  },
+  {
+   "status": "not_brand",
+   "slug": "rembrandt",
+   "name": "Rembrandt"
+  },
+  {
+   "status": "not_brand",
+   "slug": "ren",
+   "name": "REN"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7313596",
+   "description": "American brand of air fresheners",
+   "slug": "renuzit",
+   "name": "Renuzit"
+  },
+  {
+   "status": "not_brand",
+   "slug": "resolve",
+   "name": "Resolve"
+  },
+  {
+   "status": "no_match",
+   "slug": "revitalash-cosmetics",
+   "name": "RevitaLash Cosmetics"
+  },
+  {
+   "wikidata": "Q1459595",
+   "description": "an American-based New York City multinational cosmetics, skin care, fragrance, and personal care company",
+   "commons_file": "Revlon logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Revlon_logo.svg",
+   "author": "Revlon Inc.",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Revlon_logo.svg/330px-Revlon_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "revlon",
+   "name": "Revlon",
+   "file": "scripts/logo-candidates/revlon.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q109000979",
+   "description": "British beauty products company",
+   "slug": "revolution-beauty",
+   "name": "Revolution Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "rhode-skin",
+   "name": "Rhode Skin"
+  },
+  {
+   "status": "no_match",
+   "slug": "rhug-wild-beauty",
+   "name": "Rhug Wild Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "rid-x",
+   "name": "Rid-X"
+  },
+  {
+   "status": "no_match",
+   "slug": "riemann-p20",
+   "name": "Riemann P20"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7333508",
+   "description": "brand of deodorant and shower gel for men",
+   "slug": "right-guard",
+   "name": "Right Guard"
+  },
+  {
+   "status": "not_brand",
+   "slug": "riley-rose",
+   "name": "Riley Rose"
+  },
+  {
+   "wikidata": "Q966846",
+   "description": "British cosmetics brand",
+   "commons_file": "Rimmel logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Rimmel_logo.svg",
+   "author": "Coty Inc.",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Rimmel_logo.svg/330px-Rimmel_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "rimmel",
+   "name": "Rimmel",
+   "file": "scripts/logo-candidates/rimmel.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "risque",
+   "name": "Risque"
+  },
+  {
+   "status": "no_match",
+   "slug": "rms-beauty",
+   "name": "rms beauty"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q352539",
+    "Q3938666"
+   ],
+   "slug": "roberto-cavalli",
+   "name": "Roberto Cavalli"
+  },
+  {
+   "status": "no_match",
+   "slug": "roc-skincare",
+   "name": "RoC Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "rogaine",
+   "name": "Rogaine"
+  },
+  {
+   "status": "no_match",
+   "slug": "rossi-and-rossa",
+   "name": "Rossi & Rossa"
+  },
+  {
+   "status": "no_match",
+   "slug": "rspca",
+   "name": "RSPCA"
+  },
+  {
+   "status": "no_match",
+   "slug": "rustic-art",
+   "name": "Rustic Art"
+  },
+  {
+   "status": "no_match",
+   "slug": "sable-labs",
+   "name": "S'able Labs"
+  },
+  {
+   "status": "no_match",
+   "slug": "s-c-johnson",
+   "name": "S.C. Johnson"
+  },
+  {
+   "status": "not_brand",
+   "slug": "s-o-s",
+   "name": "S.O.S."
+  },
+  {
+   "status": "not_brand",
+   "slug": "sacred",
+   "name": "Sacred"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7398564",
+   "description": "soap brand",
+   "slug": "safeguard",
+   "name": "Safeguard"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1508234",
+    "Q17111901",
+    "Q7398681",
+    "Q7398680",
+    "Q7398682"
+   ],
+   "slug": "safeway",
+   "name": "Safeway"
+  },
+  {
+   "wikidata": "Q152096",
+   "description": "chain of supermarkets in the United Kingdom",
+   "commons_file": "Sainsbury's Logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Sainsbury%27s_Logo.svg",
+   "author": "Sainsbury's\n",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Sainsbury%27s_Logo.svg/330px-Sainsbury%27s_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "sainsbury-s",
+   "name": "Sainsbury's",
+   "file": "scripts/logo-candidates/sainsbury-s.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "saira",
+   "name": "SAIRA"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sally-hansen",
+   "name": "Sally Hansen"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7405676",
+   "description": "Hair Care Products",
+   "slug": "salon-selectives",
+   "name": "Salon Selectives"
+  },
+  {
+   "status": "not_brand",
+   "slug": "salt-of-the-earth",
+   "name": "Salt of the Earth"
+  },
+  {
+   "wikidata": "Q3946053",
+   "description": "Italian luxury goods company",
+   "commons_file": "Fergamo - logo (Italy, 2022).svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Fergamo_-_logo_%28Italy%2C_2022%29.svg",
+   "author": "Peter Saville [1]",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Fergamo_-_logo_%28Italy%2C_2022%29.svg/330px-Fergamo_-_logo_%28Italy%2C_2022%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "salvatore-ferragamo",
+   "name": "Salvatore Ferragamo",
+   "file": "scripts/logo-candidates/salvatore-ferragamo.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "samaya-ayurveda",
+   "name": "SAMAYA Ayurveda"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q28452058",
+   "description": "Application security company",
+   "slug": "sanctum",
+   "name": "Sanctum"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q135843065",
+    "Q20823437"
+   ],
+   "slug": "sanex",
+   "name": "Sanex"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sansin",
+   "name": "Sansin"
+  },
+  {
+   "status": "no_match",
+   "slug": "santaverde",
+   "name": "Santaverde"
+  },
+  {
+   "status": "no_match",
+   "slug": "sarafumi",
+   "name": "Sarafumi"
+  },
+  {
+   "status": "no_match",
+   "slug": "satin-care",
+   "name": "Satin Care"
+  },
+  {
+   "status": "not_brand",
+   "slug": "savlon",
+   "name": "Savlon"
+  },
+  {
+   "status": "no_match",
+   "slug": "sbtrct-skincare",
+   "name": "SBTRCT Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "schmidts-naturals",
+   "name": "Schmidt's Naturals"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q2254291",
+    "Q2254278"
+   ],
+   "slug": "schwarzkopf",
+   "name": "Schwarzkopf"
+  },
+  {
+   "status": "no_match",
+   "slug": "scoop-away",
+   "name": "Scoop Away"
+  },
+  {
+   "status": "not_brand",
+   "slug": "scope",
+   "name": "Scope"
+  },
+  {
+   "status": "not_brand",
+   "slug": "scotch",
+   "name": "Scotch"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7435496",
+   "description": "abrasive product line by 3M",
+   "slug": "scotch-brite",
+   "name": "Scotch-Brite"
+  },
+  {
+   "status": "not_brand",
+   "slug": "scotchgard",
+   "name": "Scotchgard"
+  },
+  {
+   "status": "no_match",
+   "slug": "scott-and-lawson",
+   "name": "Scott & Lawson"
+  },
+  {
+   "status": "no_match",
+   "slug": "scrub-free",
+   "name": "Scrub Free"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7439323",
+   "description": "brand of cleaning products",
+   "slug": "scrubbing-bubbles",
+   "name": "Scrubbing Bubbles"
+  },
+  {
+   "status": "no_match",
+   "slug": "sculpted-by-aimee",
+   "name": "Sculpted by Aimee"
+  },
+  {
+   "status": "no_match",
+   "slug": "sebastian-international",
+   "name": "Sebastian International"
+  },
+  {
+   "status": "no_match",
+   "slug": "sebastian-professional",
+   "name": "Sebastian Professional"
+  },
+  {
+   "status": "no_match",
+   "slug": "seeds-of-colour",
+   "name": "Seeds of Colour"
+  },
+  {
+   "status": "no_match",
+   "slug": "seniha-skincare",
+   "name": "Seniha Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "sensapur",
+   "name": "Sensapur"
+  },
+  {
+   "status": "no_match",
+   "slug": "sensatia",
+   "name": "Sensatia"
+  },
+  {
+   "status": "no_match",
+   "slug": "sensilait",
+   "name": "SensiLait"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2046939",
+   "description": "an oral health brand targeted at people with sensitive teeth",
+   "slug": "sensodyne",
+   "name": "Sensodyne"
+  },
+  {
+   "status": "no_match",
+   "slug": "sephora-cosmetics",
+   "name": "Sephora Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "seresilk",
+   "name": "Seresilk"
+  },
+  {
+   "status": "no_match",
+   "slug": "seventh-generation",
+   "name": "Seventh Generation"
+  },
+  {
+   "status": "no_match",
+   "slug": "sexy-hair",
+   "name": "Sexy Hair"
+  },
+  {
+   "status": "no_match",
+   "slug": "shades-of-london",
+   "name": "Shades of London"
+  },
+  {
+   "status": "no_match",
+   "slug": "shani-darden",
+   "name": "Shani Darden"
+  },
+  {
+   "status": "no_match",
+   "slug": "shedid-and-parrish",
+   "name": "Shedid & Parrish"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q130425958",
+   "description": "Chinese cosmetics company",
+   "slug": "sheglam",
+   "name": "SHEGLAM"
+  },
+  {
+   "status": "no_match",
+   "slug": "shikai-products",
+   "name": "ShiKai Products"
+  },
+  {
+   "status": "no_match",
+   "slug": "shiseido-cosmetics",
+   "name": "Shiseido Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "shout",
+   "name": "Shout"
+  },
+  {
+   "status": "no_match",
+   "slug": "shower-to-shower",
+   "name": "Shower to Shower"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q25394641",
+   "description": "Japanese Cosmetics Company",
+   "slug": "shu-uemura",
+   "name": "Shu Uemura"
+  },
+  {
+   "status": "no_match",
+   "slug": "sigma-beauty",
+   "name": "Sigma Beauty"
+  },
+  {
+   "status": "no_match",
+   "slug": "silvan-skincare",
+   "name": "Silvan Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "simple",
+   "name": "Simple"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q39049077",
+   "description": "nail polish company",
+   "slug": "sinful-colors",
+   "name": "Sinful Colors"
+  },
+  {
+   "status": "no_match",
+   "slug": "siskyn-skincare-oils",
+   "name": "Siskyn Skincare Oils"
+  },
+  {
+   "status": "no_match",
+   "slug": "siveno",
+   "name": "SIVENO"
+  },
+  {
+   "wikidata": "Q7390579",
+   "description": "Japanese cosmetics company",
+   "commons_file": "SK-II Logo Red.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:SK-II_Logo_Red.png",
+   "author": "SK-II",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/17/SK-II_Logo_Red.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "sk-ii",
+   "name": "SK-II",
+   "file": "scripts/logo-candidates/sk-ii.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "skin-deep",
+   "name": "Skin Deep"
+  },
+  {
+   "status": "no_match",
+   "slug": "skin-formulas",
+   "name": "Skin Formulas"
+  },
+  {
+   "status": "no_match",
+   "slug": "skin-id",
+   "name": "Skin ID"
+  },
+  {
+   "status": "no_match",
+   "slug": "skinfix",
+   "name": "Skinfix"
+  },
+  {
+   "status": "no_match",
+   "slug": "skinvitals",
+   "name": "SkinVitals"
+  },
+  {
+   "status": "no_match",
+   "slug": "skyn-iceland",
+   "name": "skyn ICELAND"
+  },
+  {
+   "status": "no_match",
+   "slug": "sleek-makeup",
+   "name": "Sleek MakeUP"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141178072",
+   "description": "American cosmetic company",
+   "slug": "smashbox",
+   "name": "Smashbox"
+  },
+  {
+   "status": "not_brand",
+   "slug": "smol",
+   "name": "Smol"
+  },
+  {
+   "status": "no_match",
+   "slug": "soak-sunday",
+   "name": "Soak Sunday"
+  },
+  {
+   "status": "no_match",
+   "slug": "soap-glory",
+   "name": "Soap & Glory"
+  },
+  {
+   "status": "no_match",
+   "slug": "soap-valley",
+   "name": "Soap Valley"
+  },
+  {
+   "status": "no_match",
+   "slug": "soaphoria",
+   "name": "Soaphoria"
+  },
+  {
+   "status": "no_match",
+   "slug": "soft-and-delicate",
+   "name": "SOFT & DELICATE"
+  },
+  {
+   "status": "no_match",
+   "slug": "soft-scrub",
+   "name": "Soft Scrub"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q10372938",
+   "description": "American cosmetics company",
+   "slug": "softsheen",
+   "name": "SoftSheen"
+  },
+  {
+   "status": "no_match",
+   "slug": "softy",
+   "name": "Softy"
+  },
+  {
+   "status": "no_match",
+   "slug": "soho-skin",
+   "name": "Soho Skin"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q123501154",
+   "description": "American skincare and fragrance brand",
+   "slug": "sol-de-janeiro",
+   "name": "Sol de Janeiro"
+  },
+  {
+   "status": "no_match",
+   "slug": "solait-by-superdrug",
+   "name": "Solait (Superdrug)"
+  },
+  {
+   "status": "no_match",
+   "slug": "solgar-vitamin-company",
+   "name": "Solgar Vitamin Company"
+  },
+  {
+   "status": "no_match",
+   "slug": "solitaire-uk-ltd",
+   "name": "Solitaire UK Ltd"
+  },
+  {
+   "status": "no_match",
+   "slug": "soluclean",
+   "name": "soluCLEAN"
+  },
+  {
+   "status": "no_match",
+   "slug": "solupak",
+   "name": "SoluPak"
+  },
+  {
+   "status": "no_match",
+   "slug": "sparitual",
+   "name": "SpaRitual"
+  },
+  {
+   "status": "no_match",
+   "slug": "splat-hair-color",
+   "name": "Splat Hair Color"
+  },
+  {
+   "status": "no_match",
+   "slug": "spray-n-wash",
+   "name": "Spray 'N Wash"
+  },
+  {
+   "status": "not_brand",
+   "slug": "st-ives",
+   "name": "St Ives"
+  },
+  {
+   "status": "not_brand",
+   "slug": "st-moriz",
+   "name": "St. Moriz"
+  },
+  {
+   "status": "no_match",
+   "slug": "stardrops",
+   "name": "Stardrops"
+  },
+  {
+   "status": "not_brand",
+   "slug": "stargazer",
+   "name": "Stargazer"
+  },
+  {
+   "status": "not_brand",
+   "slug": "stereo",
+   "name": "STEREO"
+  },
+  {
+   "status": "no_match",
+   "slug": "stila-cosmetics",
+   "name": "Stila Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "strange-luxury",
+   "name": "Strange Luxury"
+  },
+  {
+   "status": "no_match",
+   "slug": "studio-gel",
+   "name": "STUDIO Gel"
+  },
+  {
+   "status": "no_match",
+   "slug": "studio-milligram",
+   "name": "Studio Milligram"
+  },
+  {
+   "status": "no_match",
+   "slug": "subtle-energies",
+   "name": "Subtle Energies"
+  },
+  {
+   "status": "no_match",
+   "slug": "sue-marsh",
+   "name": "Sue Marsh"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sugar-coated",
+   "name": "Sugar Coated"
+  },
+  {
+   "status": "no_match",
+   "slug": "sugar-cosmetics",
+   "name": "Sugar Cosmetics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q137859181",
+   "description": "cosmetic company",
+   "slug": "sugarpill-cosmetics",
+   "name": "Sugarpill Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "suki",
+   "name": "Suki"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sukin",
+   "name": "Sukin"
+  },
+  {
+   "status": "no_match",
+   "slug": "sun-bum",
+   "name": "Sun Bum"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sundae",
+   "name": "Sundae"
+  },
+  {
+   "status": "no_match",
+   "slug": "sunday-riley-modern-skincare",
+   "name": "Sunday Riley Modern Skincare"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q596546",
+   "description": "hair care brand produced by the Unilever group",
+   "slug": "sunsilk",
+   "name": "Sunsilk"
+  },
+  {
+   "wikidata": "Q7643261",
+   "description": "British health and beauty retailer",
+   "commons_file": "Superdrug logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Superdrug_logo.svg",
+   "author": "Superdrug Stores plc",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Superdrug_logo.svg/330px-Superdrug_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "superdrug",
+   "name": "Superdrug",
+   "file": "scripts/logo-candidates/superdrug.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "superdrug-own-brand-wider-range",
+   "name": "Superdrug own brand (wider range)"
+  },
+  {
+   "status": "no_match",
+   "slug": "superdrug-own-brand-dental",
+   "name": "Superdrug own-brand (dental range)"
+  },
+  {
+   "status": "no_match",
+   "slug": "superdrug-pro-care",
+   "name": "Superdrug Pro Care"
+  },
+  {
+   "status": "no_match",
+   "slug": "supergoop",
+   "name": "Supergoop!"
+  },
+  {
+   "status": "not_brand",
+   "slug": "sure",
+   "name": "Sure"
+  },
+  {
+   "status": "not_brand",
+   "slug": "surf",
+   "name": "Surf"
+  },
+  {
+   "status": "not_brand",
+   "slug": "surya-brasil",
+   "name": "Surya Brasil"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q124980688",
+   "description": "skin care company",
+   "slug": "susanne-kaufmann",
+   "name": "Susanne Kaufmann"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q3506571",
+   "description": "line of cleaning products by Procter & Gamble",
+   "slug": "swiffer",
+   "name": "Swiffer"
+  },
+  {
+   "status": "no_match",
+   "slug": "swypes",
+   "name": "Swypes"
+  },
+  {
+   "status": "no_match",
+   "slug": "symbiosis-london",
+   "name": "Symbiosis London"
+  },
+  {
+   "status": "no_match",
+   "slug": "synergie-skin",
+   "name": "Synergie Skin"
+  },
+  {
+   "status": "no_match",
+   "slug": "syorell",
+   "name": "Syorell"
+  },
+  {
+   "status": "no_match",
+   "slug": "system-nature",
+   "name": "System Nature"
+  },
+  {
+   "status": "not_brand",
+   "slug": "t-gel",
+   "name": "T/Gel"
+  },
+  {
+   "status": "not_brand",
+   "slug": "talika",
+   "name": "Talika"
+  },
+  {
+   "wikidata": "Q3514864",
+   "description": "American tampon brand",
+   "commons_file": "Tampax logo.jpg",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tampax_logo.jpg",
+   "author": "Pilar Ramos",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "tampax",
+   "name": "Tampax"
+  },
+  {
+   "status": "no_match",
+   "slug": "tan-luxe",
+   "name": "Tan-Luxe"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q24915114",
+   "description": "British hair care product company",
+   "slug": "tangle-teezer",
+   "name": "Tangle Teezer"
+  },
+  {
+   "status": "no_match",
+   "slug": "tanologist",
+   "name": "Tanologist"
+  },
+  {
+   "status": "no_match",
+   "slug": "tanorganic",
+   "name": "TanOrganic"
+  },
+  {
+   "status": "no_match",
+   "slug": "tarte-cosmetics",
+   "name": "Tarte Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "tata-harper-skincare",
+   "name": "Tata Harper Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "tatcha",
+   "name": "TATCHA"
+  },
+  {
+   "status": "no_match",
+   "slug": "technic-cosmetics",
+   "name": "Technic Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "temko-cosmetics",
+   "name": "Temko Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "tena",
+   "name": "TENA"
+  },
+  {
+   "status": "no_match",
+   "slug": "that-good-hair",
+   "name": "That Good Hair"
+  },
+  {
+   "status": "no_match",
+   "slug": "thayers-natural",
+   "name": "Thayers Natural"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-australian-natural-soap-company",
+   "name": "The Australian Natural Soap Company"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-barberia",
+   "name": "THE BARBERIA"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q837851",
+   "description": "international cosmetics company",
+   "slug": "the-body-shop",
+   "name": "The Body Shop"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-cheeky-panda",
+   "name": "The Cheeky Panda"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-cocoon-original-vietnam",
+   "name": "The COCOON ORIGINAL VIETNAM"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-east-to-west-lifestyle-co",
+   "name": "THE EAST TO WEST LIFESTYLE CO"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-gel-crew",
+   "name": "The Gel Crew"
+  },
+  {
+   "status": "not_brand",
+   "slug": "the-good-one",
+   "name": "The Good One"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-handmade-soap-company",
+   "name": "The Handmade Soap Company"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-history-of-whoo",
+   "name": "The History of Whoo"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q18534725",
+   "description": "consumer goods company",
+   "slug": "the-honest-company",
+   "name": "The Honest Company"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-honest-midwife",
+   "name": "The Honest Midwife"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-inkey-list",
+   "name": "The Inkey List"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-konjac-sponge-co",
+   "name": "The Konjac Sponge Co"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-natural-deodorant-co",
+   "name": "The Natural Deodorant Co"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-natural-soapworks",
+   "name": "The Natural Soapworks"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q126595227",
+   "description": "Canadian skincare brand",
+   "slug": "the-ordinary",
+   "name": "The Ordinary"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-pink-stuff",
+   "name": "The Pink Stuff"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-powder-shampoo",
+   "name": "The Powder Shampoo"
+  },
+  {
+   "status": "no_match",
+   "slug": "the-skin-edition",
+   "name": "The Skin Edition"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7783010",
+   "description": "brand of disposable heating pads",
+   "slug": "thermacare",
+   "name": "Thermacare"
+  },
+  {
+   "status": "no_match",
+   "slug": "thermitek-ltd",
+   "name": "Thermitek Ltd"
+  },
+  {
+   "status": "no_match",
+   "slug": "this-works",
+   "name": "This Works"
+  },
+  {
+   "status": "no_match",
+   "slug": "thrive-causemetics",
+   "name": "Thrive Causemetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "throda-skincare",
+   "name": "Throda Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "thursday-plantation",
+   "name": "Thursday Plantation"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1779936",
+    "Q2024644"
+   ],
+   "slug": "tide",
+   "name": "Tide"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q2701433",
+   "description": "historical motorcycle manufacturer in Netherlands",
+   "slug": "tilex",
+   "name": "Tilex"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1997791",
+   "description": "Shampoo brand owned by Unilever",
+   "slug": "timotei",
+   "name": "Timotei"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1784328",
+   "description": "Brand name toilet cleaner",
+   "slug": "toilet-duck",
+   "name": "Toilet Duck"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q318149",
+    "Q105476592"
+   ],
+   "slug": "tom-ford",
+   "name": "Tom Ford"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7814699",
+   "description": "Umbrella Brand",
+   "slug": "toms-of-maine",
+   "name": "Tom's of Maine"
+  },
+  {
+   "status": "not_brand",
+   "slug": "tone",
+   "name": "Tone"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q16935513",
+   "description": "South Korean cosmetics brand",
+   "slug": "tonymoly",
+   "name": "TONYMOLY"
+  },
+  {
+   "wikidata": "Q141435862",
+   "description": "cosmetic company",
+   "commons_file": "Too faced.png",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Too_faced.png",
+   "author": "twetter",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "too-faced",
+   "name": "Too Faced"
+  },
+  {
+   "status": "no_match",
+   "slug": "tootilab",
+   "name": "Tootilab"
+  },
+  {
+   "status": "not_brand",
+   "slug": "totm",
+   "name": "TOTM"
+  },
+  {
+   "status": "not_brand",
+   "slug": "tower-28",
+   "name": "Tower 28"
+  },
+  {
+   "status": "no_match",
+   "slug": "trader-joes-company",
+   "name": "Trader Joe's Company"
+  },
+  {
+   "status": "no_match",
+   "slug": "treaclemoon",
+   "name": "Treaclemoon"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7837549",
+   "description": "brand of personal care products",
+   "slug": "tree-hut",
+   "name": "Tree Hut"
+  },
+  {
+   "status": "not_brand",
+   "slug": "trend",
+   "name": "Trend"
+  },
+  {
+   "wikidata": "Q7671316",
+   "description": "brand of haircare products",
+   "commons_file": "Tresemme logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Tresemme_logo.png",
+   "author": "no one",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Tresemme_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "tresemm",
+   "name": "TRESemm\u00e9",
+   "file": "scripts/logo-candidates/tresemm.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q7839436",
+   "description": "Scottish hairdresser (1949\u20132024)",
+   "slug": "trevor-sorbie",
+   "name": "Trevor Sorbie"
+  },
+  {
+   "status": "no_match",
+   "slug": "trigwell-cosmetics",
+   "name": "Trigwell Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "trish-mcevoy",
+   "name": "Trish McEvoy"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q135015704",
+   "description": "2023 video game developed by KPI Productions",
+   "slug": "trojan",
+   "name": "Trojan"
+  },
+  {
+   "status": "no_match",
+   "slug": "tropic",
+   "name": "Tropic Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "true",
+   "name": "True"
+  },
+  {
+   "status": "no_match",
+   "slug": "true-alchemy",
+   "name": "True Alchemy"
+  },
+  {
+   "status": "no_match",
+   "slug": "true-botanicals",
+   "name": "True Botanicals"
+  },
+  {
+   "status": "not_brand",
+   "slug": "tula",
+   "name": "TULA"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q140610727",
+   "description": "Australian perfume brand",
+   "slug": "tulita",
+   "name": "Tulita"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q141257115",
+   "description": "French skincare and cosmetics brand",
+   "slug": "typology",
+   "name": "Typology"
+  },
+  {
+   "status": "no_match",
+   "slug": "ukviat",
+   "name": "UKVIAT"
+  },
+  {
+   "status": "no_match",
+   "slug": "ulta-beauty-collection",
+   "name": "Ulta Beauty Collection"
+  },
+  {
+   "status": "no_match",
+   "slug": "ultra-glow",
+   "name": "Ultra Glow"
+  },
+  {
+   "status": "no_match",
+   "slug": "ultraceuticals",
+   "name": "Ultraceuticals"
+  },
+  {
+   "status": "not_brand",
+   "slug": "umberto-giannini",
+   "name": "Umberto Giannini"
+  },
+  {
+   "status": "no_match",
+   "slug": "uniq-made",
+   "name": "UNIQ MADE"
+  },
+  {
+   "status": "no_match",
+   "slug": "unique-boutique",
+   "name": "Unique Boutique"
+  },
+  {
+   "status": "no_match",
+   "slug": "unite-haircare",
+   "name": "UNITE Haircare"
+  },
+  {
+   "status": "no_match",
+   "slug": "upcircle-beauty",
+   "name": "UpCircle Beauty"
+  },
+  {
+   "wikidata": "Q153264",
+   "description": "American cosmetics line",
+   "commons_file": "Urban Decay logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Urban_Decay_logo.svg",
+   "author": "L'Or\u00e9al",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Urban_Decay_logo.svg/330px-Urban_Decay_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "urban-decay",
+   "name": "Urban Decay",
+   "file": "scripts/logo-candidates/urban-decay.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q379664",
+   "description": "Italian fashion designer (1932\u20132026)",
+   "slug": "valentino",
+   "name": "Valentino"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q25203167",
+   "description": "stain removing brand from Reckitt",
+   "slug": "vanish",
+   "name": "Vanish"
+  },
+  {
+   "status": "no_match",
+   "slug": "vasanti-cosmetics",
+   "name": "Vasanti Cosmetics"
+  },
+  {
+   "status": "not_brand",
+   "slug": "vaseline",
+   "name": "Vaseline"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q1981838",
+   "description": "current trademark of chemical depilatory internationally sold products",
+   "slug": "veet",
+   "name": "Veet"
+  },
+  {
+   "status": "no_match",
+   "slug": "vegantan",
+   "name": "VeganTan"
+  },
+  {
+   "status": "no_match",
+   "slug": "veld-s-skincare",
+   "name": "VELD'S Skincare"
+  },
+  {
+   "status": "not_brand",
+   "slug": "venus",
+   "name": "Venus"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q230728",
+   "description": "American fashion designer (born 1939)",
+   "slug": "vera-wang",
+   "name": "Vera Wang"
+  },
+  {
+   "status": "not_brand",
+   "slug": "verb",
+   "name": "VERB"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q696376",
+    "Q125178057"
+   ],
+   "slug": "versace",
+   "name": "Versace"
+  },
+  {
+   "status": "no_match",
+   "slug": "viakal",
+   "name": "Viakal"
+  },
+  {
+   "wikidata": "Q2079719",
+   "description": "Cosmetic brand",
+   "commons_file": "Vichy Laboratoires (logo).jpg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Vichy_Laboratoires_%28logo%29.jpg",
+   "author": "Vichy Laboratories",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Vichy_Laboratoires_%28logo%29.jpg/330px-Vichy_Laboratoires_%28logo%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "vichy",
+   "name": "Vichy",
+   "file": "scripts/logo-candidates/vichy.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q910740",
+   "description": "American brand of over-the-counter medications",
+   "slug": "vicks",
+   "name": "Vicks"
+  },
+  {
+   "wikidata": "Q332477",
+   "description": "American retailer of lingerie",
+   "commons_file": "Victoria's Secret logo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Victoria%27s_Secret_logo.svg",
+   "author": "Victoria's Secret",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Victoria%27s_Secret_logo.svg/330px-Victoria%27s_Secret_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "victoria-s-secret",
+   "name": "Victoria's Secret",
+   "file": "scripts/logo-candidates/victoria-s-secret.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q313550",
+   "description": "British hairstylist (1928\u20132012)",
+   "slug": "vidal-sassoon",
+   "name": "Vidal Sassoon"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q2707765",
+    "Q134788610"
+   ],
+   "slug": "viktor-and-rolf",
+   "name": "Viktor & Rolf"
+  },
+  {
+   "status": "no_match",
+   "slug": "viridian-nutrition",
+   "name": "Viridian Nutrition"
+  },
+  {
+   "status": "not_brand",
+   "slug": "visine",
+   "name": "Visine"
+  },
+  {
+   "status": "not_brand",
+   "slug": "vo5",
+   "name": "VO5"
+  },
+  {
+   "wikidata": "Q7941991",
+   "description": "brand of medicated shampoo",
+   "commons_file": "Vosene logo.jpg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Vosene_logo.jpg",
+   "author": "Unknown authorUnknown author",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Vosene_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "slug": "vosene",
+   "name": "Vosene",
+   "file": "scripts/logo-candidates/vosene.png"
+  },
+  {
+   "status": "not_brand",
+   "slug": "vult",
+   "name": "Vult"
+  },
+  {
+   "status": "no_match",
+   "slug": "ws-badger",
+   "name": "W.S. Badger"
+  },
+  {
+   "status": "not_brand",
+   "slug": "w5",
+   "name": "W5"
+  },
+  {
+   "status": "no_match",
+   "slug": "w7-cosmetics",
+   "name": "W7 Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "waitrose",
+   "name": "Waitrose"
+  },
+  {
+   "status": "not_brand",
+   "slug": "waken",
+   "name": "Waken"
+  },
+  {
+   "wikidata": "Q1591889",
+   "description": "American pharmacy and convenience store chain",
+   "commons_file": "Walgreens 1990 logo text.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Walgreens_1990_logo_text.svg",
+   "author": "Walgreens",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Walgreens_1990_logo_text.svg/330px-Walgreens_1990_logo_text.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "walgreens",
+   "name": "Walgreens",
+   "file": "scripts/logo-candidates/walgreens.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "wei-beauty",
+   "name": "Wei Beauty"
+  },
+  {
+   "wikidata": "Q702674",
+   "description": "German company",
+   "commons_file": "Wella Professionals Logo.png",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wella_Professionals_Logo.png",
+   "author": "Wella",
+   "restrictions": "",
+   "status": "needs_credit",
+   "slug": "wella",
+   "name": "Wella"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q17041622",
+   "description": "water park brand",
+   "slug": "wet-n-wild",
+   "name": "Wet n Wild"
+  },
+  {
+   "status": "no_match",
+   "slug": "whole-foods-market-365",
+   "name": "Whole Foods Market 365"
+  },
+  {
+   "status": "not_brand",
+   "slug": "wild",
+   "name": "Wild"
+  },
+  {
+   "status": "no_match",
+   "slug": "wild-science-lab",
+   "name": "WILD SCIENCE Lab"
+  },
+  {
+   "status": "no_match",
+   "slug": "wildsmith-skin",
+   "name": "Wildsmith Skin"
+  },
+  {
+   "wikidata": "Q138862645",
+   "description": "pet care product company",
+   "commons_file": "WildWash High Resolution Logo - Pet Care Natural.png",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:WildWash_High_Resolution_Logo_-_Pet_Care_Natural.png",
+   "author": "Wildwashnatural",
+   "restrictions": "",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/WildWash_High_Resolution_Logo_-_Pet_Care_Natural.png/330px-WildWash_High_Resolution_Logo_-_Pet_Care_Natural.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "wildwash",
+   "name": "WildWash",
+   "file": "scripts/logo-candidates/wildwash.png"
+  },
+  {
+   "wikidata": "Q653630",
+   "description": "British brand of razors, gardening products, and other products",
+   "commons_file": "Wilkinson Sword text only.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Wilkinson_Sword_text_only.png",
+   "author": "Unknown",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Wilkinson_Sword_text_only.png/330px-Wilkinson_Sword_text_only.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "wilkinson-sword",
+   "name": "Wilkinson Sword",
+   "file": "scripts/logo-candidates/wilkinson-sword.png"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q291140",
+   "description": "the brand name of a glass and hard-surface cleaner",
+   "slug": "windex",
+   "name": "Windex"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q140676562",
+   "description": "American cosmetics and skincare company",
+   "slug": "winky-lux",
+   "name": "Winky Lux"
+  },
+  {
+   "status": "not_brand",
+   "slug": "wizz",
+   "name": "Wizz"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q8033829",
+   "description": "laundry detergent brand",
+   "slug": "woolite",
+   "name": "Woolite"
+  },
+  {
+   "status": "not_brand",
+   "slug": "yankee-candle",
+   "name": "Yankee Candle"
+  },
+  {
+   "status": "no_match",
+   "slug": "yes-nurse",
+   "name": "Yes! Nurse"
+  },
+  {
+   "status": "no_match",
+   "slug": "yom-beauty",
+   "name": "YOM BEAUTY"
+  },
+  {
+   "status": "no_match",
+   "slug": "young-epure",
+   "name": "Young ePure"
+  },
+  {
+   "status": "no_match",
+   "slug": "youngblood-mineral-cosmetics",
+   "name": "Youngblood Mineral Cosmetics"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q134890837",
+   "description": "American cosmetics brand",
+   "slug": "youth-to-the-people",
+   "name": "Youth To The People"
+  },
+  {
+   "status": "ambiguous",
+   "wikidata": [
+    "Q1355904",
+    "Q138529259"
+   ],
+   "slug": "zegna",
+   "name": "Zegna"
+  },
+  {
+   "status": "no_match",
+   "slug": "zia-natural-skincare",
+   "name": "Zia Natural Skincare"
+  },
+  {
+   "status": "no_match",
+   "slug": "zirh",
+   "name": "Zirh"
+  },
+  {
+   "status": "no_match",
+   "slug": "zoflora",
+   "name": "Zoflora"
+  },
+  {
+   "status": "no_match",
+   "slug": "zoya-goes-pretty",
+   "name": "Zoya Goes Pretty"
+  },
+  {
+   "status": "no_match",
+   "slug": "zuvi",
+   "name": "Zuvi"
+  },
+  {
+   "status": "no_match",
+   "slug": "zuzu-cosmetics",
+   "name": "Zuzu Cosmetics"
+  },
+  {
+   "status": "no_match",
+   "slug": "zebra-pen",
+   "name": "Zebra Pen"
+  },
+  {
+   "wikidata": "Q3362807",
+   "description": "American writing implement company",
+   "commons_file": "Paper mate textlogo.svg",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Paper_mate_textlogo.svg",
+   "author": "Paper Mate",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Paper_mate_textlogo.svg/330px-Paper_mate_textlogo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "paper-mate",
+   "name": "Paper Mate",
+   "file": "scripts/logo-candidates/paper-mate.png"
+  },
+  {
+   "status": "no_match",
+   "slug": "margaret-dabbs-london",
+   "name": "Margaret Dabbs London"
+  },
+  {
+   "status": "no_match",
+   "slug": "mo-and-marine",
+   "name": "Mo & Marine"
+  },
+  {
+   "status": "no_logo",
+   "wikidata": "Q10518326",
+   "description": "Swedish pub chain",
+   "slug": "harrys",
+   "name": "Harry's"
+  },
+  {
+   "status": "not_brand",
+   "slug": "estrid",
+   "name": "Estrid"
+  }
+ ]
+}

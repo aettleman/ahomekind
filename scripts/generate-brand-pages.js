@@ -13,6 +13,8 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_PATH = path.join(ROOT, 'data', 'brands.json');
+// Public-domain brand logos (Wikimedia Commons), found by scripts/find-brand-logos.py
+const LOGO_SLUGS = (function(){ try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'brand-logos.json'), 'utf8')); } catch (e) { return []; } })();
 const OUT_DIR = path.join(ROOT, 'brands');
 const SITE_URL = 'https://ahomekind.com';
 
@@ -228,6 +230,8 @@ function renderBrandPage(brand) {
   }) + '</script>');
   lines.push('<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">');
   lines.push('<link rel="stylesheet" href="../../css/app.css?v=8">');
+  const hasLogo = LOGO_SLUGS.indexOf(brand.slug) !== -1;
+  if (hasLogo) lines.push('<link rel="stylesheet" href="../../css/brand-logo.css?v=1">');
   lines.push('<link rel="manifest" href="../../manifest.json?v=2">');
   lines.push('<meta name="theme-color" content="#3A1F3D">');
   lines.push('<link rel="icon" href="../../favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="../../icons/favicon.svg">');
@@ -255,7 +259,7 @@ function renderBrandPage(brand) {
   lines.push('<script>(function(){var a=document.getElementById("ahkBackLink");var r=document.referrer||"";if(/scan|ingredient-check|shelf/.test(r)){document.getElementById("bnavKick").textContent="scan result";}if(r.indexOf(location.origin)===0&&r!==location.href){a.addEventListener("click",function(e){e.preventDefault();history.back();});}})();</' + 'script>');
   const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
-  lines.push('<div class="bp"><div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div><div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
+  lines.push('<div class="bp">' + (hasLogo ? '<div class="k-arch-box has-logo"><img src="../../images/brand-logos/' + brand.slug + '.png" alt="' + escapeHtml(brand.name) + ' logo" width="132" height="96" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div>') + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
   lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified) + '</span></div>');
   lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified)) + '</h2>');
   lines.push('<p>' + escapeHtml(brand.note) + '</p>');
@@ -273,6 +277,7 @@ function renderBrandPage(brand) {
   lines.push('<p class="k-fn">' + (brand.lastVerified ? 'Last updated ' + formatVerifiedDate(brand.lastVerified) + ', checked against the source directory that day. ' : '') + 'Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">Let me know</a>.</p>');
   lines.push('</div></div>');
   lines.push('<script>(function(){var b=document.getElementById("bpSave"),k="ahk-saved-brands";function get(){try{return JSON.parse(localStorage.getItem(k)||"[]")}catch(e){return[]}}function paint(){var on=get().some(function(x){return x.slug===b.dataset.slug});b.classList.toggle("is-saved",on);b.querySelector("span").textContent=on?"Saved":"Save";}b.addEventListener("click",function(){var l=get().filter(function(x){return x.slug!==b.dataset.slug});if(!b.classList.contains("is-saved"))l.unshift({slug:b.dataset.slug,name:b.dataset.name});try{localStorage.setItem(k,JSON.stringify(l.slice(0,50)))}catch(e){}paint();});paint();var s=document.getElementById("bpShare");s.addEventListener("click",function(){var d={title:document.title,url:location.href};if(navigator.share){navigator.share(d).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(location.href);s.classList.add("is-copied");setTimeout(function(){s.classList.remove("is-copied")},1500);}});})();</' + 'script>');
+  if (hasLogo) lines.push('<p class="logo-credit">Brand logo via Wikimedia Commons. Logos are trademarks of their owners.</p>');
   lines.push('</main>');
   lines.push('');
   lines.push('<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>');
@@ -285,7 +290,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'brand-check.html', 'scan.html', 'shelf.html', 'ingredient-check.html', 'shop.html', 'take-action.html', 'perfume.html'];
+  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'brand-check', 'scan', 'shelf.html', 'ingredient-check.html', 'shop.html', 'take-action.html', 'perfume.html'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');

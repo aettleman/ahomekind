@@ -19,6 +19,7 @@
 <meta name="twitter:description" content="Scan any product barcode to find out in seconds if it's cruelty-free and vegan. Free cruelty-free barcode scanner that checks the brand, who owns it and its certifications.">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/app.css?v=8">
+<link rel="stylesheet" href="css/brand-logo.css?v=1">
 <link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
@@ -991,6 +992,8 @@ var K_SHORT = { good: "CF + vegan", check: "Cruelty-free", warn: "Owner isn't", 
 var K_STAMP = { good: "<b>CF +</b>vegan", check: "<b>cruelty</b>free", warn: "<b>owner</b>isn't", bad: "<b>tested</b>", unverified: "<b>not</b>certified" };
 var K_HEAD = { good: "Cruelty-free and vegan.", check: "Cruelty-free. Vegan status varies by product.", warn: "Cruelty-free, but its owner isn't.", bad: "Tests on animals, or sells where it's required.", unverified: "Not certified either way, yet." };
 var K_WASH = { good: "#DCE6D6", check: "#DCE6D6", warn: "#FBE3D3", bad: "#F5D3D6", unverified: "#EFDDD3" };
+var AHK_LOGOS = [];
+fetch("data/brand-logos.json").then(function(r){ return r.json(); }).then(function(a){ AHK_LOGOS = a; }).catch(function(){});
 function verdictHTML(brand){
   var tier = brand.tier === "unknown" ? "unverified" : (K_ICONS[brand.tier] ? brand.tier : "unverified");
   var full = null, nb = kNorm(brand.name);
@@ -1006,7 +1009,9 @@ function verdictHTML(brand){
   if (tier !== "bad") { if (/leaping bunny/.test(nl)) sub = "Leaping Bunny certified"; else if (/cruelty free international/.test(nl)) sub = "Cruelty Free International"; else if (/\bpeta\b/.test(nl)) sub = "PETA certified"; }
   if (full && full.price) sub += " &middot; " + full.price;
   var out = '<div class="k-brand k-scanres">';
-  out += '<div class="bp"><div class="k-arch-box" style="background:' + K_WASH[tier] + '"><div class="pk ' + shape + '" style="--c:' + cols[h % cols.length] + ';--cap:#3A1F3D"><i></i></div></div><div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeAttr(brand.name) + '</h1><p>' + sub + '</p></div></div>';
+  var logoSlug = full && full.slug && AHK_LOGOS.indexOf(full.slug) !== -1 ? full.slug : "";
+  var boxHTML = logoSlug ? '<div class="k-arch-box has-logo"><img src="/images/brand-logos/' + logoSlug + '.png" alt="' + escapeAttr(brand.name) + ' logo" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + K_WASH[tier] + '"><div class="pk ' + shape + '" style="--c:' + cols[h % cols.length] + ';--cap:#3A1F3D"><i></i></div></div>';
+  out += '<div class="bp">' + boxHTML + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeAttr(brand.name) + '</h1><p>' + sub + '</p></div></div>';
   out += '<div class="vcard tier-' + tier + '"><div class="bigst"><span>' + K_STAMP[tier] + '</span></div><h2>' + (tier === 'unverified' && full && full.claim ? 'Says it\'s cruelty-free. Not certified.' : K_HEAD[tier]) + '</h2><p>' + brand.note + '</p></div>';
   if (full && full.parentCompany) {
     var pn = kNorm(full.parentCompany), fam = AHK_ALL.filter(function(b){ return kNorm(b.parentCompany) === pn; }).length;
@@ -1016,6 +1021,7 @@ function verdictHTML(brand){
     out += '<div class="chain-node">' + (ptier ? kStamp(ptier) : '<span class="chain-dot"></span>') + '<b>' + escapeAttr(full.parentCompany) + '</b><span>' + fam + ' brand' + (fam === 1 ? '' : 's') + ' on here</span></div></div>';
   }
   if (full && full.slug) out += '<p style="margin:14px 0 0;"><a class="k-btn-p" href="/brands/' + full.slug + '/">See the full page &rarr;</a></p>';
+  if (logoSlug) out += '<p class="logo-credit">Brand logo via Wikimedia Commons. Logos are trademarks of their owners.</p>';
   out += '</div>';
   return out;
 }

@@ -2,3 +2,9 @@
 # local working files, not part of the site
 logo-check.html
 carousel-build.html
+
+# logo finder scratch files
+scripts/logo-candidates/
+scripts/.logo-cache.json
+scripts/__pycache__/
+scripts/logo-sheet-*.png
