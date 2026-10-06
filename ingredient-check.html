@@ -401,6 +401,7 @@ if(termMatches(entry.terms[i], text, compact)){ found.push(entry); return; }
 return found;
 }
 
+var BRAND_VEGAN = /[?&]vegan=1/.test(location.search);
 function renderVerdict(found, certifiedVegan){
 var always = found.filter(function(f){ return f.type === "animal"; });
 var sometimes = found.filter(function(f){ return f.type === "ambiguous"; });
@@ -408,7 +409,7 @@ if(always.length){
 return "<div class=\"verdict bad\"><p class=\"verdict-title\">Not vegan</p><p class=\"verdict-body\">Contains " + always.map(function(f){ return escapeHtml(f.name); }).join(", ") + ". A photo reading badly is the single most common cause of a wrong result here - the raw text below is opened automatically so you can check these words are actually there before trusting the verdict.</p></div>";
 }
 if(sometimes.length && certifiedVegan){
-return "<div class=\"verdict good\"><p class=\"verdict-title\">Vegan (officially certified)</p><p class=\"verdict-body\">This product carries an official vegan certification, so " + sometimes.map(function(f){ return escapeHtml(f.name.toLowerCase()); }).join(", ") + " here is very likely the plant-derived version, even though the ingredient list itself doesn't say - the certification is a stronger signal than the wording, so it's trusted over the flag below.</p></div>";
+return "<div class=\"verdict good\"><p class=\"verdict-title\">" + (BRAND_VEGAN ? "Vegan (brand is fully vegan)" : "Vegan (officially certified)") + "</p><p class=\"verdict-body\">" + (BRAND_VEGAN ? "This brand is listed as fully vegan, so " : "This product carries an official vegan certification, so ") + sometimes.map(function(f){ return escapeHtml(f.name.toLowerCase()); }).join(", ") + " here is very likely the plant-derived version, even though the ingredient list itself doesn't say - the certification is a stronger signal than the wording, so it's trusted over the flag below.</p></div>";
 }
 if(sometimes.length){
 return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vegan</p><p class=\"verdict-body\">Contains ingredients that are sometimes animal-derived and sometimes plant-based - see below, and check the brand's own vegan claim if it doesn't say. Also worth checking the raw text below turned out clean, since a misread photo is the most common cause of a wrong result.</p></div>";
@@ -416,6 +417,20 @@ return "<div class=\"verdict warn\"><p class=\"verdict-title\">Possibly not vega
 return "<div class=\"verdict good\"><p class=\"verdict-title\">No animal-derived ingredients recognised</p><p class=\"verdict-body\">Nothing in my dictionary turned up - but this checks against a list, not against every ingredient that exists, and can't see inside an unspecified \"fragrance\". Not a guarantee.</p></div>";
 }
 
+// Looks for certification wording in the text read from the photo. Logos are pictures, but most print
+// their name beside them. This is a hint only: a brand can print any words or symbol it likes.
+function packMentions(raw){
+var t = (raw || "").toLowerCase().replace(/[^a-z0-9]+/g, " ");
+var c = t.replace(/ /g, "");
+var out = [];
+if(/leaping bunny/.test(t) || c.indexOf("leapingbunny") !== -1) out.push("Leaping Bunny");
+if(/cruelty free international/.test(t) || c.indexOf("crueltyfreeinternational") !== -1) out.push("Cruelty Free International");
+if(/beauty without bunnies/.test(t) || /\bpeta\b/.test(t)) out.push("PETA");
+if(/vegan society/.test(t) || c.indexOf("theveganSociety".toLowerCase()) !== -1) out.push("The Vegan Society");
+if(/(^| )(vegan|vegans)( |$)/.test(t.replace(/\b(non|not) vegan\b/g, ""))) out.push("the word \"vegan\"");
+if(!out.length && /(cruelty free|not tested on animals|never tested on animals)/.test(t)) out.push("a cruelty-free claim");
+return out;
+}
 function render(found, rawText, certifiedVegan){
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'ingredient_photo', animal_found: found.some(function(f){ return f.type === "animal"; }), ambiguous_found: found.some(function(f){ return f.type === "ambiguous"; }) }); } catch(e){}
 var html = renderVerdict(found, certifiedVegan);
@@ -430,6 +445,10 @@ html += "<p class=\"ing-origin\">" + escapeHtml(f.note) + "</p>";
 html += "</div>";
 });
 html += "</div>";
+}
+var mentions = packMentions(rawText);
+if(mentions.length){
+html += "<div class=\"verdict warn\" style=\"margin-top:14px;\"><p class=\"verdict-title\">Also printed on the pack</p><p class=\"verdict-body\">I could read " + mentions.map(escapeHtml).join(", ") + " in the photo. That is what the packaging says, not something I have checked, because a brand can print any words or symbol it likes. To check the logos themselves, look for the Leaping Bunny or Vegan Society symbol on the pack and search the brand on this site.</p></div>";
 }
 var openAttr = found.some(function(f){ return f.type === "animal"; }) ? " open" : "";
 html += "<details class=\"ing-raw\"" + openAttr + "><summary>what I actually read from the photo</summary><pre>" + escapeHtml(rawText || "(nothing readable)") + "</pre></details>";
@@ -461,7 +480,7 @@ el("go").style.display = "block";
 el("go").textContent = "read it again";
 el("status").textContent = "";
 var found = findIngredients(res.data.text || "");
-render(found, res.data.text || "");
+render(found, res.data.text || "", BRAND_VEGAN);
 }).catch(function(){
 el("bar").style.display = "none";
 el("go").style.display = "block";
@@ -533,7 +552,7 @@ var found = findIngredients(text);
 // dictionary flag rather than contradicting it.
 var labels = (product.labels_tags || []).join(" ");
 var certifiedVegan = /en:vegan\b|vegan-society|v-label-vegan/i.test(labels);
-render(found, text, certifiedVegan);
+render(found, text, certifiedVegan || BRAND_VEGAN);
 el("results").innerHTML = bcScanAgainMarkup() + header + el("results").innerHTML;
 wireBcScanAgain();
 }

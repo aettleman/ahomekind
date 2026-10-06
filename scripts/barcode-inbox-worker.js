@@ -55,7 +55,7 @@ export default {
         matchedBrand: String(b.matchedBrand || "").slice(0, 80),
         at: new Date().toISOString(),
       };
-      await env.SUBMISSIONS.put("sub:" + id, JSON.stringify(rec));
+      await env.SUBMISSIONS.put("sub:" + id, JSON.stringify(rec), { expirationTtl: 2592000 }); // unreviewed submissions delete themselves after 30 days
       if (env.DISCORD_WEBHOOK) {
         const msg = "New barcode to review: " + barcode + " - " + (brand || product || "no brand") + (rec.brandOnList ? " (brand on your list)" : " (brand NOT on your list)");
         ctx.waitUntil(fetch(env.DISCORD_WEBHOOK, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ content: msg }) }).catch(() => {}));
@@ -113,7 +113,7 @@ export default {
       if (!raw) return J({ error: "gone" }, 404);
       const rec = JSON.parse(raw);
       rec.status = rec.status === "researching" ? "" : "researching";
-      await env.SUBMISSIONS.put("sub:" + b.id, JSON.stringify(rec));
+      await env.SUBMISSIONS.put("sub:" + b.id, JSON.stringify(rec), { expirationTtl: 7776000 }); // kept for research: deleted after 90 days unless acted on
       return J({ ok: true, status: rec.status });
     }
     if (url.pathname === "/admin/ntfytest" && req.method === "GET") {

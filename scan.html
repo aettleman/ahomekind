@@ -1137,6 +1137,9 @@ var name = (product && (product.product_name || product.generic_name)) || "";
 var brandText = (product && product.brands) || "";
 var brand = knownBrand || findBrand(brandText) || findBrand(name);
 var identified = !!(name || brandText);
+window.AHK_BRAND_TIER = brand ? brand.tier : "";
+// "Known vegan": the brand is listed as fully vegan, or the product itself carries a vegan label/certification.
+window.AHK_KNOWN_VEGAN = (brand && brand.tier === "good") || !!(product && /en:vegan\b|vegan-society|v-label-vegan/i.test((product.labels_tags || []).join(" ")));
 
 // What was scanned, before the verdict on it.
 var head = "";
@@ -1156,7 +1159,8 @@ if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.l
 });
 head += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 if(product.ingredients_text) head += "<div id=\"ingredientWatch\"></div>";
-else head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, so I can't tell you whether it's vegan. <a href=\"ingredient-check.html\">Photograph the label</a> and I'll read it directly.</p>";
+else if(window.AHK_KNOWN_VEGAN) head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, but this one is known to be vegan. <a href=\"ingredient-check.html?vegan=1\">Photograph the label</a> if you want me to read it.</p>";
+else head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, so I can't tell you whether this product is vegan. <a href=\"ingredient-check.html\">Photograph the label</a> and I'll read it directly.</p>";
 head += "</div>";
 }
 
@@ -1246,16 +1250,19 @@ var ambiguous = matches.filter(function(m){ return m.type === "ambiguous"; });
 // One verdict, never two: a product is only labelled "vegan ingredients"
 // when the ingredient check itself found nothing animal-derived or doubtful.
 var vc = el("veganChip");
+var brandVegan = !!window.AHK_KNOWN_VEGAN;
 if(vc){
 if(animal.length) vc.outerHTML = "<span class=\"chip no\">not vegan: contains " + animal.map(function(m){ return m.name.toLowerCase(); }).join(", ") + "</span>";
+else if(ambiguous.length && brandVegan) vc.outerHTML = "<span class=\"chip yes\">vegan</span>";
 else if(ambiguous.length) vc.outerHTML = "<span class=\"chip\">may not be vegan: check " + ambiguous.map(function(m){ return m.name.toLowerCase(); }).join(", ") + "</span>";
 else if(vc.getAttribute("data-off") === "vegan") vc.outerHTML = "<span class=\"chip yes\">vegan ingredients</span>";
 else vc.remove();
 }
-if(!matches.length) return;
+var shown = brandVegan ? animal : animal.concat(ambiguous);
+if(!shown.length) return;
 var html = "<div class=\"ingredient-watch\">";
 html += "<p class=\"iw-title\">ingredient watch</p>";
-animal.concat(ambiguous).forEach(function(m){
+shown.forEach(function(m){
 html += "<div class=\"iw-row iw-" + m.type + "\"><span class=\"iw-name\">" + m.name + "</span><span class=\"iw-note\">" + m.note + "</span></div>";
 });
 html += "</div>";
