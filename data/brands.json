@@ -651,7 +651,10 @@
     "veganConfidence": "low",
     "region": "Europe",
     "claim": "Ann Summers lists some of its products as 'Free From Animal Testing' and 'Vegan Friendly'. Vegan status varies by product.",
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-06",
+    "category": [
+      "body-shower"
+    ]
   },
   {
     "slug": "anna-sui",
