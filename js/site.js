@@ -543,7 +543,7 @@ document.body.appendChild(bn);
 // site's footer, not an interruption.
 document.addEventListener('DOMContentLoaded', function(){
 var path = window.location.pathname;
-if (/impact\.html$/.test(path)) return; // already has the full counter
+  if (path.indexOf("/impact") === 0) return; // already has the full counter
 var RATE_PER_SECOND = 83000000000 / (365.25 * 24 * 3600);
 
 // Ash decided (18 September) that the homepage should go back to the
