@@ -631,7 +631,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </details>
 
 <div class="secondary-block" id="standing-report-card">
-<div id="standing-report-widget"></div>
+
 </div>
 </main>
 <!-- nav.js is loaded here, before the scanner's own script below, on
@@ -909,7 +909,6 @@ h += "<a class=\"srclink\" href=\"https://crueltyfreeinternational.org/?s=" + q 
 h += "<h3>check it elsewhere</h3>";
 h += "<p style=\"margin-bottom:0;\">Not in the open database yet. Try <a href=\"https://crueltyfree.peta.org/\" target=\"_blank\" rel=\"noopener\">PETA</a> or <a href=\"https://www.leapingbunny.org/\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a> directly.</p>";
 }
-h += reportWidget(b);
 h += "</div>";
 return h;
 }
@@ -1021,7 +1020,7 @@ function verdictHTML(brand){
   return out;
 }
 function brandSearchWidget(){
-var out = "<p style=\"font-size:13px; letter-spacing:0.5px; text-transform:uppercase; color:#8C7580; margin:14px 0 8px;\">barcode didn't work? try the brand name</p>";
+var out = "<p style=\"font-size:15px; font-weight:700; color:#3A1F3D; margin:16px 0 8px;\">Not the right product? Type the brand name instead.</p>";
 out += "<div class=\"brand-lookup\">";
 out += "<label for=\"manualBrand\" class=\"visually-hidden\">Brand name</label>";
 out += "<input type=\"text\" id=\"manualBrand\" placeholder=\"e.g. Superdrug, Garnier, Dove...\">";
@@ -1097,7 +1096,7 @@ h += "<label class=\"report-foot\" for=\"sb-code\" style=\"display:block;margin:
 h += "<input type=\"text\" inputmode=\"numeric\" class=\"report-field\" id=\"sb-code\" value=\"" + escapeAttr(code || "") + "\">";
 h += "<label class=\"report-foot\" for=\"sb-brand\" style=\"display:block;margin:0 0 2px;\">brand name (or the shop, if it's their own brand, e.g. Lidl)</label>";
 h += "<input type=\"text\" class=\"report-field\" id=\"sb-brand\" placeholder=\"brand name\" value=\"" + escapeAttr(brandText) + "\">";
-h += "<label class=\"report-check\" style=\"margin:2px 0 8px;\"><input type=\"checkbox\" id=\"sb-nobrand\"><span>there's no brand on it</span></label>";
+h += "<label class=\"report-check\" style=\"margin:-4px 0 10px;padding:2px 0;justify-content:flex-start;text-align:left;gap:8px;\"><input type=\"checkbox\" id=\"sb-nobrand\"><span style=\"flex:none;\">I can't see a brand name on it</span></label>";
 h += "<label class=\"report-foot\" for=\"sb-product\" id=\"sb-product-label\" style=\"display:block;margin:0 0 2px;\">product (e.g. air freshener)</label>";
 h += "<input type=\"text\" class=\"report-field\" id=\"sb-product\" placeholder=\"what is it?\" value=\"" + escapeAttr(name) + "\">";
 h += "<input type=\"text\" id=\"sb-web\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\" style=\"position:absolute;left:-9999px;opacity:0;height:0;width:0;\">";
@@ -1121,7 +1120,7 @@ var brand = el("sb-brand").value.trim();
 var prod = el("sb-product").value.trim();
 var msg = el("sb-msg");
 if(code.length < 6){ msg.textContent = "Please check the barcode number."; return; }
-if(!nb.checked && !brand){ msg.textContent = "Please type the brand name, or tick \"there's no brand on it\"."; return; }
+if(!nb.checked && !brand){ msg.textContent = "Please type the brand name, or tick \"I can't see a brand name on it\"."; return; }
 if(nb.checked && !prod){ msg.textContent = "Please describe what it is."; return; }
 msg.textContent = ""; btn.disabled = true; btn.textContent = "sending...";
 var hit = brand ? findBrand(brand) : null;
