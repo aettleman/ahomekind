@@ -1109,8 +1109,8 @@ if(name) head += "<h3>" + name + "</h3>";
 if(brandText) head += "<p style=\"margin-bottom:12px;\">" + brandText + "</p>";
 var chips = "";
 var an = (product.ingredients_analysis_tags || []).join(" ");
-if(an.indexOf("en:vegan") !== -1 && an.indexOf("non-vegan") === -1) chips += "<span class=\"chip yes\">vegan ingredients</span>";
-else if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">contains animal ingredients</span>";
+if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">not vegan: contains animal ingredients</span>";
+else if(product.ingredients_text) chips += "<span id=\"veganChip\" data-off=\"" + (an.indexOf("en:vegan") !== -1 ? "vegan" : "") + "\"></span>";
 var labels = (product.labels_tags || []).join(" ");
 LABEL_MAP.forEach(function(L){
 for(var k=0;k<L.keys.length;k++){
@@ -1175,12 +1175,26 @@ if(product && product.ingredients_text) renderIngredientWatch(product.ingredient
 // certified cruelty-free brand can still have one product with, say,
 // carmine or lanolin in it, and that's worth surfacing on its own.
 var INGREDIENTS_PROMISE = fetch("data/ingredients.json").then(function(r){ return r.json(); }).catch(function(){ return []; });
+// "coconut milk", "almond milk" and so on are plant-based, so they must not
+// trigger the dairy "milk" warning.
+var PLANT_WORDS = ["coconut","almond","oat","soy","soya","rice","cashew","hazelnut","pea","hemp","flax","macadamia"];
+function hasIngredientTerm(text, term){
+var from = 0, idx;
+while((idx = text.indexOf(term, from)) !== -1){
+if(term === "milk"){
+var before = text.slice(0, idx).replace(/[^a-z]+$/, "").split(/[^a-z]+/).pop();
+if(PLANT_WORDS.indexOf(before) !== -1){ from = idx + term.length; continue; }
+}
+return true;
+}
+return false;
+}
 function findIngredientMatches(text, glossary){
 var t = (text || "").toLowerCase();
 var found = [];
 glossary.forEach(function(entry){
 for(var i=0;i<entry.terms.length;i++){
-if(t.indexOf(entry.terms[i]) !== -1){ found.push(entry); return; }
+if(hasIngredientTerm(t, entry.terms[i])){ found.push(entry); return; }
 }
 });
 return found;
@@ -1190,9 +1204,18 @@ INGREDIENTS_PROMISE.then(function(glossary){
 var target = el(targetId);
 if(!target) return;
 var matches = findIngredientMatches(ingredientsText, glossary);
-if(!matches.length) return;
 var animal = matches.filter(function(m){ return m.type === "animal"; });
 var ambiguous = matches.filter(function(m){ return m.type === "ambiguous"; });
+// One verdict, never two: a product is only labelled "vegan ingredients"
+// when the ingredient check itself found nothing animal-derived or doubtful.
+var vc = el("veganChip");
+if(vc){
+if(animal.length) vc.outerHTML = "<span class=\"chip no\">not vegan: contains " + animal.map(function(m){ return m.name.toLowerCase(); }).join(", ") + "</span>";
+else if(ambiguous.length) vc.outerHTML = "<span class=\"chip\">may not be vegan: check " + ambiguous.map(function(m){ return m.name.toLowerCase(); }).join(", ") + "</span>";
+else if(vc.getAttribute("data-off") === "vegan") vc.outerHTML = "<span class=\"chip yes\">vegan ingredients</span>";
+else vc.remove();
+}
+if(!matches.length) return;
 var html = "<div class=\"ingredient-watch\">";
 html += "<p class=\"iw-title\">ingredient watch</p>";
 animal.concat(ambiguous).forEach(function(m){
