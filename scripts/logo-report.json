@@ -1,6 +1,6 @@
 {
  "counts": {
-  "saved": 80,
+  "saved": 81,
   "needs_credit": 13,
   "no_match": 586,
   "ambiguous": 28,
@@ -8,7 +8,7 @@
   "not_brand": 210,
   "error": 0
  },
- "total": 1073,
+ "total": 1074,
  "results": [
   {
    "status": "no_match",
@@ -215,6 +215,20 @@
    "status": "not_brand",
    "slug": "anko",
    "name": "Anko"
+  },
+  {
+   "wikidata": "Q579524",
+   "description": "British underwear company",
+   "commons_file": "Black Ann Summers Logo.png",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Black_Ann_Summers_Logo.png",
+   "author": "https://www.annsummers.com/",
+   "restrictions": "trademarked",
+   "status": "saved",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Black_Ann_Summers_Logo.png/330px-Black_Ann_Summers_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "slug": "ann-summers",
+   "name": "Ann Summers",
+   "file": "scripts/logo-candidates/ann-summers.png"
   },
   {
    "status": "no_logo",
