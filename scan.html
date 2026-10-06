@@ -1119,7 +1119,7 @@ var code = el("sb-code").value.replace(/\D/g, "");
 var brand = el("sb-brand").value.trim();
 var prod = el("sb-product").value.trim();
 var msg = el("sb-msg");
-if(code.length < 6){ msg.textContent = "Please check the barcode number."; return; }
+if(code.length < 6 || code.length > 14){ msg.textContent = "A barcode has 6 to 14 digits. Please check the number."; return; }
 if(!nb.checked && !brand){ msg.textContent = "Please type the brand name, or tick \"I can't see a brand name on it\"."; return; }
 if(nb.checked && !prod){ msg.textContent = "Please describe what it is."; return; }
 msg.textContent = ""; btn.disabled = true; btn.textContent = "sending...";
