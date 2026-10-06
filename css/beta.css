@@ -1,0 +1,4 @@
+/* "beta" note on the three tool pages */
+.beta-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 8px 0 14px; font-size: 13px; line-height: 1.45; color: var(--ahk-text-muted, #5A4550); }
+.beta-pill { display: inline-block; font: 700 10.5px/1 'Hanken Grotesk', system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 99px; background: #F6C6A8; color: #7A3B12; }
+.beta-note a { color: inherit; text-decoration: underline; font-weight: 600; }
