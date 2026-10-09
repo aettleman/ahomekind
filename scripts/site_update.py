@@ -12,12 +12,12 @@ def slugify(s):
 for _f in glob.glob("parent-*.html"): os.remove(_f)
 # ---------- info pages (copied from privacy.html so the look matches) ----------
 tpl = open("privacy.html", encoding="utf-8").read()
-WRAP = '<div style="max-width:640px;margin:0 auto 40px;line-height:1.7">%s</div>'
+WRAP = '<div class="ahk-info" style="max-width:640px;margin:28px auto 40px;line-height:1.7;padding:0 4px"><style>.ahk-info ul{padding-left:22px;margin:18px 0}.ahk-info li{margin:0;padding:7px 0}.ahk-info a{color:inherit}</style>%s</div>'
 def page(fname, title, kick, h1, body, desc):
     h = tpl
     h = re.sub(r"<title>.*?</title>", "<title>%s</title>" % E(title), h, count=1, flags=re.S)
     h = re.sub(r'(<meta name="description" content=")[^"]*(")', lambda m: m.group(1) + E(desc) + m.group(2), h, count=1)
-    h = re.sub(r'(<div class="k-ph">).*?(</div>)', lambda m: '%s<p class="k-kick">%s</p><h1 class="k-h1">%s</h1>%s' % (m.group(1), E(kick), E(h1), m.group(2)), h, count=1, flags=re.S)
+    h = re.sub(r'(<div class="k-ph">).*?(</div>)', lambda m: '%s<p class="k-kick">%s</p><h1 class="k-h1" style="margin-bottom:22px">%s</h1>%s' % (m.group(1), E(kick), E(h1), m.group(2)), h, count=1, flags=re.S)
     h = re.sub(r"(<div class=\"k-ph\">.*?</div>).*?(</main>)", lambda m: m.group(1) + WRAP % body + m.group(2), h, count=1, flags=re.S)
     open(fname, "w", encoding="utf-8").write(h)
 H2 = '<h2 style="margin:28px 0 6px">%s</h2>'
