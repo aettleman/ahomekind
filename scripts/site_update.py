@@ -64,7 +64,9 @@ for b in brands:
         h = re.sub(r'(class="ahk-stamps-mount" data-s="[a-z,]*")', lambda m: '%s data-g="%d" data-u="%s"' % (m.group(1), g["score"], g["url"]), h, count=1)
     if b.get("parentCompany"):
         h = re.sub(r'(<span class="status-pill-label">parent company</span> )' + re.escape(E(b["parentCompany"])) + r"(</span>)",
-            lambda m: '%s<a href="/parent-%s">%s</a>%s' % (m.group(1), pslugs[b["parentCompany"]], E(b["parentCompany"]), m.group(2)), h, count=1)
+            lambda m: '%s<a href="/parent-%s" style="color:inherit;text-decoration:underline">%s</a>%s' % (m.group(1), pslugs[b["parentCompany"]], E(b["parentCompany"]), m.group(2)), h, count=1)
+    if not b.get("parentCompany"):
+        h = re.sub(r"(&middot; )Independent( &middot;)", r"\1Owner not listed yet\2", h, count=1)
     add = EX
     if b.get("lastVerified"):
         add += '<p style="font-size:13px;opacity:.7;margin:4px 0">Last checked: %s &middot; <a href="/how-i-decide">How I decide</a></p>' % E(str(b["lastVerified"]))
@@ -94,5 +96,13 @@ for ps, kids in groups.items():
     made += 1
 idx = "".join('<li><a href="/parent-%s">%s</a></li>' % (ps, E(max({b["parentCompany"] for b in kids}, key=len))) for ps, kids in sorted(groups.items()))
 page("parent-companies.html", "Parent companies - a home kind", "who owns who", "Parent companies", "<p>A brand can be cruelty-free while the company that owns it isn't. Each company below has its own page with the brands I list from it.</p><ul>%s</ul>" % idx, "Every parent company on a home kind and its animal testing policy.")
+if os.path.exists("sitemap.xml"):
+    sm = open("sitemap.xml", encoding="utf-8").read()
+    mm = re.search(r"<loc>(https?://[^/<]+)", sm)
+    if mm:
+        base = mm.group(1)
+        new = ["how-i-decide", "how-this-site-is-funded", "parent-companies"] + ["parent-" + ps for ps in groups]
+        add_ = "".join("<url><loc>%s/%s</loc></url>" % (base, u) for u in new if "/%s</loc>" % u not in sm)
+        if add_: open("sitemap.xml", "w", encoding="utf-8").write(sm.replace("</urlset>", add_ + "</urlset>"))
 print("Parent pages:", made)
 run('git add -A . && git commit -m "Add How I decide, funding page, parent company pages, last checked dates and alternatives"')
