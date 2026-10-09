@@ -2086,7 +2086,9 @@ try {
   var term = decodeURIComponent(m[1].replace(/\+/g, ' '));
   if (!term) return;
   searchInput.value = term;
+  var _was = restoringState; restoringState = true;
   searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+  restoringState = _was;
 })();
 
 (function restoreState(){
@@ -2157,5 +2159,5 @@ try {
 </main>
 <footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="about.html">about</a> &middot; <a href="how-i-decide.html">how I decide</a> &middot; <a href="how-this-site-is-funded.html">how this site is funded</a> &middot; <a href="take-action.html">take action</a> &middot; <a href="privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a> &middot; <a href="https://instagram.com/ahomekind" target="_blank" rel="noopener" aria-label="a home kind on Instagram" class="footer-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="vertical-align:-3px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></footer>
 <script src="js/site.js?v=8"></script>
-</body>
+<link rel="stylesheet" href="css/stamps.css"><script src="js/stamps.js"></script><script src="js/checker-stamps.js"></script></body>
 </html>

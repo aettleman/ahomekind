@@ -30,10 +30,10 @@ if "rem-beauty" not in by and "zoflora" in by:
     brands.append(e); by["rem-beauty"] = e; print("r.e.m. beauty added")
 
 # 3. Good On You ratings (each checked on its Good On You brand page)
-GOY = {4: ["lush", "aesop", "nealsyardremedies"],
- 3: ["bodyshop", "theordinary", "origins", "toofaced", "dermalogica", "kiehls", "moltonbrown", "yvesrocher", "urbandecay", "weleda"],
- 2: ["esteelauder", "mac", "maccosmetics", "jomalone", "clinique", "charlottetilbury", "tarte", "nars", "glossier", "drunkelephant", "dior", "soldejaneiro"]}
-GSLUG = {"bodyshop": "the-body-shop", "theordinary": "deciem", "mac": "mac-cosmetics", "maccosmetics": "mac-cosmetics",
+GOY = {1: ["revlon"], 4: ["garnier", "lush", "aesop", "nealsyardremedies"],
+ 3: ["maybelline", "nyx", "bodyshop", "theordinary", "origins", "toofaced", "dermalogica", "kiehls", "moltonbrown", "yvesrocher", "urbandecay", "weleda"],
+ 2: ["neutrogena", "olay", "bobbibrown", "paulaschoice", "bareminerals", "theinkeylist", "rimmel", "rimmellondon", "benefit", "esteelauder", "mac", "maccosmetics", "jomalone", "clinique", "charlottetilbury", "tarte", "nars", "glossier", "drunkelephant", "dior", "soldejaneiro"]}
+GSLUG = {"paulaschoice": "paulas-choice", "bobbibrown": "bobbi-brown", "theinkeylist": "the-inkey-list", "nyx": "nyx-professional-makeup", "rimmel": "rimmel-london", "rimmellondon": "rimmel-london", "bodyshop": "the-body-shop", "theordinary": "deciem", "mac": "mac-cosmetics", "maccosmetics": "mac-cosmetics",
  "nealsyardremedies": "neals-yard-remedies", "toofaced": "too-faced", "moltonbrown": "molton-brown", "yvesrocher": "yves-rocher",
  "urbandecay": "urban-decay", "esteelauder": "estee-lauder", "jomalone": "jo-malone", "charlottetilbury": "charlotte-tilbury",
  "drunkelephant": "drunk-elephant", "soldejaneiro": "sol-de-janeiro", "kiehls": "kiehls"}
@@ -41,9 +41,11 @@ gp = "data/good-on-you.json"
 goy = json.load(open(gp)) if os.path.exists(gp) else {}
 added = 0
 for b in brands:
-    k = nm(b)
+    ks = {nm(b), norm(b.get("name", ""))}; k = sorted(ks)[0]
     for score, keys in GOY.items():
-        if k in keys and b["slug"] not in goy:
+        hit = [x for x in keys if x in ks]
+        if hit and b["slug"] not in goy:
+            k = hit[0]
             goy[b["slug"]] = {"score": score, "url": "https://directory.goodonyou.eco/brand/%s-beauty" % GSLUG.get(k, k)}
             added += 1
 json.dump(goy, open(gp, "w"), indent=2, ensure_ascii=False); open(gp, "a").write("\n")
@@ -116,15 +118,18 @@ JS = r'''(function(){
     if((t==="good"||t==="check"||t==="warn")&&/PETA/.test(n))o.peta=1;
     if(goy[b.slug])o.goy=goy[b.slug]; return o;}
   function find(card){
-    var hs=card.querySelectorAll("h1,h2,h3,h4,.rr-name,.rname,strong"),i,k;
+    var hs=card.querySelectorAll(".rcard-name,h1,h2,h3,h4,.rr-name,.rname,strong"),i,k;
     for(i=0;i<hs.length;i++){k=norm(hs[i].textContent);if(k&&brands[k])return {b:brands[k],el:hs[i]};}
     return null;}
+  function deco(c){
+    if(c.getAttribute("data-ahk"))return; var f=find(c); if(!f)return; c.setAttribute("data-ahk","1");
+    var d=document.createElement("div"); d.innerHTML=AHKStamps.row(rules(f.b));
+    var t=f.el.closest("a")||f.el,r=d.firstChild;r.style.margin="0 16px 12px";t.parentNode.insertBefore(r,t.nextSibling);}
+  var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);deco(e.target);}});},{rootMargin:"300px"}):null;
   function run(){
     if(!brands||!window.AHKStamps)return;
-    document.querySelectorAll(".rcard:not([data-ahk])").forEach(function(c){
-      var f=find(c); if(!f)return; c.setAttribute("data-ahk","1");
-      var d=document.createElement("div"); d.innerHTML=AHKStamps.row(rules(f.b));
-      f.el.parentNode.insertBefore(d.firstChild,f.el.nextSibling);});}
+    document.querySelectorAll(".rcard:not([data-ahk-o]),.card:not([data-ahk-o])").forEach(function(c){
+      c.setAttribute("data-ahk-o","1"); if(io)io.observe(c); else deco(c);});}
   Promise.all([fetch("data/brands.json").then(function(r){return r.json()}),
     fetch("data/good-on-you.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}})]).then(function(a){
     var l=Array.isArray(a[0])?a[0]:a[0].brands; brands={}; l.forEach(function(b){brands[norm(b.name)]=b;});
@@ -134,9 +139,25 @@ JS = r'''(function(){
 })();
 '''
 open("js/checker-stamps.js", "w", encoding="utf-8").write(JS)
-g = "scripts/generate-brand-check.js"; gs = open(g, encoding="utf-8").read()
+g = "brand-check.html"; gs = open(g, encoding="utf-8").read()
 TAGS = '<link rel="stylesheet" href="css/stamps.css"><script src="js/stamps.js"></script><script src="js/checker-stamps.js"></script>'
-if "checker-stamps.js" in gs: print("Checker stamps already in generator")
+if "checker-stamps.js" in gs: print("Checker stamps already wired")
 elif "</body>" in gs:
-    open(g, "w", encoding="utf-8").write(gs.replace("</body>", TAGS + "</body>", 1)); print("Checker stamps wired into generator")
-else: print("CHECKER: could not find </body> in generator - tell Claude")
+    i = gs.rindex("</body>"); open(g, "w", encoding="utf-8").write(gs[:i] + TAGS + gs[i:]); print("Checker stamps wired")
+else: print("CHECKER: no </body> found - tell Claude")
+
+# 6. Brands with no listed owner: say "not known as of <date>" instead of "Independent"
+g = "scripts/generate-brand-pages.js"; gs = open(g, encoding="utf-8").read(); c0 = gs
+UNK = "(function(){return 'not known as of ' + new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});})()"
+gs = gs.replace("line += ' &middot; Independent';", "line += ' &middot; owner not known yet';")
+gs = gs.replace(": 'Independent') + (p.price", ": 'owner not known') + (p.price")
+gs = gs.replace(": 'Independent') + '</dd></div>'", ": " + UNK + ") + '</dd></div>'")
+if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Owner wording updated")
+else: print("Owner wording already updated")
+
+# 7. Searching from the homepage no longer scrolls to the bottom of the page
+b = "brand-check.html"; bs = open(b, encoding="utf-8").read()
+old = "  searchInput.value = term;\n  searchInput.dispatchEvent(new Event('input', { bubbles: true }));\n})();"
+new = "  searchInput.value = term;\n  var _was = restoringState; restoringState = true;\n  searchInput.dispatchEvent(new Event('input', { bubbles: true }));\n  restoringState = _was;\n})();"
+if old in bs: open(b, "w", encoding="utf-8").write(bs.replace(old, new, 1)); print("Search jump fixed")
+else: print("Search jump: already fixed or code changed")

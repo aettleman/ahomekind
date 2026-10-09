@@ -74,5 +74,57 @@
   "urban-decay": {
     "score": 3,
     "url": "https://directory.goodonyou.eco/brand/urban-decay-beauty"
+  },
+  "bareminerals": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/bareminerals-beauty"
+  },
+  "benefit": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/benefit-beauty"
+  },
+  "bobbi-brown": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/bobbi-brown-beauty"
+  },
+  "garnier": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/garnier-beauty"
+  },
+  "maybelline": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/maybelline-beauty"
+  },
+  "neutrogena": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/neutrogena-beauty"
+  },
+  "nyx": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/nyx-professional-makeup-beauty"
+  },
+  "olay": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/olay-beauty"
+  },
+  "paulas-choice": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/paulas-choice-beauty"
+  },
+  "revlon": {
+    "score": 1,
+    "url": "https://directory.goodonyou.eco/brand/revlon-beauty"
+  },
+  "rimmel": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/rimmel-london-beauty"
+  },
+  "the-inkey-list": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/the-inkey-list-beauty"
+  },
+  "the-ordinary": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/deciem-beauty"
   }
 }

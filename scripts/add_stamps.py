@@ -93,5 +93,6 @@ for b in brands:
     h = h.replace("</body>", '<script src="%s/js/stamps.js"></script>%s</body>' % (d, MOUNT), 1)
     open(f, "w", encoding="utf-8").write(h); done += 1
 print("Stamps added to", done, "pages; skipped", skipped)
-run("sed -i '' 's/ahk-shell-v56/ahk-shell-v57/' sw.js")
+_sw = open("sw.js").read(); _m = re.search(r"ahk-shell-v(\d+)", _sw)
+if _m: open("sw.js", "w").write(_sw.replace(_m.group(0), "ahk-shell-v%d" % (int(_m.group(1)) + 1), 1))
 run('git add -A . && git commit -m "Add certification stamps, ethical rating and not-certified stamps to brand pages"')

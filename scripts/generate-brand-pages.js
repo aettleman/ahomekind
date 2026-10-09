@@ -123,7 +123,7 @@ function certLine(brand) {
     if (/vegan society/.test(n)) out.push('Vegan Society');
   }
   let line = out.length ? (out.length === 1 && brand.tier !== 'bad' ? out[0] + ' certified' : out.join(' &middot; ')) : TIER_SHORT[brand.tier] || '';
-  if (!brand.parentCompany && brand.tier !== 'bad' && brand.tier !== 'unverified') line += ' &middot; Independent';
+  if (!brand.parentCompany && brand.tier !== 'bad' && brand.tier !== 'unverified') line += ' &middot; owner not known yet';
   if (brand.price) line += ' &middot; ' + escapeHtml(brand.price);
   return line;
 }
@@ -166,7 +166,7 @@ function buildSwaps(brand, allBrands) {
   let html = '<p class="swaps-kick">kinder swaps</p><div class="swp">';
   picks.forEach(function(p){
     html += '<a href="../' + p.slug + '/"><div class="k-arch-box" style="background:' + TIER_WASH[p.tier] + '">' + pkHtml(p) + '</div>';
-    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.parentCompany ? TIER_SHORT[p.tier] : 'Independent') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
+    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.parentCompany ? TIER_SHORT[p.tier] : 'owner not known') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
   });
   html += '</div>';
   return html;
@@ -267,7 +267,7 @@ function renderBrandPage(brand) {
   lines.push('</div>');
   if (brand.claim) lines.push(claimBox(brand));
   lines.push(veganButNotCrueltyFreeWarning);
-  lines.push('<dl class="k-facts"><div><dt>Vegan</dt><i></i><dd>' + veganLine + '</dd></div><div><dt>Owner</dt><i></i><dd>' + (brand.parentCompany ? escapeHtml(brand.parentCompany) : 'Independent') + '</dd></div>' + (brand.price ? '<div><dt>Price</dt><i></i><dd>' + escapeHtml(brand.price) + '</dd></div>' : '') + '</dl>');
+  lines.push('<dl class="k-facts"><div><dt>Vegan</dt><i></i><dd>' + veganLine + '</dd></div><div><dt>Owner</dt><i></i><dd>' + (brand.parentCompany ? escapeHtml(brand.parentCompany) : (function(){return 'not known as of ' + new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});})()) + '</dd></div>' + (brand.price ? '<div><dt>Price</dt><i></i><dd>' + escapeHtml(brand.price) + '</dd></div>' : '') + '</dl>');
   lines.push('</div><div class="k-bp-r">');
   lines.push(buildOwnershipChain(brand, ALL_BRANDS));
   lines.push(buildSwaps(brand, ALL_BRANDS));
