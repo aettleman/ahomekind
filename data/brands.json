@@ -19988,24 +19988,28 @@
   {
     "slug": "ariana-grande-fragrances",
     "name": "Ariana Grande Fragrances",
-    "tier": "unverified",
-    "note": "Ariana Grande Fragrances was reported as Leaping Bunny certified in 2021 and its perfumes are described as vegan, but I couldn't confirm that it is still certified, so I've listed it as not certified for now.",
+    "tier": "check",
+    "note": "Leaping Bunny certified since 2021. Sources disagree on whether every perfume is vegan, so vegan varies by product.",
     "parentCompany": null,
-    "vegan": "unclear",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [
       {
+        "url": "https://www.leapingbunny.org/brand/ariana-grande-fragrances",
+        "label": "Leaping Bunny"
+      },
+      {
         "url": "https://www.crueltyfreekitty.com/?p=23296",
-        "label": "Source: Cruelty-Free Kitty (2021)"
+        "label": "Cruelty-Free Kitty"
       }
     ],
     "price": "£",
     "category": [],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "claim": "Reported cruelty-free and vegan, not confirmed.",
+    "claim": "",
     "lastVerified": "2026-10-09"
   },
   {
@@ -20033,18 +20037,22 @@
   },
   {
     "slug": "ted-baker",
-    "name": "Ted Baker",
+    "name": "Ted Baker Beauty and Fragrance",
     "tier": "check",
-    "note": "PETA Germany lists Ted Baker as cruelty-free. I couldn't find a vegan claim, so vegan is unclear.",
+    "note": "PETA Germany lists Ted Baker as cruelty-free. Ted Baker says its beauty and fragrance products are vegan except the hair wax (beeswax). This covers beauty and fragrance only.",
     "parentCompany": null,
-    "vegan": "unclear",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
     "links": [
       {
         "url": "https://tierversuchsfrei.peta-approved.de/company/ted-baker/",
-        "label": "Source: PETA Germany (in German)"
+        "label": "PETA Germany (in German)"
+      },
+      {
+        "url": "https://kmibrands.com/?p=23738",
+        "label": "KMI Brands"
       }
     ],
     "price": "£",
