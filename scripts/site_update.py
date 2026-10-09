@@ -77,6 +77,9 @@ for b in brands:
         if alts:
             ul = "".join('<li><a href="../%s/">%s</a></li>' % (x["slug"], E(x["name"])) for x in alts)
             h = h.replace("</main>", '<div style="margin:24px 0"><h2>Cruelty-free alternatives</h2><ul>%s</ul></div></main>' % ul, 1)
+    if b.get("parentCompany"):
+        pj = json.dumps([b["parentCompany"], "/parent-" + pslugs[b["parentCompany"]]]).replace("</", "<\\/")
+        h = h.replace("</body>", "<script>(function(p){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[],t;while(t=w.nextNode())if(t.nodeValue.trim()===p[0]&&!t.parentNode.closest('a,footer,nav,script,title,h1'))a.push(t);a.forEach(function(t){var l=document.createElement('a');l.href=p[1];l.style.cssText='color:inherit;text-decoration:underline';t.parentNode.insertBefore(l,t);l.appendChild(t)})})(" + pj + ")</script></body>", 1)
     open(f, "w", encoding="utf-8").write(h); n += 1
 print("Extras added to", n, "brand pages")
 # ---------- parent company pages ----------
