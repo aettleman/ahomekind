@@ -10759,7 +10759,7 @@
     "products": [],
     "alternatives": [],
     "links": [],
-    "price": "",
+    "price": "£££",
     "category": [
       "makeup-beauty"
     ],
@@ -19978,7 +19978,7 @@
         "label": "Source: PETA"
       }
     ],
-    "price": "£",
+    "price": "££",
     "category": [],
     "veganConfidence": "medium",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
@@ -20005,7 +20005,7 @@
         "label": "Cruelty-Free Kitty"
       }
     ],
-    "price": "£",
+    "price": "££",
     "category": [],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
@@ -20028,7 +20028,7 @@
         "label": "Source: Cruelty-Free Kitty"
       }
     ],
-    "price": "£",
+    "price": "£££",
     "category": [],
     "veganConfidence": "low",
     "region": "Europe",
@@ -20040,7 +20040,7 @@
     "name": "Ted Baker Beauty and Fragrance",
     "tier": "check",
     "note": "PETA Germany lists Ted Baker as cruelty-free. Ted Baker says its beauty and fragrance products are vegan except the hair wax (beeswax). This covers beauty and fragrance only.",
-    "parentCompany": null,
+    "parentCompany": "Authentic Brands Group",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -20055,7 +20055,7 @@
         "label": "KMI Brands"
       }
     ],
-    "price": "£",
+    "price": "££",
     "category": [],
     "veganConfidence": "low",
     "region": "Europe",
