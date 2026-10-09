@@ -3036,4 +3036,4 @@ img.k-lou-port { object-fit: cover; border: 3px solid #FBF4EF; box-shadow: 0 2px
 .k-pc-stamp::after { inset: 2px; }
 @media (min-width: 900px) { .k-pc-stamp { bottom: 14px; right: 14px; } }
 
-/*a11y*/.k-facts dt{flex:1;display:flex;align-items:baseline;gap:8px}.k-facts dt::after{content:"";flex:1;border-bottom:1.5px dotted rgba(42,22,48,.25);transform:translateY(-4px)}.ahk-hand,.k-hero em{color:#C0521F}.k-win-stamp>span{background:#B8501F}
+/*a11y*/.k-facts dt{flex:1;display:flex;align-items:baseline;gap:8px}.k-facts dt::after{content:"";flex:1;border-bottom:1.5px dotted rgba(42,22,48,.25);transform:translateY(-4px)}.ahk-hand,.k-hero em{color:#C0521F}
