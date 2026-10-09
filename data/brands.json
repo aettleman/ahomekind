@@ -17720,10 +17720,10 @@
   {
     "slug": "the-cheeky-panda",
     "name": "The Cheeky Panda",
-    "tier": "check",
-    "note": "Certified cruelty-free by Cruelty Free International (Leaping Bunny). Bamboo toilet roll, tissues and wipes.",
+    "tier": "good",
+    "note": "Certified cruelty-free by Cruelty Free International (Leaping Bunny) and certified vegan by The Vegan Society. Bamboo toilet roll, tissues and wipes.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -17733,8 +17733,8 @@
         "label": "Cruelty Free International"
       },
       {
-        "url": "https://uk.cheekypanda.com",
-        "label": "The Cheeky Panda"
+        "url": "https://uk.cheekypanda.com/products/bamboo-24-toilet-rolls",
+        "label": "The Cheeky Panda (Vegan Society certified)"
       }
     ],
     "category": [
@@ -17742,7 +17742,7 @@
       "body-shower"
     ],
     "region": "Africa & The Middle East, Europe",
-    "veganConfidence": "low",
+    "veganConfidence": "high",
     "lastVerified": "2026-10-09",
     "claim": "",
     "price": "££",

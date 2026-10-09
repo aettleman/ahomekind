@@ -127,10 +127,10 @@ if _axe:
 # 4c. The Cheeky Panda: certified, and the kinder swap for toilet paper and tissues
 _cp = by.get("the-cheeky-panda")
 if _cp:
-    _cp.update(tier="check", claim="", evidence="", lastVerified=today, price="££", category=["paper-hygiene", "body-shower"], stockists=["Waitrose", "Ocado", "Boots", "Tesco", "Morrisons"],
-               note="Certified cruelty-free by Cruelty Free International (Leaping Bunny). Bamboo toilet roll, tissues and wipes.",
+    _cp.update(tier="good", vegan="full", veganConfidence="high", claim="", evidence="", lastVerified=today, price="££", category=["paper-hygiene", "body-shower"], stockists=["Waitrose", "Ocado", "Boots", "Tesco", "Morrisons"],
+               note="Certified cruelty-free by Cruelty Free International (Leaping Bunny) and certified vegan by The Vegan Society. Bamboo toilet roll, tissues and wipes.",
                links=[{"url": "https://crueltyfreeinternational.org/node/3468", "label": "Cruelty Free International"},
-                      {"url": "https://uk.cheekypanda.com", "label": "The Cheeky Panda"}])
+                      {"url": "https://uk.cheekypanda.com/products/bamboo-24-toilet-rolls", "label": "The Cheeky Panda (Vegan Society certified)"}])
     print("Cheeky Panda updated")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 
