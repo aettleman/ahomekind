@@ -83,8 +83,8 @@ for b in brands:
     if t == "unverified": s.append("unk")
     if t == "bad": s.append("ncf")
     if b.get("vegan") == "full": s.append("vegan")
-    if t == "good" and re.search("Leaping Bunny|Cruelty Free International", n): s.append("lb")
-    if t == "good" and "PETA" in n: s.append("peta")
+    if t in ("good","check") and re.search("Leaping Bunny|Cruelty Free International", n): s.append("lb")
+    if t in ("good","check") and "PETA" in n: s.append("peta")
     g = GOY.get(b["slug"]); ga = (' data-g="%d" data-u="%s"' % g) if g else ""
     div = '%s<div class="ahk-stamps-mount" data-s="%s"%s></div>' % (MARK, ",".join(s), ga)
     h = h.replace("</h1>", "</h1>" + div, 1)

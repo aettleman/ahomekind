@@ -10765,7 +10765,8 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13"
+    "lastVerified": "2026-09-13",
+    "claim": ""
   },
   {
     "slug": "marcelle",
@@ -19981,7 +19982,7 @@
     "category": [],
     "veganConfidence": "medium",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
-    "claim": "Cruelty-free and vegan, listed by PETA.",
+    "claim": "",
     "lastVerified": "2026-10-09"
   },
   {
@@ -20033,7 +20034,7 @@
   {
     "slug": "ted-baker",
     "name": "Ted Baker",
-    "tier": "good",
+    "tier": "check",
     "note": "PETA Germany lists Ted Baker as cruelty-free. I couldn't find a vegan claim, so vegan is unclear.",
     "parentCompany": null,
     "vegan": "unclear",
@@ -20050,7 +20051,7 @@
     "category": [],
     "veganConfidence": "low",
     "region": "Europe",
-    "claim": "Listed by PETA as cruelty-free.",
+    "claim": "",
     "lastVerified": "2026-10-09"
   }
 ]
