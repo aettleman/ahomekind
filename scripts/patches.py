@@ -112,8 +112,8 @@ JS = r'''(function(){
   var brands=null,goy={};
   function rules(b){var t=b.tier,n=(b.note||"")+" "+(b.claim||""),o={};
     if(t==="unverified")o.unk=1; if(t==="bad")o.ncf=1; if(b.vegan==="full")o.vegan=1;
-    if((t==="good"||t==="check")&&/Leaping Bunny|Cruelty Free International/.test(n))o.lb=1;
-    if((t==="good"||t==="check")&&/PETA/.test(n))o.peta=1;
+    if((t==="good"||t==="check"||t==="warn")&&/Leaping Bunny|Cruelty Free International/.test(n))o.lb=1;
+    if((t==="good"||t==="check"||t==="warn")&&/PETA/.test(n))o.peta=1;
     if(goy[b.slug])o.goy=goy[b.slug]; return o;}
   function find(card){
     var hs=card.querySelectorAll("h1,h2,h3,h4,.rr-name,.rname,strong"),i,k;

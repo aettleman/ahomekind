@@ -8439,7 +8439,7 @@
     "name": "Jo Malone",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -8451,7 +8451,8 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13"
+    "lastVerified": "2026-09-13",
+    "parentSource": "Wikidata"
   },
   {
     "slug": "john-frieda",
@@ -8954,7 +8955,7 @@
     "name": "Kiehl's",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -8966,7 +8967,8 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13"
+    "lastVerified": "2026-09-13",
+    "parentSource": "Wikidata"
   },
   {
     "slug": "king-of-shaves",
