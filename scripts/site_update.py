@@ -35,11 +35,14 @@ funded = ("<p>A Home Kind is just me. No brand pays to be listed or to be rated 
  "<p>That's everything. I haven't earned anything from the site yet.</p>")
 page("how-i-decide.html", "How I decide - a home kind", "how it works", "How I decide", decide, "How I decide whether a brand is certified, not certified or tests on animals.")
 page("how-this-site-is-funded.html", "How this site is funded - a home kind", "the small print", "How this site is funded", funded, "No brand pays to be listed. Here is how a home kind is funded.")
-for f in glob.glob("*.html"):
-    h = open(f, encoding="utf-8").read(); a = '<a href="about.html">about</a>'
-    if a in h and "how-i-decide" not in h:
-        h = h.replace(a, a + ' &middot; <a href="how-i-decide.html">how I decide</a> &middot; <a href="how-this-site-is-funded.html">how this site is funded</a>', 1)
-        open(f, "w", encoding="utf-8").write(h)
+FOOT = re.compile(r'<a href="((?:\.\./)*)about\.html">about</a>')
+def foot(m):
+    p = m.group(1)
+    return m.group(0) + ' &middot; <a href="%show-i-decide.html">how I decide</a> &middot; <a href="%sparent-companies.html">parent companies</a> &middot; <a href="%show-this-site-is-funded.html">how this site is funded</a>' % (p, p, p)
+for f in glob.glob("**/*.html", recursive=True):
+    h = open(f, encoding="utf-8").read()
+    if "how-i-decide" in h or not FOOT.search(h): continue
+    open(f, "w", encoding="utf-8").write(FOOT.sub(foot, h, count=1))
 # ---------- brand page extras ----------
 goy = {}
 if os.path.exists("data/good-on-you.json"):
@@ -64,7 +67,7 @@ for b in brands:
             lambda m: '%s<a href="/parent-%s">%s</a>%s' % (m.group(1), pslugs[b["parentCompany"]], E(b["parentCompany"]), m.group(2)), h, count=1)
     add = EX
     if b.get("lastVerified"):
-        add += '<p style="font-size:13px;opacity:.7;margin:4px 0">Last checked: %s</p>' % E(str(b["lastVerified"]))
+        add += '<p style="font-size:13px;opacity:.7;margin:4px 0">Last checked: %s &middot; <a href="/how-i-decide">How I decide</a></p>' % E(str(b["lastVerified"]))
     h = h.replace("</h1><!--ahk-stamps-->", "</h1><!--ahk-stamps-->", 1)
     h = re.sub(r'(<div class="ahk-stamps-mount"[^>]*></div>)', lambda m: m.group(1) + add, h, count=1)
     if b.get("tier") in ("unverified", "bad") and b.get("category"):
@@ -89,5 +92,7 @@ for ps, kids in groups.items():
     body = "<p><strong>%s</strong></p><p>A brand can be cruelty-free while the company that owns it isn't, so I show both.</p>%s<ul>%s</ul>" % (E(st), H2 % "Brands I list from this company", li)
     page("parent-%s.html" % ps, "%s - a home kind" % name, "parent company", name, body, "Animal testing policy of %s and the brands I list from it." % name)
     made += 1
+idx = "".join('<li><a href="/parent-%s">%s</a></li>' % (ps, E(max({b["parentCompany"] for b in kids}, key=len))) for ps, kids in sorted(groups.items()))
+page("parent-companies.html", "Parent companies - a home kind", "who owns who", "Parent companies", "<p>A brand can be cruelty-free while the company that owns it isn't. Each company below has its own page with the brands I list from it.</p><ul>%s</ul>" % idx, "Every parent company on a home kind and its animal testing policy.")
 print("Parent pages:", made)
 run('git add -A . && git commit -m "Add How I decide, funding page, parent company pages, last checked dates and alternatives"')
