@@ -4175,19 +4175,26 @@
     "slug": "daise",
     "name": "Daise",
     "tier": "check",
-    "note": "Appears on Cruelty Free International's approved-brands listing, but I could not independently re-verify the live certification text - worth a manual check of crueltyfreeinternational.org before treating as fully confirmed. Not vegan-certified; some products contain animal-derived ingredients.",
+    "note": "Certified cruelty-free by Cruelty Free International (Leaping Bunny). Not every product is vegan, so vegan varies by product.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [],
+    "links": [
+      {
+        "url": "https://crueltyfreeinternational.org/approved-brands/listing/daise/",
+        "label": "Cruelty Free International"
+      }
+    ],
     "price": "££",
     "category": [
       "body-shower",
       "skincare"
     ],
-    "veganConfidence": "low"
+    "veganConfidence": "medium",
+    "claim": "",
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "dame",
