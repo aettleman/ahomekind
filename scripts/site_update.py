@@ -1,10 +1,15 @@
-import json, os, re, glob, subprocess, html, datetime
+import json, os, re, glob, subprocess, html, datetime, unicodedata
 def run(c):
     print(">", c); subprocess.run(c, shell=True, check=False)
 run("python3 scripts/add_stamps.py")
 raw = json.load(open("data/brands.json")); brands = raw["brands"] if isinstance(raw, dict) else raw
 E = html.escape
-def slugify(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+ALIAS = {"edgewell": "edgewell-personal-care", "estee-lauder": "estee-lauder-companies", "kao": "kao-corporation", "p-g": "procter-gamble", "s-c-johnson": "sc-johnson", "reckitt": "reckitt-benckiser"}
+def slugify(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return ALIAS.get(s, s)
+for _f in glob.glob("parent-*.html"): os.remove(_f)
 # ---------- info pages (copied from privacy.html so the look matches) ----------
 tpl = open("privacy.html", encoding="utf-8").read()
 WRAP = '<div style="max-width:640px;margin:0 auto 40px;line-height:1.7">%s</div>'
@@ -71,8 +76,11 @@ for b in brands:
 print("Extras added to", n, "brand pages")
 # ---------- parent company pages ----------
 made = 0
-for name, ps in pslugs.items():
-    kids = [b for b in brands if b.get("parentCompany") == name]
+groups = {}
+for b in brands:
+    if b.get("parentCompany"): groups.setdefault(slugify(b["parentCompany"]), []).append(b)
+for ps, kids in groups.items():
+    name = max({b["parentCompany"] for b in kids}, key=len)
     flags = [b.get("parentTestsOnAnimals") for b in kids if "parentTestsOnAnimals" in b]
     if True in flags: st = "This company tests on animals, or sells where animal testing is required."
     elif False in flags: st = "This company doesn't test on animals."
