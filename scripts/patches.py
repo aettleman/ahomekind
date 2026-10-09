@@ -106,6 +106,23 @@ for b in brands:
         rep.append("NOT CONFIRMED %s (expected %s)" % (b["name"], exp))
 open("data/owner-report.txt", "w").write("\n".join(rep) + "\n")
 print("Owners added (verified):", applied, "| report: data/owner-report.txt")
+# 4b. Kimberly-Clark brands (parent says it tests on animals where required by law)
+_axe = by.get("axe")
+_kc = [("andrex", "Andrex", "Toilet paper and flushable wipes.", []), ("kleenex", "Kleenex", "Tissues.", []), ("huggies", "Huggies", "Nappies and baby wipes.", []),
+       ("cottonelle", "Cottonelle", "Toilet paper and wipes.", []), ("kotex", "Kotex", "Period products.", ["period-menstrual"]),
+       ("depend", "Depend", "Incontinence products.", []), ("goodnites", "Goodnites", "Bedtime pants for children.", []), ("pull-ups", "Pull-Ups", "Potty training pants.", [])]
+if _axe:
+    _n = 0
+    for sl, nm_, what, cat in _kc:
+        if sl in by or any(norm(b.get("name", "")) == norm(nm_) for b in brands): continue
+        e = copy.deepcopy(_axe)
+        e.update(slug=sl, name=nm_, tier="bad", parentCompany="Kimberly-Clark", parentTestsOnAnimals=True, vegan="unknown", veganConfidence="low",
+                 price="£", category=cat, claim="", evidence="", lastVerified=today,
+                 note="Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. " + what,
+                 links=[{"url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing", "label": "Kimberly-Clark animal testing statement"},
+                        {"url": "https://crueltyfree.peta.org/?s=kimberly-clark", "label": "PETA"}])
+        brands.append(e); by[sl] = e; _n += 1
+    print("Kimberly-Clark brands added:", _n)
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 
 # 5. Checker result-card stamps

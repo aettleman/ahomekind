@@ -20074,5 +20074,231 @@
     "region": "Europe",
     "claim": "",
     "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "andrex",
+    "name": "Andrex",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Toilet paper and flushable wipes.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "kleenex",
+    "name": "Kleenex",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Tissues.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "huggies",
+    "name": "Huggies",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Nappies and baby wipes.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "cottonelle",
+    "name": "Cottonelle",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Toilet paper and wipes.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "kotex",
+    "name": "Kotex",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Period products.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [
+      "period-menstrual"
+    ],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "depend",
+    "name": "Depend",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Incontinence products.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "goodnites",
+    "name": "Goodnites",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Bedtime pants for children.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "pull-ups",
+    "name": "Pull-Ups",
+    "tier": "bad",
+    "note": "Owned by Kimberly-Clark, which says it tests on animals where required by law, regulation or government authorities. Kimberly-Clark isn't listed as cruelty-free by PETA. Potty training pants.",
+    "parentCompany": "Kimberly-Clark",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+        "label": "Kimberly-Clark animal testing statement"
+      },
+      {
+        "url": "https://crueltyfree.peta.org/?s=kimberly-clark",
+        "label": "PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-09"
   }
 ]
