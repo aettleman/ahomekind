@@ -19960,5 +19960,97 @@
     "region": "Europe",
     "claim": "Estrid says it doesn't test its finished products or ingredients on animals, and nor do its suppliers or any third parties.",
     "lastVerified": "2026-09-27"
+  },
+  {
+    "slug": "billie-eilish-fragrances",
+    "name": "Billie Eilish Fragrances",
+    "tier": "good",
+    "note": "PETA lists Billie Eilish's fragrance brand, Eilish, as cruelty-free and vegan.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://www.peta.org/living/personal-care-fashion/billie-eilish-fragrance/",
+        "label": "Source: PETA"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "medium",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
+    "claim": "Cruelty-free and vegan, listed by PETA.",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "ariana-grande-fragrances",
+    "name": "Ariana Grande Fragrances",
+    "tier": "unverified",
+    "note": "Ariana Grande Fragrances was reported as Leaping Bunny certified in 2021 and its perfumes are described as vegan, but I couldn't confirm that it is still certified, so I've listed it as not certified for now.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://www.crueltyfreekitty.com/?p=23296",
+        "label": "Source: Cruelty-Free Kitty (2021)"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America",
+    "claim": "Reported cruelty-free and vegan, not confirmed.",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "stella-mccartney-fragrances",
+    "name": "Stella McCartney fragrances",
+    "tier": "unverified",
+    "note": "Stella McCartney says its fragrances are never tested on animals and are vegan, and it doesn't sell them in China. It isn't certified by Leaping Bunny or PETA. The fragrances are made under licence by P&G Prestige.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://www.crueltyfreekitty.com/?p=23384",
+        "label": "Source: Cruelty-Free Kitty"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "Says it's cruelty-free and vegan, not certified.",
+    "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "ted-baker",
+    "name": "Ted Baker",
+    "tier": "good",
+    "note": "PETA Germany lists Ted Baker as cruelty-free. I couldn't find a vegan claim, so vegan is unclear.",
+    "parentCompany": null,
+    "vegan": "unclear",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://tierversuchsfrei.peta-approved.de/company/ted-baker/",
+        "label": "Source: PETA Germany (in German)"
+      }
+    ],
+    "price": "£",
+    "category": [],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "Listed by PETA as cruelty-free.",
+    "lastVerified": "2026-10-09"
   }
 ]
