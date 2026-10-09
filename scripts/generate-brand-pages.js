@@ -155,6 +155,7 @@ function buildOwnershipChain(brand, allBrands) {
 function buildSwaps(brand, allBrands) {
   if (brand.tier === 'good' || brand.tier === 'check') return '';
   const cat = (brand.category && brand.category[0]) || null;
+  if (!cat) return '';
   const pool = allBrands.filter(function(b){
     if (b.slug === brand.slug) return false;
     if (b.tier !== 'good' && b.tier !== 'check') return false;

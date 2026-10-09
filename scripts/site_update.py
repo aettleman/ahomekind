@@ -81,13 +81,16 @@ for b in brands:
     if b.get("parentCompany"):
         pj = json.dumps([b["parentCompany"], "/parent-" + pslugs[b["parentCompany"]]]).replace("</", "<\\/")
         h = h.replace("</body>", "<script>(function(p){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[],t;while(t=w.nextNode())if(t.nodeValue.trim()===p[0]&&!t.parentNode.closest('a,footer,nav,script,title,h1'))a.push(t);a.forEach(function(t){var l=document.createElement('a');l.href=p[1];l.style.cssText='color:inherit;text-decoration:underline';t.parentNode.insertBefore(l,t);l.appendChild(t)})})(" + pj + ")</script></body>", 1)
-    if b.get("tier") in ("good", "check", "warn") and set(b.get("category") or []) & {"skincare", "makeup-beauty", "body-shower", "haircare", "dental", "period-menstrual"}:
+    SHOPS = {"Boots": "https://www.boots.com/sitesearch?searchTerm=%s", "Superdrug": "https://www.superdrug.com/search?text=%s", "Sephora UK": "https://www.sephora.co.uk/search?q=%s",
+             "Waitrose": "https://www.waitrose.com/ecom/shop/search?&searchTerm=%s", "Ocado": "https://www.ocado.com/search?entry=%s",
+             "Tesco": "https://www.tesco.com/groceries/en-GB/search?query=%s", "Morrisons": "https://groceries.morrisons.com/search?entry=%s"}
+    shops = b.get("stockists") or (["Boots", "Superdrug", "Sephora UK"] if set(b.get("category") or []) & {"skincare", "makeup-beauty", "body-shower", "haircare", "dental", "period-menstrual"} else [])
+    shops = [x for x in shops if x in SHOPS]
+    if b.get("tier") in ("good", "check", "warn") and shops:
         q = urllib.parse.quote(b["name"])
-        shop = ('<div class="k-sec" style="margin:24px 0"><p class="section-label">where to look in the UK</p><p style="font-size:13.5px;margin:0 0 8px">Search for %s at: '
-          '<a href="https://www.boots.com/sitesearch?searchTerm=%s" target="_blank" rel="noopener">Boots</a> &middot; '
-          '<a href="https://www.superdrug.com/search?text=%s" target="_blank" rel="noopener">Superdrug</a> &middot; '
-          '<a href="https://www.sephora.co.uk/search?q=%s" target="_blank" rel="noopener">Sephora UK</a></p>'
-          '<p style="font-size:12.5px;color:#6A535D;margin:0">These are plain search links. I earn nothing from them, and not every shop stocks every brand.</p></div>') % (E(b["name"]), q, q, q)
+        links = " &middot; ".join('<a href="%s" target="_blank" rel="noopener">%s</a>' % (SHOPS[x] % q, x) for x in shops)
+        shop = ('<div class="k-sec" style="margin:24px 0"><p class="section-label">where to look in the UK</p><p style="font-size:13.5px;margin:0 0 8px">Search for %s at: %s</p>'
+          '<p style="font-size:12.5px;color:#6A535D;margin:0">These are plain search links. I earn nothing from them, and not every shop stocks every brand.</p></div>') % (E(b["name"]), links)
         h = h.replace('<div class="signed">', shop + '<div class="signed">', 1)
     open(f, "w", encoding="utf-8").write(h); n += 1
 print("Extras added to", n, "brand pages")

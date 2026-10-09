@@ -17721,19 +17721,38 @@
     "slug": "the-cheeky-panda",
     "name": "The Cheeky Panda",
     "tier": "check",
-    "note": "First a toilet roll revolution, now bamboozling baby wipes, whipped up from biodegradable bamboo. Cruelty-free approved by Cruelty Free International.",
+    "note": "Certified cruelty-free by Cruelty Free International (Leaping Bunny). Bamboo toilet roll, tissues and wipes.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [],
+    "links": [
+      {
+        "url": "https://crueltyfreeinternational.org/node/3468",
+        "label": "Cruelty Free International"
+      },
+      {
+        "url": "https://uk.cheekypanda.com",
+        "label": "The Cheeky Panda"
+      }
+    ],
     "category": [
+      "paper-hygiene",
       "body-shower"
     ],
     "region": "Africa & The Middle East, Europe",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-10-09",
+    "claim": "",
+    "price": "££",
+    "stockists": [
+      "Waitrose",
+      "Ocado",
+      "Boots",
+      "Tesco",
+      "Morrisons"
+    ]
   },
   {
     "slug": "the-cocoon-original-vietnam",
@@ -20096,7 +20115,9 @@
       }
     ],
     "price": "£",
-    "category": [],
+    "category": [
+      "paper-hygiene"
+    ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
@@ -20124,7 +20145,9 @@
       }
     ],
     "price": "£",
-    "category": [],
+    "category": [
+      "paper-hygiene"
+    ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
@@ -20152,7 +20175,9 @@
       }
     ],
     "price": "£",
-    "category": [],
+    "category": [
+      "paper-hygiene"
+    ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
@@ -20180,7 +20205,9 @@
       }
     ],
     "price": "£",
-    "category": [],
+    "category": [
+      "paper-hygiene"
+    ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,

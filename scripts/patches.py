@@ -123,6 +123,15 @@ if _axe:
                         {"url": "https://crueltyfree.peta.org/?s=kimberly-clark", "label": "PETA"}])
         brands.append(e); by[sl] = e; _n += 1
     print("Kimberly-Clark brands added:", _n)
+    for sl in ("andrex", "kleenex", "cottonelle", "huggies"): by[sl]["category"] = ["paper-hygiene"]
+# 4c. The Cheeky Panda: certified, and the kinder swap for toilet paper and tissues
+_cp = by.get("the-cheeky-panda")
+if _cp:
+    _cp.update(tier="check", claim="", evidence="", lastVerified=today, price="££", category=["paper-hygiene", "body-shower"], stockists=["Waitrose", "Ocado", "Boots", "Tesco", "Morrisons"],
+               note="Certified cruelty-free by Cruelty Free International (Leaping Bunny). Bamboo toilet roll, tissues and wipes.",
+               links=[{"url": "https://crueltyfreeinternational.org/node/3468", "label": "Cruelty Free International"},
+                      {"url": "https://uk.cheekypanda.com", "label": "The Cheeky Panda"}])
+    print("Cheeky Panda updated")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 
 # 5. Checker result-card stamps
@@ -178,6 +187,7 @@ gs = re.sub(r": '(?:Independent|owner not known)'\) \+ \(p\.price", ": ownerWord
 gs = re.sub(r"\(brand\.parentCompany \? escapeHtml\(brand\.parentCompany\) : .*?\) \+ '</dd></div>'", "(brand.parentCompany ? escapeHtml(brand.parentCompany) : ownerWord(brand)) + '</dd></div>'", gs)
 gs = gs.replace("if (brand.links && brand.links.length) lines.push('<div class=\"k-sec\">' + renderLinks(brand.links) + '</div>');",
   "lines.push('<div class=\"k-sec\">' + renderLinks(brand.links) + renderChecked(!!(brand.links && brand.links.length)) + '</div>');")
+gs = gs.replace("const cat = (brand.category && brand.category[0]) || null;\n  const pool", "const cat = (brand.category && brand.category[0]) || null;\n  if (!cat) return '';\n  const pool", 1)
 if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Owner wording and sources line updated")
 else: print("Owner wording and sources line already updated")
 
