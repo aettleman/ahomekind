@@ -1,16 +1,14 @@
 /* A Home Kind: certification + ethical rating stamps. Plain JS, no dependencies.
-   Usage: AHKStamps.row({lb:true, peta:true, vegan:true, cf:true, goy:{score:3, url:"..."}}) -> HTML string.
+   Usage: AHKStamps.row({lb:true, peta:true, vegan:true, goy:{score:3, url:"..."}}) -> HTML string.
    Real logos: set img paths in S below (e.g. img:"/images/stamps/leaping-bunny.png") once permission is given. */
 (function () {
   var S = {
-    cf:    { short: "CF",    img: null, title: "Cruelty-free (A Home Kind)", who: "A Home Kind",
-             means: "My own verdict: based on the certifiers and brand statements I have checked, this brand does not test on animals. It is not an official certification.", url: "/learn" },
-    vegan: { short: "V",     img: null, title: "Vegan", who: "A Home Kind",
-             means: "The brand says its products are vegan, or a vegan certifier backs that up. Check the label on each product, as vegan status can vary between products.", url: "/learn" },
-    unk:   { short: "?",    img: null, title: "Not certified", who: "A Home Kind",
-             means: "I could not find a Leaping Bunny or PETA certification for this brand, so I cannot confirm it is cruelty-free. That is not the same as saying it tests on animals. Some brands simply have not applied.", url: "/learn" },
-    ncf:   { short: "X",     img: null, title: "Not cruelty-free", who: "A Home Kind",
-             means: "Evidence I found says this brand, or the company behind it, tests on animals or sells where animal testing is required by law. See the brand page for the source.", url: "/learn" },
+    vegan: { short: "V",     img: null, title: "Vegan", who: null,
+             means: "The brand says its products are vegan, or a vegan certifier backs that up. Vegan status can vary between products, so check the label.", url: null },
+    unk:   { short: "?",    img: null, title: "Not certified", who: null,
+             means: "No Leaping Bunny or PETA certification found for this brand. That does not mean it tests on animals, as some brands simply have not applied.", url: null },
+    ncf:   { short: "X",     img: null, title: "Tests on animals", who: null,
+             means: "This brand, or the company behind it, tests on animals or sells where animal testing is required by law. The source is on the brand page.", url: null },
     lb:    { short: "LB",    img: null, title: "Leaping Bunny", who: "Cruelty Free International (CCIC in the US and Canada)",
              means: "Certified by Leaping Bunny: no animal testing of ingredients or finished products, anywhere in the world, backed by supplier checks and regular audits.", url: "https://www.leapingbunny.org" },
     peta:  { short: "PETA",  img: null, title: "PETA cruelty-free", who: "PETA (Beauty Without Bunnies)",
@@ -36,7 +34,7 @@
       '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical rating</b>' + LABELS[g.score] + "</span></button>";
   }
   function row(o) {
-    var h = ["cf", "unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
+    var h = ["unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
     return '<div class="ahk-stamps">' + h + rating(o.goy) + "</div>";
   }
   var dlg;
@@ -53,8 +51,8 @@
       document.body.appendChild(dlg);
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
     }
-    dlg.innerHTML = '<div class="ahk-card"><h3>' + esc(t) + '</h3><p class="ahk-who">By ' + esc(who) + "</p><p>" + esc(m) + "</p>" + ex +
-      (u ? '<p><a href="' + esc(u) + '" target="_blank" rel="noopener">Visit ' + esc(who.split(" (")[0]) + "</a></p>" : "") +
+    dlg.innerHTML = '<div class="ahk-card"><h3>' + esc(t) + '</h3>' + (who ? '<p class="ahk-who">By ' + esc(who) + "</p>" : "") + "<p>" + esc(m) + "</p>" + ex +
+      (u ? '<p><a href="' + esc(u) + '" target="_blank" rel="noopener">' + (k === "goy" ? "See the rating on Good On You" : "Visit " + esc(who.split(" (")[0])) + "</a></p>" : "") +
       '<button type="button" data-close class="ahk-close">Close</button></div>';
     dlg.hidden = false; dlg.querySelector(".ahk-close").focus();
   }
