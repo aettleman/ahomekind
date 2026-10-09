@@ -34,7 +34,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
   function rating(g) {
     if (!g || !LABELS[g.score]) return "";  // not rated by Good On You: show nothing
     return '<button type="button" class="ahk-rating ahk-r' + g.score + '" data-stamp="goy" data-score="' + g.score + '" data-url="' + esc(g.url || "https://directory.goodonyou.eco") + '" aria-label="Ethical rating: ' + LABELS[g.score] + ', tap for details">' +
-      '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical rating</b>' + LABELS[g.score] + "</span></button>";
+      '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical rating &middot; Good On You</b>' + LABELS[g.score] + "</span></button>";
   }
   function row(o) {
     var h = ["unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
@@ -46,7 +46,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
     if (k === "goy") {
       var n = +btn.getAttribute("data-score");
       t = "Ethical rating: " + LABELS[n] + " (" + n + " out of 5)"; who = "Good On You"; m = MEANS[n]; u = btn.getAttribute("data-url");
-      ex = "<p>This looks at how a brand treats people, the planet and animals overall. It is <b>not</b> about animal testing, so it is separate from the cruelty-free stamp. Rating by Good On You, an independent brand rating organisation.</p>";
+      ex = "<p>This looks at how a brand treats people, the planet and animals overall. It is <b>not</b> about animal testing, so it is separate from the cruelty-free stamp.</p><p class=\"ahk-key\">" + [5,4,3,2,1].map(function (k) { return (k === n ? "<b>" : "") + k + " " + LABELS[k] + (k === n ? "</b>" : ""); }).join(" &middot; ") + "</p><p><b>The rating, the 1 to 5 scale and its labels all belong to Good On You, an independent brand rating organisation. They are not my own rating.</b></p>";
     } else { var s = S[k]; t = s.title; who = s.who; m = s.means; u = s.url; }
     if (!dlg) {
       dlg = document.createElement("div"); dlg.className = "ahk-dlg"; dlg.setAttribute("role", "dialog"); dlg.setAttribute("aria-modal", "true"); dlg.hidden = true;

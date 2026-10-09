@@ -50,23 +50,24 @@
 <div class="bnav"><a class="ib" href="../../brand-check.html" id="ahkBackLink" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></a><span class="k-kick bnav-k" id="bnavKick">brand check</span><button type="button" class="ib" id="bpShare" aria-label="Share this brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M6 11.5H5v8.5h14v-8.5h-1"/></svg></button></div>
 <script>(function(){var a=document.getElementById("ahkBackLink");var r=document.referrer||"";if(/scan|ingredient-check|shelf/.test(r)){document.getElementById("bnavKick").textContent="scan result";}if(r.indexOf(location.origin)===0&&r!==location.href){a.addEventListener("click",function(e){e.preventDefault();history.back();});}})();</script>
 <div class="k-bp-grid"><div class="k-bp-l">
-<div class="bp"><div class="k-arch-box" style="background:#DCE6D6"><div class="pk spray" style="--c:#7C9A78;--cap:#3A1F3D"><i></i></div></div><div><p class="k-kick bp-k">household &middot; food kitchen</p><h1>Co-op</h1><!--ahk-stamps--><div class="ahk-stamps-mount" data-s="lb"></div><!--ahk-extras--><p>Leaping Bunny certified &middot; owner not known yet &middot; ££</p></div></div>
+<div class="bp"><div class="k-arch-box" style="background:#DCE6D6"><div class="pk spray" style="--c:#7C9A78;--cap:#3A1F3D"></div></div><div><p class="k-kick bp-k">household &middot; food kitchen</p><h1>Co-op</h1><!--ahk-stamps--><div class="ahk-stamps-mount" data-s="lb"></div><p>Leaping Bunny certified &middot; owner unknown &middot; ££</p></div></div>
 <div class="vcard tier-check"><div class="bigst"><span><b>cruelty</b>free</span></div>
 <h2>Cruelty-free. Vegan status varies by product.</h2>
 <p>Leaping Bunny certified own-brand range.</p>
 </div>
 
-<dl class="k-facts"><div><dt>Vegan</dt><i></i><dd>not yet confirmed</dd></div><div><dt>Owner</dt><i></i><dd>not known as of 9 Oct 2026</dd></div><div><dt>Price</dt><i></i><dd>££</dd></div></dl>
+<dl class="k-facts"><div><dt>Vegan</dt><dd>not yet confirmed</dd></div><div><dt>Owner</dt><dd>Unknown</dd></div><div><dt>Price</dt><dd>££</dd></div></dl>
 </div><div class="k-bp-r">
 
 
+<div class="k-sec"><p class="section-label">sources &amp; links</p><p style="font-size:13.5px;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p></div>
 <div class="signed"><div><span class="k-kick" style="display:block">checked by</span><span class="ahk-hand">Ash</span></div><button type="button" class="k-btn-p" id="bpSave" data-slug="co-op" data-name="Co-op"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.5 4h11v16.5L12 16.5l-5.5 4V4Z"/></svg><span>Save</span></button></div>
 <p class="k-fn">Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20Co-op">Let me know</a>.</p>
 </div></div>
 <script>(function(){var b=document.getElementById("bpSave"),k="ahk-saved-brands";function get(){try{return JSON.parse(localStorage.getItem(k)||"[]")}catch(e){return[]}}function paint(){var on=get().some(function(x){return x.slug===b.dataset.slug});b.classList.toggle("is-saved",on);b.querySelector("span").textContent=on?"Saved":"Save";}b.addEventListener("click",function(){var l=get().filter(function(x){return x.slug!==b.dataset.slug});if(!b.classList.contains("is-saved"))l.unshift({slug:b.dataset.slug,name:b.dataset.name});try{localStorage.setItem(k,JSON.stringify(l.slice(0,50)))}catch(e){}paint();});paint();var s=document.getElementById("bpShare");s.addEventListener("click",function(){var d={title:document.title,url:location.href};if(navigator.share){navigator.share(d).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(location.href);s.classList.add("is-copied");setTimeout(function(){s.classList.remove("is-copied")},1500);}});})();</script>
 </main>
 
-<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../how-i-decide.html">how I decide</a> &middot; <a href="../../parent-companies.html">parent companies</a> &middot; <a href="../../how-this-site-is-funded.html">how this site is funded</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
+<footer class="site-footer">a home kind. &middot; est. 2026 &middot; <a href="../../about.html">about</a> &middot; <a href="../../take-action.html">take action</a> &middot; <a href="../../privacy.html">privacy</a> &middot; <a href="https://ko-fi.com/ahomekind" target="_blank" rel="noopener">support a home kind</a></footer>
 <script src="../../js/site.js?v=8"></script>
 <script src="../../js/stamps.js"></script><script>document.querySelectorAll('.ahk-stamps-mount').forEach(function(e){var o={};(e.dataset.s||'').split(',').forEach(function(x){if(x)o[x]=1});if(e.dataset.g)o.goy={score:+e.dataset.g,url:e.dataset.u};e.innerHTML=AHKStamps.row(o)});</script></body>
 </html>

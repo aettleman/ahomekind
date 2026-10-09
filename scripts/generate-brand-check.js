@@ -226,7 +226,7 @@ function buildCardsMarkup(brands) {
   buckets.supermarket.forEach(function (b) { out.push(renderCard(b)); });
 
   out.push('<p class="section-label" style="color:#A8324E;">tested on animals</p>');
-  out.push('<p class="section-label-note" style="font-size:13.5px; color:#80686F; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
+  out.push('<p class="section-label-note" style="font-size:13.5px; color:#6A535D; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>');
   buckets['bad-all'].forEach(function (b) { out.push(renderCard(b)); });
 
   if (buckets.other.length) {

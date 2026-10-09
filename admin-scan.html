@@ -21,10 +21,10 @@
 #torchHint { display:none; position:absolute; top:10px; left:10px; right:10px; text-align:center; font-size:12px; line-height:1.5; color:#FBF4EF; background:rgba(28,14,32,0.62); backdrop-filter:blur(3px); border-radius:10px; padding:10px 12px; }
 
 .field { margin-bottom:14px; }
-.field label { display:block; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.field label { display:block; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#6A535D; margin-bottom:6px; }
 .field input, .field select, .field textarea { width:100%; box-sizing:border-box; padding:12px 14px; border:0.5px solid #E0C9BE; border-radius:8px; background:#fff; font-family:'Hanken Grotesk',sans-serif; font-size:15px; color:#3A1F3D; }
 .field textarea { min-height:70px; resize:vertical; }
-.field .hint { font-size:12px; color:#8C7580; margin-top:5px; line-height:1.5; }
+.field .hint { font-size:12px; color:#6A535D; margin-top:5px; line-height:1.5; }
 
 .batch-row { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:0.5px solid #E8D4CA; }
 .batch-row:last-child { border-bottom:none; }
@@ -67,7 +67,7 @@
 </div>
 <canvas id="captureCanvas" style="display:none;"></canvas>
 <button class="big-btn" id="startBtn">scan a barcode</button>
-<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:20px;"></div>
+<div id="status" style="text-align:center; color:#6A535D; font-size:13px; min-height:20px;"></div>
 
 <div class="card" style="margin-top:8px;">
 <div class="field">
@@ -84,7 +84,7 @@
 <button type="button" class="big-btn" id="addBtn" style="max-width:none;">add to batch</button>
 <p id="addMsg" style="font-size:13px; color:#3A1F3D; margin-top:8px; min-height:16px;"></p>
 <details style="margin-top:16px;">
-<summary style="cursor:pointer; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#8C7580;">know the name or status already? (optional)</summary>
+<summary style="cursor:pointer; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:#6A535D;">know the name or status already? (optional)</summary>
 <div style="margin-top:12px;">
 <div class="field">
 <label for="f-product">product name</label>
@@ -118,13 +118,13 @@
 
 <h2 style="font-size:16px; margin-top:32px;">this batch (<span id="batchCount">0</span>)</h2>
 <div id="batchList" class="card" style="display:none;"></div>
-<p id="batchEmpty" style="color:#8C7580; font-size:13.5px;">Nothing queued yet.</p>
+<p id="batchEmpty" style="color:#6A535D; font-size:13.5px;">Nothing queued yet.</p>
 
 <div id="exportSection" style="display:none; margin-top:20px;">
 <button type="button" class="big-btn alt" id="copyBtn" style="max-width:none;">copy batch as JSON</button>
 <p id="copyMsg"></p>
 <textarea id="batchExport" readonly></textarea>
-<p style="font-size:12.5px; color:#8C7580; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too - each one's filename is its barcode, so they'll match up automatically.</p>
+<p style="font-size:12.5px; color:#6A535D; margin-top:10px;">Paste this into a message and send it over. If any entries have a photo instead of a typed name/brand, send the photos too - each one's filename is its barcode, so they'll match up automatically.</p>
 
 <div id="photoShareWrap" style="display:none; margin-top:14px;">
 <button type="button" class="big-btn alt" id="sharePhotosBtn" style="max-width:none;">share photos (<span id="photoCount">0</span>)</button>
@@ -204,7 +204,7 @@ code = (code || "").replace(/[^0-9]/g, "");
 var s = el("matchStatus");
 if(code.length < 6 || code === lastCheckedCode){ return; }
 lastCheckedCode = code;
-s.style.color = "#8C7580";
+s.style.color = "#6A535D";
 s.textContent = "checking if this one's already on the list…";
 Promise.all([localBarcodesPromise, brandsPromise]).then(function(results){
 if(code !== lastCheckedCode) return; // a newer scan has come in since
@@ -216,7 +216,7 @@ fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_
 .then(function(d){
 if(code !== lastCheckedCode) return;
 var brandText = d && d.status === 1 && d.product && d.product.brands;
-if(!brandText){ s.style.color = "#8C7580"; s.textContent = "Couldn't find this one online yet -- worth adding."; return; }
+if(!brandText){ s.style.color = "#6A535D"; s.textContent = "Couldn't find this one online yet -- worth adding."; return; }
 var firstBrand = brandText.split(",")[0].trim();
 var rec = findBrandRecord(brands, brandText) || findBrandRecord(brands, firstBrand);
 if(rec){ showListMatch(rec.name, rec.tier); }
@@ -224,7 +224,7 @@ else { s.style.color = "#3A1F3D"; s.textContent = "\"" + firstBrand + "\" doesn'
 })
 .catch(function(){
 if(code !== lastCheckedCode) return;
-s.style.color = "#8C7580";
+s.style.color = "#6A535D";
 s.textContent = "Couldn't check right now (signal?) -- still fine to add.";
 });
 });
@@ -265,7 +265,7 @@ html += "<img src=\"" + item.photo + "\" alt=\"\" style=\"width:52px; height:52p
 html += "<div class=\"batch-row-body\">";
 html += "<div class=\"batch-row-top\"><strong>" + (item.brand || (item.photo ? "(from photo)" : "(no brand)")) + "</strong><span class=\"batch-tier " + item.tier + "\">" + TIER_LABEL[item.tier] + "</span></div>";
 html += "<div style=\"font-size:13px; color:#5A4550;\">" + (item.product || "") + " &middot; " + item.barcode + "</div>";
-if(item.note) html += "<div style=\"font-size:12.5px; color:#80686F; margin-top:4px;\">" + item.note + "</div>";
+if(item.note) html += "<div style=\"font-size:12.5px; color:#6A535D; margin-top:4px;\">" + item.note + "</div>";
 html += "</div><button type=\"button\" class=\"batch-remove\" data-i=\"" + i + "\" aria-label=\"remove\">&times;</button></div>";
 });
 listEl.innerHTML = html;

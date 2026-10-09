@@ -44,7 +44,7 @@
 .v-check .rcard-badge { background:#E8804C; }
 .v-warn .rcard-badge { background:#A85523; }
 .v-bad .rcard-badge { background:#C9546A; }
-.v-unverified .rcard-badge { background:#8C7580; }
+.v-unverified .rcard-badge { background:#6A535D; }
 .rcard-name-wrap { flex:1; min-width:0; }
 .rcard-name { font-family:'Gloock',serif; font-size:19px; color:#3A1F3D; line-height:1.25; }
 .rcard-name a { color:inherit; }
@@ -58,12 +58,12 @@
 .rstatus-value.no { color:#A8324E; }
 .rstatus-value.maybe { color:#A85523; }
 .rstatus-value.parent { color:#A85523; }
-.rstatus-value.na { color:#80686F; }
+.rstatus-value.na { color:#6A535D; }
 .parent-test-flag { display:inline-block; margin:8px 0 0; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:600; }
 .parent-test-flag.bad { background:#F5D3D6; color:#A8324E; }
 .parent-test-flag.good { background:#DCE6D6; color:#33502f; }
 .parent-test-flag.unverified { background:#F1E0D7; color:#6E5660; }
-.rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#80686F; list-style:revert; }
+.rcard-details summary { cursor:pointer; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#6A535D; list-style:revert; }
 .rcard-details summary:hover { color:#3A1F3D; }
 .rcard-note { font-size:13.5px; line-height:1.75; color:#3A1F3D; margin:10px 0 0; }
 .browse-btn-row { display:flex; justify-content:center; gap:14px; margin:0 auto 28px; max-width:480px; }
@@ -71,7 +71,7 @@
 /* Browse buttons now use the shared .btn-pri / .btn-sec components --
    the old per-ID colours are gone so they can't outrank them. */
 @media (max-width:480px) { .browse-btn-row { flex-direction:column; max-width:320px; } }
-.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#6A535D; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:20px; }
 .kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:11px 20px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
@@ -84,7 +84,7 @@
 .kswap-alt-name { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:4px; }
 .kswap-alt-note { font-size:13px; line-height:1.6; color:#5A4550; margin-bottom:12px; }
 .kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
-.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#6A535D; margin-bottom:6px; }
 .kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5A4550; margin-bottom:0; }
 .kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
 .kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
@@ -93,7 +93,7 @@
 .kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #E5CFC4; }
 .kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10.5px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
+.kswap-affiliate-note { display:block; font-size:10.5px; color:#6A535D; letter-spacing:0.2px; margin-top:3px; }
 .kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#7C9A78; }
 .kswap-swap-btn { background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
 .kswap-swap-btn:hover { background:#2A1630; }
@@ -273,7 +273,7 @@
 </div>
 
 <div id="listControls" style="display:none; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
-<p id="resultCount" style="margin:0; font-size:13px; color:#80686F;"></p>
+<p id="resultCount" style="margin:0; font-size:13px; color:#6A535D;"></p>
 <div class="cert-select-row" style="margin:0;">
 <label for="pageSizeSelect">show</label>
 <select id="pageSizeSelect">
@@ -282,7 +282,7 @@
 <option value="100">100</option>
 <option value="all">all</option>
 </select>
-<span style="font-size:13px; color:#80686F;">per page</span>
+<span style="font-size:13px; color:#6A535D;">per page</span>
 </div>
 </div>
 
@@ -1071,7 +1071,7 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card check" data-category="household" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/sainsbury-s/">Sainsbury's</a></h3><p>Leaping Bunny certified own-brand range; own-brand beauty line has expanded to a large fully vegan makeup range.</p></div>
 <div class="card check" data-category="household" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/waitrose/">Waitrose</a></h3><p>Leaping Bunny certified own-brand range.</p></div>
 <p class="section-label" style="color:#A8324E;">tested on animals</p>
-<p class="section-label-note" style="font-size:13.5px; color:#80686F; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>
+<p class="section-label-note" style="font-size:13.5px; color:#6A535D; margin-bottom:18px;">These parent companies confirm they test where legally required, most commonly to sell into mainland China.</p>
 <div class="card bad" data-category="skin-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/acuvue/">Acuvue</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
 <div class="card bad" data-category="household" data-region="uk-europe usa-canada australia-nz asia africa-middle-east south-central-america"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/air-wick/">Air Wick</a></h3><p>Owned by Reckitt - the same parent company as Dettol - who test for regulatory compliance rather than refusing markets that require it.</p></div>
 <div class="card bad" data-category="skin-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/algenist/">Algenist</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
@@ -1380,12 +1380,25 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card unverified" data-category="" data-region="uk-europe"><p class="rating unverified">&#128269; says it's cruelty-free, not certified</p><h3><a href="brands/stella-mccartney-fragrances/">Stella McCartney fragrances</a></h3><p>Stella McCartney says its fragrances are never tested on animals and are vegan, and it doesn't sell them in China. It isn't certified by Leaping Bunny or PETA. The fragrances are made under licence by P&amp;G Prestige.</p><p class="parent-test-flag unverified">&#128269; parent company's testing policy is also unverified</p></div>
 <div class="card check" data-category="" data-region="uk-europe"><p class="rating check">&#128048; cruelty-free, check vegan status per product</p><h3><a href="brands/ted-baker/">Ted Baker Beauty and Fragrance</a></h3><p>PETA Germany lists Ted Baker as cruelty-free. Ted Baker says its beauty and fragrance products are vegan except the hair wax (beeswax). This covers beauty and fragrance only.</p></div>
 <!-- GENERATED:BRAND-CARDS:END -->
-<p id="noResults" style="display:none; text-align:center; color:#80686F; font-size:14px; padding:24px 0;">Nothing here yet for that one.</p>
+<div id="noResults" class="ahk-nf" style="display:none" role="status">
+<svg class="ahk-nf-i" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#3A1F3D" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="27" cy="27" r="16" fill="#FBE3D3"/><path d="M39 39l14 14"/><path d="M21 27c2-4 10-4 12 0" stroke="#E8804C"/><circle cx="22" cy="23" r="1.5" fill="#3A1F3D"/><circle cx="32" cy="23" r="1.5" fill="#3A1F3D"/></svg>
+<p class="ahk-nf-h" id="ahkNfH">Hmm, I haven't got that one yet.</p>
+<p class="ahk-nf-p" id="ahkNfP">Tell me the brand and I'll check it for you.</p>
+<a class="ahk-nf-b" id="ahkNfB" href="mailto:hello@ahomekind.com?subject=Please%20add%20a%20brand">Send me this brand</a>
+<p class="ahk-nf-s">Want to look yourself? Try <a href="https://crueltyfree.peta.org" target="_blank" rel="noopener">PETA</a> or <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>.</p>
+</div>
+<style>.ahk-nf{text-align:center;padding:28px 18px;margin:18px 0;border:2px dashed #E5CFC4;border-radius:20px;background:#FBF4EF;color:#2A1630}
+.ahk-nf-i{display:block;margin:0 auto 6px}.ahk-nf-h{font:400 24px/1.2 Gloock,Georgia,serif;margin:6px 0}.ahk-nf-p{margin:0 0 16px;font-size:15px;opacity:.8}
+.ahk-nf-b{display:inline-block;background:#3A1F3D;color:#FBF4EF;border-radius:999px;padding:12px 24px;font:600 15px "Hanken Grotesk",system-ui,sans-serif;text-decoration:none}
+.ahk-nf-b:hover,.ahk-nf-b:focus-visible{background:#2A1630;outline:3px solid #E8804C;outline-offset:2px}.ahk-nf-s{margin:16px 0 0;font-size:13px;opacity:.75}.ahk-nf-s a{color:inherit}</style>
+<script>window.ahkNoResults=function(){var i=document.getElementById('ratingSearch'),t=(i&&i.value||'').trim(),h=document.getElementById('ahkNfH'),p=document.getElementById('ahkNfP'),a=document.getElementById('ahkNfB');if(!h)return;
+if(t){h.textContent="Hmm, I haven't got that one yet.";p.textContent="Tell me about \u201c"+t.slice(0,60)+"\u201d and I'll check it for you.";a.textContent="Send me this brand";a.href="mailto:hello@ahomekind.com?subject="+encodeURIComponent("Please add a brand: "+t.slice(0,80))+"&body="+encodeURIComponent("Please check this brand: "+t.slice(0,80)+"\n\nWhere I buy it (optional): ");}
+else{h.textContent="Nothing here yet.";p.textContent="Is there a brand missing? Tell me and I'll check it.";a.textContent="Suggest a brand";a.href="mailto:hello@ahomekind.com?subject=Please%20add%20a%20brand";}};</script>
 </div>
 
 <div id="paginationNav" style="display:none; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; margin-top:8px;"></div>
 
-<p style="margin-top:36px; font-size:13px; color:#80686F; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
+<p style="margin-top:36px; font-size:13px; color:#6A535D; line-height:1.9;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>
 
 <div style="text-align:center; margin:28px 0 8px;">
 <a href="mailto:hello@ahomekind.com?subject=something%20wrong%20on%20brand%20check" style="display:inline-block; padding:12px 24px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; color:#3A1F3D; font-size:12px; letter-spacing:1px; text-transform:uppercase;">spotted something wrong? let me know: hello@ahomekind.com</a>
@@ -1788,7 +1801,7 @@ card.classList.remove('card-reveal');
 }
 });
 
-document.getElementById('noResults').style.display = matches.length ? 'none' : 'block';
+document.getElementById('noResults').style.display = matches.length ? 'none' : 'block'; if (window.ahkNoResults) window.ahkNoResults();
 resultCount.textContent = matches.length
 ? (matches.length + ' brand' + (matches.length === 1 ? '' : 's') + (totalPages > 1 ? ' · page ' + currentPage + ' of ' + totalPages : ''))
 : '';
@@ -2008,7 +2021,7 @@ card.classList.remove('card-reveal');
 document.querySelectorAll('#allBrands .section-label, #allBrands .section-label-note').forEach(function(lbl){
 lbl.style.display = 'none';
 });
-document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block';
+document.getElementById('noResults').style.display = (anyVisible || q === '') ? 'none' : 'block'; if (window.ahkNoResults) window.ahkNoResults();
 resultCount.textContent = matchCount ? (matchCount + ' brand' + (matchCount === 1 ? '' : 's')) : '';
 if (anyVisible && !restoringState) {
 window.scrollTo({ top: allBrands.offsetTop - 90, behavior: 'smooth' });
@@ -2153,7 +2166,7 @@ try {
 <style>
 .rabbit-stamp { display:flex; align-items:center; gap:18px; background:var(--ahk-warm-soft,#FBEDE4); border:1px solid var(--ahk-warm-border,#EBDAD1); border-radius:22px; padding:20px 24px; margin:38px auto 8px; max-width:520px; }
 .rabbit-stamp img { width:76px; height:76px; border-radius:50%; object-fit:cover; flex:none; }
-.rabbit-stamp p { font-family:'Gloock',serif; font-style:italic; font-size:22px; line-height:1.35; color:var(--ahk-warm-deep,#A0582E); margin:0; }
+.rabbit-stamp p { font-family:'Gloock',serif; font-style:italic; font-size:22px; line-height:1.35; color:var(--ahk-warm-deep,#8F4E27); margin:0; }
 @media (max-width:480px){ .rabbit-stamp { gap:14px; padding:16px 18px; } .rabbit-stamp img { width:60px; height:60px; } .rabbit-stamp p { font-size:19px; } }
 </style>
 </main>

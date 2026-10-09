@@ -1,4 +1,4 @@
-import json, os, re, glob, subprocess, html, datetime, unicodedata
+import json, os, re, glob, urllib.parse, subprocess, html, datetime, unicodedata
 def run(c):
     print(">", c); subprocess.run(c, shell=True, check=False)
 run("python3 scripts/add_stamps.py")
@@ -27,7 +27,8 @@ decide = (H2 % "Four answers" + "<p>Every brand gets one of four answers.</p>"
  "<p><strong>Tests on animals.</strong> The brand, or the company behind it, tests on animals or sells where the law requires it. Every one of these has a source.</p>"
  "<p><strong>Vegan</strong> is checked separately, because a brand can be cruelty-free without being vegan.</p>"
  + H2 % "Ethical rating" + "<p>The ethical rating comes from Good On You. It covers how a brand treats people, the planet and animals overall, so it isn't about animal testing. It's their rating, not mine, and each one links to their page.</p>"
- + H2 % "Parent companies" + "<p>A brand can be cruelty-free while the company that owns it isn't. Each parent company has its own page.</p>"
+ + H2 % "Parent companies" + "<p>A brand can be cruelty-free while the company that owns it isn't. Each parent company has its own page.</p><p><strong>Independent</strong> only appears where the brand says it is independently or family owned. <strong>Unknown</strong> means I couldn't find a parent company yet, so the brand may well be independent. I add owners once I've checked them.</p>"
+ + H2 % "Sources" + "<p>Every brand page lists where I checked, which is the Leaping Bunny, Cruelty Free International and PETA lists. Where a brand has its own certification page or statement, I link to that too.</p>"
  + H2 % "Mistakes" + "<p>I check certifier lists, brand websites and public databases, and I check as much as I can by hand. Brands change, so each page shows when I last checked it. If you spot a mistake, email hello@ahomekind.com and I'll fix it.</p>")
 funded = ("<p>A Home Kind is just me. No brand pays to be listed or to be rated better, and I don't take brand sponsorship. There are no adverts on the site.</p>"
  + H2 % "Where any income comes from" + "<p>Some links are Amazon affiliate links, which earn me a small commission if you buy, at no extra cost to you. They're marked &quot;paid link&quot; and never change what a brand is shown as.</p>"
@@ -80,9 +81,37 @@ for b in brands:
     if b.get("parentCompany"):
         pj = json.dumps([b["parentCompany"], "/parent-" + pslugs[b["parentCompany"]]]).replace("</", "<\\/")
         h = h.replace("</body>", "<script>(function(p){var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[],t;while(t=w.nextNode())if(t.nodeValue.trim()===p[0]&&!t.parentNode.closest('a,footer,nav,script,title,h1'))a.push(t);a.forEach(function(t){var l=document.createElement('a');l.href=p[1];l.style.cssText='color:inherit;text-decoration:underline';t.parentNode.insertBefore(l,t);l.appendChild(t)})})(" + pj + ")</script></body>", 1)
+    if b.get("tier") in ("good", "check", "warn") and set(b.get("category") or []) & {"skincare", "makeup-beauty", "body-shower", "haircare", "dental", "period-menstrual"}:
+        q = urllib.parse.quote(b["name"])
+        shop = ('<div class="k-sec" style="margin:24px 0"><p class="section-label">where to look in the UK</p><p style="font-size:13.5px;margin:0 0 8px">Search for %s at: '
+          '<a href="https://www.boots.com/sitesearch?searchTerm=%s" target="_blank" rel="noopener">Boots</a> &middot; '
+          '<a href="https://www.superdrug.com/search?text=%s" target="_blank" rel="noopener">Superdrug</a> &middot; '
+          '<a href="https://www.sephora.co.uk/search?q=%s" target="_blank" rel="noopener">Sephora UK</a></p>'
+          '<p style="font-size:12.5px;color:#6A535D;margin:0">These are plain search links. I earn nothing from them, and not every shop stocks every brand.</p></div>') % (E(b["name"]), q, q, q)
+        h = h.replace('<div class="signed">', shop + '<div class="signed">', 1)
     open(f, "w", encoding="utf-8").write(h); n += 1
 print("Extras added to", n, "brand pages")
 # ---------- parent company pages ----------
+# ---------- parent page brand chips ----------
+PCSS = ('<style>.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:14px 0}'
+ '.pc-chip{display:flex;flex-direction:column;gap:6px;padding:10px 12px;border:1.5px solid #E5CFC4;border-radius:14px;background:#FBF4EF;text-decoration:none;color:#2A1630;line-height:1.25}'
+ '.pc-chip:hover,.pc-chip:focus-visible{border-color:#E8804C}'
+ '.pc-name{font-weight:600;font-size:15px}.pc-tag{font-size:12px;color:#6A535D}'
+ '.pc-st{display:flex;gap:5px;align-items:center;flex-wrap:wrap;min-height:26px}'
+ '.pc-s{width:26px;height:26px;border-radius:50%;border:1.5px solid #3A1F3D;background:#F4E6DE;color:#3A1F3D;display:grid;place-items:center;font:700 9px/1 system-ui,sans-serif}'
+ '.pc-s.v{background:#3A1F3D;color:#F4E6DE}.pc-s.u{border-style:dashed;font-size:13px}.pc-s.x{background:#9C3A3A;border-color:#9C3A3A;color:#fff;font-size:13px}'
+ '.pc-r{font:700 11px/1 system-ui,sans-serif;color:#fff;border-radius:999px;padding:7px 8px;background:#8A6A00}.pc-r4,.pc-r5{background:#4C7A3A}.pc-r1{background:#9C3A3A}.pc-r2{background:#B4601F}</style>')
+TAGS = {"good": "cruelty-free and vegan", "check": "cruelty-free", "warn": "owner isn't", "bad": "tests on animals", "unverified": "not certified"}
+def chip(b):
+    t = b.get("tier", ""); n = (b.get("note") or "") + " " + (b.get("claim") or ""); st = []
+    if t == "unverified": st.append('<span class="pc-s u" title="Not certified">?</span>')
+    if t == "bad": st.append('<span class="pc-s x" title="Tests on animals">X</span>')
+    if b.get("vegan") == "full": st.append('<span class="pc-s v" title="Vegan">V</span>')
+    if t in ("good", "check", "warn") and re.search("Leaping Bunny|Cruelty Free International", n): st.append('<span class="pc-s" title="Leaping Bunny">LB</span>')
+    if t in ("good", "check", "warn") and "PETA" in n: st.append('<span class="pc-s" title="PETA">PETA</span>')
+    g = goy.get(b["slug"])
+    if g: st.append('<span class="pc-r pc-r%d" title="Good On You rating">%d/5</span>' % (g["score"], g["score"]))
+    return '<a class="pc-chip" href="/%s/"><span class="pc-name">%s</span><span class="pc-st">%s</span><span class="pc-tag">%s</span></a>' % (os.path.dirname(paths[b["slug"]]), E(b["name"]), "".join(st), TAGS.get(t, ""))
 made = 0
 groups = {}
 for b in brands:
@@ -93,8 +122,8 @@ for ps, kids in groups.items():
     if True in flags: st = "This company tests on animals, or sells where animal testing is required."
     elif False in flags: st = "This company doesn't test on animals."
     else: st = "I haven't confirmed this company's animal testing policy yet."
-    li = "".join('<li><a href="/%s/">%s</a></li>' % (os.path.dirname(paths[b["slug"]]), E(b["name"])) for b in kids if b["slug"] in paths)
-    body = "<p><strong>%s</strong></p><p>A brand can be cruelty-free while the company that owns it isn't, so I show both.</p>%s<ul>%s</ul>" % (E(st), H2 % "Brands I list from this company", li)
+    li = "".join(chip(b) for b in sorted(kids, key=lambda x: x["name"].lower()) if b["slug"] in paths)
+    body = PCSS + "<p><strong>%s</strong></p><p>A brand can be cruelty-free while the company that owns it isn't, so I show both.</p>%s<div class=\"pc-grid\">%s</div>" % (E(st), H2 % "Brands I list from this company", li)
     page("parent-%s.html" % ps, "%s - a home kind" % name, "parent company", name, body, "Animal testing policy of %s and the brands I list from it." % name)
     made += 1
 idx = "".join('<li><a href="/parent-%s">%s</a></li>' % (ps, E(max({b["parentCompany"] for b in kids}, key=len))) for ps, kids in sorted(groups.items()))

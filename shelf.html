@@ -43,7 +43,7 @@
    (see js/swap.js), just not previously wired up here. Styled to sit
    quietly inside each brand's own result card rather than as a separate
    block, since a shelf photo can turn up several brands at once. */
-.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#6A535D; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:14px; }
 .kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:9px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
@@ -56,7 +56,7 @@
 .kswap-alt-name { font-family:'Gloock',serif; font-size:16px; color:#3A1F3D; margin-bottom:4px; }
 .kswap-alt-note { font-size:12.5px; line-height:1.6; color:#5A4550; margin-bottom:10px; }
 .kswap-compare { margin:4px 0 10px; padding:10px 12px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
-.kswap-compare-title { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-title { font-size:10.5px; letter-spacing:0.8px; text-transform:uppercase; color:#6A535D; margin-bottom:6px; }
 .kswap-compare-body { font-size:12px; line-height:1.6; color:#5A4550; margin-bottom:0; }
 .kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
 .kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
@@ -77,7 +77,7 @@
 .kswap-affiliate-row { margin:10px 0 0; padding-top:10px; border-top:0.5px dashed #E5CFC4; }
 .kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
+.kswap-affiliate-note { display:block; font-size:10px; color:#6A535D; letter-spacing:0.2px; margin-top:3px; }
 
 /* Live shelf camera: a viewfinder with a guide frame and a running tip
    line, so you know where to point and when the shot is actually good
@@ -189,10 +189,10 @@
 </div><!-- /.shelf-frame -->
 
 <div class="bar" id="bar"><span id="barfill"></span></div>
-<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:22px;"></div>
+<div id="status" style="text-align:center; color:#6A535D; font-size:13px; min-height:22px;"></div>
 <div id="results"></div>
 
-<p style="margin-top:30px; font-size:12.5px; color:#8C7580; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
+<p style="margin-top:30px; font-size:12.5px; color:#6A535D; line-height:1.9;">For the clearest read: stand close enough that two or three product names fill the box, hold the phone level and straight-on rather than at an angle, and check the label isn't sitting in a shadow. It only finds brands already on my <a href="brand-check.html">brand check</a> list. Nothing leaves your phone, the reading happens in your browser.</p>
 </main>
 <script src="https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"></script>
 <script src="js/swap.js?v=1"></script>
@@ -416,7 +416,7 @@ return c.toDataURL("image/jpeg", 0.82);
 
 function renderLiveResults(){
 var list = Object.keys(liveFound).map(function(k){ return liveFound[k]; });
-var out = "<p style=\"text-align:center; color:#8C7580; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
+var out = "<p style=\"text-align:center; color:#6A535D; font-size:12.5px; margin-bottom:12px;\"><span class=\"live-pulse\" aria-hidden=\"true\"></span>" +
 (list.length ? (list.length + (list.length === 1 ? " brand" : " brands") + " found so far - keep panning slowly") : "scanning&hellip; pan slowly across the shelf") +
 "</p>";
 if(list.length){

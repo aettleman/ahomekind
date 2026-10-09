@@ -54,12 +54,18 @@ function pageDescription(brand) {
 
 function renderSection(title, items, emptyNote) {
   if (!items || items.length === 0) {
-    return '<p class="section-label">' + title + '</p>\n<p style="color:#80686F; font-size:13.5px;">' + emptyNote + '</p>';
+    return '<p class="section-label">' + title + '</p>\n<p style="color:#6A535D; font-size:13.5px;">' + emptyNote + '</p>';
   }
   const rows = items.map(function(i){ return '<li>' + escapeHtml(i) + '</li>'; }).join('\n');
   return '<p class="section-label">' + title + '</p>\n<ul style="margin:0 0 20px 20px; font-size:14px; line-height:1.9;">\n' + rows + '\n</ul>';
 }
 
+function ownerWord(b) {
+  return /independently owned|family[- ]owned|founder[- ]owned|independent (?:\w+ )?(?:company|brand)/i.test(b.note || '') ? 'Independent' : 'Unknown';
+}
+function renderChecked(hasLinks) {
+  return (hasLinks ? '' : '<p class="section-label">sources &amp; links</p>') + '<p style="font-size:13.5px;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>';
+}
 function renderLinks(links) {
   if (!links || links.length === 0) return '';
   const rows = links.map(function(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label || l.url) + '</a>'; }).join(' &middot; ');
@@ -110,7 +116,7 @@ function pkHtml(brand) {
     : (cat === 'household-cleaning' || cat === 'laundry') ? 'spray' : cat === 'dental' ? 'tube' : 'bottle';
   const h = hashOf(brand.slug);
   const col = PK_COLOURS[h % PK_COLOURS.length];
-  return '<div class="pk ' + shape + '" style="--c:' + col + ';--cap:#3A1F3D"><i></i></div>';
+  return '<div class="pk ' + shape + '" style="--c:' + col + ';--cap:#3A1F3D"></div>';
 }
 function certLine(brand) {
   const n = String(brand.note || '').toLowerCase();
@@ -123,7 +129,7 @@ function certLine(brand) {
     if (/vegan society/.test(n)) out.push('Vegan Society');
   }
   let line = out.length ? (out.length === 1 && brand.tier !== 'bad' ? out[0] + ' certified' : out.join(' &middot; ')) : TIER_SHORT[brand.tier] || '';
-  if (!brand.parentCompany && brand.tier !== 'bad' && brand.tier !== 'unverified') line += ' &middot; owner not known yet';
+  if (!brand.parentCompany && brand.tier !== 'bad' && brand.tier !== 'unverified') line += ' &middot; ' + (ownerWord(brand) === 'Independent' ? 'Independent' : 'owner unknown');
   if (brand.price) line += ' &middot; ' + escapeHtml(brand.price);
   return line;
 }
@@ -166,7 +172,7 @@ function buildSwaps(brand, allBrands) {
   let html = '<p class="swaps-kick">kinder swaps</p><div class="swp">';
   picks.forEach(function(p){
     html += '<a href="../' + p.slug + '/"><div class="k-arch-box" style="background:' + TIER_WASH[p.tier] + '">' + pkHtml(p) + '</div>';
-    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.parentCompany ? TIER_SHORT[p.tier] : 'owner not known') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
+    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.parentCompany ? TIER_SHORT[p.tier] : ownerWord(p).toLowerCase() === 'unknown' ? 'owner unknown' : 'independent') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
   });
   html += '</div>';
   return html;
@@ -267,12 +273,12 @@ function renderBrandPage(brand) {
   lines.push('</div>');
   if (brand.claim) lines.push(claimBox(brand));
   lines.push(veganButNotCrueltyFreeWarning);
-  lines.push('<dl class="k-facts"><div><dt>Vegan</dt><i></i><dd>' + veganLine + '</dd></div><div><dt>Owner</dt><i></i><dd>' + (brand.parentCompany ? escapeHtml(brand.parentCompany) : (function(){return 'not known as of ' + new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});})()) + '</dd></div>' + (brand.price ? '<div><dt>Price</dt><i></i><dd>' + escapeHtml(brand.price) + '</dd></div>' : '') + '</dl>');
+  lines.push('<dl class="k-facts"><div><dt>Vegan</dt><dd>' + veganLine + '</dd></div><div><dt>Owner</dt><dd>' + (brand.parentCompany ? escapeHtml(brand.parentCompany) : ownerWord(brand)) + '</dd></div>' + (brand.price ? '<div><dt>Price</dt><dd>' + escapeHtml(brand.price) + '</dd></div>' : '') + '</dl>');
   lines.push('</div><div class="k-bp-r">');
   lines.push(buildOwnershipChain(brand, ALL_BRANDS));
   lines.push(buildSwaps(brand, ALL_BRANDS));
   if (brand.products && brand.products.length) lines.push('<div class="k-sec">' + renderSection('products checked', brand.products, '') + '</div>');
-  if (brand.links && brand.links.length) lines.push('<div class="k-sec">' + renderLinks(brand.links) + '</div>');
+  lines.push('<div class="k-sec">' + renderLinks(brand.links) + renderChecked(!!(brand.links && brand.links.length)) + '</div>');
   lines.push('<div class="signed"><div><span class="k-kick" style="display:block">checked by</span><span class="ahk-hand">Ash</span></div><button type="button" class="k-btn-p" id="bpSave" data-slug="' + brand.slug + '" data-name="' + escapeHtml(brand.name) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.5 4h11v16.5L12 16.5l-5.5 4V4Z"/></svg><span>Save</span></button></div>');
   lines.push('<p class="k-fn">' + (brand.lastVerified ? 'Last updated ' + formatVerifiedDate(brand.lastVerified) + ', checked against the source directory that day. ' : '') + 'Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">Let me know</a>.</p>');
   lines.push('</div></div>');

@@ -256,7 +256,7 @@ body.scan-card-open #results .result-in { animation:none; }
 .rescard-close { position:absolute; top:2px; right:0; width:28px; height:28px; border-radius:50%; background:rgba(42,22,48,0.08); border:0; color:var(--ahk-heading,#3A1F3D); font-size:13px; line-height:1; cursor:pointer; }
 .rescard-foot { margin:14px 0 0; text-align:center; }
 .rescard-full { background:none; border:0; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12px; color:var(--ahk-green,#3A1F3D); text-decoration:underline; text-underline-offset:3px; cursor:pointer; padding:6px; }
-.rescard-hint { font-size:10px; letter-spacing:1.2px; text-transform:uppercase; color:var(--ahk-text-muted,#8C7580); margin:6px 0 0; }
+.rescard-hint { font-size:10px; letter-spacing:1.2px; text-transform:uppercase; color:var(--ahk-text-muted,#6A535D); margin:6px 0 0; }
 
 /* Manual entry lives on the same screen, up in the empty space above the
    guide, rather than being a reason to leave it. */
@@ -366,7 +366,7 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .chip.yes { background:#DCE6D6; border-color:#7C9A78; color:#33502f; }
 .chip.no { background:#F5D3D6; border-color:#D9703C; color:#A85523; }
 .ingredient-watch { margin-top:12px; padding-top:12px; border-top:0.5px solid #E8D4CA; }
-.iw-title { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#8C7580; margin-bottom:8px; }
+.iw-title { font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:#6A535D; margin-bottom:8px; }
 .iw-row { border-radius:8px; padding:9px 12px; margin-bottom:6px; font-size:13px; line-height:1.5; }
 .iw-row:last-child { margin-bottom:0; }
 .iw-name { display:block; font-weight:600; color:#3A1F3D; margin-bottom:2px; }
@@ -386,7 +386,7 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .v-good .rcard-badge { background:#3A1F3D; }
 .v-warn .rcard-badge { background:#E8804C; }
 .v-bad .rcard-badge { background:#C9546A; }
-.v-unknown .rcard-badge { background:#8C7580; }
+.v-unknown .rcard-badge { background:#6A535D; }
 .rcard-name { font-family:'Gloock',serif; font-size:21px; color:#3A1F3D; line-height:1.2; }
 .rcard-headline { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#5A4550; margin-top:2px; }
 .rstatus-row { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
@@ -396,14 +396,14 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .rstatus-value.yes { color:#33502f; }
 .rstatus-value.no { color:#A8324E; }
 .rstatus-value.maybe { color:#A85523; }
-.rstatus-value.na { color:#80686F; }
+.rstatus-value.na { color:#6A535D; }
 .rcard-note { font-size:14px; line-height:1.7; color:#3A1F3D; margin:0; }
 
 /* Kind Swaps + Cruelty Freebies -- see js/swap.js for the logic. Styled
    to sit quietly alongside the verdict card above it, not compete with
    it: same radius/border language as .card, no new colour of its own. */
 #swapSection { margin-top:4px; }
-.kswap-loading { font-size:13px; color:#8C7580; text-align:center; padding:10px 0; }
+.kswap-loading { font-size:13px; color:#6A535D; text-align:center; padding:10px 0; }
 .kswap-details { margin-top:20px; }
 .kswap-summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; background:#F1E0D7; border:0.5px solid #E0C9BE; border-radius:30px; padding:11px 20px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.5px; color:#3A1F3D; }
 .kswap-summary::-webkit-details-marker { display:none; }
@@ -416,7 +416,7 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .kswap-alt-name { font-family:'Gloock',serif; font-size:17px; color:#3A1F3D; margin-bottom:4px; }
 .kswap-alt-note { font-size:13px; line-height:1.6; color:#5A4550; margin-bottom:12px; }
 .kswap-compare { margin:4px 0 12px; padding:12px 14px; border-radius:10px; background:#FBF4EF; border:0.5px solid #E5CFC4; }
-.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#8C7580; margin-bottom:6px; }
+.kswap-compare-title { font-size:11px; letter-spacing:0.8px; text-transform:uppercase; color:#6A535D; margin-bottom:6px; }
 .kswap-compare-body { font-size:12.5px; line-height:1.65; color:#5A4550; margin-bottom:0; }
 .kswap-compare-verified { background:#DCE6D6; border-color:#C5D6BE; }
 .kswap-compare-verified .kswap-compare-title { color:#3A1F3D; }
@@ -425,7 +425,7 @@ body.scan-standby .scan-close { display:none; position:fixed; top:calc(env(safe-
 .kswap-affiliate-row { margin:12px 0 0; padding-top:12px; border-top:0.5px dashed #E5CFC4; }
 .kswap-shop-link { display:block; font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:12.5px; letter-spacing:0.3px; color:#3A1F3D; text-decoration:none; }
 .kswap-shop-link:hover { text-decoration:underline; }
-.kswap-affiliate-note { display:block; font-size:10.5px; color:#8C7580; letter-spacing:0.2px; margin-top:3px; }
+.kswap-affiliate-note { display:block; font-size:10.5px; color:#6A535D; letter-spacing:0.2px; margin-top:3px; }
 .kswap-alt-link { font-size:12px; letter-spacing:0.5px; color:#7C9A78; }
 .kswap-swap-btn { background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:1px; text-transform:uppercase; padding:10px 16px; border:none; border-radius:30px; cursor:pointer; }
 .kswap-swap-btn:hover { background:#2A1630; }
@@ -474,7 +474,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 .scan-h1-icon { flex-shrink:0; }
 @media (max-width:480px){ .scan-h1 { font-size:25px; margin-top:16px; } .scan-h1-icon { width:22px; height:22px; } }
 .scan-sub { text-align:center; max-width:360px; margin:0 auto 22px; font-size:15px; line-height:1.6; }
-.manual-lead { text-align:center; font-size:12px; color:#8C7580; margin:16px 0 10px; }
+.manual-lead { text-align:center; font-size:12px; color:#6A535D; margin:16px 0 10px; }
 .shelf-cta-wrap { text-align:center; margin:18px 0 4px; }
 .shelf-cta { display:inline-flex; align-items:center; gap:6px; border:1px solid #7C9A78; border-radius:30px; padding:8px 16px; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:11.5px; letter-spacing:0.3px; color:#3A1F3D; }
 .shelf-cta:hover, .shelf-cta:focus-visible { background:#F1E0D7; color:#3A1F3D; }
@@ -486,9 +486,9 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 .secondary-label { font-family:'Gloock',serif; font-size:16.5px; color:#3A1F3D; margin-bottom:6px; }
 .secondary-sub { font-size:13px; color:#5A4550; line-height:1.6; margin-bottom:0; }
 .quiet-details { margin-top:26px; padding-top:18px; border-top:0.5px solid #E5CFC4; }
-.quiet-details summary { cursor:pointer; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#8C7580; list-style:revert; }
+.quiet-details summary { cursor:pointer; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#6A535D; list-style:revert; }
 .quiet-details summary:hover { color:#3A1F3D; }
-.quiet-details p { font-size:12.5px; color:#8C7580; line-height:1.9; margin:12px 0 0; }
+.quiet-details p { font-size:12.5px; color:#6A535D; line-height:1.9; margin:12px 0 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -625,7 +625,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 </div>
 </div><!-- /.scan-frame -->
 
-<div id="status" style="text-align:center; color:#8C7580; font-size:13px; min-height:20px;"></div>
+<div id="status" style="text-align:center; color:#6A535D; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
 
 <details class="quiet-details">
@@ -946,7 +946,7 @@ var h = "<div class=\"share-row\" style=\"display:flex; gap:10px; flex-wrap:wrap
 h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-result\">share this result</button>";
 h += "<button type=\"button\" class=\"btn\" id=\"" + p + "-share-site\">share a home kind</button>";
 h += "</div>";
-h += "<p id=\"" + p + "-share-msg\" style=\"font-size:12.5px; color:#80686F; margin:8px 0 0; min-height:16px;\"></p>";
+h += "<p id=\"" + p + "-share-msg\" style=\"font-size:12.5px; color:#6A535D; margin:8px 0 0; min-height:16px;\"></p>";
 return h;
 }
 function wireShareWidget(idPrefix, brand){
@@ -1075,7 +1075,7 @@ function run(){
 var brand = findBrand(input.value);
 el("brandResult").innerHTML = brand
 ? verdictHTML(brand) + (brand.tier !== "good" && brand.tier !== "check" ? "<div id=\"swapSection2\"></div>" : "") + shareWidget("share2")
-: "<p style=\"font-size:13.5px; color:#80686F; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Ultimate Cruelty-Free List</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
+: "<p style=\"font-size:13.5px; color:#6A535D; margin:8px 0 0;\">Not on my list yet either - try <a href=\"https://crueltyfree.peta.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">PETA's Ultimate Cruelty-Free List</a> or <a href=\"https://www.leapingbunny.org/?s=" + encodeURIComponent(input.value) + "\" target=\"_blank\" rel=\"noopener\">Leaping Bunny</a>.</p>";
 linkBarcodeToBrand(brand, input.value);
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection2"), brand);
 if(brand) wireShareWidget("share2", brand);
@@ -1664,7 +1664,7 @@ try {
 var brand = findBrandExact(sharedName) || findBrand(sharedName);
 if(!brand) return;
 var out = "<div class=\"result-in\">";
-out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#8C7580; margin-bottom:10px;\">shared result</p>";
+out += "<p style=\"font-size:12px; letter-spacing:0.5px; text-transform:uppercase; color:#6A535D; margin-bottom:10px;\">shared result</p>";
 out += verdictHTML(brand);
 if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");

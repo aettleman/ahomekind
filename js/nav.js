@@ -509,7 +509,7 @@ var bnIcons = {
 };
 function bnItem(href, icon, label, key){
 var active = key === 'home' ? isActive(['/', '/index.html']) : isActive([href]);
-return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : '') + (active ? ' active' : '') + '">' +
+return '<a href="' + href + '" class="bn-item' + (key === 'scan' ? ' bn-scan' : '') + (active ? ' active' : '') + '"' + (key === 'scan' ? ' aria-label="Scan a barcode"' : '') + '>' +
 '<span class="bn-icon-wrap"><span class="bn-icon">' + icon + '</span></span>' +
 '<span class="bn-label">' + label + '</span></a>';
 }

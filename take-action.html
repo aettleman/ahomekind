@@ -23,7 +23,7 @@
    placed rather than pasted in. Sits alongside the opening of the essay. */
 .about-portrait { max-width:420px; margin:28px 0 10px; }
 .about-portrait img { display:block; width:100%; height:auto; border-radius:16px 16px 110px 16px; }
-.about-portrait figcaption { font-family:'Gloock',serif; font-style:italic; font-size:16px; line-height:1.5; color:var(--ahk-warm-deep,#A0582E); margin-top:14px; }
+.about-portrait figcaption { font-family:'Gloock',serif; font-style:italic; font-size:16px; line-height:1.5; color:var(--ahk-warm-deep,#8F4E27); margin-top:14px; }
 @media (min-width:760px){
   .about-portrait { float:right; max-width:330px; margin:6px 0 22px 32px; }
 }
@@ -38,14 +38,14 @@
 .letter-card:hover, .letter-card:focus-visible { box-shadow:0 6px 20px rgba(58,31,61,0.1); transform:translateY(-2px); }
 .letter-card .letter-kicker { margin-bottom:6px; }
 .letter-card h3 { font-family:'Gloock',serif; font-weight:500; font-size:18px; color:var(--ahk-heading,#2A1630); margin:4px 0 8px; line-height:1.35; }
-.letter-card p { font-size:13px; line-height:1.6; color:var(--ahk-text-muted,#8C7580); margin:0; }
+.letter-card p { font-size:13px; line-height:1.6; color:var(--ahk-text-muted,#6A535D); margin:0; }
 .letter-card-cta { display:inline-block; margin-top:12px; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--ahk-clay-deep,#B85A2A); }
 .letter-card.is-soon { cursor:default; background:var(--ahk-sage-soft,#DCE6D6); border-style:dashed; }
-.letter-card.is-soon h3, .letter-card.is-soon p { color:var(--ahk-text-muted,#8C7580); }
-.letter-card.is-soon .letter-card-cta { color:var(--ahk-text-muted,#8C7580); }
+.letter-card.is-soon h3, .letter-card.is-soon p { color:var(--ahk-text-muted,#6A535D); }
+.letter-card.is-soon .letter-card-cta { color:var(--ahk-text-muted,#6A535D); }
 article.letter-card { display:flex; flex-direction:column; }
 article.letter-card:hover { transform:none; }
-.lc-read { align-self:flex-start; margin:14px 0 0; background:none; border:0; padding:4px 0; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--ahk-clay-deep,#C8622F); cursor:pointer; border-bottom:1.5px solid var(--ahk-gold-soft,#F6C6A8); }
+.lc-read { align-self:flex-start; margin:14px 0 0; background:none; border:0; padding:4px 0; font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--ahk-clay-deep,#B0501D); cursor:pointer; border-bottom:1.5px solid var(--ahk-gold-soft,#F6C6A8); }
 .lc-read:hover { color:var(--ahk-heading,#2A1630); border-bottom-color:var(--ahk-clay,#E8804C); }
 .lc-mp { display:flex; flex-wrap:wrap; gap:6px; background:var(--ahk-forest,#3A1F3D); border-radius:14px; padding:6px; margin-top:auto; }
 article.letter-card .lc-mp { margin-top:16px; }
@@ -56,14 +56,14 @@ article.letter-card .lc-mp { margin-top:16px; }
 .lc-status { font-size:12px; line-height:1.5; color:var(--ahk-kind-ink,#3f6a3d); margin:8px 0 0; min-height:1em; }
 .lc-status:empty { margin:0; }
 .lc-note { font-size:13px; line-height:1.6; color:var(--ahk-text,#5A4550); background:var(--ahk-clay-soft,#FBE3D3); border-radius:12px; padding:10px 14px; margin:0 0 4px; }
-.lc-foot { font-size:12.5px; color:var(--ahk-text-muted,#80686F); margin:-18px 0 30px; }
+.lc-foot { font-size:12.5px; color:var(--ahk-text-muted,#6A535D); margin:-18px 0 30px; }
 
 .letter-cards.one { grid-template-columns:1fr; max-width:560px; margin:14px 0 8px; }
 .ta-section { margin-top:34px; }
-.ta-sub { font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--ahk-text-muted,#80686F); margin:14px 0 0; }
+.ta-sub { font:600 11px 'Hanken Grotesk',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--ahk-text-muted,#6A535D); margin:14px 0 0; }
 .ta-intro { font-size:14px; line-height:1.6; color:var(--ahk-text,#5A4550); margin:8px 0 0; max-width:52ch; }
-.ta-accuracy { font-size:13px; color:var(--ahk-text-muted,#80686F); margin:40px 0 10px; }
-.ta-accuracy a { color:var(--ahk-clay-deep,#C8622F); }
+.ta-accuracy { font-size:13px; color:var(--ahk-text-muted,#6A535D); margin:40px 0 10px; }
+.ta-accuracy a { color:var(--ahk-clay-deep,#B0501D); }
 
 dialog.letter-modal { position:fixed; inset:0; margin:auto; padding:0; border:0; border-radius:22px; width:min(640px, calc(100vw - 32px)); max-height:min(88vh, 900px); background:var(--ahk-card,#FBF4EF); color:var(--ahk-text,#5A4550); box-shadow:0 24px 60px rgba(42,22,48,0.3); overflow:hidden; }
 dialog.letter-modal[open] { display:flex; flex-direction:column; animation:lm-in .22s ease; }
