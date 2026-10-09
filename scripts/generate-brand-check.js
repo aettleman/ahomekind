@@ -58,6 +58,7 @@ const CATEGORY_MAP = {
   'dental': 'mouth-care',
   'household-cleaning': 'household',
   'laundry': 'household',
+  'paper-hygiene': 'household',
   'period-menstrual': 'body-shower',
   'food-kitchen': null,
   'stationery': 'stationery'
@@ -75,7 +76,7 @@ const SUPERMARKET_NAMES = new Set([
 ]);
 
 const BEAUTY_CATS = new Set(['makeup-beauty', 'skincare', 'haircare', 'body-shower', 'period-menstrual']);
-const HOUSEHOLD_CATS = new Set(['household-cleaning', 'laundry']);
+const HOUSEHOLD_CATS = new Set(['household-cleaning', 'laundry', 'paper-hygiene']);
 const STATIONERY_CATS = new Set(['stationery']);
 
 function escapeHtml(str) {

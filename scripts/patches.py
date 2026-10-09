@@ -247,3 +247,19 @@ changed += _rw("index.html", lambda t: t.replace('<div class="k-strip">', '<div 
 A11Y = "/*a11y*/.k-facts dt{flex:1;display:flex;align-items:baseline;gap:8px}.k-facts dt::after{content:\"\";flex:1;border-bottom:1.5px dotted rgba(42,22,48,.25);transform:translateY(-4px)}.ahk-hand,.k-hero em{color:#C0521F}\n"
 changed += _rw("css/app.css", lambda t: t if "/*a11y*/" in t else t + "\n" + A11Y)
 print("Accessibility fixes applied to", changed, "files")
+
+# 10. Toilet paper and tissues count as household in the brand checker
+g = "scripts/generate-brand-check.js"; gs = open(g, encoding="utf-8").read(); c0 = gs
+gs = gs.replace("const HOUSEHOLD_CATS = new Set(['household-cleaning', 'laundry']);", "const HOUSEHOLD_CATS = new Set(['household-cleaning', 'laundry', 'paper-hygiene']);")
+gs = gs.replace("  'laundry': 'household',\n", "  'laundry': 'household',\n  'paper-hygiene': 'household',\n", 1) if "'paper-hygiene': 'household'" not in gs else gs
+if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Checker: toilet paper and tissues added under household")
+
+# 11. Consistency report: catches brands that would be hard to find
+issues = []
+for b in brands:
+    if not b.get("category"): issues.append("no category (only shows under 'other'): " + b["name"])
+    if b.get("tier") == "good" and b.get("vegan") != "full": issues.append("tier good but vegan not full: " + b["name"])
+    if b.get("vegan") == "full" and b.get("tier") == "check": issues.append("vegan full but tier check: " + b["name"])
+    if b.get("tier") == "bad" and not b.get("links") and not b.get("parentCompany"): issues.append("tests on animals with no source: " + b["name"])
+open("data/consistency-report.txt", "w").write("\n".join(issues) + "\n")
+print("Consistency check:", len(issues), "things to look at (data/consistency-report.txt)")
