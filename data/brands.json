@@ -239,7 +239,7 @@
     "name": "Aesop",
     "tier": "check",
     "note": "Established in 1987, formulates skin, hair and body care products of the finest quality. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -251,7 +251,8 @@
     ],
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09"
+    "lastVerified": "2026-09-09",
+    "parentSource": "Wikidata"
   },
   {
     "slug": "aim",
@@ -3628,7 +3629,7 @@
     "name": "Colgate",
     "tier": "bad",
     "note": "Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company - this isn't a claim that a specific tube of toothpaste was itself tested on an animal.",
-    "parentCompany": null,
+    "parentCompany": "Colgate-Palmolive",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -3639,7 +3640,8 @@
       "dental"
     ],
     "veganConfidence": "high",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentSource": "Wikidata"
   },
   {
     "slug": "collection",
