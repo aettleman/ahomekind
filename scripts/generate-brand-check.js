@@ -60,6 +60,8 @@ const CATEGORY_MAP = {
   'laundry': 'household',
   'paper-hygiene': 'hygiene',
   'hygiene': 'hygiene',
+  'paper-hygiene': 'hygiene',
+  'hygiene': 'hygiene',
   'period-menstrual': 'hygiene',
   'food-kitchen': null,
   'stationery': 'stationery'

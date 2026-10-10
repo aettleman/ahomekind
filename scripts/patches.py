@@ -409,3 +409,57 @@ function renderLinks(links) {''', 1)
     gs = gs.replace("return '<p class=\"section-label\">sources &amp; links</p>\\n<p style=\"font-size:13.5px;\">' + rows", "return '<p class=\"section-label\">where to buy</p>\\n<p style=\"font-size:13.5px;\">' + rows", 1)
     gs = gs.replace("renderLinks(brand.links) + renderChecked(!!(brand.links && brand.links.length))", "renderSources(brand) + renderLinks(brand.links)", 1)
 if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Sources section updated")
+
+# 19. One spelling per parent company (so each gets one parent page, not two)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw
+_PN = {"L'Oreal": "L'Oréal", "Estee Lauder Companies": "Estée Lauder Companies", "Estée Lauder": "Estée Lauder Companies", "Kao": "Kao Corporation", "Reckitt": "Reckitt Benckiser", "S.C. Johnson": "SC Johnson", "P&G": "Procter & Gamble", "Edgewell": "Edgewell Personal Care", "J&J/Kenvue": "J&J / Kenvue"}
+_nn = 0
+for b in brands:
+    pc = b.get("parentCompany")
+    if pc in _PN: b["parentCompany"] = _PN[pc]; _nn += 1
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Parent names tidied:", _nn)
+
+# 20. Parent companies' own published animal-testing policies as sources (10 Oct, each page read), and more Good On You scores
+_PP = {
+"Beiersdorf": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html",
+"Church & Dwight": "https://churchdwight.com/our-brands/animal-testing-policy.aspx",
+"Clorox": "https://www.thecloroxcompany.com/company/policies-and-practices/animal-testing/",
+"Colgate-Palmolive": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare",
+"Coty": "https://www.coty.com/faq",
+"Edgewell Personal Care": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148",
+"Essity": "https://www.essity.com/sustainability/improving-well-being-for-people-and-societies/product-safety-and-transparency/for-us-its-personal/faq/",
+"Est\u00e9e Lauder Companies": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing",
+"Hain Celestial": "https://www.hain.com/wp-content/uploads/ESG/Hain-Animal-Welfare2020.pdf",
+"Haleon": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf",
+"Henkel": "https://www.henkel.com/sustainability/positions/test-methods",
+"J&J / Kenvue": "https://kenvue.com/animal-testing-pdf",
+"Johnson & Johnson": "https://www.jnj.com/policies-reports/animal-welfare-policy",
+"Kao Corporation": "https://www.kao.com/global/en/innovation/safety-quality/animal-testing-policy/",
+"Kimberly-Clark": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing",
+"Kos\u00e9 Corporation": "https://koseholdings.co.jp/en/kose/research/secretstory/safety/",
+"L'Occitane": "https://group.loccitane.com/sites/default/files/20120806_Statement_from_LOccitane_onAnimal_Testing_EN.pdf",
+"L'Or\u00e9al": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/",
+"OSEA Malibu": "https://oseamalibu.com/pages/cruelty-free-skincare",
+"Paul Mitchell": "https://www.paulmitchell.com/pages/faq",
+"Procter & Gamble": "https://us.pg.com/cruelty-free/",
+"Reckitt Benckiser": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf",
+"Revlon": "https://www.revlon.com/pages/animal-testing",
+"SC Johnson": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing",
+"Shiseido": "https://corp.shiseido.com/en/sustainability/consumer/experiment/",
+"Unilever": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+}
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw
+_np = 0
+for b in brands:
+    u = _PP.get(b.get("parentCompany"))
+    if u:
+        ss = b.setdefault("sources", [])
+        if not any(s.get("url") == u for s in ss):
+            ss.append({"label": b["parentCompany"] + ": its own animal testing policy", "url": u}); _np += 1
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+_goyd = json.load(open("data/good-on-you.json")); _nb = 0
+for _s, (_sc, _u) in {"avon": [3, "avon-beauty"], "butter-london": [2, "butter-london-beauty"], "byoma": [2, "byoma-beauty"], "carols-daughter": [2, "carols-daughter-beauty"], "colourpop-cosmetics": [2, "colourpop-cosmetics-beauty"]}.items():
+    if _s not in _goyd: _goyd[_s] = {"score": _sc, "url": "https://directory.goodonyou.eco/brand/" + _u}; _nb += 1
+json.dump(_goyd, open("data/good-on-you.json", "w"), indent=2); open("data/good-on-you.json", "a").write("\n")
+print("Parent policy sources added:", _np, "| more Good On You:", _nb)

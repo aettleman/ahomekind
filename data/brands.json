@@ -335,6 +335,10 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -368,7 +372,7 @@
     "name": "Air Wick",
     "tier": "bad",
     "note": "Owned by Reckitt - the same parent company as Dettol - who test for regulatory compliance rather than refusing markets that require it.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -379,7 +383,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "alba-botanica",
@@ -612,7 +622,13 @@
       "hygiene"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "amaras",
@@ -679,7 +695,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "american-safety-razor",
@@ -944,7 +966,13 @@
       "dental"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Haleon: its own animal testing policy",
+        "url": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf"
+      }
+    ]
   },
   {
     "slug": "ar-ocean",
@@ -1117,7 +1145,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "arithmos",
@@ -1190,6 +1224,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/"
+      },
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
       }
     ]
   },
@@ -1495,6 +1533,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -1569,6 +1611,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -1589,7 +1635,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "avon",
@@ -1662,7 +1714,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "b-skincare",
@@ -2020,7 +2078,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
+      }
+    ]
   },
   {
     "slug": "bausch-lomb",
@@ -2225,7 +2289,13 @@
       "haircare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "beekman-1802",
@@ -2931,7 +3001,7 @@
     "name": "Bobbi Brown",
     "tier": "bad",
     "note": "Owned by Estee Lauder and listed among brands to avoid.",
-    "parentCompany": "Estee Lauder Companies",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/",
     "products": [],
@@ -2948,6 +3018,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -2968,14 +3042,20 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "bondi-sands",
     "name": "Bondi Sands",
     "tier": "warn",
     "note": "PETA certified cruelty-free, owned by Kao.",
-    "parentCompany": "Kao",
+    "parentCompany": "Kao Corporation",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -2992,6 +3072,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Kao Corporation: its own animal testing policy",
+        "url": "https://www.kao.com/global/en/innovation/safety-quality/animal-testing-policy/"
       }
     ]
   },
@@ -3230,7 +3314,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
+      }
+    ]
   },
   {
     "slug": "boxycharm",
@@ -3384,7 +3474,7 @@
     "name": "Bulldog",
     "tier": "warn",
     "note": "Leaping Bunny certified, 100% vegan, owned by Edgewell.",
-    "parentCompany": "Edgewell",
+    "parentCompany": "Edgewell Personal Care",
     "vegan": "full",
     "evidence": "",
     "products": [],
@@ -3401,6 +3491,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Edgewell Personal Care: its own animal testing policy",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
       }
     ]
   },
@@ -3425,6 +3519,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -3474,6 +3572,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Clorox: its own animal testing policy",
+        "url": "https://www.thecloroxcompany.com/company/policies-and-practices/animal-testing/"
       }
     ]
   },
@@ -4092,7 +4194,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "cetaphil",
@@ -4252,6 +4360,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -4346,14 +4458,20 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "cillit-bang",
     "name": "Cillit Bang",
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -4364,7 +4482,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "medium",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "citre-shine",
@@ -4431,7 +4555,13 @@
       "haircare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
+      }
+    ]
   },
   {
     "slug": "clarins",
@@ -4528,14 +4658,20 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "clearasil",
     "name": "Clearasil",
     "tier": "bad",
     "note": "Named among companies that test on animals. Reckitt also owns Lysol, which PETA lists as testing.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/",
     "products": [],
@@ -4552,6 +4688,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/"
+      },
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
       }
     ]
   },
@@ -4584,7 +4724,7 @@
     "name": "Clinique",
     "tier": "bad",
     "note": "Owned by Estée Lauder, and sells into mainland China, where animal testing can still be legally required for imported cosmetics - the company allows this rather than refusing that market.",
-    "parentCompany": "Estée Lauder",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -4596,7 +4736,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
+      }
+    ]
   },
   {
     "slug": "clorox",
@@ -4714,7 +4860,13 @@
     ],
     "veganConfidence": "high",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "parentSource": "Wikidata"
+    "parentSource": "Wikidata",
+    "sources": [
+      {
+        "label": "Colgate-Palmolive: its own animal testing policy",
+        "url": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare"
+      }
+    ]
   },
   {
     "slug": "collection",
@@ -4834,7 +4986,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "command",
@@ -4999,7 +5157,13 @@
       "dental"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Haleon: its own animal testing policy",
+        "url": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf"
+      }
+    ]
   },
   {
     "slug": "coty-inc",
@@ -5071,6 +5235,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -5502,7 +5670,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "delphis-eco",
@@ -5663,6 +5837,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -5719,7 +5897,7 @@
     "name": "Dettol",
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -5730,7 +5908,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "devacurl",
@@ -5753,6 +5937,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Henkel: its own animal testing policy",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
       }
     ]
   },
@@ -5921,7 +6109,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "donna-karan",
@@ -6018,6 +6212,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -6292,7 +6490,7 @@
     "name": "Dr. Jart+",
     "tier": "bad",
     "note": "Owned by Estée Lauder, sells in mainland China where testing can be required.",
-    "parentCompany": "Estée Lauder",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -6303,7 +6501,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
+      }
+    ]
   },
   {
     "slug": "dr-teals",
@@ -6376,6 +6580,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Shiseido: its own animal testing policy",
+        "url": "https://corp.shiseido.com/en/sustainability/consumer/experiment/"
       }
     ]
   },
@@ -6758,6 +6966,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
       }
     ]
   },
@@ -6850,7 +7062,13 @@
       "skincare"
     ],
     "veganConfidence": "medium",
-    "region": "Europe, USA & Canada"
+    "region": "Europe, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Occitane: its own animal testing policy",
+        "url": "https://group.loccitane.com/sites/default/files/20120806_Statement_from_LOccitane_onAnimal_Testing_EN.pdf"
+      }
+    ]
   },
   {
     "slug": "elie-saab",
@@ -6943,7 +7161,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "eminence-organic-skin-care",
@@ -7209,7 +7433,7 @@
     "name": "Estee Lauder",
     "tier": "bad",
     "note": "Tests on animals, and the parent of MAC, Bobbi Brown and others. It has partnered with Cruelty Free International on ending testing, but has not yet met cruelty-free criteria itself.",
-    "parentCompany": "Estee Lauder Companies",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/brands/estee-lauder/",
     "products": [],
@@ -7231,6 +7455,10 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -7627,7 +7855,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "faith-in-nature",
@@ -7740,7 +7974,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "fendi",
@@ -7846,7 +8086,7 @@
     "name": "Finish",
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -7857,7 +8097,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "first-aid-beauty",
@@ -7924,7 +8170,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "floralys",
@@ -8679,6 +8931,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -8844,7 +9100,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "gillette-co",
@@ -9010,7 +9272,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
+      }
+    ]
   },
   {
     "slug": "glamglow",
@@ -9202,6 +9470,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Kao Corporation: its own animal testing policy",
+        "url": "https://www.kao.com/global/en/innovation/safety-quality/animal-testing-policy/"
       }
     ]
   },
@@ -9318,7 +9590,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Henkel: its own animal testing policy",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
+      }
+    ]
   },
   {
     "slug": "grande-cosmetics",
@@ -9531,6 +9809,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/gucci-fragrances-coty/"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -9677,6 +9959,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -9781,7 +10067,7 @@
     "name": "Harpic",
     "tier": "bad",
     "note": "Owned by Reckitt, who sell into markets requiring animal testing.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unclear",
     "evidence": "",
     "products": [],
@@ -9792,7 +10078,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "hawaiian-tropic",
@@ -9812,7 +10104,13 @@
     "veganConfidence": "low",
     "dateChecked": "2026-09-02",
     "parentTestsOnAnimals": true,
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Edgewell Personal Care: its own animal testing policy",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
+      }
+    ]
   },
   {
     "slug": "head-and-shoulders",
@@ -9830,7 +10128,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "helan",
@@ -9934,7 +10238,7 @@
     "name": "Herbal Essences",
     "tier": "warn",
     "note": "PETA certified, owned by P&G.",
-    "parentCompany": "P&G",
+    "parentCompany": "Procter & Gamble",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -9950,6 +10254,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -10142,6 +10450,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -10732,6 +11044,10 @@
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -10977,6 +11293,10 @@
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -10996,7 +11316,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Kao Corporation: its own animal testing policy",
+        "url": "https://www.kao.com/global/en/innovation/safety-quality/animal-testing-policy/"
+      }
+    ]
   },
   {
     "slug": "john-lewis-and-partners",
@@ -11067,6 +11393,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Paul Mitchell: its own animal testing policy",
+        "url": "https://www.paulmitchell.com/pages/faq"
       }
     ]
   },
@@ -11112,7 +11442,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "joico",
@@ -11135,6 +11471,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Henkel: its own animal testing policy",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
       }
     ]
   },
@@ -11649,6 +11989,10 @@
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -12223,7 +12567,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "lab-series-for-men",
@@ -12344,6 +12694,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -12377,7 +12731,7 @@
     "name": "Lancome",
     "tier": "bad",
     "note": "Owned by L'Oreal. Its policy allows testing 'where required by law', and it sells in mainland China, which is exactly where that exception applies.",
-    "parentCompany": "L'Oreal",
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/brands/lancome/",
     "products": [],
@@ -12395,6 +12749,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/brands/lancome/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -12633,7 +12991,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "lerana",
@@ -12871,7 +13235,13 @@
       "dental"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "little-heroes",
@@ -12945,6 +13315,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -13044,6 +13418,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -13165,6 +13543,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -13457,6 +13839,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -13489,7 +13875,7 @@
     "name": "Lysol",
     "tier": "bad",
     "note": "PETA lists Lysol (Reckitt Benckiser) as testing on animals.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/company/lysol-reckitt-benckiser/",
     "products": [],
@@ -13506,6 +13892,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/lysol-reckitt-benckiser/"
+      },
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
       }
     ]
   },
@@ -13539,7 +13929,7 @@
     "name": "MAC",
     "tier": "bad",
     "note": "Owned by Estee Lauder and listed among brands to avoid. A long-running example of a brand marketed as ethical while still selling into markets that require testing.",
-    "parentCompany": "Estee Lauder Companies",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/",
     "products": [],
@@ -13556,6 +13946,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/companies-that-test-on-animals/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -13575,7 +13969,13 @@
       "dental"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Haleon: its own animal testing policy",
+        "url": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf"
+      }
+    ]
   },
   {
     "slug": "mad-hippie",
@@ -14175,7 +14575,7 @@
     "name": "Matrix",
     "tier": "bad",
     "note": "Owned by L'Oreal. Permits third-party testing 'where required by law', and is sold in markets with mandatory testing.",
-    "parentCompany": "L'Oreal",
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/brands/matrix/",
     "products": [],
@@ -14192,6 +14592,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/brands/matrix/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -14211,7 +14615,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
+      }
+    ]
   },
   {
     "slug": "maybelline",
@@ -14229,7 +14639,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "mazel",
@@ -14522,6 +14938,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
       }
     ]
   },
@@ -14822,6 +15242,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Revlon: its own animal testing policy",
+        "url": "https://www.revlon.com/pages/animal-testing"
       }
     ]
   },
@@ -15230,7 +15654,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
+      }
+    ]
   },
   {
     "slug": "mr-clean",
@@ -15361,6 +15791,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -15487,6 +15921,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
       }
     ]
   },
@@ -15565,6 +16003,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Shiseido: its own animal testing policy",
+        "url": "https://corp.shiseido.com/en/sustainability/consumer/experiment/"
       }
     ]
   },
@@ -15943,7 +16385,13 @@
       "skincare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "new-dana-perfumes",
@@ -16208,7 +16656,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Beiersdorf: its own animal testing policy",
+        "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html"
+      }
+    ]
   },
   {
     "slug": "no7",
@@ -16395,6 +16849,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -16527,6 +16985,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -16551,6 +17013,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -16709,7 +17175,7 @@
     "name": "OGX",
     "tier": "bad",
     "note": "Owned by J&J/Kenvue, sells in mainland China, tests where legally required.",
-    "parentCompany": "J&J/Kenvue",
+    "parentCompany": "J&J / Kenvue",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -16720,7 +17186,13 @@
       "haircare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "J&J / Kenvue: its own animal testing policy",
+        "url": "https://kenvue.com/animal-testing-pdf"
+      }
+    ]
   },
   {
     "slug": "oio-lab",
@@ -16786,7 +17258,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "old-english",
@@ -16829,7 +17307,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "ole-henriksen",
@@ -16920,7 +17404,13 @@
       "dental"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "orange-glo",
@@ -17138,6 +17628,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "OSEA Malibu: its own animal testing policy",
+        "url": "https://oseamalibu.com/pages/cruelty-free-skincare"
       }
     ]
   },
@@ -17445,7 +17939,13 @@
     ],
     "veganConfidence": "medium",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "parentSource": "Wikidata"
+    "parentSource": "Wikidata",
+    "sources": [
+      {
+        "label": "Colgate-Palmolive: its own animal testing policy",
+        "url": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare"
+      }
+    ]
   },
   {
     "slug": "pamoja",
@@ -17495,6 +17995,10 @@
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -17538,7 +18042,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "parla",
@@ -17609,6 +18119,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -17792,7 +18306,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "peter-thomas-roth",
@@ -18039,6 +18559,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/pine-sol-clorox/"
+      },
+      {
+        "label": "Clorox: its own animal testing policy",
+        "url": "https://www.thecloroxcompany.com/company/policies-and-practices/animal-testing/"
       }
     ]
   },
@@ -18125,7 +18649,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
+      }
+    ]
   },
   {
     "slug": "plum-goodness",
@@ -18685,6 +19215,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -18899,7 +19433,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "raid",
@@ -19124,7 +19664,13 @@
       "haircare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "refy",
@@ -19196,6 +19742,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -19478,6 +20028,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -19889,7 +20443,13 @@
       "makeup-beauty"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
+      }
+    ]
   },
   {
     "slug": "salon-selectives",
@@ -20124,7 +20684,13 @@
       "hygiene"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "savlon",
@@ -20196,6 +20762,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -20215,7 +20785,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Henkel: its own animal testing policy",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
+      }
+    ]
   },
   {
     "slug": "scoop-away",
@@ -20628,7 +21204,13 @@
       "dental"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Haleon: its own animal testing policy",
+        "url": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf"
+      }
+    ]
   },
   {
     "slug": "sephora-cosmetics",
@@ -20701,6 +21283,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -20725,6 +21311,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Henkel: its own animal testing policy",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
       }
     ]
   },
@@ -21018,6 +21608,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -21318,6 +21912,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -21798,6 +22396,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -22259,6 +22861,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -22401,7 +23007,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "surf",
@@ -22420,7 +23032,13 @@
       "laundry"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "surya-brasil",
@@ -22634,7 +23252,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
+      }
+    ]
   },
   {
     "slug": "talika",
@@ -22679,7 +23303,13 @@
       "hygiene"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "tan-luxe",
@@ -22798,6 +23428,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Kosé Corporation: its own animal testing policy",
+        "url": "https://koseholdings.co.jp/en/kose/research/secretstory/safety/"
       }
     ]
   },
@@ -22846,6 +23480,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -22913,7 +23551,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Essity: its own animal testing policy",
+        "url": "https://www.essity.com/sustainability/improving-well-being-for-people-and-societies/product-safety-and-transparency/for-us-its-personal/faq/"
+      }
+    ]
   },
   {
     "slug": "that-good-hair",
@@ -23414,6 +24058,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -23674,6 +24322,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/tide-procter-gamble/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -23718,7 +24370,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "toilet-duck",
@@ -23736,7 +24394,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
+      }
+    ]
   },
   {
     "slug": "tom-ford",
@@ -23785,6 +24449,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Colgate-Palmolive: its own animal testing policy",
+        "url": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare"
       }
     ]
   },
@@ -23858,6 +24526,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -24058,6 +24730,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -24574,6 +25250,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -24607,7 +25287,7 @@
     "name": "Vanish",
     "tier": "bad",
     "note": "Owned by Reckitt, who test for regulatory compliance.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -24619,7 +25299,13 @@
       "laundry"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "vasanti-cosmetics",
@@ -24662,14 +25348,20 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "veet",
     "name": "Veet",
     "tier": "bad",
     "note": "Owned by Reckitt, who PETA confirms test on animals.",
-    "parentCompany": "Reckitt",
+    "parentCompany": "Reckitt Benckiser",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -24680,7 +25372,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+      }
+    ]
   },
   {
     "slug": "vegantan",
@@ -24747,7 +25445,13 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "vera-wang",
@@ -24840,7 +25544,13 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
+      }
+    ]
   },
   {
     "slug": "vichy",
@@ -24858,7 +25568,13 @@
       "skincare"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
+      }
+    ]
   },
   {
     "slug": "vicks",
@@ -24882,6 +25598,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/vicks-procter-gamble/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -25025,7 +25745,13 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "region": "Europe"
+    "region": "Europe",
+    "sources": [
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      }
+    ]
   },
   {
     "slug": "vosene",
@@ -25270,6 +25996,10 @@
       {
         "label": "Cruelty Free Kitty",
         "url": "https://www.crueltyfreekitty.com/brands/wella/"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -25343,6 +26073,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -25425,7 +26159,7 @@
     "name": "Wilkinson Sword",
     "tier": "bad",
     "note": "Owned by Edgewell Personal Care, who test on animals where it's legally required rather than refusing to sell in those markets.",
-    "parentCompany": "Edgewell",
+    "parentCompany": "Edgewell Personal Care",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -25436,14 +26170,20 @@
       "body-shower"
     ],
     "veganConfidence": "low",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada"
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "sources": [
+      {
+        "label": "Edgewell Personal Care: its own animal testing policy",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
+      }
+    ]
   },
   {
     "slug": "windex",
     "name": "Windex",
     "tier": "bad",
     "note": "PETA lists Windex (S.C. Johnson) as testing on animals. S.C. Johnson says it doesn't test 'unless required by law', which is the same exception that disqualifies other brands here.",
-    "parentCompany": "S.C. Johnson",
+    "parentCompany": "SC Johnson",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/company/windex-sc-johnson/",
     "products": [],
@@ -25460,6 +26200,10 @@
       {
         "label": "PETA: cruelty-free brand list",
         "url": "https://crueltyfree.peta.org/company/windex-sc-johnson/"
+      },
+      {
+        "label": "SC Johnson: its own animal testing policy",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
       }
     ]
   },
@@ -25534,6 +26278,10 @@
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Reckitt Benckiser: its own animal testing policy",
+        "url": "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
       }
     ]
   },
@@ -25728,6 +26476,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Hain Celestial: its own animal testing policy",
+        "url": "https://www.hain.com/wp-content/uploads/ESG/Hain-Animal-Welfare2020.pdf"
       }
     ]
   },
@@ -26150,7 +26902,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "kleenex",
@@ -26181,7 +26939,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "huggies",
@@ -26212,7 +26976,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "cottonelle",
@@ -26243,7 +27013,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "kotex",
@@ -26274,7 +27050,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "depend",
@@ -26304,7 +27086,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "goodnites",
@@ -26334,7 +27122,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "pull-ups",
@@ -26364,7 +27158,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-09",
+    "sources": [
+      {
+        "label": "Kimberly-Clark: its own animal testing policy",
+        "url": "https://kimberly-clark.com/es-us/suppliers/standards-and-requirements/animal-testing"
+      }
+    ]
   },
   {
     "slug": "cushelle",
@@ -26395,7 +27195,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-10"
+    "lastVerified": "2026-10-10",
+    "sources": [
+      {
+        "label": "Essity: its own animal testing policy",
+        "url": "https://www.essity.com/sustainability/improving-well-being-for-people-and-societies/product-safety-and-transparency/for-us-its-personal/faq/"
+      }
+    ]
   },
   {
     "slug": "naked-paper",
