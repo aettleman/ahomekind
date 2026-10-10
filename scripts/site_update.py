@@ -229,7 +229,7 @@ PARENT_POLICY = {
 "summary": "The document says Unilever does not test on animals, but that suppliers may need to test some ingredients and some government authorities test certain product types on animals to meet legal requirements, and it notes certain brands are certified by animal protection groups and PETA lists Unilever as a company working for regulatory change."
 }
 }
-ASH_NOTES = {"Unilever": "I read this properly. It says Unilever doesn't test on animals, and also that some governments still require testing and some suppliers may still test ingredients. It never says plainly whether its own products are tested. Their 'Safety Without Animal Testing' page sent me to a general sustainability page with nothing on animals. That reads as vague to me, so read it and decide."}
+ASH_NOTES = {"Unilever": "It says some governments still require animal testing, but never states plainly whether Unilever's own products are tested. Their 'Safety Without Animal Testing' page sent me to a general sustainability page with nothing on animals. That reads as vague to me, so have a read and decide for yourself."}
 made = 0
 groups = {}
 for b in brands:
@@ -244,7 +244,7 @@ for ps, kids in groups.items():
     polhtml = ""
     if pol and True not in flags and False not in flags: st = "Their own published statement is below."
     if pol:
-        polhtml = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"><div class="pc-pol"><h2>What their own policy says</h2><p>%s</p><p><a href="%s" target="_blank" rel="noopener">Read the company\'s own page</a></p>' % (E(pol["summary"]), E(pol["url"]))
+        polhtml = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"><div class="pc-pol"><h2>What their own policy says</h2><p>%s</p><p><a href="%s" target="_blank" rel="noopener">Read the company\'s own page</a></p>' % (E(pol["summary"].replace("The document says Unilever does not test on animals", "Unilever says it doesn't test on animals")), E(pol["url"]))
         nt = ASH_NOTES.get(name) or next((ASH_NOTES[k] for k in ASH_NOTES if slugify(k) == ps), None)
         if nt: polhtml += '<p class="ahk-hand pc-note" style="font-family:Caveat,cursive;font-size:23px;line-height:1.3;margin:14px 0 0">%s</p>' % E(nt)
         polhtml += "</div>"
