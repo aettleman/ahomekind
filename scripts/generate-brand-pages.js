@@ -66,10 +66,18 @@ function ownerWord(b) {
 function renderChecked(hasLinks) {
   return (hasLinks ? '' : '<p class="section-label">sources &amp; links</p>') + '<p style="font-size:13.5px;">Checked against <a href="https://www.leapingbunny.org" target="_blank" rel="noopener">Leaping Bunny</a>, <a href="https://crueltyfreeinternational.org" target="_blank" rel="noopener">Cruelty Free International</a> and <a href="https://www.peta.org/living/personal-care-fashion/beauty-without-bunnies/" target="_blank" rel="noopener">PETA</a>.</p>';
 }
+function renderSources(b) {
+  const s = b.sources || [];
+  if (!s.length) {
+    const msg = b.tier === 'unverified' ? 'No certification or animal-testing statement could be found for this brand, so its status can\'t be verified.' : 'No source link has been added for this brand yet.';
+    return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + msg + ' Know of one? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
+  }
+  return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + s.map(function(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label) + '</a>'; }).join(' &middot; ') + '</p>';
+}
 function renderLinks(links) {
   if (!links || links.length === 0) return '';
   const rows = links.map(function(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label || l.url) + '</a>'; }).join(' &middot; ');
-  return '<p class="section-label">sources &amp; links</p>\n<p style="font-size:13.5px;">' + rows + '</p>';
+  return '<p class="section-label">where to buy</p>\n<p style="font-size:13.5px;">' + rows + '</p>';
 }
 
 // Round stamp icons, shared with brand-check.html's rows -- leaf for
@@ -264,10 +272,10 @@ function renderBrandPage(brand) {
   lines.push('<main class="page-shell k-page k-brand" id="main">');
   lines.push('<div class="bnav"><a class="ib" href="../../brand-check.html" id="ahkBackLink" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></a><span class="k-kick bnav-k" id="bnavKick">brand check</span><button type="button" class="ib" id="bpShare" aria-label="Share this brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M6 11.5H5v8.5h14v-8.5h-1"/></svg></button></div>');
   lines.push('<script>(function(){var a=document.getElementById("ahkBackLink");var r=document.referrer||"";if(/scan|ingredient-check|shelf/.test(r)){document.getElementById("bnavKick").textContent="scan result";}if(r.indexOf(location.origin)===0&&r!==location.href){a.addEventListener("click",function(e){e.preventDefault();history.back();});}})();</' + 'script>');
-  const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
+  const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues').replace('period menstrual', 'period care').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
   lines.push('<div class="bp">' + (hasLogo ? '<div class="k-arch-box has-logo"><img src="../../images/brand-logos/' + brand.slug + '.png" alt="' + escapeHtml(brand.name) + ' logo" width="132" height="96" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div>') + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
-  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)) + '</span></div>');
+  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))) + '</span></div>');
   lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified)) + '</h2>');
   lines.push('<p>' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
@@ -279,7 +287,7 @@ function renderBrandPage(brand) {
   lines.push(buildOwnershipChain(brand, ALL_BRANDS));
   lines.push(buildSwaps(brand, ALL_BRANDS));
   if (brand.products && brand.products.length) lines.push('<div class="k-sec">' + renderSection('products checked', brand.products, '') + '</div>');
-  lines.push('<div class="k-sec">' + renderLinks(brand.links) + renderChecked(!!(brand.links && brand.links.length)) + '</div>');
+  lines.push('<div class="k-sec">' + renderSources(brand) + renderLinks(brand.links) + '</div>');
   lines.push('<div class="signed"><div><span class="k-kick" style="display:block">checked by</span><span class="ahk-hand">Ash</span></div><button type="button" class="k-btn-p" id="bpSave" data-slug="' + brand.slug + '" data-name="' + escapeHtml(brand.name) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.5 4h11v16.5L12 16.5l-5.5 4V4Z"/></svg><span>Save</span></button></div>');
   lines.push('<p class="k-fn">' + (brand.lastVerified ? 'Last updated ' + formatVerifiedDate(brand.lastVerified) + ', checked against the source directory that day. ' : '') + 'Spotted something out of date? <a href="mailto:hello@ahomekind.com?subject=brand%20page%20correction:%20' + encodeURIComponent(brand.name) + '">Let me know</a>.</p>');
   lines.push('</div></div>');

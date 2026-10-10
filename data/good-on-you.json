@@ -126,5 +126,97 @@
   "the-ordinary": {
     "score": 3,
     "url": "https://directory.goodonyou.eco/brand/deciem-beauty"
+  },
+  "aveda": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/aveda-beauty"
+  },
+  "beauty-kitchen": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/beauty-kitchen-beauty"
+  },
+  "covergirl": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/covergirl-beauty"
+  },
+  "dr-bronners": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/dr-bronner-beauty"
+  },
+  "dr-hauschka-skin-care": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/dr-hauschka-beauty"
+  },
+  "ethique": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/ethique-beauty"
+  },
+  "gucci": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/gucci-beauty"
+  },
+  "herbivore-botanicals": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/herbivore-botanicals-beauty"
+  },
+  "kadalys": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/kadalys-beauty"
+  },
+  "kora-organics": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/kora-organics-beauty"
+  },
+  "krave-beauty": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/krave-beauty-beauty"
+  },
+  "la-roche-posay": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/la-roche-posay-beauty"
+  },
+  "lancome": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/lancome-beauty"
+  },
+  "lucy-bee": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/lucy-bee-beauty"
+  },
+  "nyx-professional-makeup": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/nyx-professional-makeup-beauty"
+  },
+  "pai-skincare": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/pai-skincare-beauty"
+  },
+  "redken": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/redken-beauty"
+  },
+  "ren": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/ren-beauty"
+  },
+  "tarte-cosmetics": {
+    "score": 2,
+    "url": "https://directory.goodonyou.eco/brand/tarte-beauty"
+  },
+  "tata-harper-skincare": {
+    "score": 3,
+    "url": "https://directory.goodonyou.eco/brand/tata-harper-beauty"
+  },
+  "tropic": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/tropic-beauty"
+  },
+  "upcircle-beauty": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/upcircle-beauty-beauty"
+  },
+  "youth-to-the-people": {
+    "score": 4,
+    "url": "https://directory.goodonyou.eco/brand/youth-to-the-people-beauty"
   }
 }

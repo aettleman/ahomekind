@@ -334,3 +334,78 @@ json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("
 g2 = "scripts/generate-brand-check.js"; g2s = open(g2, encoding="utf-8").read()
 if "if (brand.tier === 'unverified') {\n    parentNote" in g2s:
     open(g2, "w", encoding="utf-8").write(g2s.replace("if (brand.tier === 'unverified') {\n    parentNote", "if (brand.tier === 'unverified' && brand.parentCompany) {\n    parentNote", 1)); print("Checker parent line fixed")
+
+# 16. Hygiene category (period care, toilet paper, nappies, continence)
+raw = json.load(open(P)); by = {b["slug"]: b for b in raw}
+_h = 0
+for b in raw:
+    c = b.get("category") or []
+    want = bool({"paper-hygiene", "period-menstrual"} & set(c)) or b["slug"] in ("depend", "goodnites", "pull-ups")
+    if want and "hygiene" not in c:
+        b["category"] = c + ["hygiene"]; _h += 1
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+g2 = "scripts/generate-brand-check.js"; g2s = open(g2, encoding="utf-8").read(); g2o = g2s
+g2s = g2s.replace("  'paper-hygiene': 'household',\n", "  'paper-hygiene': 'hygiene',\n  'hygiene': 'hygiene',\n", 1)
+g2s = g2s.replace("  'period-menstrual': 'body-shower',\n", "  'period-menstrual': 'hygiene',\n", 1)
+g2s = g2s.replace("new Set(['household-cleaning', 'laundry', 'paper-hygiene'])", "new Set(['household-cleaning', 'laundry', 'paper-hygiene', 'hygiene'])", 1)
+if g2s != g2o: open(g2, "w", encoding="utf-8").write(g2s)
+bc = open("brand-check.html", encoding="utf-8").read(); bco = bc
+bc = bc.replace('<button type="button" class="k-tag" data-cat="mouth-care">Mouth</button>', '<button type="button" class="k-tag" data-cat="mouth-care">Mouth</button><button type="button" class="k-tag" data-cat="hygiene">Hygiene</button>', 1) if 'data-cat="hygiene"' not in bc else bc
+bc = bc.replace('<option value="mouth-care">mouth care</option>', '<option value="mouth-care">mouth care</option>\n<option value="hygiene">hygiene (period, toilet paper, nappies)</option>', 1) if 'value="hygiene"' not in bc else bc
+bc = bc.replace("{ key: 'mouth-care', icon: '🦷', label: 'mouth care', img: 'cat-mouth.jpg' },", "{ key: 'mouth-care', icon: '🦷', label: 'mouth care', img: 'cat-mouth.jpg' },\n{ key: 'hygiene', icon: '🧻', label: 'hygiene', img: 'cat-body.jpg' },", 1) if "key: 'hygiene'" not in bc else bc
+if bc != bco: open("brand-check.html", "w", encoding="utf-8").write(bc)
+g3 = "scripts/generate-brand-pages.js"; g3s = open(g3, encoding="utf-8").read(); g3o = g3s
+g3s = g3s.replace(".replace('paper hygiene', 'toilet paper and tissues')", ".replace('paper hygiene', 'toilet paper and tissues').replace('period menstrual', 'period care')", 1) if "'period care'" not in g3s else g3s
+if g3s != g3o: open(g3, "w", encoding="utf-8").write(g3s)
+print("Hygiene category: brands tagged", _h)
+
+# 17. Verified Good Shopping Guide and Good On You scores (each read from the brand's own page, 10 Oct)
+_GSG17 = {"aesop": [27, "aesop"], "alberto-balsam": [61, "alberto-balsam"], "always": [25, "always"], "ariel": [13, "ariel"], "arm-and-hammer": [36, "arm-hammer"], "aussie": [30, "aussie"], "avalon-organics": [58, "avalon-organics"], "aveda": [19, "aveda-skincare"], "aveeno": [20, "aveeno"], "avon": [43, "avon-skincare"], "bali-body": [65, "bali-body"], "bareminerals": [18, "bareminerals"], "baylis-and-harding": [69, "baylis-harding"], "beauty-without-cruelty": [91, "beauty-without-cruelty"], "benefit": [22, "benefit"], "bio-d": [98, "bio-d-cleaning-products"], "bobbi-brown": [19, "bobbi-brown"], "bold": [13, "bold"], "bondi-sands": [46, "bondi-sands-sun-protection"], "bulldog": [50, "bulldog"], "burts-bees": [54, "burts-bees"], "cantu": [65, "cantu"], "carex": [62, "carex"], "charles-worthington": [58, "charles-worthington"], "childs-farm": [62, "childs-farm"], "cif": [20, "cif"], "clarins": [43, "clarins-skincare"], "clean-and-clear": [19, "clean-clear"], "clinique": [16, "clinique-skincare"], "colgate": [25, "colgate"], "corsodyl": [21, "corsodyl"], "daise": [69, "daise"], "dame": [98, "dame"], "daz": [54, "daz"], "delphis-eco": [71, "delphis-cleaning-products"], "dettol": [23, "dettol-cleaning-products"], "dior": [22, "dior"], "domestos": [20, "domestos"], "dove": [17, "dove-soap"], "dr-bronners": [79, "dr-bronners"], "dr-hauschka-skin-care": [95, "dr-hauschka-skincare"], "dr-organic": [83, "dr-organic"], "ecoleaf-by-suma": [91, "suma-cleaning-products"], "ecover": [23, "ecover-cleaning-products"], "ecozone": [79, "ecozone-cleaning-products"], "elemis": [36, "elemis"], "elizabeth-arden": [29, "elizabeth-arden"], "elvive": [23, "elvive"], "estee-lauder": [16, "estee-lauder-skincare"], "fairy": [13, "fairy-laundry-detergents"], "faith-in-nature": [91, "faith-in-nature-soap"], "filter-by-molly-mae": [69, "filter-by-molly-mae"], "flash": [13, "flash"], "fushi": [100, "fushi-wellbeing-skincare"], "fussy": [91, "fussy"], "garnier": [31, "garnier-skincare"], "green-people": [100, "green-people-skincare"], "greenscents": [100, "greenscents-cleaning-products"], "hawaiian-tropic": [42, "hawaiian-tropic"], "head-and-shoulders": [27, "head-shoulders"], "herbal-essences": [27, "herbal-essences"], "hismile": [64, "hismile"], "huggies": [32, "huggies"], "imperial-leather": [62, "imperial-leather"], "isle-of-paradise": [73, "isle-of-paradise"], "john-frieda": [46, "john-frieda"], "kerastase": [23, "kerastase"], "kiehl-s": [25, "kiehls"], "kingfisher": [88, "kingfisher-toothpaste"], "kotex": [32, "kotex"], "l-occitane": [36, "loccitane-skincare"], "l-oreal": [22, "loreal-skincare"], "la-roche-posay": [22, "la-roche-posay-skincare"], "lancome": [22, "lancome"], "lavera-naturkosmetik": [81, "lavera-make-up"], "little-soap-company": [91, "little-soap-company"], "liz-earle": [25, "liz-earle"], "love-ethical-beauty": [98, "love-ethical-beauty-skincare"], "lucy-bee": [98, "lucy-bee-soap"], "lush": [84, "lush-skincare"], "lynx": [23, "lynx"], "mac": [16, "mac"], "macleans": [21, "macleans"], "max-factor": [31, "max-factor"], "maybelline": [25, "maybelline"], "method": [27, "method-cleaning-products"], "miniml": [98, "miniml-laundry-detergent"], "mitchum": [15, "mitchum"], "molton-brown": [50, "molton-brown"], "mr-muscle": [27, "mr-muscle"], "mumandyou": [79, "mum-you"], "nars": [34, "nars"], "natracare": [100, "natracare"], "neals-yard-remedies": [100, "neals-yard-remedies-skincare"], "neutrogena": [19, "neutrogena-skincare"], "nivea": [36, "nivea-skincare"], "no7": [22, "no7-skincare"], "nyx": [25, "nyx"], "oceansaver": [75, "oceansaver"], "ogx": [20, "ogx"], "old-spice": [27, "old-spice"], "oral-b": [25, "oral-b"], "original-source": [62, "original-source"], "origins": [19, "origins-skincare"], "palmolive": [27, "palmolive"], "pampers": [21, "pampers"], "pantene": [27, "pantene"], "pearl-drops": [36, "pearl-drops"], "persil": [19, "persil"], "piz-buin": [23, "piz-buin"], "planted-skincare": [85, "planted"], "pledge": [27, "pledge"], "radox": [17, "radox"], "raven-botanicals": [98, "raven-botanicals"], "redken": [23, "redken"], "refy": [64, "refy"], "revlon": [29, "revlon"], "riemann-p20": [77, "riemann-p20"], "right-guard": [61, "right-guard"], "rimmel": [31, "rimmel"], "sally-hansen": [30, "sally-hansen"], "sanex": [27, "sanex"], "schwarzkopf": [19, "schwarzkopf"], "sensodyne": [25, "sensodyne"], "seventh-generation": [19, "seventh-generation"], "simple": [19, "simple"], "smol": [89, "smol-cleaning-products"], "soap-glory": [27, "soap-glory"], "solait-by-superdrug": [60, "solait"], "stardrops": [50, "stardrops"], "supergoop": [38, "supergoop"], "sure": [20, "sure-deodorant"], "surf": [19, "surf"], "tampax": [25, "tampax"], "tan-luxe": [65, "tan-luxe"], "tanorganic": [100, "tanorganic-skincare"], "the-body-shop": [73, "the-body-shop-skincare"], "the-inkey-list": [71, "inkey"], "the-ordinary": [19, "the-ordinary-skincare"], "the-pink-stuff": [50, "the-pink-stuff-cleaning-products"], "too-faced": [19, "too-faced"], "totm": [100, "totm"], "treaclemoon": [61, "treaclemoon"], "tresemm": [17, "tresemme"], "tropic": [100, "tropic-skincare-skincare"], "urban-decay": [25, "urban-decay"], "vegantan": [100, "vegantan"], "vicks": [21, "vicks"], "vosene": [46, "vosene"], "waken": [99, "waken"], "wella": [10, "wella"], "wet-n-wild": [61, "wet-n-wild"], "wild": [32, "wild"], "woolite": [22, "woolite"]}
+_GOY17 = {"aveda": [3, "aveda-beauty"], "beauty-kitchen": [4, "beauty-kitchen-beauty"], "covergirl": [2, "covergirl-beauty"], "dr-bronners": [4, "dr-bronner-beauty"], "dr-hauschka-skin-care": [3, "dr-hauschka-beauty"], "ethique": [2, "ethique-beauty"], "gucci": [2, "gucci-beauty"], "herbivore-botanicals": [4, "herbivore-botanicals-beauty"], "kadalys": [4, "kadalys-beauty"], "kora-organics": [4, "kora-organics-beauty"], "krave-beauty": [4, "krave-beauty-beauty"], "la-roche-posay": [3, "la-roche-posay-beauty"], "lancome": [3, "lancome-beauty"], "lucy-bee": [4, "lucy-bee-beauty"], "nyx-professional-makeup": [3, "nyx-professional-makeup-beauty"], "pai-skincare": [4, "pai-skincare-beauty"], "redken": [3, "redken-beauty"], "ren": [3, "ren-beauty"], "tarte-cosmetics": [2, "tarte-beauty"], "tata-harper-skincare": [3, "tata-harper-beauty"], "tropic": [4, "tropic-beauty"], "upcircle-beauty": [4, "upcircle-beauty-beauty"], "youth-to-the-people": [4, "youth-to-the-people-beauty"]}
+_gsgd = json.load(open("data/good-shopping-guide.json")); _goyd = json.load(open("data/good-on-you.json")); _a = _b = 0
+for _s, (_sc, _u) in _GSG17.items():
+    if _s in by and _s not in _gsgd: _gsgd[_s] = {"score": _sc, "url": "https://thegoodshoppingguide.com/brand-directory/" + _u + "/"}; _a += 1
+for _s, (_sc, _u) in _GOY17.items():
+    if _s in by and _s not in _goyd: _goyd[_s] = {"score": _sc, "url": "https://directory.goodonyou.eco/brand/" + _u}; _b += 1
+json.dump(_gsgd, open("data/good-shopping-guide.json", "w"), indent=2); open("data/good-shopping-guide.json", "a").write("\n")
+json.dump(_goyd, open("data/good-on-you.json", "w"), indent=2); open("data/good-on-you.json", "a").write("\n")
+print("Verified ratings added: Good Shopping Guide", _a, "| Good On You", _b)
+
+# 18. Sources: per-brand "sources" list (never mixes in shop links) and honest wording when there is none
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_ns = 0
+def _src(b):
+    out = []; n = b.get("note") or ""; ev = b.get("evidence") or ""
+    if ev.startswith("http"):
+        if "crueltyfree.peta.org/companies-do-test" in ev: out.append({"label": "PETA: companies that test on animals", "url": ev})
+        elif "peta.org" in ev: out.append({"label": "PETA: cruelty-free brand list", "url": ev})
+        elif "crueltyfreekitty" in ev: out.append({"label": "Cruelty Free Kitty", "url": ev})
+        else: out.append({"label": "Source", "url": ev})
+    if re.search(r"leaping bunny", n, re.I): out.append({"label": "Leaping Bunny: approved brands (search for the brand)", "url": "https://www.leapingbunny.org/shopping-guide"})
+    if re.search(r"cruelty free international", n, re.I): out.append({"label": "Cruelty Free International", "url": "https://crueltyfreeinternational.org"})
+    if re.search(r"listed by peta as not testing|peta certified|peta-certified|peta beauty without bunnies", n, re.I): out.append({"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"})
+    if re.search(r"vegan society", n, re.I): out.append({"label": "The Vegan Society trademark", "url": "https://www.vegansociety.com/"})
+    seen = set(); res = []
+    for s in out:
+        if s["url"] not in seen: seen.add(s["url"]); res.append(s)
+    return res
+for b in brands:
+    if not b.get("sources"):
+        s = _src(b)
+        if s: b["sources"] = s; _ns += 1
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Sources added:", _ns, "| still without a source:", sum(1 for b in brands if not b.get("sources")))
+g = "scripts/generate-brand-pages.js"; gs = open(g, encoding="utf-8").read(); c0 = gs
+if "renderSources" not in gs:
+    gs = gs.replace("function renderLinks(links) {", '''function renderSources(b) {
+  const s = b.sources || [];
+  if (!s.length) {
+    const msg = b.tier === 'unverified' ? 'No certification or animal-testing statement could be found for this brand, so its status can\\'t be verified.' : 'No source link has been added for this brand yet.';
+    return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + msg + ' Know of one? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
+  }
+  return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + s.map(function(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label) + '</a>'; }).join(' &middot; ') + '</p>';
+}
+function renderLinks(links) {''', 1)
+    gs = gs.replace("return '<p class=\"section-label\">sources &amp; links</p>\\n<p style=\"font-size:13.5px;\">' + rows", "return '<p class=\"section-label\">where to buy</p>\\n<p style=\"font-size:13.5px;\">' + rows", 1)
+    gs = gs.replace("renderLinks(brand.links) + renderChecked(!!(brand.links && brand.links.length))", "renderSources(brand) + renderLinks(brand.links)", 1)
+if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Sources section updated")

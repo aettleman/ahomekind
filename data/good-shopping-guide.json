@@ -18,5 +18,621 @@
   "andrex": {
     "score": 35,
     "url": "https://thegoodshoppingguide.com/brand-directory/andrex/"
+  },
+  "aesop": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/aesop/"
+  },
+  "alberto-balsam": {
+    "score": 61,
+    "url": "https://thegoodshoppingguide.com/brand-directory/alberto-balsam/"
+  },
+  "always": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/always/"
+  },
+  "ariel": {
+    "score": 13,
+    "url": "https://thegoodshoppingguide.com/brand-directory/ariel/"
+  },
+  "arm-and-hammer": {
+    "score": 36,
+    "url": "https://thegoodshoppingguide.com/brand-directory/arm-hammer/"
+  },
+  "aussie": {
+    "score": 30,
+    "url": "https://thegoodshoppingguide.com/brand-directory/aussie/"
+  },
+  "avalon-organics": {
+    "score": 58,
+    "url": "https://thegoodshoppingguide.com/brand-directory/avalon-organics/"
+  },
+  "aveda": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/aveda-skincare/"
+  },
+  "aveeno": {
+    "score": 20,
+    "url": "https://thegoodshoppingguide.com/brand-directory/aveeno/"
+  },
+  "avon": {
+    "score": 43,
+    "url": "https://thegoodshoppingguide.com/brand-directory/avon-skincare/"
+  },
+  "bali-body": {
+    "score": 65,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bali-body/"
+  },
+  "bareminerals": {
+    "score": 18,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bareminerals/"
+  },
+  "baylis-and-harding": {
+    "score": 69,
+    "url": "https://thegoodshoppingguide.com/brand-directory/baylis-harding/"
+  },
+  "beauty-without-cruelty": {
+    "score": 91,
+    "url": "https://thegoodshoppingguide.com/brand-directory/beauty-without-cruelty/"
+  },
+  "benefit": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/benefit/"
+  },
+  "bio-d": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bio-d-cleaning-products/"
+  },
+  "bobbi-brown": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bobbi-brown/"
+  },
+  "bold": {
+    "score": 13,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bold/"
+  },
+  "bondi-sands": {
+    "score": 46,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bondi-sands-sun-protection/"
+  },
+  "bulldog": {
+    "score": 50,
+    "url": "https://thegoodshoppingguide.com/brand-directory/bulldog/"
+  },
+  "burts-bees": {
+    "score": 54,
+    "url": "https://thegoodshoppingguide.com/brand-directory/burts-bees/"
+  },
+  "cantu": {
+    "score": 65,
+    "url": "https://thegoodshoppingguide.com/brand-directory/cantu/"
+  },
+  "carex": {
+    "score": 62,
+    "url": "https://thegoodshoppingguide.com/brand-directory/carex/"
+  },
+  "charles-worthington": {
+    "score": 58,
+    "url": "https://thegoodshoppingguide.com/brand-directory/charles-worthington/"
+  },
+  "childs-farm": {
+    "score": 62,
+    "url": "https://thegoodshoppingguide.com/brand-directory/childs-farm/"
+  },
+  "cif": {
+    "score": 20,
+    "url": "https://thegoodshoppingguide.com/brand-directory/cif/"
+  },
+  "clarins": {
+    "score": 43,
+    "url": "https://thegoodshoppingguide.com/brand-directory/clarins-skincare/"
+  },
+  "clean-and-clear": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/clean-clear/"
+  },
+  "clinique": {
+    "score": 16,
+    "url": "https://thegoodshoppingguide.com/brand-directory/clinique-skincare/"
+  },
+  "colgate": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/colgate/"
+  },
+  "corsodyl": {
+    "score": 21,
+    "url": "https://thegoodshoppingguide.com/brand-directory/corsodyl/"
+  },
+  "daise": {
+    "score": 69,
+    "url": "https://thegoodshoppingguide.com/brand-directory/daise/"
+  },
+  "dame": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dame/"
+  },
+  "daz": {
+    "score": 54,
+    "url": "https://thegoodshoppingguide.com/brand-directory/daz/"
+  },
+  "delphis-eco": {
+    "score": 71,
+    "url": "https://thegoodshoppingguide.com/brand-directory/delphis-cleaning-products/"
+  },
+  "dettol": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dettol-cleaning-products/"
+  },
+  "dior": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dior/"
+  },
+  "domestos": {
+    "score": 20,
+    "url": "https://thegoodshoppingguide.com/brand-directory/domestos/"
+  },
+  "dove": {
+    "score": 17,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dove-soap/"
+  },
+  "dr-bronners": {
+    "score": 79,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dr-bronners/"
+  },
+  "dr-hauschka-skin-care": {
+    "score": 95,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dr-hauschka-skincare/"
+  },
+  "dr-organic": {
+    "score": 83,
+    "url": "https://thegoodshoppingguide.com/brand-directory/dr-organic/"
+  },
+  "ecoleaf-by-suma": {
+    "score": 91,
+    "url": "https://thegoodshoppingguide.com/brand-directory/suma-cleaning-products/"
+  },
+  "ecover": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/ecover-cleaning-products/"
+  },
+  "ecozone": {
+    "score": 79,
+    "url": "https://thegoodshoppingguide.com/brand-directory/ecozone-cleaning-products/"
+  },
+  "elemis": {
+    "score": 36,
+    "url": "https://thegoodshoppingguide.com/brand-directory/elemis/"
+  },
+  "elizabeth-arden": {
+    "score": 29,
+    "url": "https://thegoodshoppingguide.com/brand-directory/elizabeth-arden/"
+  },
+  "elvive": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/elvive/"
+  },
+  "estee-lauder": {
+    "score": 16,
+    "url": "https://thegoodshoppingguide.com/brand-directory/estee-lauder-skincare/"
+  },
+  "fairy": {
+    "score": 13,
+    "url": "https://thegoodshoppingguide.com/brand-directory/fairy-laundry-detergents/"
+  },
+  "faith-in-nature": {
+    "score": 91,
+    "url": "https://thegoodshoppingguide.com/brand-directory/faith-in-nature-soap/"
+  },
+  "filter-by-molly-mae": {
+    "score": 69,
+    "url": "https://thegoodshoppingguide.com/brand-directory/filter-by-molly-mae/"
+  },
+  "flash": {
+    "score": 13,
+    "url": "https://thegoodshoppingguide.com/brand-directory/flash/"
+  },
+  "fushi": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/fushi-wellbeing-skincare/"
+  },
+  "fussy": {
+    "score": 91,
+    "url": "https://thegoodshoppingguide.com/brand-directory/fussy/"
+  },
+  "garnier": {
+    "score": 31,
+    "url": "https://thegoodshoppingguide.com/brand-directory/garnier-skincare/"
+  },
+  "green-people": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/green-people-skincare/"
+  },
+  "greenscents": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/greenscents-cleaning-products/"
+  },
+  "hawaiian-tropic": {
+    "score": 42,
+    "url": "https://thegoodshoppingguide.com/brand-directory/hawaiian-tropic/"
+  },
+  "head-and-shoulders": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/head-shoulders/"
+  },
+  "herbal-essences": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/herbal-essences/"
+  },
+  "hismile": {
+    "score": 64,
+    "url": "https://thegoodshoppingguide.com/brand-directory/hismile/"
+  },
+  "huggies": {
+    "score": 32,
+    "url": "https://thegoodshoppingguide.com/brand-directory/huggies/"
+  },
+  "imperial-leather": {
+    "score": 62,
+    "url": "https://thegoodshoppingguide.com/brand-directory/imperial-leather/"
+  },
+  "isle-of-paradise": {
+    "score": 73,
+    "url": "https://thegoodshoppingguide.com/brand-directory/isle-of-paradise/"
+  },
+  "john-frieda": {
+    "score": 46,
+    "url": "https://thegoodshoppingguide.com/brand-directory/john-frieda/"
+  },
+  "kerastase": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/kerastase/"
+  },
+  "kiehl-s": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/kiehls/"
+  },
+  "kingfisher": {
+    "score": 88,
+    "url": "https://thegoodshoppingguide.com/brand-directory/kingfisher-toothpaste/"
+  },
+  "kotex": {
+    "score": 32,
+    "url": "https://thegoodshoppingguide.com/brand-directory/kotex/"
+  },
+  "l-occitane": {
+    "score": 36,
+    "url": "https://thegoodshoppingguide.com/brand-directory/loccitane-skincare/"
+  },
+  "l-oreal": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/loreal-skincare/"
+  },
+  "la-roche-posay": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/la-roche-posay-skincare/"
+  },
+  "lancome": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/lancome/"
+  },
+  "lavera-naturkosmetik": {
+    "score": 81,
+    "url": "https://thegoodshoppingguide.com/brand-directory/lavera-make-up/"
+  },
+  "little-soap-company": {
+    "score": 91,
+    "url": "https://thegoodshoppingguide.com/brand-directory/little-soap-company/"
+  },
+  "liz-earle": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/liz-earle/"
+  },
+  "love-ethical-beauty": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/love-ethical-beauty-skincare/"
+  },
+  "lucy-bee": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/lucy-bee-soap/"
+  },
+  "lush": {
+    "score": 84,
+    "url": "https://thegoodshoppingguide.com/brand-directory/lush-skincare/"
+  },
+  "lynx": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/lynx/"
+  },
+  "mac": {
+    "score": 16,
+    "url": "https://thegoodshoppingguide.com/brand-directory/mac/"
+  },
+  "macleans": {
+    "score": 21,
+    "url": "https://thegoodshoppingguide.com/brand-directory/macleans/"
+  },
+  "max-factor": {
+    "score": 31,
+    "url": "https://thegoodshoppingguide.com/brand-directory/max-factor/"
+  },
+  "maybelline": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/maybelline/"
+  },
+  "method": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/method-cleaning-products/"
+  },
+  "miniml": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/miniml-laundry-detergent/"
+  },
+  "mitchum": {
+    "score": 15,
+    "url": "https://thegoodshoppingguide.com/brand-directory/mitchum/"
+  },
+  "molton-brown": {
+    "score": 50,
+    "url": "https://thegoodshoppingguide.com/brand-directory/molton-brown/"
+  },
+  "mr-muscle": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/mr-muscle/"
+  },
+  "mumandyou": {
+    "score": 79,
+    "url": "https://thegoodshoppingguide.com/brand-directory/mum-you/"
+  },
+  "nars": {
+    "score": 34,
+    "url": "https://thegoodshoppingguide.com/brand-directory/nars/"
+  },
+  "natracare": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/natracare/"
+  },
+  "neals-yard-remedies": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/neals-yard-remedies-skincare/"
+  },
+  "neutrogena": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/neutrogena-skincare/"
+  },
+  "nivea": {
+    "score": 36,
+    "url": "https://thegoodshoppingguide.com/brand-directory/nivea-skincare/"
+  },
+  "no7": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/no7-skincare/"
+  },
+  "nyx": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/nyx/"
+  },
+  "oceansaver": {
+    "score": 75,
+    "url": "https://thegoodshoppingguide.com/brand-directory/oceansaver/"
+  },
+  "ogx": {
+    "score": 20,
+    "url": "https://thegoodshoppingguide.com/brand-directory/ogx/"
+  },
+  "old-spice": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/old-spice/"
+  },
+  "oral-b": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/oral-b/"
+  },
+  "original-source": {
+    "score": 62,
+    "url": "https://thegoodshoppingguide.com/brand-directory/original-source/"
+  },
+  "origins": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/origins-skincare/"
+  },
+  "palmolive": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/palmolive/"
+  },
+  "pampers": {
+    "score": 21,
+    "url": "https://thegoodshoppingguide.com/brand-directory/pampers/"
+  },
+  "pantene": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/pantene/"
+  },
+  "pearl-drops": {
+    "score": 36,
+    "url": "https://thegoodshoppingguide.com/brand-directory/pearl-drops/"
+  },
+  "persil": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/persil/"
+  },
+  "piz-buin": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/piz-buin/"
+  },
+  "planted-skincare": {
+    "score": 85,
+    "url": "https://thegoodshoppingguide.com/brand-directory/planted/"
+  },
+  "pledge": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/pledge/"
+  },
+  "radox": {
+    "score": 17,
+    "url": "https://thegoodshoppingguide.com/brand-directory/radox/"
+  },
+  "raven-botanicals": {
+    "score": 98,
+    "url": "https://thegoodshoppingguide.com/brand-directory/raven-botanicals/"
+  },
+  "redken": {
+    "score": 23,
+    "url": "https://thegoodshoppingguide.com/brand-directory/redken/"
+  },
+  "refy": {
+    "score": 64,
+    "url": "https://thegoodshoppingguide.com/brand-directory/refy/"
+  },
+  "revlon": {
+    "score": 29,
+    "url": "https://thegoodshoppingguide.com/brand-directory/revlon/"
+  },
+  "riemann-p20": {
+    "score": 77,
+    "url": "https://thegoodshoppingguide.com/brand-directory/riemann-p20/"
+  },
+  "right-guard": {
+    "score": 61,
+    "url": "https://thegoodshoppingguide.com/brand-directory/right-guard/"
+  },
+  "rimmel": {
+    "score": 31,
+    "url": "https://thegoodshoppingguide.com/brand-directory/rimmel/"
+  },
+  "sally-hansen": {
+    "score": 30,
+    "url": "https://thegoodshoppingguide.com/brand-directory/sally-hansen/"
+  },
+  "sanex": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/sanex/"
+  },
+  "schwarzkopf": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/schwarzkopf/"
+  },
+  "sensodyne": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/sensodyne/"
+  },
+  "seventh-generation": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/seventh-generation/"
+  },
+  "simple": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/simple/"
+  },
+  "smol": {
+    "score": 89,
+    "url": "https://thegoodshoppingguide.com/brand-directory/smol-cleaning-products/"
+  },
+  "soap-glory": {
+    "score": 27,
+    "url": "https://thegoodshoppingguide.com/brand-directory/soap-glory/"
+  },
+  "solait-by-superdrug": {
+    "score": 60,
+    "url": "https://thegoodshoppingguide.com/brand-directory/solait/"
+  },
+  "stardrops": {
+    "score": 50,
+    "url": "https://thegoodshoppingguide.com/brand-directory/stardrops/"
+  },
+  "supergoop": {
+    "score": 38,
+    "url": "https://thegoodshoppingguide.com/brand-directory/supergoop/"
+  },
+  "sure": {
+    "score": 20,
+    "url": "https://thegoodshoppingguide.com/brand-directory/sure-deodorant/"
+  },
+  "surf": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/surf/"
+  },
+  "tampax": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/tampax/"
+  },
+  "tan-luxe": {
+    "score": 65,
+    "url": "https://thegoodshoppingguide.com/brand-directory/tan-luxe/"
+  },
+  "tanorganic": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/tanorganic-skincare/"
+  },
+  "the-body-shop": {
+    "score": 73,
+    "url": "https://thegoodshoppingguide.com/brand-directory/the-body-shop-skincare/"
+  },
+  "the-inkey-list": {
+    "score": 71,
+    "url": "https://thegoodshoppingguide.com/brand-directory/inkey/"
+  },
+  "the-ordinary": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/the-ordinary-skincare/"
+  },
+  "the-pink-stuff": {
+    "score": 50,
+    "url": "https://thegoodshoppingguide.com/brand-directory/the-pink-stuff-cleaning-products/"
+  },
+  "too-faced": {
+    "score": 19,
+    "url": "https://thegoodshoppingguide.com/brand-directory/too-faced/"
+  },
+  "totm": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/totm/"
+  },
+  "treaclemoon": {
+    "score": 61,
+    "url": "https://thegoodshoppingguide.com/brand-directory/treaclemoon/"
+  },
+  "tresemm": {
+    "score": 17,
+    "url": "https://thegoodshoppingguide.com/brand-directory/tresemme/"
+  },
+  "tropic": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/tropic-skincare-skincare/"
+  },
+  "urban-decay": {
+    "score": 25,
+    "url": "https://thegoodshoppingguide.com/brand-directory/urban-decay/"
+  },
+  "vegantan": {
+    "score": 100,
+    "url": "https://thegoodshoppingguide.com/brand-directory/vegantan/"
+  },
+  "vicks": {
+    "score": 21,
+    "url": "https://thegoodshoppingguide.com/brand-directory/vicks/"
+  },
+  "vosene": {
+    "score": 46,
+    "url": "https://thegoodshoppingguide.com/brand-directory/vosene/"
+  },
+  "waken": {
+    "score": 99,
+    "url": "https://thegoodshoppingguide.com/brand-directory/waken/"
+  },
+  "wella": {
+    "score": 10,
+    "url": "https://thegoodshoppingguide.com/brand-directory/wella/"
+  },
+  "wet-n-wild": {
+    "score": 61,
+    "url": "https://thegoodshoppingguide.com/brand-directory/wet-n-wild/"
+  },
+  "wild": {
+    "score": 32,
+    "url": "https://thegoodshoppingguide.com/brand-directory/wild/"
+  },
+  "woolite": {
+    "score": 22,
+    "url": "https://thegoodshoppingguide.com/brand-directory/woolite/"
   }
 }
