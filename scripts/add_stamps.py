@@ -36,9 +36,15 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
     return '<button type="button" class="ahk-rating ahk-r' + g.score + '" data-stamp="goy" data-score="' + g.score + '" data-url="' + esc(g.url || "https://directory.goodonyou.eco") + '" aria-label="Ethical rating: ' + LABELS[g.score] + ', tap for details">' +
       '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical rating &middot; Good On You</b>' + LABELS[g.score] + "</span></button>";
   }
+  function gsg(g) {
+    if (!g || g.score == null) return "";
+    var c = g.score >= 80 ? "ahk-g" : g.score >= 60 ? "ahk-g ahk-g-mid" : "ahk-g ahk-g-lo";
+    return '<button type="button" class="ahk-rating ' + c + '" data-stamp="gsg" data-score="' + g.score + '" data-url="' + esc(g.url || "https://thegoodshoppingguide.com") + '" aria-label="Ethical score: ' + g.score + ' out of 100, tap for details">' +
+      '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical score &middot; Good Shopping Guide</b>' + g.score + " out of 100</span></button>";
+  }
   function row(o) {
     var h = ["unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
-    return '<div class="ahk-stamps">' + h + rating(o.goy) + "</div>";
+    return '<div class="ahk-stamps">' + h + rating(o.goy) + gsg(o.gsg) + "</div>";
   }
   var dlg;
   function open(btn) {
@@ -47,6 +53,11 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
       var n = +btn.getAttribute("data-score");
       t = "Ethical rating: " + LABELS[n] + " (" + n + " out of 5)"; who = "Good On You"; m = MEANS[n]; u = btn.getAttribute("data-url");
       ex = "<p>This looks at how a brand treats people, the planet and animals overall. It is <b>not</b> about animal testing, so it is separate from the cruelty-free stamp.</p><p class=\"ahk-key\">" + [5,4,3,2,1].map(function (k) { return (k === n ? "<b>" : "") + k + " " + LABELS[k] + (k === n ? "</b>" : ""); }).join(" &middot; ") + "</p><p><b>The rating, the 1 to 5 scale and its labels all belong to Good On You, an independent brand rating organisation. They are not my own rating.</b></p>";
+    } else if (k === "gsg") {
+      var gn = +btn.getAttribute("data-score");
+      t = "Ethical score: " + gn + " out of 100"; who = "The Good Shopping Guide"; u = btn.getAttribute("data-url");
+      m = "The Good Shopping Guide scores brands out of 100 on how they treat the environment, animals and people, and compares them with other brands in the same category.";
+      ex = "<p>It is <b>not</b> about animal testing, so it is separate from the cruelty-free stamp. The score and the scale belong to the Good Shopping Guide, an independent ethical rating organisation. They are not my own rating.</p>";
     } else { var s = S[k]; t = s.title; who = s.who; m = s.means; u = s.url; }
     if (!dlg) {
       dlg = document.createElement("div"); dlg.className = "ahk-dlg"; dlg.setAttribute("role", "dialog"); dlg.setAttribute("aria-modal", "true"); dlg.hidden = true;
@@ -55,7 +66,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
     }
     dlg.innerHTML = '<div class="ahk-card"><h3>' + esc(t) + '</h3>' + (who ? '<p class="ahk-who">By ' + esc(who) + "</p>" : "") + "<p>" + esc(m) + "</p>" + ex +
-      (u ? '<p><a href="' + esc(u) + '" target="_blank" rel="noopener">' + (k === "goy" ? "See the rating on Good On You" : "Visit " + esc(who.split(" (")[0])) + "</a></p>" : "") +
+      (u ? '<p><a href="' + esc(u) + '" target="_blank" rel="noopener">' + (k === "goy" ? "See the rating on Good On You" : k === "gsg" ? "See the score on the Good Shopping Guide" : "Visit " + esc(who.split(" (")[0])) + "</a></p>" : "") +
       '<button type="button" data-close class="ahk-close">Close</button></div>';
     dlg.hidden = false; dlg.querySelector(".ahk-close").focus();
   }
@@ -71,7 +82,7 @@ run("node scripts/generate-brand-pages.js"); run("node scripts/generate-brand-ch
 raw = json.load(open("data/brands.json")); brands = raw["brands"] if isinstance(raw, dict) else raw
 MOUNT = ("<script>document.querySelectorAll('.ahk-stamps-mount').forEach(function(e){var o={};"
  "(e.dataset.s||'').split(',').forEach(function(x){if(x)o[x]=1});"
- "if(e.dataset.g)o.goy={score:+e.dataset.g,url:e.dataset.u};e.innerHTML=AHKStamps.row(o)});</script>")
+ "if(e.dataset.g)o.goy={score:+e.dataset.g,url:e.dataset.u};if(e.dataset.gs)o.gsg={score:+e.dataset.gs,url:e.dataset.gu};e.innerHTML=AHKStamps.row(o)});</script>")
 done = skipped = 0
 for b in brands:
     files = glob.glob("*/%s/index.html" % b["slug"]) or glob.glob("%s/index.html" % b["slug"])

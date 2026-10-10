@@ -4196,7 +4196,7 @@
     ],
     "veganConfidence": "medium",
     "claim": "",
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-10"
   },
   {
     "slug": "dame",
@@ -13437,7 +13437,7 @@
     "name": "Pampers",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "Procter & Gamble",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -13445,11 +13445,12 @@
     "links": [],
     "price": "",
     "category": [
-      "skincare"
+      "paper-hygiene"
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13"
+    "lastVerified": "2026-09-13",
+    "parentTestsOnAnimals": true
   },
   {
     "slug": "pangea-organics",
@@ -17743,7 +17744,7 @@
     ],
     "region": "Africa & The Middle East, Europe",
     "veganConfidence": "high",
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-10",
     "claim": "",
     "price": "££",
     "stockists": [
@@ -20327,5 +20328,91 @@
     "parentTestsOnAnimals": true,
     "claim": "",
     "lastVerified": "2026-10-09"
+  },
+  {
+    "slug": "cushelle",
+    "name": "Cushelle",
+    "tier": "bad",
+    "note": "Owned by Essity, which says it tests on animals where the law requires it, such as in parts of China and Brazil, and where the medical device standard ISO 10993 calls for it. Toilet paper.",
+    "parentCompany": "Essity",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://www.essityusa.com/Images/STM-30765-v4-0-Essity-Position-on-Animal-Testing_tcm341-47956.pdf",
+        "label": "Essity position on animal testing"
+      },
+      {
+        "url": "https://thegoodshoppingguide.com/brand-directory/cushelle",
+        "label": "The Good Shopping Guide"
+      }
+    ],
+    "price": "£",
+    "category": [
+      "paper-hygiene"
+    ],
+    "veganConfidence": "low",
+    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-10"
+  },
+  {
+    "slug": "naked-paper",
+    "name": "Naked Paper",
+    "tier": "unverified",
+    "note": "Toilet paper, kitchen roll and tissues.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://uk.nakedpaper.com/blogs/news/are-toilet-rolls-vegan",
+        "label": "Naked Paper: are toilet rolls vegan?"
+      },
+      {
+        "url": "https://thegoodshoppingguide.com/brand-directory/naked-paper/",
+        "label": "The Good Shopping Guide"
+      }
+    ],
+    "category": [
+      "paper-hygiene"
+    ],
+    "veganConfidence": "medium",
+    "region": "Europe",
+    "claim": "Says its toilet rolls, kitchen rolls and tissues have never been tested on animals and never will be, and that its range is vegan (the glue is pine sap, not animal-derived gelatine).",
+    "lastVerified": "2026-10-10"
+  },
+  {
+    "slug": "who-gives-a-crap",
+    "name": "Who Gives A Crap",
+    "tier": "unverified",
+    "note": "Toilet paper, tissues and kitchen roll.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [
+      {
+        "url": "https://support.whogivesacrap.org/hc/en-gb/articles/11902182808217-Are-your-products-vegan",
+        "label": "Who Gives A Crap: are your products vegan?"
+      },
+      {
+        "url": "https://thegoodshoppingguide.com/brand-directory/who-gives-a-crap/",
+        "label": "The Good Shopping Guide"
+      }
+    ],
+    "category": [
+      "paper-hygiene"
+    ],
+    "veganConfidence": "medium",
+    "region": "Australia & New Zealand, Europe, USA & Canada",
+    "claim": "Says it doesn't test on animals and that its products are vegan: no virgin trees or animal-derived ingredients, and the glue is just starch and water.",
+    "lastVerified": "2026-10-10"
   }
 ]

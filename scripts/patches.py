@@ -124,6 +124,35 @@ if _axe:
         brands.append(e); by[sl] = e; _n += 1
     print("Kimberly-Clark brands added:", _n)
     for sl in ("andrex", "kleenex", "cottonelle", "huggies"): by[sl]["category"] = ["paper-hygiene"]
+# 4d. Cushelle (Essity) and Pampers (Procter & Gamble)
+if _axe and "cushelle" not in by:
+    e = copy.deepcopy(_axe)
+    e.update(slug="cushelle", name="Cushelle", tier="bad", parentCompany="Essity", parentTestsOnAnimals=True, vegan="unknown", veganConfidence="low",
+             price="£", category=["paper-hygiene"], claim="", evidence="", lastVerified=today,
+             note="Owned by Essity, which says it tests on animals where the law requires it, such as in parts of China and Brazil, and where the medical device standard ISO 10993 calls for it. Toilet paper.",
+             links=[{"url": "https://www.essityusa.com/Images/STM-30765-v4-0-Essity-Position-on-Animal-Testing_tcm341-47956.pdf", "label": "Essity position on animal testing"},
+                    {"url": "https://thegoodshoppingguide.com/brand-directory/cushelle", "label": "The Good Shopping Guide"}])
+    brands.append(e); by["cushelle"] = e; print("Cushelle added")
+if "pampers" in by:
+    by["pampers"].update(parentCompany="Procter & Gamble", category=["paper-hygiene"])
+    by["pampers"].setdefault("parentTestsOnAnimals", True)
+
+# 4e. Naked Paper and Who Gives A Crap: say they are cruelty-free and vegan, not certified
+_NP = [("naked-paper", "Naked Paper", "Europe", "Says its toilet rolls, kitchen rolls and tissues have never been tested on animals and never will be, and that its range is vegan (the glue is pine sap, not animal-derived gelatine).",
+        "Says its toilet rolls, kitchen rolls and tissues have never been tested on animals, and that its range is vegan. The glue is pine sap, not animal-derived gelatine. Toilet paper, kitchen roll and tissues.",
+        [{"url": "https://uk.nakedpaper.com/blogs/news/are-toilet-rolls-vegan", "label": "Naked Paper: are toilet rolls vegan?"}, {"url": "https://thegoodshoppingguide.com/brand-directory/naked-paper/", "label": "The Good Shopping Guide"}]),
+       ("who-gives-a-crap", "Who Gives A Crap", "Australia & New Zealand, Europe, USA & Canada", "Says it doesn't test on animals and that its products are vegan: no virgin trees or animal-derived ingredients, and the glue is just starch and water.",
+        "Says it doesn't test on animals and that its products are vegan, with no animal-derived ingredients. Toilet paper, tissues and kitchen roll.",
+        [{"url": "https://support.whogivesacrap.org/hc/en-gb/articles/11902182808217-Are-your-products-vegan", "label": "Who Gives A Crap: are your products vegan?"}, {"url": "https://thegoodshoppingguide.com/brand-directory/who-gives-a-crap/", "label": "The Good Shopping Guide"}])]
+if _axe:
+    for sl, nm_, reg, claim, note, links in _NP:
+        if sl in by or any(norm(b.get("name", "")) == norm(nm_) for b in brands): continue
+        e = copy.deepcopy(_axe)
+        e.update(slug=sl, name=nm_, tier="unverified", parentCompany=None, vegan="full", veganConfidence="medium", category=["paper-hygiene"], region=reg,
+                 claim=claim, evidence="", note=note, lastVerified=today, links=links)
+        e.pop("price", None); e.pop("parentTestsOnAnimals", None)
+        brands.append(e); by[sl] = e; print(nm_, "added")
+
 # 4c. The Cheeky Panda: certified, and the kinder swap for toilet paper and tissues
 _cp = by.get("the-cheeky-panda")
 if _cp:
@@ -137,12 +166,12 @@ json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("
 # 5. Checker result-card stamps
 JS = r'''(function(){
   function norm(s){return (s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]/g,"");}
-  var brands=null,goy={};
+  var brands=null,goy={},gsgd={};
   function rules(b){var t=b.tier,n=(b.note||"")+" "+(b.claim||""),o={};
     if(t==="unverified")o.unk=1; if(t==="bad")o.ncf=1; if(b.vegan==="full")o.vegan=1;
     if((t==="good"||t==="check"||t==="warn")&&/Leaping Bunny|Cruelty Free International/.test(n))o.lb=1;
     if((t==="good"||t==="check"||t==="warn")&&/PETA/.test(n))o.peta=1;
-    if(goy[b.slug])o.goy=goy[b.slug]; return o;}
+    if(goy[b.slug])o.goy=goy[b.slug]; if(gsgd[b.slug])o.gsg=gsgd[b.slug]; return o;}
   function find(card){
     var hs=card.querySelectorAll(".rcard-name,h1,h2,h3,h4,.rr-name,.rname,strong"),i,k;
     for(i=0;i<hs.length;i++){k=norm(hs[i].textContent);if(k&&brands[k])return {b:brands[k],el:hs[i]};}
@@ -157,9 +186,10 @@ JS = r'''(function(){
     document.querySelectorAll(".rcard:not([data-ahk-o]),.card:not([data-ahk-o])").forEach(function(c){
       c.setAttribute("data-ahk-o","1"); if(io)io.observe(c); else deco(c);});}
   Promise.all([fetch("data/brands.json").then(function(r){return r.json()}),
-    fetch("data/good-on-you.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}})]).then(function(a){
+    fetch("data/good-on-you.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}}),
+    fetch("data/good-shopping-guide.json").then(function(r){return r.ok?r.json():{}}).catch(function(){return{}})]).then(function(a){
     var l=Array.isArray(a[0])?a[0]:a[0].brands; brands={}; l.forEach(function(b){brands[norm(b.name)]=b;});
-    Object.keys(a[1]).forEach(function(k){if(k[0]!=="_")goy[k]=a[1][k];});
+    Object.keys(a[1]).forEach(function(k){if(k[0]!=="_")goy[k]=a[1][k];}); Object.keys(a[2]).forEach(function(k){if(k[0]!=="_")gsgd[k]=a[2][k];});
     new MutationObserver(run).observe(document.body,{childList:true,subtree:true}); run();
   }).catch(function(){});
 })();
@@ -263,3 +293,44 @@ for b in brands:
     if b.get("tier") == "bad" and not b.get("links") and not b.get("parentCompany"): issues.append("tests on animals with no source: " + b["name"])
 open("data/consistency-report.txt", "w").write("\n".join(issues) + "\n")
 print("Consistency check:", len(issues), "things to look at (data/consistency-report.txt)")
+
+# 12. Friendlier "says it's cruelty-free, not certified yet" look, and those brands can be swaps
+g = "scripts/generate-brand-pages.js"; gs = open(g, encoding="utf-8").read(); c0 = gs
+gs = gs.replace("const CLAIM_HEADLINE = 'Says it\\'s cruelty-free. Not certified.';", "const CLAIM_HEADLINE = 'Says it\\'s cruelty-free. Not certified yet.';")
+gs = re.sub(r"\+ '<p style=\"margin:0;\"><strong style=\"color:#2A1630;\">The reality:</strong>.*?</p>'", 
+  "+ '<p style=\"margin:0;\"><strong style=\"color:#2A1630;\">What that means:</strong> ' + escapeHtml(brand.name) + ' isn\\'t certified by Leaping Bunny, Cruelty Free International or PETA yet, so nobody independent has checked this. Plenty of honest brands haven\\'t applied, and some products, like paper goods, don\\'t fit the main schemes well. It\\'s the brand\\'s word, so the choice is yours.</p>'", gs, count=1, flags=re.S)
+gs = gs.replace("(STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)", "(brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))", 1)
+gs = gs.replace("if (b.tier !== 'good' && b.tier !== 'check') return false;\n    if (cat", "if (b.tier !== 'good' && b.tier !== 'check' && !(b.tier === 'unverified' && b.claim)) return false;\n    if (cat", 1)
+gs = gs.replace("(y.tier === 'good' ? 1 : 0)) - ((x.price", "(y.tier === 'good' ? 1 : 0) - (y.tier === 'unverified' ? 5 : 0)) - ((x.price", 1)
+gs = gs.replace("(x.tier === 'good' ? 1 : 0)); });", "(x.tier === 'good' ? 1 : 0) - (x.tier === 'unverified' ? 5 : 0)); });", 1)
+gs = gs.replace("(p.parentCompany ? TIER_SHORT[p.tier] : ownerWord(p)", "(p.tier === 'unverified' ? 'says cruelty-free' : p.parentCompany ? TIER_SHORT[p.tier] : ownerWord(p)", 1)
+if gs != c0: open(g, "w", encoding="utf-8").write(gs); print("Says-cruelty-free look updated")
+else: print("Says-cruelty-free look already updated")
+
+# 13. Good Shopping Guide scores (second ethical rating, out of 100)
+GSGP = "data/good-shopping-guide.json"
+GSG = {"naked-paper": 100, "the-cheeky-panda": 93, "who-gives-a-crap": 84, "cushelle": 50, "andrex": 35}
+gsg = json.load(open(GSGP)) if os.path.exists(GSGP) else {}
+_n = 0
+for sl, sc in GSG.items():
+    if sl in by and sl not in gsg:
+        gsg[sl] = {"score": sc, "url": "https://thegoodshoppingguide.com/brand-directory/%s/" % sl}; _n += 1
+json.dump(gsg, open(GSGP, "w"), indent=2); open(GSGP, "a").write("\n")
+print("Good Shopping Guide scores added:", _n)
+_css = open("css/stamps.css").read()
+if ".ahk-g-mid" not in _css:
+    open("css/stamps.css", "a").write("\n.ahk-g{--rc:#4C7A3A}.ahk-g-mid{--rc:#8A6A00}.ahk-g-lo{--rc:#B4601F}.ahk-g .ahk-rating-n{width:38px;font-size:14px}\n")
+
+# 14. Small wording fixes
+gs = open(g, encoding="utf-8").read(); c1 = gs
+gs = gs.replace(".replace('makeup beauty', 'makeup')", ".replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues')", 1) if "toilet paper and tissues" not in gs else gs
+gs = gs.replace("const parentTestFlag = brand.tier === 'unverified'\n", "const parentTestFlag = (brand.tier === 'unverified' && brand.parentCompany)\n", 1)
+if gs != c1: open(g, "w", encoding="utf-8").write(gs); print("Category label and parent flag fixed")
+for _sl, _note in (("naked-paper", "Toilet paper, kitchen roll and tissues."), ("who-gives-a-crap", "Toilet paper, tissues and kitchen roll.")):
+    if _sl in by: by[_sl]["note"] = _note
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+
+# 15. No "parent company's testing policy" line for unverified brands that have no parent (checker cards)
+g2 = "scripts/generate-brand-check.js"; g2s = open(g2, encoding="utf-8").read()
+if "if (brand.tier === 'unverified') {\n    parentNote" in g2s:
+    open(g2, "w", encoding="utf-8").write(g2s.replace("if (brand.tier === 'unverified') {\n    parentNote", "if (brand.tier === 'unverified' && brand.parentCompany) {\n    parentNote", 1)); print("Checker parent line fixed")

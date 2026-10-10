@@ -45,6 +45,9 @@ for f in glob.glob("**/*.html", recursive=True):
     if "how-i-decide" in h or not FOOT.search(h): continue
     open(f, "w", encoding="utf-8").write(FOOT.sub(foot, h, count=1))
 # ---------- brand page extras ----------
+gsgd = {}
+if os.path.exists("data/good-shopping-guide.json"):
+    gsgd = {k: v for k, v in json.load(open("data/good-shopping-guide.json")).items() if not k.startswith("_")}
 goy = {}
 if os.path.exists("data/good-on-you.json"):
     goy = {k: v for k, v in json.load(open("data/good-on-you.json")).items() if not k.startswith("_")}
@@ -61,6 +64,9 @@ for b in brands:
     h = open(f, encoding="utf-8").read()
     if EX in h: continue
     g = goy.get(b["slug"])
+    gg = gsgd.get(b["slug"])
+    if gg and "data-gs=" not in h:
+        h = re.sub(r'(class="ahk-stamps-mount" data-s="[a-z,]*")', lambda m: '%s data-gs="%d" data-gu="%s"' % (m.group(1), gg["score"], gg["url"]), h, count=1)
     if g and "data-g=" not in h:
         h = re.sub(r'(class="ahk-stamps-mount" data-s="[a-z,]*")', lambda m: '%s data-g="%d" data-u="%s"' % (m.group(1), g["score"], g["url"]), h, count=1)
     if b.get("parentCompany"):
@@ -114,6 +120,8 @@ def chip(b):
     if t in ("good", "check", "warn") and "PETA" in n: st.append('<span class="pc-s" title="PETA">PETA</span>')
     g = goy.get(b["slug"])
     if g: st.append('<span class="pc-r pc-r%d" title="Good On You rating">%d/5</span>' % (g["score"], g["score"]))
+    gq = gsgd.get(b["slug"])
+    if gq: st.append('<span class="pc-r pc-r%d" title="Good Shopping Guide score">%d/100</span>' % (4 if gq["score"] >= 80 else 3 if gq["score"] >= 60 else 2, gq["score"]))
     return '<a class="pc-chip" href="/%s/"><span class="pc-name">%s</span><span class="pc-st">%s</span><span class="pc-tag">%s</span></a>' % (os.path.dirname(paths[b["slug"]]), E(b["name"]), "".join(st), TAGS.get(t, ""))
 made = 0
 groups = {}

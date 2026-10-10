@@ -139,7 +139,6 @@ tests on animals with no source: Osiao
 tests on animals with no source: Oust
 tests on animals with no source: OxiClean
 tests on animals with no source: Paco Rabanne
-tests on animals with no source: Pampers
 tests on animals with no source: Pearl Drops
 tests on animals with no source: Pepsodent
 tests on animals with no source: Peter Thomas Roth

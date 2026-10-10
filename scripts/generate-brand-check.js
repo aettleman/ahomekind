@@ -130,7 +130,7 @@ function renderCard(brand) {
     ? '<a href="brands/' + brand.slug + '/">' + escapeHtml(brand.name) + '</a>'
     : escapeHtml(brand.name);
   var parentNote = '';
-  if (brand.tier === 'unverified') {
+  if (brand.tier === 'unverified' && brand.parentCompany) {
     parentNote = brand.parentTestsOnAnimals === true
       ? '<p class="parent-test-flag bad">&#10060; parent company tests on animals</p>'
       : brand.parentTestsOnAnimals === false

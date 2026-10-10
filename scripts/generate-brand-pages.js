@@ -92,12 +92,12 @@ const VERDICT_HEADLINE = {
   bad: 'Tests on animals, or sells where it\'s required.',
   unverified: 'Not certified either way, yet.'
 };
-const CLAIM_HEADLINE = 'Says it\'s cruelty-free. Not certified.';
+const CLAIM_HEADLINE = 'Says it\'s cruelty-free. Not certified yet.';
 function claimBox(brand) {
   if (!brand.claim) return '';
   return '<div class="claim-box" style="margin-top:16px; padding:16px 18px; background:#FBF4EF; border:1px solid #E4D0C6; border-radius:14px; font-size:13.5px; line-height:1.7; color:#5A4550;">'
     + '<p style="margin:0 0 10px;"><strong style="color:#2A1630;">What they say:</strong> ' + escapeHtml(brand.claim) + '</p>'
-    + '<p style="margin:0;"><strong style="color:#2A1630;">The reality:</strong> ' + escapeHtml(brand.name) + ' isn\'t certified by Leaping Bunny, Cruelty Free International or PETA, so nobody independent has checked that claim. Getting certified is free (only using the logo costs a one-time fee), so until ' + escapeHtml(brand.name) + ' does, a home kind can\'t call it cruelty-free. If you buy it, you\'re taking the brand\'s word for it.</p>'
+    + '<p style="margin:0;"><strong style="color:#2A1630;">What that means:</strong> ' + escapeHtml(brand.name) + ' isn\'t certified by Leaping Bunny, Cruelty Free International or PETA yet, so nobody independent has checked this. Plenty of honest brands haven\'t applied, and some products, like paper goods, don\'t fit the main schemes well. It\'s the brand\'s word, so the choice is yours.</p>'
     + '</div>';
 }
 
@@ -158,13 +158,13 @@ function buildSwaps(brand, allBrands) {
   if (!cat) return '';
   const pool = allBrands.filter(function(b){
     if (b.slug === brand.slug) return false;
-    if (b.tier !== 'good' && b.tier !== 'check') return false;
+    if (b.tier !== 'good' && b.tier !== 'check' && !(b.tier === 'unverified' && b.claim)) return false;
     if (cat && b.category && b.category.indexOf(cat) === -1) return false;
     return true;
   });
   // Prefer brands with a known price and an independent owner: the kind of
   // swap someone can actually pick up in a UK shop.
-  pool.sort(function(x, y){ return ((y.price ? 2 : 0) + (y.parentCompany ? 0 : 1) + (y.tier === 'good' ? 1 : 0)) - ((x.price ? 2 : 0) + (x.parentCompany ? 0 : 1) + (x.tier === 'good' ? 1 : 0)); });
+  pool.sort(function(x, y){ return ((y.price ? 2 : 0) + (y.parentCompany ? 0 : 1) + (y.tier === 'good' ? 1 : 0) - (y.tier === 'unverified' ? 5 : 0)) - ((x.price ? 2 : 0) + (x.parentCompany ? 0 : 1) + (x.tier === 'good' ? 1 : 0) - (x.tier === 'unverified' ? 5 : 0)); });
   const top = pool.slice(0, 12);
   if (!top.length) return '';
   const h = hashOf(brand.slug);
@@ -173,7 +173,7 @@ function buildSwaps(brand, allBrands) {
   let html = '<p class="swaps-kick">kinder swaps</p><div class="swp">';
   picks.forEach(function(p){
     html += '<a href="../' + p.slug + '/"><div class="k-arch-box" style="background:' + TIER_WASH[p.tier] + '">' + pkHtml(p) + '</div>';
-    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.parentCompany ? TIER_SHORT[p.tier] : ownerWord(p).toLowerCase() === 'unknown' ? 'owner unknown' : 'independent') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
+    html += '<b>' + escapeHtml(p.name) + '</b><span>' + (p.tier === 'unverified' ? 'says cruelty-free' : p.parentCompany ? TIER_SHORT[p.tier] : ownerWord(p).toLowerCase() === 'unknown' ? 'owner unknown' : 'independent') + (p.price ? ' &middot; ' + escapeHtml(p.price) : '') + '</span></a>';
   });
   html += '</div>';
   return html;
@@ -194,7 +194,7 @@ function renderBrandPage(brand) {
     : 'vegan-unknown';
   const parentPillClass = brand.tier === 'bad' ? 'parent-bad' : 'parent-neutral';
   const parentLine = brand.parentCompany ? ('<span class="status-pill ' + parentPillClass + '"><span class="status-pill-label">parent company</span> ' + escapeHtml(brand.parentCompany) + '</span>') : '';
-  const parentTestFlag = brand.tier === 'unverified'
+  const parentTestFlag = (brand.tier === 'unverified' && brand.parentCompany)
     ? (brand.parentTestsOnAnimals === true
         ? '<p class="parent-test-flag bad">&#10060; parent company tests on animals</p>'
         : brand.parentTestsOnAnimals === false
@@ -264,10 +264,10 @@ function renderBrandPage(brand) {
   lines.push('<main class="page-shell k-page k-brand" id="main">');
   lines.push('<div class="bnav"><a class="ib" href="../../brand-check.html" id="ahkBackLink" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></a><span class="k-kick bnav-k" id="bnavKick">brand check</span><button type="button" class="ib" id="bpShare" aria-label="Share this brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M8 7.5l4-4 4 4"/><path d="M6 11.5H5v8.5h14v-8.5h-1"/></svg></button></div>');
   lines.push('<script>(function(){var a=document.getElementById("ahkBackLink");var r=document.referrer||"";if(/scan|ingredient-check|shelf/.test(r)){document.getElementById("bnavKick").textContent="scan result";}if(r.indexOf(location.origin)===0&&r!==location.href){a.addEventListener("click",function(e){e.preventDefault();history.back();});}})();</' + 'script>');
-  const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
+  const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
   lines.push('<div class="bp">' + (hasLogo ? '<div class="k-arch-box has-logo"><img src="../../images/brand-logos/' + brand.slug + '.png" alt="' + escapeHtml(brand.name) + ' logo" width="132" height="96" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div>') + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
-  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified) + '</span></div>');
+  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)) + '</span></div>');
   lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified)) + '</h2>');
   lines.push('<p>' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
