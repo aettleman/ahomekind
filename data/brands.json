@@ -5597,7 +5597,7 @@
     ],
     "veganConfidence": "medium",
     "claim": "",
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-11",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -6734,9 +6734,9 @@
   {
     "slug": "e45",
     "name": "E45",
-    "tier": "unverified",
-    "note": "Owned by Karo Pharma / Karo Healthcare (bought from Reckitt in 2021-22). As of 2026-09-02, no animal-testing policy or China market exposure could be confirmed from a primary source.",
-    "parentCompany": "Karo Pharma",
+    "tier": "bad",
+    "note": "Owned by Karo Healthcare, which says it doesn't test on animals unless regulatory authorities require it. That means it can still test on animals where required, so E45 isn't cruelty-free. E45 isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    "parentCompany": "Karo Healthcare",
     "vegan": "unclear",
     "evidence": "",
     "products": [],
@@ -6748,7 +6748,16 @@
     ],
     "veganConfidence": "low",
     "dateChecked": "2026-09-02",
-    "region": "Europe"
+    "region": "Europe",
+    "parentTestsOnAnimals": true,
+    "claim": "",
+    "lastVerified": "2026-10-11",
+    "sources": [
+      {
+        "label": "Karo Healthcare: annual summary and sustainability statement 2025 (animal welfare, p.55)",
+        "url": "https://www.karohealthcare.com/wp-content/uploads/2026/04/Karo-Annual-Summary-and-Sustainability-Statement-2025.pdf"
+      }
+    ]
   },
   {
     "slug": "earth-conscious",
@@ -23723,7 +23732,7 @@
     ],
     "region": "Africa & The Middle East, Europe",
     "veganConfidence": "high",
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-11",
     "claim": "",
     "price": "££",
     "stockists": [

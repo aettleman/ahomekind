@@ -463,3 +463,16 @@ for _s, (_sc, _u) in {"avon": [3, "avon-beauty"], "butter-london": [2, "butter-l
     if _s not in _goyd: _goyd[_s] = {"score": _sc, "url": "https://directory.goodonyou.eco/brand/" + _u}; _nb += 1
 json.dump(_goyd, open("data/good-on-you.json", "w"), indent=2); open("data/good-on-you.json", "a").write("\n")
 print("Parent policy sources added:", _np, "| more Good On You:", _nb)
+
+# 21. E45 and Karo Healthcare (Karo's 2025 annual summary and sustainability statement, p.55: "Karo doesn't engage in animal testing unless regulatory authorities require it")
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_KARO = "https://www.karohealthcare.com/wp-content/uploads/2026/04/Karo-Annual-Summary-and-Sustainability-Statement-2025.pdf"
+if "e45" in by:
+    _e = by["e45"]
+    _e.update(tier="bad", parentCompany="Karo Healthcare", parentTestsOnAnimals=True, claim="", lastVerified=today,
+              note="Owned by Karo Healthcare, which says it doesn't test on animals unless regulatory authorities require it. That means it can still test on animals where required, so E45 isn't cruelty-free. E45 isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+              sources=[{"label": "Karo Healthcare: annual summary and sustainability statement 2025 (animal welfare, p.55)", "url": _KARO}])
+for _b in brands:
+    if _b.get("parentCompany") == "Karo Pharma": _b["parentCompany"] = "Karo Healthcare"
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("E45 and Karo Healthcare updated")

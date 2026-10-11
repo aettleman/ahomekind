@@ -124,6 +124,7 @@ def chip(b):
     if gq: st.append('<span class="pc-r pc-r%d" title="Good Shopping Guide score">%d/100</span>' % (4 if gq["score"] >= 80 else 3 if gq["score"] >= 60 else 2, gq["score"]))
     return '<a class="pc-chip" href="/%s/"><span class="pc-name">%s</span><span class="pc-st">%s</span><span class="pc-tag">%s</span></a>' % (os.path.dirname(paths[b["slug"]]), E(b["name"]), "".join(st), TAGS.get(t, ""))
 PARENT_POLICY = {
+"Karo Healthcare": {"url": "https://www.karohealthcare.com/wp-content/uploads/2026/04/Karo-Annual-Summary-and-Sustainability-Statement-2025.pdf", "summary": "Karo says in its 2025 annual summary and sustainability statement that it doesn't engage in animal testing unless regulatory authorities require it, and that several of its brands follow recognised animal welfare standards through external certifications."},
 "Beiersdorf": {
 "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html",
 "summary": "Page says Beiersdorf does not conduct animal tests for any of its cosmetic products or their ingredients unless required to do so by the authorities, and that any animal testing for medical devices and pharmaceuticals is limited to the absolute minimum necessary."
