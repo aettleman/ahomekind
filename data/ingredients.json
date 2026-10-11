@@ -1,218 +1,397 @@
 [
   {
-    "terms": ["carmine", "cochineal", "carminic acid", "natural red 4", "ci 75470", "e120", "e 120"],
+    "terms": [
+      "carmine",
+      "cochineal",
+      "carminic acid",
+      "natural red 4",
+      "ci 75470",
+      "e120",
+      "e 120"
+    ],
     "name": "Carmine (Cochineal)",
     "type": "animal",
     "note": "A red dye made by crushing cochineal beetles. Not vegan."
   },
   {
-    "terms": ["lanolin", "wool wax", "wool grease", "wool fat", "adeps lanae", "lanolin alcohol"],
+    "terms": [
+      "lanolin",
+      "wool wax",
+      "wool grease",
+      "wool fat",
+      "adeps lanae",
+      "lanolin alcohol"
+    ],
     "name": "Lanolin",
     "type": "animal",
     "note": "Grease extracted from sheep's wool. Not vegan."
   },
   {
-    "terms": ["gelatin", "gelatine", "gelatina"],
+    "terms": [
+      "gelatin",
+      "gelatine",
+      "gelatina"
+    ],
     "name": "Gelatin",
     "type": "animal",
     "note": "Made by boiling the skin, bones and connective tissue of cattle or pigs. Not vegan."
   },
   {
-    "terms": ["collagen", "hydrolyzed collagen", "hydrolysed collagen"],
+    "terms": [
+      "collagen",
+      "hydrolyzed collagen",
+      "hydrolysed collagen"
+    ],
     "name": "Collagen",
     "type": "animal",
     "note": "A protein taken from animal skin, bones, tendons or connective tissue - usually cattle, pigs or fish. Not vegan."
   },
   {
-    "terms": ["keratin", "hydrolyzed keratin", "hydrolysed keratin"],
+    "terms": [
+      "keratin",
+      "hydrolyzed keratin",
+      "hydrolysed keratin"
+    ],
     "name": "Keratin",
     "type": "animal",
     "note": "A protein taken from animal hair, horns, feathers or hooves. Not vegan."
   },
   {
-    "terms": ["elastin", "hydrolyzed elastin"],
+    "terms": [
+      "elastin",
+      "hydrolyzed elastin"
+    ],
     "name": "Elastin",
     "type": "animal",
     "note": "A protein taken from the neck ligaments and aortas of cattle. Not vegan."
   },
   {
-    "terms": ["shellac", "cera lacca", "e904", "ci 91100"],
+    "terms": [
+      "shellac",
+      "cera lacca",
+      "e904",
+      "ci 91100"
+    ],
     "name": "Shellac",
     "type": "animal",
     "note": "A resin secreted by the female lac beetle. Not vegan."
   },
   {
-    "terms": ["beeswax", "cera alba", "cera flava", "bees wax"],
+    "terms": [
+      "beeswax",
+      "cera alba",
+      "cera flava",
+      "bees wax"
+    ],
     "name": "Beeswax",
     "type": "animal",
     "note": "Wax secreted by honeybees to build their honeycomb. Not vegan."
   },
   {
-    "terms": ["honey", "mel "],
+    "terms": [
+      "honey",
+      "mel "
+    ],
     "name": "Honey",
     "type": "animal",
     "note": "Made by bees from flower nectar. Not vegan."
   },
   {
-    "terms": ["royal jelly"],
+    "terms": [
+      "royal jelly"
+    ],
     "name": "Royal Jelly",
     "type": "animal",
     "note": "A secretion produced by worker honeybees to feed larvae and the queen. Not vegan."
   },
   {
-    "terms": ["propolis"],
+    "terms": [
+      "propolis"
+    ],
     "name": "Propolis",
     "type": "animal",
     "note": "A resin-like substance bees make from plant sap and their own secretions. Not vegan."
   },
   {
-    "terms": ["tallow", "beef tallow", "sodium tallowate", "tallowate", "tallow acid", "tallow glycerides"],
+    "terms": [
+      "tallow",
+      "beef tallow",
+      "sodium tallowate",
+      "tallowate",
+      "tallow acid",
+      "tallow glycerides"
+    ],
     "name": "Tallow",
     "type": "animal",
     "note": "Rendered fat from cattle or sheep. Not vegan."
   },
   {
-    "terms": ["lard", "sodium lardate"],
+    "terms": [
+      "lard",
+      "sodium lardate"
+    ],
     "name": "Lard",
     "type": "animal",
     "note": "Rendered fat from pigs. Not vegan."
   },
   {
-    "terms": ["casein", "caseinate", "sodium caseinate", "potassium caseinate", "milk protein"],
+    "terms": [
+      "casein",
+      "caseinate",
+      "sodium caseinate",
+      "potassium caseinate",
+      "milk protein"
+    ],
     "name": "Casein",
     "type": "animal",
     "note": "A protein extracted from cow's milk. Not vegan."
   },
   {
-    "terms": ["whey", "whey protein", "lactoserum"],
+    "terms": [
+      "whey",
+      "whey protein",
+      "lactoserum"
+    ],
     "name": "Whey",
     "type": "animal",
     "note": "A by-product of cow's milk left over from cheesemaking. Not vegan."
   },
   {
-    "terms": ["lactose"],
+    "terms": [
+      "lactose"
+    ],
     "name": "Lactose",
     "type": "animal",
     "note": "Milk sugar, extracted from cow's milk. Not vegan."
   },
   {
-    "terms": ["albumin", "albumen", "ovalbumin"],
+    "terms": [
+      "albumin",
+      "albumen",
+      "ovalbumin"
+    ],
     "name": "Albumin",
     "type": "animal",
     "note": "A protein from egg white (occasionally blood plasma). Not vegan."
   },
   {
-    "terms": ["egg", "egg white", "egg yolk"],
+    "terms": [
+      "egg",
+      "egg white",
+      "egg yolk"
+    ],
     "name": "Egg",
     "type": "animal",
     "note": "Made from chicken eggs. Not vegan."
   },
   {
-    "terms": ["milk", "goat milk", "sheep milk"],
+    "terms": [
+      "milk",
+      "goat milk",
+      "sheep milk"
+    ],
     "name": "Milk",
     "type": "animal",
     "note": "From cows, goats or sheep. Not vegan."
   },
   {
-    "terms": ["guanine", "pearl essence", "ci 75170"],
+    "terms": [
+      "guanine",
+      "pearl essence",
+      "ci 75170"
+    ],
     "name": "Guanine (Pearl Essence)",
     "type": "animal",
     "note": "A shimmer additive scraped from fish scales. Not vegan."
   },
   {
-    "terms": ["ambergris", "ambrein"],
+    "terms": [
+      "ambergris",
+      "ambrein"
+    ],
     "name": "Ambergris",
     "type": "animal",
     "note": "A waxy substance from sperm whale intestines, used in perfume. Not vegan."
   },
   {
-    "terms": ["musk", "musk oil"],
+    "terms": [
+      "musk",
+      "musk oil"
+    ],
     "name": "Musk",
     "type": "animal",
     "note": "Traditionally taken from the scent glands of musk deer. Modern fragrance almost always uses synthetic substitutes, but check if unspecified. Not vegan."
   },
   {
-    "terms": ["civet", "civet oil"],
+    "terms": [
+      "civet",
+      "civet oil"
+    ],
     "name": "Civet",
     "type": "animal",
     "note": "Taken from the scent glands of civet cats. Not vegan."
   },
   {
-    "terms": ["silk", "silk powder", "sericin", "silk protein", "silk amino acids", "hydrolyzed silk"],
+    "terms": [
+      "silk",
+      "silk powder",
+      "sericin",
+      "silk protein",
+      "silk amino acids",
+      "hydrolyzed silk"
+    ],
     "name": "Silk",
     "type": "animal",
     "note": "Made from the cocoons of silkworms. Not vegan."
   },
   {
-    "terms": ["chitosan", "chitin"],
+    "terms": [
+      "chitosan",
+      "chitin"
+    ],
     "name": "Chitosan",
     "type": "animal",
     "note": "Usually made from shellfish shells - crab, shrimp or lobster. Not vegan."
   },
   {
-    "terms": ["spermaceti", "cetyl palmitate"],
+    "terms": [
+      "spermaceti",
+      "cetyl palmitate"
+    ],
     "name": "Spermaceti",
     "type": "animal",
     "note": "Waxy oil found in the head cavities of sperm whales. Now largely banned/replaced, but still worth flagging if the label uses the old name. Not vegan."
   },
   {
-    "terms": ["squalene"],
+    "terms": [
+      "squalene"
+    ],
     "name": "Squalene",
     "type": "ambiguous",
     "note": "Traditionally extracted from shark liver oil. (\"Squalane\"/\"phytosqualane\" - with an a - are usually plant-derived instead.) Check the brand's vegan claim."
   },
   {
-    "terms": ["glycerin", "glycerine", "glycerol"],
+    "terms": [
+      "glycerin",
+      "glycerine",
+      "glycerol"
+    ],
     "name": "Glycerin",
     "type": "ambiguous",
     "note": "Usually made from plant oils today, but can also be rendered from animal fat - the label alone can't tell you which. Check the brand's vegan claim."
   },
   {
-    "terms": ["stearic acid", "sodium stearate", "magnesium stearate", "zinc stearate"],
+    "terms": [
+      "stearic acid",
+      "sodium stearate",
+      "magnesium stearate",
+      "zinc stearate"
+    ],
     "name": "Stearic Acid",
     "type": "ambiguous",
     "note": "Usually made from palm or soy oil today, but historically and sometimes still rendered from cattle or pig fat. Check the brand's vegan claim."
   },
   {
-    "terms": ["cetyl alcohol", "cetearyl alcohol", "stearyl alcohol"],
+    "terms": [
+      "cetyl alcohol",
+      "cetearyl alcohol",
+      "stearyl alcohol"
+    ],
     "name": "Cetyl/Stearyl Alcohol",
     "type": "ambiguous",
     "note": "Usually made from plant oils (coconut/palm) today, but can be made from animal fats. Check the brand's vegan claim."
   },
   {
-    "terms": ["lecithin"],
+    "terms": [
+      "lecithin"
+    ],
     "name": "Lecithin",
     "type": "ambiguous",
     "note": "Usually from soy or sunflower today, but can also come from egg yolk. Check the brand's vegan claim if it doesn't say \"soy lecithin\" or \"sunflower lecithin\"."
   },
   {
-    "terms": ["vitamin d3", "cholecalciferol"],
+    "terms": [
+      "vitamin d3",
+      "cholecalciferol"
+    ],
     "name": "Vitamin D3",
     "type": "ambiguous",
     "note": "Usually made from lanolin (sheep's wool grease) or fish oil. (\"Vitamin D2\"/ergocalciferol is plant-derived instead.) Check the brand's vegan claim."
   },
   {
-    "terms": ["retinol", "retinyl palmitate"],
+    "terms": [
+      "retinol",
+      "retinyl palmitate"
+    ],
     "name": "Retinol",
     "type": "ambiguous",
     "note": "Can be synthesised or sourced from animal liver/fish oil. Check the brand's vegan claim."
   },
   {
-    "terms": ["oleic acid", "sodium oleate"],
+    "terms": [
+      "oleic acid",
+      "sodium oleate"
+    ],
     "name": "Oleic Acid",
     "type": "ambiguous",
     "note": "Usually from plant oils today, but can be rendered from animal fat. Check the brand's vegan claim."
   },
   {
-    "terms": ["allantoin"],
+    "terms": [
+      "allantoin"
+    ],
     "name": "Allantoin",
     "type": "ambiguous",
     "note": "Usually synthesised or from comfrey plants today, but can be extracted from cattle urine. Check the brand's vegan claim."
   },
   {
-    "terms": ["hyaluronic acid", "sodium hyaluronate"],
+    "terms": [
+      "hyaluronic acid",
+      "sodium hyaluronate"
+    ],
     "name": "Hyaluronic Acid",
     "type": "ambiguous",
     "note": "Modern versions are usually fermented (vegan), but older/cheaper versions can be extracted from rooster combs or animal connective tissue. Check the brand's vegan claim."
+  },
+  {
+    "terms": [
+      "meat and animal derivatives",
+      "animal derivatives",
+      "derivatives of animal origin",
+      "animal origin",
+      "meat and animal by products",
+      "animal by products",
+      "meat derivatives",
+      "meat and bone meal",
+      "bone meal",
+      "meat meal",
+      "animal fat",
+      "animal fats",
+      "animal protein",
+      "animal digest",
+      "animal oils",
+      "meat",
+      "chicken",
+      "beef",
+      "pork",
+      "lamb",
+      "turkey",
+      "duck",
+      "poultry",
+      "bacon",
+      "ham",
+      "fish",
+      "fish oil",
+      "fish meal",
+      "cod liver oil",
+      "tuna",
+      "salmon",
+      "anchovy",
+      "anchovies"
+    ],
+    "name": "Meat, fish or animal derivatives",
+    "type": "animal",
+    "strict": true,
+    "note": "made from the bodies of animals."
   }
 ]

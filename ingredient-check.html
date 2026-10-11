@@ -446,13 +446,29 @@ if(words.length >= 2 && words.every(function(w){ return text.indexOf(w) !== -1; 
 return false;
 }
 
+// Whole-phrase match for words that are easy to hit by accident ("meat", "ham", "animal origin"):
+// must stand alone as words, and not be negated ("no meat", "meat free", "meat alternative", "chicken flavour").
+function strictMatches(term, text){
+var re = new RegExp("(^| )" + term.replace(/[^a-z0-9 ]/g, "") + "( |$)", "g");
+var m;
+while((m = re.exec(text))){
+var before = text.slice(0, m.index + (m[1] ? 1 : 0));
+var after = text.slice(m.index + m[0].length);
+if(/(^| )(no|non|without|free from|not) $/.test(before)) continue;
+if(/^(free|alternative|alternatives|substitute|style|flavour|flavor|flavoured|flavored|like|analogue)( |$)/.test(after)) continue;
+if(/^(of vegetable|of plant)/.test(after)) continue;
+return true;
+}
+return false;
+}
+
 function findIngredients(rawText){
 var text = normalizeOCR(rawText);
 var compact = text.replace(/\s+/g, "");
 var found = [];
 DICT.forEach(function(entry){
 for(var i = 0; i < entry.terms.length; i++){
-if(termMatches(entry.terms[i], text, compact)){ found.push(entry); return; }
+if(entry.strict ? strictMatches(entry.terms[i], text) : termMatches(entry.terms[i], text, compact)){ found.push(entry); return; }
 }
 });
 return found;
