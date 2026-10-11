@@ -557,9 +557,8 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 
 <main class="wrap scan-shell" id="main">
 <div class="pagehead k-scan-head">
-<p class="k-kick">scan</p>
+<p class="k-kick">scan <span class="beta-pill" style="margin-left:8px;vertical-align:middle">beta</span></p>
 <h1 class="scan-h1 k-h1"><svg class="scan-h1-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="5.6" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="8" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/><rect x="11.5" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="14" y="5" width="1.6" height="14" rx="0.5" fill="currentColor"/><rect x="17" y="5" width="1" height="14" rx="0.5" fill="currentColor"/><rect x="19.4" y="5" width="2.1" height="14" rx="0.5" fill="currentColor"/></svg>Scan a product: is it cruelty-free?</h1>
-<p class="beta-note"><span class="beta-pill">beta</span><span>Still testing this. Something wrong or not working? <a href="mailto:hello@ahomekind.com">hello@ahomekind.com</a></span></p>
 <div class="scan-toggle" role="tablist" aria-label="what do you want to check">
 <a href="scan.html" role="tab" aria-selected="true" class="on">scan a barcode</a>
 <a href="ingredient-check.html" role="tab" aria-selected="false">check ingredients</a>
@@ -624,6 +623,7 @@ main.wrap { padding-top: calc(50px + env(safe-area-inset-top, 0px)); }
 <button class="big-btn" id="lookupBtn">check</button>
 </div>
 </div><!-- /.scan-frame -->
+<p class="beta-foot" style="text-align:center;color:#6A535D;font-size:13.5px;margin:14px 0 6px;">Something not working? <a href="mailto:hello@ahomekind.com" style="color:#2A1630;font-weight:600;">hello@ahomekind.com</a></p>
 
 <div id="status" style="text-align:center; color:#6A535D; font-size:13px; min-height:20px;"></div>
 <div id="results" aria-live="polite"></div>
@@ -1020,16 +1020,13 @@ function verdictHTML(brand){
     var prec = null; for (var q = 0; q < AHK_ALL.length; q++) { if (kNorm(AHK_ALL[q].name) === pn) { prec = AHK_ALL[q]; break; } }
     var ptier = prec ? prec.tier : (tier === "warn" || tier === "bad" ? "bad" : null);
     out += '<div class="chain"><p class="chain-kick">who owns who</p><div class="chain-node">' + kStamp(tier) + '<b>' + escapeAttr(brand.name) + '</b><span>' + K_SHORT[tier] + '</span></div><div class="chain-link">owned by</div>';
-    var ppSlug = kParentSlug(full.parentCompany);
-    out += '<a class="chain-node" href="/parent-' + ppSlug + '.html">' + (ptier ? kStamp(ptier) : '<span class="chain-dot"></span>') + '<b>' + escapeAttr(full.parentCompany) + '</b><span>' + fam + ' brand' + (fam === 1 ? '' : 's') + ' on here</span></a></div>';
+    out += '<div class="chain-node">' + (ptier ? kStamp(ptier) : '<span class="chain-dot"></span>') + '<b>' + escapeAttr(full.parentCompany) + '</b><span>' + fam + ' brand' + (fam === 1 ? '' : 's') + ' on here</span></div></div>';
   }
-  if (full && full.slug) out += '<p style="margin:14px 0 18px;"><a class="k-btn-p" href="/brands/' + full.slug + '/">See the full page &rarr;</a></p>';
+  if (full && full.slug) out += '<p style="margin:14px 0 0;"><a class="k-btn-p" href="/brands/' + full.slug + '/">See the full page &rarr;</a></p>';
   if (logoSlug) out += '<p class="logo-credit">Brand logo via Wikimedia Commons. Logos are trademarks of their owners.</p>';
   out += '</div>';
   return out;
 }
-var K_ALIAS = {"edgewell":"edgewell-personal-care","estee-lauder":"estee-lauder-companies","kao":"kao-corporation","p-g":"procter-gamble","s-c-johnson":"sc-johnson","reckitt":"reckitt-benckiser"};
-function kParentSlug(n){ var t = String(n || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); return K_ALIAS[t] || t; }
 function brandSearchWidget(){
 var out = "<p style=\"font-size:15px; font-weight:700; color:#3A1F3D; margin:16px 0 8px;\">Product not showing? Type the brand name instead.</p>";
 out += "<div class=\"brand-lookup\">";
@@ -1160,8 +1157,7 @@ var brand = knownBrand || findBrand(brandText) || findBrand(name);
 var identified = !!(name || brandText);
 window.AHK_BRAND_TIER = brand ? brand.tier : "";
 // "Known vegan": the brand is listed as fully vegan, or the product itself carries a vegan label/certification.
-var prodVegan = knownBrand && knownBrand.vegan;
-window.AHK_KNOWN_VEGAN = (brand && brand.tier === "good") || prodVegan === "yes" || prodVegan === "certified" || !!(product && /en:vegan\b|vegan-society|v-label-vegan/i.test((product.labels_tags || []).join(" ")));
+window.AHK_KNOWN_VEGAN = (brand && brand.tier === "good") || !!(product && /en:vegan\b|vegan-society|v-label-vegan/i.test((product.labels_tags || []).join(" ")));
 
 // What was scanned, before the verdict on it.
 var head = "";
@@ -1170,9 +1166,6 @@ head += "<div class=\"card\">";
 if(name) head += "<h3>" + name + "</h3>";
 if(brandText) head += "<p style=\"margin-bottom:12px;\">" + brandText + "</p>";
 var chips = "";
-if(prodVegan === "certified") chips += "<span class=\"chip yes\">certified vegan</span>";
-else if(prodVegan === "yes") chips += "<span class=\"chip yes\">vegan</span>";
-else if(prodVegan === "no") chips += "<span class=\"chip no\">not vegan</span>";
 var an = (product.ingredients_analysis_tags || []).join(" ");
 if(an.indexOf("non-vegan") !== -1) chips += "<span class=\"chip no\">not vegan: contains animal ingredients</span>";
 else if(product.ingredients_text) chips += "<span id=\"veganChip\" data-off=\"" + (an.indexOf("en:vegan") !== -1 ? "vegan" : "") + "\"></span>";
@@ -1184,17 +1177,14 @@ if(labels.indexOf(L.keys[k]) !== -1){ chips += "<span class=\"chip yes\">" + L.l
 });
 head += chips ? ("<div style=\"margin-bottom:10px;\">" + chips + "</div>") : "";
 if(product.ingredients_text) head += "<div id=\"ingredientWatch\"></div>";
-else if(prodVegan === "yes" || prodVegan === "certified") head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">I've checked this product and it's vegan.</p>";
-else if(prodVegan === "no") head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">I've checked this product and it isn't vegan.</p>";
 else if(window.AHK_KNOWN_VEGAN) head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, but this one is known to be vegan. <a href=\"ingredient-check.html?vegan=1\">Photograph the label</a> if you want me to read it.</p>";
 else head += "<p class=\"rcard-note\" style=\"margin-top:10px;\">No ingredients list on file for this one, so I can't tell you whether this product is vegan. <a href=\"ingredient-check.html\">Photograph the label</a> and I'll read it directly.</p>";
 head += "</div>";
 }
 
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'barcode', brand_found: !!brand, tier: brand ? brand.tier : null, identified: identified }); } catch(e){}
-var firstBlock = "";
 if(brand){
-firstBlock = verdictHTML(brand);
+out += verdictHTML(brand);
 if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
@@ -1225,7 +1215,7 @@ if(identified) out += sendBarcodeWidget(code, brandText, name);
 try { if(window.posthog) posthog.capture('barcode_not_listed', { barcode: code, brand_text: brandText, product_name: name }); } catch(e){}
 }
 out += sourceBlock(brandText);
-el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + (brand ? firstBlock + head + out : head + out) + "</div>";
+el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + head + out + "</div>";
 showResultCard();
 resultOnly();
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
@@ -1318,7 +1308,7 @@ var local = localBarcodes && localBarcodes[code];
 if(!local){ try { local = (JSON.parse(localStorage.getItem("ahk-linked-barcodes") || "{}"))[code]; } catch(x){} }
 if(local){
 setStatus("");
-render({ product_name: local.product || "", brands: local.brand || "" }, code, { name: local.brand, tier: local.tier, note: local.note, vegan: local.vegan || "" });
+render({ product_name: local.product || "", brands: local.brand || "" }, code, { name: local.brand, tier: local.tier, note: local.note });
 return;
 }
 fetch("https://world.openfoodfacts.org/api/v2/product/" + code + ".json?product_type=all")

@@ -26,6 +26,27 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="A Home Kind">
 <style>
+.vf { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:300px; padding:40px 28px; background:#FBF4EF; border-radius:26px; cursor:pointer; margin-bottom:16px; color:#2A1630; }
+.vf:focus-within, .vf:hover { background:#FFF8F3; }
+.vf-c { position:absolute; width:34px; height:34px; border:3px solid #E8804C; }
+.vf-a { top:22px; left:22px; border-right:0; border-bottom:0; border-radius:10px 0 0 0; }
+.vf-b { top:22px; right:22px; border-left:0; border-bottom:0; border-radius:0 10px 0 0; }
+.vf-cc { bottom:22px; left:22px; border-right:0; border-top:0; border-radius:0 0 0 10px; }
+.vf-d { bottom:22px; right:22px; border-left:0; border-top:0; border-radius:0 0 10px 0; }
+.vf-body { display:flex; flex-direction:column; align-items:center; }
+.vf-body svg { color:#3A1F3D; margin-bottom:12px; }
+.vf-h { font:400 26px/1.15 'Gloock', Georgia, serif; margin-bottom:6px; }
+.vf-s { color:#6A535D; font-size:15px; }
+.vf #preview { margin:0; max-height:420px; object-fit:contain; }
+.vf-btn { display:block; width:100%; text-align:center; background:#3A1F3D; color:#FBF4EF; border-radius:16px; padding:18px; font:700 17px 'Hanken Grotesk', system-ui, sans-serif; cursor:pointer; margin-bottom:12px; }
+.vf.has-photo { min-height:0; padding:18px; }
+.vf.has-photo #preview { max-height:260px; width:auto; border-radius:14px; }
+.vf-btn.link { background:none; color:#3A1F3D; border:0; padding:8px; font-size:15px; text-decoration:underline; text-underline-offset:3px; }
+.vf-btn.alt { background:transparent; color:#3A1F3D; border:1.5px solid #3A1F3D; }
+.vf-chip { display:flex; align-items:center; justify-content:center; gap:8px; margin:12px auto 0; padding:12px 18px; background:transparent; border:1.5px solid #E6D2C7; border-radius:99px; font:700 15px 'Hanken Grotesk', system-ui, sans-serif; color:#3A1F3D; cursor:pointer; }
+.vf-chip:focus-visible, .vf-btn:focus-visible, .vf:focus-within { outline:3px solid #E8804C; outline-offset:3px; }
+.beta-foot { text-align:center; color:#6A535D; font-size:13.5px; margin:18px 0 8px; }
+.beta-foot a { color:#2A1630; font-weight:600; }
 .drop { border:1.5px dashed #E0C9BE; border-radius:14px; padding:36px 20px; text-align:center; background:#F1E0D7; margin-bottom:16px; }
 .big-btn { display:inline-block; background:#3A1F3D; color:#FBF4EF; font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:16px 30px; border:none; border-radius:6px; cursor:pointer; }
 .big-btn.alt { background:transparent; color:#3A1F3D; border:1px solid #7C9A78; }
@@ -110,31 +131,31 @@
 
 <main class="page-shell" id="main">
 <div class="pagehead k-scan-head">
-<p class="k-kick">scan</p>
+<p class="k-kick">scan <span class="beta-pill" style="margin-left:8px;vertical-align:middle">beta</span></p>
 <h1 class="scan-h1 k-h1">Scan a product</h1>
-<p class="beta-note"><span class="beta-pill">beta</span><span>Still testing this. Something wrong or not working? <a href="mailto:hello@ahomekind.com">hello@ahomekind.com</a></span></p>
 <div class="scan-toggle" role="tablist" aria-label="what do you want to check">
 <a href="scan.html" role="tab" aria-selected="false">scan a barcode</a>
 <a href="ingredient-check.html" role="tab" aria-selected="true" class="on">check ingredients</a>
 </div>
 </div>
-<p class="hero-lede">Scan a barcode or photograph a label, and I'll name what's in it plainly.</p>
 
-<div class="ic-tabs">
+<div class="ic-tabs" style="display:none">
 <button type="button" class="ic-tab active" id="tabPhoto"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h3l1.4-2h7.2L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.3"/></svg>photograph the label<span class="ic-tab-sub">no barcode? use this</span></button>
 <button type="button" class="ic-tab" id="tabBarcode"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>scan a barcode<span class="ic-tab-sub">quickest, most accurate</span></button>
 </div>
 
 <div class="ic-panel active" id="panelPhoto">
-<div class="drop" id="drop">
+<label class="vf" id="drop" for="file">
+<i class="vf-c vf-a"></i><i class="vf-c vf-b"></i><i class="vf-c vf-cc"></i><i class="vf-c vf-d"></i>
 <img id="preview" alt="your ingredients list photo">
-<p style="margin-bottom:16px; font-size:14px;">take a photo of the ingredients list, or pick one from your camera roll</p>
-<label class="big-btn" for="file">choose a photo</label>
+<span class="vf-body" id="vfBody"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.4-2h7.2L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.3"/></svg><span class="vf-h">Tap to photograph<br>the ingredients</span><span class="vf-s">or pick one from your camera roll</span></span>
+</label>
 <input type="file" id="file" accept="image/*" style="display:none;">
-</div>
-<button class="big-btn" id="go" style="display:none; width:100%;">read the ingredients</button>
 <div class="bar" id="bar"><span id="barfill"></span></div>
-<div id="status" style="text-align:center; color:#6A535D; font-size:13px; min-height:22px;"></div>
+<div id="status" style="text-align:center; color:#6A535D; font-size:14px; min-height:22px;" aria-live="polite"></div>
+<button class="vf-btn alt" id="go" style="display:none;">Read it again</button>
+<label class="vf-btn" for="file" id="pickBtn">Take or choose a photo</label>
+<button type="button" class="vf-chip" id="toBarcode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M10.5 8v8M14 8v8M17 8v8"/></svg>Has a barcode? Scan it instead</button>
 </div>
 
 <div class="ic-panel" id="panelBarcode">
@@ -157,8 +178,11 @@
 <button class="big-btn" style="width:auto; margin:0; padding:14px 20px;" id="bcLookupBtn">check</button>
 </div>
 <div id="bcStatus" style="text-align:center; color:#6A535D; font-size:13px; min-height:22px;"></div>
+<button type="button" class="vf-chip" id="toPhoto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.4-2h7.2L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.5" r="3.3"/></svg>Photograph the label instead</button>
 <p style="font-size:12px; color:#6A535D; margin-top:4px;">This only checks the ingredients, not brand policy - for the full cruelty-free verdict too, use the <a href="scan.html">brand scanner</a> instead.</p>
 </div>
+
+<p class="beta-foot">Something not working? <a href="mailto:hello@ahomekind.com">hello@ahomekind.com</a></p>
 
 <div id="results"></div>
 
@@ -209,6 +233,8 @@ startBcScan();
 }
 tabPhoto.addEventListener("click", function(){ showTab("photo"); });
 tabBarcode.addEventListener("click", function(){ showTab("barcode"); });
+el("toBarcode").addEventListener("click", function(){ showTab("barcode"); });
+el("toPhoto").addEventListener("click", function(){ showTab("photo"); });
 // Opens on "photograph the label"; the camera only starts if someone picks the barcode option.
 function escapeHtml(s){
 return String(s || "").split("&").join("&amp;").split('"').join("&quot;").split("<").join("&lt;").split(">").join("&gt;").split("'").join("&#x27;");
@@ -331,9 +357,12 @@ reader.onload = function(ev){
 imgData = ev.target.result;
 el("preview").src = imgData;
 el("preview").style.display = "block";
-el("go").style.display = "block";
+el("vfBody").style.display = "none";
+el("pickBtn").textContent = "Use a different photo"; el("pickBtn").classList.add("link");
+el("drop").classList.add("has-photo");
 el("results").innerHTML = "";
 el("status").textContent = "";
+el("go").click(); // read it straight away, no extra button to find
 };
 reader.readAsDataURL(f);
 });
@@ -461,6 +490,7 @@ el("go").addEventListener("click", function(){
 if(!imgData) return;
 if(typeof Tesseract === "undefined"){
 el("status").textContent = "The text reader did not load - check your connection and try again.";
+el("go").style.display = "block";
 return;
 }
 el("go").style.display = "none";
@@ -479,10 +509,11 @@ el("barfill").style.width = Math.round(m.progress * 100) + "%";
 }).then(function(res){
 el("bar").style.display = "none";
 el("go").style.display = "block";
-el("go").textContent = "read it again";
+el("go").textContent = "Read it again";
 el("status").textContent = "";
 var found = findIngredients(res.data.text || "");
 render(found, res.data.text || "", BRAND_VEGAN);
+try { el("results").scrollIntoView({ behavior: "smooth", block: "start" }); } catch(e){}
 }).catch(function(){
 el("bar").style.display = "none";
 el("go").style.display = "block";
@@ -716,7 +747,7 @@ function wireBcScanAgain(){
 var btn = el("bcScanAgainBtn");
 if(!btn) return;
 btn.addEventListener("click", function(){
-document.getElementById("tabBarcode").scrollIntoView({ behavior: "smooth", block: "start" });
+document.getElementById("panelBarcode").scrollIntoView({ behavior: "smooth", block: "start" });
 startBcScan();
 });
 }
