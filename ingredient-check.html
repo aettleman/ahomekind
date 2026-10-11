@@ -109,6 +109,32 @@
 .ing-raw summary { cursor:pointer; font-weight:600; color:#5A4550; }
 .ing-raw pre { white-space:pre-wrap; word-break:break-word; margin-top:8px; font-family:inherit; font-size:12px; color:#6A535D; }
 .ahk-back-link { display:none !important; }
+
+/* tidy results + lookup list (11 Oct) */
+.verdict { display:grid; grid-template-columns:44px 1fr; column-gap:14px; align-items:start; text-align:left; border:0; border-radius:22px; padding:20px; }
+.verdict::before { content:"\2713"; grid-row:1 / span 2; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; font:700 20px/1 'Hanken Grotesk', system-ui, sans-serif; color:#fff; background:#7C9A78; }
+.verdict.bad::before { content:"\2715"; background:#C9546A; }
+.verdict.warn::before { content:"!"; background:#D9703C; }
+.verdict.bad, .verdict.warn, .verdict.good { border:0; }
+.verdict-title { font-size:22px; line-height:1.2; margin:2px 0 6px; }
+.verdict-body { font-size:14.5px; margin-bottom:0; }
+.verdict { margin-bottom:12px; }
+.ing-raw { border-top:0; margin-top:6px; padding-top:0; }
+.ing-raw summary { list-style:none; display:flex; align-items:center; justify-content:space-between; padding:14px 18px; background:#FBF4EF; border-radius:16px; font-size:14px; color:#3A1F3D; }
+.ing-raw summary::-webkit-details-marker { display:none; }
+.ing-raw summary::after { content:"+"; font-size:18px; font-weight:400; color:#6A535D; }
+.ing-raw[open] summary::after { content:"\2013"; }
+.ing-raw pre { padding:12px 18px 4px; }
+#iwList.ingredient-watch { display:block; background:#FBF4EF; border:0; border-radius:20px; padding:4px 0; gap:0; }
+#iwList .iw-row { border-radius:0; }
+#iwList .iw-row + .iw-row { border-top:1px solid #EFE2DA; }
+#iwList .iw-row > summary { padding:14px 18px; font-size:15px; color:#2A1630; }
+#iwList .iw-row > summary:hover { background:#FFF8F3; border-radius:0; }
+#iwList .iw-row > summary::after { color:#6A535D; font-size:18px; }
+#iwList .iw-body { padding:0 18px 16px 35px; }
+#iwList .iw-note { font-size:14px; }
+.iw-lookup .iw-key { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px; }
+.iw-lookup .iw-key > span { display:inline-flex; align-items:center; margin:0; background:#F1DFD6; border-radius:99px; padding:6px 12px; font-size:12.5px; font-weight:600; color:#3A1F3D; }
 </style>
 </head>
 <body>
@@ -192,7 +218,7 @@
      but drawing on both dictionaries, so it covers cosmetics too. -->
 <section class="iw-lookup" id="iwLookup">
 <p class="section-label">or just look one up</p>
-<p class="iw-lead">Every ingredient this page knows about, in plain English. Tap one to see what it actually is. A red dot means always animal-derived; amber means it could go either way and the label won't always tell you.</p>
+<p class="iw-lead">Every ingredient this page knows about, in plain English. Tap one to see what it is.</p>
 <div class="pill-input iw-search">
 <span class="pill-input-icon" aria-hidden="true">
 <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><line x1="15.5" y1="15.5" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
@@ -200,7 +226,7 @@
 <label for="iwSearch" class="visually-hidden">Search the ingredient list</label>
 <input type="search" id="iwSearch" placeholder="search an ingredient, e.g. shellac" autocomplete="off">
 </div>
-<div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either, label-dependent</span></div>
+<div class="iw-key"><span><span class="dot animal"></span>always animal-derived</span><span><span class="dot ambiguous"></span>could be either</span></div>
 <div id="iwList" class="ingredient-watch"><p class="iw-empty">loading&hellip;</p></div>
 <p class="iw-empty" id="iwNone" hidden>Nothing matching that. It might still be animal-derived - this list isn't exhaustive.</p>
 </section>
