@@ -2794,7 +2794,7 @@
     "name": "Biotherm",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -2806,11 +2806,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "L'Oréal annual report 2025: its global brands",
+        "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
       }
     ]
   },
@@ -5597,7 +5601,7 @@
     ],
     "veganConfidence": "medium",
     "claim": "",
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -6751,7 +6755,7 @@
     "region": "Europe",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "Karo Healthcare: annual summary and sustainability statement 2025 (animal welfare, p.55)",
@@ -10174,7 +10178,7 @@
     "name": "Helena Rubinstein",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -10186,11 +10190,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "L'Oréal annual report 2025: its global brands",
+        "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
       }
     ]
   },
@@ -11882,7 +11890,7 @@
     "name": "Kerastase",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -11895,11 +11903,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "L'Oréal annual report 2025: its global brands",
+        "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
       }
     ]
   },
@@ -21528,7 +21540,7 @@
     "name": "Shu Uemura",
     "tier": "bad",
     "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -21540,11 +21552,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "L'Oréal annual report 2025: its global brands",
+        "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
       }
     ]
   },
@@ -23732,7 +23748,7 @@
     ],
     "region": "Africa & The Middle East, Europe",
     "veganConfidence": "high",
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-12",
     "claim": "",
     "price": "££",
     "stockists": [
@@ -26418,9 +26434,9 @@
   {
     "slug": "youth-to-the-people",
     "name": "Youth To The People",
-    "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Listed by PETA as not testing on animals, but owned by L'Oréal, which announced the purchase in December 2021. L'Oréal sells in mainland China, where animal testing can still be required, so its parent isn't cruelty-free.",
+    "parentCompany": "L'Oréal",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -26431,11 +26447,19 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-12",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "L'Oréal: press release announcing the purchase of Youth to the People",
+        "url": "https://www.loreal.com/en/press-release/group/loreal-signs-an-agreement-to-acquire-youth-to-the-people/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },

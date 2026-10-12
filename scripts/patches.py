@@ -476,3 +476,27 @@ for _b in brands:
     if _b.get("parentCompany") == "Karo Pharma": _b["parentCompany"] = "Karo Healthcare"
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("E45 and Karo Healthcare updated")
+
+# 22. Youth To The People is owned by L'Oréal (L'Oréal press release, announced Dec 2021). Same treatment as NYX / Urban Decay: listed by PETA, parent not cruelty-free
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_LP = "https://www.loreal.com/en/press-release/group/loreal-signs-an-agreement-to-acquire-youth-to-the-people/"
+if "youth-to-the-people" in by:
+    _y = by["youth-to-the-people"]
+    _y.update(tier="warn", parentCompany="L'Oréal", lastVerified=today,
+              note="Listed by PETA as not testing on animals, but owned by L'Oréal, which announced the purchase in December 2021. L'Oréal sells in mainland China, where animal testing can still be required, so its parent isn't cruelty-free.",
+              sources=[{"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"},
+                       {"label": "L'Oréal: press release announcing the purchase of Youth to the People", "url": _LP},
+                       {"label": "L'Oréal: its own animal testing policy", "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"}])
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Youth To The People updated")
+
+# 23. Brands L'Oréal itself lists as its own in its 2025 annual report (global brands page, read 12 Oct). Licensed fashion names (Prada, Armani, Valentino, Ralph Lauren, Viktor&Rolf, Miu Miu) are NOT set: L'Oréal makes those under licence, so the fashion house isn't owned by L'Oréal
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_AR = "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
+_n = 0
+for _s in ("biotherm", "shu-uemura", "helena-rubinstein", "kerastase"):
+    if _s in by and not by[_s].get("parentCompany"):
+        _b = by[_s]; _b["parentCompany"] = "L'Oréal"; _b["lastVerified"] = today
+        _b.setdefault("sources", []).append({"label": "L'Oréal annual report 2025: its global brands", "url": _AR}); _n += 1
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("L'Oréal-owned brands given a parent:", _n)
