@@ -2,7 +2,7 @@
   function norm(s){return (s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]/g,"");}
   var brands=null,goy={},gsgd={};
   function rules(b){var t=b.tier,n=(b.note||"")+" "+(b.claim||""),o={};
-    if(t==="unverified")o.unk=1; if(t==="bad")o.ncf=1; if(b.vegan==="full")o.vegan=1;
+    if(t==="unverified")o.unk=1; if(t==="bad")o.ncf=1; if(b.vegan==="full"){if(b.veganBasis==="brand")o.vegsays=1;else o.vegan=1;}
     if((t==="good"||t==="check"||t==="warn")&&/Leaping Bunny|Cruelty Free International/.test(n))o.lb=1;
     if((t==="good"||t==="check"||t==="warn")&&/PETA/.test(n))o.peta=1;
     if(goy[b.slug])o.goy=goy[b.slug]; if(gsgd[b.slug])o.gsg=gsgd[b.slug]; return o;}

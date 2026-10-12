@@ -4,7 +4,9 @@
 (function () {
   var S = {
     vegan: { short: "V",     img: null, title: "Vegan", who: null,
-             means: "The brand says its products are vegan, or a vegan certifier backs that up. Vegan status can vary between products, so check the label.", url: null },
+             means: "This brand's products are listed as 100% vegan. The source is on the brand page.", url: null },
+    vegsays: { short: "V", img: null, title: "Says it's vegan", who: null,
+             means: "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure.", url: null },
     unk:   { short: "?",    img: null, title: "Not certified", who: null,
              means: "No Leaping Bunny or PETA certification found for this brand. That does not mean it tests on animals, as some brands simply have not applied.", url: null },
     ncf:   { short: "X",     img: null, title: "Tests on animals", who: null,
@@ -40,7 +42,7 @@
       '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical score &middot; Good Shopping Guide</b>' + g.score + " out of 100</span></button>";
   }
   function row(o) {
-    var h = ["unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
+    var h = ["unk", "ncf", "vegan", "vegsays", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
     return '<div class="ahk-stamps">' + h + rating(o.goy) + gsg(o.gsg) + "</div>";
   }
   var dlg;

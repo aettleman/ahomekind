@@ -1647,7 +1647,7 @@
     "slug": "avon",
     "name": "Avon",
     "tier": "good",
-    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon says its products are vegan, though this isn't independently certified.",
+    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "Cruelty Free International (Leaping Bunny) approved brand listing",
@@ -1671,7 +1671,9 @@
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
       }
-    ]
+    ],
+    "veganBasis": "brand",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "awake-organics",
@@ -2712,10 +2714,10 @@
   {
     "slug": "biomed",
     "name": "Biomed",
-    "tier": "warn",
-    "note": "Cruelty-free and vegan claims are self-declared by the brand and not independently verified against a recognised certifier (e.g. Leaping Bunny, Cruelty Free International, Vegan Society) at time of writing.",
-    "parentCompany": null,
-    "vegan": "unknown",
+    "tier": "unverified",
+    "note": "Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    "parentCompany": "SkyLab AG",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -2727,18 +2729,20 @@
     "veganConfidence": "low",
     "sources": [
       {
+        "label": "Biomed: its own FAQ (vegan and animal testing)",
+        "url": "https://biomed-pro.com/pages/faq"
+      },
+      {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
       },
       {
-        "label": "Cruelty Free International",
-        "url": "https://crueltyfreeinternational.org"
-      },
-      {
-        "label": "The Vegan Society trademark",
-        "url": "https://www.vegansociety.com/"
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
       }
-    ]
+    ],
+    "lastVerified": "2026-10-12",
+    "claim": "Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly."
   },
   {
     "slug": "biossance",

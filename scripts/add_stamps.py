@@ -7,7 +7,9 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
 (function () {
   var S = {
     vegan: { short: "V",     img: null, title: "Vegan", who: null,
-             means: "The brand says its products are vegan, or a vegan certifier backs that up. Vegan status can vary between products, so check the label.", url: null },
+             means: "This brand's products are listed as 100% vegan. The source is on the brand page.", url: null },
+    vegsays: { short: "V", img: null, title: "Says it's vegan", who: null,
+             means: "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure.", url: null },
     unk:   { short: "?",    img: null, title: "Not certified", who: null,
              means: "No Leaping Bunny or PETA certification found for this brand. That does not mean it tests on animals, as some brands simply have not applied.", url: null },
     ncf:   { short: "X",     img: null, title: "Tests on animals", who: null,
@@ -43,7 +45,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
       '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical score &middot; Good Shopping Guide</b>' + g.score + " out of 100</span></button>";
   }
   function row(o) {
-    var h = ["unk", "ncf", "vegan", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
+    var h = ["unk", "ncf", "vegan", "vegsays", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
     return '<div class="ahk-stamps">' + h + rating(o.goy) + gsg(o.gsg) + "</div>";
   }
   var dlg;
@@ -93,7 +95,7 @@ for b in brands:
     s = []
     if t == "unverified": s.append("unk")
     if t == "bad": s.append("ncf")
-    if b.get("vegan") == "full": s.append("vegan")
+    if b.get("vegan") == "full": s.append("vegsays" if b.get("veganBasis") == "brand" else "vegan")
     if t in ("good","check","warn") and re.search("Leaping Bunny|Cruelty Free International", n): s.append("lb")
     if t in ("good","check","warn") and "PETA" in n: s.append("peta")
     g = GOY.get(b["slug"]); ga = (' data-g="%d" data-u="%s"' % g) if g else ""

@@ -541,3 +541,32 @@ for _s, _v in _NEW.items():
     by[_s].update(_v, lastVerified=today)
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Vanicream and AmLactin added/updated")
+
+# 26. Biomed (own FAQ, owner SkyLab AG per its FAQ), Avon vegan wording, and a "says it's vegan" stamp
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "biomed" in by:
+    by["biomed"].update(tier="unverified", parentCompany="SkyLab AG", vegan="partial", veganConfidence="low", lastVerified=today,
+        note="Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+        claim="Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly.",
+        sources=[{"label": "Biomed: its own FAQ (vegan and animal testing)", "url": "https://biomed-pro.com/pages/faq"},
+                 {"label": "Leaping Bunny: approved brands (search for the brand)", "url": "https://www.leapingbunny.org/shopping-guide"},
+                 {"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"}])
+if "avon" in by:
+    by["avon"].update(veganBasis="brand", lastVerified=today,
+        note="Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification.")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+_old_v = 'means: "The brand says its products are vegan, or a vegan certifier backs that up. Vegan status can vary between products, so check the label.", url: null },'
+_new_v = ('means: "This brand\'s products are listed as 100% vegan. The source is on the brand page.", url: null },\n'
+          '    vegsays: { short: "V", img: null, title: "Says it\'s vegan", who: null,\n'
+          '             means: "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure.", url: null },')
+def _vs(t):
+    if "vegsays" in t: return t
+    t = t.replace(_old_v, _new_v)
+    t = t.replace('["unk", "ncf", "vegan", "lb", "peta"]', '["unk", "ncf", "vegan", "vegsays", "lb", "peta"]')
+    t = t.replace('if b.get("vegan") == "full": s.append("vegan")', 'if b.get("vegan") == "full": s.append("vegsays" if b.get("veganBasis") == "brand" else "vegan")')
+    return t
+_n = _rw("scripts/add_stamps.py", _vs) + _rw("js/stamps.js", _vs)
+_n += _rw("js/checker-stamps.js", lambda t: t.replace('if(b.vegan==="full")o.vegan=1;', 'if(b.vegan==="full"){if(b.veganBasis==="brand")o.vegsays=1;else o.vegan=1;}'))
+_n += _rw("css/stamps.css", lambda t: t if "ahk-stamp-vegsays" in t else t + "\n.ahk-stamp-vegsays{background:#F4E6DE;color:#3A1F3D;border-style:dashed}\n")
+_n += _rw("scripts/generate-brand-pages.js", lambda t: t.replace("brand.vegan === 'full' ? '100% vegan'\n", "brand.vegan === 'full' ? (brand.veganBasis === 'brand' ? \"100% vegan (brand's word)\" : '100% vegan')\n", 1))
+print("Biomed and Avon updated; vegan stamp files changed:", _n)
