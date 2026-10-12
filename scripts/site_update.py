@@ -23,12 +23,13 @@ def page(fname, title, kick, h1, body, desc):
 H2 = '<h2 style="margin:28px 0 6px">%s</h2>'
 decide = (H2 % "Four answers" + "<p>Every brand gets one of four answers.</p>"
  "<p><strong>Certified.</strong> Leaping Bunny or PETA lists the brand as cruelty-free. I link to their listing so you can check it yourself.</p>"
- "<p><strong>Not certified.</strong> I couldn't find a Leaping Bunny or PETA certification. This doesn't mean the brand tests on animals, as many haven't applied. Where the brand says it's cruelty-free, I link to what it says.</p>"
+ "<p><strong>Not certified.</strong> I couldn't find a Leaping Bunny / Cruelty Free International or PETA certification. This doesn't mean the brand tests on animals, as many haven't applied. Where the brand says it's cruelty-free, I link to what it says.</p>"
  "<p><strong>Tests on animals.</strong> The brand, or the company behind it, tests on animals or sells where the law requires it. Every one of these has a source.</p>"
  "<p><strong>Vegan</strong> is checked separately, because a brand can be cruelty-free without being vegan.</p>"
  + H2 % "Ethical rating" + "<p>The ethical rating comes from Good On You. It covers how a brand treats people, the planet and animals overall, so it isn't about animal testing. It's their rating, not mine, and each one links to their page.</p>"
  + H2 % "Parent companies" + "<p>A brand can be cruelty-free while the company that owns it isn't. Each parent company has its own page.</p><p><strong>Independent</strong> only appears where the brand says it is independently or family owned. <strong>Unknown</strong> means I couldn't find a parent company yet, so the brand may well be independent. I add owners once I've checked them.</p>"
- + H2 % "Sources" + "<p>Every brand page lists where I checked, which is the Leaping Bunny, Cruelty Free International and PETA lists. Where a brand has its own certification page or statement, I link to that too.</p>"
+ + H2 % "Sources" + "<p>Every brand page lists where I checked, which is the Leaping Bunny / Cruelty Free International and PETA lists. Where a brand has its own certification page or statement, I link to that too.</p>"
+ + H2 % "Leaping Bunny and Cruelty Free International" + "<p>I treat these as one certification, because a certified brand can be listed on either website. Cruelty Free International is based in the UK and certifies brands headquartered outside the US and Canada. In the US and Canada, Leaping Bunny is run through CCIC, a coalition of animal protection groups. In March 2026 Cruelty Free International renamed its approval programme and gave it a new logo, and it says the approval criteria are unchanged. So you may see either logo on a pack.</p>"
  + H2 % "Mistakes" + "<p>I check certifier lists, brand websites and public databases, and I check as much as I can by hand. Brands change, so each page shows when I last checked it. If you spot a mistake, email hello@ahomekind.com and I'll fix it.</p>")
 funded = ("<p>A Home Kind is just me. No brand pays to be listed or to be rated better, and I don't take brand sponsorship. There are no adverts on the site.</p>"
  + H2 % "Where any income comes from" + "<p>Some links are Amazon affiliate links, which earn me a small commission if you buy, at no extra cost to you. They're marked &quot;paid link&quot; and never change what a brand is shown as.</p>"
@@ -129,6 +130,7 @@ PARENT_POLICY = {
 "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html",
 "summary": "Page says Beiersdorf does not conduct animal tests for any of its cosmetic products or their ingredients unless required to do so by the authorities, and that any animal testing for medical devices and pharmaceuticals is limited to the absolute minimum necessary."
 },
+"Kenvue": {"url": "https://www.kenvue.com/policies-positions/animal-testing", "summary": "Kenvue says it avoids animal testing for cosmetics unless regulators require it. For medicines and other regulated health products it treats animal testing as a last resort, and it notes that some countries still require animal testing data to meet their own regulatory requirements."},
 "Church & Dwight": {
 "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx",
 "summary": "Page says it is the company's policy not to test on animals, and asks suppliers not to test on animals unless required by law or regulation, using accredited contract labs when testing is legally necessary."

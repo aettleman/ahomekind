@@ -241,7 +241,7 @@ DATA.sections.forEach(function(sec){
 });
 var own = {id:'owner', title:"When the owner isn’t", cols:2, head:'<p class="kick">worth knowing</p><h2>When the owner isn’t.</h2><p class="lede">These ' + DATA.owner.length + ' brands are cruelty-free themselves, but the company that owns them tests on animals. Buying them is still better than buying a tested brand. Where your money ends up is your call.</p>'};
 paginate(own, DATA.owner, 'when the owner isn’t');
-var nc = {id:'notcert', title:'Not certified', cols:2, head:'<p class="kick">buy at your own risk</p><h2>Not certified.</h2><p class="lede">These ' + DATA.notcert.length + ' brands aren’t certified by Leaping Bunny, Cruelty Free International or PETA. Some say they’re cruelty-free; for others there’s no evidence either way. Until one of those schemes checks them, a home kind can’t call them cruelty-free.</p>'};
+var nc = {id:'notcert', title:'Not certified', cols:2, head:'<p class="kick">buy at your own risk</p><h2>Not certified.</h2><p class="lede">These ' + DATA.notcert.length + ' brands aren’t certified by Leaping Bunny / Cruelty Free International or PETA. Some say they’re cruelty-free; for others there’s no evidence either way. Until one of those schemes checks them, a home kind can’t call them cruelty-free.</p>'};
 paginate(nc, DATA.notcert, 'not certified');
 
 // page numbers + contents

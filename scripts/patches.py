@@ -644,3 +644,127 @@ if "original-source" in by:
         _o["sources"].append({"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"})
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Original Source updated")
+
+# 32. Owners added from sources read 12 Oct (Ash supplied the list; each owner checked against a company or press-release page).
+#     Not set: Anna Sui (no ownership source found; make-up is made under licence by Albion). Aveeno, Neutrogena, Listerine, Johnson's, Band-Aid and OGX now sit under Kenvue (Kenvue's own brand pages), not Johnson & Johnson.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+def _own(slug, parent, note, label, url, drop_label=None):
+    b = by.get(slug)
+    if not b: return
+    b["parentCompany"] = parent; b["lastVerified"] = today
+    if note: b["note"] = note
+    srcs = [s for s in b.get("sources", []) if not (drop_label and drop_label in s.get("label", ""))]
+    if not any(s.get("url") == url for s in srcs): srcs.append({"label": label, "url": url})
+    b["sources"] = srcs
+_PETA = "Listed by PETA as a company that tests on animals."
+_own("acuvue", "Johnson & Johnson", "Owned by Johnson & Johnson. " + _PETA, "Acuvue: its own About page (published by Johnson & Johnson Vision)", "https://www.acuvue.com/en-ca/about/")
+_CD = "https://churchdwight.com/our-brands/consumer-brands/"
+_own("aim", "Church & Dwight", "Owned by Church & Dwight. " + _PETA, "Church & Dwight: its consumer brands page", _CD)
+_own("arrid", "Church & Dwight", "Owned by Church & Dwight. " + _PETA, "Church & Dwight: its consumer brands page", _CD)
+_own("algenist", "Tengram Capital Partners", "Tengram Capital Partners, a private equity firm, bought a majority stake in 2016. " + _PETA, "Tengram Capital Partners: its 2016 announcement of the Algenist purchase", "https://tengramcapital.com/pressArticles/fundNews/tengram-capital-partners-press-080216.html")
+_own("ambi", "L'Oréal", "Owned by L'Oréal, which bought it from Valeant in 2017. " + _PETA, "L'Oréal: press release on finalising the purchase of CeraVe, AcneFree and Ambi (6 March 2017)", "https://www.loreal-finance.com/eng/news-release/loreal-finalizes-acquisition-cerave-acnefree-and-ambi")
+_own("aqua-di-parma", "LVMH", "Owned by LVMH. " + _PETA, "LVMH: its Acqua di Parma page", "https://www.lvmh.com/en/our-maisons/perfumes-cosmetics/acqua-di-parma")
+if "aqua-di-parma" in by: by["aqua-di-parma"]["name"] = "Acqua di Parma"
+_own("aramis", "Estée Lauder Companies", "Owned by the Estée Lauder Companies. " + _PETA, "Estée Lauder Companies: its Aramis page", "https://www.elcompanies.com/en/our-brands/aramis")
+_own("atelier-cologne", "L'Oréal", "Owned by L'Oréal, which signed the agreement to buy it in 2016. " + _PETA, "L'Oréal: press release on the Atelier Cologne purchase (30 June 2016)", "https://www.loreal-finance.com/eng/news-release/loreal-signs-agreement-acquire-atelier-cologne")
+_own("bain-de-soleil", "MY Imports USA (AMG Brands)", "MY Imports USA (AMG Brands) agreed to buy it in November 2024. " + _PETA, "MY Imports USA: its press release on buying Bain de Soleil", "https://www.businesswire.com/news/home/20241114635589/en")
+_own("balenciaga", "Kering", "Owned by Kering. " + _PETA, "Wikipedia: Balenciaga (owned by Kering)", "https://en.wikipedia.org/wiki/Balenciaga")
+_KB = "https://www.kenvue.com/brands"; _KP = "https://www.kenvue.com/policies-positions/animal-testing"
+for _s in ("aveeno", "neutrogena", "listerine", "johnson-s", "band-aid", "ogx"):
+    if _s in by:
+        _kn = "Owned by Kenvue, which avoids animal testing for cosmetics unless regulators require it."
+        if _s == "ogx": _kn = by[_s]["note"].replace("J&J/Kenvue", "Kenvue")
+        _own(_s, "Kenvue", _kn, "Kenvue: its brands page", _KB, drop_label="Johnson & Johnson")
+        if not any(s.get("url") == _KP for s in by[_s]["sources"]): by[_s]["sources"].append({"label": "Kenvue: its position on animal testing", "url": _KP})
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _kpol(t):
+    if '"Kenvue":' in t: return t
+    return t.replace('"Church & Dwight": {', '"Kenvue": {"url": "https://www.kenvue.com/policies-positions/animal-testing", "summary": "Kenvue says it avoids animal testing for cosmetics unless regulators require it. For medicines and other regulated health products it treats animal testing as a last resort, and it notes that some countries still require animal testing data to meet their own regulatory requirements."},\n"Church & Dwight": {', 1)
+_rw("scripts/site_update.py", _kpol)
+print("Owners added for brands from Ash's 12 Oct list")
+
+# 33. Leaping Bunny and Cruelty Free International read as one programme everywhere, plus an explanation on How I decide
+_LBO = "Leaping Bunny, Cruelty Free International or PETA"; _LBN = "Leaping Bunny / Cruelty Free International or PETA"
+_LBO2 = "PETA, Leaping Bunny or Cruelty Free International"; _LBN2 = "PETA or Leaping Bunny / Cruelty Free International"
+def _lbw(t):
+    return (t.replace(_LBO, _LBN).replace(_LBO2, _LBN2)
+             .replace("the Leaping Bunny, Cruelty Free International and PETA lists", "the Leaping Bunny / Cruelty Free International and PETA lists")
+             .replace("I couldn't find a Leaping Bunny or PETA certification", "I couldn't find a Leaping Bunny / Cruelty Free International or PETA certification"))
+_n = 0
+for _pat in ("*.html", "js/*.js", "scripts/generate-*.js", "scripts/build-kind-list.py", "scripts/site_update.py", "data/brands.json", "data/products.json"):
+    for _f in _g.glob(_pat):
+        if _f.startswith("brands/"): continue
+        _n += _rw(_f, _lbw)
+_LBX = ('+ H2 % "Leaping Bunny and Cruelty Free International" + "<p>I treat these as one certification, because a certified brand can be listed on either website. Cruelty Free International is based in the UK and certifies brands headquartered outside the US and Canada. In the US and Canada, Leaping Bunny is run through CCIC, a coalition of animal protection groups. In March 2026 Cruelty Free International renamed its approval programme and gave it a new logo, and it says the approval criteria are unchanged. So you may see either logo on a pack.</p>"\n ')
+def _lbx(t):
+    if "Leaping Bunny and Cruelty Free International" in t: return t
+    return t.replace(' + H2 % "Mistakes"', ' ' + _LBX + '+ H2 % "Mistakes"', 1)
+_n += _rw("scripts/site_update.py", _lbx)
+print("Leaping Bunny / Cruelty Free International wording unified; files changed:", _n)
+
+# 34. Owners batch 2 (Ash's list, 12 Oct), each checked against a company or press-release page.
+#     Not changed: Bedhead, Biotherm, Bobbi Brown, Bold, Bourjois (already correct). Cacharel: Cacharel licenses its perfumes to L'Oréal (FashionNetwork, 2015) but no page read says who owns Cacharel, so no parent set. Burberry: public company, no parent.
+#     Air Wick, Cillit Bang, Woolite still say Reckitt Benckiser, but Reckitt sold its Essential Home division (Air Wick, Calgon, Woolite, Cillit Bang...) to Advent International on 31 Dec 2025, keeping 30%. Left for Ash to decide because their tier rests on Reckitt's policy.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_PE = "Listed by PETA as a company that tests on animals."
+_own("bausch-lomb", "Bausch Health Companies", "About 87% owned by Bausch Health Companies (April 2026). " + _PE, "SEC filing: Bausch Health Companies holds about 87% of Bausch + Lomb (April 2026)", "https://www.sec.gov/Archives/edgar/data/1860742/000186074226000062/R8.htm")
+_own("beiersdorf", "Maxingvest", "Maxingvest holds 54.4% of Beiersdorf's shares, according to Beiersdorf's own shareholder page. " + _PE, "Beiersdorf: its shareholder structure", "https://www.beiersdorf.com/investor-relations/shares/shareholder-structure")
+_own("bengay", "Kenvue", "Owned by Kenvue, which avoids animal testing for cosmetics unless regulators require it.", "Bengay: its legal notice (published by Kenvue Brands LLC)", "https://www.bengay.com/legal-notice")
+if "bengay" in by and not any(s.get("url") == _KP for s in by["bengay"]["sources"]): by["bengay"]["sources"].append({"label": "Kenvue: its position on animal testing", "url": _KP})
+_BIC = "https://investors.bic.com/en-us/bic-at-a-glance"; _BN = "Société BIC is publicly traded, and the founding Bich family holds 46% of its capital and 60% of its voting rights (30 June 2026). "
+_own("bic", "Société BIC", _BN + by.get("bic", {}).get("note", "").replace(_BN, ""), "BIC: its shareholder structure", _BIC)
+_own("bic-corporation", "Société BIC", _BN + _PE, "BIC: its shareholder structure", _BIC)
+_own("biotene", "Haleon", "Owned by Haleon. " + _PE, "Haleon: its Biotene page", "https://www.haleonhealthpartner.com/en-us/oral-health/brands/biotene/products/")
+_own("blue-buffalo", "General Mills", "Owned by General Mills, which completed the purchase in April 2018. " + _PE, "General Mills: press release on completing the Blue Buffalo purchase", "https://investors.generalmills.com/press-releases/press-release-details/2018/General-Mills-Completes-Acquisition-of-Blue-Buffalo-Pet-Products/default.aspx")
+for _s in ("bounce", "bounty", "braun"):
+    _own(_s, "Procter & Gamble", "Owned by Procter & Gamble. " + _PE, "Procter & Gamble: its brands page", "https://us.pg.com/brands/")
+_own("breathe-right", "Prestige Consumer Healthcare", "Prestige Consumer Healthcare completed the purchase in June 2026. " + _PE, "Prestige Consumer Healthcare: press release on completing the Breathe Right purchase (15 June 2026)", "https://ir.prestigebrands.com/news-releases/news-release-details/prestige-consumer-healthcare-inc-completes-acquisition-breathe")
+_own("bvlgari-parfums", "LVMH", "Owned by LVMH. " + _PE, "LVMH: its Bvlgari page", "https://www.lvmh.com/en/our-maisons/watches-jewelry/bulgari")
+_own("calvin-klein-cosmetics", "Coty", "Calvin Klein Fragrances is a division of Coty. Calvin Klein itself is owned by PVH, whose animal welfare policy bans fur, angora, mohair and exotic skins but still allows wool and certified down. " + _PE, "Coty: press release naming Calvin Klein Fragrances as a division of Coty", "https://www.coty.com/news/calvin-klein-fragrances-announces-the-return-of-christy-turlington-burns-and-edward-burns")
+if "calvin-klein-cosmetics" in by:
+    _pu = "https://www.pvh.com/-/media/Files/pvh/responsibility/PVH-Animal-Welfare-Policy-Statement.pdf"
+    if not any(s.get("url") == _pu for s in by["calvin-klein-cosmetics"]["sources"]): by["calvin-klein-cosmetics"]["sources"].append({"label": "PVH: its animal welfare policy statement", "url": _pu})
+_EH = "Essential Home (Advent International)"; _EHS = [("Reckitt: announcement that Advent International bought Essential Home (completed 31 December 2025)", "https://reckitt.com/news/reckitt-completes-divestment-of-essential-home/"), ("Reckitt: announcement of the Essential Home sale, naming Air Wick, Calgon, Woolite and Cillit Bang", "https://www.investegate.co.uk/announcement/rns/reckitt-benckiser-group--rkt/reckitt-agrees-to-divest-essential-home/8985772")]
+for _s in ("calgon", "calgon-water-softener"):
+    if _s in by:
+        _b = by[_s]; _b["parentCompany"] = _EH; _b["lastVerified"] = today
+        _b["note"] = ("Owned by Essential Home, which Advent International bought from Reckitt (completed 31 December 2025). Reckitt kept a 30% stake. " + _b["note"]) if "Essential Home" not in _b["note"] else _b["note"]
+        for _l, _u in _EHS:
+            if not any(s.get("url") == _u for s in _b["sources"]): _b["sources"].append({"label": _l, "url": _u})
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Owners batch 2 added")
+
+# 35. Essential Home (Reckitt sold it to Advent International, completed 31 Dec 2025) and tidying from Ash's review (12 Oct)
+#     Calgon is two different products: the bath and body line (PDC Brands, per Yellow Wood's own article) and the water softener (Reckitt's Essential Home). Both stay listed, each with its own owner.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_RKP = "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"
+_EHN = "Owned by Essential Home since 31 December 2025, when Advent International bought it from Reckitt (which kept a 30% stake). "
+_EHP = " I haven't confirmed Essential Home's own animal testing policy."
+for _s, _extra in (("air-wick", "Reckitt's policy, which applied while it owned the brand, says it tests where regulators require it."),
+                   ("woolite", "Listed by PETA as a company that tests on animals. Reckitt's policy, which applied while it owned the brand, says it tests where regulators require it."),
+                   ("cillit-bang", "Reckitt's policy, which applied while it owned the brand, says it tests where regulators require it.")):
+    if _s in by:
+        _b = by[_s]; _b["parentCompany"] = _EH; _b["lastVerified"] = today
+        _b["note"] = _EHN + _extra + _EHP
+        for s in _b["sources"]:
+            if s.get("url") == _RKP: s["label"] = "Reckitt Benckiser: its animal testing policy (previous owner)"
+        for _l, _u in _EHS:
+            if not any(s.get("url") == _u for s in _b["sources"]): _b["sources"].append({"label": _l, "url": _u})
+if "calgon" in by:
+    _c = by["calgon"]; _c["name"] = "Calgon bath & body"; _c["parentCompany"] = "PDC Brands"; _c["lastVerified"] = today
+    _c["note"] = "Calgon's bath and body line is part of PDC Brands. The Calgon water softener is a separate product, listed separately. Listed by PETA as not testing on animals."
+    _c["sources"] = [s for s in _c["sources"] if "Reckitt" not in s.get("label", "")]
+    if not any("yellowwood" in s.get("url", "") for s in _c["sources"]):
+        _c["sources"].append({"label": "Yellow Wood Partners: article naming Calgon as part of PDC Brands", "url": "https://www.yellowwoodpartners.com/news-article/parfums-de-coeur-eyes-expansion-with-new-name-headquarters-"})
+if "cacharel" in by:
+    _k = by["cacharel"]; _k["lastVerified"] = today
+    _k["note"] = "Cacharel licenses its perfumes to L'Oréal, which sells in mainland China, where animal testing can still be required. I couldn't find who owns Cacharel itself. Listed by PETA as a company that tests on animals."
+    for _l, _u in (("FashionNetwork: Cacharel renews its perfume licence with L'Oréal (2015)", "https://uk.fashionnetwork.com/news/Cacharel-extends-partnership-with-l-oreal,551817.html"),
+                   ("L'Oréal: its own animal testing policy", "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/")):
+        if not any(s.get("url") == _u for s in _k["sources"]): _k["sources"].append({"label": _l, "url": _u})
+if "burberry" in by:
+    by["burberry"]["note"] = "I couldn't find a parent company for Burberry. Listed by PETA as a company that tests on animals."; by["burberry"]["lastVerified"] = today
+if "blue-buffalo" in by:
+    by["blue-buffalo"]["category"] = ["pet-food"]
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Essential Home brands moved; Calgon, Cacharel, Burberry, Blue Buffalo tidied")
