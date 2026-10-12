@@ -570,3 +570,22 @@ _n += _rw("js/checker-stamps.js", lambda t: t.replace('if(b.vegan==="full")o.veg
 _n += _rw("css/stamps.css", lambda t: t if "ahk-stamp-vegsays" in t else t + "\n.ahk-stamp-vegsays{background:#F4E6DE;color:#3A1F3D;border-style:dashed}\n")
 _n += _rw("scripts/generate-brand-pages.js", lambda t: t.replace("brand.vegan === 'full' ? '100% vegan'\n", "brand.vegan === 'full' ? (brand.veganBasis === 'brand' ? \"100% vegan (brand's word)\" : '100% vegan')\n", 1))
 print("Biomed and Avon updated; vegan stamp files changed:", _n)
+
+# 27. Certified vegan stamp (Biomed: V-Label, from the V-Label logo on its packs, Ash 12 Oct). veganBasis: "certified" (+ veganCert name) / "brand" (brand's word) / unset (old generic text)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "biomed" in by:
+    _bm = by["biomed"]; _bm.update(vegan="full", veganConfidence="high", veganBasis="certified", veganCert="V-Label", lastVerified=today)
+    if not any("V-Label" in s.get("label", "") for s in _bm.get("sources", [])):
+        _bm.setdefault("sources", []).append({"label": "V-Label: the vegan certification shown on its packs", "url": "https://www.v-label.com"})
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _vc(t):
+    if "vegcert" in t: return t
+    t = t.replace('    lb:    { short: "LB",', '    vegcert: { short: "V", img: null, title: "Certified vegan", who: null,\n             means: "A vegan certifier, such as the Vegan Society or V-Label, has certified this brand\'s products. The certifier is named on the brand page.", url: null },\n    lb:    { short: "LB",', 1)
+    t = t.replace('["unk", "ncf", "vegan", "vegsays", "lb", "peta"]', '["unk", "ncf", "vegan", "vegcert", "vegsays", "lb", "peta"]')
+    t = t.replace('s.append("vegsays" if b.get("veganBasis") == "brand" else "vegan")', 's.append("vegcert" if b.get("veganBasis") == "certified" else "vegsays" if b.get("veganBasis") == "brand" else "vegan")')
+    return t
+_n = _rw("scripts/add_stamps.py", _vc) + _rw("js/stamps.js", _vc)
+_n += _rw("js/checker-stamps.js", lambda t: t.replace('if(b.veganBasis==="brand")o.vegsays=1;else o.vegan=1;', 'if(b.veganBasis==="brand")o.vegsays=1;else if(b.veganBasis==="certified")o.vegcert=1;else o.vegan=1;') if "vegcert" not in t else t)
+_n += _rw("css/stamps.css", lambda t: t if "ahk-stamp-vegcert" in t else t + ".ahk-stamp-vegcert{background:#3A1F3D;color:#F4E6DE}\n")
+_n += _rw("scripts/generate-brand-pages.js", lambda t: t if "(certified by " in t else t.replace("(brand.veganBasis === 'brand' ?", "(brand.veganBasis === 'certified' ? '100% vegan (certified by ' + escapeHtml(brand.veganCert || 'a vegan certifier') + ')' : brand.veganBasis === 'brand' ?", 1))
+print("Biomed certified vegan; vegan certified stamp files changed:", _n)

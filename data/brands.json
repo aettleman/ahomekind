@@ -2717,7 +2717,7 @@
     "tier": "unverified",
     "note": "Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
     "parentCompany": "SkyLab AG",
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -2726,7 +2726,7 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low",
+    "veganConfidence": "high",
     "sources": [
       {
         "label": "Biomed: its own FAQ (vegan and animal testing)",
@@ -2739,10 +2739,16 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "V-Label: the vegan certification shown on its packs",
+        "url": "https://www.v-label.com"
       }
     ],
     "lastVerified": "2026-10-12",
-    "claim": "Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly."
+    "claim": "Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly.",
+    "veganBasis": "certified",
+    "veganCert": "V-Label"
   },
   {
     "slug": "biossance",
