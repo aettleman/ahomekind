@@ -86,6 +86,7 @@ tests on animals with no source: K.Y.
 tests on animals with no source: Kaboom
 tests on animals with no source: Kao USA
 tests on animals with no source: Kenzo Parfums
+vegan full but tier check: Kingfisher
 tests on animals with no source: Kose
 tests on animals with no source: L'Occitane
 tests on animals with no source: L'Oréal

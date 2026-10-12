@@ -17613,10 +17613,10 @@
   {
     "slug": "original-source",
     "name": "Original Source",
-    "tier": "check",
-    "note": "PETA-approved and Vegan Society certified.",
+    "tier": "good",
+    "note": "PETA approved, and every product carries the Vegan Society logo (since 2003), according to its own page.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -17625,12 +17625,20 @@
     "category": [
       "body-shower"
     ],
-    "veganConfidence": "medium",
+    "veganConfidence": "high",
     "region": "Europe",
     "sources": [
       {
+        "label": "Original Source: its own Vegan and PETA approved page",
+        "url": "https://www.original-source.com/uk/about-us/vegan-peta-approved/"
+      },
+      {
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
       }
     ],
     "veganBasis": "certified",

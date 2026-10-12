@@ -620,3 +620,27 @@ if "kingfisher" in by:
               sources=[s for s in _k.get("sources", []) if "vegansociety" not in s.get("url", "")])
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Vegan certification checks recorded")
+
+# 30. Checker filter: "Says it's vegan (not certified)" for brands whose vegan claim is the brand's own word (veganBasis "brand"). Brands with the old generic stamp join once Ash classifies them.
+_OPT = '<option value="vegan-says">Says it\'s vegan (not certified)</option>'
+def _vsay(t):
+    if "vegan-says" in t: return t
+    t = t.replace('<option value="vegan-cert">Vegan certification</option>', '<option value="vegan-cert">Vegan certification</option>\n' + _OPT, 1)
+    t = t.replace("card.dataset.cert = certs.join(' ');", "if (card.dataset.vegsays === '1') certs.push('vegan-says');\ncard.dataset.cert = certs.join(' ');", 1)
+    return t
+_n = _rw("brand-check.html", _vsay)
+_n += _rw("scripts/generate-brand-check.js", lambda t: t if "data-vegsays" in t else t.replace("""(brand.veganBasis === 'certified' ? ' data-vegcert="1"' : '') +""", """(brand.veganBasis === 'certified' ? ' data-vegcert="1"' : '') + (brand.veganBasis === 'brand' ? ' data-vegsays="1"' : '') +""", 1))
+print("Checker 'says it's vegan' filter files changed:", _n)
+
+# 31. Original Source: its own "Vegan and PETA approved" page (read 12 Oct) says every product has carried the Vegan Society logo since 2003, and that it is PETA approved (Beauty without Bunnies). Ash confirmed. Whole range is vegan, so moved from "check" to "good".
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "original-source" in by:
+    _o = by["original-source"]; _OU = "https://www.original-source.com/uk/about-us/vegan-peta-approved/"
+    _o.update(tier="good", vegan="full", veganConfidence="high", veganBasis="certified", veganCert="Vegan Society", lastVerified=today,
+              note="PETA approved, and every product carries the Vegan Society logo (since 2003), according to its own page.")
+    if not any(s.get("url") == _OU for s in _o.get("sources", [])):
+        _o.setdefault("sources", []).insert(0, {"label": "Original Source: its own Vegan and PETA approved page", "url": _OU})
+    if not any("peta.org" in s.get("url", "") for s in _o["sources"]):
+        _o["sources"].append({"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"})
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Original Source updated")
