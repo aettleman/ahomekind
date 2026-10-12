@@ -3044,3 +3044,6 @@ footer.site-footer .foot-cols { display: grid; grid-template-columns: repeat(2, 
 footer.site-footer .foot-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
 footer.site-footer .foot-cols li { margin: 0; padding: 0; }
 footer.site-footer { text-align: left; }
+footer.site-footer { text-align: center; }
+footer.site-footer .foot-cols { justify-content: center; }
+footer.site-footer .foot-cols ul { text-align: left; }
