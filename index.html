@@ -72,7 +72,7 @@
 .k-sbox input { flex:1; min-width:0; border:0; background:none; outline:none; font:400 18px 'Gloock',serif; color:var(--ahk-heading); padding:6px 0; -webkit-appearance:none; }
 .k-sbox input::placeholder { color:var(--ahk-text-muted); }
 .k-sbox input::-webkit-search-cancel-button { display:none; }
-.k-sbox-scan { width:46px; height:46px; border-radius:50%; background:#3A1F3D; color:#fff !important; display:grid; place-items:center; flex:none; }
+.k-sbox-scan { width:46px; height:46px; border-radius:50%; background:#3A1F3D; color:#fff !important; display:grid; place-items:center; flex:none; border:0; padding:0; cursor:pointer; }
 .k-sbox-scan svg { width:20px; height:20px; }
 
 .k-quick { grid-area:quick; display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:14px 0 0; }
@@ -265,10 +265,9 @@
 </div>
 <div class="k-search-block">
 <form class="k-sbox" action="brand-check.html" method="get" role="search">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg>
 <label for="homeSearch" class="visually-hidden">Search any brand</label>
 <input type="search" id="homeSearch" name="q" placeholder="Search any brand" autocomplete="off" enterkeyhint="search">
-<a href="scan.html" class="k-sbox-scan" aria-label="Scan a barcode instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10 8v8M13.5 8v8M17 8v8"/></svg></a>
+<button type="submit" class="k-sbox-scan" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg></button>
 </form>
 </div>
 <div class="k-quick">
