@@ -86,6 +86,8 @@ const CATEGORY_MAP = {
   'hygiene': 'hygiene',
   'paper-hygiene': 'hygiene',
   'hygiene': 'hygiene',
+  'paper-hygiene': 'hygiene',
+  'hygiene': 'hygiene',
   'period-menstrual': 'hygiene',
   'food-kitchen': null,
   'stationery': 'stationery'
@@ -164,7 +166,7 @@ function renderCard(brand) {
       ? '<p class="parent-test-flag good">&#127807; parent company doesn\'t test on animals</p>'
       : '<p class="parent-test-flag unverified">&#128269; parent company\'s testing policy is also unverified</p>';
   }
-  return '<div class="' + cardClass + '" data-category="' + dataCategory + '"' + (dataRegion ? ' data-region="' + dataRegion + '"' : '') + '>' +
+  return '<div class="' + cardClass + '" data-category="' + dataCategory + '"' + (dataRegion ? ' data-region="' + dataRegion + '"' : '') + (brand.veganBasis === 'certified' ? ' data-vegcert="1"' : '') + '>' +
     '<p class="' + ratingClass + '">' + tier.emoji + ' ' + (brand.tier === 'unverified' && brand.claim ? 'says it\'s cruelty-free, not certified' : tier.label) + '</p>' +
     '<h3>' + nameHtml + '</h3>' +
     '<p>' + escapeHtml(brand.note) + '</p>' + parentNote + '</div>';

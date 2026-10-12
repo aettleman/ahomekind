@@ -230,7 +230,7 @@
 <label for="certSelect" class="visually-hidden">narrow by certification</label>
 <select id="certSelect">
 <option value="all">any certification</option>
-<option value="vegan-society">Vegan Society certified</option>
+<option value="vegan-cert">Vegan certification</option>
 <option value="leaping-bunny">Leaping Bunny / Cruelty Free International</option>
 <option value="peta">PETA certified</option>
 </select>
@@ -1040,7 +1040,7 @@ Buying floss, toothbrushes, toothpaste, mouthwash or interdental brushes from a 
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/aim/">Aim</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
 <div class="card bad" data-category="mouth-care" data-region="uk-europe usa-canada australia-nz asia africa-middle-east south-central-america"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/aquafresh/">Aquafresh</a></h3><p>Owned by Haleon (spun off from GSK), which sells into markets such as mainland China where animal testing can still be legally required, and has not committed to ending animal testing across its whole business. Buying Aquafresh financially supports Haleon as a company - that isn't the same as saying this specific tube was itself tested on animals.</p></div>
 <div class="card bad" data-category="household mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/arm-and-hammer/">Arm &amp; Hammer</a></h3><p>Owned by Church &amp; Dwight, which tests on animals.</p></div>
-<div class="card unverified" data-category="mouth-care"><p class="rating unverified">&#128269; says it's cruelty-free, not certified</p><h3><a href="brands/biomed/">Biomed</a></h3><p>Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.</p><p class="parent-test-flag unverified">&#128269; parent company's testing policy is also unverified</p></div>
+<div class="card unverified" data-category="mouth-care" data-vegcert="1"><p class="rating unverified">&#128269; says it's cruelty-free, not certified</p><h3><a href="brands/biomed/">Biomed</a></h3><p>Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.</p><p class="parent-test-flag unverified">&#128269; parent company's testing policy is also unverified</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/biotene/">Biotene</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
 <div class="card bad" data-category="mouth-care"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/close-up/">Close-up</a></h3><p>Listed by PETA as a company that tests on animals.</p></div>
 <div class="card bad" data-category="mouth-care" data-region="uk-europe usa-canada australia-nz asia africa-middle-east south-central-america"><p class="rating bad">&#10060; tested on animals</p><h3><a href="brands/colgate/">Colgate</a></h3><p>Parent company Colgate-Palmolive sells in mainland China, where animal testing can still be legally required for some products, and has not adopted a full end to animal testing globally. Buying Colgate financially supports that company - this isn't a claim that a specific tube of toothpaste was itself tested on an animal.</p></div>
@@ -1479,7 +1479,7 @@ else { veganValue = 'not stated'; veganClass = 'na'; }
 // Bunny and Cruelty Free International are the same standard (CFI runs
 // Leaping Bunny in the UK/Europe), so they share one filter bucket.
 var certs = [];
-if (/\bvegan society\b/.test(noteLower)) certs.push('vegan-society');
+if (/\bvegan society\b|\bv-label\b/.test(noteLower)) certs.push('vegan-cert');
 if (/\bleaping bunny\b/.test(noteLower) || /\bcruelty free international\b/.test(noteLower)) certs.push('leaping-bunny');
 if (/\bpeta\b/.test(noteLower)) certs.push('peta');
 // A note can name a certifier while explaining a brand ISN'T certified by
@@ -1489,6 +1489,7 @@ if (/\bpeta\b/.test(noteLower)) certs.push('peta');
 if (/no independent listing/.test(noteLower) || /not\s[^.]*certified/.test(noteLower) || /confirms?\s+tests?\s+on\s+animals/.test(noteLower) || /working toward change/.test(noteLower) || /not independently verified/.test(noteLower)) {
 certs = [];
 }
+if (card.dataset.vegcert === '1' && certs.indexOf('vegan-cert') === -1) certs.push('vegan-cert');
 card.dataset.cert = certs.join(' ');
 
 var headline = ratingEl.textContent.trim();

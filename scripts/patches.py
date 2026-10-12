@@ -589,3 +589,11 @@ _n += _rw("js/checker-stamps.js", lambda t: t.replace('if(b.veganBasis==="brand"
 _n += _rw("css/stamps.css", lambda t: t if "ahk-stamp-vegcert" in t else t + ".ahk-stamp-vegcert{background:#3A1F3D;color:#F4E6DE}\n")
 _n += _rw("scripts/generate-brand-pages.js", lambda t: t if "(certified by " in t else t.replace("(brand.veganBasis === 'brand' ?", "(brand.veganBasis === 'certified' ? '100% vegan (certified by ' + escapeHtml(brand.veganCert || 'a vegan certifier') + ')' : brand.veganBasis === 'brand' ?", 1))
 print("Biomed certified vegan; vegan certified stamp files changed:", _n)
+
+# 28. Checker's certification filter: "Vegan certification" (Vegan Society, V-Label and others), not just the Vegan Society
+_n = _rw("brand-check.html", lambda t: t.replace('<option value="vegan-society">Vegan Society certified</option>', '<option value="vegan-cert">Vegan certification</option>')
+         .replace("certs.push('vegan-society')", "certs.push('vegan-cert')")
+         .replace("if (/\\bvegan society\\b/.test(noteLower))", "if (/\\bvegan society\\b|\\bv-label\\b/.test(noteLower))")
+         .replace("card.dataset.cert = certs.join(' ');", "if (card.dataset.vegcert === '1' && certs.indexOf('vegan-cert') === -1) certs.push('vegan-cert');\ncard.dataset.cert = certs.join(' ');") if "dataset.vegcert" not in t else t)
+_n += _rw("scripts/generate-brand-check.js", lambda t: t if "data-vegcert" in t else t.replace("""(dataRegion ? ' data-region="' + dataRegion + '"' : '') + '>' +""", """(dataRegion ? ' data-region="' + dataRegion + '"' : '') + (brand.veganBasis === 'certified' ? ' data-vegcert="1"' : '') + '>' +""", 1))
+print("Checker vegan certification filter files changed:", _n)
