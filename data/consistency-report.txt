@@ -16,7 +16,6 @@ tests on animals with no source: BENGAY
 tests on animals with no source: Bic
 tests on animals with no source: Bic Corporation
 tests on animals with no source: Biotene
-tests on animals with no source: Biotherm
 tests on animals with no source: Blue Buffalo
 tests on animals with no source: Bounce
 tests on animals with no source: Bounty
@@ -76,7 +75,6 @@ tests on animals with no source: GLAMGLOW
 tests on animals with no source: Green Works
 tests on animals with no source: Gucci Fragrances
 tests on animals with no source: Guerlain
-tests on animals with no source: Helena Rubinstein
 tests on animals with no source: Hoyu
 tests on animals with no source: Hugo Boss
 tests on animals with no source: Institut Esthederm
@@ -88,7 +86,6 @@ tests on animals with no source: K.Y.
 tests on animals with no source: Kaboom
 tests on animals with no source: Kao USA
 tests on animals with no source: Kenzo Parfums
-tests on animals with no source: Kerastase
 tests on animals with no source: Kose
 tests on animals with no source: L'Occitane
 tests on animals with no source: L'Oréal
@@ -185,7 +182,6 @@ tests on animals with no source: Sephora Cosmetics
 tests on animals with no source: Shiseido Cosmetics
 tests on animals with no source: Shout
 tests on animals with no source: Shower to Shower
-tests on animals with no source: Shu Uemura
 tests on animals with no source: Sinful Colors
 tests on animals with no source: SK-II
 tests on animals with no source: Skin ID

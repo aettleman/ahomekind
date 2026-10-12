@@ -500,3 +500,21 @@ for _s in ("biotherm", "shu-uemura", "helena-rubinstein", "kerastase"):
         _b.setdefault("sources", []).append({"label": "L'Oréal annual report 2025: its global brands", "url": _AR}); _n += 1
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("L'Oréal-owned brands given a parent:", _n)
+
+# 24. Beauty of Joseon (added 12 Oct): says it's cruelty-free on its own About page, no certification found by Ash; some products not vegan. Owner not stated on its site, so no parent set.
+# Also: Ann Summers note said "to us" (site copy is one person).
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "beauty-of-joseon" not in by:
+    brands.append({"slug": "beauty-of-joseon", "name": "Beauty of Joseon", "tier": "unverified",
+        "note": "Beauty of Joseon says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA. Some of its products contain animal-derived ingredients, so check each label if you want vegan.",
+        "parentCompany": None, "vegan": "partial", "evidence": "", "products": [], "alternatives": [], "links": [],
+        "category": ["skincare"], "veganConfidence": "low", "region": "",
+        "claim": "Its About page calls it a cruelty-free brand and says it develops all of its products without animal testing.",
+        "lastVerified": today,
+        "sources": [{"label": "Beauty of Joseon: its own About page", "url": "https://beautyofjoseon.com/pages/about-page"},
+                    {"label": "Leaping Bunny: approved brands (search for the brand)", "url": "https://www.leapingbunny.org/shopping-guide"},
+                    {"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"}]})
+if "ann-summers" in by:
+    by["ann-summers"]["note"] = by["ann-summers"]["note"].replace("It confirmed this to us by email.", "It confirmed this to me by email.")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Beauty of Joseon added; Ann Summers wording fixed")

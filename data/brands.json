@@ -851,7 +851,7 @@
     "slug": "ann-summers",
     "name": "Ann Summers",
     "tier": "unverified",
-    "note": "Ann Summers says some products are free from animal testing or vegan, but it has no certification from Leaping Bunny, Cruelty Free International or PETA, and no published animal testing policy. It confirmed this to us by email. Vegan status varies by product, so check each label.",
+    "note": "Ann Summers says some products are free from animal testing or vegan, but it has no certification from Leaping Bunny, Cruelty Free International or PETA, and no published animal testing policy. It confirmed this to me by email. Vegan status varies by product, so check each label.",
     "parentCompany": null,
     "vegan": "unclear",
     "evidence": "",
@@ -2815,6 +2815,10 @@
       {
         "label": "L'Oréal annual report 2025: its global brands",
         "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -10199,6 +10203,10 @@
       {
         "label": "L'Oréal annual report 2025: its global brands",
         "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -11912,6 +11920,10 @@
       {
         "label": "L'Oréal annual report 2025: its global brands",
         "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -21561,6 +21573,10 @@
       {
         "label": "L'Oréal annual report 2025: its global brands",
         "url": "https://www.loreal-finance.com/en/annual-report-2025/global-brands/"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -27293,5 +27309,38 @@
     "region": "Australia & New Zealand, Europe, USA & Canada",
     "claim": "Says it doesn't test on animals and that its products are vegan: no virgin trees or animal-derived ingredients, and the glue is just starch and water.",
     "lastVerified": "2026-10-10"
+  },
+  {
+    "slug": "beauty-of-joseon",
+    "name": "Beauty of Joseon",
+    "tier": "unverified",
+    "note": "Beauty of Joseon says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA. Some of its products contain animal-derived ingredients, so check each label if you want vegan.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "Its About page calls it a cruelty-free brand and says it develops all of its products without animal testing.",
+    "lastVerified": "2026-10-12",
+    "sources": [
+      {
+        "label": "Beauty of Joseon: its own About page",
+        "url": "https://beautyofjoseon.com/pages/about-page"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
   }
 ]
