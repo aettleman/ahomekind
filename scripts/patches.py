@@ -508,7 +508,7 @@ if "beauty-of-joseon" not in by:
     _boj = {"slug": "beauty-of-joseon", "name": "Beauty of Joseon", "tier": "unverified", "parentCompany": None, "vegan": "partial", "evidence": "", "products": [], "alternatives": [], "links": [], "category": ["skincare"], "veganConfidence": "low", "region": ""}
     brands.append(_boj); by["beauty-of-joseon"] = _boj
 by["beauty-of-joseon"].update(
-    note="Beauty of Joseon says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA. Its own FAQ lists five products that contain animal-derived ingredients (propolis, snail mucin, honey, and a peptide partly from animals), and says no other animal-derived ingredients are used. That's the brand's own word, so check labels if you're strict.",
+    note="Beauty of Joseon says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
     claim="Its FAQ says all its products are cruelty-free and that it doesn't test on animals. Its About page says it develops all of its products without animal testing.",
     lastVerified=today,
     sources=[{"label": "Beauty of Joseon: its own FAQ (cruelty-free and vegan products)", "url": "https://beautyofjoseon.com/pages/faq-products"},
