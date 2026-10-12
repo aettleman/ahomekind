@@ -898,3 +898,28 @@ document.addEventListener('DOMContentLoaded', function(){
     if (h === here || (onBrand && h === '/brand-check')) a.classList.add('on');
   });
 });
+
+// Footer: two tidy columns instead of one long line of links. Runs on every page
+// (the footer markup is the same everywhere), so nothing else needs editing.
+(function(){
+var f = document.querySelector('footer.site-footer');
+if (!f || f.querySelector('.foot-cols')) return;
+var links = {};
+Array.prototype.forEach.call(f.querySelectorAll('a'), function(a){
+  var t = (a.textContent || '').trim().toLowerCase();
+  if (t) links[t] = a; else if (a.classList.contains('footer-ig')) links.ig = a;
+});
+function col(names){
+  var ul = document.createElement('ul');
+  names.forEach(function(n){ if(links[n]){ var li = document.createElement('li'); li.appendChild(links[n]); ul.appendChild(li); } });
+  return ul;
+}
+var wrap = document.createElement('div'); wrap.className = 'foot-cols';
+wrap.appendChild(col(['about', 'privacy', 'how this site is funded']));
+wrap.appendChild(col(['how i decide', 'parent companies', 'take action', 'support a home kind']));
+var brand = document.createElement('p'); brand.className = 'foot-brand';
+brand.textContent = 'a home kind. · est. 2026';
+if (links.ig) { brand.appendChild(document.createTextNode(' ')); brand.appendChild(links.ig); }
+f.textContent = '';
+f.appendChild(brand); f.appendChild(wrap);
+})();

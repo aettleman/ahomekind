@@ -3037,3 +3037,10 @@ img.k-lou-port { object-fit: cover; border: 3px solid #FBF4EF; box-shadow: 0 2px
 @media (min-width: 900px) { .k-pc-stamp { bottom: 14px; right: 14px; } }
 
 /*a11y*/.k-facts dt{flex:1;display:flex;align-items:baseline;gap:8px}.k-facts dt::after{content:"";flex:1;border-bottom:1.5px dotted rgba(42,22,48,.25);transform:translateY(-4px)}.ahk-hand,.k-hero em{color:#C0521F}
+
+/* footer in two columns (js/site.js builds the markup) */
+footer.site-footer .foot-brand { margin: 0 0 14px; }
+footer.site-footer .foot-cols { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 0 56px; }
+footer.site-footer .foot-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
+footer.site-footer .foot-cols li { margin: 0; padding: 0; }
+footer.site-footer { text-align: left; }
