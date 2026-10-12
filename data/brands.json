@@ -27346,5 +27346,71 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ]
+  },
+  {
+    "slug": "vanicream",
+    "tier": "unverified",
+    "parentCompany": null,
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "name": "Vanicream",
+    "vegan": "unclear",
+    "note": "Vanicream says it doesn't test its products on animals, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    "claim": "Its animal testing page says Pharmaceutical Specialties Inc. does not test its products on animals. It doesn't mention suppliers, ingredients or where it sells.",
+    "sources": [
+      {
+        "label": "Vanicream: its own animal testing page",
+        "url": "https://www.vanicream.com/animal-testing"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "lastVerified": "2026-10-12"
+  },
+  {
+    "slug": "amlactin",
+    "tier": "unverified",
+    "parentCompany": null,
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "name": "AmLactin",
+    "vegan": "partial",
+    "note": "AmLactin says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    "claim": "Its FAQ says it is cruelty-free, doesn't test on animals and doesn't sell in markets that require animal testing.",
+    "sources": [
+      {
+        "label": "AmLactin: its own FAQ (vegan and cruelty-free)",
+        "url": "https://amlactin.com/a/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "lastVerified": "2026-10-12"
   }
 ]

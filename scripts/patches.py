@@ -519,3 +519,25 @@ if "ann-summers" in by:
     by["ann-summers"]["note"] = by["ann-summers"]["note"].replace("It confirmed this to us by email.", "It confirmed this to me by email.")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Beauty of Joseon added/updated; Ann Summers wording fixed")
+
+# 25. Vanicream and AmLactin (added 12 Oct, from a r/crueltyfree comment): both say they don't test on animals, neither is certified. Owners not set (Vanicream's page names Pharmaceutical Specialties Inc. as the maker; AmLactin's footer names Advantice Health, LLC; neither states "owned by", so no parent page).
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_CERT = [{"label": "Leaping Bunny: approved brands (search for the brand)", "url": "https://www.leapingbunny.org/shopping-guide"},
+         {"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"}]
+_NEW = {
+ "vanicream": dict(name="Vanicream", vegan="unclear",
+    note="Vanicream says it doesn't test its products on animals, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    claim="Its animal testing page says Pharmaceutical Specialties Inc. does not test its products on animals. It doesn't mention suppliers, ingredients or where it sells.",
+    sources=[{"label": "Vanicream: its own animal testing page", "url": "https://www.vanicream.com/animal-testing"}] + _CERT),
+ "amlactin": dict(name="AmLactin", vegan="partial",
+    note="AmLactin says it's cruelty-free, but it isn't certified by Leaping Bunny, Cruelty Free International or PETA.",
+    claim="Its FAQ says it is cruelty-free, doesn't test on animals and doesn't sell in markets that require animal testing.",
+    sources=[{"label": "AmLactin: its own FAQ (vegan and cruelty-free)", "url": "https://amlactin.com/a/faq"}] + _CERT),
+}
+for _s, _v in _NEW.items():
+    if _s not in by:
+        _b = {"slug": _s, "tier": "unverified", "parentCompany": None, "evidence": "", "products": [], "alternatives": [], "links": [], "category": ["skincare"], "veganConfidence": "low", "region": ""}
+        brands.append(_b); by[_s] = _b
+    by[_s].update(_v, lastVerified=today)
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Vanicream and AmLactin added/updated")
