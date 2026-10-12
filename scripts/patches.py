@@ -597,3 +597,26 @@ _n = _rw("brand-check.html", lambda t: t.replace('<option value="vegan-society">
          .replace("card.dataset.cert = certs.join(' ');", "if (card.dataset.vegcert === '1' && certs.indexOf('vegan-cert') === -1) certs.push('vegan-cert');\ncard.dataset.cert = certs.join(' ');") if "dataset.vegcert" not in t else t)
 _n += _rw("scripts/generate-brand-check.js", lambda t: t if "data-vegcert" in t else t.replace("""(dataRegion ? ' data-region="' + dataRegion + '"' : '') + '>' +""", """(dataRegion ? ' data-region="' + dataRegion + '"' : '') + (brand.veganBasis === 'certified' ? ' data-vegcert="1"' : '') + '>' +""", 1))
 print("Checker vegan certification filter files changed:", _n)
+
+# 29. Vegan certification checks by Ash (12 Oct), for the brands in the checker's "Vegan certification" filter. Certifier recorded as Ash found it.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_VS = "Vegan Society"
+for _s in ("bio-d", "little-soap-company", "miniml", "original-source", "phb-ethical-beauty", "salt-of-the-earth", "the-pink-stuff"):
+    if _s in by:
+        by[_s].update(veganBasis="certified", veganCert=_VS, lastVerified=today)
+if "the-pink-stuff" in by:
+    by["the-pink-stuff"]["note"] = "Leaping Bunny certified worldwide, and its products are certified vegan by the Vegan Society."
+if "the-cheeky-panda" in by:   # added 10 Oct; date it was added, as Ash asked
+    by["the-cheeky-panda"].update(veganBasis="certified", veganCert=_VS, lastVerified="2026-10-10")
+if "e-l-f-cosmetics" in by:
+    _e = by["e-l-f-cosmetics"]
+    _e.update(veganBasis="certified", veganCert="PETA", lastVerified=today,
+              note="Independently owned. Certified cruelty-free and vegan by PETA (Beauty Without Bunnies).",
+              sources=[{"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"}])
+if "kingfisher" in by:
+    _k = by["kingfisher"]
+    _k.update(vegan="full", veganConfidence="medium", veganBasis="brand", lastVerified=today,
+              note="Cruelty-free and BUAV certified in the UK, independent toothpaste brand. It says its range is 100% vegan, but no vegan certification has been found.",
+              sources=[s for s in _k.get("sources", []) if "vegansociety" not in s.get("url", "")])
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Vegan certification checks recorded")

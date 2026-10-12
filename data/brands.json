@@ -2589,7 +2589,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "biohygiene",
@@ -6708,7 +6711,7 @@
     "slug": "e-l-f-cosmetics",
     "name": "e.l.f. cosmetics",
     "tier": "good",
-    "note": "Independently owned, PETA and Vegan Society certified.",
+    "note": "Independently owned. Certified cruelty-free and vegan by PETA (Beauty Without Bunnies).",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -6744,10 +6747,13 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "sources": [
       {
-        "label": "The Vegan Society trademark",
-        "url": "https://www.vegansociety.com/"
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "e45",
@@ -12067,9 +12073,9 @@
     "slug": "kingfisher",
     "name": "Kingfisher",
     "tier": "check",
-    "note": "Cruelty-free and BUAV/Vegan Society certified in the UK, independent toothpaste brand. Most products are vegan, but check individual formulas as a small number of variants may differ.",
+    "note": "Cruelty-free and BUAV certified in the UK, independent toothpaste brand. It says its range is 100% vegan, but no vegan certification has been found.",
     "parentCompany": null,
-    "vegan": "partial",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -12078,14 +12084,11 @@
     "category": [
       "dental"
     ],
-    "veganConfidence": "low",
+    "veganConfidence": "medium",
     "region": "Europe",
-    "sources": [
-      {
-        "label": "The Vegan Society trademark",
-        "url": "https://www.vegansociety.com/"
-      }
-    ]
+    "sources": [],
+    "veganBasis": "brand",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "kireyna",
@@ -13335,7 +13338,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "living-proof",
@@ -15213,7 +15219,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "miss-organics",
@@ -17623,7 +17632,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "origins",
@@ -18408,7 +18420,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "philosophy",
@@ -20544,7 +20559,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "salvatore-ferragamo",
@@ -23774,7 +23792,7 @@
     ],
     "region": "Africa & The Middle East, Europe",
     "veganConfidence": "high",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-10",
     "claim": "",
     "price": "££",
     "stockists": [
@@ -23797,7 +23815,9 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society"
   },
   {
     "slug": "the-cocoon-original-vietnam",
@@ -24120,7 +24140,7 @@
     "slug": "the-pink-stuff",
     "name": "The Pink Stuff",
     "tier": "good",
-    "note": "Leaping Bunny certified worldwide, and states its range is vegan (recognised by the Vegan Society).",
+    "note": "Leaping Bunny certified worldwide, and its products are certified vegan by the Vegan Society.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -24153,7 +24173,10 @@
         "label": "The Vegan Society trademark",
         "url": "https://www.vegansociety.com/"
       }
-    ]
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society",
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "the-powder-shampoo",
