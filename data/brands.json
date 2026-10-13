@@ -26391,8 +26391,8 @@
     "slug": "wella",
     "name": "Wella",
     "tier": "bad",
-    "note": "Owned by Coty, which tests on animals.",
-    "parentCompany": "Coty",
+    "note": "Cruelty Free Kitty lists Wella as testing on animals, most often in mainland China. The Wella Company says it doesn't test its products on animals. Owned by the Wella Company (previously Coty).",
+    "parentCompany": "The Wella Company",
     "vegan": "unknown",
     "evidence": "https://www.crueltyfreekitty.com/brands/wella/",
     "products": [],
@@ -26404,7 +26404,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Cruelty Free Kitty",
@@ -26413,6 +26413,10 @@
       {
         "label": "Coty: its own animal testing policy",
         "url": "https://www.coty.com/faq"
+      },
+      {
+        "label": "The Wella Company: its FAQ (animal testing statement)",
+        "url": "https://www.wellacompany.com/frequently-asked-questions"
       }
     ]
   },
@@ -28154,8 +28158,8 @@
     "slug": "rael",
     "name": "Rael",
     "tier": "check",
-    "note": "Certified cruelty-free by Leaping Bunny. Founded in Los Angeles in 2017 by three Korean American women: Yanghee Paik, Aness An and Binna Won. Not all products are vegan, and its FAQ says vegan status is based on supplier documentation.",
-    "parentCompany": null,
+    "note": "Certified cruelty-free by Leaping Bunny. Founded in Los Angeles in 2017 by three Korean American women: Yanghee Paik, Aness An and Binna Won. Majority-owned by TowerBrook Capital Partners, a US private equity firm that bought a majority stake in August 2026. Not all products are vegan, and its FAQ says vegan status is based on supplier documentation.",
+    "parentCompany": "TowerBrook Capital Partners",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -28163,7 +28167,8 @@
     "links": [],
     "category": [
       "skincare",
-      "period-menstrual"
+      "period-menstrual",
+      "hygiene"
     ],
     "veganConfidence": "high",
     "region": "USA & Canada",
@@ -28177,6 +28182,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Sidley: Rael's strategic investment from TowerBrook Capital Partners (August 2026)",
+        "url": "https://www.sidley.com/en/newslanding/newsannouncements/2026/08/sidley-represents-rael-in-its-strategic-investment-from-towerbrook-capital-partners"
       }
     ]
   },
@@ -28192,7 +28201,8 @@
     "alternatives": [],
     "links": [],
     "category": [
-      "period-menstrual"
+      "period-menstrual",
+      "hygiene"
     ],
     "veganConfidence": "low",
     "region": "",
@@ -28206,6 +28216,10 @@
       {
         "label": "Edgewell Personal Care: its animal testing statement (Playtex FAQ)",
         "url": "https://www.playtexplayon.ca/pages/frequently-asked-questions"
+      },
+      {
+        "label": "Edgewell Personal Care: its own animal testing policy",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
       }
     ],
     "parentTestsOnAnimals": true
@@ -28236,14 +28250,18 @@
       {
         "label": "Softsoap: its FAQ (vegan products)",
         "url": "https://www.softsoap.com/en-us/faq#accordion-573eb8dc78-item-8adda9ad87"
+      },
+      {
+        "label": "Colgate-Palmolive: its own animal testing policy",
+        "url": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare"
       }
     ]
   },
   {
     "slug": "opi",
     "name": "OPI",
-    "tier": "bad",
-    "note": "OPI isn't cruelty-free and isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says it doesn't test its ingredients or products on animals and never asks suppliers or contract manufacturers to, and the Wella Company says it doesn't test its products on animals either. Owned by the Wella Company, which also runs Clairol and ghd. OPI and Wella were previously owned by Coty.",
+    "tier": "unverified",
+    "note": "OPI says it doesn't test its ingredients or products on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by the Wella Company, which also runs Clairol and ghd, and which says it doesn't test its products on animals either. OPI and Wella were previously owned by Coty.",
     "parentCompany": "The Wella Company",
     "vegan": "unknown",
     "evidence": "",
@@ -28255,7 +28273,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "claim": "",
+    "claim": "OPI says it doesn't test its ingredients or products on animals, and never asks its suppliers or contract manufacturers to.",
     "lastVerified": "2026-10-13",
     "sources": [
       {
@@ -28687,7 +28705,7 @@
     "slug": "the-yorkshire-soap-company",
     "name": "The Yorkshire Soap Company",
     "tier": "unverified",
-    "note": "The Yorkshire Soap Company says it's cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't fully vegan, but it has a vegan range. Independently owned.",
+    "note": "The Yorkshire Soap Company says it has never tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, so this can't be verified. Its FAQ says it sometimes uses honey, milk or beeswax, so not every product is vegan, though it has a vegan range. Independently owned.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -28699,9 +28717,13 @@
     ],
     "veganConfidence": "low",
     "region": "Europe",
-    "claim": "The Yorkshire Soap Company says it's cruelty-free.",
+    "claim": "The Yorkshire Soap Company says it has never tested on animals.",
     "lastVerified": "2026-10-13",
     "sources": [
+      {
+        "label": "The Yorkshire Soap Company: its FAQs (animal testing and animal-derived ingredients)",
+        "url": "https://yorkshiresoap.co.uk/faqs/"
+      },
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"

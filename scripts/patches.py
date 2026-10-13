@@ -1037,3 +1037,429 @@ def _indep(t):
     return t.replace(old, new, 1)
 _rw("scripts/site_update.py", _indep)
 print("Section 40 applied")
+
+# 41. OPI and Wella corrections, Yorkshire Soap Company FAQ (Ash, 13 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_o = by.get("opi")
+if _o:
+    _o.update(tier="unverified", lastVerified=today,
+        claim="OPI says it doesn't test its ingredients or products on animals, and never asks its suppliers or contract manufacturers to.",
+        note="OPI says it doesn't test its ingredients or products on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by the Wella Company, which also runs Clairol and ghd, and which says it doesn't test its products on animals either. OPI and Wella were previously owned by Coty.")
+_wl = by.get("wella")
+if _wl:
+    _wl.update(parentCompany="The Wella Company", lastVerified=today,
+        note="Cruelty Free Kitty lists Wella as testing on animals, most often in mainland China. The Wella Company says it doesn't test its products on animals. Owned by the Wella Company (previously Coty).")
+    _addsrc(_wl, "The Wella Company: its FAQ (animal testing statement)", "https://www.wellacompany.com/frequently-asked-questions")
+_ys = by.get("the-yorkshire-soap-company")
+if _ys:
+    _ys.update(claim="The Yorkshire Soap Company says it has never tested on animals.", lastVerified=today,
+        note="The Yorkshire Soap Company says it has never tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, so this can't be verified. Its FAQ says it sometimes uses honey, milk or beeswax, so not every product is vegan, though it has a vegan range. Independently owned.")
+    _ys["sources"] = [{"label": "The Yorkshire Soap Company: its FAQs (animal testing and animal-derived ingredients)", "url": "https://yorkshiresoap.co.uk/faqs/"}, _LBG, _PETAB]
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 41 applied")
+
+# 42. Rael owner (Ash, 13 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_ra = by.get("rael")
+if _ra:
+    _ra.update(parentCompany="TowerBrook Capital Partners", lastVerified=today,
+        note="Certified cruelty-free by Leaping Bunny. Founded in Los Angeles in 2017 by three Korean American women: Yanghee Paik, Aness An and Binna Won. Majority-owned by TowerBrook Capital Partners, a US private equity firm that bought a majority stake in August 2026. Not all products are vegan, and its FAQ says vegan status is based on supplier documentation.")
+    _addsrc(_ra, "Sidley: Rael's strategic investment from TowerBrook Capital Partners (August 2026)", "https://www.sidley.com/en/newslanding/newsannouncements/2026/08/sidley-represents-rael-in-its-strategic-investment-from-towerbrook-capital-partners")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 42 applied")
+
+# 43. Owner tool page for the laptop: ahomekind.com/owner-tool (not linked, not indexed)
+OWNER_TOOL = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
+<title>Who owns who - a home kind</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a brand list on the left, one focus card on the right (stacked on a phone). The card holds quick search buttons, three fields and four answers. */
+:root {
+  --bg: #f7f3f9;
+  --panel: #ffffff;
+  --ink: #2a1630;
+  --muted: #6d5a75;
+  --line: #e4d9e8;
+  --accent: #6e4e78;
+  --accent-ink: #ffffff;
+  --soft: #efe3f1;
+  --good: #2f7d4f;
+  --good-bg: #e0f1e6;
+  --warn: #9a6a12;
+  --warn-bg: #f8ecd0;
+  --bad: #a3364a;
+  --bad-bg: #f7dfe4;
+  --focus: #1d6fd1;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-display: "Caveat", "Bradley Hand", cursive;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1222; --panel: #271a2e; --ink: #f1e8f4; --muted: #b9a7c2; --line: #3d2d47;
+    --accent: #c9a3d6; --accent-ink: #1c1222; --soft: #36263f;
+    --good: #7fd1a0; --good-bg: #1f3a2b; --warn: #e6bd6a; --warn-bg: #3b3017; --bad: #f19aab; --bad-bg: #44212b; --focus: #7ab6ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1222; --panel: #271a2e; --ink: #f1e8f4; --muted: #b9a7c2; --line: #3d2d47;
+  --accent: #c9a3d6; --accent-ink: #1c1222; --soft: #36263f;
+  --good: #7fd1a0; --good-bg: #1f3a2b; --warn: #e6bd6a; --warn-bg: #3b3017; --bad: #f19aab; --bad-bg: #44212b; --focus: #7ab6ff;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font-body); padding-inline: 16px; padding-block: 16px 40px; }
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 16px; }
+h1 { font: 700 34px/1 var(--font-display); margin: 0; letter-spacing: .2px; }
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+header.top { display: grid; gap: 12px; }
+.headrow { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.count { font: 500 14px var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { height: 10px; border-radius: 6px; background: var(--soft); overflow: hidden; display: flex; }
+.bar i { display: block; height: 100%; }
+.bar .b-done { background: var(--good); }
+.bar .b-nf { background: var(--warn); }
+.bar .b-skip { background: var(--muted); opacity: .5; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+.seg button { border: 0; background: transparent; padding: 7px 12px; cursor: pointer; color: var(--muted); }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 500; }
+select, input[type="search"], input[type="text"], input[type="url"], textarea { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; width: 100%; }
+select { width: auto; }
+.main { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 16px; align-items: start; }
+.list { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; display: grid; grid-template-rows: auto minmax(0, 1fr); max-height: 78vh; min-width: 0; }
+.list .find { padding: 10px; border-bottom: 1px solid var(--line); }
+.items { overflow-y: auto; padding: 4px; }
+.item { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; border: 0; background: transparent; padding: 7px 8px; border-radius: 6px; cursor: pointer; min-width: 0; }
+.item:hover { background: var(--soft); }
+.item[aria-current="true"] { background: var(--soft); box-shadow: inset 3px 0 0 var(--accent); }
+.item span.nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--line); flex: none; }
+.dot.s-owner, .dot.s-independent { background: var(--good); border-color: var(--good); }
+.dot.s-notfound { background: var(--warn); border-color: var(--warn); }
+.dot.s-skip { background: var(--muted); border-color: var(--muted); opacity: .5; }
+.empty { padding: 20px 12px; color: var(--muted); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
+.namerow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.card h2 { font: 700 42px/1 var(--font-display); margin: 0; overflow-wrap: anywhere; }
+.chip { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 500; }
+.t-good, .t-check { background: var(--good-bg); color: var(--good); }
+.t-warn, .t-unverified { background: var(--warn-bg); color: var(--warn); }
+.t-bad { background: var(--bad-bg); color: var(--bad); }
+.cats { color: var(--muted); font-size: 13px; }
+.cur { color: var(--muted); font-size: 14px; max-width: 70ch; }
+.saved { padding: 8px 12px; border-radius: 8px; background: var(--good-bg); color: var(--good); font-size: 14px; display: none; }
+.saved.show { display: block; }
+.saved.nf { background: var(--warn-bg); color: var(--warn); }
+.saved.sk { background: var(--soft); color: var(--muted); }
+.label { font: 500 12px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+.searches { display: flex; flex-wrap: wrap; gap: 8px; }
+.searches a { text-decoration: none; color: var(--accent); border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; font-weight: 500; background: var(--panel); }
+.searches a:hover { background: var(--soft); }
+.fields { display: grid; gap: 14px; max-width: 640px; }
+.hint { font-size: 13px; color: var(--muted); margin-top: 4px; }
+textarea { min-height: 76px; resize: vertical; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; position: sticky; bottom: 0; background: var(--panel); padding-block: 10px; border-top: 1px solid var(--line); margin-top: -6px; }
+.actions button { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 500; }
+.actions button:hover { background: var(--soft); }
+.actions .primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.actions .primary:hover { background: var(--accent); filter: brightness(1.08); }
+.actions .primary[disabled] { opacity: .45; cursor: not-allowed; }
+.nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 12px; }
+.nav button, .linkbtn { border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: 6px 4px; text-decoration: underline; }
+.kbd { font: 12px var(--font-mono); color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); }
+.exp { background: var(--soft); border-radius: 8px; padding: 10px 12px; font-size: 14px; display: grid; gap: 8px; }
+.exp p { margin: 0; }
+.banner { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+@media (max-width: 800px) {
+  .main { grid-template-columns: minmax(0, 1fr); }
+  .list { max-height: 260px; order: 2; }
+  .card { padding: 16px; }
+  .card h2 { font-size: 36px; }
+}
+@media (prefers-reduced-motion: no-preference) { .bar i { transition: width .25s ease; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="headrow">
+      <h1>Who owns who</h1>
+      <div class="count" id="count" aria-live="polite"></div>
+    </div>
+    <div class="bar" id="bar" role="img" aria-label="Progress"><i class="b-done"></i><i class="b-nf"></i><i class="b-skip"></i></div>
+    <div class="filters">
+      <div class="seg" id="statusSeg" role="group" aria-label="Show">
+        <button type="button" data-f="todo" aria-pressed="true">To do</button>
+        <button type="button" data-f="done" aria-pressed="false">Done</button>
+        <button type="button" data-f="notfound" aria-pressed="false">Couldn't find</button>
+        <button type="button" data-f="skip" aria-pressed="false">Skipped</button>
+        <button type="button" data-f="all" aria-pressed="false">All</button>
+      </div>
+      <select id="tierSel" aria-label="Filter by label">
+        <option value="all">Every label</option>
+        <option value="bad">Tests on animals</option>
+        <option value="unverified">Not certified</option>
+        <option value="warn">Owner isn't</option>
+        <option value="check">Cruelty-free</option>
+        <option value="good">CF + vegan</option>
+      </select>
+      <select id="catSel" aria-label="Filter by category"><option value="all">Every category</option></select>
+      <button type="button" class="linkbtn" id="cpNew">Copy new answers</button><button type="button" class="linkbtn" id="cpAll">Copy everything</button>
+    </div>
+    <div class="banner" id="banner" hidden></div>
+    <div class="exp" id="exp" hidden><p id="expMsg"></p><textarea id="expBox" readonly rows="4"></textarea></div>
+  </header>
+
+  <div class="main">
+    <aside class="list" aria-label="Brands">
+      <div class="find"><input type="search" id="q" placeholder="Find a brand" autocomplete="off"></div>
+      <div class="items" id="items"></div>
+    </aside>
+    <section class="card" id="card" aria-live="polite"></section>
+  </div>
+</div>
+
+<script>
+(function () {
+  var BRANDS = [], OWNERS = [];
+  var TIERS = { good: 'CF + vegan', check: 'Cruelty-free', warn: "Owner isn't cruelty-free", bad: 'Tests on animals', unverified: 'Not certified' };
+  var answers = {}, cur = null, f = 'todo', tier = 'all', cat = 'all', q = '';
+  
+  var $ = function (id) { return document.getElementById(id); };
+  var bySlug = {};
+
+  // per-device backup, used only when the shared store is unavailable
+  function lsGet() { try { return JSON.parse(localStorage.getItem('ahk-owner-answers') || '{}'); } catch (e) { return {}; } }
+  function lsSet(o) { try { localStorage.setItem('ahk-owner-answers', JSON.stringify(o)); } catch (e) {} }
+
+  function status(s) { var a = answers[s]; return a ? a.status : 'todo'; }
+  function group(s) { var st = status(s); return st === 'owner' || st === 'independent' ? 'done' : st; }
+
+  function filtered() {
+    var qq = q.trim().toLowerCase();
+    return BRANDS.filter(function (b) {
+      if (f !== 'all' && group(b.s) !== f) return false;
+      if (tier !== 'all' && b.t !== tier) return false;
+      if (cat !== 'all' && b.c.indexOf(cat) < 0) return false;
+      if (qq && b.n.toLowerCase().indexOf(qq) < 0) return false;
+      return true;
+    });
+  }
+
+  function renderHead() {
+    var n = BRANDS.length, d = 0, nf = 0, sk = 0;
+    BRANDS.forEach(function (b) { var g = group(b.s); if (g === 'done') d++; else if (g === 'notfound') nf++; else if (g === 'skip') sk++; });
+    $('count').textContent = d + ' done · ' + nf + " couldn't find · " + sk + ' skipped · ' + (n - d - nf - sk) + ' to go';
+    var kids = $('bar').children;
+    kids[0].style.width = (d / n * 100) + '%'; kids[1].style.width = (nf / n * 100) + '%'; kids[2].style.width = (sk / n * 100) + '%';
+    $('bar').setAttribute('aria-label', d + ' of ' + n + ' done');
+  }
+
+  function renderList() {
+    var list = filtered(), box = $('items');
+    box.textContent = '';
+    if (!list.length) { var e = document.createElement('div'); e.className = 'empty'; e.textContent = f === 'todo' ? 'Nothing left in this view. Nice.' : 'No brands match.'; box.appendChild(e); return; }
+    var frag = document.createDocumentFragment();
+    list.forEach(function (b) {
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'item'; btn.dataset.s = b.s;
+      if (b.s === cur) btn.setAttribute('aria-current', 'true');
+      var dot = document.createElement('span'); dot.className = 'dot s-' + status(b.s);
+      var nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = b.n;
+      btn.appendChild(dot); btn.appendChild(nm); frag.appendChild(btn);
+    });
+    box.appendChild(frag);
+    var c = box.querySelector('[aria-current="true"]'); if (c && c.scrollIntoView) c.scrollIntoView({ block: 'nearest' });
+  }
+
+  function link(label, url) { var a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = label; return a; }
+
+  function renderCard() {
+    var card = $('card'); card.textContent = '';
+    var b = cur && bySlug[cur];
+    if (!b) { var p = document.createElement('p'); p.className = 'empty'; p.textContent = filtered().length ? 'Pick a brand on the left.' : 'Nothing to show with these filters.'; card.appendChild(p); return; }
+    var a = answers[b.s] || {};
+    var en = encodeURIComponent(b.n);
+    var el = function (tag, cls, txt) { var x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; };
+
+    var row = el('div', 'namerow'); row.appendChild(el('h2', '', b.n)); row.appendChild(el('span', 'chip t-' + b.t, TIERS[b.t] || b.t)); card.appendChild(row);
+    if (b.c.length) card.appendChild(el('div', 'cats', b.c.join(' · ')));
+    if (b.d) card.appendChild(el('div', 'cur', 'On the site now: ' + b.d));
+
+    var sv = el('div', 'saved'); sv.id = 'saved'; card.appendChild(sv);
+
+    var sb = el('div'); sb.appendChild(el('span', 'label', 'Look it up'));
+    var sr = el('div', 'searches');
+    sr.appendChild(link('Who owns it?', 'https://www.google.com/search?q=' + encodeURIComponent('who owns ' + b.n + ' brand')));
+    sr.appendChild(link('Parent company', 'https://www.google.com/search?q=' + encodeURIComponent(b.n + ' parent company')));
+    sr.appendChild(link('Acquired by?', 'https://www.google.com/search?q=' + encodeURIComponent(b.n + ' acquired by')));
+    sr.appendChild(link('Wikipedia', 'https://en.wikipedia.org/w/index.php?search=' + en));
+    sr.appendChild(link('Cruelty Free Kitty', 'https://www.crueltyfreekitty.com/?s=' + en));
+    sr.appendChild(link('Good On You', 'https://www.google.com/search?q=' + encodeURIComponent('site:directory.goodonyou.eco ' + b.n)));
+    sr.appendChild(link('Their site: About us', 'https://www.google.com/search?q=' + encodeURIComponent(b.n + ' official site about us')));
+    sb.appendChild(sr); card.appendChild(sb);
+
+    var fields = el('div', 'fields');
+    var w1 = el('div'); var l1 = el('label', 'label', 'Owner (parent company)'); l1.htmlFor = 'fOwner';
+    var i1 = document.createElement('input'); i1.type = 'text'; i1.id = 'fOwner'; i1.setAttribute('list', 'ownerList'); i1.autocomplete = 'off'; i1.value = a.owner || '';
+    var dlst = document.createElement('datalist'); dlst.id = 'ownerList'; OWNERS.forEach(function (o) { var op = document.createElement('option'); op.value = o; dlst.appendChild(op); });
+    w1.appendChild(l1); w1.appendChild(i1); w1.appendChild(dlst); w1.appendChild(el('div', 'hint', 'Start typing and pick a name already on the site if there is one, so each company ends up with one page.'));
+    var w2 = el('div'); var l2 = el('label', 'label', 'Link where you found it'); l2.htmlFor = 'fSrc';
+    var i2 = document.createElement('input'); i2.type = 'url'; i2.id = 'fSrc'; i2.placeholder = 'https://'; i2.value = a.source || '';
+    w2.appendChild(l2); w2.appendChild(i2);
+    var w3 = el('div'); var l3 = el('label', 'label', 'Anything else you found (optional)'); l3.htmlFor = 'fNote';
+    var i3 = document.createElement('textarea'); i3.id = 'fNote'; i3.value = a.note || '';
+    w3.appendChild(l3); w3.appendChild(i3); w3.appendChild(el('div', 'hint', 'For example: who owns the rest, what it says about animal testing, or "I couldn’t find a policy".'));
+    fields.appendChild(w1); fields.appendChild(w2); fields.appendChild(w3); card.appendChild(fields);
+
+    var act = el('div', 'actions');
+    var save = el('button', 'primary', 'Save owner and next'); save.type = 'button'; save.id = 'bSave'; save.disabled = !(a.owner);
+    var ind = el('button', '', 'Independent'); ind.type = 'button'; ind.id = 'bInd';
+    var nf = el('button', '', "Couldn't find an owner"); nf.type = 'button'; nf.id = 'bNf';
+    var sk = el('button', '', 'Skip for now'); sk.type = 'button'; sk.id = 'bSkip';
+    act.appendChild(save); act.appendChild(ind); act.appendChild(nf); act.appendChild(sk); card.appendChild(act);
+    card.appendChild(el('div', 'note', '"Independent" means founder-owned or family-owned. Put who owns it in the note if you know. Ctrl or Cmd + Enter saves.'));
+
+    var nav = el('div', 'nav');
+    var pv = el('button', '', '← Previous'); pv.type = 'button'; pv.id = 'bPrev';
+    var cl = el('button', '', 'Clear my answer'); cl.type = 'button'; cl.id = 'bClear'; cl.hidden = !answers[b.s];
+    var nx = el('button', '', 'Next →'); nx.type = 'button'; nx.id = 'bNext';
+    nav.appendChild(pv); nav.appendChild(cl); nav.appendChild(nx); card.appendChild(nav);
+    paintSaved();
+  }
+
+  function paintSaved() {
+    var sv = $('saved'); if (!sv) return;
+    var a = cur && answers[cur];
+    sv.className = 'saved';
+    if (!a) { sv.textContent = ''; return; }
+    if (a.status === 'owner') { sv.className = 'saved show'; sv.textContent = 'Saved: owned by ' + a.owner + '.'; }
+    else if (a.status === 'independent') { sv.className = 'saved show'; sv.textContent = 'Saved: independent.'; }
+    else if (a.status === 'notfound') { sv.className = 'saved show nf'; sv.textContent = "Saved: couldn't find an owner."; }
+    else if (a.status === 'skip') { sv.className = 'saved show sk'; sv.textContent = 'Skipped for now.'; }
+  }
+
+  function renderAll() { renderHead(); renderList(); }
+
+  function select(s) { cur = s; renderList(); renderCard(); var i = $('fOwner'); if (i && !('ontouchstart' in window)) i.focus(); }
+
+  function advance(prevIdx) {
+    var list = filtered();
+    if (!list.length) { cur = null; renderAll(); renderCard(); return; }
+    var i = list.findIndex(function (b) { return b.s === cur; });
+    // still listed (e.g. "All"): move on to the one after it. Gone from the view: the same position now holds the next brand.
+    var next = i >= 0 ? list[Math.min(i + 1, list.length - 1)] : list[Math.min(prevIdx, list.length - 1)];
+    cur = next.s; renderAll(); renderCard();
+  }
+
+  function persist(slug, data) { var o = lsGet(); if (data) o[slug] = data; else delete o[slug]; lsSet(o); }
+
+  function answer(st) {
+    if (!cur) return;
+    var b = bySlug[cur];
+    var owner = ($('fOwner').value || '').trim(), source = ($('fSrc').value || '').trim(), note = ($('fNote').value || '').trim();
+    if (st === 'owner' && !owner) return;
+    var idx = filtered().findIndex(function (x) { return x.s === cur; }); if (idx < 0) idx = 0;
+    var data = { slug: b.s, name: b.n, status: st, owner: st === 'owner' ? owner : '', source: source, note: note, at: new Date().toISOString().slice(0, 10) };
+    answers[b.s] = data;
+    persist(b.s, data);
+    advance(idx);
+  }
+
+  function clearAnswer() {
+    if (!cur) return;
+    delete answers[cur]; persist(cur, null); renderAll(); renderCard();
+  }
+
+  function step(d) {
+    var list = filtered(); if (!list.length) return;
+    var i = list.findIndex(function (b) { return b.s === cur; });
+    var n = list[Math.max(0, Math.min(list.length - 1, (i < 0 ? 0 : i + d)))];
+    select(n.s);
+  }
+
+  // events
+  $('items').addEventListener('click', function (e) { var b = e.target.closest('.item'); if (b) select(b.dataset.s); });
+  $('statusSeg').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return; f = b.dataset.f;
+    Array.prototype.forEach.call($('statusSeg').children, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    var l = filtered(); cur = l.length ? l[0].s : null; renderAll(); renderCard();
+  });
+  $('tierSel').addEventListener('change', function (e) { tier = e.target.value; var l = filtered(); cur = l.length ? l[0].s : null; renderAll(); renderCard(); });
+  $('catSel').addEventListener('change', function (e) { cat = e.target.value; var l = filtered(); cur = l.length ? l[0].s : null; renderAll(); renderCard(); });
+  $('q').addEventListener('input', function (e) { q = e.target.value; renderList(); });
+  $('card').addEventListener('click', function (e) {
+    var id = e.target.id;
+    if (id === 'bSave') answer('owner');
+    else if (id === 'bInd') answer('independent');
+    else if (id === 'bNf') answer('notfound');
+    else if (id === 'bSkip') answer('skip');
+    else if (id === 'bNext') step(1);
+    else if (id === 'bPrev') step(-1);
+    else if (id === 'bClear') clearAnswer();
+  });
+  $('card').addEventListener('input', function (e) { if (e.target.id === 'fOwner') { var s = $('bSave'); if (s) s.disabled = !e.target.value.trim(); } });
+  $('card').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); answer('owner'); }
+    else if (e.key === 'Enter' && e.target.id === 'fOwner') { e.preventDefault(); $('fSrc').focus(); }
+    else if (e.key === 'Enter' && e.target.id === 'fSrc') { e.preventDefault(); if ($('fOwner').value.trim()) answer('owner'); else $('fOwner').focus(); }
+  });
+
+  function exportText(all) {
+    var out = Object.keys(answers).map(function (k) { return answers[k]; }).filter(function (a) { return bySlug[a.slug] && a.status !== 'skip' && (all || !a.sent); })
+      .map(function (a) { return { slug: a.slug, name: a.name, status: a.status, owner: a.owner, source: a.source, note: a.note }; });
+    return out;
+  }
+  function doCopy(all) {
+    var list = exportText(all), box = $('exp'), msg = $('expMsg'), ta = $('expBox');
+    box.hidden = false;
+    if (!list.length) { msg.textContent = all ? 'No answers yet.' : 'No new answers since the last copy.'; ta.hidden = true; return; }
+    var text = JSON.stringify(list);
+    ta.hidden = false; ta.value = text;
+    var done = function () {
+      if (!all) list.forEach(function (x) { if (answers[x.slug]) answers[x.slug].sent = 1; });
+      lsSet(answers); msg.textContent = 'Copied ' + list.length + ' answer' + (list.length === 1 ? '' : 's') + '. Paste them into the chat with Claude.';
+    };
+    var fail = function () { msg.textContent = 'Copying was blocked. The text below is selected: copy it by hand, then paste it into the chat with Claude.'; ta.focus(); ta.select(); };
+    try { navigator.clipboard.writeText(text).then(done, fail); } catch (e) { fail(); }
+  }
+  $('cpNew').addEventListener('click', function () { doCopy(false); });
+  $('cpAll').addEventListener('click', function () { doCopy(true); });
+
+  var CATN = { 'skincare': 'Skincare', 'makeup-beauty': 'Makeup', 'household-cleaning': 'Cleaning', 'body-shower': 'Body', 'haircare': 'Hair', 'laundry': 'Laundry', 'dental': 'Dental', 'hygiene': 'Hygiene', 'food-kitchen': 'Food', 'paper-hygiene': 'Paper', 'period-menstrual': 'Period', 'stationery': 'Stationery', 'pet-food': 'Pet food' };
+  $('card').textContent = 'Loading brands\u2026';
+  fetch('data/brands.json').then(function (r) { return r.json(); }).then(function (j) {
+    var all = Array.isArray(j) ? j : (j.brands || []);
+    var os = {};
+    all.forEach(function (x) { if (x.parentCompany) os[x.parentCompany] = 1; });
+    OWNERS = Object.keys(os).sort();
+    BRANDS = all.filter(function (x) { return !x.parentCompany; }).map(function (x) {
+      return { s: x.slug, n: x.name, t: x.tier, c: (x.category || []).map(function (c) { return CATN[c] || c; }), d: (x.note || '').slice(0, 220) };
+    }).sort(function (a, b) { return a.n.toLowerCase() < b.n.toLowerCase() ? -1 : 1; });
+    bySlug = {}; BRANDS.forEach(function (b) { bySlug[b.s] = b; });
+    var cats = {}; BRANDS.forEach(function (b) { b.c.forEach(function (c) { cats[c] = 1; }); });
+    Object.keys(cats).sort().forEach(function (c) { var o = document.createElement('option'); o.value = c; o.textContent = c; $('catSel').appendChild(o); });
+    answers = lsGet();
+    var first = filtered(); cur = first.length ? first[0].s : null;
+    renderAll(); renderCard();
+  }).catch(function () {
+    $('card').textContent = 'Could not load the brand list. Reload the page.';
+  });
+})();
+</script>
+</body>
+</html>
+"""
+open("owner-tool.html", "w", encoding="utf-8").write(OWNER_TOOL)
+print("Section 43 applied: owner-tool.html written")
