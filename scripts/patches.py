@@ -902,3 +902,138 @@ def _kering(t):
     return t.replace('"Kenvue": {"url"', '"Kering": {"url": "https://www.kering.com/en/sustainability/safeguarding-the-planet/animal-welfare/", "summary": "Kering\'s animal welfare page covers the animal materials its fashion houses use. It says fur was phased out across its houses, including Gucci, Saint Laurent, Balenciaga, Alexander McQueen and Bottega Veneta, from autumn 2022, while exotic skins such as python and crocodile, leather, wool, silk and cashmere are still used under its own internal animal welfare standards."},\n"Kenvue": {"url"', 1)
 _rw("scripts/site_update.py", _kering)
 print("Section 39 applied")
+
+# 40. Rare Beauty ownership, Avon, Superdrug, Reddit list part 1 (Ash's research, 13 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+def _src(label, url): return {"label": label, "url": url}
+_EW = "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
+_PEF = "Edgewell Personal Care: its animal testing statement (Playtex FAQ)"; _PEU = "https://www.playtexplayon.ca/pages/frequently-asked-questions"
+# Rare Beauty
+_rb = by.get("rare-beauty")
+if _rb:
+    _rb["note"] = ("PETA and Leaping Bunny certified, 100% vegan. Independently owned: Selena Gomez owns the majority, and the rest is held by a small group of private backers whose exact shares aren't public. "
+                   "Company filings name New Theory Ventures (Nikki Eslami), CEO Scott Friedman, who previously ran NYX Cosmetics up to its sale to L'Oréal, and Julius Salerno, co-founder of the hair extensions brand Bellamy, as an additional investing partner in Rare Beauty LLC.")
+    _rb["lastVerified"] = today
+# Avon
+_av = by.get("avon")
+if _av:
+    _av["parentCompany"] = "Regent LP"; _av["lastVerified"] = today
+    _av["note"] = ("Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. "
+                   "Owned by Regent LP, an investment company rather than a manufacturer, so it has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.")
+    _addsrc(_av, "Regent: its website (investment holding company)", "https://www.regentco.com/")
+    _addsrc(_av, "Modaes: Natura closes the sale of Avon International to Regent (7 January 2026)", "https://www.modaes.com/global/companies/brazils-natura-closes-the-sale-of-avon-international-to-regent-lp")
+# Superdrug own brands
+_SD = "Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently."
+for _s in ("superdrug", "b-by-superdrug", "superdrug-own-brand-wider-range", "solait-by-superdrug", "superdrug-own-brand-dental", "superdrug-pro-care"):
+    _b = by.get(_s)
+    if not _b: continue
+    _b.update(parentCompany="A.S. Watson Group", parentTestsOnAnimals=True, tier="warn", lastVerified=today)
+    if _SD not in _b["note"]: _b["note"] = _b["note"].rstrip() + " " + _SD
+    _addsrc(_b, "Superdrug: its corporate governance page (part of A.S. Watson Group)", "https://www.superdrug.com/corporate/governance")
+_sdp = by.get("superdrug")
+# new brands
+_E = _EH if False else None
+_m = _new("missha", "Missha", "unverified", "Missha says it doesn't conduct animal testing, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its own FAQ has no information on animal testing, and older links to it are broken. Apparently it tests where required by law, but I couldn't find that stated publicly. Owned by ABLE C&C.",
+     parent="ABLE C&C Co., Ltd", claim="Missha says it doesn't conduct animal testing, and that it is strictly against animal testing for product development.", category=["skincare", "makeup-beauty"], region="Asia",
+     sources=[_src("K-Beauty House: its Missha brand page (says it doesn't conduct animal testing)", "https://kbeautyhouse.de/en/brands/missha/"), _src("Missha: its FAQ (no animal testing information)", "https://misshaus.com/pages/faq"), _src("Franchise UK: Missha franchise page (ABLE C&C, anti-animal-testing statement)", "https://www.franchise-uk.co.uk/health-beauty/smile-youve-got-cosmetics-franchise/"), _LBG, _PETAB])
+_w = _new("well-people", "Well People", "good", "Certified cruelty-free by Leaping Bunny / Cruelty Free International and PETA. Its FAQ says all its products are 100% vegan, but it has no vegan certification. Owned by e.l.f. Beauty.",
+     parent="e.l.f. Beauty", vegan="full", vc="medium", category=["makeup-beauty", "skincare"], price="££",
+     sources=[_src("Well People: its FAQ (cruelty-free and vegan statements)", "https://www.wellpeople.com/pages/faqs"), _src("e.l.f. Beauty: its Well People brand page", "https://www.elfbeauty.com/brands/well-people"), _LBG, _PETAB])
+if _w: _w["veganBasis"] = "brand"
+_new("formula-10-0-6", "Formula 10.0.6", "check", "Certified cruelty-free by PETA. Its FAQ says the majority of its products are vegan, with beeswax in a couple.",
+     vegan="partial", vc="high", category=["skincare"],
+     sources=[_src("PETA: Formula 10.0.6 company page", "https://crueltyfree.peta.org/company/formula-10-0-6/"), _src("Formula 10.0.6: its FAQ (vegan products)", "https://www.formula1006.com/pages/faqs")])
+_l = _new("lume", "Lume", "unverified", "Lume says its products are vegan and cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     vegan="full", vc="medium", claim="Lume says its products are cruelty-free and vegan.", category=["body-shower"],
+     sources=[_src("Lume: its help centre (vegan and cruelty-free statement)", "https://help.lumedeodorant.com/en-US/are-lume-products-skin-safe-vegan-cruelty-free-etc-19475"), _LBG, _PETAB])
+if _l: _l["veganBasis"] = "brand"
+_new("cosrx", "COSRX", "unverified", "I couldn't find an animal testing policy for COSRX, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan either.",
+     vegan="no", category=["skincare"], region="Asia",
+     sources=[_src("PETA: COSRX company page", "https://crueltyfree.peta.org/company/cosrx/"), _LBG, _PETAB])
+_new("rael", "Rael", "check", "Certified cruelty-free by Leaping Bunny. Founded in Los Angeles in 2017 by three Korean American women: Yanghee Paik, Aness An and Binna Won. Not all products are vegan, and its FAQ says vegan status is based on supplier documentation.",
+     vegan="partial", vc="high", category=["skincare", "period-menstrual"], region="USA & Canada",
+     sources=[_src("Rael: its FAQ (vegan and Leaping Bunny statements)", "https://www.getrael.com/pages/faq"), _src("Leaping Bunny: approved brands (search for the brand)", "https://www.leapingbunny.org/shopping-guide")])
+_new("playtex", "Playtex", "bad", "Playtex tests on animals. It's owned by Edgewell Personal Care, which says its products are only tested on animals in markets where the law requires it. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan either: its FAQ says its feminine care products aren't certified vegan and that it makes an effort not to intentionally source animal-derived ingredients.",
+     parent="Edgewell Personal Care", vegan="no", category=["period-menstrual"],
+     sources=[_src("PETA: Playtex company page", "https://crueltyfree.peta.org/company/playtex-tampons-playtex-products/"), _src(_PEF, _PEU)])
+_new("softsoap", "Softsoap", "bad", "Softsoap tests on animals. Its website doesn't mention animal testing, so it takes its owner's position. Owned by Colgate-Palmolive. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and not all of its products are vegan.",
+     parent="Colgate-Palmolive", vegan="partial", category=["body-shower"],
+     sources=[_src("PETA: Softsoap company page", "https://crueltyfree.peta.org/company/softsoap-colgate-palmolive-co/"), _src("Softsoap: its FAQ (vegan products)", "https://www.softsoap.com/en-us/faq#accordion-573eb8dc78-item-8adda9ad87")])
+_new("opi", "OPI", "bad", "OPI isn't cruelty-free and isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says it doesn't test its ingredients or products on animals and never asks suppliers or contract manufacturers to, and the Wella Company says it doesn't test its products on animals either. Owned by the Wella Company, which also runs Clairol and ghd. OPI and Wella were previously owned by Coty.",
+     parent="The Wella Company", category=["makeup-beauty"],
+     sources=[_src("OPI: its FAQ (animal testing statement)", "https://www.opi.com/en-GB/faq"), _src("The Wella Company: its FAQ (animal testing statement)", "https://www.wellacompany.com/frequently-asked-questions")])
+_st = _new("starface", "Starface", "good", "Certified cruelty-free by Leaping Bunny / Cruelty Free International and PETA. Its FAQ says all its products are vegan, but it has no vegan certification. Independently owned and controlled by its co-founders, Julie Schott and Brian Bordainick.",
+     vegan="full", vc="medium", category=["skincare"], region="USA & Canada",
+     sources=[_src("Starface: its FAQ (vegan and Leaping Bunny statements)", "https://starface.world/pages/faq"), _LBG, _PETAB])
+if _st: _st["veganBasis"] = "brand"
+_new("vagisil", "Vagisil", "unverified", "Vagisil says it doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't entirely vegan: some products are, and others contain lanolin. Owned by Combe Incorporated.",
+     parent="Combe Incorporated", vegan="partial", claim="Vagisil says it doesn't test on animals.", category=["hygiene"],
+     sources=[_src("Vagisil: its FAQ (animal testing statement)", "https://www.vagisil.com/faq"), _LBG, _PETAB])
+_new("summers-eve", "Summer's Eve", "unverified", "Summer's Eve says it doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't fully vegan: vegan status varies by product.",
+     vegan="partial", claim="Summer's Eve says its products aren't tested on animals.", category=["hygiene"],
+     sources=[_src("Summer's Eve: its FAQ (animal testing statement)", "https://www.summerseve.com/faqs#are-summer-s-eve-products-tested-animals"), _LBG, _PETAB])
+_new("banana-boat", "Banana Boat", "bad", "Banana Boat doesn't say either way whether it tests on animals, so it takes its owner's position. Owned by Edgewell Personal Care, which tests on animals where required by law or regulation. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan.",
+     parent="Edgewell Personal Care", vegan="no", category=["skincare"],
+     sources=[_src(_PEF, _PEU), _src("Edgewell Personal Care: its own animal testing policy", _EW)])
+_new("mediheal", "Mediheal", "unverified", "I couldn't find a certification or an animal testing policy for Mediheal anywhere, and nothing on whether its products are vegan. Owned by L&P Cosmetic Co., Ltd, which has no public policy that I could find.",
+     parent="L&P Cosmetic Co., Ltd", category=["skincare"], region="Asia",
+     sources=[_src("Mediheal fan site: its FAQ (not the brand's own site)", "https://medihealhq.shop/faq"), _LBG, _PETAB])
+_new("medicube", "Medicube", "bad", "Medicube isn't cruelty-free and isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ is vague, saying only that its products are developed with a focus on safe and ethical skincare practices. Owned by APR Corporation (formerly Aprilskin Corporation), whose product safety page promises a no-animal-testing policy except where animal testing is unavoidably required by national regulations. It isn't vegan either.",
+     parent="APR Corporation", vegan="no", category=["skincare"], region="Asia",
+     sources=[_src("Medicube: its FAQ", "https://medicubeofficial.co.uk/faqs/"), _src("APR Corporation: its product safety page", "https://www.apr-in.com/en/product_safety.html")])
+_vc = _new("vacation", "Vacation", "good", "Certified cruelty-free by Leaping Bunny. Its FAQ says its products are 100% vegan, but it has no vegan certification.",
+     vegan="full", vc="medium", category=["skincare"], region="USA & Canada",
+     sources=[_src("Vacation: its FAQ (vegan and Leaping Bunny statements)", "https://vacation.inc/faq"), _src("Leaping Bunny: approved brands (search for the brand)", "https://www.leapingbunny.org/shopping-guide")])
+if _vc: _vc["veganBasis"] = "brand"
+_new("zum", "Zum", "unverified", "Zum says its products are never tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says all Zum products are vegan except Zum Bars (goat's milk), Zum Kisses (honey) and Zum Body Balm / Zum Rub (goat's milk).",
+     vegan="partial", vc="medium", claim="Zum says its products are never tested on animals, only on people at the Zum Factory.", category=["body-shower", "skincare"],
+     sources=[_src("Indigo Wild: its FAQ (Zum animal testing and vegan statements)", "https://www.indigowild.com/pages/faq"), _LBG, _PETAB])
+_new("kirkland-signature", "Kirkland Signature", "unverified", "Kirkland Signature is Costco's own brand. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan.",
+     parent="Costco Wholesale Corporation", vegan="no", category=["skincare", "household-cleaning"],
+     sources=[_LBG, _PETAB])
+_new("members-mark", "Member's Mark", "unverified", "Member's Mark is the own brand of Sam's Club, which is owned by Walmart. It isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     parent="Walmart Inc.", category=["skincare", "household-cleaning"],
+     sources=[_LBG, _PETAB])
+_new("signature-select", "Signature Select", "unverified", "Signature Select is the main own brand of Safeway, which is owned by Albertsons Companies. It isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     parent="Albertsons Companies", category=["skincare", "household-cleaning"],
+     sources=[_src("Albertsons Companies: its animal well-being page", "https://www.albertsonscompanies.com/about-aci/our-impact/products/animal-well-being/"), _LBG, _PETAB])
+_new("up-and-up", "up&up", "unverified", "up&up is Target's own brand. Target doesn't publish an animal testing policy or FAQ for it, and up&up isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan.",
+     parent="Target Corporation", vegan="no", category=["skincare", "household-cleaning"],
+     sources=[_LBG, _PETAB])
+_new("beauty-360", "Beauty 360", "unverified", "Beauty 360 is CVS's own beauty brand. I couldn't find an animal testing policy for it, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan.",
+     parent="CVS Health Corporation", vegan="no", category=["makeup-beauty", "skincare"],
+     sources=[_src("CVS Health: its store brand sustainability page", "https://www.cvshealth.com/impact/healthy-planet/store-brand-sustainability.html"), _LBG, _PETAB])
+_new("the-yorkshire-soap-company", "The Yorkshire Soap Company", "unverified", "The Yorkshire Soap Company says it's cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't fully vegan, but it has a vegan range. Independently owned.",
+     vegan="partial", claim="The Yorkshire Soap Company says it's cruelty-free.", category=["body-shower"], region="Europe",
+     sources=[_LBG, _PETAB])
+# parent flags
+for _s in ("playtex", "banana-boat"):
+    if _s in by: by[_s]["parentTestsOnAnimals"] = True
+if "medicube" in by: by["medicube"]["parentTestsOnAnimals"] = True
+if "well-people" in by and "e-l-f-cosmetics" in by and "parentTestsOnAnimals" in by["e-l-f-cosmetics"]: by["well-people"]["parentTestsOnAnimals"] = by["e-l-f-cosmetics"]["parentTestsOnAnimals"]
+for _s in ("kirkland-signature", "members-mark", "signature-select", "up-and-up", "beauty-360", "missha", "mediheal", "zum", "cosrx", "lume", "vagisil", "summers-eve", "the-yorkshire-soap-company", "formula-10-0-6", "rael", "vacation", "starface", "well-people"):
+    if _s in by: by[_s]["lastVerified"] = today
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _sm(t):
+    if "'Kirkland Signature'" in t: return t
+    return t.replace("'Tesco', 'Asda',", "'Tesco', 'Asda', 'Kirkland Signature', \"Member's Mark\", 'Signature Select', 'up&up', 'Beauty 360',", 1)
+_rw("scripts/generate-brand-check.js", _sm)
+_rw("scripts/generate-brand-pages.js", lambda t: t if "'not vegan'" in t else t.replace("    : brand.vegan === 'partial' ? 'varies by product'\n    : 'not yet confirmed';", "    : brand.vegan === 'partial' ? 'varies by product'\n    : brand.vegan === 'no' ? 'not vegan'\n    : 'not yet confirmed';", 1))
+def _regent(t):
+    if '"Regent LP":' in t: return t
+    t = t.replace("ASH_NOTES = {", 'ASH_NOTES = {"Regent LP": "Regent is an investment company, not a manufacturer, so it has no overall animal testing status. Avon is certified cruelty-free by Leaping Bunny / Cruelty Free International. What matters is each brand\'s own policy.", ', 1)
+    old = '    elif True not in flags and False not in flags: polhtml = "<p>I couldn\'t find a published animal testing policy from this company.</p>"\n'
+    new = old + '    if not pol:\n        nt = ASH_NOTES.get(name) or next((ASH_NOTES[k] for k in ASH_NOTES if slugify(k) == ps), None)\n        if nt: polhtml = \'<p>%s</p>\' % E(nt)\n'
+    return t.replace(old, new, 1)
+_rw("scripts/site_update.py", _regent)
+
+for _s in ("superdrug", "superdrug-pro-care"):
+    if _s in by and by[_s].get("vegan") == "unknown": by[_s]["vegan"] = "partial"
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _indep(t):
+    if "ahk-indep" in t: return t
+    old = '    if not b.get("parentCompany"):\n        h = re.sub(r"(&middot; )Independent( &middot;)"'
+    new = '    if not b.get("parentCompany") and not re.search(r"independently owned|family[- ]owned|founder[- ]owned|independent (?:\\w+ )?(?:company|brand)", b.get("note") or "", re.I):  # ahk-indep\n        h = re.sub(r"(&middot; )Independent( &middot;)"'
+    return t.replace(old, new, 1)
+_rw("scripts/site_update.py", _indep)
+print("Section 40 applied")

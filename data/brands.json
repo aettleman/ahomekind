@@ -1717,8 +1717,8 @@
     "slug": "avon",
     "name": "Avon",
     "tier": "good",
-    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification.",
-    "parentCompany": null,
+    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. Owned by Regent LP, an investment company rather than a manufacturer, so it has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.",
+    "parentCompany": "Regent LP",
     "vegan": "full",
     "evidence": "Cruelty Free International (Leaping Bunny) approved brand listing",
     "products": [],
@@ -1740,6 +1740,14 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Regent: its website (investment holding company)",
+        "url": "https://www.regentco.com/"
+      },
+      {
+        "label": "Modaes: Natura closes the sale of Avon International to Regent (7 January 2026)",
+        "url": "https://www.modaes.com/global/companies/brazils-natura-closes-the-sale-of-avon-international-to-regent-lp"
       }
     ],
     "veganBasis": "brand",
@@ -1821,9 +1829,9 @@
   {
     "slug": "b-by-superdrug",
     "name": "B. by Superdrug",
-    "tier": "good",
-    "note": "100% vegan own-brand line. Superdrug's own brand is Leaping Bunny certified.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "100% vegan own-brand line. Superdrug's own brand is Leaping Bunny certified. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
     "vegan": "full",
     "evidence": "",
     "products": [],
@@ -1837,13 +1845,18 @@
     ],
     "veganConfidence": "high",
     "region": "Europe",
-    "lastVerified": "2026-09-25",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true
   },
   {
     "slug": "bob",
@@ -19832,7 +19845,7 @@
     "slug": "rare-beauty",
     "name": "Rare Beauty",
     "tier": "good",
-    "note": "PETA and Leaping Bunny certified, 100% vegan.",
+    "note": "PETA and Leaping Bunny certified, 100% vegan. Independently owned: Selena Gomez owns the majority, and the rest is held by a small group of private backers whose exact shares aren't public. Company filings name New Theory Ventures (Nikki Eslami), CEO Scott Friedman, who previously ran NYX Cosmetics up to its sale to L'Oréal, and Julius Salerno, co-founder of the hair extensions brand Bellamy, as an additional investing partner in Rare Beauty LLC.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -19861,7 +19874,8 @@
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
       }
-    ]
+    ],
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "raven-botanicals",
@@ -22537,9 +22551,9 @@
   {
     "slug": "solait-by-superdrug",
     "name": "Solait (Superdrug)",
-    "tier": "check",
-    "note": "Superdrug's own suncare range, covered by Superdrug's Leaping Bunny-certified own-brand policy. Vegan status varies by product.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Superdrug's own suncare range, covered by Superdrug's Leaping Bunny-certified own-brand policy. Vegan status varies by product. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -22555,8 +22569,14 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true,
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "solgar-vitamin-company",
@@ -23237,10 +23257,10 @@
   {
     "slug": "superdrug",
     "name": "Superdrug",
-    "tier": "check",
-    "note": "The UK's second largest beauty and health retailer, all own-brand toiletries and beauty products approved. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
-    "vegan": "unknown",
+    "tier": "warn",
+    "note": "The UK's second largest beauty and health retailer, all own-brand toiletries and beauty products approved. Cruelty-free approved by Cruelty Free International. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -23250,20 +23270,25 @@
     ],
     "region": "Europe",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true
   },
   {
     "slug": "superdrug-own-brand-wider-range",
     "name": "Superdrug own brand (wider range)",
-    "tier": "check",
-    "note": "Leaping Bunny approved.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Leaping Bunny approved. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -23281,15 +23306,21 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true,
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "superdrug-own-brand-dental",
     "name": "Superdrug own-brand (dental range)",
-    "tier": "check",
-    "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer - this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Superdrug's own-brand cosmetics and toiletries, including its dental range, are certified cruelty-free (Leaping Bunny). Superdrug is a retailer - this covers its own-label products specifically, distinct from third-party brands it stocks on its shelves. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -23305,16 +23336,22 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true,
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "superdrug-pro-care",
     "name": "Superdrug Pro Care",
-    "tier": "check",
-    "note": "Superdrug's own range. Superdrug's own brand is Leaping Bunny certified; vegan products are marked individually.",
-    "parentCompany": null,
-    "vegan": "unknown",
+    "tier": "warn",
+    "note": "Superdrug's own range. Superdrug's own brand is Leaping Bunny certified; vegan products are marked individually. Owned by A.S. Watson Group, which allows its products to be sold where animal testing may be required by law. Superdrug says it sets its own brand policies independently.",
+    "parentCompany": "A.S. Watson Group",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -23325,13 +23362,18 @@
     ],
     "veganConfidence": "low",
     "region": "Europe",
-    "lastVerified": "2026-09-25",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Superdrug: its corporate governance page (part of A.S. Watson Group)",
+        "url": "https://www.superdrug.com/corporate/governance"
       }
-    ]
+    ],
+    "parentTestsOnAnimals": true
   },
   {
     "slug": "supergoop",
@@ -27929,5 +27971,745 @@
     ],
     "price": "£",
     "veganBasis": "brand"
+  },
+  {
+    "slug": "missha",
+    "name": "Missha",
+    "tier": "unverified",
+    "note": "Missha says it doesn't conduct animal testing, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its own FAQ has no information on animal testing, and older links to it are broken. Apparently it tests where required by law, but I couldn't find that stated publicly. Owned by ABLE C&C.",
+    "parentCompany": "ABLE C&C Co., Ltd",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "Missha says it doesn't conduct animal testing, and that it is strictly against animal testing for product development.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "K-Beauty House: its Missha brand page (says it doesn't conduct animal testing)",
+        "url": "https://kbeautyhouse.de/en/brands/missha/"
+      },
+      {
+        "label": "Missha: its FAQ (no animal testing information)",
+        "url": "https://misshaus.com/pages/faq"
+      },
+      {
+        "label": "Franchise UK: Missha franchise page (ABLE C&C, anti-animal-testing statement)",
+        "url": "https://www.franchise-uk.co.uk/health-beauty/smile-youve-got-cosmetics-franchise/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "well-people",
+    "name": "Well People",
+    "tier": "good",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International and PETA. Its FAQ says all its products are 100% vegan, but it has no vegan certification. Owned by e.l.f. Beauty.",
+    "parentCompany": "e.l.f. Beauty",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Well People: its FAQ (cruelty-free and vegan statements)",
+        "url": "https://www.wellpeople.com/pages/faqs"
+      },
+      {
+        "label": "e.l.f. Beauty: its Well People brand page",
+        "url": "https://www.elfbeauty.com/brands/well-people"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "price": "££",
+    "veganBasis": "brand"
+  },
+  {
+    "slug": "formula-10-0-6",
+    "name": "Formula 10.0.6",
+    "tier": "check",
+    "note": "Certified cruelty-free by PETA. Its FAQ says the majority of its products are vegan, with beeswax in a couple.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "high",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "PETA: Formula 10.0.6 company page",
+        "url": "https://crueltyfree.peta.org/company/formula-10-0-6/"
+      },
+      {
+        "label": "Formula 10.0.6: its FAQ (vegan products)",
+        "url": "https://www.formula1006.com/pages/faqs"
+      }
+    ]
+  },
+  {
+    "slug": "lume",
+    "name": "Lume",
+    "tier": "unverified",
+    "note": "Lume says its products are vegan and cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "medium",
+    "region": "",
+    "claim": "Lume says its products are cruelty-free and vegan.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Lume: its help centre (vegan and cruelty-free statement)",
+        "url": "https://help.lumedeodorant.com/en-US/are-lume-products-skin-safe-vegan-cruelty-free-etc-19475"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "veganBasis": "brand"
+  },
+  {
+    "slug": "cosrx",
+    "name": "COSRX",
+    "tier": "unverified",
+    "note": "I couldn't find an animal testing policy for COSRX, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan either.",
+    "parentCompany": null,
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "PETA: COSRX company page",
+        "url": "https://crueltyfree.peta.org/company/cosrx/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "rael",
+    "name": "Rael",
+    "tier": "check",
+    "note": "Certified cruelty-free by Leaping Bunny. Founded in Los Angeles in 2017 by three Korean American women: Yanghee Paik, Aness An and Binna Won. Not all products are vegan, and its FAQ says vegan status is based on supplier documentation.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "period-menstrual"
+    ],
+    "veganConfidence": "high",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Rael: its FAQ (vegan and Leaping Bunny statements)",
+        "url": "https://www.getrael.com/pages/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      }
+    ]
+  },
+  {
+    "slug": "playtex",
+    "name": "Playtex",
+    "tier": "bad",
+    "note": "Playtex tests on animals. It's owned by Edgewell Personal Care, which says its products are only tested on animals in markets where the law requires it. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan either: its FAQ says its feminine care products aren't certified vegan and that it makes an effort not to intentionally source animal-derived ingredients.",
+    "parentCompany": "Edgewell Personal Care",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "period-menstrual"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "PETA: Playtex company page",
+        "url": "https://crueltyfree.peta.org/company/playtex-tampons-playtex-products/"
+      },
+      {
+        "label": "Edgewell Personal Care: its animal testing statement (Playtex FAQ)",
+        "url": "https://www.playtexplayon.ca/pages/frequently-asked-questions"
+      }
+    ],
+    "parentTestsOnAnimals": true
+  },
+  {
+    "slug": "softsoap",
+    "name": "Softsoap",
+    "tier": "bad",
+    "note": "Softsoap tests on animals. Its website doesn't mention animal testing, so it takes its owner's position. Owned by Colgate-Palmolive. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and not all of its products are vegan.",
+    "parentCompany": "Colgate-Palmolive",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "PETA: Softsoap company page",
+        "url": "https://crueltyfree.peta.org/company/softsoap-colgate-palmolive-co/"
+      },
+      {
+        "label": "Softsoap: its FAQ (vegan products)",
+        "url": "https://www.softsoap.com/en-us/faq#accordion-573eb8dc78-item-8adda9ad87"
+      }
+    ]
+  },
+  {
+    "slug": "opi",
+    "name": "OPI",
+    "tier": "bad",
+    "note": "OPI isn't cruelty-free and isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says it doesn't test its ingredients or products on animals and never asks suppliers or contract manufacturers to, and the Wella Company says it doesn't test its products on animals either. Owned by the Wella Company, which also runs Clairol and ghd. OPI and Wella were previously owned by Coty.",
+    "parentCompany": "The Wella Company",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "OPI: its FAQ (animal testing statement)",
+        "url": "https://www.opi.com/en-GB/faq"
+      },
+      {
+        "label": "The Wella Company: its FAQ (animal testing statement)",
+        "url": "https://www.wellacompany.com/frequently-asked-questions"
+      }
+    ]
+  },
+  {
+    "slug": "starface",
+    "name": "Starface",
+    "tier": "good",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International and PETA. Its FAQ says all its products are vegan, but it has no vegan certification. Independently owned and controlled by its co-founders, Julie Schott and Brian Bordainick.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Starface: its FAQ (vegan and Leaping Bunny statements)",
+        "url": "https://starface.world/pages/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "veganBasis": "brand"
+  },
+  {
+    "slug": "vagisil",
+    "name": "Vagisil",
+    "tier": "unverified",
+    "note": "Vagisil says it doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't entirely vegan: some products are, and others contain lanolin. Owned by Combe Incorporated.",
+    "parentCompany": "Combe Incorporated",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "hygiene"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "Vagisil says it doesn't test on animals.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Vagisil: its FAQ (animal testing statement)",
+        "url": "https://www.vagisil.com/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "summers-eve",
+    "name": "Summer's Eve",
+    "tier": "unverified",
+    "note": "Summer's Eve says it doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't fully vegan: vegan status varies by product.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "hygiene"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "Summer's Eve says its products aren't tested on animals.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Summer's Eve: its FAQ (animal testing statement)",
+        "url": "https://www.summerseve.com/faqs#are-summer-s-eve-products-tested-animals"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "banana-boat",
+    "name": "Banana Boat",
+    "tier": "bad",
+    "note": "Banana Boat doesn't say either way whether it tests on animals, so it takes its owner's position. Owned by Edgewell Personal Care, which tests on animals where required by law or regulation. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan.",
+    "parentCompany": "Edgewell Personal Care",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Edgewell Personal Care: its animal testing statement (Playtex FAQ)",
+        "url": "https://www.playtexplayon.ca/pages/frequently-asked-questions"
+      },
+      {
+        "label": "Edgewell Personal Care: its own animal testing policy",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf?v=1724093148"
+      }
+    ],
+    "parentTestsOnAnimals": true
+  },
+  {
+    "slug": "mediheal",
+    "name": "Mediheal",
+    "tier": "unverified",
+    "note": "I couldn't find a certification or an animal testing policy for Mediheal anywhere, and nothing on whether its products are vegan. Owned by L&P Cosmetic Co., Ltd, which has no public policy that I could find.",
+    "parentCompany": "L&P Cosmetic Co., Ltd",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Mediheal fan site: its FAQ (not the brand's own site)",
+        "url": "https://medihealhq.shop/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "medicube",
+    "name": "Medicube",
+    "tier": "bad",
+    "note": "Medicube isn't cruelty-free and isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ is vague, saying only that its products are developed with a focus on safe and ethical skincare practices. Owned by APR Corporation (formerly Aprilskin Corporation), whose product safety page promises a no-animal-testing policy except where animal testing is unavoidably required by national regulations. It isn't vegan either.",
+    "parentCompany": "APR Corporation",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Medicube: its FAQ",
+        "url": "https://medicubeofficial.co.uk/faqs/"
+      },
+      {
+        "label": "APR Corporation: its product safety page",
+        "url": "https://www.apr-in.com/en/product_safety.html"
+      }
+    ],
+    "parentTestsOnAnimals": true
+  },
+  {
+    "slug": "vacation",
+    "name": "Vacation",
+    "tier": "good",
+    "note": "Certified cruelty-free by Leaping Bunny. Its FAQ says its products are 100% vegan, but it has no vegan certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Vacation: its FAQ (vegan and Leaping Bunny statements)",
+        "url": "https://vacation.inc/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      }
+    ],
+    "veganBasis": "brand"
+  },
+  {
+    "slug": "zum",
+    "name": "Zum",
+    "tier": "unverified",
+    "note": "Zum says its products are never tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says all Zum products are vegan except Zum Bars (goat's milk), Zum Kisses (honey) and Zum Body Balm / Zum Rub (goat's milk).",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "",
+    "claim": "Zum says its products are never tested on animals, only on people at the Zum Factory.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Indigo Wild: its FAQ (Zum animal testing and vegan statements)",
+        "url": "https://www.indigowild.com/pages/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "kirkland-signature",
+    "name": "Kirkland Signature",
+    "tier": "unverified",
+    "note": "Kirkland Signature is Costco's own brand. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan.",
+    "parentCompany": "Costco Wholesale Corporation",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "members-mark",
+    "name": "Member's Mark",
+    "tier": "unverified",
+    "note": "Member's Mark is the own brand of Sam's Club, which is owned by Walmart. It isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Walmart Inc.",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "signature-select",
+    "name": "Signature Select",
+    "tier": "unverified",
+    "note": "Signature Select is the main own brand of Safeway, which is owned by Albertsons Companies. It isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Albertsons Companies",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Albertsons Companies: its animal well-being page",
+        "url": "https://www.albertsonscompanies.com/about-aci/our-impact/products/animal-well-being/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "up-and-up",
+    "name": "up&up",
+    "tier": "unverified",
+    "note": "up&up is Target's own brand. Target doesn't publish an animal testing policy or FAQ for it, and up&up isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan.",
+    "parentCompany": "Target Corporation",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "beauty-360",
+    "name": "Beauty 360",
+    "tier": "unverified",
+    "note": "Beauty 360 is CVS's own beauty brand. I couldn't find an animal testing policy for it, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't vegan.",
+    "parentCompany": "CVS Health Corporation",
+    "vegan": "no",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "CVS Health: its store brand sustainability page",
+        "url": "https://www.cvshealth.com/impact/healthy-planet/store-brand-sustainability.html"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "the-yorkshire-soap-company",
+    "name": "The Yorkshire Soap Company",
+    "tier": "unverified",
+    "note": "The Yorkshire Soap Company says it's cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't fully vegan, but it has a vegan range. Independently owned.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower"
+    ],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "The Yorkshire Soap Company says it's cruelty-free.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
   }
 ]

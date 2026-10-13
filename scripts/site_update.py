@@ -73,7 +73,7 @@ for b in brands:
     if b.get("parentCompany"):
         h = re.sub(r'(<span class="status-pill-label">parent company</span> )' + re.escape(E(b["parentCompany"])) + r"(</span>)",
             lambda m: '%s<a href="/parent-%s" style="color:inherit;text-decoration:underline">%s</a>%s' % (m.group(1), pslugs[b["parentCompany"]], E(b["parentCompany"]), m.group(2)), h, count=1)
-    if not b.get("parentCompany"):
+    if not b.get("parentCompany") and not re.search(r"independently owned|family[- ]owned|founder[- ]owned|independent (?:\w+ )?(?:company|brand)", b.get("note") or "", re.I):  # ahk-indep
         h = re.sub(r"(&middot; )Independent( &middot;)", r"\1Owner not listed yet\2", h, count=1)
     add = EX
     if b.get("lastVerified"):
@@ -234,7 +234,7 @@ PARENT_POLICY = {
 "summary": "The document says Unilever does not test on animals, but that suppliers may need to test some ingredients and some government authorities test certain product types on animals to meet legal requirements, and it notes certain brands are certified by animal protection groups and PETA lists Unilever as a company working for regulatory change."
 }
 }
-ASH_NOTES = {"Unilever": "It says some governments still require animal testing, but never states plainly whether Unilever's own products are tested. Their 'Safety Without Animal Testing' page sent me to a general sustainability page with nothing on animals. That reads as vague to me, so have a read and decide for yourself."}
+ASH_NOTES = {"Regent LP": "Regent is an investment company, not a manufacturer, so it has no overall animal testing status. Avon is certified cruelty-free by Leaping Bunny / Cruelty Free International. What matters is each brand's own policy.", "Unilever": "It says some governments still require animal testing, but never states plainly whether Unilever's own products are tested. Their 'Safety Without Animal Testing' page sent me to a general sustainability page with nothing on animals. That reads as vague to me, so have a read and decide for yourself."}
 made = 0
 groups = {}
 for b in brands:
@@ -254,6 +254,9 @@ for ps, kids in groups.items():
         if nt: polhtml += '<p class="ahk-hand pc-note" style="font-family:Caveat,cursive;font-size:23px;line-height:1.3;margin:14px 0 0">%s</p>' % E(nt)
         polhtml += "</div>"
     elif True not in flags and False not in flags: polhtml = "<p>I couldn't find a published animal testing policy from this company.</p>"
+    if not pol:
+        nt = ASH_NOTES.get(name) or next((ASH_NOTES[k] for k in ASH_NOTES if slugify(k) == ps), None)
+        if nt: polhtml = '<p>%s</p>' % E(nt)
     li = "".join(chip(b) for b in sorted(kids, key=lambda x: x["name"].lower()) if b["slug"] in paths)
     body = PCSS + "<p><strong>%s</strong></p><p>A brand can be cruelty-free while the company that owns it isn't, so I show both.</p>%s%s<div class=\"pc-grid\">%s</div>" % (E(st), polhtml, H2 % "Brands I list from this company", li)
     page("parent-%s.html" % ps, "%s - a home kind" % name, "parent company", name, body, "Animal testing policy of %s and the brands I list from it." % name)
