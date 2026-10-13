@@ -96,6 +96,8 @@ const CATEGORY_MAP = {
   'hygiene': 'hygiene',
   'paper-hygiene': 'hygiene',
   'hygiene': 'hygiene',
+  'paper-hygiene': 'hygiene',
+  'hygiene': 'hygiene',
   'period-menstrual': 'hygiene',
   'food-kitchen': null,
   'stationery': 'stationery'
@@ -109,7 +111,7 @@ const CATEGORY_MAP = {
 // from. If more supermarket own-brand entries are added to brands.json in
 // future, add their exact `name` to this list too.
 const SUPERMARKET_NAMES = new Set([
-  'Aldi', 'Lidl', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer'
+  'Aldi', 'Lidl', 'Tesco', 'Asda', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer'
 ]);
 
 const BEAUTY_CATS = new Set(['makeup-beauty', 'skincare', 'haircare', 'body-shower', 'period-menstrual']);

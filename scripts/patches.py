@@ -787,3 +787,85 @@ def _elpol(t):
     return t.replace('"Church & Dwight": {', '"e.l.f. Beauty": {"url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm", "summary": "In its annual report e.l.f. Beauty describes e.l.f. Cosmetics as double-certified by Leaping Bunny and PETA as cruelty-free, and says it was one of the first mass beauty brands to be vegan and cruelty free. This is the company describing its own brands."},\n"Church & Dwight": {', 1)
 _rw("scripts/site_update.py", _elpol)
 print("e.l.f. Beauty added as parent of e.l.f. Cosmetics, Naturium and rhode")
+
+# 37. e.l.f. Cosmetics: cruelty-free certified by Leaping Bunny and PETA; vegan certified by PETA (Ash checked 13 Oct; e.l.f. Beauty's 10-K also says "double-certified by Leaping Bunny and PETA")
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "e-l-f-cosmetics" in by:
+    _e = by["e-l-f-cosmetics"]; _e["lastVerified"] = today
+    _e["note"] = "Owned by e.l.f. Beauty, Inc., a publicly traded company (NYSE: ELF). Certified cruelty-free by Leaping Bunny and PETA, and certified vegan by PETA (Beauty Without Bunnies)."
+    _lb = "https://www.leapingbunny.org/shopping-guide"
+    if not any(s.get("url") == _lb for s in _e["sources"]): _e["sources"].insert(0, {"label": "Leaping Bunny: approved brands (search for the brand)", "url": _lb})
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("e.l.f. Cosmetics certifications updated")
+
+# 38. Batch from Ash (13 Oct): new brands (Tesco, Asda, Cocokind, Necessaire), owners (Origins, Coppertone, Marc Jacobs, St Ives, Radox), the "no information + parent tests = tests on animals" rule, and a visible "Does X test on animals?" answer on every brand page.
+#     St Ives is NOT owned by Unilever any more: Yellow Wood Partners bought it (via Elida Beauty) and it now sits in Evermark (Yellow Wood release, 20 Jan 2026; Glossy).
+#     Necessaire stays "not certified either way": the claim that it tests on animals (sex gel) could not be verified from any page, so it is not on the site.
+#     Marc Jacobs: Ash's claims about WHP Global's and G-III's own animal testing / materials policies are not on any page read (the G-III document only mentions animal welfare in passing), so they are left out.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+def _new(slug, name, tier, note, **kw):
+    b = {"slug": slug, "name": name, "tier": tier, "note": note, "parentCompany": kw.get("parent"), "vegan": kw.get("vegan", "unknown"), "evidence": "", "products": [], "alternatives": [], "links": [],
+         "category": kw.get("category", ["skincare"]), "veganConfidence": kw.get("vc", "low"), "region": kw.get("region", ""), "claim": kw.get("claim", ""), "lastVerified": today, "sources": kw["sources"]}
+    if kw.get("price"): b["price"] = kw["price"]
+    if slug not in by: brands.append(b); by[slug] = b
+    return by[slug]
+_LBG = {"label": "Leaping Bunny: approved brands (search for the brand)", "url": "https://www.leapingbunny.org/shopping-guide"}
+_PETAB = {"label": "PETA Beauty Without Bunnies (search for the brand)", "url": "https://crueltyfree.peta.org/"}
+_new("tesco", "Tesco", "unverified", "Tesco says it doesn't test on animals, but its own-brand beauty and toiletries aren't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     claim="Tesco says it doesn't support, commission or carry out animal testing on any of its products or the ingredients in them, and that its suppliers don't test on its behalf.",
+     category=["makeup-beauty", "skincare", "body-shower", "household-cleaning"], region="Europe", price="£",
+     sources=[{"label": "Tesco: its animal health and welfare report 2024/25 (position on animal testing)", "url": "https://www.tescoplc.com/media/pl5brzss/animal-health-welfare-report_202425.pdf"}, _LBG, _PETAB])
+_new("asda", "Asda", "unverified", "Asda says it doesn't test its own-brand beauty, toiletries or household products on animals, but they aren't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     claim="Asda says it doesn't conduct or commission animal tests on its own-brand beauty, toiletry or household products, and doesn't ask suppliers or anyone else to. It says this applies from fixed cut-off dates: 31 December 2009 for cosmetics and 31 December 2015 for cleaning products.",
+     category=["makeup-beauty", "skincare", "body-shower", "household-cleaning"], region="Europe", price="£",
+     sources=[{"label": "Asda: its animal welfare page (position on animal testing)", "url": "https://corporate.asda.com/animal-welfare"}, _LBG, _PETAB])
+_new("cocokind", "cocokind", "check", "Certified cruelty-free by Leaping Bunny. Its FAQ says all products are vegan except its beeswax ones.",
+     vegan="partial", vc="high", region="USA & Canada", price="££",
+     sources=[{"label": "Leaping Bunny: its cocokind listing", "url": "https://www.leapingbunny.org/brand/cocokind"}, {"label": "cocokind: its FAQ (vegan products)", "url": "https://www.cocokind.com/pages/faqs"}])
+_new("necessaire", "Nécessaire", "unverified", "I couldn't find an animal testing policy for Nécessaire, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says its products have no animal-derived ingredients and that it's working on vegan certification.",
+     vegan="full", vc="medium", region="USA & Canada", price="££",
+     sources=[{"label": "Nécessaire: its FAQ (vegan ingredients and certification)", "url": "https://necessaire.com/pages/faq"}, _LBG, _PETAB])
+if "necessaire" in by: by["necessaire"]["veganBasis"] = "brand"
+if "cocokind" in by: by["cocokind"]["lastVerified"] = today
+# owners
+_own("origins", "Estée Lauder Companies", "Owned by the Estée Lauder Companies. " + _PETA, "Estée Lauder Companies: its Origins page", "https://www.elcompanies.com/en/our-brands/origins")
+_own("coppertone", "Beiersdorf", "Owned by Beiersdorf, which bought it from Bayer in 2019. " + _PETA, "Bayer: press release on completing the sale of Coppertone to Beiersdorf (2 September 2019)", "https://www.bayer.com/media/en-us/bayer-completes-sale-of-iconic-coppertonetm-brand-to-beiersdorf/")
+_own("marc-jacobs-fragrances", "WHP Global / G-III Apparel Group (50/50)", "Marc Jacobs is co-owned 50/50 by WHP Global and G-III Apparel Group (the deal closed on 1 September 2026). " + _PETA, "WHP Global: announcement that it and G-III completed the Marc Jacobs acquisition", "https://www.whp-global.com/blogs/brand-news/whp-global-and-g-iii-apparel-group-complete-acquisition-of-marc-jacobs")
+_SI = by.get("st-ives")
+if _SI:
+    _SI.update(tier="unverified", parentCompany="Evermark", lastVerified=today, vegan="partial",
+        claim="Its FAQ says St. Ives was officially PETA-certified cruelty-free across its entire range as of December 2018, and that it is committed to never testing on animals.",
+        note="St Ives says it was certified cruelty-free by PETA in December 2018, but I couldn't find it on PETA's cruelty-free list in October 2026, so it isn't currently listed as certified. Owned by Evermark, which is backed by Yellow Wood Partners, after Unilever sold it.",
+        sources=[{"label": "St Ives: its FAQ (PETA certification claim and animal-derived ingredients)", "url": "https://www.stives.com/pages/faq"},
+                 {"label": "PETA: St Ives company page", "url": "https://crueltyfree.peta.org/company/st-ives/"},
+                 {"label": "Yellow Wood Partners: Evermark merger announcement (lists St. Ives), 20 January 2026", "url": "https://yellowwoodpartners.com/news-article/yellow-wood-partners-portfolio-companies-suave-brands-and-elida-beauty-complete-merger-to-create-evermark-a-leading-global-platform-of-personal-care-brands"},
+                 {"label": "Glossy: Yellow Wood bought St. Ives and Noxzema (via Elida Beauty) from Unilever", "url": "https://www.glossy.co/beauty/beauty-briefing-under-new-ownership-classic-brands-st-ives-and-noxzema-are-ready-for-a-modern-makeover/"}])
+_RX = by.get("radox")
+if _RX:
+    _RX.update(vegan="partial", vegan_note=None, lastVerified=today,
+        note="Radox has no animal testing policy that I could find, and it isn't certified. Owned by Unilever, who sell into markets requiring animal testing.")
+    _RX.pop("vegan_note", None)
+    for _l, _u in (("Radox: its FAQ (animal-derived ingredients; no animal testing statement)", "https://www.radox.co.uk/faq.html"), ("Radox: its own website (published by Unilever)", "https://www.radox.co.uk/")):
+        if not any(s.get("url") == _u for s in _RX["sources"]): _RX["sources"].append({"label": _l, "url": _u})
+# rule: no information of its own + parent confirmed to test = "tests on animals"
+for _b in brands:
+    if _b.get("tier") == "unverified" and not _b.get("claim") and _b.get("parentCompany") and _b.get("parentTestsOnAnimals") is True:
+        _b["tier"] = "bad"
+        if _b["slug"] == "hawaiian-tropic":
+            _b["note"] = "Hawaiian Tropic gives no animal testing information of its own, so it takes its owner's position. Owned by Edgewell Personal Care, which has confirmed it allows animal testing on its products where required by law (for example, to register cosmetics for sale in mainland China)."
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+_rw("scripts/generate-brand-check.js", lambda t: t if "'Tesco'" in t else t.replace("'Aldi', 'Lidl',", "'Aldi', 'Lidl', 'Tesco', 'Asda',", 1))
+def _qa(t):
+    if "k-qa" in t: return t
+    fn = ("function testAnswer(brand) {\n  const n = escapeHtml(brand.name), p = brand.parentCompany ? escapeHtml(brand.parentCompany) : null;\n"
+          "  if (brand.tier === 'good' || brand.tier === 'check') return 'No. ' + n + ' is listed as cruelty-free by Leaping Bunny / Cruelty Free International or PETA. The sources are below.';\n"
+          "  if (brand.tier === 'warn') return 'Not itself, but its owner does. ' + n + ' is listed as cruelty-free, but ' + (p || 'the company that owns it') + ' tests on animals or sells where the law requires it.';\n"
+          "  if (brand.tier === 'bad') return 'Yes, or it sells where animal testing is required. ' + (p ? n + ' is owned by ' + p + '. ' : '') + 'The sources are below.';\n"
+          "  if (brand.claim) return n + ' says it doesn\\'t test on animals, but it isn\\'t certified, so nobody independent has checked. What it says is below.';\n"
+          "  return 'I couldn\\'t find an animal testing policy or certification for ' + n + ' yet. The sources I checked are below.';\n}\n")
+    t = t.replace("function claimBox(brand) {", fn + "function claimBox(brand) {", 1)
+    t = t.replace("  if (parentTestFlag) lines.push(parentTestFlag);\n  lines.push('</div>');",
+                  "  if (parentTestFlag) lines.push(parentTestFlag);\n  lines.push('</div>');\n  lines.push('<section class=\"k-qa\"><h2 style=\"font-size:1.1rem;margin:22px 0 6px\">Does ' + escapeHtml(brand.name) + ' test on animals?</h2><p style=\"margin:0 0 6px\">' + testAnswer(brand) + '</p></section>');", 1)
+    return t
+_n = _rw("scripts/generate-brand-pages.js", _qa)
+print("Batch 13 Oct applied; generator changed:", _n)

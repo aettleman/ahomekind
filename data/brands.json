@@ -5339,8 +5339,8 @@
     "slug": "coppertone",
     "name": "Coppertone",
     "tier": "bad",
-    "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "note": "Owned by Beiersdorf, which bought it from Bayer in 2019. Listed by PETA as a company that tests on animals.",
+    "parentCompany": "Beiersdorf",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -5352,11 +5352,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Bayer: press release on completing the sale of Coppertone to Beiersdorf (2 September 2019)",
+        "url": "https://www.bayer.com/media/en-us/bayer-completes-sale-of-iconic-coppertonetm-brand-to-beiersdorf/"
       }
     ]
   },
@@ -6909,7 +6913,7 @@
     "slug": "e-l-f-cosmetics",
     "name": "e.l.f. cosmetics",
     "tier": "good",
-    "note": "Owned by e.l.f. Beauty, Inc., a publicly traded company (NYSE: ELF). Certified cruelty-free and vegan by PETA (Beauty Without Bunnies).",
+    "note": "Owned by e.l.f. Beauty, Inc., a publicly traded company (NYSE: ELF). Certified cruelty-free by Leaping Bunny and PETA, and certified vegan by PETA (Beauty Without Bunnies).",
     "parentCompany": "e.l.f. Beauty",
     "vegan": "full",
     "evidence": "",
@@ -6944,6 +6948,10 @@
     "veganConfidence": "high",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "sources": [
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
@@ -10324,8 +10332,8 @@
   {
     "slug": "hawaiian-tropic",
     "name": "Hawaiian Tropic",
-    "tier": "unverified",
-    "note": "Owned by Edgewell Personal Care, which has confirmed it allows animal testing on its products where required by law (for example, to register cosmetics for sale in mainland China). Hawaiian Tropic itself has no independent cruelty-free certification, so treated as unverified rather than bad.",
+    "tier": "bad",
+    "note": "Hawaiian Tropic gives no animal testing information of its own, so it takes its owner's position. Owned by Edgewell Personal Care, which has confirmed it allows animal testing on its products where required by law (for example, to register cosmetics for sale in mainland China).",
     "parentCompany": "Edgewell Personal Care",
     "vegan": "unclear",
     "evidence": "",
@@ -14662,8 +14670,8 @@
     "slug": "marc-jacobs-fragrances",
     "name": "Marc Jacobs Fragrances",
     "tier": "bad",
-    "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "note": "Marc Jacobs is co-owned 50/50 by WHP Global and G-III Apparel Group (the deal closed on 1 September 2026). Listed by PETA as a company that tests on animals.",
+    "parentCompany": "WHP Global / G-III Apparel Group (50/50)",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -14675,12 +14683,16 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-13",
     "claim": "",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "WHP Global: announcement that it and G-III completed the Marc Jacobs acquisition",
+        "url": "https://www.whp-global.com/blogs/brand-news/whp-global-and-g-iii-apparel-group-complete-acquisition-of-marc-jacobs"
       }
     ]
   },
@@ -17879,8 +17891,8 @@
     "slug": "origins",
     "name": "Origins",
     "tier": "bad",
-    "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "note": "Owned by the Estée Lauder Companies. Listed by PETA as a company that tests on animals.",
+    "parentCompany": "Estée Lauder Companies",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -17892,11 +17904,15 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "Estée Lauder Companies: its Origins page",
+        "url": "https://www.elcompanies.com/en/our-brands/origins"
       }
     ]
   },
@@ -19717,9 +19733,9 @@
     "slug": "radox",
     "name": "Radox",
     "tier": "bad",
-    "note": "Owned by Unilever, who sell into markets requiring animal testing.",
+    "note": "Radox has no animal testing policy that I could find, and it isn't certified. Owned by Unilever, who sell into markets requiring animal testing.",
     "parentCompany": "Unilever",
-    "vegan": "unknown",
+    "vegan": "partial",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -19734,8 +19750,17 @@
       {
         "label": "Unilever: its own animal testing policy",
         "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+      },
+      {
+        "label": "Radox: its FAQ (animal-derived ingredients; no animal testing statement)",
+        "url": "https://www.radox.co.uk/faq.html"
+      },
+      {
+        "label": "Radox: its own website (published by Unilever)",
+        "url": "https://www.radox.co.uk/"
       }
-    ]
+    ],
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "raid",
@@ -22689,9 +22714,9 @@
   {
     "slug": "st-ives",
     "name": "St Ives",
-    "tier": "warn",
-    "note": "PETA certified cruelty-free and mostly vegan itself, but owned by Unilever, who do test on animals.",
-    "parentCompany": "Unilever",
+    "tier": "unverified",
+    "note": "St Ives says it was certified cruelty-free by PETA in December 2018, but I couldn't find it on PETA's cruelty-free list in October 2026, so it isn't currently listed as certified. Owned by Evermark, which is backed by Yellow Wood Partners, after Unilever sold it.",
+    "parentCompany": "Evermark",
     "vegan": "partial",
     "evidence": "",
     "products": [],
@@ -22705,14 +22730,24 @@
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
     "sources": [
       {
-        "label": "PETA Beauty Without Bunnies (search for the brand)",
-        "url": "https://crueltyfree.peta.org/"
+        "label": "St Ives: its FAQ (PETA certification claim and animal-derived ingredients)",
+        "url": "https://www.stives.com/pages/faq"
       },
       {
-        "label": "Unilever: its own animal testing policy",
-        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
+        "label": "PETA: St Ives company page",
+        "url": "https://crueltyfree.peta.org/company/st-ives/"
+      },
+      {
+        "label": "Yellow Wood Partners: Evermark merger announcement (lists St. Ives), 20 January 2026",
+        "url": "https://yellowwoodpartners.com/news-article/yellow-wood-partners-portfolio-companies-suave-brands-and-elida-beauty-complete-merger-to-create-evermark-a-leading-global-platform-of-personal-care-brands"
+      },
+      {
+        "label": "Glossy: Yellow Wood bought St. Ives and Noxzema (via Elida Beauty) from Unilever",
+        "url": "https://www.glossy.co/beauty/beauty-briefing-under-new-ownership-classic-brands-st-ives-and-noxzema-are-ready-for-a-modern-makeover/"
       }
-    ]
+    ],
+    "lastVerified": "2026-10-13",
+    "claim": "Its FAQ says St. Ives was officially PETA-certified cruelty-free across its entire range as of December 2018, and that it is committed to never testing on animals."
   },
   {
     "slug": "st-moriz",
@@ -27695,5 +27730,144 @@
       }
     ],
     "lastVerified": "2026-10-13"
+  },
+  {
+    "slug": "tesco",
+    "name": "Tesco",
+    "tier": "unverified",
+    "note": "Tesco says it doesn't test on animals, but its own-brand beauty and toiletries aren't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "body-shower",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "Tesco says it doesn't support, commission or carry out animal testing on any of its products or the ingredients in them, and that its suppliers don't test on its behalf.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Tesco: its animal health and welfare report 2024/25 (position on animal testing)",
+        "url": "https://www.tescoplc.com/media/pl5brzss/animal-health-welfare-report_202425.pdf"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "price": "£"
+  },
+  {
+    "slug": "asda",
+    "name": "Asda",
+    "tier": "unverified",
+    "note": "Asda says it doesn't test its own-brand beauty, toiletries or household products on animals, but they aren't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "body-shower",
+      "household-cleaning"
+    ],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "Asda says it doesn't conduct or commission animal tests on its own-brand beauty, toiletry or household products, and doesn't ask suppliers or anyone else to. It says this applies from fixed cut-off dates: 31 December 2009 for cosmetics and 31 December 2015 for cleaning products.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Asda: its animal welfare page (position on animal testing)",
+        "url": "https://corporate.asda.com/animal-welfare"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "price": "£"
+  },
+  {
+    "slug": "cocokind",
+    "name": "cocokind",
+    "tier": "check",
+    "note": "Certified cruelty-free by Leaping Bunny. Its FAQ says all products are vegan except its beeswax ones.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "high",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Leaping Bunny: its cocokind listing",
+        "url": "https://www.leapingbunny.org/brand/cocokind"
+      },
+      {
+        "label": "cocokind: its FAQ (vegan products)",
+        "url": "https://www.cocokind.com/pages/faqs"
+      }
+    ],
+    "price": "££"
+  },
+  {
+    "slug": "necessaire",
+    "name": "Nécessaire",
+    "tier": "unverified",
+    "note": "I couldn't find an animal testing policy for Nécessaire, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says its products have no animal-derived ingredients and that it's working on vegan certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Nécessaire: its FAQ (vegan ingredients and certification)",
+        "url": "https://necessaire.com/pages/faq"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "price": "££",
+    "veganBasis": "brand"
   }
 ]
