@@ -1926,7 +1926,7 @@
     "slug": "balenciaga",
     "name": "Balenciaga",
     "tier": "bad",
-    "note": "Owned by Kering. Listed by PETA as a company that tests on animals.",
+    "note": "Owned by Kering. Listed by PETA as a company that tests on animals. Kering phased out fur across its fashion houses, including Gucci, Saint Laurent, Balenciaga, Alexander McQueen and Bottega Veneta, from autumn 2022. It still uses exotic skins such as python and crocodile, plus leather, wool, silk and cashmere, under its own internal animal welfare standards.",
     "parentCompany": "Kering",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
@@ -1948,6 +1948,10 @@
       {
         "label": "Wikipedia: Balenciaga (owned by Kering)",
         "url": "https://en.wikipedia.org/wiki/Balenciaga"
+      },
+      {
+        "label": "Kering: its animal welfare page",
+        "url": "https://www.kering.com/en/sustainability/safeguarding-the-planet/animal-welfare/"
       }
     ]
   },
@@ -5361,6 +5365,10 @@
       {
         "label": "Bayer: press release on completing the sale of Coppertone to Beiersdorf (2 September 2019)",
         "url": "https://www.bayer.com/media/en-us/bayer-completes-sale-of-iconic-coppertonetm-brand-to-beiersdorf/"
+      },
+      {
+        "label": "Beiersdorf: its own animal testing policy",
+        "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html"
       }
     ]
   },
@@ -14670,7 +14678,7 @@
     "slug": "marc-jacobs-fragrances",
     "name": "Marc Jacobs Fragrances",
     "tier": "bad",
-    "note": "Marc Jacobs is co-owned 50/50 by WHP Global and G-III Apparel Group (the deal closed on 1 September 2026). Listed by PETA as a company that tests on animals.",
+    "note": "Marc Jacobs is co-owned 50/50 by WHP Global and G-III Apparel Group (the deal closed on 1 September 2026). Listed by PETA as a company that tests on animals. WHP Global says it tests on animals where required by law. G-III banned fur but still uses leather, wool and down.",
     "parentCompany": "WHP Global / G-III Apparel Group (50/50)",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
@@ -14693,6 +14701,10 @@
       {
         "label": "WHP Global: announcement that it and G-III completed the Marc Jacobs acquisition",
         "url": "https://www.whp-global.com/blogs/brand-news/whp-global-and-g-iii-apparel-group-complete-acquisition-of-marc-jacobs"
+      },
+      {
+        "label": "G-III Apparel Group: its animal welfare policy (document)",
+        "url": "https://www.giii.com/wp-content/uploads/2023/05/GIII-Animal-Welfare-Policy.pdf"
       }
     ]
   },
@@ -17913,6 +17925,10 @@
       {
         "label": "Estée Lauder Companies: its Origins page",
         "url": "https://www.elcompanies.com/en/our-brands/origins"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -22744,6 +22760,10 @@
       {
         "label": "Glossy: Yellow Wood bought St. Ives and Noxzema (via Elida Beauty) from Unilever",
         "url": "https://www.glossy.co/beauty/beauty-briefing-under-new-ownership-classic-brands-st-ives-and-noxzema-are-ready-for-a-modern-makeover/"
+      },
+      {
+        "label": "St Ives: its blog post on products not tested on animals",
+        "url": "https://www.stives.com/blogs/news/products-not-tested-on-animals"
       }
     ],
     "lastVerified": "2026-10-13",
@@ -27764,6 +27784,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Tesco: its agriculture page (animal testing statement)",
+        "url": "https://www.tescoplc.com/sustainability/planet/agriculture"
       }
     ],
     "price": "£"
@@ -27838,8 +27862,8 @@
   {
     "slug": "necessaire",
     "name": "Nécessaire",
-    "tier": "unverified",
-    "note": "I couldn't find an animal testing policy for Nécessaire, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says its products have no animal-derived ingredients and that it's working on vegan certification.",
+    "tier": "bad",
+    "note": "Nécessaire tests on animals. I couldn't find an animal testing policy for it. A statement it gave an activist by email isn't published on its website, so it can't be verified. Its Sex Gel was reportedly tested on animals as a one-off to meet FDA medical device requirements. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says its products have no animal-derived ingredients and that it's working on vegan certification.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -27868,6 +27892,42 @@
       }
     ],
     "price": "££",
+    "veganBasis": "brand"
+  },
+  {
+    "slug": "tesco-kind-pure",
+    "name": "Tesco Kind & Pure",
+    "tier": "unverified",
+    "note": "Tesco says its Kind & Pure range is cruelty-free and vegan, but neither claim is certified.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "veganConfidence": "medium",
+    "region": "Europe",
+    "claim": "Tesco says its Kind & Pure range is cruelty-free and vegan.",
+    "lastVerified": "2026-10-13",
+    "sources": [
+      {
+        "label": "Tesco: its agriculture page (animal testing statement)",
+        "url": "https://www.tescoplc.com/sustainability/planet/agriculture"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "price": "£",
     "veganBasis": "brand"
   }
 ]

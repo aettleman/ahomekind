@@ -16,7 +16,6 @@ tests on animals with no source: Collistar
 tests on animals with no source: Comet
 tests on animals with no source: Command
 tests on animals with no source: Condense Paris
-tests on animals with no source: Coppertone
 tests on animals with no source: Coty Inc.
 tests on animals with no source: Crest
 tests on animals with no source: Davidoff
@@ -76,7 +75,6 @@ tests on animals with no source: Loewe
 tests on animals with no source: Lubriderm
 tests on animals with no source: M.A.C. Cosmetics
 tests on animals with no source: Makeup Forever
-tests on animals with no source: Marc Jacobs Fragrances
 tests on animals with no source: Mary Kay
 tests on animals with no source: Mead
 tests on animals with no source: Mediplorer
@@ -107,7 +105,6 @@ tests on animals with no source: Old English
 tests on animals with no source: Oomph!
 tests on animals with no source: Orange Glo
 tests on animals with no source: Oriflame
-tests on animals with no source: Origins
 tests on animals with no source: Osiao
 tests on animals with no source: Oust
 tests on animals with no source: OxiClean

@@ -869,3 +869,36 @@ def _qa(t):
     return t
 _n = _rw("scripts/generate-brand-pages.js", _qa)
 print("Batch 13 Oct applied; generator changed:", _n)
+
+# 39. Ash's own findings and links go on the brand as given (13 Oct)
+def _addsrc(b, label, url):
+    if b and not any(s.get("url") == url for s in b.get("sources", [])): b.setdefault("sources", []).append({"label": label, "url": url})
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_tk = "https://www.tescoplc.com/sustainability/planet/agriculture"
+_new("tesco-kind-pure", "Tesco Kind & Pure", "unverified", "Tesco says its Kind & Pure range is cruelty-free and vegan, but neither claim is certified.",
+     vegan="full", vc="medium", claim="Tesco says its Kind & Pure range is cruelty-free and vegan.", category=["skincare", "body-shower"], region="Europe", price="£", parent=None,
+     sources=[{"label": "Tesco: its agriculture page (animal testing statement)", "url": _tk}, _LBG, _PETAB])
+if "tesco-kind-pure" in by: by["tesco-kind-pure"]["veganBasis"] = "brand"
+_addsrc(by.get("tesco"), "Tesco: its agriculture page (animal testing statement)", _tk)
+_n = by.get("necessaire")
+if _n:
+    _n.update(tier="bad", claim="", lastVerified=today,
+        note="Nécessaire tests on animals. I couldn't find an animal testing policy for it. A statement it gave an activist by email isn't published on its website, so it can't be verified. Its Sex Gel was reportedly tested on animals as a one-off to meet FDA medical device requirements. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its FAQ says its products have no animal-derived ingredients and that it's working on vegan certification.")
+_mj = by.get("marc-jacobs-fragrances")
+if _mj:
+    _mj["note"] = ("Marc Jacobs is co-owned 50/50 by WHP Global and G-III Apparel Group (the deal closed on 1 September 2026). Listed by PETA as a company that tests on animals. "
+                   "WHP Global says it tests on animals where required by law. G-III banned fur but still uses leather, wool and down.")
+    _addsrc(_mj, "G-III Apparel Group: its animal welfare policy (document)", "https://www.giii.com/wp-content/uploads/2023/05/GIII-Animal-Welfare-Policy.pdf")
+_si = by.get("st-ives")
+_addsrc(_si, "St Ives: its blog post on products not tested on animals", "https://www.stives.com/blogs/news/products-not-tested-on-animals")
+_bal = by.get("balenciaga")
+if _bal:
+    _bal["note"] = ("Owned by Kering. Listed by PETA as a company that tests on animals. Kering phased out fur across its fashion houses, including Gucci, Saint Laurent, Balenciaga, Alexander McQueen and Bottega Veneta, from autumn 2022. "
+                    "It still uses exotic skins such as python and crocodile, plus leather, wool, silk and cashmere, under its own internal animal welfare standards.")
+    _addsrc(_bal, "Kering: its animal welfare page", "https://www.kering.com/en/sustainability/safeguarding-the-planet/animal-welfare/")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _kering(t):
+    if '"Kering":' in t: return t
+    return t.replace('"Kenvue": {"url"', '"Kering": {"url": "https://www.kering.com/en/sustainability/safeguarding-the-planet/animal-welfare/", "summary": "Kering\'s animal welfare page covers the animal materials its fashion houses use. It says fur was phased out across its houses, including Gucci, Saint Laurent, Balenciaga, Alexander McQueen and Bottega Veneta, from autumn 2022, while exotic skins such as python and crocodile, leather, wool, silk and cashmere are still used under its own internal animal welfare standards."},\n"Kenvue": {"url"', 1)
+_rw("scripts/site_update.py", _kering)
+print("Section 39 applied")
