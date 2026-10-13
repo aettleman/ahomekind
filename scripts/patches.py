@@ -768,3 +768,22 @@ if "blue-buffalo" in by:
     by["blue-buffalo"]["category"] = ["pet-food"]
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Essential Home brands moved; Calgon, Cacharel, Burberry, Blue Buffalo tidied")
+
+# 36. e.l.f. Beauty, Inc. (NYSE: ELF) owns e.l.f. Cosmetics, Naturium and rhode, per its own 10-K (FY ended 31 Mar 2026, read 12 Oct), which also says Keys Soulcare was transferred to Alicia Keys in May 2026 (so Keys Soulcare is NOT given e.l.f. as parent).
+#     Replaced the unsourced "Independently owned" on e.l.f. Cosmetics. Whether any single holder controls e.l.f. Beauty was not checked, so the site only says it's publicly traded.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_EL = "e.l.f. Beauty"; _ELU = "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
+for _s in ("e-l-f-cosmetics", "naturium", "rhode-skin"):
+    if _s in by:
+        _b = by[_s]; _b["parentCompany"] = _EL; _b["lastVerified"] = today
+        if not any(s.get("url") == _ELU for s in _b["sources"]): _b["sources"].append({"label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)", "url": _ELU})
+if "e-l-f-cosmetics" in by:
+    by["e-l-f-cosmetics"]["note"] = "Owned by e.l.f. Beauty, Inc., a publicly traded company (NYSE: ELF). Certified cruelty-free and vegan by PETA (Beauty Without Bunnies)."
+for _s in ("naturium", "rhode-skin"):
+    if _s in by and "e.l.f. Beauty" not in by[_s]["note"]: by[_s]["note"] = "Owned by e.l.f. Beauty, Inc. " + by[_s]["note"]
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _elpol(t):
+    if '"e.l.f. Beauty":' in t: return t
+    return t.replace('"Church & Dwight": {', '"e.l.f. Beauty": {"url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm", "summary": "In its annual report e.l.f. Beauty describes e.l.f. Cosmetics as double-certified by Leaping Bunny and PETA as cruelty-free, and says it was one of the first mass beauty brands to be vegan and cruelty free. This is the company describing its own brands."},\n"Church & Dwight": {', 1)
+_rw("scripts/site_update.py", _elpol)
+print("e.l.f. Beauty added as parent of e.l.f. Cosmetics, Naturium and rhode")

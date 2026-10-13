@@ -256,7 +256,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -265,6 +265,10 @@
       {
         "label": "Acuvue: its own About page (published by Johnson & Johnson Vision)",
         "url": "https://www.acuvue.com/en-ca/about/"
+      },
+      {
+        "label": "Johnson & Johnson: its own animal testing policy",
+        "url": "https://www.jnj.com/policies-reports/animal-welfare-policy"
       }
     ]
   },
@@ -363,7 +367,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -372,6 +376,10 @@
       {
         "label": "Church & Dwight: its consumer brands page",
         "url": "https://churchdwight.com/our-brands/consumer-brands/"
+      },
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
       }
     ]
   },
@@ -406,7 +414,7 @@
         "url": "https://www.investegate.co.uk/announcement/rns/reckitt-benckiser-group--rkt/reckitt-agrees-to-divest-essential-home/8985772"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "alba-botanica",
@@ -493,7 +501,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -692,7 +700,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -701,6 +709,10 @@
       {
         "label": "L'Oréal: press release on finalising the purchase of CeraVe, AcneFree and Ambi (6 March 2017)",
         "url": "https://www.loreal-finance.com/eng/news-release/loreal-finalizes-acquisition-cerave-acnefree-and-ambi"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -943,7 +955,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1044,7 +1056,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1053,6 +1065,10 @@
       {
         "label": "Estée Lauder Companies: its Aramis page",
         "url": "https://www.elcompanies.com/en/our-brands/aramis"
+      },
+      {
+        "label": "Estée Lauder Companies: its own animal testing policy",
+        "url": "https://www.elcompanies.com/en/our-impact/viewpoints/animal-testing"
       }
     ]
   },
@@ -1305,7 +1321,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1314,6 +1330,10 @@
       {
         "label": "Church & Dwight: its consumer brands page",
         "url": "https://churchdwight.com/our-brands/consumer-brands/"
+      },
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
       }
     ]
   },
@@ -1421,7 +1441,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1430,6 +1450,10 @@
       {
         "label": "L'Oréal: press release on the Atelier Cologne purchase (30 June 2016)",
         "url": "https://www.loreal-finance.com/eng/news-release/loreal-signs-agreement-acquire-atelier-cologne"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -1687,7 +1711,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "avon",
@@ -1719,7 +1743,7 @@
       }
     ],
     "veganBasis": "brand",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "awake-organics",
@@ -1862,7 +1886,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1915,7 +1939,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1992,7 +2016,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2167,7 +2191,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2406,7 +2430,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2555,7 +2579,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2589,7 +2613,7 @@
     ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "BIC: its shareholder structure",
@@ -2615,7 +2639,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2681,7 +2705,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "biohygiene",
@@ -2837,7 +2861,7 @@
         "url": "https://www.v-label.com"
       }
     ],
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "claim": "Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly.",
     "veganBasis": "certified",
     "veganCert": "V-Label"
@@ -2883,7 +2907,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2892,6 +2916,10 @@
       {
         "label": "Haleon: its Biotene page",
         "url": "https://www.haleonhealthpartner.com/en-us/oral-health/brands/biotene/products/"
+      },
+      {
+        "label": "Haleon: its own animal testing policy",
+        "url": "https://www.haleon.com/content/dam/haleon/corporate/documents/who-we-are/governance/Haleon-The-use-of-animals-in-research.pdf.downloadasset.pdf"
       }
     ]
   },
@@ -3030,7 +3058,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3359,7 +3387,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3368,6 +3396,10 @@
       {
         "label": "Procter & Gamble: its brands page",
         "url": "https://us.pg.com/brands/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -3412,7 +3444,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3421,6 +3453,10 @@
       {
         "label": "Procter & Gamble: its brands page",
         "url": "https://us.pg.com/brands/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -3537,7 +3573,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3546,6 +3582,10 @@
       {
         "label": "Procter & Gamble: its brands page",
         "url": "https://us.pg.com/brands/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -3591,7 +3631,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3677,7 +3717,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3778,7 +3818,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3947,7 +3987,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3979,7 +4019,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -4009,7 +4049,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4066,7 +4106,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4079,6 +4119,10 @@
       {
         "label": "PVH: its animal welfare policy statement",
         "url": "https://www.pvh.com/-/media/Files/pvh/responsibility/PVH-Animal-Welfare-Policy-Statement.pdf"
+      },
+      {
+        "label": "Coty: its own animal testing policy",
+        "url": "https://www.coty.com/faq"
       }
     ]
   },
@@ -4663,7 +4707,7 @@
         "url": "https://www.investegate.co.uk/announcement/rns/reckitt-benckiser-group--rkt/reckitt-agrees-to-divest-essential-home/8985772"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "citre-shine",
@@ -5772,7 +5816,7 @@
     ],
     "veganConfidence": "medium",
     "claim": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -6865,8 +6909,8 @@
     "slug": "e-l-f-cosmetics",
     "name": "e.l.f. cosmetics",
     "tier": "good",
-    "note": "Independently owned. Certified cruelty-free and vegan by PETA (Beauty Without Bunnies).",
-    "parentCompany": null,
+    "note": "Owned by e.l.f. Beauty, Inc., a publicly traded company (NYSE: ELF). Certified cruelty-free and vegan by PETA (Beauty Without Bunnies).",
+    "parentCompany": "e.l.f. Beauty",
     "vegan": "full",
     "evidence": "",
     "products": [],
@@ -6903,11 +6947,15 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
       }
     ],
     "veganBasis": "certified",
     "veganCert": "PETA",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "e45",
@@ -6929,7 +6977,7 @@
     "region": "Europe",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Karo Healthcare: annual summary and sustainability statement 2025 (animal welfare, p.55)",
@@ -11648,7 +11696,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "joico",
@@ -12247,7 +12295,7 @@
     "region": "Europe",
     "sources": [],
     "veganBasis": "brand",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "kireyna",
@@ -13451,7 +13499,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "little-heroes",
@@ -13505,7 +13553,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "living-proof",
@@ -15386,7 +15434,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "miss-organics",
@@ -16493,8 +16541,8 @@
     "slug": "naturium",
     "name": "Naturium",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
+    "note": "Owned by e.l.f. Beauty, Inc. Listed by PETA as not testing on animals.",
+    "parentCompany": "e.l.f. Beauty",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -16505,11 +16553,15 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
       }
     ]
   },
@@ -16612,7 +16664,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "new-dana-perfumes",
@@ -17422,7 +17474,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "oio-lab",
@@ -17821,7 +17873,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "origins",
@@ -18609,7 +18661,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "philosophy",
@@ -20120,8 +20172,8 @@
     "slug": "rhode-skin",
     "name": "Rhode Skin",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
-    "parentCompany": null,
+    "note": "Owned by e.l.f. Beauty, Inc. Listed by PETA as not testing on animals.",
+    "parentCompany": "e.l.f. Beauty",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -20132,11 +20184,15 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
       }
     ]
   },
@@ -20748,7 +20804,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "salvatore-ferragamo",
@@ -24362,7 +24418,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "the-powder-shampoo",
@@ -26533,7 +26589,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -26690,7 +26746,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -27554,7 +27610,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "Its FAQ says all its products are cruelty-free and that it doesn't test on animals. Its About page says it develops all of its products without animal testing.",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-13",
     "sources": [
       {
         "label": "Beauty of Joseon: its own FAQ (cruelty-free and vegan products)",
@@ -27605,7 +27661,7 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   },
   {
     "slug": "amlactin",
@@ -27638,6 +27694,6 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-13"
   }
 ]

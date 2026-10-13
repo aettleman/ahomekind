@@ -131,6 +131,7 @@ PARENT_POLICY = {
 "summary": "Page says Beiersdorf does not conduct animal tests for any of its cosmetic products or their ingredients unless required to do so by the authorities, and that any animal testing for medical devices and pharmaceuticals is limited to the absolute minimum necessary."
 },
 "Kenvue": {"url": "https://www.kenvue.com/policies-positions/animal-testing", "summary": "Kenvue says it avoids animal testing for cosmetics unless regulators require it. For medicines and other regulated health products it treats animal testing as a last resort, and it notes that some countries still require animal testing data to meet their own regulatory requirements."},
+"e.l.f. Beauty": {"url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm", "summary": "In its annual report e.l.f. Beauty describes e.l.f. Cosmetics as double-certified by Leaping Bunny and PETA as cruelty-free, and says it was one of the first mass beauty brands to be vegan and cruelty free. This is the company describing its own brands."},
 "Church & Dwight": {
 "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx",
 "summary": "Page says it is the company's policy not to test on animals, and asks suppliers not to test on animals unless required by law or regulation, using accredited contract labs when testing is legally necessary."
