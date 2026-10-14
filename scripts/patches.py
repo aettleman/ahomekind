@@ -1729,3 +1729,23 @@ if _s:
         note="Solimo is Amazon's own brand across household, kitchen and personal care. It has no clear animal testing policy and isn't certified by Leaping Bunny / Cruelty Free International or PETA. It has no clear ingredient information, so it's listed as not vegan. Some Solimo products are now sold as Amazon Basics.")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 52 applied")
+
+# 53. Say which vegan certifier a brand has (Ash, 14 Oct). Brand pages: "100% vegan (certified by X)" already existed; now also in the page text,
+#     "brand's word" brands say they have no vegan certification, and brands with no vegan source yet say the certifier isn't confirmed.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+if "fuwa3e" in by: by["fuwa3e"]["veganCert"] = "Vegan Society"
+_nt = by.get("natracare")
+if _nt: _nt.update(veganBasis="certified", veganCert="Vegetarian Society", veganConfidence="high", lastVerified=today)
+_sn = by.get("sonett")
+if _sn: _sn["veganCert"] = "Vegan Society"
+for _b in brands:
+    if _b.get("veganBasis") == "certified" and _b.get("veganCert") and _b["veganCert"].lower() not in (_b.get("note") or "").lower():
+        _b["note"] = (_b.get("note") or "").rstrip() + " Certified vegan by %s." % _b["veganCert"]
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _vl(t):
+    if "certifier not yet confirmed" in t: return t
+    old = "brand.veganBasis === 'brand' ? \"100% vegan (brand's word)\" : '100% vegan')\n    : brand.vegan === 'partial' ? 'varies by product'"
+    new = "brand.veganBasis === 'brand' ? \"100% vegan (brand's word, no vegan certification)\" : '100% vegan (certifier not yet confirmed)')\n    : brand.vegan === 'partial' ? (brand.veganCert ? 'varies by product (some certified by ' + escapeHtml(brand.veganCert) + ')' : 'varies by product')"
+    return t.replace(old, new, 1)
+_rw("scripts/generate-brand-pages.js", _vl)
+print("Section 53 applied")

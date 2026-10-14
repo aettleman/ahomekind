@@ -2865,7 +2865,7 @@
     "slug": "biomed",
     "name": "Biomed",
     "tier": "unverified",
-    "note": "Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "note": "Biomed says it's cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Certified vegan by V-Label.",
     "parentCompany": "SkyLab AG",
     "vegan": "full",
     "evidence": "",
@@ -14563,7 +14563,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -16378,7 +16378,10 @@
       "hygiene"
     ],
     "veganConfidence": "high",
-    "region": "Europe"
+    "region": "Europe",
+    "veganBasis": "certified",
+    "veganCert": "Vegetarian Society",
+    "lastVerified": "2026-10-15"
   },
   {
     "slug": "natroma",
@@ -20419,7 +20422,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -29082,6 +29085,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Church & Dwight: its own animal testing policy",
+        "url": "https://churchdwight.com/our-brands/animal-testing-policy.aspx"
       }
     ],
     "veganBasis": "brand",
@@ -29134,7 +29141,7 @@
     "slug": "suave-male-grooming",
     "name": "Suave Male Grooming (UK)",
     "tier": "unverified",
-    "note": "Suave Male Grooming says it never tests on animals or uses ingredients tested on animals, and that its products are PETA-certified cruelty-free and certified vegan. I couldn't find it on PETA, Leaping Bunny or Cruelty Free International, so it isn't certified by any of them. This is the UK men's grooming brand, not the US brand Suave.",
+    "note": "Suave Male Grooming says it never tests on animals or uses ingredients tested on animals, and that its products are PETA-certified cruelty-free and certified vegan. I couldn't find it on PETA or Leaping Bunny / Cruelty Free International, so it isn't certified by any of them. This is the UK men's grooming brand, not the US brand Suave.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -29375,6 +29382,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ],
     "veganBasis": "brand"
@@ -29449,6 +29460,10 @@
       {
         "label": "CNBC: P&G has acquired Native (15 November 2017)",
         "url": "https://www.cnbc.com/2017/11/15/pg-has-acquired-native-natural-deodorant-brand.html"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ],
     "veganBasis": "brand",
@@ -29566,7 +29581,8 @@
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
       }
-    ]
+    ],
+    "veganCert": "Vegan Society"
   },
   {
     "slug": "dreft",
@@ -29594,6 +29610,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ],
     "parentTestsOnAnimals": true
@@ -29628,6 +29648,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Beiersdorf: its own animal testing policy",
+        "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html"
       }
     ]
   },
@@ -29665,6 +29689,10 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "L'Oréal: its own animal testing policy",
+        "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-our-products/for-beauty-with-no-animal-testing/milestones-in-the-safety-assessment-without-animal/"
       }
     ]
   },
@@ -29810,7 +29838,8 @@
         "url": "https://fuwa.com.vn/en/about-fuwa/"
       }
     ],
-    "veganBasis": "certified"
+    "veganBasis": "certified",
+    "veganCert": "Vegan Society"
   },
   {
     "slug": "equate",
