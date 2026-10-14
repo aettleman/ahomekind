@@ -14563,7 +14563,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -20422,7 +20422,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -29510,10 +29510,10 @@
   {
     "slug": "biokleen",
     "name": "Biokleen",
-    "tier": "check",
-    "note": "Listed by PETA as cruelty-free. I couldn't confirm whether its products are vegan. Owned by PurposeBuilt Brands. This is Biokleen (Bi-O-Kleen) the laundry and household cleaning brand, not the industrial cleaner Bio-Kleen or the Swedish wood-care brand BIOkleen.",
+    "tier": "good",
+    "note": "Listed by PETA as cruelty-free. Its FAQ says it has never tested a single Biokleen product on an animal, nor used animal ingredients in any formulation, but it has no vegan certification. Owned by PurposeBuilt Brands. This is Biokleen (Bi-O-Kleen) the laundry and household cleaning brand, not the industrial cleaner Bio-Kleen or the Swedish wood-care brand BIOkleen.",
     "parentCompany": "PurposeBuilt Brands",
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -29522,7 +29522,7 @@
       "laundry",
       "household-cleaning"
     ],
-    "veganConfidence": "low",
+    "veganConfidence": "medium",
     "region": "USA & Canada",
     "claim": "",
     "lastVerified": "2026-10-15",
@@ -29542,8 +29542,13 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Biokleen: its FAQ (never tested on animals, no animal ingredients)",
+        "url": "https://biokleenhome.com/faq"
       }
-    ]
+    ],
+    "veganBasis": "brand"
   },
   {
     "slug": "sonett",

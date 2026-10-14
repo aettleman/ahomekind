@@ -1749,3 +1749,14 @@ def _vl(t):
     return t.replace(old, new, 1)
 _rw("scripts/generate-brand-pages.js", _vl)
 print("Section 53 applied")
+
+# 54. Biokleen (biokleenhome.com, Bi-O-Kleen): FAQ says never tested on animals and no animal ingredients in any formulation; no vegan certification (Ash, 14 Oct).
+#     Not the same company as Bio-Kleen Products, Inc. (Kalamazoo, biokleen.com), whose page says "cruelty-free and vegan" -- not applied to this brand.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_bk = by.get("biokleen")
+if _bk:
+    _bk.update(tier="good", vegan="full", veganConfidence="medium", veganBasis="brand", lastVerified=today,
+        note="Listed by PETA as cruelty-free. Its FAQ says it has never tested a single Biokleen product on an animal, nor used animal ingredients in any formulation, but it has no vegan certification. Owned by PurposeBuilt Brands. This is Biokleen (Bi-O-Kleen) the laundry and household cleaning brand, not the industrial cleaner Bio-Kleen or the Swedish wood-care brand BIOkleen.")
+    _addsrc(_bk, "Biokleen: its FAQ (never tested on animals, no animal ingredients)", "https://biokleenhome.com/faq")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 54 applied")
