@@ -1546,3 +1546,26 @@ if _an and "avon.com" not in _an["note"]:
     _an["note"] = _an["note"].rstrip() + " Not sure which Avon you're buying? If it's from avon.com, it isn't covered by the Cruelty Free International listing. Look for the Leaping Bunny logo, and if it isn't there, check the brand's own site."
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 47 applied")
+
+# 48. "Supermarket" category on the checker was empty: no card carried the supermarket tag (14 Oct)
+def _sup(t):
+    if "'Tesco Kind & Pure'" not in t:
+        t = t.replace("'Tesco', 'Asda',", "'Tesco', 'Asda', 'Tesco Kind & Pure', 'Safeway', 'Lidl GB', 'Lidl Ireland & Lidl Northern Ireland', \"Trader Joe's Company\", 'Whole Foods Market 365', 'Cien', 'Lupilu', 'Lacura',", 1)
+    if "SUPERMARKET_NAMES.has(brand.name) && seen" not in t:
+        t = t.replace("  return seen.join(' ');\n}", "  if (SUPERMARKET_NAMES.has(brand.name) && seen.indexOf('supermarket') === -1) seen.push('supermarket');\n  return seen.join(' ');\n}", 1)
+    return t
+_rw("scripts/generate-brand-check.js", _sup)
+print("Section 48 applied")
+
+# 49. Manhattan and Risqué are Coty brands (Coty's own 26 Sept 2022 release), so they match Rimmel and CoverGirl (14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_cg = by.get("covergirl") or {}
+for _s in ("manhattan", "risque"):
+    _b = by.get(_s)
+    if not _b: continue
+    _b.update(parentCompany="Coty", tier="warn", lastVerified=today)
+    if "parentTestsOnAnimals" in _cg: _b["parentTestsOnAnimals"] = _cg["parentTestsOnAnimals"]
+    _b["note"] = _b["note"].replace(" Cruelty-free approved by Cruelty Free International.", "").rstrip() + " Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals."
+    _addsrc(_b, "Coty: Rimmel, Manhattan and Risqué receive Leaping Bunny approval (26 September 2022)", "https://www.businesswire.com/news/home/20220926005006/en")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 49 applied")

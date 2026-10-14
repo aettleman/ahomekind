@@ -14562,9 +14562,9 @@
   {
     "slug": "manhattan",
     "name": "Manhattan",
-    "tier": "check",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -14576,11 +14576,15 @@
     ],
     "region": "Europe",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Coty: Rimmel, Manhattan and Risqué receive Leaping Bunny approval (26 September 2022)",
+        "url": "https://www.businesswire.com/news/home/20220926005006/en"
       }
     ]
   },
@@ -20410,9 +20414,9 @@
   {
     "slug": "risque",
     "name": "Risque",
-    "tier": "check",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Cruelty-free approved by Cruelty Free International.",
-    "parentCompany": null,
+    "tier": "warn",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
     "products": [],
@@ -20423,11 +20427,15 @@
     ],
     "region": "South & Central America, USA & Canada",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Coty: Rimmel, Manhattan and Risqué receive Leaping Bunny approval (26 September 2022)",
+        "url": "https://www.businesswire.com/news/home/20220926005006/en"
       }
     ]
   },

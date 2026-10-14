@@ -106,6 +106,8 @@ const CATEGORY_MAP = {
   'hygiene': 'hygiene',
   'paper-hygiene': 'hygiene',
   'hygiene': 'hygiene',
+  'paper-hygiene': 'hygiene',
+  'hygiene': 'hygiene',
   'period-menstrual': 'hygiene',
   'food-kitchen': null,
   'stationery': 'stationery'
@@ -119,7 +121,7 @@ const CATEGORY_MAP = {
 // from. If more supermarket own-brand entries are added to brands.json in
 // future, add their exact `name` to this list too.
 const SUPERMARKET_NAMES = new Set([
-  'Aldi', 'Lidl', 'Tesco', 'Asda', 'Kirkland Signature', "Member's Mark", 'Signature Select', 'up&up', 'Beauty 360', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer'
+  'Aldi', 'Lidl', 'Tesco', 'Asda', 'Tesco Kind & Pure', 'Safeway', 'Lidl GB', 'Lidl Ireland & Lidl Northern Ireland', "Trader Joe's Company", 'Whole Foods Market 365', 'Cien', 'Lupilu', 'Lacura', 'Kirkland Signature', "Member's Mark", 'Signature Select', 'up&up', 'Beauty 360', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer'
 ]);
 
 const BEAUTY_CATS = new Set(['makeup-beauty', 'skincare', 'haircare', 'body-shower', 'period-menstrual']);
@@ -141,6 +143,7 @@ function dataCategoryAttr(brand) {
     const mapped = CATEGORY_MAP[c];
     if (mapped && seen.indexOf(mapped) === -1) seen.push(mapped);
   });
+  if (SUPERMARKET_NAMES.has(brand.name) && seen.indexOf('supermarket') === -1) seen.push('supermarket');
   return seen.join(' ');
 }
 
