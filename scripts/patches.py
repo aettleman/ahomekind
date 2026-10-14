@@ -1569,3 +1569,163 @@ for _s in ("manhattan", "risque"):
     _addsrc(_b, "Coty: Rimmel, Manhattan and Risqué receive Leaping Bunny approval (26 September 2022)", "https://www.businesswire.com/news/home/20220926005006/en")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 49 applied")
+
+# 50. Reddit list part 2 (Ash's research 14 Oct, with her links and findings; PETA searched via crueltyfree.peta.org/?s=).
+#     Held back until Ash decides: LORD, Shark, Racer and Dorco (razor blades), Good & Gather (food only).
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+def _vb(slug):
+    if slug in by: by[slug]["veganBasis"] = "brand"
+_CC = "USA & Canada"
+_NC = " Isn't certified by Leaping Bunny / Cruelty Free International or PETA."
+# --- certified ---
+_new("ecos", "ECOS", "good", "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Its help centre says all its products are vegan, but it has no vegan certification. Made by Earth Friendly Products, which is independently owned by its founding family.",
+     vegan="full", vc="medium", category=["household-cleaning", "laundry"], region=_CC,
+     sources=[_src("Leaping Bunny: ECOS brand page", "https://www.leapingbunny.org/brand/ecos"), _src("ECOS: its help centre (are your products vegan?)", "https://helpcenter.ecos.com/hc/en-us/articles/23678692646807-Are-your-products-vegan"),
+              _src("Cruelty Free International: Earth Friendly Products listing (no parent company)", "https://crueltyfreeinternational.org/node/4342"), _src("ECOS: its FAQ", "https://www.ecos.com/faq/")]); _vb("ecos")
+_new("mollys-suds", "Molly's Suds", "check", "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Its detergents and cleaners are made with vegan ingredients, apart from the wool dryer balls, so vegan varies by product. It says it's no longer certified vegan and checks ingredients with its suppliers instead.",
+     vegan="partial", vc="medium", category=["laundry", "household-cleaning"], region=_CC,
+     sources=[_src("Leaping Bunny: Molly's Suds brand page", "https://www.leapingbunny.org/brand/mollys-suds"), _src("Molly's Suds: its FAQ", "https://mollyssuds.com/pages/faq"), _src("Molly's Suds: certifications and partnerships (vegan ingredients, wool dryer balls)", "https://mollyssuds.com/pages/resources-partnerships"),
+              _src("Cruelty Free International: Molly's Suds listing", "https://crueltyfreeinternational.org/node/4577")]); _vb("mollys-suds")
+_new("aspenclean", "AspenClean", "good", "Certified cruelty-free by Leaping Bunny / Cruelty Free International and PETA. Its FAQ says its whole product line is 100% vegan, but it has no vegan certification. Independently owned by its founders, Alicia Sokolowski and Chris Solodko.",
+     vegan="full", vc="medium", category=["household-cleaning", "laundry"], region=_CC,
+     sources=[_src("Leaping Bunny: AspenClean brand page", "https://www.leapingbunny.org/brand/aspenclean"), _src("PETA: AspenClean company page", "https://crueltyfree.peta.org/company/aspenclean/"), _src("AspenClean: cruelty-free cleaning products (100% vegan statement)", "https://aspenclean.com/pages/cruelty-free-cleaning-products-supplies"),
+              _src("Cruelty Free International: AspenClean listing (no parent company)", "https://crueltyfreeinternational.org/node/4181")]); _vb("aspenclean")
+_new("orly", "Orly", "good", "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Orly says its polishes are fully vegan, but it has no vegan certification. Independently owned: a family-owned company since 1975.",
+     vegan="full", vc="medium", category=["makeup-beauty"], region=_CC,
+     sources=[_src("Leaping Bunny: Orly brand page", "https://www.leapingbunny.org/brand/orly"), _src("Orly: its vegan nail polish page", "https://www.orlybeauty.co.uk/pages/vegan-nail-polish"), _src("Cruelty Free International: Orly listing", "https://crueltyfreeinternational.org/node/4631")]); _vb("orly")
+_new("dropps", "Dropps", "check", "Certified cruelty-free by Leaping Bunny. Its products are vegan apart from the wool dryer balls, which are made from natural wool, so vegan varies by product. Independently owned, with a minority investment from The Craftory in 2020.",
+     vegan="partial", vc="high", category=["laundry", "household-cleaning"], region=_CC,
+     sources=[_src("Leaping Bunny: Dropps brand page", "https://www.leapingbunny.org/ShopBrandDetail?BrandId=2140"), _src("Dropps: are Dropps products vegan?", "https://info.dropps.com/en-US/are-dropps-products-vegan-417353"), _src("Dropps: are Dropps cruelty-free?", "https://info.dropps.com/en-US/are-dropps-cruelty-free-437953"),
+              _src("Private Equity Wire: The Craftory takes a stake in Dropps (19 February 2020)", "https://www.privateequitywire.co.uk/craftory-takes-stake-dropps/")])
+_new("cleancult", "Cleancult", "check", "Certified cruelty-free by Leaping Bunny. Most of its liquid and spray products are vegan, but items like the dryer balls contain sheep's wool, so vegan varies by product.",
+     vegan="partial", vc="medium", category=["household-cleaning", "laundry"], region=_CC,
+     sources=[_src("Leaping Bunny: Cleancult brand page", "https://www.leapingbunny.org/ShopBrandDetail?BrandId=1677")])
+_new("lovery", "Lovery", "check", "Certified cruelty-free by Leaping Bunny. Vegan varies by product: some products are labelled 100% vegan, but the brand as a whole isn't vegan. Its FAQ says its products are paraben-free and have never been tested on animals.",
+     vegan="partial", vc="medium", category=["body-shower", "skincare"],
+     sources=[_src("Leaping Bunny: Lovery brand page", "https://www.leapingbunny.org/brand/lovery"), _src("Lovery: its FAQ", "https://lovery.com/pages/faq")])
+# --- says it's cruelty-free, not certified ---
+_h = _new("hero-cosmetics", "Hero Cosmetics", "unverified", "Hero Cosmetics says it's cruelty-free and vegan-friendly, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by Church & Dwight, which tests on animals.",
+     parent="Church & Dwight", vegan="full", vc="low", claim="Hero Cosmetics says its products are cruelty-free and vegan-friendly.", category=["skincare"],
+     sources=[_src("Hero Cosmetics: who is Hero Cosmetics? (cruelty-free and vegan-friendly statement)", "https://www.herocosmetics.us/blogs/news/who-is-hero-cosmetics-the-consciously-clinical-acne-care-company"),
+              _src("Cosmetics & Toiletries: Church & Dwight is acquiring Hero Mighty Patch (6 September 2022)", "https://www.cosmeticsandtoiletries.com/news/companies/news/22431732/church-dwight-co-acquiring-hero-mighty-patch"), _LBG, _PETAB]); _vb("hero-cosmetics")
+if _h: _h["parentTestsOnAnimals"] = True
+_new("suave", "Suave", "unverified", "Suave says it upholds a steadfast no animal testing policy, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It was on PETA's list in 2020, but isn't listed there now. Not all of its products are vegan. This is the US brand, owned by Evermark. There's also a separate UK brand called Suave Male Grooming.",
+     parent="Evermark", vegan="partial", vc="medium", claim="Suave says it upholds a steadfast no animal testing policy.", category=["haircare", "body-shower", "skincare"], region=_CC,
+     sources=[_src("Suave: our commitment (no animal testing statement)", "https://www.suave.com/pages/our-commitment"), _src("PETA: announcement that Suave was accredited (12 February 2020)", "https://www.peta.org/?p=952860"),
+              _src("Yellow Wood Partners: Suave Brands and Elida Beauty complete merger to create Evermark (20 January 2026)", "https://yellowwoodpartners.com/news-article/yellow-wood-partners-portfolio-companies-suave-brands-and-elida-beauty-complete-merger-to-create-evermark-a-leading-global-platform-of-personal-care-brands"), _LBG, _PETAB])
+_new("suave-male-grooming", "Suave Male Grooming (UK)", "unverified", "Suave Male Grooming says it never tests on animals or uses ingredients tested on animals, and that its products are PETA-certified cruelty-free and certified vegan. I couldn't find it on PETA, Leaping Bunny or Cruelty Free International, so it isn't certified by any of them. This is the UK men's grooming brand, not the US brand Suave.",
+     vegan="full", vc="low", claim="Suave Male Grooming says it never tests on animals or uses ingredients tested on animals.", category=["haircare", "body-shower"], region="Europe",
+     sources=[_src("Suave Products: about us (UK)", "https://suaveproducts.co.uk/about-us/"), _LBG, _PETAB]); _vb("suave-male-grooming")
+_new("purito", "Purito", "unverified", "Purito says it's vegan and cruelty-free, and that its suppliers don't test on animals either, but it isn't certified by any organisation.",
+     vegan="full", vc="low", claim="Purito says its products are vegan and cruelty-free, and that its suppliers don't test on animals.", category=["skincare"], region="Asia",
+     sources=[_src("Purito: its FAQ", "https://purito.com/help/faq/"), _LBG, _PETAB]); _vb("purito")
+_new("orange-house", "Orange House", "unverified", "Orange House says it's cruelty-free and 100% vegan, and that it never tests on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its site links to YFYCPG, but doesn't explain how the two are related.",
+     vegan="full", vc="low", claim="Orange House says it's cruelty-free and 100% vegan, and never tests its products on animals.", category=["household-cleaning", "laundry"],
+     sources=[_src("Orange House: contact us / FAQ", "https://orangehouseglobal.com/pages/contactus"), _src("Orange House: its liquid laundry detergent page", "https://orangehouseglobal.com/products/orange-house-liquid-laundry-detergent"), _LBG, _PETAB]); _vb("orange-house")
+_new("the-clean-people", "The Clean People", "unverified", "The Clean People says it's cruelty-free and vegan, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     vegan="full", vc="low", claim="The Clean People says its products are cruelty-free and vegan.", category=["laundry", "household-cleaning"],
+     sources=[_src("The Clean People: top reasons to switch", "https://www.getcleanpeople.com/top-reasons-switch-clean-people/"), _LBG, _PETAB]); _vb("the-clean-people")
+_new("naturewell", "Naturewell", "unverified", "Naturewell says it's cruelty-free and vegan, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by AX Beauty Brands.",
+     parent="AX Beauty Brands", vegan="full", vc="low", claim="Naturewell says it's cruelty-free and vegan.", category=["skincare", "body-shower"],
+     sources=[_src("Naturewell: the importance of cruelty-free beauty", "https://naturewellbeauty.com/blogs/blog/the-importance-of-cruelty-free-beauty"), _src("Cosmetics Design: Naturewell's lip collection hits 3,000 Walmart stores (AX Beauty Brands)", "https://www.cosmeticsdesign.com/Article/2025/09/04/naturewells-lip-collection-hits-3000-walmart-stores"), _LBG, _PETAB]); _vb("naturewell")
+_new("sympli-beautiful", "Sympli Beautiful", "unverified", "Sympli Beautiful is iHerb's own skincare brand. iHerb lists it as cruelty-free and its packaging says so, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Vegan varies by product, so check each product's ingredients. This isn't the Canadian clothing brand Sympli.",
+     parent="iHerb", vegan="partial", vc="low", claim="iHerb lists Sympli Beautiful as cruelty-free, and its packaging says so.", category=["skincare"],
+     sources=[_src("SkinSort: Sympli Beautiful (cruelty-free brand claim)", "https://skinsort.com/products/sympli-beautiful/serumdipity-pycnogenol-serum"), _LBG, _PETAB])
+_new("beloved", "Beloved", "unverified", "Beloved says its products are PETA approved and vegan, but it isn't listed on PETA's cruelty-free list now. It's a spin-off line of Love Beauty and Planet, which is listed by PETA but owned by Unilever.",
+     parent="Unilever", vegan="full", vc="low", claim="Beloved says its products are PETA approved and vegan.", category=["body-shower"], region=_CC,
+     sources=[_src("Beloved: about us (PETA approved claim)", "https://www.belovedbathandbody.com/us/en/about-beloved/about-us.html"), _src("PETA: Love Beauty and Planet (Unilever) company page", "https://crueltyfree.peta.org/company/love-beauty-and-planet-unilever/"), _PETAB]); _vb("beloved")
+_new("safely", "Safely", "unverified", "Safely says it doesn't test on animals at any stage of product development, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It's marketed as a vegan household and personal care brand. Independently owned.",
+     vegan="full", vc="low", claim="Safely says it doesn't test on animals at any stage of product development.", category=["household-cleaning", "body-shower"], region=_CC,
+     sources=[_src("Safely: its FAQ", "https://getsafely.com/pages/faq"), _src("Happi: Safely receives B Corp certification (vegan household and personal care brand)", "https://www.happi.com/breaking-news/vegan-household-and-personal-care-brand-safely-receives-b-corp-certification/"), _LBG, _PETAB]); _vb("safely")
+_new("native", "Native", "unverified", "Native says it doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International, and PETA lists it as a company that may not be cruelty-free. Owned by Procter & Gamble, who test where legally required.",
+     parent="Procter & Gamble", vegan="full", vc="low", claim="Native says its products are made without animal testing, and that none of their ingredients come from animals.", category=["body-shower", "hygiene"], region=_CC,
+     sources=[_src("Native: its FAQ", "https://nativecos.com/pages/faq"), _src("PETA: Native company page (may not be cruelty-free)", "https://crueltyfree.peta.org/company/native/"), _src("CNBC: P&G has acquired Native (15 November 2017)", "https://www.cnbc.com/2017/11/15/pg-has-acquired-native-natural-deodorant-brand.html")]); _vb("native")
+if "native" in by: by["native"]["parentTestsOnAnimals"] = True
+_new("pop-arazzi", "Pop-arazzi", "unverified", "Pop-arazzi is CVS's own nail polish brand. CVS says it doesn't test its store brand products on animals, and its product page says the polish is vegan, but Pop-arazzi isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+     parent="CVS Health Corporation", vegan="full", vc="low", claim="CVS says it doesn't test any store brand products on animals.", category=["makeup-beauty"],
+     sources=[_src("CVS Health: its animal testing policy", "https://www.cvshealth.com/policies/animal-testing"), _src("CVS Health: Pop-arazzi nail polish product page (vegan statement)", "https://static-assets-reg.cvshealth.com/shop/pop-arazzi-nail-polish-prodid-1015173"), _src("PETA: CVS company page (may not be cruelty-free)", "https://crueltyfree.peta.org/company/cvs/"), _LBG]); _vb("pop-arazzi")
+# --- certified by PETA only ---
+_new("biokleen", "Biokleen", "check", "Listed by PETA as cruelty-free. I couldn't confirm whether its products are vegan. Owned by PurposeBuilt Brands. This is Biokleen (Bi-O-Kleen) the laundry and household cleaning brand, not the industrial cleaner Bio-Kleen or the Swedish wood-care brand BIOkleen.",
+     parent="PurposeBuilt Brands", vegan="unknown", category=["laundry", "household-cleaning"], region=_CC,
+     sources=[_src("PETA: Biokleen company page", "https://crueltyfree.peta.org/company/biokleen/"), _src("Biokleen: its story (never tested on animals)", "https://biokleenhome.com/our-story"), _src("PurposeBuilt Brands: its brands", "https://purposebuiltbrands.com/brands"), _LBG])
+_new("sonett", "Sonett", "check", "Listed by PETA as cruelty-free. Most of its products carry the Vegan Society label, but a few (such as Wool Care and Gall Soap) aren't vegan, so vegan varies by product. Independently owned German company, founded in 1977.",
+     vegan="partial", vc="medium", category=["laundry", "household-cleaning"], region="Europe",
+     sources=[_src("PETA: SONETT company page", "https://crueltyfree.peta.org/company/sonett/"), _src("Cosh: Sonett brand page (Vegan Society label, non-vegan products)", "https://cosh.eco/en/brands/sonett"), _src("Sonett: about the company (founded 1977)", "https://www.sonett.eu/unternehmen/"), _LBG])
+# --- owner tests / sells where required ---
+_new("dreft", "Dreft", "bad", "Dreft tests on animals. It has no animal testing policy of its own, so it takes its owner's position: Procter & Gamble tests where required by law. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan.",
+     parent="Procter & Gamble", vegan="no", category=["laundry"], region=_CC,
+     sources=[_src("Procter & Gamble: its animal testing position (published on its Downy page)", "https://downy.com/en-us/fabric-softener-tips/how-to-use-downy/does-downy-test-on-animals"), _PETAB])
+if "dreft" in by: by["dreft"]["parentTestsOnAnimals"] = True
+_new("eucerin", "Eucerin", "bad", "Eucerin tests on animals where required. Its UK page says it avoids animal testing wherever the law allows, but where Chinese law requires official safety registration, state-authorised institutes may test. PETA lists it as a company that may not be cruelty-free, and it isn't certified by Leaping Bunny / Cruelty Free International. Owned by Beiersdorf.",
+     parent="Beiersdorf", vegan="unknown", category=["skincare"],
+     sources=[_src("Eucerin UK: animal testing", "https://eucerin.co.uk/sustainability/products-and-ingredients/animal-testing"), _src("PETA: Eucerin company page", "https://crueltyfree.peta.org/company/eucerin/"), _LBG])
+_new("essie", "Essie", "bad", "Essie tests on animals where required. It isn't certified by Leaping Bunny / Cruelty Free International, and PETA lists it as a company that may not be cruelty-free. Owned by L'Oréal, which says some health authorities, such as China's, may still require animal tests. Essie describes some of its polishes as a vegan formula, but it isn't certified vegan.",
+     parent="L'Oréal", vegan="partial", vc="low", category=["makeup-beauty"],
+     sources=[_src("PETA: Essie Cosmetics company page", "https://crueltyfree.peta.org/company/essie-cosmetics/"), _src("L'Oréal: its alternative methods to animal testing", "https://www.loreal.com/en/canada/articles/commitments/our-alternative-methods-to-animal-testing/"), _src("L'Oréal: its Essie brand page", "https://www.loreal.com/en/consumer-products-division/essie/"), _LBG])
+_new("all-laundry", "all (laundry detergent)", "bad", "all tests on animals where required. Its owner, Henkel, says it doesn't test hair and body care products on animals, but that animal testing is still mandatory in some countries and it can't rule out that an ingredient was tested at some point. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. all is the US and Canada brand, which came to Henkel with its purchase of The Sun Products Corporation.",
+     parent="Henkel", vegan="unknown", category=["laundry"], region=_CC,
+     sources=[_src("Henkel: its position on test methods", "https://www.henkel.com/sustainability/positions/test-methods"), _src("Henkel: news release on acquiring The Sun Products Corporation (24 June 2016)", "https://www.henkel.com/resource/blob/691590/1e18cb471cb8a545953e696c8237f830/data/news-release-henkel-to-acquire-sun-products.pdf"), _LBG, _PETAB])
+# --- no information found ---
+_new("klavuu", "Klavuu", "unverified", "I couldn't find an animal testing policy for Klavuu, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It has some products sold as vegan and cruelty-free, such as the Real Vegan Collagen Cream, but the brand as a whole isn't certified, so vegan varies by product.",
+     vegan="partial", vc="low", category=["skincare"], region="Asia",
+     sources=[_src("Klavuu: its website", "https://www.klavuu.com/en"), _LBG, _PETAB])
+_new("kumano-cosme", "Kumano Cosme", "unverified", "I couldn't find a published animal testing policy for Kumano Cosme, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by Kumanoyushi Co., Ltd. Vegan varies by product: the range includes horse oil and honey-based products.",
+     parent="Kumanoyushi Co., Ltd.", vegan="partial", vc="low", category=["haircare", "body-shower", "skincare"], region="Asia",
+     sources=[_src("Kumanoyushi: its website", "https://www.kumanoyushi.co.jp/"), _LBG, _PETAB])
+_new("fuwa3e", "Fuwa3e", "unverified", "I couldn't find an animal testing policy for Fuwa3e, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Made by FUWA Biotech Co., Ltd in Thanh Hoa, Vietnam. Its site says the enzyme comes from plants, but it makes no vegan claim.",
+     vegan="unknown", category=["laundry", "household-cleaning"], region="Asia",
+     sources=[_src("FUWA: Eco enzyme Fuwa3e", "https://fuwa.com.vn/en/eco-enzyme-fuwa3e/"), _LBG, _PETAB])
+_new("equate", "Equate", "unverified", "Equate is Walmart's own health and beauty brand. I couldn't find an animal testing policy for it, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Much of the range is pharmacy products.",
+     parent="Walmart Inc.", category=["skincare", "hygiene"], region=_CC,
+     sources=[_src("Walmart: Equate brand page", "https://www.walmart.com/c/brand/equate-equate-collection"), _LBG, _PETAB])
+_new("solimo", "Solimo", "unverified", "Solimo is Amazon's own brand across household, kitchen and personal care. I couldn't find an animal testing policy for it, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Some Solimo products are now sold as Amazon Basics.",
+     parent="Amazon", category=["household-cleaning", "skincare"],
+     sources=[_src("Wikipedia: list of Amazon brands", "https://en.wikipedia.org/wiki/List_of_Amazon_brands"), _LBG, _PETAB])
+for _s in ("ecos", "mollys-suds", "aspenclean", "orly", "dropps", "cleancult", "lovery", "hero-cosmetics", "suave", "suave-male-grooming", "purito", "orange-house", "the-clean-people", "naturewell", "sympli-beautiful", "beloved", "safely", "native", "pop-arazzi", "biokleen", "sonett", "dreft", "eucerin", "essie", "all-laundry", "klavuu", "kumano-cosme", "fuwa3e", "equate", "solimo"):
+    if _s in by: by[_s]["lastVerified"] = today
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _sm2(t):
+    if "'Equate'" in t: return t
+    return t.replace("'Beauty 360',", "'Beauty 360', 'Equate', 'Solimo', 'Pop-arazzi',", 1)
+_rw("scripts/generate-brand-check.js", _sm2)
+print("Section 50 applied")
+
+# 51. Razor brands (Ash, 14 Oct): LORD, Shark, Racer (LORD brands) and Dorco. Nothing about animal testing or vegan is on any page read;
+#     the Dorco "consumer panels" quote and the stearate / vegan reasoning are from an AI overview with no source, so they are not on the site.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_LS = _src("LORD: its website (shaving brands)", "https://www.lordshave.net/")
+_new("lord-razors", "LORD", "unverified", "I couldn't find an animal testing policy for LORD razor blades, and they aren't certified by Leaping Bunny / Cruelty Free International or PETA. LORD International Co. is based in Alexandria, Egypt, founded in 1930. I couldn't find a vegan claim either. This is the razor blade company, not another brand called Lord.",
+     parent="LORD International Co.", category=["hygiene"], region="Europe",
+     sources=[_src("LORD: about the company (no animal testing statement)", "https://razorslord.com/?page_id=1209"), _src("LORD: its profile and history", "https://www.lordshave.net/history.php"), _LBG, _PETAB])
+_new("shark-razors", "Shark (razor blades)", "unverified", "Shark razor blades are a LORD brand, so I've assumed LORD's position applies. I couldn't find an animal testing policy, and Shark isn't certified by Leaping Bunny / Cruelty Free International or PETA. I couldn't find a vegan claim either. This is the razor brand made by LORD International Co. in Egypt, not the vacuum and hair tools company Shark.",
+     parent="LORD International Co.", category=["hygiene"],
+     sources=[_src("LORD: Shark razors", "https://www.lordshave.net/category/Shaving/Shark/5"), _LS, _LBG, _PETAB])
+_new("racer-razors", "Racer (razor blades)", "unverified", "Racer razor blades are a LORD brand, so I've assumed LORD's position applies. I couldn't find an animal testing policy, and Racer isn't certified by Leaping Bunny / Cruelty Free International or PETA. I couldn't find a vegan claim either.",
+     parent="LORD International Co.", category=["hygiene"],
+     sources=[_src("LORD: Racer razors", "https://www.lordshave.net/category/Shaving/Racer/4"), _LS, _LBG, _PETAB])
+_new("dorco", "Dorco", "unverified", "I couldn't find a published animal testing policy for Dorco, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't on PETA's razor guide. I couldn't find a vegan claim or certification either. Dorco Co., Ltd. is based in Seoul, South Korea, and sells in the US as Dorco USA.",
+     category=["hygiene"], region="Asia",
+     sources=[_src("Dorco USA: about", "https://dorcousa.com/private-label-razors-razor-store-brands-brand-oem-about"), _src("PETA: cruelty-free razors guide (Dorco isn't listed)", "https://peta.org/?p=976374"), _LBG, _PETAB])
+for _s in ("lord-razors", "shark-razors", "racer-razors", "dorco"):
+    if _s in by: by[_s]["lastVerified"] = today
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 51 applied")
+
+# 52. Fuwa3e, Equate, Solimo updated with Ash's findings (14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_f = by.get("fuwa3e")
+if _f:
+    _f.update(vegan="full", vegan_conf=None, veganConfidence="high", veganBasis="certified", claim="Fuwa3e says: \"We are committed to never testing any products on animals at any stages of research and development.\"", lastVerified=today,
+        note="Fuwa3e says it never tests its products on animals at any stage of research and development, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It's certified vegan by the Vegan Society. Made by FUWA Biotech Co., Ltd in Thanh Hoa, Vietnam.")
+    _f.pop("vegan_conf", None)
+    _addsrc(_f, "FUWA: about Fuwa (never testing on animals statement)", "https://fuwa.com.vn/en/about-fuwa/")
+_e = by.get("equate")
+if _e:
+    _e["note"] = "Equate is Walmart's own health and beauty brand. I couldn't find an animal testing policy or any vegan information for it, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Much of the range is pharmacy products."
+    _e["lastVerified"] = today
+_s = by.get("solimo")
+if _s:
+    _s.update(vegan="no", veganConfidence="low", lastVerified=today,
+        note="Solimo is Amazon's own brand across household, kitchen and personal care. It has no clear animal testing policy and isn't certified by Leaping Bunny / Cruelty Free International or PETA. It has no clear ingredient information, so it's listed as not vegan. Some Solimo products are now sold as Amazon Basics.")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 52 applied")
