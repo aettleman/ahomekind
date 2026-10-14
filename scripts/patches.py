@@ -1068,6 +1068,23 @@ if _ra:
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 42 applied")
 
+# 44. Avon: certified in four regions, not North America (Ash, Reddit, 14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_av = by.get("avon")
+if _av:
+    _av["region"] = "Africa & The Middle East, Asia, Europe, South & Central America"; _av["lastVerified"] = today
+    _av["note"] = ("Certified cruelty-free by Leaping Bunny / Cruelty Free International in Africa & The Middle East, Asia, Europe and South & Central America. North America isn't on its listing. "
+                   "Avon's US site says it doesn't conduct animal testing, but that it sells in China, where authorities require animal-based safety testing for some cosmetic categories, and it mentions no certification. "
+                   "Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. "
+                   "Owned by Regent LP, an investment company rather than a manufacturer, so it has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.")
+    _addsrc(_av, "Cruelty Free International: Avon listing (regions covered)", "https://www.crueltyfreeinternational.org/approved-brands/listing/avon/")
+    _addsrc(_av, "Avon (US): its animal welfare page", "https://www.avon.com/information/animal-welfare.html")
+    _av["answer"] = ("In Africa & The Middle East, Asia, Europe and South & Central America, no: Avon is certified cruelty-free there. In North America it isn't certified, and Avon's US site says it sells in China, "
+                     "where animal testing is required for some cosmetic categories. The sources are below.")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+_rw("scripts/generate-brand-pages.js", lambda t: t if "brand.answer" in t else t.replace("function testAnswer(brand) {\n", "function testAnswer(brand) {\n  if (brand.answer) return escapeHtml(brand.answer);\n", 1))
+print("Section 44 applied")
+
 # 43. Owner tool page for the laptop: ahomekind.com/owner-tool (not linked, not indexed)
 OWNER_TOOL = r"""<!DOCTYPE html>
 <html lang="en">
@@ -1463,3 +1480,69 @@ textarea { min-height: 76px; resize: vertical; }
 """
 open("owner-tool.html", "w", encoding="utf-8").write(OWNER_TOOL)
 print("Section 43 applied: owner-tool.html written")
+
+# 45. Avon split by region, Avon (North America), regions shown in the "Does X test on animals?" line, Kmart and Safeway name clashes (14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_av = by.get("avon")
+if _av:
+    _av["note"] = ("Avon International is certified cruelty-free by Leaping Bunny / Cruelty Free International. Its listing names Africa & The Middle East, Asia, Europe and South & Central America. "
+                   "In the US and Canada, Avon is a separate company, The Avon Company, owned by LG Household & Health Care, and isn't on the listing (see Avon (North America)). "
+                   "Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. "
+                   "Regent LP, an investment company rather than a manufacturer, owns Avon in Europe, Asia and Africa (it bought Avon International from Natura, reported as closed in January 2026), and Natura keeps Latin America. "
+                   "Regent has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.")
+    _av["answer"] = ("In the regions on its listing, no: Avon International is certified cruelty-free. In the US and Canada, Avon is a separate company that isn't certified, and its US site says it sells in China, "
+                     "where animal testing is required for some cosmetic categories. The sources are below.")
+_new("avon-north-america", "Avon (North America)", "bad",
+     "The Avon Company, which sells in the US and Canada, is a separate business from the Avon that holds the Cruelty Free International listing. Its US site says it doesn't conduct animal testing, but that it sells in China, where authorities require animal-based safety testing for some cosmetic categories, and it mentions no certification. Owned by LG Household & Health Care, which bought it in 2019.",
+     parent="LG Household & Health Care", category=["makeup-beauty", "skincare", "haircare"], region="USA & Canada", price="£",
+     sources=[{"label": "Avon (US): its animal welfare page", "url": "https://www.avon.com/information/animal-welfare.html"},
+              {"label": "Cruelty Free International: Avon listing (regions covered)", "url": "https://www.crueltyfreeinternational.org/approved-brands/listing/avon/"},
+              {"label": "Cosmetics Design Asia: LG Household & Health Care to acquire Avon North America for $125m (1 May 2019)", "url": "https://cosmeticsdesign-asia.com/Article/2019/05/01/LG-Household-Health-Care-to-acquire-Avon-North-America-for-125m"}])
+_km = by.get("Kmart") or by.get("kmart")
+if _km and "Australia and New Zealand" not in _km["note"]:
+    _km["note"] = _km["note"].rstrip() + " This listing is for Kmart in Australia and New Zealand."
+_sf = by.get("safeway")
+if _sf and "UK Safeway" not in _sf["note"]:
+    _sf["note"] = _sf["note"].rstrip() + " This is the UK Safeway brand, not the US supermarket chain."
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _regline(t):
+    if "regionSentence" in t: return t
+    t = t.replace("function testAnswer(brand) {", "function regionSentence(brand) { return brand.region ? ' Regions on its listing: ' + escapeHtml(brand.region) + '.' : ''; }\nfunction testAnswer(brand) {", 1)
+    t = t.replace("or PETA. The sources are below.';\n  if (brand.tier === 'warn')", "or PETA.' + regionSentence(brand) + ' The sources are below.';\n  if (brand.tier === 'warn')", 1)
+    t = t.replace("tests on animals or sells where the law requires it.';\n  if (brand.tier === 'bad')", "tests on animals or sells where the law requires it.' + regionSentence(brand);\n  if (brand.tier === 'bad')", 1)
+    return t
+_rw("scripts/generate-brand-pages.js", _regline)
+print("Section 45 applied")
+
+# 46. Avon: two separate listings, each with a plain warning about the other (Ash, 14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_av = by.get("avon"); _an = by.get("avon-north-america")
+if _av:
+    _av["name"] = "Avon (outside North America)"
+    _av["note"] = ("This listing doesn't cover Avon in the US or Canada. Avon there is a different company and isn't certified cruelty-free. "
+                   "Avon International is certified cruelty-free by Leaping Bunny / Cruelty Free International. Its listing names Africa & The Middle East, Asia, Europe and South & Central America. "
+                   "Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. "
+                   "Regent LP, an investment company rather than a manufacturer, owns Avon in Europe, Asia and Africa (it bought Avon International from Natura, reported as closed in January 2026), and Natura keeps Latin America. "
+                   "Regent has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.")
+    _av["answer"] = ("In the regions on its listing, no: Avon International is certified cruelty-free. In the US and Canada, Avon is a separate company that isn't certified, and its US site says it sells in China, "
+                     "where animal testing is required for some cosmetic categories. The sources are below.")
+if _an:
+    _an["name"] = "Avon (North America)"
+    _an["note"] = ("If you're buying Avon in the US or Canada, it isn't certified cruelty-free. This is not the same company as the Avon that holds the Cruelty Free International listing in Europe, Africa, Asia and Latin America. "
+                   "The Avon Company, which sells in the US and Canada, says on its US site that it doesn't conduct animal testing, but that it sells in China, where authorities require animal-based safety testing for some cosmetic categories, and it mentions no certification. "
+                   "Owned by LG Household & Health Care, which bought it in 2019.")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 46 applied")
+
+# 47. Avon: how to tell which Avon you're buying (Ash, 14 Oct)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_av = by.get("avon"); _an = by.get("avon-north-america")
+if _av and "avon.uk.com" not in _av["note"]:
+    _av["note"] = _av["note"].rstrip() + (" Not sure which Avon you're buying? Check that it comes from one of Avon's sites outside North America, such as avon.uk.com in the UK or avon.co.in in India, and look for the Leaping Bunny logo. "
+                                          "Avon's site for the US and Canada, avon.com, isn't covered. Avon's India site says all of its beauty products are approved under the Leaping Bunny programme.")
+    _addsrc(_av, "Avon UK: its website", "https://www.avon.uk.com/")
+    _addsrc(_av, "Avon India: its animal testing page (Leaping Bunny approval)", "https://www.avon.co.in/pages/avon-worldwide-1")
+if _an and "avon.com" not in _an["note"]:
+    _an["note"] = _an["note"].rstrip() + " Not sure which Avon you're buying? If it's from avon.com, it isn't covered by the Cruelty Free International listing. Look for the Leaping Bunny logo, and if it isn't there, check the brand's own site."
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 47 applied")

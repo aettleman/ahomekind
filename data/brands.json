@@ -256,7 +256,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -367,7 +367,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -414,7 +414,7 @@
         "url": "https://www.investegate.co.uk/announcement/rns/reckitt-benckiser-group--rkt/reckitt-agrees-to-divest-essential-home/8985772"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "alba-botanica",
@@ -501,7 +501,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -700,7 +700,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -955,7 +955,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1056,7 +1056,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1321,7 +1321,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1441,7 +1441,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1711,13 +1711,13 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "avon",
-    "name": "Avon",
+    "name": "Avon (outside North America)",
     "tier": "good",
-    "note": "Leaping Bunny certified (Cruelty Free International) since 2024, covering its entire global product range. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. Owned by Regent LP, an investment company rather than a manufacturer, so it has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy.",
+    "note": "This listing doesn't cover Avon in the US or Canada. Avon there is a different company and isn't certified cruelty-free. Avon International is certified cruelty-free by Leaping Bunny / Cruelty Free International. Its listing names Africa & The Middle East, Asia, Europe and South & Central America. Avon confirmed to me by email that all of its products are vegan, but it has no vegan certification. Regent LP, an investment company rather than a manufacturer, owns Avon in Europe, Asia and Africa (it bought Avon International from Natura, reported as closed in January 2026), and Natura keeps Latin America. Regent has no animal testing policy of its own that applies to Avon. What counts is each brand's own policy. Not sure which Avon you're buying? Check that it comes from one of Avon's sites outside North America, such as avon.uk.com in the UK or avon.co.in in India, and look for the Leaping Bunny logo. Avon's site for the US and Canada, avon.com, isn't covered. Avon's India site says all of its beauty products are approved under the Leaping Bunny programme.",
     "parentCompany": "Regent LP",
     "vegan": "full",
     "evidence": "Cruelty Free International (Leaping Bunny) approved brand listing",
@@ -1731,7 +1731,7 @@
       "haircare"
     ],
     "veganConfidence": "medium",
-    "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
+    "region": "Africa & The Middle East, Asia, Europe, South & Central America",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -1748,10 +1748,27 @@
       {
         "label": "Modaes: Natura closes the sale of Avon International to Regent (7 January 2026)",
         "url": "https://www.modaes.com/global/companies/brazils-natura-closes-the-sale-of-avon-international-to-regent-lp"
+      },
+      {
+        "label": "Cruelty Free International: Avon listing (regions covered)",
+        "url": "https://www.crueltyfreeinternational.org/approved-brands/listing/avon/"
+      },
+      {
+        "label": "Avon (US): its animal welfare page",
+        "url": "https://www.avon.com/information/animal-welfare.html"
+      },
+      {
+        "label": "Avon UK: its website",
+        "url": "https://www.avon.uk.com/"
+      },
+      {
+        "label": "Avon India: its animal testing page (Leaping Bunny approval)",
+        "url": "https://www.avon.co.in/pages/avon-worldwide-1"
       }
     ],
     "veganBasis": "brand",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14",
+    "answer": "In the regions on its listing, no: Avon International is certified cruelty-free. In the US and Canada, Avon is a separate company that isn't certified, and its US site says it sells in China, where animal testing is required for some cosmetic categories. The sources are below."
   },
   {
     "slug": "awake-organics",
@@ -1845,7 +1862,7 @@
     ],
     "veganConfidence": "high",
     "region": "Europe",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -1899,7 +1916,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -1952,7 +1969,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2033,7 +2050,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2208,7 +2225,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2447,7 +2464,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2596,7 +2613,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2630,7 +2647,7 @@
     ],
     "veganConfidence": "low",
     "region": "Africa & The Middle East, Asia, Australia & New Zealand, Europe, South & Central America, USA & Canada",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "BIC: its shareholder structure",
@@ -2656,7 +2673,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -2722,7 +2739,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "biohygiene",
@@ -2878,7 +2895,7 @@
         "url": "https://www.v-label.com"
       }
     ],
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "claim": "Its FAQ says its products aren't tested on animals and that its toothpastes and mouthwashes are vegan-friendly.",
     "veganBasis": "certified",
     "veganCert": "V-Label"
@@ -2924,7 +2941,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3075,7 +3092,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3404,7 +3421,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3461,7 +3478,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3590,7 +3607,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3648,7 +3665,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3734,7 +3751,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -3835,7 +3852,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4004,7 +4021,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4036,7 +4053,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -4066,7 +4083,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4123,7 +4140,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -4724,7 +4741,7 @@
         "url": "https://www.investegate.co.uk/announcement/rns/reckitt-benckiser-group--rkt/reckitt-agrees-to-divest-essential-home/8985772"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "citre-shine",
@@ -5369,7 +5386,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -5841,7 +5858,7 @@
     ],
     "veganConfidence": "medium",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -6984,7 +7001,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "PETA",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "e45",
@@ -7006,7 +7023,7 @@
     "region": "Europe",
     "parentTestsOnAnimals": true,
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Karo Healthcare: annual summary and sustainability statement 2025 (animal welfare, p.55)",
@@ -11725,7 +11742,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "joico",
@@ -12324,7 +12341,7 @@
     "region": "Europe",
     "sources": [],
     "veganBasis": "brand",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "kireyna",
@@ -12378,7 +12395,7 @@
     "slug": "kmart",
     "name": "Kmart",
     "tier": "check",
-    "note": "We're Kmart, here to make everyday living brighter since 1969 in Victoria. Cruelty-free approved by Cruelty Free International.",
+    "note": "We're Kmart, here to make everyday living brighter since 1969 in Victoria. Cruelty-free approved by Cruelty Free International. This listing is for Kmart in Australia and New Zealand.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -13528,7 +13545,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "little-heroes",
@@ -13582,7 +13599,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "living-proof",
@@ -14704,7 +14721,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "claim": "",
     "sources": [
       {
@@ -15471,7 +15488,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "miss-organics",
@@ -16590,7 +16607,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -16701,7 +16718,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "new-dana-perfumes",
@@ -17511,7 +17528,7 @@
         "url": "https://www.kenvue.com/policies-positions/animal-testing"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "oio-lab",
@@ -17910,7 +17927,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "origins",
@@ -17929,7 +17946,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -18706,7 +18723,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "philosophy",
@@ -19789,7 +19806,7 @@
         "url": "https://www.radox.co.uk/"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "raid",
@@ -19875,7 +19892,7 @@
         "url": "https://www.leapingbunny.org/shopping-guide"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "raven-botanicals",
@@ -20239,7 +20256,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -20713,7 +20730,7 @@
     "slug": "safeway",
     "name": "Safeway",
     "tier": "check",
-    "note": "A grocery brand owned by Morrisons. Cruelty-free approved by Cruelty Free International.",
+    "note": "A grocery brand owned by Morrisons. Cruelty-free approved by Cruelty Free International. This is the UK Safeway brand, not the US supermarket chain.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -20859,7 +20876,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "salvatore-ferragamo",
@@ -22576,7 +22593,7 @@
       }
     ],
     "parentTestsOnAnimals": true,
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "solgar-vitamin-company",
@@ -22786,7 +22803,7 @@
         "url": "https://www.stives.com/blogs/news/products-not-tested-on-animals"
       }
     ],
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "claim": "Its FAQ says St. Ives was officially PETA-certified cruelty-free across its entire range as of December 2018, and that it is committed to never testing on animals."
   },
   {
@@ -23270,7 +23287,7 @@
     ],
     "region": "Europe",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Cruelty Free International",
@@ -23313,7 +23330,7 @@
       }
     ],
     "parentTestsOnAnimals": true,
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "superdrug-own-brand-dental",
@@ -23343,7 +23360,7 @@
       }
     ],
     "parentTestsOnAnimals": true,
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "superdrug-pro-care",
@@ -23362,7 +23379,7 @@
     ],
     "veganConfidence": "low",
     "region": "Europe",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -24515,7 +24532,7 @@
     ],
     "veganBasis": "certified",
     "veganCert": "Vegan Society",
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "the-powder-shampoo",
@@ -26404,7 +26421,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Cruelty Free Kitty",
@@ -26690,7 +26707,7 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
@@ -26847,7 +26864,7 @@
     ],
     "region": "",
     "veganConfidence": "low",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
@@ -27711,7 +27728,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "Its FAQ says all its products are cruelty-free and that it doesn't test on animals. Its About page says it develops all of its products without animal testing.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Beauty of Joseon: its own FAQ (cruelty-free and vegan products)",
@@ -27762,7 +27779,7 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "amlactin",
@@ -27795,7 +27812,7 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ],
-    "lastVerified": "2026-10-13"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "tesco",
@@ -27892,7 +27909,7 @@
     "veganConfidence": "high",
     "region": "USA & Canada",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: its cocokind listing",
@@ -27922,7 +27939,7 @@
     "veganConfidence": "medium",
     "region": "USA & Canada",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Nécessaire: its FAQ (vegan ingredients and certification)",
@@ -27994,7 +28011,7 @@
     "veganConfidence": "low",
     "region": "Asia",
     "claim": "Missha says it doesn't conduct animal testing, and that it is strictly against animal testing for product development.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "K-Beauty House: its Missha brand page (says it doesn't conduct animal testing)",
@@ -28036,7 +28053,7 @@
     "veganConfidence": "medium",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Well People: its FAQ (cruelty-free and vegan statements)",
@@ -28075,7 +28092,7 @@
     "veganConfidence": "high",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: Formula 10.0.6 company page",
@@ -28104,7 +28121,7 @@
     "veganConfidence": "medium",
     "region": "",
     "claim": "Lume says its products are cruelty-free and vegan.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Lume: its help centre (vegan and cruelty-free statement)",
@@ -28138,7 +28155,7 @@
     "veganConfidence": "low",
     "region": "Asia",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "PETA: COSRX company page",
@@ -28173,7 +28190,7 @@
     "veganConfidence": "high",
     "region": "USA & Canada",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Rael: its FAQ (vegan and Leaping Bunny statements)",
@@ -28274,7 +28291,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "OPI says it doesn't test its ingredients or products on animals, and never asks its suppliers or contract manufacturers to.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "OPI: its FAQ (animal testing statement)",
@@ -28303,7 +28320,7 @@
     "veganConfidence": "medium",
     "region": "USA & Canada",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Starface: its FAQ (vegan and Leaping Bunny statements)",
@@ -28337,7 +28354,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "Vagisil says it doesn't test on animals.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Vagisil: its FAQ (animal testing statement)",
@@ -28370,7 +28387,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "Summer's Eve says its products aren't tested on animals.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Summer's Eve: its FAQ (animal testing statement)",
@@ -28433,7 +28450,7 @@
     "veganConfidence": "low",
     "region": "Asia",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Mediheal fan site: its FAQ (not the brand's own site)",
@@ -28496,7 +28513,7 @@
     "veganConfidence": "medium",
     "region": "USA & Canada",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Vacation: its FAQ (vegan and Leaping Bunny statements)",
@@ -28527,7 +28544,7 @@
     "veganConfidence": "medium",
     "region": "",
     "claim": "Zum says its products are never tested on animals, only on people at the Zum Factory.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Indigo Wild: its FAQ (Zum animal testing and vegan statements)",
@@ -28561,7 +28578,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -28591,7 +28608,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -28621,7 +28638,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Albertsons Companies: its animal well-being page",
@@ -28655,7 +28672,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
@@ -28685,7 +28702,7 @@
     "veganConfidence": "low",
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "CVS Health: its store brand sustainability page",
@@ -28718,7 +28735,7 @@
     "veganConfidence": "low",
     "region": "Europe",
     "claim": "The Yorkshire Soap Company says it has never tested on animals.",
-    "lastVerified": "2026-10-13",
+    "lastVerified": "2026-10-14",
     "sources": [
       {
         "label": "The Yorkshire Soap Company: its FAQs (animal testing and animal-derived ingredients)",
@@ -28733,5 +28750,41 @@
         "url": "https://crueltyfree.peta.org/"
       }
     ]
+  },
+  {
+    "slug": "avon-north-america",
+    "name": "Avon (North America)",
+    "tier": "bad",
+    "note": "If you're buying Avon in the US or Canada, it isn't certified cruelty-free. This is not the same company as the Avon that holds the Cruelty Free International listing in Europe, Africa, Asia and Latin America. The Avon Company, which sells in the US and Canada, says on its US site that it doesn't conduct animal testing, but that it sells in China, where authorities require animal-based safety testing for some cosmetic categories, and it mentions no certification. Owned by LG Household & Health Care, which bought it in 2019. Not sure which Avon you're buying? If it's from avon.com, it isn't covered by the Cruelty Free International listing. Look for the Leaping Bunny logo, and if it isn't there, check the brand's own site.",
+    "parentCompany": "LG Household & Health Care",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-14",
+    "sources": [
+      {
+        "label": "Avon (US): its animal welfare page",
+        "url": "https://www.avon.com/information/animal-welfare.html"
+      },
+      {
+        "label": "Cruelty Free International: Avon listing (regions covered)",
+        "url": "https://www.crueltyfreeinternational.org/approved-brands/listing/avon/"
+      },
+      {
+        "label": "Cosmetics Design Asia: LG Household & Health Care to acquire Avon North America for $125m (1 May 2019)",
+        "url": "https://cosmeticsdesign-asia.com/Article/2019/05/01/LG-Household-Health-Care-to-acquire-Avon-North-America-for-125m"
+      }
+    ],
+    "price": "£"
   }
 ]
