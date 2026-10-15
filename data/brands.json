@@ -14563,7 +14563,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -20422,7 +20422,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -30088,6 +30088,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Beiersdorf: its own animal testing policy",
+        "url": "https://reports.beiersdorf.com/annual-report/2023/combined-management-report/non-financial-statement/other-issues.html"
       }
     ]
   },
@@ -30157,6 +30161,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Unilever: its own animal testing policy",
+        "url": "https://www.unilever.com/files/glo-alternative-approaches-to-animal-testing.pdf"
       }
     ]
   },
@@ -30186,6 +30194,10 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ]
   },
@@ -30257,6 +30269,10 @@
       {
         "label": "Secret: Secret is cruelty-free",
         "url": "https://secret.com/en-us/about/secret-is-cruelty-free"
+      },
+      {
+        "label": "Procter & Gamble: its own animal testing policy",
+        "url": "https://us.pg.com/cruelty-free/"
       }
     ],
     "parentTestsOnAnimals": true
@@ -31158,5 +31174,318 @@
         "url": "https://tierraverde.bg/en/pages/za-nas"
       }
     ]
+  },
+  {
+    "slug": "biore",
+    "name": "Bioré",
+    "tier": "unverified",
+    "note": "Bioré says it doesn't test its products or the materials within them on animals, and that all its products in western markets are cruelty-free and vegan friendly, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Its page notes that laws sometimes require testing of materials outside the cosmetics category. Owned by Kao Corporation, whose policy allows animal testing where government agencies in particular countries require it.",
+    "parentCompany": "Kao Corporation",
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Europe",
+    "claim": "Bioré says it doesn't test its products or the materials within them on animals, and that its products in western markets are cruelty-free and vegan friendly.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Bioré UK: transparency (animal testing and vegan statement)",
+        "url": "https://www.biore.com/en-gb/transparency/"
+      },
+      {
+        "label": "Kao: its animal testing policy (exception where government agencies in particular countries require it)",
+        "url": "https://www.kao.com/global/en/innovation/safety-quality/animal-testing-policy/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "veganBasis": "brand",
+    "parentTestsOnAnimals": true
+  },
+  {
+    "slug": "mary-and-may",
+    "name": "Mary&May",
+    "tier": "unverified",
+    "note": "Mary&May says some of its products are vegan and cruelty-free on their labels, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, and I couldn't find an animal testing policy page for it. Owned by AIDKOREA COMPANY INC (also registered as Aid Korea Co., Ltd.), which also has no animal testing policy that I could find. Vegan varies by product.",
+    "parentCompany": "AIDKOREA COMPANY INC",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "Mary&May says some of its products are vegan and cruelty-free on their labels.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "SweetCare: Mary&May",
+        "url": "https://www.sweetcare.com/gb/b/maryandmay"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "patrick-ta-beauty",
+    "name": "Patrick Ta Beauty",
+    "tier": "unverified",
+    "note": "Patrick Ta Beauty lists its products as cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, and its help centre doesn't say it doesn't test on animals. Not every product is vegan. Founded in 2019 by the makeup artist Patrick Ta, with a minority growth investment from Stride Consumer Partners in October 2022. This isn't ONE/SIZE by Patrick Starrr.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "low",
+    "region": "",
+    "claim": "Patrick Ta Beauty lists \"Cruelty Free\" on its product pages.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Patrick Ta Beauty: its help centre",
+        "url": "https://patrickta.com/pages/help-center"
+      },
+      {
+        "label": "Patrick Ta Beauty: blush collection (\"Cruelty Free\" tag on product pages)",
+        "url": "https://patrickta.com/collections/blush"
+      },
+      {
+        "label": "Cosmetics Business: Patrick Ta Beauty receives investment from Stride Consumer Partners",
+        "url": "https://cosmeticsbusiness.com/patrick-ta-beauty-receives-investment-from-stride-consumer-partners-backers-of-first-aid-beauty-and-skinfix-204494"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "fenty-beauty",
+    "name": "Fenty Beauty",
+    "tier": "unverified",
+    "note": "Fenty Beauty says it never tests on animals in any region, and that it doesn't allow suppliers or retailers to test for it, but it isn't certified by Leaping Bunny / Cruelty Free International, and PETA lists it as a company that may not be cruelty-free because it hasn't signed PETA's statement. Fenty Beauty isn't a vegan line (some products contain beeswax and carmine), but Fenty Skin and Fenty Hair say they're fully vegan. A joint venture between LVMH and Rihanna, 50/50. In October 2026 it was reported that LVMH's stake is being sold, but I found no signed deal.",
+    "parentCompany": "LVMH / Rihanna (50/50)",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "haircare"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "Fenty Beauty says it never tests products or ingredients on animals, in any region, and doesn't allow suppliers or retailers to test for it.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Fenty Beauty: help and FAQs (animal testing and vegan statements)",
+        "url": "https://fentybeauty.com/en-gg/pages/help-faqs"
+      },
+      {
+        "label": "PETA: Fenty Beauty company page",
+        "url": "https://crueltyfree.peta.org/company/fenty-beauty/"
+      },
+      {
+        "label": "theGrio: Jay-Z's MarcyPen and LVMH's stake in Fenty Beauty (6 October 2026)",
+        "url": "https://thegrio.com/2026/10/06/jay-z-marcypen-fenty-beauty-lvmh-stake/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      }
+    ]
+  },
+  {
+    "slug": "china-glaze",
+    "name": "China Glaze",
+    "tier": "check",
+    "note": "Certified cruelty-free by Leaping Bunny. Not fully vegan, but it has vegan products, so vegan varies by product. This isn't the hair brand Glaze.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Leaping Bunny: China Glaze brand page",
+        "url": "https://www.leapingbunny.org/brand/china-glaze"
+      }
+    ]
+  },
+  {
+    "slug": "glamnetic",
+    "name": "Glamnetic",
+    "tier": "check",
+    "note": "Certified cruelty-free by Leaping Bunny. Not fully vegan, but it has vegan products, so vegan varies by product. Independently owned: 100% owned by its CEO, Ann McFerran, and co-founder Kevin Gould.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "makeup-beauty"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Leaping Bunny: Glamnetic brand page",
+        "url": "https://www.leapingbunny.org/brand/glamnetic"
+      },
+      {
+        "label": "Glamnetic: about us",
+        "url": "https://www.glamnetic.com/es/pages/about-us"
+      }
+    ]
+  },
+  {
+    "slug": "california-naturals",
+    "name": "California Naturals",
+    "tier": "check",
+    "note": "Certified cruelty-free by Leaping Bunny. Vegan varies by product: not every product is vegan, so check its ingredient glossary. This is the hair and body care brand founded by Shelby Wild, not California Baby or California Pure Naturals. Venture-backed: a Series B led by Align Ventures was announced in June 2026.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare",
+      "body-shower"
+    ],
+    "veganConfidence": "medium",
+    "region": "USA & Canada",
+    "claim": "",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Leaping Bunny: California Naturals brand page",
+        "url": "https://www.leapingbunny.org/brand/california-naturals"
+      },
+      {
+        "label": "California Naturals: its ingredient glossary",
+        "url": "https://thecalifornianaturals.com/pages/ingredients"
+      },
+      {
+        "label": "Beauty Independent: California Naturals Series B",
+        "url": "https://www.beautyindependent.com/?p=190686"
+      }
+    ]
+  },
+  {
+    "slug": "jason",
+    "name": "JĀSÖN",
+    "tier": "unverified",
+    "note": "JĀSÖN says it's cruelty-free, that it doesn't test its products or ingredients on animals or ask others to, and that its products use vegetarian ingredients, but it isn't currently Leaping Bunny certified. It used to be, but isn't any more, even though its FAQ still mentions the Leaping Bunny logo on its labels. It isn't listed by PETA. Vegan varies by product, as it describes its ingredients as vegetarian. Owned by Hain Celestial, which has said it's looking to sell its personal care business.",
+    "parentCompany": "Hain Celestial Group",
+    "vegan": "partial",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "body-shower",
+      "haircare",
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "USA & Canada",
+    "claim": "JĀSÖN says it doesn't test its products or ingredients on animals, nor ask others to, and that its products use vegetarian ingredients and are cruelty-free.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "JĀSÖN: FAQ and contact us",
+        "url": "https://www.jason-personalcare.com/faq-contact-us/"
+      },
+      {
+        "label": "Hain Celestial: acquires JASON Natural Products (2004)",
+        "url": "https://ir.hain.com/news-releases/news-release-details/hain-celestial-acquires-jason-natural-products-inc"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ]
+  },
+  {
+    "slug": "isntree",
+    "name": "Isntree",
+    "tier": "unverified",
+    "note": "Isntree says no products or ingredients are tested on animals, and that it doesn't use animal-derived materials in its formulations, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, and no vegan certification is named. It's a Korean skincare brand.",
+    "parentCompany": null,
+    "vegan": "full",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "skincare"
+    ],
+    "veganConfidence": "low",
+    "region": "Asia",
+    "claim": "Isntree says no products or ingredients are tested on animals, and that it doesn't use animal-derived materials in its formulations.",
+    "lastVerified": "2026-10-15",
+    "sources": [
+      {
+        "label": "Isntree: its website (animal testing statement)",
+        "url": "https://www.isntreebeauty.com/"
+      },
+      {
+        "label": "Leaping Bunny: approved brands (search for the brand)",
+        "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "PETA Beauty Without Bunnies (search for the brand)",
+        "url": "https://crueltyfree.peta.org/"
+      }
+    ],
+    "veganBasis": "brand"
   }
 ]
