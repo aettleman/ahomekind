@@ -1760,3 +1760,141 @@ if _bk:
     _addsrc(_bk, "Biokleen: its FAQ (never tested on animals, no animal ingredients)", "https://biokleenhome.com/faq")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 54 applied")
+
+# 55. Reddit list part 3 (15 Oct). Held back for Ash to check first: Bioré, Mary&May, Patrick Ta, Fenty Beauty, China Glaze, Glamnetic, JASON, Isntree, California Naturals.
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+def _pl(slug, label): return _src("PETA: %s company page" % label, "https://crueltyfree.peta.org/company/%s/" % slug)
+_NOPETA = " Isn't certified by Leaping Bunny / Cruelty Free International or PETA."
+# --- tests on animals / sells where required ---
+_new("aquaphor", "Aquaphor", "bad", "Aquaphor tests on animals where required. Its owner, Beiersdorf, says it doesn't test on animals unless the law specifically requires it, and names China. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and isn't vegan: it contains lanolin alcohol and beeswax.",
+     parent="Beiersdorf", vegan="no", category=["skincare"], region=_CC,
+     sources=[_src("Beiersdorf: research for alternatives to animal testing", "https://beiersdorf.com/about-us/research/research-for-alternatives-to-animal-testing"), _PETAB])
+_new("laneige", "Laneige", "bad", "Laneige tests on animals where required. PETA lists it as a company that may not be cruelty-free, and it isn't certified by Leaping Bunny / Cruelty Free International. Owned by Amorepacific, whose policy allows animal testing where other countries' regulations require it. It isn't a vegan brand.",
+     parent="Amorepacific Group", vegan="no", category=["skincare", "makeup-beauty"], region="Asia",
+     sources=[_pl("laneige", "Laneige"), _src("Amorepacific: its declaration on animal testing", "https://www.apgroup.com/int/en/commitments/respect-for-life/declaration-of-prohibition/declaration-of-prohibition.html"), _LBG])
+_new("sheamoisture", "SheaMoisture", "bad", "SheaMoisture tests on animals. Its FAQ says it doesn't test its products or ingredients on animals, but that some new US categories, such as antiperspirants and SPF, use ingredients its suppliers tested on animals to meet regulations, so it no longer meets PETA's criteria. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by Unilever, which bought Sundial Brands in 2017. Only some products are vegan.",
+     parent="Unilever", vegan="partial", category=["haircare", "body-shower", "skincare"], region=_CC,
+     sources=[_src("SheaMoisture: its FAQ (animal testing statement)", "https://www.sheamoisture.com/faqs.html"), _src("Black Enterprise: Unilever acquires Sundial Brands, owner of SheaMoisture (2017)", "https://blackenterprise.com/unilever-acquires-sundial-brands-owner-of-sheamoisture-in-for-undisclosed-amount/"), _PETAB])
+_new("dawn", "Dawn", "bad", "Dawn tests on animals where required. Its own page says Dawn doesn't test its products on animals, that Procter & Gamble stopped animal testing for consumer products unless required by law, and that some cleaning ingredients may face regulator testing requirements. It isn't certified by Leaping Bunny / Cruelty Free International or PETA, and I couldn't find a vegan claim. This is the US dish soap, not the UK P&G brand Fairy.",
+     parent="Procter & Gamble", category=["household-cleaning"], region=_CC,
+     sources=[_src("Dawn: is Dawn cruelty-free?", "https://dawn-dish.com/en-us/how-to/is-dawn-cruelty-free/"), _PETAB])
+_new("biofreeze", "Biofreeze", "bad", "Biofreeze takes its owner's position: Reckitt says it doesn't generally test on animals, but that governments sometimes require animal studies. Its FAQ says nothing on animal testing, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. I couldn't find a vegan claim. Reckitt bought it from Performance Health in 2021.",
+     parent="Reckitt Benckiser", category=["hygiene"], region=_CC,
+     sources=[_src("Reckitt: its animal testing policy", "https://www.reckitt.com/media/5833/rb-animal-testing-policy-2019.pdf"), _src("NJBIZ: RB completes Biofreeze and TheraPearl acquisition (12 July 2021)", "https://njbiz.com/rb-completes-biofreeze-therapearl-acquisition/"), _src("Biofreeze: its FAQ", "https://www.biofreeze.com/faq"), _PETAB])
+# --- cruelty-free itself, owner isn't ---
+_s = _new("secret-deodorant", "Secret", "warn", "Listed by PETA as cruelty-free (Secret deodorant, 2020), but owned by Procter & Gamble, who test on animals where required by law. Its website shows an icon saying cruelty free, paraben free and vegan, which is the brand's own claim and I couldn't tell which products it covers. This is the deodorant, not Victoria's Secret.",
+     parent="Procter & Gamble", vegan="partial", vc="low", category=["hygiene", "body-shower"], region=_CC,
+     sources=[_pl("secret-procter-gamble", "Secret"), _src("PETA: Secret deodorant is cruelty-free (8 July 2020)", "https://www.peta.org/news/secret-deodorant-cruelty-free/"), _src("Secret: Secret is cruelty-free", "https://secret.com/en-us/about/secret-is-cruelty-free")])
+if _s: _s["parentTestsOnAnimals"] = True
+_new("innisfree", "Innisfree", "warn", "Listed by PETA as cruelty-free (the brand says it was certified on 1 February 2024), but owned by Amorepacific, whose policy allows animal testing where other countries' regulations require it. It isn't Leaping Bunny certified. Some products are vegan, but no vegan certification is named.",
+     parent="Amorepacific Group", vegan="partial", vc="low", category=["skincare"], region="Asia",
+     sources=[_pl("innisfree", "Innisfree"), _src("Innisfree: better for Earth (PETA certification)", "https://au.innisfree.com/pages/better-for-earth"), _src("Amorepacific: its declaration on animal testing", "https://www.apgroup.com/int/en/commitments/respect-for-life/declaration-of-prohibition/declaration-of-prohibition.html")])
+# --- certified ---
+_new("one-with-nature", "One with Nature", "check", "Approved by Leaping Bunny (through CCIC, the US and Canada partner programme) and listed by PETA as cruelty-free. Some products are vegan, but not every one, and no vegan certification is named. No parent company is listed.",
+     vegan="partial", vc="low", category=["body-shower", "skincare"], region=_CC,
+     sources=[_src("Cruelty Free International: One With Nature listing", "https://www.crueltyfreeinternational.org/cruelty-free-company/one-nature"), _pl("one-with-nature", "One With Nature"), _src("Thrive Market: One With Nature", "https://thrivemarket.com/brand/one-with-nature")])
+_new("makeup-by-mario", "Makeup by Mario", "check", "Listed by PETA as cruelty-free. Not every product is vegan, and no vegan certification is named. Founded by Mario Dedivanovic, with minority investment from Provenance and Silas Capital in 2023. It was reported to be exploring a sale in 2024, but I found no completed sale.",
+     vegan="partial", vc="low", category=["makeup-beauty"],
+     sources=[_pl("makeup-by-mario", "Makeup By Mario"), _src("Cosmetics Business: Makeup by Mario exploring a potential brand sale (18 June 2024)", "https://www.cosmeticsbusiness.com/makeup-by-mario-exploring-potential-brand-sale"), _LBG])
+_new("kimchi-chic-beauty", "Kimchi Chic Beauty", "check", "Listed by PETA as cruelty-free. Not every product is vegan, and no vegan certification is named. This is the makeup brand of the drag queen Kim Chi.",
+     vegan="partial", vc="low", category=["makeup-beauty"],
+     sources=[_pl("kimchi-chic-beauty", "KimChi Chic Beauty"), _LBG])
+_new("artnaturals", "Artnaturals", "check", "Listed by PETA as cruelty-free (its PETA page was last updated in 2020). It says its products are vegan, but its lip balm contains beeswax, so vegan varies by product, and no vegan certification is named. Founded by a family of brothers.",
+     vegan="partial", vc="low", category=["skincare", "haircare"],
+     sources=[_pl("artnaturals", "artnaturals"), _src("RangeMe: Artnaturals supplier spotlight (21 June 2018)", "https://www.rangeme.com/blog/supplier-spotlight-artnaturals-artfully-makes-a-deal-with-meijer/"), _LBG])
+_new("skin1004", "SKIN1004", "check", "Listed by PETA as cruelty-free (page last modified 27 April 2026). I couldn't find a vegan certification, and its vegan status isn't confirmed. Made by Craver Corporation, a Korean private company.",
+     vegan="unknown", category=["skincare"], region="Asia",
+     sources=[_pl("skin1004-co", "SKIN1004 (Craver Corporation)"), _LBG])
+_new("raw-sugar", "Raw Sugar", "check", "Listed by PETA as cruelty-free (page last modified 26 October 2022). Its FAQ says its products are PETA-certified animal test-free and vegan, but PETA's page doesn't mention vegan, and I couldn't find a vegan certification. Acquired by WM Partners in August 2021. This is Raw Sugar Living, not Raw Sugar Science.",
+     parent="WM Partners LP", vegan="partial", vc="low", category=["body-shower", "skincare"], region=_CC,
+     sources=[_pl("raw-sugar-bolero-home-decor", "Raw Sugar (Bolero Home Décor)"), _src("Raw Sugar Living: its FAQ", "https://rawsugarliving.com/pages/faq"), _src("Oaklins: WM Partners acquires Raw Sugar Living", "https://www.oaklins.com/sg/en/deals/107586/")])
+_new("summer-fridays", "Summer Fridays", "check", "Certified cruelty-free by Leaping Bunny (since 2018), but PETA lists it as a company that may not be cruelty-free because it hasn't signed PETA's statement. TSG Consumer Partners made a strategic growth investment in July 2024, and the co-founders, Marianna Hewitt and Lauren Ireland, kept a significant stake. I couldn't confirm whether its products are vegan.",
+     parent="TSG Consumer Partners", vegan="unknown", category=["skincare"],
+     sources=[_src("Leaping Bunny: Summer Fridays brand page", "https://www.leapingbunny.org/brand/summer-fridays"), _pl("summer-fridays", "Summer Fridays"), _src("Business Wire: Summer Fridays announces strategic growth investment from TSG Consumer (25 July 2024)", "https://www.businesswire.com/news/home/20240725229112/en/summer-fridays-announces-strategic-growth-investment-from-tsg-consumer")])
+_new("olivella", "Olivella", "good", "Listed by PETA as cruelty-free (Umbria Olii International USA, page last updated 2020). Its website shows a vegan badge but names no vegan certifier. This is the Italian olive oil soap and skincare brand.",
+     vegan="full", vc="low", category=["body-shower", "skincare"], region=_CC,
+     sources=[_pl("olivella-umbria-olii-international-usa", "Olivella (Umbria Olii International USA)"), _src("Olivella: its website", "https://www.olivellaline.com/")]); _vb("olivella")
+_new("dashing-diva", "Dashing Diva", "check", "Listed by PETA as cruelty-free (page last modified 31 August 2020). A 2021 trade interview quotes it as 100% vegan and cruelty-free, but I couldn't find a vegan certification. Founded by John Chang in 2003.",
+     vegan="unknown", category=["makeup-beauty"], region=_CC,
+     sources=[_pl("dashing-diva", "Dashing Diva"), _src("Chain Drug Review: Dashing Diva benefits from at-home nail care demand (7 June 2021)", "https://digitaledition.chaindrugreview.com/articles/dashing-diva-benefits-from-at-home-nail-care-demand")])
+# --- says it's cruelty-free, not certified ---
+_new("everspring", "Everspring", "unverified", "Everspring is Target's own soap and household brand. Target's product page says it's never tested on animals and lists it as cruelty-free, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It isn't certified vegan: some products are listed as animal by-product-free, so vegan varies by product.",
+     parent="Target Corporation", vegan="partial", vc="low", claim="Target says its Everspring products are never tested on animals.", category=["body-shower", "household-cleaning"], region=_CC,
+     sources=[_src("Target: Everspring hand soap product page", "https://www.target.com/p/-/A-75663156"), _LBG, _PETAB])
+_new("aplb", "APLB", "unverified", "APLB says it's proudly cruelty-free and doesn't test on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. I couldn't find its owner or a vegan claim. It's a Korean skincare brand founded in 2017.",
+     vegan="unknown", claim="APLB says it's proudly a cruelty-free brand and doesn't test on animals.", category=["skincare"], region="Asia",
+     sources=[_src("Skinsider: K-beauty innovators, a conversation with APLB (30 May 2025)", "https://skinsider.co.uk/blog/kbeauty-innovators-a-conversation-with-korean-skincare-brand-aplb/"), _LBG, _PETAB])
+_new("palmers", "Palmer's", "unverified", "Palmer's says its products are not tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International, and PETA lists it as a company that may not be cruelty-free. Family owned and operated since 1840 (E.T. Browne Drug Co.). Some products are vegan, marked with its own Vegan Friendly Bunny seal rather than a vegan certification.",
+     parent="E.T. Browne Drug Co.", vegan="partial", vc="low", claim="Palmer's says its products are not tested on animals.", category=["skincare", "body-shower", "haircare"], region=_CC,
+     sources=[_src("Palmer's: its FAQ", "https://www.palmers.com/pages/faq"), _pl("palmers", "Palmer's"), _LBG])
+_new("mario-badescu", "Mario Badescu", "unverified", "Mario Badescu says it doesn't test its products or ingredients on animals, nor ask others to test on its behalf, but it isn't certified by Leaping Bunny / Cruelty Free International, and PETA lists it as a company that may not be cruelty-free. Family-owned. It says it isn't a vegan line, though some products are vegan friendly.",
+     vegan="partial", vc="low", claim="Mario Badescu says it doesn't test its products or ingredients on animals, nor ask others to test on its behalf.", category=["skincare"], region=_CC,
+     sources=[_src("Mario Badescu: its FAQ", "https://www.mariobadescu.com/faq"), _pl("mario-badescu", "Mario Badescu"), _src("Success: from the beauty counter to the front office", "https://www.success.com/from-the-beauty-counter-to-the-front-office")])
+_new("haus-labs", "Haus Labs", "unverified", "Haus Labs says it's always cruelty-free and vegan, and Sephora's brand page says none of its formulas, ingredients or final products are tested on animals, but it isn't certified by Leaping Bunny / Cruelty Free International or PETA, and no vegan certifier is named. Founded by Lady Gaga and Ben Jones in 2019, with minority investors, and formerly called Haus Laboratories.",
+     vegan="full", vc="low", claim="Haus Labs says it's always cruelty-free and vegan, and that none of its formulas, ingredients or final products are tested on animals.", category=["makeup-beauty"],
+     sources=[_src("Sephora: Haus Labs by Lady Gaga vegan makeup (brand FAQ)", "https://www.sephora.com/brand/haus-labs-by-lady-gaga/vegan-makeup"), _src("Wikipedia: Haus Labs", "https://en.wikipedia.org/wiki/Haus_Labs"), _LBG, _PETAB]); _vb("haus-labs")
+# --- no information found ---
+_new("gisou", "Gisou", "unverified", "I couldn't find a cruelty-free claim or certification for Gisou. Its FAQ says animal testing of cosmetics is illegal and that it follows EU regulation. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. Not vegan: it uses honey and propolis. Owned mainly by its founders, Negin Mirsalehi and Maurits Stibbe, with minority investment from Eurazeo.",
+     vegan="no", category=["haircare"], region="Europe",
+     sources=[_src("Gisou: its FAQ", "https://www.gisou.com/pages/faq"), _src("Beauty Matter: Gisou raises Series B round with Eurazeo Brands", "https://beautymatter.com/articles/haircare-brand-gisou-raises-series-b-round-with-eurazeo-brands"), _LBG, _PETAB])
+_new("elizavecca", "Elizavecca", "unverified", "I couldn't find an animal testing policy or certification for Elizavecca. It isn't vegan: some products contain pig collagen and snail secretion. I couldn't find who owns it.",
+     vegan="no", category=["skincare"], region="Asia",
+     sources=[_src("Buy Beauty Korea: Elizavecca", "https://buybeautykorea.com/collections/elizavecca"), _LBG, _PETAB])
+_new("pert", "Pert", "unverified", "I couldn't find an animal testing policy or certification for Pert. In the US it's owned by Sodalis Group (after HRB Brands), but Procter & Gamble kept the brand in other regions. I couldn't find a vegan claim.",
+     parent="Sodalis Group", category=["haircare"], region=_CC,
+     sources=[_src("PE Professional: HRB Brands acquired by Sodalis Group (October 2024)", "https://peprofessional.com/2024/10/hrb-brands-acquired-by-sodalis-group/"), _src("Progressive Grocer: private equity firm acquires Pert Plus brand from P&G", "https://progressivegrocer.com/private-equity-firm-acquires-pert-plus-brand-pg"), _LBG, _PETAB])
+_new("pyunkang-yul", "Pyunkang Yul", "unverified", "I couldn't find an animal testing policy or certification for Pyunkang Yul. It isn't a vegan brand, though it has a range marked vegan with no certifier named. Made by a Korean company founded in 2015 by the Pyunkang Oriental Medicine clinic.",
+     vegan="partial", vc="low", category=["skincare"], region="Asia",
+     sources=[_src("Pyunkang Yul: its website", "https://pyunkangyul.com/"), _LBG, _PETAB])
+_new("round-lab", "Round Lab", "unverified", "I couldn't find an animal testing policy or certification for Round Lab. It isn't a fully vegan brand, and its site shows a vegan label with no certifier named. Its operating company, Seorin Company, was reported to have been acquired by Goodai Global in July 2025.",
+     parent="Goodai Global", vegan="partial", vc="low", category=["skincare"], region="Asia",
+     sources=[_src("TheVC: Seorin Company (Round Lab)", "https://thevc.kr/seorincompany"), _src("Preqin: Round Lab deal profile", "https://www.preqin.com/data/profile/asset/round-lab/719937"), _src("Round Lab: its website", "https://roundlab.com/"), _LBG, _PETAB])
+_new("holika-holika", "Holika Holika", "unverified", "I couldn't find an animal testing policy or certification for Holika Holika, and its websites don't mention animal testing. Owned by Enprani Co., Ltd., a private Korean company. I couldn't find a vegan claim.",
+     parent="Enprani Co., Ltd.", category=["makeup-beauty", "skincare"], region="Asia",
+     sources=[_src("Holika Holika: its website (Enprani Co., Ltd.)", "https://holikaholika.com/"), _LBG, _PETAB])
+_new("tiger-balm", "Tiger Balm", "unverified", "Tiger Balm's FAQ says it isn't officially certified cruelty-free and doesn't mention animal testing, and I couldn't find a policy anywhere. It's a pain relief product, so medicine rules may apply. Owned by Haw Par Corporation, a Singapore-listed company. Its US FAQ says most products contain no animal by-products, but the Arthritis Rub contains glucosamine and chondroitin from animal and shellfish sources.",
+     parent="Haw Par Corporation", vegan="partial", vc="low", category=["hygiene"],
+     sources=[_src("Tiger Balm: its FAQs", "https://tigerbalm.com/us/tiger-balm-faqs"), _src("Haw Par Corporation: healthcare (owner of Tiger Balm)", "https://www.hawpar.com/our-businesses/healthcare"), _LBG, _PETAB])
+_new("bio-oil", "Bio-Oil", "unverified", "I couldn't find an animal testing policy or certification for Bio-Oil, and its FAQ pages say nothing about animal testing. It isn't certified by Leaping Bunny / Cruelty Free International or PETA. I couldn't find a vegan claim. Made by Union Swiss, based in Cape Town, South Africa.",
+     category=["skincare"], region="Europe",
+     sources=[_src("Bio-Oil: its FAQ", "https://www.bio-oil.com/en-us/faq"), _LBG, _PETAB])
+_new("icy-hot", "Icy Hot", "unverified", "I couldn't find an animal testing policy or certification for Icy Hot. It's a pain relief product, so medicine rules may apply. Owned by Opella, which Sanofi sold a controlling stake in to CD&R (completed 30 April 2025). I couldn't find a vegan claim.",
+     parent="Opella", category=["hygiene"], region=_CC,
+     sources=[_src("Wikipedia: Opella", "https://en.wikipedia.org/wiki/Opella"), _src("DCAT: Sanofi completes sale of controlling stake in Opella", "https://www.dcatvci.org/top-industry-news/sanofi-completes-11-4-bn-sales-of-controlling-stake-in-consumer-healthcare-biz-opella/"), _LBG, _PETAB])
+_new("olive-and-june", "Olive & June", "unverified", "I couldn't find an animal testing policy, cruelty-free claim or vegan claim for Olive & June, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. Owned by Helen of Troy, which completed its acquisition on 17 December 2024.",
+     parent="Helen of Troy", category=["makeup-beauty"], region=_CC,
+     sources=[_src("SGB Online: Helen of Troy completes acquisition of Olive & June (17 December 2024)", "https://sgbonline.com/helen-of-troy-completes-acquisition-of-olive-june/"), _LBG, _PETAB])
+for _s in ("aquaphor", "laneige", "sheamoisture", "dawn", "biofreeze", "secret-deodorant", "innisfree", "one-with-nature", "makeup-by-mario", "kimchi-chic-beauty", "artnaturals", "skin1004", "raw-sugar", "summer-fridays", "olivella", "dashing-diva", "everspring", "aplb", "palmers", "mario-badescu", "haus-labs", "gisou", "elizavecca", "pert", "pyunkang-yul", "round-lab", "holika-holika", "tiger-balm", "bio-oil", "icy-hot", "olive-and-june"):
+    if _s in by: by[_s]["lastVerified"] = today
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+def _sm3(t):
+    if "'Everspring'" in t: return t
+    return t.replace("'Pop-arazzi',", "'Pop-arazzi', 'Everspring',", 1)
+_rw("scripts/generate-brand-check.js", _sm3)
+print("Section 55 applied")
+
+# 56. Haus Labs is Leaping Bunny certified (Ash's link, 15 Oct); Tierra Verde (reader request, Czech eco household brand)
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_hl = by.get("haus-labs")
+if _hl:
+    _hl.update(tier="good", claim="", vegan="full", veganBasis="brand", veganConfidence="low", lastVerified=today,
+        note="Certified cruelty-free by Leaping Bunny. Haus Labs says it's cruelty-free and vegan, and Sephora's brand page says every product is 100% vegan, but it has no vegan certification and PETA doesn't list it. Founded by Lady Gaga and Ben Jones in 2019, formerly called Haus Laboratories. Independently owned, with minority investors including Lightspeed Venture Partners.")
+    _hl["sources"] = [s for s in _hl.get("sources", []) if "leapingbunny.org/shopping-guide" not in s.get("url", "")]
+    _addsrc(_hl, "Leaping Bunny: Haus Labs brand page", "https://www.leapingbunny.org/brand/haus-labs-lady-gaga")
+    _addsrc(_hl, "Lightspeed Venture Partners: Haus Laboratories (investor)", "https://lsvp.com/company/haus-laboratories/")
+_new("tierra-verde", "Tierra Verde (Czech)", "unverified", "I couldn't find an animal testing policy or cruelty-free claim for Tierra Verde, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It's a Czech-Slovak eco household and cosmetics brand (TIERRA VERDE s.r.o., near Brno), and most of its products carry the Ecogarantie eco certificate, which isn't a cruelty-free or vegan certification. Some individual products are labelled vegan, so vegan varies by product. This isn't the Spanish organic farmers' association also called Tierra Verde.",
+     vegan="partial", vc="low", category=["household-cleaning", "laundry", "body-shower"], region="Europe",
+     sources=[_src("Alza: Tierra Verde (Ecogarantie certificate, products labelled vegan)", "https://m.alza.cz/tierra-verde/v15232.htm"), _src("Økofamily: Tierra Verde brand page", "https://okofamily.com/shop/?brand=117-tierra-verde"), _src("Tierra Verde: its Czech website (TIERRA VERDE s.r.o.)", "https://www.tierraverde.cz/"), _LBG, _PETAB])
+if "tierra-verde" in by: by["tierra-verde"]["lastVerified"] = today
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 56 applied")
+
+# 57. Tierra Verde: Bulgarian site shows a "No tests on animals" icon (Ash's screenshot, 15 Oct); the page text itself doesn't repeat it
+raw = json.load(open(P)); brands = raw["brands"] if isinstance(raw, dict) else raw; by = {b["slug"]: b for b in brands}
+_tv = by.get("tierra-verde")
+if _tv:
+    _tv.update(claim="Tierra Verde's Bulgarian site shows a \"no tests on animals\" icon beside its Ecogarantie certificate.", lastVerified=today,
+        note="Tierra Verde says its products aren't tested on animals (its Bulgarian site shows a \"no tests on animals\" icon), but it isn't certified by Leaping Bunny / Cruelty Free International or PETA. It's a Czech-Slovak eco household and cosmetics brand (TIERRA VERDE s.r.o., near Brno), and most of its products carry the Ecogarantie eco certificate, which isn't a cruelty-free or vegan certification. Some individual products are labelled vegan, so vegan varies by product. This isn't the Spanish organic farmers' association also called Tierra Verde.")
+    _addsrc(_tv, "Tierra Verde Bulgaria: about us (\"no tests on animals\" icon)", "https://tierraverde.bg/en/pages/za-nas")
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+print("Section 57 applied")
