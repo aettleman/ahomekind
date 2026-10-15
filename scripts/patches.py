@@ -2071,3 +2071,142 @@ def _testpage():
     print("Companies that test page:", len(bad), "brands,", len(warn), "owned by testers")
 _testpage()
 print("Section 59 applied")
+
+# 60. Only the most popular PETA-list brands for now (Ash, 15 Oct): rank the ~6,000 by Wikipedia page views (last 30 days),
+#     keep the top 300 that are clearly a brand/company, plus every "tests on animals" / "owner tests" one. The rest wait.
+#     Needs internet once; results are cached in data/popularity.json so later runs are instant.
+import shutil, time
+_KEEP = 300
+_all = json.load(open("data/peta-import.json"))
+_cp = "data/popularity.json"
+_cache = json.load(open(_cp)) if os.path.exists(_cp) else {}
+_todo = [b["name"] for b in _all if b["name"] not in _cache]
+_UA2 = {"User-Agent": "ahomekind-popularity/1.0 (https://ahomekind.com; hello@ahomekind.com)"}
+def _wq(titles):
+    out = {}; red = {}; cont = {}
+    for _ in range(20):
+        p = {"action": "query", "titles": "|".join(titles), "redirects": 1, "prop": "pageviews|pageprops|description", "pvipdays": 30, "format": "json", "formatversion": 2}
+        p.update(cont)
+        u = "https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode(p)
+        with urllib.request.urlopen(urllib.request.Request(u, headers=_UA2), timeout=30) as r: d = json.load(r)
+        q = d.get("query", {})
+        for x in q.get("normalized", []) + q.get("redirects", []): red[x["from"]] = x["to"]
+        for pg in q.get("pages", []):
+            o = out.setdefault(pg["title"], {"v": 0})
+            if pg.get("missing"): o["m"] = 1
+            if "disambiguation" in (pg.get("pageprops") or {}): o["dis"] = 1
+            if pg.get("description"): o["d"] = pg["description"]
+            for v in (pg.get("pageviews") or {}).values():
+                if v: o["v"] += v
+        if "continue" not in d: break
+        cont = {k: v for k, v in d["continue"].items()}
+    return out, red
+if _todo:
+    print("Checking popularity for", len(_todo), "brands on Wikipedia (only needed once, about 2 minutes)...")
+    try:
+        for i in range(0, len(_todo), 50):
+            chunk = _todo[i:i + 50]
+            pages, red = _wq(chunk)
+            for n in chunk:
+                t = n
+                for _ in range(3):
+                    if t in red: t = red[t]
+                pg = pages.get(t)
+                _cache[n] = {"t": t, "v": pg.get("v", 0), "d": pg.get("d", ""), "dis": pg.get("dis", 0), "m": pg.get("m", 0)} if pg else {"m": 1, "v": 0}
+            if i % 1000 == 0: print("  ", i + len(chunk), "checked")
+            time.sleep(0.3)
+    except Exception as e:
+        print("Popularity check stopped early (", e, "). Run the command again later to finish it.")
+    json.dump(_cache, open(_cp, "w"), ensure_ascii=False, indent=0)
+_BRANDY = re.compile(r"brand|company|cosmetic|beauty|skin|hair|makeup|make-up|perfume|fragrance|soap|personal care|toiletr|deodorant|toothpaste|shampoo|nail|lip|cleaning|detergent|household|manufacturer|retailer|products|grooming|razor|sunscreen|pet food|haircare|skincare", re.I)
+def _score(b):
+    c = _cache.get(b["name"]) or {}
+    if c.get("m") or c.get("dis") or not _BRANDY.search(c.get("d", "")): return 0
+    return c.get("v", 0)
+_must = [b for b in _all if b["tier"] in ("bad", "warn")]
+_ranked = sorted([b for b in _all if b["tier"] not in ("bad", "warn") and _score(b) > 0], key=_score, reverse=True)[:_KEEP]
+_sel = _must + _ranked
+_selslugs = {b["slug"] for b in _sel}
+_mainslugs = {b["slug"] for b in brands}
+_gone = 0
+for b in _all:
+    if b["slug"] not in _selslugs and b["slug"] not in _mainslugs and os.path.isdir(os.path.join("brands", b["slug"])):
+        shutil.rmtree(os.path.join("brands", b["slug"])); _gone += 1
+json.dump(_sel, open("data/peta-import.json", "w"), ensure_ascii=False, separators=(",", ":")); open("data/peta-import.json", "a").write("\n")
+json.dump([[b["name"], b["slug"], b["tier"]] for b in _sel], open("data/search-extra.json", "w"), ensure_ascii=False, separators=(",", ":"))
+_t = {"good": 0, "check": 0, "warn": 0, "bad": 0, "unverified": 0}
+for b in brands + _sel:
+    if b.get("tier") in _t: _t[b["tier"]] += 1
+_st = dict(_t); _st["total"] = len(brands) + len(_sel); _st["cf"] = _t["good"] + _t["check"]
+json.dump(_st, open("data/stats.json", "w"))
+open("data/popular-picks.txt", "w", encoding="utf-8").write("\n".join("%s\t%s\t%s" % (b["name"], _score(b), (_cache.get(b["name"]) or {}).get("d", "")) for b in _ranked) + "\n")
+print("Popular PETA brands kept:", len(_ranked), "+", len(_must), "that test or whose owner tests; pages removed:", _gone, "; total brands", _st["total"])
+print("Section 60 applied")
+
+# 61. Hybrid (Ash, 15 Oct): ALL PETA-list brands are searchable in the checker (linking to PETA's own listing),
+#     but only researched brands get a full page. For now that's just the 25 "tests" / "owner tests" ones; the rest get
+#     pages batch by batch as they're researched, most popular first (data/popular-picks.txt = top 1,000 by Wikipedia views).
+_pages = _must
+_pslugs = {b["slug"] for b in _pages}
+for b in _all:
+    if b["slug"] not in _pslugs and b["slug"] not in _mainslugs and os.path.isdir(os.path.join("brands", b["slug"])):
+        shutil.rmtree(os.path.join("brands", b["slug"]))
+json.dump(_pages, open("data/peta-import.json", "w"), ensure_ascii=False, separators=(",", ":")); open("data/peta-import.json", "a").write("\n")
+def _pslug(b):
+    u = (b.get("sources") or [{}])[0].get("url", "")
+    return u.replace("https://crueltyfree.peta.org/company/", "").strip("/")
+json.dump(sorted([[b["name"], b["slug"] if b["slug"] in _pslugs else "", b["tier"], _pslug(b), int(_score(b))] for b in _all], key=lambda r: -r[4]), open("data/search-extra.json", "w"), ensure_ascii=False, separators=(",", ":"))
+_t = {"good": 0, "check": 0, "warn": 0, "bad": 0, "unverified": 0}
+for b in brands + _pages:
+    if b.get("tier") in _t: _t[b["tier"]] += 1
+_st = dict(_t); _st["total"] = len(brands) + len(_pages); _st["cf"] = _t["good"] + _t["check"]
+json.dump(_st, open("data/stats.json", "w"))
+_top = sorted([b for b in _all if b["tier"] not in ("bad", "warn") and _score(b) > 0], key=_score, reverse=True)[:1000]
+open("data/popular-picks.txt", "w", encoding="utf-8").write("".join("%d\t%s\t%s\t%s\t%s\n" % (i + 1, b["name"], _score(b), (_cache.get(b["name"]) or {}).get("d", ""), (b.get("sources") or [{}])[0].get("url", "")) for i, b in enumerate(_top)))
+_MORE2 = r"""<!--ahk-more--><!--v2--><style>#ahkMore{margin:14px 0 6px}#ahkMore h3{font-size:15px;margin:10px 0 8px}#ahkMore a.mr{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;margin:0 0 8px;border:1.5px solid #E5CFC4;border-radius:12px;background:#FBF4EF;color:#2A1630;text-decoration:none}#ahkMore a.mr:focus-visible,#ahkMore a.mr:hover{border-color:#E8804C}#ahkMore .t{font-size:12px;color:#6A535D;text-align:right}#ahkMore .t.bad{color:#9C3A3A}#ahkMore p{font-size:13px;color:#6A535D}</style>
+<script>(function(){var inp=document.getElementById('ratingSearch'),nr=document.getElementById('noResults');if(!inp||!nr)return;var box=document.createElement('div');box.id='ahkMore';var ab=document.getElementById('allBrands')||nr;ab.parentNode.insertBefore(box,ab.nextSibling);var data=null,p=null;
+var L={good:'cruelty-free and vegan',check:'cruelty-free',warn:'cruelty-free, but its owner tests',bad:'tests on animals'};
+function nz(s){s=(s||'').toLowerCase();try{s=s.normalize('NFKD').replace(/[̀-ͯ]/g,'')}catch(e){}return s.replace(/&/g,'and').replace(/[^a-z0-9]/g,'')}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function load(){if(!p)p=fetch('/data/search-extra.json').then(function(r){return r.json()}).then(function(d){data=d.map(function(x){return [x[0],x[1],x[2],x[3],nz(x[0])]});return data}).catch(function(){data=[];return data});return p}
+function run(){var q=nz(inp.value);if(q.length<2){box.innerHTML='';return}load().then(function(){if(nz(inp.value)!==q)return;var a=[],b=[];for(var i=0;i<data.length;i++){var k=data[i][4];if(k.indexOf(q)===0)a.push(data[i]);else if(k.indexOf(q)!==-1)b.push(data[i])}var m=a.concat(b);if(!m.length){box.innerHTML='';return}
+var h='<h3>More brands from PETA\'s list</h3>';m.slice(0,25).forEach(function(x){var href=x[1]?'/brands/'+x[1]+'/':'https://crueltyfree.peta.org/company/'+x[3]+'/';var ext=x[1]?'':' target="_blank" rel="noopener"';h+='<a class="mr" href="'+href+'"'+ext+'><span>'+esc(x[0])+'</span><span class="t '+x[2]+'">'+(L[x[2]]||'')+(x[1]?'':' &middot; PETA')+'</span></a>'});if(m.length>25)h+='<p>'+(m.length-25)+' more. Keep typing to narrow it down.</p>';h+='<p>These come from PETA\'s list. The ones marked PETA open PETA\'s own page, as I haven\'t researched them myself yet.</p>';box.innerHTML=h;nr.style.display='none'})}
+inp.addEventListener('input',run);if(inp.value)setTimeout(run,400);})();</script>
+"""
+def _bc2(t):
+    if "<!--v2-->" in t: return t
+    t = re.sub(r"<!--ahk-more-->.*?</script>\n", "", t, count=1, flags=re.S)
+    return t.replace("</body>", _MORE2 + "</body>", 1)
+_rw("brand-check.html", _bc2)
+print("Section 61 applied: %d PETA-list brands searchable, %d with full pages; research list in data/popular-picks.txt" % (len(_all), len(_pages)))
+
+# 62. Brand checker: suggestions as you type (Ash, 15 Oct). Type "b" and brands starting with B appear in a list under the box;
+#     tap one to open it. Uses the checker's own cards plus the PETA-list index (loaded the first time the box is tapped).
+_SUG = r"""<!--ahk-suggest--><style>.ahk-sg{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:60;background:#FFFDFB;border:1.5px solid #E5CFC4;border-radius:14px;box-shadow:0 10px 28px rgba(42,22,48,.14);overflow:hidden;max-height:60vh;overflow-y:auto}
+.ahk-sg[hidden]{display:none}.ahk-sg a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;color:#2A1630;text-decoration:none;border-bottom:1px solid #F1E3DB;font-size:15px}
+.ahk-sg a:last-child{border-bottom:0}.ahk-sg a.on,.ahk-sg a:hover{background:#FBEDE4}.ahk-sg b{font-weight:700}.ahk-sg .t{font-size:12px;color:#6A535D;white-space:nowrap}.ahk-sg .t.bad{color:#9C3A3A}</style>
+<script>(function(){var inp=document.getElementById('ratingSearch');if(!inp)return;var wrap=inp.closest('.k-field')||inp.parentNode;if(getComputedStyle(wrap).position==='static')wrap.style.position='relative';
+var box=document.createElement('div');box.className='ahk-sg';box.id='ahkSg';box.setAttribute('role','listbox');box.hidden=true;wrap.appendChild(box);
+inp.setAttribute('role','combobox');inp.setAttribute('aria-autocomplete','list');inp.setAttribute('aria-controls','ahkSg');inp.setAttribute('aria-expanded','false');
+var L={good:'cruelty-free & vegan',check:'cruelty-free',warn:'owner tests',bad:'tests on animals',unverified:'not certified'};
+function nz(s){s=(s||'').toLowerCase();try{s=s.normalize('NFKD').replace(/[̀-ͯ]/g,'')}catch(e){}return s.replace(/&/g,'and').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim()}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var list=[],seen={},built=false;function own(){if(built)return;built=true;document.querySelectorAll('#allBrands .card').forEach(function(c){var nm=c.querySelector('.rcard-name')||c.querySelector('h3 a'),ln=c.querySelector('a.rr')||c.querySelector('h3 a');if(!nm||!ln)return;var t='';['good','check','warn','bad','unverified'].forEach(function(k){if(c.classList.contains(k)||c.classList.contains('v-'+k))t=k});var n=nm.textContent.trim(),k=nz(n);if(!k||seen[k])return;seen[k]=1;list.push({n:n,k:k,h:ln.getAttribute('href'),t:t})})}
+var extra=false;function more(){own();if(extra)return;extra=true;fetch('/data/search-extra.json').then(function(r){return r.json()}).then(function(d){d.forEach(function(x){var k=nz(x[0]);if(!k||seen[k])return;seen[k]=1;list.push({n:x[0],k:k,h:x[1]?'/brands/'+x[1]+'/':'https://crueltyfree.peta.org/company/'+x[3]+'/',t:x[2],ext:!x[1],v:x[4]||0})});if(document.activeElement===inp)show()}).catch(function(){})}
+var cur=-1,items=[];
+function hl(n,q){var i=nz(n).indexOf(q);if(i!==0||!q)return esc(n);var c=0,j=0;while(j<n.length&&c<q.length){if(nz(n.charAt(j))!=='')c+=nz(n.charAt(j)).length;j++}return '<b>'+esc(n.slice(0,j))+'</b>'+esc(n.slice(j))}
+function show(){var q=nz(inp.value);if(!q){close();return}var a=[],b=[],c=[];for(var i=0;i<list.length;i++){var k=list[i].k;if(k.indexOf(q)===0)a.push(list[i]);else if((' '+k).indexOf(' '+q)!==-1)b.push(list[i]);else if(q.length>2&&k.replace(/ /g,'').indexOf(q.replace(/ /g,''))!==-1)c.push(list[i])}
+function s(x,y){var ex=(x.ext?1:0)-(y.ext?1:0);if(ex)return ex;var dv=(y.v||0)-(x.v||0);if(dv)return dv;return x.k<y.k?-1:x.k>y.k?1:0}a.sort(s);b.sort(s);c.sort(s);items=a.concat(b,c).slice(0,8);cur=-1;
+if(!items.length){close();return}box.innerHTML=items.map(function(x,i){return '<a role="option" id="ahkSg'+i+'" href="'+x.h+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'><span>'+hl(x.n,q)+'</span><span class="t '+x.t+'">'+(L[x.t]||'')+(x.ext?' &middot; PETA':'')+'</span></a>'}).join('');box.hidden=false;inp.setAttribute('aria-expanded','true')}
+function close(){box.hidden=true;inp.setAttribute('aria-expanded','false');inp.removeAttribute('aria-activedescendant');cur=-1}
+function mark(){var as=box.querySelectorAll('a');as.forEach(function(e,i){e.classList.toggle('on',i===cur)});if(cur>=0){inp.setAttribute('aria-activedescendant','ahkSg'+cur);as[cur].scrollIntoView({block:'nearest'})}}
+inp.addEventListener('focus',function(){window.ahkSuggestOpen=true;more();if(inp.value)show()});inp.addEventListener('blur',function(){window.ahkSuggestOpen=false});inp.addEventListener('input',function(){more();show()});
+inp.addEventListener('keydown',function(e){if(box.hidden)return;if(e.key==='ArrowDown'){cur=Math.min(cur+1,items.length-1);mark();e.preventDefault()}else if(e.key==='ArrowUp'){cur=Math.max(cur-1,-1);mark();e.preventDefault()}else if(e.key==='Enter'&&cur>=0){e.preventDefault();box.querySelectorAll('a')[cur].click()}else if(e.key==='Enter'){close();inp.blur();var ab=document.getElementById('allBrands');if(ab)window.scrollTo({top:ab.offsetTop-90,behavior:'smooth'})}else if(e.key==='Escape'){close()}});
+document.addEventListener('pointerdown',function(e){if(!wrap.contains(e.target))close()});window.addEventListener('pageshow',close);})();</script>
+"""
+def _sg(t):
+    t = t.replace("if (anyVisible && !restoringState) {\nwindow.scrollTo(", "if (anyVisible && !restoringState && !window.ahkSuggestOpen) {\nwindow.scrollTo(", 1)
+    if "<!--ahk-suggest-->" in t: return t
+    return t.replace("</body>", _SUG + "</body>", 1)
+_rw("brand-check.html", _sg)
+print("Section 62 applied")
