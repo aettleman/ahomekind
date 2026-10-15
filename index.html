@@ -442,5 +442,6 @@ fetch('data/stats.json').then(function(r){return r.json();}).then(function(n){
   document.querySelectorAll('[data-ahk-bar]').forEach(function(el){ var v=n[el.getAttribute('data-ahk-bar')]; if(v!==undefined) el.style.flex=v; });
 }).catch(function(){});
 </script>
+<!--ahk-suggest-home--><style>.ahk-sg{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:60;background:#FFFDFB;border:1.5px solid #E5CFC4;border-radius:14px;box-shadow:0 10px 28px rgba(42,22,48,.14);max-height:60vh;overflow-y:auto;text-align:left}.ahk-sg[hidden]{display:none}.ahk-sg a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;color:#2A1630;text-decoration:none;border-bottom:1px solid #F1E3DB;font-size:15px}.ahk-sg a:last-child{border-bottom:0}.ahk-sg a.on,.ahk-sg a:hover{background:#FBEDE4}.ahk-sg b{font-weight:700}.ahk-sg .t{font-size:12px;color:#6A535D;white-space:nowrap}.ahk-sg .t.bad{color:#9C3A3A}</style><script src="js/suggest.js?v=1"></script><script>AHKSuggest('homeSearch')</script>
 </body>
 </html>

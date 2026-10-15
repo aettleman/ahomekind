@@ -14563,7 +14563,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -20422,7 +20422,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -31487,5 +31487,3496 @@
       }
     ],
     "veganBasis": "brand"
+  },
+  {
+    "slug": "beauty-pie",
+    "name": "Beauty Pie",
+    "tier": "check",
+    "note": "Beauty Pie is listed as cruelty-free by PETA. It says it does not test its products on animals. Some products are vegan and are marked with a vegan symbol on the product page, but this is the brand's own label, not a vegan certification. Founded by Marcia Kilgore and backed by venture investors; I couldn't find any sale to a larger company.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "haircare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Beauty Pie company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/beauty-pie/"
+      },
+      {
+        "label": "Beauty Pie help centre: Which of your products are vegan friendly?",
+        "url": "https://help.beautypie.com/en-US/which-of-your-products-are-vegan-friendly-6429854"
+      },
+      {
+        "label": "BeautyMatter: Beauty Pie lands $100M Series B (10 Sep 2021)",
+        "url": "https://www.beautymatter.com/articles/beauty-pie-lands-100-million-series-b"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bliss",
+    "name": "Bliss",
+    "tier": "check",
+    "note": "Bliss is listed as cruelty-free by PETA, and its own website says it is cruelty-free. Owned by AS Beauty Group, which bought the brand in January 2023. Some Bliss products are vegan, but I couldn't find a vegan certification for the range. I couldn't find Bliss on the Leaping Bunny / Cruelty Free International programme.",
+    "parentCompany": "AS Beauty Group",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Bliss company page (modified 20 Apr 2023)",
+        "url": "https://crueltyfree.peta.org/company/bliss/"
+      },
+      {
+        "label": "Bliss: About Us page (checked 15 Oct 2026)",
+        "url": "https://www.blissworld.com/pages/about-us"
+      },
+      {
+        "label": "Beauty Packaging: AS Beauty acquires skincare brand Bliss (17 Jan 2023)",
+        "url": "https://www.beautypackaging.com/contents/view_breaking-news/2023-01-17/as-beauty-acquires-skincare-brand-bliss/"
+      },
+      {
+        "label": "Glossy: Bliss under AS Beauty Group (28 Jan 2025)",
+        "url": "https://www.glossy.co/pop/bliss-taps-comedian-iliza-schlesinger-in-move-away-from-gen-z-and-alpha-customers/"
+      },
+      {
+        "label": "Ethical Elephant: Is Bliss cruelty-free and vegan? (27 Jan 2023)",
+        "url": "https://ethicalelephant.com/bliss-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "amika",
+    "name": "Amika",
+    "tier": "check",
+    "note": "Amika is listed as cruelty-free by PETA, and its own help centre says it is certified under the Leaping Bunny / Cruelty Free International programme. Most of the range is vegan, but a few products contain sheep's wool keratin or honey, and I couldn't find a vegan certification. Majority-owned by the private equity firm Bansk Group since 2022.",
+    "parentCompany": "Bansk Group",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Amika company page (modified 18 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/amika/"
+      },
+      {
+        "label": "amika help centre: Are amika products cruelty free? (states Leaping Bunny certified)",
+        "url": "https://help.loveamika.com/en-US/are-amika-products-cruelty-free-307024"
+      },
+      {
+        "label": "amika UK FAQ: vegan status and animal-derived ingredients",
+        "url": "https://uk.loveamika.com/pages/faq"
+      },
+      {
+        "label": "PR Newswire: Bansk Group to acquire a majority stake in amika and Eva NYC (May 2022)",
+        "url": "https://www.prnewswire.com/news-releases/bansk-group-to-acquire-a-majority-stake-in-industry-leading-haircare-brands-amika-and-eva-nyc-301546278.html"
+      },
+      {
+        "label": "Axios Pro: amika hires Raymond James to test the market (18 Jul 2025)",
+        "url": "https://www.axios.com/pro/merger-deals/2025/07/18/amika-hair-raymond-james-test-market"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "beautyblender",
+    "name": "beautyblender",
+    "tier": "check",
+    "note": "beautyblender is listed as cruelty-free by PETA. Its own website doesn't set out an animal-testing policy that I could find. Many products, including the sponges and cleansers, have been reported as vegan, but I couldn't find a vegan certification. Independently owned by its founder, Rea Ann Silva.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: beautyblender company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/beautyblender/"
+      },
+      {
+        "label": "beautyblender: FAQs page (no animal-testing or vegan statement, checked 15 Oct 2026)",
+        "url": "https://beautyblender.com/pages/faqs"
+      },
+      {
+        "label": "beautyblender: About Us (founder Rea Ann Silva)",
+        "url": "https://beautyblender.com/pages/about-us"
+      },
+      {
+        "label": "Wikipedia: Rea Ann Silva, CEO/owner of Rea.Deeming Beauty Inc.",
+        "url": "https://en.wikipedia.org/wiki/Rea_Ann_Silva"
+      },
+      {
+        "label": "Ethical Elephant: Is beautyblender cruelty-free and vegan? (27 Jan 2022)",
+        "url": "https://ethicalelephant.com/is-beautyblender-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "il-makiage",
+    "name": "Il-Makiage",
+    "tier": "check",
+    "note": "Il Makiage is listed as cruelty-free by PETA. Its own FAQ says it never tests products or ingredients on animals and doesn't let suppliers test on its behalf. The FAQ also says not all of its products are vegan, and I couldn't find a vegan certification. Owned by ODDITY Tech, the Tel Aviv company listed on Nasdaq that also runs SpoiledChild.",
+    "parentCompany": "ODDITY Tech Ltd",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Il-Makiage company page (modified 11 May 2023)",
+        "url": "https://crueltyfree.peta.org/company/il-makiage/"
+      },
+      {
+        "label": "IL MAKIAGE: FAQ (animal testing and vegan answers, checked 15 Oct 2026)",
+        "url": "https://www.ilmakiage.com/faq"
+      },
+      {
+        "label": "Renaissance Capital: ODDITY Tech IPO profile (brands IL MAKIAGE and SpoiledChild, IPO 18 Jul 2023)",
+        "url": "https://www.renaissancecapital.com/Profile/ODD/ODDITY-Tech/IPO"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "prose",
+    "name": "Prose",
+    "tier": "check",
+    "note": "Prose is listed as cruelty-free by PETA, and its own website labels its products cruelty-free. It offers vegan options you can choose during its hair consultation, but not every formula is vegan and I couldn't find a vegan certification. Prose is a venture-backed company started in 2017 by four founders, and I couldn't find any sale to a larger company.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare",
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Prose company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/prose/"
+      },
+      {
+        "label": "Prose: homepage badges ('cruelty free', 'vegan options', Certified B Corporation; checked 15 Oct 2026)",
+        "url": "https://prose.com/"
+      },
+      {
+        "label": "BeautyMatter: Prose raises $18 million Series B (28 Nov 2018)",
+        "url": "https://www.beautymatter.com/articles/prose-raises-18-million-series-b-funding"
+      },
+      {
+        "label": "Ethical Elephant: Is Prose cruelty-free and vegan? (5 Sep 2022)",
+        "url": "https://ethicalelephant.com/is-prose-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "l-a-girl",
+    "name": "L.A. Girl",
+    "tier": "check",
+    "note": "L.A. Girl is listed as cruelty-free by PETA, under its company Beauty 21. Its own FAQ says it does not test on animals. I couldn't find a vegan statement or vegan certification for the range. The brand is run by Beauty 21 Cosmetics, the company PETA lists it under.",
+    "parentCompany": "Beauty 21 Cosmetics",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: L.A. Girl (Beauty 21) company page (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/la-girl-beauty-21/"
+      },
+      {
+        "label": "L.A. Girl: FAQ ('we do not test on animals'; Beauty 21 Cosmetics PETA member; checked 15 Oct 2026)",
+        "url": "https://www.lagirlusa.com/pages/faq"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "lily-lolo",
+    "name": "Lily Lolo",
+    "tier": "check",
+    "note": "Lily Lolo is listed as cruelty-free by PETA. Its own website says it is 'cruelty-free & BUAV approved' (BUAV is the old name of Cruelty Free International, which runs the Leaping Bunny / Cruelty Free International programme). It says 95% of its products are vegan, but some shades contain carmine and all lip glosses and brow duos contain beeswax; I couldn't find a vegan certification. Founded in the UK in 2005 by Vikki; I couldn't confirm who owns it today.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Lily Lolo company page (modified 19 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/lily-lolo/"
+      },
+      {
+        "label": "Lily Lolo: About Us ('Cruelty-free & BUAV approved'; founder Vikki, 2005)",
+        "url": "https://www.lilylolo.co.uk/about-us/"
+      },
+      {
+        "label": "Lily Lolo help centre: Are your products vegan friendly? (95% vegan; carmine and beeswax shades listed)",
+        "url": "https://support.lilylolo.co.uk/hc/en-us/articles/360002588014-Are-your-products-vegan-friendly"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "montagne-jeunesse",
+    "name": "Montagne Jeunesse",
+    "tier": "good",
+    "note": "Montagne Jeunesse now trades as 7th Heaven, and its old website redirects to the 7th Heaven site. It is listed as cruelty-free by PETA, and its own site lists membership of Cruelty Free International and PETA. It says its products are always vegan, but has no vegan certification that I could find; it mentions membership of the Vegetarian Society. A UK brand making its products in Britain since 1985.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Montagne Jeunesse company page (modified 23 Apr 2025)",
+        "url": "https://crueltyfree.peta.org/company/montagne-jeunesse/"
+      },
+      {
+        "label": "7th Heaven: homepage ('always vegan & cruelty-free'; montagnejeunesse.com redirects here, checked 15 Oct 2026)",
+        "url": "https://my7thheaven.com/"
+      },
+      {
+        "label": "7th Heaven: Our Story (Cruelty Free International, PETA and Vegetarian Society memberships)",
+        "url": "https://my7thheaven.com/pages/our-story"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "natio",
+    "name": "Natio",
+    "tier": "check",
+    "note": "Natio is listed as cruelty-free by PETA. Its own website says it has never tested on animals and has been accredited by the Australian group Choose Cruelty Free since 1996. Not all products are vegan: some contain honey, beeswax or lanolin, and I couldn't find a vegan certification. Independently owned by the family of its founder, Max Ross, who started the brand in 1993.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower",
+      "makeup-beauty",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Natio company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/natio/"
+      },
+      {
+        "label": "Natio: Our Values (never tested on animals; Choose Cruelty Free since 1996; family-owned, 100% Australian-owned)",
+        "url": "https://www.natio.com.au/pages/our-values"
+      },
+      {
+        "label": "Natio: FAQs (vegan status, honey/beeswax/lanolin; run by founders and owners)",
+        "url": "https://www.natio.com.au/pages/faqs"
+      },
+      {
+        "label": "Natio: Our Founder (Max Ross, 1993)",
+        "url": "https://www.natio.com.au/pages/our-founder"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "coola-suncare",
+    "name": "Coola Suncare",
+    "tier": "warn",
+    "note": "PETA lists Coola as cruelty-free. Owned by SC Johnson, which took a majority stake in 2019; SC Johnson says it complies with laws that require animal testing for some products. Coola says all its products are vegan, but has no vegan certification. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "SC Johnson",
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Coola Suncare company page (modified 7 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/coola-suncare/"
+      },
+      {
+        "label": "Coola: FAQ ('All COOLA products are vegan-friendly')",
+        "url": "https://coola.com/pages/faq"
+      },
+      {
+        "label": "Cosmetics Business: Coola sells majority stake to SC Johnson (Nov 2019)",
+        "url": "https://cosmeticsbusiness.com/sun-care-brand-coola-sells-majority-stake-to-sc-johnson--159767"
+      },
+      {
+        "label": "Glossy: 20-year-old Coola gets a refresh, confirms SC Johnson majority stake (17 Apr 2024)",
+        "url": "https://www.glossy.co/beauty/20-year-old-coola-gets-a-refresh"
+      },
+      {
+        "label": "SC Johnson: point of view on animal testing (must comply where law requires testing)",
+        "url": "https://www.scjohnson.com/en/newsroom/statements/sc-johnson-point-of-view-on-animal-testing"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Is S.C. Johnson cruelty-free? No, tests on animals (updated 31 Mar 2026)",
+        "url": "https://www.crueltyfreekitty.com/?p=15607"
+      }
+    ],
+    "veganBasis": "brand",
+    "parentTestsOnAnimals": true,
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "dose-of-colors",
+    "name": "Dose of Colors",
+    "tier": "check",
+    "note": "PETA lists Dose of Colors as cruelty-free. Dose of Colors says it is Leaping Bunny / Cruelty Free International certified, but I couldn't confirm this on the certifier's own site. It says most of its products are vegan, but not all, and has no vegan certification. Founded by Anna Petrosian in California; I couldn't find any sale to a larger company.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Dose of Colors company page (modified 18 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/dose-of-colors/"
+      },
+      {
+        "label": "Dose of Colors: FAQ (cruelty-free, 'Leaping Bunny and PETA certified', 'most of our products are vegan')",
+        "url": "https://doseofcolors.com/pages/faq"
+      },
+      {
+        "label": "Ethical Elephant: Dose of Colors cruelty-free and vegan status (updated 2 Feb 2022)",
+        "url": "https://ethicalelephant.com/dose-of-colors-cruelty-free-vegan/"
+      },
+      {
+        "label": "KTLA: Dose of Colors founder Anna Petrosian (14 Apr 2022)",
+        "url": "https://ktla.com/news/local-news/dose-of-colors-founder-reflects-on-success-of-popular-cosmetics-company/amp"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "dr-brandt",
+    "name": "Dr. Brandt",
+    "tier": "check",
+    "note": "Listed by PETA as cruelty-free. Dr. Brandt says it does not and will never test on animals, and that animal testing should never be required. Independently owned: it's privately owned by its president and CEO, Stephane Colleu. The brand was founded by the late dermatologist Dr. Fredric Brandt. I couldn't find whether its products are vegan.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Dr. Brandt Skincare company page",
+        "url": "https://crueltyfree.peta.org/company/dr-brandt-skincare/"
+      },
+      {
+        "label": "Dr. Brandt: contact us (animal testing statement)",
+        "url": "https://www.drbrandtskincare.com/en-gb/pages/contact-us"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "about-face",
+    "name": "about-face",
+    "tier": "good",
+    "note": "PETA lists about-face as cruelty-free and shows it as a vegan company. The brand says all its products are vegan and cruelty-free. Founded by singer Halsey (Ashley Frangipane) in 2021; I couldn't find any sale to a larger company. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: about-face company page, cruelty-free with vegan icon (modified 11 Sep 2025)",
+        "url": "https://crueltyfree.peta.org/company/about-face-has-beauty/"
+      },
+      {
+        "label": "about-face: About page ('All of our products are vegan, clean + cruelty-free'; founded by Halsey)",
+        "url": "https://aboutface.com/pages/about"
+      },
+      {
+        "label": "Licensing Source: Halsey launches her own beauty brand about-face (5 Jan 2021)",
+        "url": "https://licensingsource.net/?p=85829"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "alleyoop",
+    "name": "Alleyoop",
+    "tier": "good",
+    "note": "PETA lists Alleyoop as cruelty-free and shows it as a vegan company. The brand says its products are not tested on animals and use plant-based alternatives to animal-derived ingredients. Independent and privately held, led by its founder and CEO Leila Kashani, with minority venture investors. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Alleyoop company page, cruelty-free with vegan icon (modified 14 Sep 2026)",
+        "url": "https://crueltyfree.peta.org/company/alleyoop/"
+      },
+      {
+        "label": "Alleyoop: Clean philosophy (not tested on animals, plant-based alternatives)",
+        "url": "https://meetalleyoop.com/pages/clean-philosophy"
+      },
+      {
+        "label": "Alleyoop: Our story (Leila, founder and CEO)",
+        "url": "https://meetalleyoop.com/pages/our-story"
+      },
+      {
+        "label": "PitchBook: Alleyoop profile (privately held, VC-backed, minority investors)",
+        "url": "https://pitchbook.com/profiles/company/231668-11"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "allies-of-skin",
+    "name": "Allies of Skin",
+    "tier": "check",
+    "note": "PETA lists Allies of Skin as cruelty-free. Some of its products are vegan, but not all, and I couldn't find a vegan certification. Founded by Nicolas Travis, who still runs it; investment firm Meaningful Partners put in $20 million in 2024 (stake not disclosed). I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Allies of Skin company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/allies-of-skin/"
+      },
+      {
+        "label": "Allies of Skin: About us (founder and formulator Nicolas Travis)",
+        "url": "https://us.allies.shop/pages/discover-allies"
+      },
+      {
+        "label": "Ethical Elephant: Allies of Skin cruelty-free, some vegan products, not sold in mainland China (updated 20 Jan 2022)",
+        "url": "https://ethicalelephant.com/is-allies-of-skin-cruelty-free-vegan/"
+      },
+      {
+        "label": "BeautyMatter: Allies of Skin raises $20 million from Meaningful Partners (27 Mar 2024)",
+        "url": "https://beautymatter.com/articles/allies-of-skin-raises-20-million-from-meaningful-partners"
+      },
+      {
+        "label": "Cosmetics & Toiletries: Meaningful Partners invests in Allies of Skin (29 Mar 2024)",
+        "url": "https://www.cosmeticsandtoiletries.com/news/companies/news/22891750/meaningful-partners-invests-in-allies-of-skin-to-accelerate-us-market-expansion"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "dear-klairs",
+    "name": "Dear, Klairs",
+    "tier": "good",
+    "note": "PETA lists Dear, Klairs as cruelty-free and shows it as a vegan company. Some of its products are certified vegan by The Vegan Society, and the brand says it formulates without non-vegan ingredients. Owned by Wishcompany Inc. in Seoul, which also runs the Wishtrend shop and By Wishtrend. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Wishcompany Inc.",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Dear, Klairs company page, cruelty-free with vegan icon (modified 23 Aug 2021)",
+        "url": "https://crueltyfree.peta.org/company/dear-klairs/"
+      },
+      {
+        "label": "Klairs: brand site (PETA certified; selection of products Vegan Society certified; no non-vegan ingredients)",
+        "url": "https://www.klairscosmetics.com/"
+      },
+      {
+        "label": "Wishcompany: company site listing Dear Klairs, By Wishtrend, Wishtrend",
+        "url": "https://www.wishcompany.net/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "benton",
+    "name": "Benton",
+    "tier": "check",
+    "note": "PETA lists Benton as cruelty-free. Some of its products are vegan, but not all, and I couldn't find a vegan certification. Run by Benton Inc. in Seoul, which names Lee Jang Won as its owner; I couldn't find a larger parent company. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Benton company page (modified 25 Sep 2026)",
+        "url": "https://crueltyfree.peta.org/company/benton/"
+      },
+      {
+        "label": "Benton: brand story page (Benton Inc., owner Lee Jang Won, Seoul; vegan category)",
+        "url": "https://bentoncosmetics.com/brand.html"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Benton cruelty-free, not 100% vegan, no testing parent",
+        "url": "https://www.crueltyfreekitty.com/brands/benton/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "axis-y",
+    "name": "AXIS-Y",
+    "tier": "good",
+    "note": "PETA lists AXIS-Y as cruelty-free, and the brand says it never tests on animals. AXIS-Y says it is certified vegan by the Korea Agency of Vegan Certification and Services, though older stock of three AY&ME products may not be vegan. Run by Asia Master Trade Co., Ltd. in Seoul; I couldn't find a larger parent company. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Asia Master Trade Co., Ltd.",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: AXIS-Y company page (no date shown)",
+        "url": "https://crueltyfree.peta.org/company/axis-y/"
+      },
+      {
+        "label": "AXIS-Y: FAQ (never tests on animals; certified vegan by KAVCS; older AY&ME versions non-vegan; Asia Master Trade Co., Ltd)",
+        "url": "https://www.axis-y.com/pages/v2-faq"
+      },
+      {
+        "label": "Cruelty-Free Kitty: AXIS-Y cruelty-free, not 100% vegan, no testing parent (updated 31 Mar 2026)",
+        "url": "https://www.crueltyfreekitty.com/brands/axis-y/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "Korea Agency of Vegan Certification and Services",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "billie",
+    "name": "BILLIE",
+    "tier": "warn",
+    "note": "PETA lists BILLIE as cruelty-free and shows it as a vegan company. Owned by Edgewell Personal Care (Schick, Banana Boat, Wet Ones), whose own policy says its products are tested on animals in markets where the law requires it. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Edgewell Personal Care",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "body-shower",
+      "skincare",
+      "hygiene"
+    ],
+    "sources": [
+      {
+        "label": "PETA: BILLIE company page, cruelty-free with vegan icon (no date shown)",
+        "url": "https://crueltyfree.peta.org/company/billie/"
+      },
+      {
+        "label": "Edgewell Personal Care: homepage trademark notice listing Billie among its brands",
+        "url": "https://edgewell.com/"
+      },
+      {
+        "label": "Edgewell: Corporate Animal Testing Policy ('only tested on animals in those markets where required to do so by law')",
+        "url": "https://cdn.shopify.com/s/files/1/0598/9538/2192/files/Corporate_Animal_Testing_Policy.pdf"
+      },
+      {
+        "label": "Billie: FAQ (links to Edgewell satisfaction guarantee)",
+        "url": "https://mybillie.com/pages/faq"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Billie cruelty-free and 100% vegan",
+        "url": "https://www.crueltyfreekitty.com/brands/billie/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "parentTestsOnAnimals": true,
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bite-toothpaste-bits",
+    "name": "Bite Toothpaste Bits",
+    "tier": "good",
+    "note": "PETA lists Bite as cruelty-free and vegan, and Bite says it never tests on animals and that its Bits are 100% vegan. Independent, woman-owned business founded and run by Lindsay McCormick; it is also a certified B Corp. I couldn't find a Leaping Bunny / Cruelty Free International certification. Not to be confused with Bite Beauty, the lipstick brand.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "dental",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Bite Toothpaste Bits company page, cruelty-free with vegan icon (no date shown)",
+        "url": "https://crueltyfree.peta.org/company/bite-toothpaste-bits/"
+      },
+      {
+        "label": "Bite: FAQ ('Nope. Never.'; 'certified Cruelty Free and Vegan by PETA's Beauty without Bunnies'; B Corp)",
+        "url": "https://bitetoothpastebits.com/pages/frequently-asked-questions"
+      },
+      {
+        "label": "Bite: About us (Lindsay McCormick, CEO and founder; woman-owned)",
+        "url": "https://bitetoothpastebits.com/pages/about-us"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Bite Beauty (different brand, LVMH-owned) - for name clash",
+        "url": "https://www.crueltyfreekitty.com/brands/bite/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "waterwipes",
+    "name": "WaterWipes",
+    "tier": "good",
+    "note": "PETA lists WaterWipes as cruelty-free. Certified vegan by The Vegan Society. Founded in 2008 by Edward McCloskey and made in Drogheda, Ireland, by WaterWipes UC; I couldn't confirm who owns it today. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "hygiene",
+      "paper-hygiene"
+    ],
+    "sources": [
+      {
+        "label": "PETA: WaterWipes company page (modified 26 Jun 2025)",
+        "url": "https://crueltyfree.peta.org/company/waterwipes/"
+      },
+      {
+        "label": "WaterWipes UK: FAQ ('approved by ... Vegan Society'; Vegan Society logo; WaterWipes UC)",
+        "url": "https://www.waterwipes.com/uk/en/faq"
+      },
+      {
+        "label": "WaterWipes UK: About us (founder Edward McCloskey, est. 2008, Drogheda, Ireland)",
+        "url": "https://www.waterwipes.com/uk/en/about-us"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "The Vegan Society",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "wet-brush",
+    "name": "Wet Brush",
+    "tier": "check",
+    "note": "PETA lists Wet Brush (BBI) as cruelty-free. Owned by Beauty by Imagination (BBI), a haircare group backed by investment firm ACON Investments that also owns Goody, Bio Ionic and Ouidad. I couldn't find a statement on whether its products are vegan. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Beauty by Imagination",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Wet Brush (BBI) company page (modified 10 Jul 2023; links to bbicompany.com)",
+        "url": "https://crueltyfree.peta.org/company/wet-brush-bbi/"
+      },
+      {
+        "label": "BBI: homepage (Beauty by Imagination; Wet Brush, Goody, Bio Ionic, Ouidad)",
+        "url": "https://bbicompany.com"
+      },
+      {
+        "label": "BBI: About (Beauty by Imagination / ACON Investments LLC portfolio)",
+        "url": "https://bbicompany.com/about"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "macadamia-hair",
+    "name": "Macadamia Hair",
+    "tier": "good",
+    "note": "PETA lists Macadamia Hair (Macadamia Professional) as cruelty-free and vegan, meaning neither ingredients nor finished products are tested on animals. It is made by Macadamia Beauty LLC in Texas, which took investment from Star Avenue Capital in 2012; I couldn't find who holds the majority stake today. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Macadamia Beauty LLC",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Macadamia Hair company page (modified 31 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/macadamia-hair/"
+      },
+      {
+        "label": "Behind The Chair: Macadamia Professional unveils 100% vegan hair repair products (c. 2017-18)",
+        "url": "https://behindthechair.com/news/macadamia-professional-unveils-100-vegan-based-hair-repair-products"
+      },
+      {
+        "label": "Cosmetics Business: Star Avenue Capital invests in Macadamia Natural Oil (20 Sep 2012)",
+        "url": "https://www.cosmeticsbusiness.com/macadamia-natural-oil-and-star-avenue-capital-announce-partnership-80977"
+      },
+      {
+        "label": "Behind The Chair: Macadamia Professional moves HQ to Texas",
+        "url": "https://behindthechair.com/news/macadamia-professional-moves-corporate-headquarters-texas/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "cocoa-brown",
+    "name": "Cocoa Brown",
+    "tier": "good",
+    "note": "PETA lists Cocoa Brown as cruelty-free and vegan. The brand's own site says its self-tan products are vegan and cruelty-free. Independently owned by its founder, Marissa Carter. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Cocoa Brown company page (modified 27 Feb 2024)",
+        "url": "https://crueltyfree.peta.org/company/cocoa-brown/"
+      },
+      {
+        "label": "Cocoa Brown: official site, About the Founder",
+        "url": "https://www.cocoabrown.ie/"
+      },
+      {
+        "label": "Irish Beauty: Cocoa Brown brand makeover, founder and CEO Marissa Carter (8 Jul 2020)",
+        "url": "https://www.irishbeauty.ie/Cocoa-Brown-tan-reveals-brand-makeover.html"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "eyeko",
+    "name": "Eyeko",
+    "tier": "check",
+    "note": "PETA lists Eyeko as cruelty-free, saying neither its ingredients nor finished products are tested on animals. Some Eyeko products are vegan, but not all, and I couldn't find a vegan certification. Owned by THG plc (The Hut Group), which bought it in 2018. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "THG plc",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Eyeko company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/eyeko/"
+      },
+      {
+        "label": "BeautyMatter: The Hut Group acquires Eyeko (9 May 2018)",
+        "url": "https://www.beautymatter.com/articles/the-hut-group-acquires-eyeko"
+      },
+      {
+        "label": "Ethical Elephant: Eyeko cruelty-free and vegan status, brand quotes (updated 6 Jan 2022)",
+        "url": "https://ethicalelephant.com/eyeko-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "elegant-touch",
+    "name": "Elegant Touch",
+    "tier": "check",
+    "note": "PETA lists Elegant Touch as cruelty-free. I couldn't find a vegan statement or vegan certification for its press-on nails. Owned by PDC Wellness & Personal Care, which bought it in 2016 and is backed by CVC Capital Partners. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "PDC Wellness & Personal Care",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Elegant Touch company page (modified 18 Jun 2026)",
+        "url": "https://crueltyfree.peta.org/company/elegant-touch/"
+      },
+      {
+        "label": "Elegant Touch: official site, footer (c) PDC Wellness 2026",
+        "url": "https://www.eleganttouch.com/about/"
+      },
+      {
+        "label": "Cosmetics Business: PDC Brands acquires Eylure and Elegant Touch (6 Apr 2016)",
+        "url": "https://cosmeticsbusiness.com/pdc-brands-acquires-eylure-and-elegant-touch--117142"
+      },
+      {
+        "label": "Cosmetics Business: PDC Brands sold to CVC Capital Partners (2 Jun 2017)",
+        "url": "https://cosmeticsbusiness.com/pdc-brands-sold-to-a-luxembourg-equity-firm-130048"
+      },
+      {
+        "label": "Oaklins: PDC Wellness (CVC-backed) sells Salon System to PBS (May 2026)",
+        "url": "https://www.oaklins.com/it/en/deals/111954/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "grace-cole",
+    "name": "Grace Cole",
+    "tier": "check",
+    "note": "PETA lists Grace Cole as cruelty-free, and the brand says neither its ingredients nor finished products are tested on animals. Grace Cole says its products are vegan, but has no vegan certification. Made by Cole Beauty Ltd in Cheshire, the company founded and run by Tracy Mort MBE. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Cole Beauty Ltd",
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Grace Cole company page (modified 19 Aug 2024)",
+        "url": "https://crueltyfree.peta.org/company/grace-cole/"
+      },
+      {
+        "label": "Grace Cole: FAQs (animal testing, vegan)",
+        "url": "https://www.gracecole.co.uk/pages/faqs"
+      },
+      {
+        "label": "Grace Cole: About us (Cole Beauty Ltd, founder and CEO Tracy Mort MBE)",
+        "url": "https://www.gracecole.co.uk/pages/about-us-1"
+      },
+      {
+        "label": "Buy Women Built: Grace Cole brand profile",
+        "url": "https://www.buywomenbuilt.com/brands/grace-cole"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "sosu-by-suzanne-jackson",
+    "name": "SOSU by Suzanne Jackson",
+    "tier": "check",
+    "note": "PETA lists SOSU by Suzanne Jackson as cruelty-free. SOSU says every product is vegan and certified by PETA, but PETA's page doesn't show it as vegan, so I'm treating vegan as the brand's own claim. Independently owned: in 2020 the company behind it was owned 50/50 by founder Suzanne Jackson and businessman Fran O'Gorman. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "SanFran Cosmetics Ltd",
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: SOSU by Suzanne Jackson company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/sosu-by-suzanne-jackson/"
+      },
+      {
+        "label": "SOSU Cosmetics: About us 2026 (cruelty free and vegan, founded 2015 by Suzanne Jackson)",
+        "url": "https://sosucosmetics.com/pages/about-us-2026"
+      },
+      {
+        "label": "BreakingNews.ie: SoSueMe blogger's firm, SanFran Cosmetics owned 50/50 (3 Dec 2020)",
+        "url": "https://breakingnews.ie/business/sosueme-bloggers-firm-sees-profits-almost-triple-1046019.html"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "floral-street",
+    "name": "Floral Street",
+    "tier": "good",
+    "note": "PETA lists Floral Street as cruelty-free and vegan, saying neither its ingredients nor finished products are tested on animals. The brand describes its fragrances as vegan and cruelty free. Founded by Michelle Feeney; I couldn't find a parent company or any sale of the brand. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Floral Street company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/floral-street/"
+      },
+      {
+        "label": "Floral Street: Our story (founder Michelle Feeney, vegan and cruelty free)",
+        "url": "https://us.floralstreet.com/pages/our-story"
+      },
+      {
+        "label": "Moodie Davitt Report: interview with founder Michelle Feeney",
+        "url": "https://www.moodiedavittreport.com/interview-michelle-feeney-on-creating-an-upstart-not-a-start-up-brand-with-floral-street/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "heathcote-ivory",
+    "name": "Heathcote & Ivory",
+    "tier": "good",
+    "note": "PETA lists Heathcote & Ivory as cruelty-free and vegan. The brand says none of its products, including its Cath Kidston licensed range, are tested on animals. It describes itself as a family-run English toiletries company, Heathcote & Ivory Ltd in London. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Heathcote & Ivory company page (modified 12 Feb 2025)",
+        "url": "https://crueltyfree.peta.org/company/heathcote-ivory/"
+      },
+      {
+        "label": "Heathcote & Ivory: FAQ (not tested on animals, PETA cruelty-free and vegan)",
+        "url": "https://www.heathcote-ivory.com/pages/faq"
+      },
+      {
+        "label": "Heathcote & Ivory: About us (family-run, led by Denis Aaronson)",
+        "url": "https://www.heathcote-ivory.com/pages/about-us"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "grow-gorgeous",
+    "name": "Grow Gorgeous",
+    "tier": "check",
+    "note": "PETA lists Grow Gorgeous as cruelty-free, saying neither its ingredients nor finished products are tested on animals. I couldn't find a vegan certification or a clear vegan statement. Owned by THG plc (The Hut Group), which bought it from Deciem in 2016. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "THG plc",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Grow Gorgeous company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/grow-gorgeous/"
+      },
+      {
+        "label": "TheBusinessDesk: The Hut Group buys Grow Gorgeous from Deciem (26 Feb 2016)",
+        "url": "https://www.thebusinessdesk.com/northwest/?p=731784"
+      },
+      {
+        "label": "Grow Gorgeous: official site (no animal-testing or vegan info on home page)",
+        "url": "https://www.growgorgeous.co.uk/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "crazy-color",
+    "name": "Crazy Color",
+    "tier": "good",
+    "note": "PETA lists Crazy Color as cruelty-free and vegan. The brand says it has never tested its products on animals and doesn't work with companies who do, and that all its dyes are vegan. PETA lists it under Professional Beauty Systems, a UK hair and beauty manufacturer. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Professional Beauty Systems",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Crazy Color (Professional Beauty Systems) company page (modified 30 Jan 2023)",
+        "url": "https://crueltyfree.peta.org/company/crazy-color-professional-beauty-systems/"
+      },
+      {
+        "label": "Crazy Color: FAQs (never tested on animals, 100% vegan, PETA)",
+        "url": "https://www.crazycolor.co.uk/pages/faqs"
+      },
+      {
+        "label": "Crazy Color: Who we are (launched 1977, made in the UK)",
+        "url": "https://www.crazycolor.co.uk/pages/about-us"
+      },
+      {
+        "label": "Oaklins: Professional Beauty Systems, UK-based developer and manufacturer (May 2026)",
+        "url": "https://www.oaklins.com/at/en/deals/111954/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "tints-of-nature",
+    "name": "Tints of Nature",
+    "tier": "good",
+    "note": "PETA lists Tints of Nature as cruelty-free, saying neither its ingredients nor finished products are tested on animals. Certified vegan by The Vegan Society. Made in the New Forest by its parent company, Herb UK, and certified as a B Corporation. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": "Herb UK",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Tints of Nature company page (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/tints-of-nature/"
+      },
+      {
+        "label": "Tints of Nature: Who we are (Herb UK, Vegan Society, B Corp, New Forest)",
+        "url": "https://www.tintsofnature.co.uk/pages/who-we-are"
+      },
+      {
+        "label": "Tints of Nature USA: home page (100% vegan and cruelty-free, Vegan Society Approved logo)",
+        "url": "https://www.tintsofnature.com/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "The Vegan Society",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "ellis-brooklyn",
+    "name": "Ellis Brooklyn",
+    "tier": "good",
+    "note": "PETA lists Ellis Brooklyn as cruelty-free and vegan. The brand describes its fragrances as PETA-certified vegan and cruelty free. Founded in 2015 by former New York Times beauty writer Bee Shapiro; I couldn't find who owns it now or any parent company. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Ellis Brooklyn company page (modified 7 Apr 2026)",
+        "url": "https://crueltyfree.peta.org/company/ellis-brooklyn/"
+      },
+      {
+        "label": "Ellis Brooklyn: Philosophy / about (founder Bee Shapiro, PETA-certified vegan and cruelty free)",
+        "url": "https://ellisbrooklyn.com/pages/philosophy"
+      },
+      {
+        "label": "Ellis Brooklyn: home page (since 2015, vegan, cruelty-free)",
+        "url": "https://ellisbrooklyn.com/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "dedcool",
+    "name": "DedCool",
+    "tier": "good",
+    "note": "PETA lists DedCool as cruelty-free and vegan. The brand says it does not test on animals and that its products are 100% vegan. Founded by Carina Chaz in Los Angeles; I couldn't find who owns it now or any parent company. I couldn't find a Leaping Bunny / Cruelty Free International certification.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "body-shower",
+      "laundry",
+      "household-cleaning"
+    ],
+    "sources": [
+      {
+        "label": "PETA: DedCool company page (modified 7 Nov 2023)",
+        "url": "https://crueltyfree.peta.org/company/dedcool/"
+      },
+      {
+        "label": "DedCool: FAQs (no animal testing, 100% vegan, made in Los Angeles)",
+        "url": "https://dedcool.com/pages/faqs"
+      },
+      {
+        "label": "DedCool: About us (founder Carina Chaz)",
+        "url": "https://dedcool.com/pages/about-us"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "djerf-avenue",
+    "name": "Djerf Avenue",
+    "tier": "good",
+    "note": "Listed as cruelty-free by PETA, which says neither its ingredients nor finished products are tested on animals. PETA also lists it as a vegan company. Independently owned by its co-founders, Matilda Djerf and Rasmus Johansson. This is the Swedish fashion label's beauty line (hair care and body care).",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Djerf Avenue company page, cruelty-free with vegan icon (modified 7 Aug 2023)",
+        "url": "https://crueltyfree.peta.org/company/djerf-avenue/"
+      },
+      {
+        "label": "Wikipedia: Matilda Djerf, co-founded Djerf Avenue in 2019 with Rasmus Johansson (CEO)",
+        "url": "https://en.wikipedia.org/wiki/Matilda_Djerf"
+      },
+      {
+        "label": "V Magazine: Djerf Avenue Beauty haircare, cruelty-free vegan, PETA-certified (30 Oct 2024)",
+        "url": "https://vmagazine.com/article/you-can-now-have-matilda-djerf-style-hair-with-djerf-avenue-beautys-new-haircare-collections"
+      },
+      {
+        "label": "Djerf Avenue: beauty shop page (hair and body care range)",
+        "url": "https://djerfavenue.com/en-us/beauty/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "ceremonia",
+    "name": "Ceremonia",
+    "tier": "good",
+    "note": "Listed as cruelty-free by PETA and by Leaping Bunny / Cruelty Free International. PETA also lists it as a vegan company. Independent, founder-led company run by its founder, Babba Rivera, and backed by venture investors; I couldn't find a parent company.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Ceremonia company page, cruelty-free with vegan icon (modified 2 Feb 2024)",
+        "url": "https://crueltyfree.peta.org/company/ceremonia/"
+      },
+      {
+        "label": "Leaping Bunny: Ceremonia brand page (checked 15 Oct 2026)",
+        "url": "https://www.leapingbunny.org/brand/ceremonia"
+      },
+      {
+        "label": "Ceremonia: About us, certified cruelty-free, never tests on animals, Leaping Bunny and PETA logos",
+        "url": "https://ceremonia.com/pages/about-us"
+      },
+      {
+        "label": "Beauty Independent: founder Babba Rivera, $10m Series A led by Sandbridge Capital (5 Jul 2023)",
+        "url": "https://www.beautyindependent.com/ceremonia-first-flagship-manhattan-latin-american-oasis/"
+      },
+      {
+        "label": "Caplight: Ceremonia private company, funding rounds incl. Jan 2026 round",
+        "url": "https://www.caplight.com/company/ceremonia"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "fourth-ray",
+    "name": "Fourth Ray",
+    "tier": "good",
+    "note": "Listed as cruelty-free by PETA, which also lists it as a vegan company. Its own site says it is 100% vegan and cruelty-free. Owned by Seed Beauty, the family-run California company behind ColourPop, which is also PETA-certified cruelty-free.",
+    "parentCompany": "Seed Beauty",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Fourth Ray company page, cruelty-free with vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/fourth-ray/"
+      },
+      {
+        "label": "Fourth Ray Beauty: homepage banner '100% Vegan, Cruelty-Free', footer '© 2026 Seed Beauty'",
+        "url": "https://fourthraybeauty.com/"
+      },
+      {
+        "label": "Wikipedia: ColourPop, owned by Seed Beauty; sister brands Fourth Ray Beauty and Sol Body",
+        "url": "https://en.wikipedia.org/wiki/ColourPop"
+      },
+      {
+        "label": "Global Cosmetic Industry: Seed Beauty's Fourth Ray Beauty and Sol Body land in Ulta (2020)",
+        "url": "https://www.gcimagazine.com/brands-products/news/news/21859998/seed-beauty-fourth-ray-beauty-sol-body-land-in-ulta"
+      },
+      {
+        "label": "Cruelty-Free Kitty: ColourPop (Seed Beauty sister brand) PETA certified cruelty-free (updated 31 Mar 2026)",
+        "url": "https://www.crueltyfreekitty.com/brand/colourpop/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "kaja-beauty",
+    "name": "Kaja Beauty",
+    "tier": "good",
+    "note": "Listed as cruelty-free by PETA, which says neither its ingredients nor finished products are tested on animals. PETA also lists it as a vegan company, and its own site says it is vegan and never tested on animals. Kaja was created by Memebox, the Korean-American beauty company, which still appears to own it.",
+    "parentCompany": "Memebox",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Kaja Beauty company page, cruelty-free with vegan icon (modified 11 Jul 2025)",
+        "url": "https://crueltyfree.peta.org/company/kaja-beauty/"
+      },
+      {
+        "label": "Kaja Beauty: homepage, 'Vegan & Cruelty-Free', 'Never tested on animals' (© 2026)",
+        "url": "https://www.kajabeauty.com/"
+      },
+      {
+        "label": "Inside Retail US: Memebox CEO Dino Ha on building brands incl. Kaja (11 Jun 2026)",
+        "url": "https://insideretail.us/memebox-ceo-dino-ha-talks-14-year-journey-of-building-a-global-k-beauty-company/"
+      },
+      {
+        "label": "Drug Store News: Memebox brings Kaja to Sephora shelves",
+        "url": "https://drugstorenews.com/beauty/memebox-brings-kaja-to-sephora-shelves"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "jason-wu-beauty",
+    "name": "Jason Wu Beauty",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA, which says the company and its suppliers do not test on animals. PETA does not list it as vegan, and I couldn't find a vegan claim from the brand. Made by Bespoke Beauty Brands, the beauty company founded by Toni Ko (founder of NYX), in partnership with designer Jason Wu. Not connected to JASON, the natural personal care brand.",
+    "parentCompany": "Bespoke Beauty Brands",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Jason Wu Beauty company page, cruelty-free, no vegan icon (checked 15 Oct 2026)",
+        "url": "https://crueltyfree.peta.org/company/jason-wu-beauty/"
+      },
+      {
+        "label": "Business Wire: Jason Wu launches cosmetic line with Bespoke Beauty Brands LLC, '100% cruelty-free' (26 Oct 2020)",
+        "url": "https://www.businesswire.com/news/home/20201026005163/en/Fashion-Designer-Jason-Wu-Launches-Cosmetic-Line-with-Bespoke-Beauty-Brands-LLC"
+      },
+      {
+        "label": "D CEO: Bespoke Beauty Brands, founded by Toni Ko, portfolio KimChiChic Beauty and Jason Wu Beauty (18 Nov 2024)",
+        "url": "https://www.dmagazine.com/publications/d-ceo/2024/november/how-stacey-tank-and-dfw-based-bespoke-beauty-brands-are-playing-to-win/"
+      },
+      {
+        "label": "Jason Wu Beauty: official site (© 2026 Jason Wu Beauty), no vegan or animal-testing statement on homepage",
+        "url": "https://jasonwubeauty.com/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "beauty-bakerie-cosmetics",
+    "name": "Beauty Bakerie Cosmetics",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA, which says neither its ingredients nor finished products are tested on animals. Beauty Bakerie says its products are vegan-friendly, but has no vegan certification, and PETA does not list it as vegan. Founded and led by Cashmere Nicole; Unilever Ventures led a $3m seed investment round in 2017, but I couldn't find any sign that Unilever owns the brand.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Beauty Bakerie Cosmetics company page, cruelty-free, no vegan icon (modified 2 Sep 2020)",
+        "url": "https://crueltyfree.peta.org/company/beauty-bakerie-cosmetics/"
+      },
+      {
+        "label": "Beauty Bakerie: homepage badges 'Cruelty-Free', 'Vegan-Friendly' (checked 15 Oct 2026)",
+        "url": "http://www.beautybakerie.com/"
+      },
+      {
+        "label": "Beauty Bakerie: Our Story, founded and led by Cashmere Nicole (2011)",
+        "url": "https://www.beautybakerie.com/pages/about-us"
+      },
+      {
+        "label": "Forbes: Unilever Ventures led Beauty Bakerie's $3m seed round (3 Dec 2017)",
+        "url": "https://www.forbes.com/sites/amyfeldman/2017/12/03/how-a-single-mom-battling-breast-cancer-built-beauty-bakerie-to-a-5m-brand-got-unilever-to-invest/?sh=9f7092c43f82"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "black-radiance",
+    "name": "Black Radiance",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA, which says neither its ingredients nor finished products are tested on animals. Its own FAQ says it does not test on animals and neither do its ingredient suppliers. PETA does not list it as vegan, and its FAQ mentions lanolin (from sheep's wool), so not every product is vegan. Its products are sold under the Markwins name.",
+    "parentCompany": "Markwins Beauty Brands",
+    "vegan": "partial",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Black Radiance company page, cruelty-free, no vegan icon (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/black-radiance/"
+      },
+      {
+        "label": "Black Radiance: FAQ, 'We do not test on animals nor do any of the materials we buy'",
+        "url": "https://www.blackradiancebeauty.com/pages/faq"
+      },
+      {
+        "label": "Black Radiance: About us, founded 1993, 'formulations are cruelty-free'",
+        "url": "https://www.blackradiancebeauty.com/pages/about-us"
+      },
+      {
+        "label": "Black Radiance: shop homepage, product titles prefixed 'Markwins BR' (© 2026)",
+        "url": "http://www.blackradiancebeauty.com"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "l-a-colors",
+    "name": "L.A. Colors",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA under its company, Beauty 21. Its own FAQ says it does not test on animals. PETA does not list it as vegan, and I couldn't find a vegan claim from the brand.",
+    "parentCompany": "Beauty 21 Cosmetics",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: L.A. Colors (Beauty 21) company page, cruelty-free, no vegan icon (modified 7 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/la-colors-beauty-21/"
+      },
+      {
+        "label": "L.A. Colors: FAQs, 'we do not test on animals', US-only orders (© 2026)",
+        "url": "https://www.lacolors.com/pages/faqs"
+      },
+      {
+        "label": "L.A. Colors: Our Story, '100% Cruelty-Free'",
+        "url": "https://www.lacolors.com/pages/about-lacolors"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "jordana-cosmetics",
+    "name": "Jordana Cosmetics",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA, which says neither its ingredients nor finished products are tested on animals, and that its suppliers follow the same standard. PETA does not list it as vegan. I couldn't check the brand's own website or find who owns the company.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Jordana Cosmetics company page, cruelty-free, no vegan icon (modified 19 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/jordana-cosmetics/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bodyography",
+    "name": "Bodyography",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA and by Leaping Bunny / Cruelty Free International. It has a vegan range, but not every product is vegan, and the vegan range has no vegan certification. Made by Robanda International, a San Diego company that PETA lists as cruelty-free alongside the brand.",
+    "parentCompany": "Robanda International",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Bodyography (Robanda International) company page, cruelty-free, no vegan icon (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/bodyography-robanda-international/"
+      },
+      {
+        "label": "Leaping Bunny: Bodyography brand page (checked 15 Oct 2026)",
+        "url": "https://www.leapingbunny.org/brand/bodyography"
+      },
+      {
+        "label": "Bodyography: homepage, 'Certified by both PETA and Leaping Bunny', Vegan collection, company info Robanda International Inc., San Diego",
+        "url": "http://www.bodyography.com"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "besame-cosmetics",
+    "name": "Bésame Cosmetics",
+    "tier": "check",
+    "note": "Listed as cruelty-free by PETA. Its founder's page says it has always been 100% cruelty-free and its products are never tested on animals. PETA does not list it as vegan, and I couldn't find a vegan claim from the brand. Founded by make-up historian Gabriela Hernandez; I couldn't find a parent company.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Bésame Cosmetics company page, cruelty-free, no vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/besame-cosmetics-2/"
+      },
+      {
+        "label": "Bésame Cosmetics: Founder's story (Gabriela Hernandez), '100% cruelty-free', 'never on animals'",
+        "url": "https://besamecosmetics.com/pages/founders-story"
+      },
+      {
+        "label": "Bésame Cosmetics: homepage (© 2026), founder Gabriela Hernandez",
+        "url": "https://besamecosmetics.com/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "cake-beauty",
+    "name": "Cake Beauty",
+    "tier": "good",
+    "note": "Listed as cruelty-free by PETA, which also lists it as a vegan company. Its own site says it doesn't buy from suppliers that test on animals and doesn't sell anywhere that requires animal testing. Owned by MAV Beauty Brands, the Canadian company behind Marc Anthony, which PETA lists together with Cake.",
+    "parentCompany": "MAV Beauty Brands",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare",
+      "body-shower",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA Beauty Without Bunnies: Cake Beauty (Marc Anthony) company page, cruelty-free with vegan icon (modified 5 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/cake-beauty-marc-anthony/"
+      },
+      {
+        "label": "Cake Beauty: Cake Values, no animal testing, 'certified as both cruelty free and vegan by PETA's Beauty Without Bunnies'",
+        "url": "https://www.cakebeauty.com/pages/cross-our-hearts"
+      },
+      {
+        "label": "Cake Beauty: homepage footer 'A MAV Beauty Brand', 'Created in Canada'",
+        "url": "http://www.cakebeauty.com/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "being-frenshe",
+    "name": "Being Frenshe",
+    "tier": "good",
+    "note": "PETA lists Being Frenshe as cruelty-free and vegan. It is Ashley Tisdale French's brand, developed with and run by the beauty company Maesa, which is majority-owned by Bain Capital. I couldn't find Being Frenshe on the Leaping Bunny / Cruelty Free International list.",
+    "parentCompany": "Maesa",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "body-shower",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Being Frenshe (Maesa) listing, cruelty-free with vegan icon (modified 12 Dec 2024)",
+        "url": "https://crueltyfree.peta.org/company/being-frenshe-maesa/"
+      },
+      {
+        "label": "Happi: Maesa company profile listing Being Frenshe among its brands (2024)",
+        "url": "https://www.happi.com/top-company-profile/maesa/?cyear=2024"
+      },
+      {
+        "label": "Business Wire: Maesa press release, About Maesa lists Being Frenshe (Feb 2026)",
+        "url": "https://www.businesswire.com/news/home/20260204911127/en/Maesa-Introduces-Party-of-You-A-New-Brand-Offering-Skincare-Antidotes-to-Lifes-Realities"
+      },
+      {
+        "label": "Mann Publications: Being Frenshe enters Ulta, developed in partnership with Maesa (Jun 2026)",
+        "url": "https://www.mannpublications.com/mannabouttown/2026/06/16/being-frenshe-enters-ulta-beauty-marking-a-major-expansion-for-the-fast-growing-wellness-brand/"
+      },
+      {
+        "label": "Mergr: Maesa owned by Bain Capital Private Equity since 2019",
+        "url": "https://mergr.com/company/maesa"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Being Frenshe launch article, brand says vegan and no animal testing (Aug 2022)",
+        "url": "https://www.crueltyfreekitty.com/?p=29790"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bondiboost",
+    "name": "BondiBoost",
+    "tier": "good",
+    "note": "PETA lists BondiBoost as cruelty-free and vegan. Its own FAQ says it never tests its products on animals. Owned by Gauge Capital, a US private equity firm, since 2022. I couldn't find BondiBoost on the Leaping Bunny / Cruelty Free International list.",
+    "parentCompany": "Gauge Capital",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: BondiBoost listing, cruelty-free with vegan icon (modified 27 Oct 2023)",
+        "url": "https://crueltyfree.peta.org/company/bondiboost/"
+      },
+      {
+        "label": "BondiBoost: FAQ, 'we would never test our products on any animals'",
+        "url": "https://bondiboost.com/pages/faq"
+      },
+      {
+        "label": "BeautyMatter: BondiBoost acquired by Gauge Capital (Apr 2022)",
+        "url": "https://beautymatter.com/articles/australian-haircare-brand-bondi-boost-acquired-by-gauge-capital"
+      },
+      {
+        "label": "Ethical Elephant: BondiBoost confirmed all products vegan, not sold in mainland China (Jan 2022)",
+        "url": "https://ethicalelephant.com/is-bondiboost-cruelty-free-vegan/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bomba-curls",
+    "name": "Bomba Curls",
+    "tier": "check",
+    "note": "PETA lists Bomba Curls as cruelty-free. Its help centre says it never tests on animals, but I couldn't find a statement on whether its products are vegan. Independently owned by its founder and CEO, Lulu Cordero.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Bomba Curls listing, cruelty-free, no vegan icon (modified 13 Jan 2022)",
+        "url": "https://crueltyfree.peta.org/company/bomba-curls/"
+      },
+      {
+        "label": "Bomba Curls: help centre, 'Nope. Never. No way... certified cruelty free'",
+        "url": "https://bombacurls.com/apps/help-center"
+      },
+      {
+        "label": "Bomba Curls: Our Story, created by Lulu Cordero, CEO",
+        "url": "https://bombacurls.com/pages/our-story"
+      },
+      {
+        "label": "Beauty Independent: first female-owned Dominican haircare brand at Target, founder and CEO Lulu Cordero (Jan 2022)",
+        "url": "https://www.beautyindependent.com/bomba-curls-first-female-owned-dominican-haircare-brand-target/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "the-mane-choice",
+    "name": "The Mane Choice",
+    "tier": "check",
+    "note": "PETA lists The Mane Choice as cruelty-free, and the brand's story page promises products not tested on animals. I couldn't find a statement on whether its products are vegan. Owned by MAV Beauty Brands, whose business was bought by the private equity firm Nexus Capital Management in 2023.",
+    "parentCompany": "MAV Beauty Brands",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: The Mane Choice listing, cruelty-free, no vegan icon (no date shown)",
+        "url": "https://crueltyfree.peta.org/company/the-mane-choice/"
+      },
+      {
+        "label": "The Mane Choice: Our Story, 'products not tested on animals'",
+        "url": "https://www.themanechoice.com/pages/our-story"
+      },
+      {
+        "label": "AfroTech: MAV Beauty Brands acquires The Mane Choice (Nov 2019)",
+        "url": "https://www.afrotech.com/natural-hair-focused-brand-the-mane-choice-has-been-acquired/"
+      },
+      {
+        "label": "Newswire: MAV Beauty Brands completes sale of assets incl. The Mane Choice to Nexus Capital Management (Dec 2023)",
+        "url": "https://www.newswire.ca/news-releases/mav-beauty-brands-completes-sale-of-substantially-all-of-its-assets-to-nexus-capital-management-810658160.html"
+      },
+      {
+        "label": "Glossy: The Mane Choice rebrand, owned via MAV by Nexus Capital (Jan 2025)",
+        "url": "https://www.glossy.co/beauty/the-mane-choice-gets-a-rebrand-and-names-first-global-ambassador"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "keracare",
+    "name": "KeraCare",
+    "tier": "check",
+    "note": "PETA lists KeraCare as cruelty-free. I couldn't find a statement on whether its products are vegan. KeraCare is made by Avlon Industries, which is family-owned and run by the family of its founder, Dr Ali Syed.",
+    "parentCompany": "Avlon Industries, Inc.",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: KeraCare listing, cruelty-free, no vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/keracare/"
+      },
+      {
+        "label": "Good Salon Guide: Avlon celebrates 40th anniversary, family-owned and self-funded, KeraCare among its brands (2024)",
+        "url": "https://goodsalonguide.com/community/news/avlon-celebrates-its-40th-anniversary"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "good-dye-young",
+    "name": "Good Dye Young",
+    "tier": "good",
+    "note": "PETA lists Good Dye Young as cruelty-free and vegan. Its own FAQ says all products are vegan and that it is Leaping Bunny certified, though I couldn't check that on the Leaping Bunny / Cruelty Free International site. Co-founded by Hayley Williams and Brian O'Connor; I couldn't find a parent company.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Good Dye Young listing, cruelty-free with vegan icon (modified 16 Apr 2021)",
+        "url": "https://crueltyfree.peta.org/company/good-dye-young/"
+      },
+      {
+        "label": "Good Dye Young: FAQ, all products cruelty-free and vegan, says Leaping Bunny certified",
+        "url": "https://gooddyeyoung.com/pages/faq"
+      },
+      {
+        "label": "Glossy: Good Dye Young co-founders Hayley Williams and Brian O'Connor (Nov 2025)",
+        "url": "https://www.glossy.co/beauty/good-dye-young-co-founders-on-linking-hayley-williamss-music-career-to-the-hair-dye-business"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "overtone-haircare",
+    "name": "oVertone Haircare",
+    "tier": "good",
+    "note": "PETA lists oVertone as cruelty-free and vegan. Its About page describes a 100% vegan, cruelty-free formula with no animal trials. Founded by Maegan Scarlett and Liora Dudar; I couldn't find who owns it now. I couldn't find oVertone on the Leaping Bunny / Cruelty Free International list.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: oVertone Haircare listing, cruelty-free with vegan icon (modified 23 Mar 2023)",
+        "url": "https://crueltyfree.peta.org/company/overtone-haircare/"
+      },
+      {
+        "label": "oVertone: About Us, '100% vegan, cruelty-free formulation', co-founders named",
+        "url": "https://overtone.co/pages/about-us"
+      },
+      {
+        "label": "Inside Retail US: Barbara Roll named CEO of Overtone and Boom! Beauty (Jan 2024)",
+        "url": "https://insideretail.us/barbara-roll-to-take-the-helm-of-beauty-brands-overtone-and-boom-as-ceo/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "color-oops",
+    "name": "Color Oops",
+    "tier": "check",
+    "note": "PETA lists Color Oops as cruelty-free. Its maker, Developlus, says all its products are cruelty-free and that most are vegan certified, but doesn't name the certifier, so I couldn't confirm which Color Oops products are vegan. Developlus is a family-owned company in Southern California.",
+    "parentCompany": "Developlus, Inc.",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Color Oops listing, cruelty-free, no vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/color-oops/"
+      },
+      {
+        "label": "Color Oops press release (Cision): About Developlus, family-owned, all products cruelty-free, most vegan certified (17 Mar 2026)",
+        "url": "https://digital-release.wowktv.com/business/press-releases/cision/20260317LA11641/color-oops-introduces-color-barrier-style-stick-for-stain-free-coloring-and-styling"
+      },
+      {
+        "label": "Color Oops: homepage, contact via Developlus",
+        "url": "https://www.coloroops.com/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "kms-hair",
+    "name": "KMS Hair",
+    "tier": "warn",
+    "note": "PETA lists KMS as cruelty-free, and its FAQ says it does not use or commission animal testing. KMS is owned by Kao Corporation, which is not cruelty-free and allows animal testing where required by law. The FAQ says KMS is not developed to a vegan policy and names several products that contain animal-derived ingredients.",
+    "parentCompany": "Kao Corporation",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: KMS Hair listing, cruelty-free, no vegan icon (modified 19 Aug 2026)",
+        "url": "https://crueltyfree.peta.org/company/kmshair/"
+      },
+      {
+        "label": "KMS: FAQ, no animal testing, not developed to a vegan policy, part of Kao",
+        "url": "https://www.kmshair.com/en-US/FAQ/"
+      },
+      {
+        "label": "KMS: homepage, 'KMS is a part of Kao', copyright Kao Corporation",
+        "url": "https://www.kmshair.com/"
+      },
+      {
+        "label": "Cruelty-Free Kitty: Biore, owned by Kao, a company that tests on animals (modified 31 Mar 2026)",
+        "url": "https://www.crueltyfreekitty.com/?p=15547"
+      },
+      {
+        "label": "ARCJ: Kao policy, exceptions for exports to China and accident investigations (2015)",
+        "url": "https://arcj.org/en/issues-en/animal-testing-en/breaking-news-kao-group-confirms-its-policy-of-neither-conducting-nor-outsourcing-animal-testing-in-cosmetics/"
+      }
+    ],
+    "parentTestsOnAnimals": true,
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "morrocco-method",
+    "name": "Morrocco Method",
+    "tier": "check",
+    "note": "PETA lists Morrocco Method as cruelty-free. Morrocco Method says its products are vegan, but has no vegan certification. I couldn't find who owns the company, Morrocco Method International in California.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Morrocco Method listing, cruelty-free, no vegan icon (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/morrocco-method/"
+      },
+      {
+        "label": "Morrocco Method: homepage, 'Raw, Vegan, Paleo & Wildcrafted'",
+        "url": "https://www.morroccomethod.com/"
+      },
+      {
+        "label": "Faire: Morrocco Method International wholesale page, Paso Robles, CA",
+        "url": "https://www.faire.com/brand/b_4rtc70gxgo"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "esalon",
+    "name": "eSalon",
+    "tier": "check",
+    "note": "PETA lists eSalon as cruelty-free. Its website shows the Leaping Bunny seal and says its products and ingredients are never tested on animals, though I couldn't check this on the Leaping Bunny / Cruelty Free International site. I couldn't find a statement on whether its products are vegan, or who owns the company.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: eSalon listing, cruelty-free, no vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/esalon/"
+      },
+      {
+        "label": "eSalon: homepage, Leaping Bunny Approved seal",
+        "url": "https://www.esalon.com/"
+      },
+      {
+        "label": "eSalon: About, Leaping Bunny certification statement",
+        "url": "https://www.esalon.com/about"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "kiara-sky",
+    "name": "Kiara Sky",
+    "tier": "check",
+    "note": "PETA lists Kiara Sky as cruelty-free, and its Our Story page lists 'Cruelty Free' among its product claims. I couldn't find a statement on whether its products are vegan. It was started by two California nail artists; I couldn't find who owns it now.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Kiara Sky Professional Nails listing, cruelty-free, no vegan icon (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/kiara-sky-professional-nails/"
+      },
+      {
+        "label": "Kiara Sky: Our Story, founded by two nail artists, 'Cruelty Free', made in USA",
+        "url": "https://kiarasky.com/pages/our-story"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "ohora",
+    "name": "ohora",
+    "tier": "good",
+    "note": "PETA lists ohora as cruelty-free and vegan. Its FAQ says its products are not tested on animals and contain no animal-derived ingredients. The ohora website is run by Glluga Inc.; I couldn't find any wider parent company.",
+    "parentCompany": "Glluga Inc.",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: ohora listing, cruelty-free with vegan icon (modified 13 Nov 2024)",
+        "url": "https://crueltyfree.peta.org/company/ohora/"
+      },
+      {
+        "label": "ohora: FAQ, 'cruelty-free & vegan', introduced in Korea",
+        "url": "https://ohora.com/pages/faq"
+      },
+      {
+        "label": "ohora: homepage footer, copyright Glluga Inc.",
+        "url": "https://ohora.com/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "nailberry",
+    "name": "Nailberry",
+    "tier": "good",
+    "note": "PETA lists Nailberry as cruelty-free and vegan. Its own site says its L'Oxygéné polishes are certified cruelty-free and vegan by PETA, and halal. I couldn't find a Leaping Bunny / Cruelty Free International certification. Owned by Silverwood Brands PLC, a London-listed brands group, since 2022.",
+    "parentCompany": "Silverwood Brands PLC",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Nailberry company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/nailberry/"
+      },
+      {
+        "label": "Nailberry: Certifications page",
+        "url": "https://www.nailberry.co.uk/pages/certifications"
+      },
+      {
+        "label": "Cosmetics Business: Nailberry sells to Silverwood Brands for £6m (5 Oct 2022)",
+        "url": "https://www.cosmeticsbusiness.com/nailberry-sells-to-silverwood-brands-for-6m-204012"
+      },
+      {
+        "label": "Silverwood Brands: Unaudited interim results naming Nailberry as a group brand (20 Apr 2026)",
+        "url": "https://www.aquis.eu/stock-exchange/announcements/5690846"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "manucurist",
+    "name": "Manucurist",
+    "tier": "good",
+    "note": "PETA lists Manucurist as cruelty-free and vegan. Certified vegan by The Vegan Society, and it says none of its products or ingredients are tested on animals. I couldn't find a Leaping Bunny / Cruelty Free International certification. Majority owned by founder Gaëlle Lebrat Personnaz and her husband; private equity firm Inflexion took a 49% minority stake in September 2026.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Manucurist company page (modified 9 Aug 2023)",
+        "url": "https://crueltyfree.peta.org/company/manucurist/"
+      },
+      {
+        "label": "Manucurist: Earth Day / brand values page (Vegan Society, animal testing)",
+        "url": "https://pro.manucurist.com/en/pages/earth-day"
+      },
+      {
+        "label": "Manucurist journal: PETA certified cruelty-free and vegan",
+        "url": "https://us.manucurist.com/blogs/journal/it-s-official-manucurist-is-peta-certified-cruelty-free-vegan"
+      },
+      {
+        "label": "Dealroom: Inflexion takes 49% of Manucurist (Sep 2026)",
+        "url": "https://dealroom.co/news/156058-inflexion-takes-49-of-french-nail-brand-manucurist-eyeing-119m-revenue/"
+      },
+      {
+        "label": "Premium Beauty News: Inflexion takes minority stake in Manucurist (Oct 2026)",
+        "url": "https://www.premiumbeautynews.com/en/inflexion-takes-minority-stake-in,28325"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "The Vegan Society",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "ncla",
+    "name": "NCLA",
+    "tier": "good",
+    "note": "PETA lists NCLA Beauty as cruelty-free and vegan, and the brand says all its products are vegan and cruelty-free. It also has a brand page on the Leaping Bunny / Cruelty Free International directory. Independently owned by its founders, sisters Elin and Anh-Thu Dannerstedt, and self-funded.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: NCLA company page (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/ncla/"
+      },
+      {
+        "label": "Leaping Bunny: NCLA Beauty brand page",
+        "url": "https://www.leapingbunny.org/brand/ncla-beauty"
+      },
+      {
+        "label": "NCLA Beauty: home page ('100% vegan and cruelty-free')",
+        "url": "https://www.nclabeauty.com/"
+      },
+      {
+        "label": "BeautyMatter: NEXT50 2026 NCLA Beauty profile, self-funded (9 Jul 2026)",
+        "url": "https://beautymatter.com/articles/next50-2026-ncla-beauty"
+      },
+      {
+        "label": "Ethical Elephant: Is NCLA cruelty-free and vegan (updated Jan 2022)",
+        "url": "https://ethicalelephant.com/is-ncla-cruelty-free-vegan/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "wibo",
+    "name": "Wibo",
+    "tier": "check",
+    "note": "PETA lists Wibo as cruelty-free, but not as vegan. I couldn't find a vegan statement or a Leaping Bunny / Cruelty Free International certification on its own site. Independently owned by the Adamczak family, who founded it in Poland in 1989; the same company also owns Lovely.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Wibo company page (modified 27 Jul 2020)",
+        "url": "https://crueltyfree.peta.org/company/wibo/"
+      },
+      {
+        "label": "Wibo: About us (O nas) page",
+        "url": "https://wibo.pl/content/8-o-nas"
+      },
+      {
+        "label": "Wiadomości Kosmetyczne: Rodzinny kapitał Wibo - family company owning Wibo and Lovely (Aug 2014)",
+        "url": "https://www.wiadomoscikosmetyczne.pl/producent-kosmetykow/rodzinny-kapital-wibo-2356185"
+      },
+      {
+        "label": "Wiadomości Kosmetyczne: Jadwiga Adamczak (Wibo owner) on Wprost rich list (Oct 2019)",
+        "url": "https://www.wiadomoscikosmetyczne.pl/producent-kosmetykow/lista-najbogatszych-polek-poszerzyla-sie-o-trzy-nazwiska-z-kosmetycznego-swiata-2360768"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "eveline-cosmetics",
+    "name": "Eveline Cosmetics",
+    "tier": "check",
+    "note": "PETA lists Eveline Cosmetics as cruelty-free, but not as vegan. Its own site says it does not test ingredients or finished products on animals, and the Polish group Kosmetyki Bez Okrucieństwa verified it in 2020. I couldn't find a Leaping Bunny / Cruelty Free International certification or a vegan statement. Run by founder Piotr Kasprzycki and his family.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty",
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Eveline Cosmetics company page (modified 30 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/eveline-cosmetics/"
+      },
+      {
+        "label": "Eveline Cosmetics: 'Eveline Cosmetics na liście PETA' page",
+        "url": "https://eveline.pl/en/pages/eveline-cosmetics-na-liscie-peta"
+      },
+      {
+        "label": "Wiadomości Kosmetyczne: Eveline verified by Kosmetyki Bez Okrucieństwa (1 Oct 2020)",
+        "url": "https://www.wiadomoscikosmetyczne.pl/producent-kosmetykow/eveline-cosmetics-zostala-pozytywnie-zweryfikowana-przez-stowarzyszenie-kosmetyki-bez-okrucienstwa-2362875"
+      },
+      {
+        "label": "Forbes Polska: cosmetics company ranking - Eveline run by Piotr Kasprzycki and family (31 Jul 2025)",
+        "url": "https://www.forbes.pl/rankingi/ranking-firm-kosmetycznych-piekny-biznes-z-pieknymi-zyskami-liczby-robia-wrazenie/whvzc6w"
+      },
+      {
+        "label": "Wiadomości Kosmetyczne: Eveline sold in 80+ countries, founded 1983 by Kasprzycki family (20 Mar 2026, sponsored)",
+        "url": "https://www.wiadomoscikosmetyczne.pl/biznes-kosmetyki/eveline-cosmetics-nie-zwalnia-tempa-polska-marka-beauty-rosnie-w-sile-w-kraju-i-za-granica-2533428"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "eco-tan",
+    "name": "Eco Tan",
+    "tier": "check",
+    "note": "PETA lists Eco Tan (now sold as Eco by Sonya) as cruelty-free, but not as vegan. The brand says its tanning, skincare and body care are vegan, but has no vegan certification, and its sunscreen contains beeswax. I couldn't find a Leaping Bunny / Cruelty Free International certification. Founded by Sonya Driver and says it is Australian made and owned.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "body-shower",
+      "skincare",
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Eco Tan company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/eco-tan/"
+      },
+      {
+        "label": "Eco by Sonya / Eco Tan Pty Ltd: Certifications page",
+        "url": "https://ecotan.com.au/pages/certifications"
+      },
+      {
+        "label": "Scout Magazine: Eco by Sonya, founder Sonya Driver (25 Jun 2025)",
+        "url": "https://www.scoutmagazine.com.au/from-the-gc-to-morrocco-eco-by-sonya-takes-the-stage/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "mcobeauty",
+    "name": "MCoBeauty",
+    "tier": "good",
+    "note": "PETA lists MCoBeauty as cruelty-free and vegan, and the brand says its whole range is cruelty-free and vegan. I couldn't find a Leaping Bunny / Cruelty Free International certification. Owned by DBG Health, the company of Dennis Bastas, which took full ownership in February 2025.",
+    "parentCompany": "DBG Health",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: MCoBeauty company page (modified 8 Oct 2024)",
+        "url": "https://crueltyfree.peta.org/company/mcobeauty/"
+      },
+      {
+        "label": "MCoBeauty: UK affiliate profile ('100% cruelty-free, vegan')",
+        "url": "https://ui.awin.com/merchant-profile/123000"
+      },
+      {
+        "label": "Inside Retail: DBG owner Dennis Bastas buys $1 billion MCoBeauty brand (10 Feb 2025)",
+        "url": "https://insideretail.com.au/business/dbg-owner-dennis-bastas-buys-1-billion-mcobeauty-brand-202502"
+      },
+      {
+        "label": "Greek Herald: Dennis Bastas secures entire MCoBeauty (10 Feb 2025)",
+        "url": "https://greekherald.com.au/?p=165984"
+      },
+      {
+        "label": "Inside Retail: MCoBeauty parent DBG Health sells ~25% stake to BDT & MSD Partners fund (6 Aug 2025)",
+        "url": "https://insideretail.com.au/?p=67344"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "the-fox-tan",
+    "name": "The Fox Tan",
+    "tier": "good",
+    "note": "PETA lists The Fox Tan as cruelty-free and vegan. The brand says its range has no animal products and that it is against animal testing. I couldn't find a Leaping Bunny / Cruelty Free International certification. I couldn't confirm who owns it; it describes itself as female-founded and Australian-owned.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "body-shower",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: The Fox Tan company page (modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/the-fox-tan/"
+      },
+      {
+        "label": "The Fox Tan: FAQs",
+        "url": "https://www.thefoxtan.com/pages/faqs"
+      },
+      {
+        "label": "The Fox Tan: About page",
+        "url": "https://www.thefoxtan.com/pages/about"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "sky-organics",
+    "name": "Sky Organics",
+    "tier": "check",
+    "note": "PETA lists Sky Organics as cruelty-free, and it has been Leaping Bunny / Cruelty Free International certified since 2022. It says most of its products are vegan, but has no vegan certification; its beeswax lip balms and some Youth Boost face products contain beeswax or honey. It is a certified B Corp. I couldn't confirm who owns it.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "haircare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Sky Organics company page (modified 7 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/sky-organics/"
+      },
+      {
+        "label": "Leaping Bunny: Sky Organics brand page (certified since 2022)",
+        "url": "https://www.leapingbunny.org/brand/sky-organics"
+      },
+      {
+        "label": "Sky Organics: FAQ (cruelty-free, 'most of our products are vegan')",
+        "url": "https://skyorganics.com/pages/faq"
+      },
+      {
+        "label": "Sky Organics: home page (B Corp)",
+        "url": "https://skyorganics.com/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "earth-mama-angel-baby",
+    "name": "Earth Mama Angel Baby",
+    "tier": "check",
+    "note": "PETA lists Earth Mama (Earth Mama Angel Baby) as cruelty-free, but not as vegan. Its own site says it is Leaping Bunny / Cruelty Free International certified. I couldn't find a vegan statement. Founded in 2002 by nurse and herbalist Melinda Olson; I couldn't confirm who owns it now.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Earth Mama Angel Baby company page (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/earth-mama-angel-baby/"
+      },
+      {
+        "label": "Earth Mama: Certifications & Sustainability page (Leaping Bunny)",
+        "url": "https://earthmamaorganics.com/pages/sustainability"
+      },
+      {
+        "label": "Earth Mama: About Earth Mama (founder Melinda Olson)",
+        "url": "https://earthmamaorganics.com/pages/about-earth-mama"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "california-baby",
+    "name": "California Baby",
+    "tier": "check",
+    "note": "PETA lists California Baby as cruelty-free, but not as vegan. It says it does not test products or ingredients on animals. It says most products are vegan, but has no vegan certification; its two diaper rash ointments and Overnight Cream contain lanolin. I couldn't find a Leaping Bunny / Cruelty Free International certification. Independently owned by its founder and CEO, Jessica Iclisoy (a certified women-owned business).",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: California Baby company page (modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/california-baby/"
+      },
+      {
+        "label": "California Baby: FAQ (animal testing, vegan, lanolin)",
+        "url": "https://californiababy.com/pages/faq"
+      },
+      {
+        "label": "California Baby: About page (founder/CEO Jessica Iclisoy, Women's Business Enterprise)",
+        "url": "https://californiababy.com/pages/about-california-baby"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "babo-botanicals",
+    "name": "Babo Botanicals",
+    "tier": "check",
+    "note": "PETA lists Babo Botanicals as cruelty-free, but not as vegan. It says it does not test products or ingredients on animals, and that many of its products are vegan, but has no vegan certification. I couldn't find a Leaping Bunny / Cruelty Free International certification. Founded in 2010 by Kate Solomon and describes itself as family-owned.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare",
+      "body-shower",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Babo Botanicals company page (modified 24 Jun 2024)",
+        "url": "https://crueltyfree.peta.org/company/babo-botanicals/"
+      },
+      {
+        "label": "Babo Botanicals: Product FAQs (animal testing, vegan)",
+        "url": "https://www.babobotanicals.com/pages/product-faqs"
+      },
+      {
+        "label": "Babo Botanicals: Our brand story (founder Kate Solomon, family-owned)",
+        "url": "https://www.babobotanicals.com/pages/our-brand-story"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "edens-garden",
+    "name": "Edens Garden",
+    "tier": "good",
+    "note": "PETA lists Edens Garden as cruelty-free and marks it as a vegan company. Its FAQ says it does not and will not test products or ingredients on animals, and that its suppliers meet the same standard. Its about page says all its products are vegan. Independently owned by its founder, Grace Martin, as a women-owned, family-run company in San Clemente, California.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Edens Garden's Essential Oils listing (page modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/edens-gardens-essential-oils/"
+      },
+      {
+        "label": "Edens Garden: FAQ (animal testing policy, location)",
+        "url": "https://www.edensgarden.com/pages/frequently-asked-questions"
+      },
+      {
+        "label": "Edens Garden: About us (founder Grace Martin, 2009, all products vegan)",
+        "url": "https://www.edensgarden.com/pages/about-us"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "aura-cacia",
+    "name": "Aura Cacia",
+    "tier": "check",
+    "note": "PETA lists Aura Cacia as cruelty-free. Its own site says its products are never tested on animals. I couldn't find a vegan statement or vegan certification. Owned by Frontier Natural Products Co-op, a cooperatively owned company in Iowa, which Aura Cacia joined in 1993.",
+    "parentCompany": "Frontier Natural Products Co-op",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "skincare",
+      "body-shower",
+      "haircare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Aura Cacia listing (page modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/aura-cacia/"
+      },
+      {
+        "label": "Aura Cacia: Ingredient standards / Our promise (never tested on animals)",
+        "url": "https://www.auracacia.com/ingredient-standards"
+      },
+      {
+        "label": "Aura Cacia: Who we are (joined Frontier Co-op family in 1993)",
+        "url": "https://www.auracacia.com/who-we-are"
+      },
+      {
+        "label": "Wikipedia: Frontier Natural Products Co-op (cooperatively owned, sells Aura Cacia brand)",
+        "url": "https://en.wikipedia.org/wiki/Frontier_Natural_Products_Co-op"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "eo-products",
+    "name": "EO Products",
+    "tier": "good",
+    "note": "PETA lists EO Products as cruelty-free. Its own about page shows the Leaping Bunny logo, links to its Leaping Bunny / Cruelty Free International brand page, and says it is a Certified B Corp. It says its products are vegan, but has no vegan certification. Independently owned by its founders, Susan Griffin-Black and Brad Black, as a family-owned company in San Rafael, California.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "body-shower",
+      "haircare",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: EO Products listing (page modified 19 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/eo-products/"
+      },
+      {
+        "label": "EO Products: About us (family-owned, co-owners and founders Susan and Brad, Cruelty-Free / Leaping Bunny link, B Corp)",
+        "url": "https://www.eoproducts.com/pages/about-us"
+      },
+      {
+        "label": "Fashionista: EO Products founders Susan Griffin-Black and Brad Black (Jan 2026)",
+        "url": "https://fashionista.com/2026/01/eo-products-aromatherapy-brand"
+      },
+      {
+        "label": "Ethical Elephant: Is EO cruelty-free and vegan? (quotes brand: 100% vegan, Leaping Bunny certified; updated 18 Jan 2022)",
+        "url": "https://ethicalelephant.com/is-eo-cruelty-free-vegan/"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "giovanni-cosmetics",
+    "name": "Giovanni Cosmetics",
+    "tier": "check",
+    "note": "PETA lists Giovanni as cruelty-free. Its FAQ says it has never tested products on animals and is Leaping Bunny / Cruelty Free International certified. It says all its products are vegan except its Magnetic Hair Care range (lactoferrin) and Hot Chocolate Sugar Scrub (honey), but has no vegan certification. Its own site describes it as family-owned since 1979.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "haircare",
+      "skincare",
+      "body-shower"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Giovanni Cosmetics listing (page modified 19 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/giovanni-cosmetics/"
+      },
+      {
+        "label": "Giovanni: FAQ (never tested on animals, Leaping Bunny certified, vegan except Magnetic range and Hot Chocolate scrub)",
+        "url": "https://giovannicosmetics.com/pages/faq"
+      },
+      {
+        "label": "Giovanni: Our story (family-owned since 1979, Los Angeles roots)",
+        "url": "https://giovannicosmetics.com/pages/about"
+      },
+      {
+        "label": "Ethical Elephant: Giovanni cruelty-free and vegan (updated 4 Jan 2022)",
+        "url": "https://ethicalelephant.com/giovanni-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "egyptian-magic",
+    "name": "Egyptian Magic",
+    "tier": "check",
+    "note": "PETA lists Egyptian Magic as cruelty-free. Its FAQ says it does not, and never has, tested on animals. It is not vegan: the cream is made with beeswax, honey, royal jelly and propolis, and the brand says so itself. Independently owned by its founder, known as LordPharaoh ImHotepAmonRa (Westley Howard), as a family-owned company in the USA.",
+    "parentCompany": null,
+    "vegan": "no",
+    "veganConfidence": "low",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Egyptian Magic Skin Cream listing (page modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/egyptian-magic-skin-cream/"
+      },
+      {
+        "label": "Egyptian Magic: FAQ (never tested on animals; not vegan because of bee products; made in Texas)",
+        "url": "https://www.egyptianmagic.com/faq"
+      },
+      {
+        "label": "Egyptian Magic: Home page (ingredients, Family Owned badge, founder story)",
+        "url": "https://www.egyptianmagic.com/"
+      },
+      {
+        "label": "Wikipedia: Egyptian Magic (founded 1991, owner LordPharaoh ImHotepAmonRa)",
+        "url": "https://en.wikipedia.org/wiki/Egyptian_Magic"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "frownies",
+    "name": "Frownies",
+    "tier": "check",
+    "note": "PETA lists Frownies (B&P Company) as cruelty-free. Its FAQ says its products are not tested on animals, and that it is not currently Leaping Bunny / Cruelty Free International certified. Not all products are vegan: the Full Face Collagen Mask and Forehead Serum Patch contain marine collagen and the Body Brush uses boar's hair. Independently owned by the founding family, run by Kat Wright, from Ohio.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Frownies (B&P Company) listing (page modified 18 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/frownies-bp-company/"
+      },
+      {
+        "label": "Frownies: FAQ (not tested on animals; not Leaping Bunny certified; non-vegan products listed)",
+        "url": "https://www.frownies.com/pages/faq"
+      },
+      {
+        "label": "Frownies: Home page (woman owned, 5th generation, Ohio address)",
+        "url": "https://www.frownies.com/"
+      },
+      {
+        "label": "Beauty Independent: Founder story, Kat Wright (family-owned and independent; Jun 2018, updated Sep 2019)",
+        "url": "https://www.beautyindependent.com/founder-story-kat-wright-discusses-enduring-success-frownies-facial-patch/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "patchology",
+    "name": "Patchology",
+    "tier": "check",
+    "note": "PETA lists Patchology as cruelty-free, and its own site says it is PETA approved. I couldn't find a vegan statement or vegan certification. Owned by Rare Beauty Brands, a Boston beauty group that also owns Kate Somerville and Dr. Dana. Rare Beauty Brands is not connected to Selena Gomez's Rare Beauty.",
+    "parentCompany": "Rare Beauty Brands",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Patchology listing",
+        "url": "https://crueltyfree.peta.org/company/patchology/"
+      },
+      {
+        "label": "Patchology: About us (founded in medical patches; Cruelty Free, PETA approved)",
+        "url": "https://patchology.com/pages/about-us"
+      },
+      {
+        "label": "Beauty Independent: Rare Beauty Brands launched by Patchology's leadership (Apr 2019)",
+        "url": "https://www.beautyindependent.com/rare-beauty-brands-acquisition-plant-apothecary/"
+      },
+      {
+        "label": "Beauty Independent: Unilever sells Kate Somerville to Rare Beauty Brands; portfolio includes Patchology (Oct 2025)",
+        "url": "https://www.beautyindependent.com/?p=176311"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "peace-out-skincare",
+    "name": "Peace Out Skincare",
+    "tier": "good",
+    "note": "PETA lists Peace Out Skincare as cruelty-free. Its FAQ says all its products are vegan, but it has no vegan certification. It was founded by Enrico Frezza in 2017, and in 2022 took a $20 million growth investment from 5th Century Partners. I couldn't find any sale of the brand since.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Peace Out Skincare listing (page modified 19 Jun 2020)",
+        "url": "https://crueltyfree.peta.org/company/peace-out-skincare/"
+      },
+      {
+        "label": "Peace Out Skincare: FAQ (all products vegan and PETA-certified cruelty free)",
+        "url": "https://peaceoutskincare.com/pages/faq-frequently-asked-questions"
+      },
+      {
+        "label": "BeautyMatter: Peace Out Skincare lands $20 million growth investment from 5th Century Partners (8 Nov 2022)",
+        "url": "https://beautymatter.com/articles/peace-out-skincare-lands-20-million-growth-investment"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "rovectin",
+    "name": "Rovectin",
+    "tier": "good",
+    "note": "PETA lists Rovectin (RLAP) as cruelty-free. Its CEO, Sungsoo Lee, has said all its products are vegan and cruelty-free, but it has no vegan certification that I could find. The brand is made by RLAP Co., Ltd., based in Seoul, South Korea.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Rovectin (RLAP) listing (page modified 11 Jan 2024)",
+        "url": "https://crueltyfree.peta.org/company/rovectin/"
+      },
+      {
+        "label": "Rovectin Korea: brand site (company RLAP Co., Ltd. / 알엘에이피주식회사, CEO 이성수, Seoul address)",
+        "url": "https://rovectin.co.kr/about.html"
+      },
+      {
+        "label": "Skinsider UK: interview with Rovectin CEO Sungsoo Lee - all products vegan and cruelty free (14 Mar 2023)",
+        "url": "https://skinsider.co.uk/blog/behind-the-beauty-an-exclusive-interview-with-rovectins-ceo-sungsoo-lee/"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "haruharu-wonder",
+    "name": "haruharu wonder",
+    "tier": "good",
+    "note": "PETA lists haruharu wonder as cruelty-free. It describes itself as a clean vegan skincare brand, but has no vegan certification that I could find. Its founder and CEO is Jae won Jeong; I couldn't find a parent company.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: haruharu wonder listing (page modified 17 Apr 2024)",
+        "url": "https://crueltyfree.peta.org/company/haruharu-wonder/"
+      },
+      {
+        "label": "haruharu US: About haruharu wonder (clean vegan skincare brand; founder and CEO Jae won Jeong)",
+        "url": "https://haruharuusa.com/pages/about-haruharu-wonder"
+      }
+    ],
+    "veganBasis": "brand",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "i-dew-care",
+    "name": "I Dew Care",
+    "tier": "good",
+    "note": "PETA lists I Dew Care as cruelty-free and marks it as a vegan company. Its FAQ says it uses no animal-derived ingredients and does not test its products or ingredients on animals. I couldn't confirm who owns the brand today.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: I Dew Care listing (page modified 16 Jun 2022)",
+        "url": "https://crueltyfree.peta.org/company/i-dew-care/"
+      },
+      {
+        "label": "I Dew Care: FAQ (full lineup vegan and cruelty-free; no animal-derived ingredients or animal testing)",
+        "url": "https://idewcare.com/pages/faq-1"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "nacific",
+    "name": "NACIFIC",
+    "tier": "check",
+    "note": "PETA lists NACIFIC as cruelty-free. I couldn't find a vegan statement or vegan certification on its own site. The brand is run by The Skin Factory Co., Ltd. in Seoul, South Korea; I couldn't find a wider parent company.",
+    "parentCompany": null,
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: NACIFIC listing (page modified 18 Jun 2025)",
+        "url": "https://crueltyfree.peta.org/company/nacific/"
+      },
+      {
+        "label": "NACIFIC Korea: brand site company details (주식회사 더스킨팩토리 / The Skin Factory Co., Ltd., CEO 선주리, Seoul address)",
+        "url": "https://nacific.com/about.html"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "skintific",
+    "name": "SKINTIFIC",
+    "tier": "good",
+    "note": "PETA lists SKINTIFIC as cruelty-free and marks it as a vegan company, saying neither its ingredients nor finished products are tested on animals. PETA's listing is filed under Guangzhou Fimedia Network Technology Limited, the company behind the brand. I couldn't check the brand's own site.",
+    "parentCompany": "Guangzhou Fimedia Network Technology Limited",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: SKINTIFIC listing, filed under Guangzhou Fimedia Network Technology Limited (page modified 4 Feb 2026)",
+        "url": "https://crueltyfree.peta.org/company/guangzhou-fimedia-network-technology-limited/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "yepoda",
+    "name": "Yepoda",
+    "tier": "good",
+    "note": "PETA lists Yepoda as cruelty-free and shows it as a vegan company. Its own FAQ says none of its products are tested on animals and that all are suitable for vegans. I couldn't find it on Leaping Bunny / Cruelty Free International. Founded in Berlin by Sander Joonyoung van Bladel and Veronika Strotmann, and still run by them, with investment from firms including Verlinvest.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Yepoda company page, cruelty-free with vegan icon (modified 22 Nov 2022)",
+        "url": "https://crueltyfree.peta.org/company/yepoda/"
+      },
+      {
+        "label": "Yepoda: FAQ (animal testing and vegan answers)",
+        "url": "https://yepoda.com/pages/faq"
+      },
+      {
+        "label": "Beauty Independent: Yepoda Series B led by Verlinvest, founders named (Mar 2025, updated Nov 2025)",
+        "url": "https://www.beautyindependent.com/k-beauty-brand-yepoda-secures-series-b-funding-debuts-retail-sephora-europe/"
+      },
+      {
+        "label": "Verlinvest: portfolio page for Yepoda",
+        "url": "https://www.verlinvest.com/brands/yepoda/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "naked-sundays",
+    "name": "Naked Sundays",
+    "tier": "good",
+    "note": "PETA lists Naked Sundays as cruelty-free and shows it as a vegan company. Its own FAQ says all of its products are 100% vegan and cruelty-free. I couldn't find it on Leaping Bunny / Cruelty Free International. Founded and run by Samantha Brett in Sydney, with a minority investment from XRC Ventures.",
+    "parentCompany": null,
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Naked Sundays company page, cruelty-free with vegan icon (modified 3 Aug 2022)",
+        "url": "https://crueltyfree.peta.org/company/naked-sundays/"
+      },
+      {
+        "label": "Naked Sundays: FAQ (vegan and cruelty-free answer)",
+        "url": "https://nakedsundays.com/pages/faq"
+      },
+      {
+        "label": "Naked Sundays UK: About us (founder Samantha Brett)",
+        "url": "https://uk.nakedsundays.com/pages/about-us"
+      },
+      {
+        "label": "Beauty Independent: Naked Sundays Ulta launch, XRC Ventures minority investor (Mar 2025)",
+        "url": "https://www.beautyindependent.com/ulta-beauty-partnership-naked-sundays-australian-sun-care-brand-expanding-stateside/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "emma-lewisham",
+    "name": "Emma Lewisham",
+    "tier": "check",
+    "note": "PETA lists Emma Lewisham as cruelty-free, but not as a vegan company. The brand says all its products are vegan except its Skin Shield sunscreens, which contain a small amount of beeswax; it has no vegan certification. I couldn't find it on Leaping Bunny / Cruelty Free International. Founded by Emma Lewisham, and the founders keep the controlling stake.",
+    "parentCompany": null,
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Emma Lewisham company page, cruelty-free, no vegan icon (checked 15 Oct 2026)",
+        "url": "https://crueltyfree.peta.org/company/emma-lewisham/"
+      },
+      {
+        "label": "Emma Lewisham: Animal welfare page (no animal testing, beeswax in Skin Shield)",
+        "url": "https://emmalewisham.com/blogs/sustainability/animal-welfare"
+      },
+      {
+        "label": "Forbes Australia: founders retain controlling stake, minor shareholders (Jun 2024)",
+        "url": "https://forbes.com.au/?p=92817"
+      },
+      {
+        "label": "Inside FMCG: Emma Lewisham enters Credo Beauty, founder background (Jan 2025)",
+        "url": "https://insidefmcg.com.au/2025/01/23/new-zealand-skincare-brand-emma-lewisham-enters-credo-beauty/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "inika-organic",
+    "name": "INIKA Organic",
+    "tier": "good",
+    "note": "PETA lists INIKA Organic as cruelty-free and shows it as a vegan company. The brand says its products are cruelty-free and vegan, and shows PETA's cruelty-free mark. I couldn't find it on Leaping Bunny / Cruelty Free International. Owned by Total Beauty Network, an Australian company founded by Tony Rechtman, which also makes Designer Brands cosmetics.",
+    "parentCompany": "Total Beauty Network",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: INIKA Organic company page, cruelty-free with vegan icon (modified 6 Aug 2025)",
+        "url": "https://crueltyfree.peta.org/company/inika-organic/"
+      },
+      {
+        "label": "INIKA Organic: Our certifications (PETA cruelty-free, vegan, COSMOS)",
+        "url": "https://www.inikaorganic.com/pages/our-certifications"
+      },
+      {
+        "label": "INIKA Organic: Our story (100% Australian owned)",
+        "url": "https://www.inikaorganic.com/pages/our-story"
+      },
+      {
+        "label": "Pharmacy Daily: Total Beauty Network acquires INIKA (26 Nov 2013)",
+        "url": "https://pharmacydaily.com.au/?p=28333"
+      },
+      {
+        "label": "CosmeticsDesign: Tony Rechtman profile, TBN parent of INIKA, CEO-owned, no outside funding (Feb 2020)",
+        "url": "https://www.cosmeticsdesign.com/Article/2020/02/21/Indie-Beauty-Profile-Tony-Rechtman-INIKA-Organic"
+      },
+      {
+        "label": "Inside FMCG: Tony Rechtman returns as CEO of Designer Brands/Inika parent TBN (Aug 2026)",
+        "url": "https://insidefmcg.com.au/2026/08/04/tony-rechtman-returns-to-lead-designer-brands-parent/"
+      },
+      {
+        "label": "Compassionate Shopping Guide: Designer Brands (Total Beauty Network) with Approved Vegan badge",
+        "url": "https://compassionateshoppingguide.org/csg_brand/designer-brands/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "bybi",
+    "name": "BYBI",
+    "tier": "good",
+    "note": "PETA lists BYBI as cruelty-free and shows it as a vegan company. Its own site describes the range as 100% vegan and cruelty-free. In 2021 it said it was Leaping Bunny / Cruelty Free International approved, but I couldn't confirm a current listing. The founders sold the brand in 2024, and the BYBI website is now run by Mystic Elements Limited, a UK company set up in October 2025.",
+    "parentCompany": "Mystic Elements Limited",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "skincare",
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: BYBI company page, cruelty-free with vegan icon (modified 5 May 2026)",
+        "url": "https://crueltyfree.peta.org/company/bybi/"
+      },
+      {
+        "label": "BYBI: About us (vegan and cruelty-free badges)",
+        "url": "https://bybi.com/pages/about-us"
+      },
+      {
+        "label": "BYBI: Terms of service (operated by Mystic Elements Limited, co. 16777156)",
+        "url": "https://bybi.com/policies/terms-of-service"
+      },
+      {
+        "label": "Companies House: Mystic Elements Limited, incorporated 10 Oct 2025, PSC FPT Ventures Limited",
+        "url": "https://find-and-update.company-information.service.gov.uk/company/16777156/persons-with-significant-control"
+      },
+      {
+        "label": "CEW UK: founders sold BYBI in 2024 (14 Feb 2025)",
+        "url": "https://cewuk.co.uk/how-bybi-scaled-sold-and-succeeded"
+      },
+      {
+        "label": "Ethical Elephant: BYBI quoted as 'Leaping Bunny approved' (updated Jan 2022)",
+        "url": "https://ethicalelephant.com/is-bybi-cruelty-free-vegan/"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "pur",
+    "name": "PÜR",
+    "tier": "check",
+    "note": "PETA lists PÜR as cruelty-free, but not as a vegan company. The brand says it never tests its products on animals and calls some products vegan-friendly, but has no vegan certification, so check each product. I couldn't find it on Leaping Bunny / Cruelty Free International. Owned by Astral Health & Beauty (Astral Brands), which also owns butter LONDON, COSMEDIX and Aloette.",
+    "parentCompany": "Astral Health & Beauty",
+    "vegan": "partial",
+    "veganConfidence": "medium",
+    "category": [
+      "makeup-beauty",
+      "skincare"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Pür Minerals/PÜR Complexion Authority company page, cruelty-free, no vegan icon (modified 7 Aug 2020)",
+        "url": "https://crueltyfree.peta.org/company/pur-minerals-pur-complexion-authority/"
+      },
+      {
+        "label": "PÜR: About us (subsidiary of Astral Health & Beauty, never tested on animals)",
+        "url": "https://purcosmetics.com/pages/pur-about-us-v1"
+      },
+      {
+        "label": "PÜR: FAQ (cruelty-free, vegan-friendly products)",
+        "url": "https://costco.purcosmetics.com/pages/faqs"
+      },
+      {
+        "label": "PÜR help centre: What is Astral Brands (owns PÜR, COSMEDIX, butter LONDON, Aloette)",
+        "url": "https://pur.gorgias.help/en-US/what-is-astral-brands-2149171"
+      },
+      {
+        "label": "Ethical Elephant: PÜR not Leaping Bunny, not fully vegan (updated Apr 2023)",
+        "url": "https://ethicalelephant.com/pur-cruelty-free-vegan/"
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "w3ll-people",
+    "name": "W3LL People",
+    "tier": "check",
+    "note": "PETA lists W3LL People as cruelty-free, but not as a vegan company. I couldn't confirm whether its range is vegan, or find it on Leaping Bunny / Cruelty Free International. Owned by e.l.f. Beauty, which bought it in 2020; e.l.f. says all its own products are vegan and not tested on animals.",
+    "parentCompany": "e.l.f. Beauty",
+    "vegan": "unknown",
+    "veganConfidence": "low",
+    "category": [
+      "makeup-beauty"
+    ],
+    "sources": [
+      {
+        "label": "PETA: W3LL People company page, cruelty-free, no vegan icon (modified 9 Sep 2020)",
+        "url": "https://crueltyfree.peta.org/company/w3ll-people/"
+      },
+      {
+        "label": "Business Wire: e.l.f. acquires W3LL PEOPLE for $27m, described as cruelty-free (24 Feb 2020)",
+        "url": "https://www.businesswire.com/news/home/20200224005813/en/e.l.f.-Acquires-Clean-Beauty-Company-W3LL-PEOPLE-to-Expand-Brand-Portfolio"
+      },
+      {
+        "label": "Wikipedia: e.l.f. (vegan and no animal testing policy)",
+        "url": "https://en.wikipedia.org/wiki/E.l.f."
+      }
+    ],
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
+  },
+  {
+    "slug": "made-by-dentists",
+    "name": "Made By Dentists",
+    "tier": "good",
+    "note": "PETA lists Made By Dentists (Spotlight Oral Care) as cruelty-free and shows it as a vegan company. The brand says it does not test on animals or use any animal by-products. I couldn't find it on Leaping Bunny / Cruelty Free International. It is the US name for Spotlight Oral Care, founded by dentists Drs. Lisa and Vanessa Creaven.",
+    "parentCompany": "Spotlight Oral Care",
+    "vegan": "full",
+    "veganConfidence": "high",
+    "category": [
+      "dental"
+    ],
+    "sources": [
+      {
+        "label": "PETA: Made By Dentists (Spotlight Oral Care) company page, cruelty-free with vegan icon (modified 22 Dec 2022)",
+        "url": "https://crueltyfree.peta.org/company/spotlight-oral-care/"
+      },
+      {
+        "label": "Made By Dentists: Q&A (no animal testing, no animal by-products)",
+        "url": "https://www.madebydentists.com/pages/q-a"
+      },
+      {
+        "label": "Made By Dentists: homepage (founders Drs. Lisa and Vanessa Creaven)",
+        "url": "https://madebydentists.com/"
+      },
+      {
+        "label": "Made By Dentists: Terms of service (Spotlight Oral Care LLC trading as Made by Dentists, Irish law)",
+        "url": "https://www.madebydentists.com/policies/terms-of-service"
+      }
+    ],
+    "veganBasis": "certified",
+    "veganCert": "PETA",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "region": "",
+    "claim": "",
+    "lastVerified": "2026-10-15"
   }
 ]

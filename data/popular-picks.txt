@@ -1,17 +1,28 @@
 1	H&M	30838	Swedish fast fashion retail company	https://crueltyfree.peta.org/company/hm/
-2	Dr. Bronner's Magic Soaps	4903	Company in California	https://crueltyfree.peta.org/company/dr-bronners-magic-soaps/
-3	Cotton On	2682	Australian multinational retail company	https://crueltyfree.peta.org/company/cotton-on/
-4	Factorie	2682	Australian multinational retail company	https://crueltyfree.peta.org/company/factorie-cotton-on/
-5	Glorietta	1014	Shopping mall complex in the Philippines	https://crueltyfree.peta.org/company/glorietta/
-6	C.O. Bigelow	477	American pharmacy and beauty brand	https://crueltyfree.peta.org/company/co-bigelow-l-brands/
-7	Chāmpo	459	Traditional Indian hair massage	https://crueltyfree.peta.org/company/champo/
-8	Hotel Soap	384	American production company	https://crueltyfree.peta.org/company/hotel-soap/
-9	ColorProof Evolved Color Care	288	American hairdresser	https://crueltyfree.peta.org/company/colorproof-evolved-color-care/
-10	Baby Magic	215	American brand of baby care products	https://crueltyfree.peta.org/company/baby-magic-naterra-international/
-11	Bésame Cosmetics	157	American cosmetics company	https://crueltyfree.peta.org/company/besame-cosmetics-2/
-12	Beauty Pie	145	Direct-to-consumer beauty retailer	https://crueltyfree.peta.org/company/beauty-pie/
-13	Bielenda	131	Polish cosmetics company	https://crueltyfree.peta.org/company/bielenda/
-14	City Beauty	112	Chinese underwear manufacturing company based in Dongguan, Guangdong	https://crueltyfree.peta.org/company/city-beauty/
-15	eSalon	97	Californian hair coloring company	https://crueltyfree.peta.org/company/esalon/
-16	curata	58	Filipino fashion designer (1959–2020)	https://crueltyfree.peta.org/company/curata/
-17	Alchimie Forever	47	Swiss skincare brand	https://crueltyfree.peta.org/company/alchimie-forever/
+2	Veganis	18476	Non-usage of animal products	https://crueltyfree.peta.org/company/veganis/
+3	SerVaas Laboratories	2988	Brand of cleaning agents	https://crueltyfree.peta.org/company/servaas-laboratories/
+4	Cotton On	2682	Australian multinational retail company	https://crueltyfree.peta.org/company/cotton-on/
+5	Factorie	2682	Australian multinational retail company	https://crueltyfree.peta.org/company/factorie-cotton-on/
+6	Skintimate	2309	American multinational consumer products company	https://crueltyfree.peta.org/company/skintimate/
+7	La Senza	1877	Canadian fashion retailer	https://crueltyfree.peta.org/company/la-senza-l-brands/
+8	Lunar Beauty	1235	American YouTuber and make-up artist	https://crueltyfree.peta.org/company/lunar-beauty/
+9	Glorietta	1014	Shopping mall complex in the Philippines	https://crueltyfree.peta.org/company/glorietta/
+10	The Bubble Factory	650	Production company	https://crueltyfree.peta.org/company/the-bubble-factory/
+11	Varsity Spirit	533	American cheerleading company	https://crueltyfree.peta.org/company/varsity-spirit/
+12	C.O. Bigelow	477	American pharmacy and beauty brand	https://crueltyfree.peta.org/company/co-bigelow-l-brands/
+13	Chāmpo	459	Traditional Indian hair massage	https://crueltyfree.peta.org/company/champo/
+14	Resibo	410	Philippine television investigative show	https://crueltyfree.peta.org/company/resibo/
+15	NeilMed Pharmaceuticals	385	American pharmaceutical company	https://crueltyfree.peta.org/company/neilmed-pharmaceuticals/
+16	Hotel Soap	384	American production company	https://crueltyfree.peta.org/company/hotel-soap/
+17	Zendium	376	Brand of toothpaste marketed by Unilever	https://crueltyfree.peta.org/company/zendium/
+18	Kleeneze	295	Former multi-level marketing company	https://crueltyfree.peta.org/company/kleeneze/
+19	ColorProof Evolved Color Care	288	American hairdresser	https://crueltyfree.peta.org/company/colorproof-evolved-color-care/
+20	Sendo	275	British mobile phone manufacturer	https://crueltyfree.peta.org/company/sendo/
+21	Baby Magic	215	American brand of baby care products	https://crueltyfree.peta.org/company/baby-magic-naterra-international/
+22	Sheffield Pharmaceuticals	176	American pharmaceutical company	https://crueltyfree.peta.org/company/sheffield-pharmaceuticals/
+23	Bielenda	131	Polish cosmetics company	https://crueltyfree.peta.org/company/bielenda/
+24	Udo Walz	119	German hairdresser (1944–2020)	https://crueltyfree.peta.org/company/udo-walz/
+25	Xyrena	117	American perfumery	https://crueltyfree.peta.org/company/xyrena/
+26	City Beauty	112	Chinese underwear manufacturing company based in Dongguan, Guangdong	https://crueltyfree.peta.org/company/city-beauty/
+27	curata	58	Filipino fashion designer (1959–2020)	https://crueltyfree.peta.org/company/curata/
+28	Alchimie Forever	47	Swiss skincare brand	https://crueltyfree.peta.org/company/alchimie-forever/
