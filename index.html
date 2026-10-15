@@ -437,10 +437,7 @@
 </script>
 <!-- End TradeTracker SuperTag Code -->
 <script>
-fetch('data/brands.json').then(function(r){return r.json();}).then(function(d){
-  var t={good:0,check:0,warn:0,bad:0,unverified:0};
-  d.forEach(function(b){ if(t[b.tier]!==undefined) t[b.tier]++; });
-  var n={total:d.length,good:t.good,check:t.check,cf:t.good+t.check,warn:t.warn,bad:t.bad,unverified:t.unverified};
+fetch('data/stats.json').then(function(r){return r.json();}).then(function(n){
   document.querySelectorAll('[data-ahk-count]').forEach(function(el){ var v=n[el.getAttribute('data-ahk-count')]; if(v!==undefined) el.textContent=v.toLocaleString('en-GB'); });
   document.querySelectorAll('[data-ahk-bar]').forEach(function(el){ var v=n[el.getAttribute('data-ahk-bar')]; if(v!==undefined) el.style.flex=v; });
 }).catch(function(){});

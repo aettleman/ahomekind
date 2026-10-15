@@ -107,7 +107,7 @@ function testAnswer(brand) {
   const n = escapeHtml(brand.name), p = brand.parentCompany ? escapeHtml(brand.parentCompany) : null;
   if (brand.tier === 'good' || brand.tier === 'check') return 'No. ' + n + ' is listed as cruelty-free by Leaping Bunny / Cruelty Free International or PETA.' + regionSentence(brand) + ' The sources are below.';
   if (brand.tier === 'warn') return 'Not itself, but its owner does. ' + n + ' is listed as cruelty-free, but ' + (p || 'the company that owns it') + ' tests on animals or sells where the law requires it.' + regionSentence(brand);
-  if (brand.tier === 'bad') return 'Yes, or it sells where animal testing is required. ' + (p ? n + ' is owned by ' + p + '. ' : '') + 'The sources are below.';
+  if (brand.tier === 'bad') return 'Yes, or it sells where animal testing is required. ' + (p ? n + ' is owned by ' + p + '. ' : '') + 'The sources are below. <a href="/companies-that-test-on-animals">See every company that tests on animals</a>.';
   if (brand.claim) return n + ' says it doesn\'t test on animals, but it isn\'t certified, so nobody independent has checked. What it says is below.';
   return 'I couldn\'t find an animal testing policy or certification for ' + n + ' yet. The sources I checked are below.';
 }
@@ -286,7 +286,7 @@ function renderBrandPage(brand) {
   const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues').replace('period menstrual', 'period care').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
   lines.push('<div class="bp">' + (hasLogo ? '<div class="k-arch-box has-logo"><img src="../../images/brand-logos/' + brand.slug + '.png" alt="' + escapeHtml(brand.name) + ' logo" width="132" height="96" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div>') + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
-  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))))))))))))))))))))))))))))))))) + '</span></div>');
+  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)))))))))))))))))))))))))))))))))) + '</span></div>');
   lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified)) + '</h2>');
   lines.push('<p>' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
@@ -317,7 +317,7 @@ function renderBrandPage(brand) {
 }
 
 function buildSitemap(brands) {
-  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'brand-check', 'scan', 'shelf.html', 'ingredient-check.html', 'shop.html', 'take-action.html', 'perfume.html'];
+  const staticPages = ['', 'about.html', 'learn.html', 'impact.html', 'brand-check', 'scan', 'shelf.html', 'ingredient-check.html', 'shop.html', 'take-action.html', 'perfume.html', 'companies-that-test-on-animals'];
   const urls = staticPages.map(function(p){ return SITE_URL + '/' + p; })
     .concat(brands.map(function(b){ return SITE_URL + '/brands/' + b.slug; }));
   const body = urls.map(function(u){ return '  <url><loc>' + u + '</loc></url>'; }).join('\n');
@@ -345,7 +345,19 @@ function main() {
     if (existed) updated++; else created++;
   });
 
-  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap(brands), 'utf8');
+  let extra = [];
+  try { extra = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'peta-import.json'), 'utf8')); } catch (e) { extra = []; }
+  const extraMade = [];
+  extra.forEach(function(b) {
+    if (!b.slug || slugs[b.slug]) return;
+    slugs[b.slug] = true;
+    const dir = path.join(OUT_DIR, b.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), renderBrandPage(b), 'utf8');
+    extraMade.push(b);
+  });
+  console.log('PETA list pages: ' + extraMade.length);
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap(brands.concat(extraMade)), 'utf8');
 
   console.log('Done. ' + created + ' pages created, ' + updated + ' pages updated, ' + brands.length + ' total brands.');
   console.log('sitemap.xml written with ' + (brands.length + 14) + ' URLs.');

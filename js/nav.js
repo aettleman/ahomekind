@@ -318,8 +318,8 @@ run();
 document.addEventListener('DOMContentLoaded', function(){
 var slot = document.getElementById('homeStatsSlot');
 if (!slot) return;
-fetch('data/brands.json').then(function(r){ return r.json(); }).then(function(list){
-var count = Array.isArray(list) ? list.length : null;
+fetch('data/stats.json').then(function(r){ return r.json(); }).then(function(st){
+var count = st && st.total ? st.total : null;
 var countText = count ? count.toLocaleString() : 'over 1,000';
 slot.innerHTML =
 '<div class="ahk-stats-strip">' +
