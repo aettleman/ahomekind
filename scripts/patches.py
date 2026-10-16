@@ -2740,3 +2740,13 @@ def _p80(t):
     return re.sub(r"<!-- Begin TradeTracker SuperTag Code -->.*?<!-- End TradeTracker SuperTag Code -->\n?", "", t, flags=re.S)
 _rw("index.html", _p80)
 print("Section 80 applied: TradeTracker script removed")
+
+# 81. Dog line (Ash, 16 Oct): source is now the original Current Biology paper (PubMed), and the wording matches its abstract: tears rose after reunion with the owner, not after a familiar non-owner.
+def _p81(t):
+    for a, b in (("Their eyes filled with more tears after a reunion than after meeting other people.", "Tear volume rose after reuniting with their owner, but not after meeting a familiar person who wasn't."),
+                 ("Azabu University, Current Biology, 2022", "Current Biology, 2022 (Azabu University)"),
+                 ("https://www.fox32chicago.com/news/dogs-can-cry-tears-of-joy-when-reunited-with-owner-study-finds", "https://pubmed.ncbi.nlm.nih.gov/35998592/")):
+        t = t.replace(a, b)
+    return t
+_rw("index.html", _p81)
+print("Section 81 applied: dog line uses the original paper")
