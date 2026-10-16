@@ -2768,3 +2768,79 @@ def _p83(keep):
     return f
 _rw("scan.html", _p83(True)); _rw("ingredient-check.html", _p83(True)); _rw("brand-check.html", _p83(False))
 print("Section 83 applied: beta labels removed")
+
+# 84. Alberto Balsam (Ash, 16 Oct): the brand's own About page says it is part of Unilever's portfolio under Elida Beauty, and it says nothing about animal testing.
+#     The old record said McBride plc. Same wording and tier as other Unilever brands with no policy (Radox, Sure, Vaseline).
+def _s84():
+    raw = json.load(open("data/brands.json")); bl = raw if isinstance(raw, list) else raw.get("brands", raw)
+    n = 0
+    for b in bl:
+        if b.get("slug") == "alberto-balsam":
+            b.update({"parentCompany": "Unilever", "tier": "bad",
+                      "note": "Alberto Balsam says on its own website that it is part of Unilever's portfolio, under Elida Beauty. I couldn't find an animal testing policy for it, and it isn't certified. Owned by Unilever, who sell into markets requiring animal testing.",
+                      "dateChecked": today, "lastVerified": today,
+                      "sources": [{"label": "Alberto Balsam: About (says it is part of Unilever, under Elida Beauty)", "url": "https://alberto-balsam.com/about/"}]})
+            n += 1
+    json.dump(raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    return n
+print("Section 84 applied: Alberto Balsam updated (%d)" % _s84())
+
+# 85. Henkel brands (Ash, 16 Oct): Bloo is owned by Henkel (not McBride plc), per Ash and Henkel's own consumer brands site, which also names Palette, Dylon, Colour Catcher and Oust Descaler.
+#     Henkel's page on detergents and cleaning products says it doesn't test them on animals or ask others to, but that animal testing is still mandatory for registration in some markets
+#     and that it commissions ingredient testing where the law specifically requires it. Same tier and wording as all (laundry detergent): tests where required.
+def _s85():
+    raw = json.load(open("data/brands.json")); bl = raw if isinstance(raw, list) else raw.get("brands", raw)
+    by = {b["slug"]: b for b in bl}
+    POL = {"label": "Henkel: animal testing, detergents and cleaning products", "url": "https://www.henkel.com/our-businesses/henkel-consumer-brands/animal-testing-detergents-and-cleaning-products"}
+    ABOUT = {"label": "Henkel Consumer Brands UK: about us (names its brands)", "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"}
+    def note(name, what):
+        return ("%s is one of Henkel's %s, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its detergents and cleaning products on animals or ask others to, "
+                "but that animal testing is still mandatory for registration in some countries, and it commissions testing of an ingredient where the law specifically requires it. "
+                "I couldn't find an animal testing policy for %s itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.") % (name, what, name)
+    b = by.get("bloo")
+    if b:
+        b.update({"parentCompany": "Henkel", "tier": "bad", "note": note("Bloo", "laundry and home care brands"), "dateChecked": today, "lastVerified": today, "sources": [POL, ABOUT]})
+    add = 0
+    for slug, name, cat, what in (("palette", "Palette", ["haircare"], "hair brands"), ("dylon", "Dylon", ["laundry"], "laundry and home care brands"),
+                                  ("colour-catcher", "Colour Catcher", ["laundry"], "laundry and home care brands"), ("oust-descaler", "Oust Descaler", ["household"], "laundry and home care brands")):
+        if slug in by: continue
+        n = note(name, what)
+        if cat == ["haircare"]:
+            n = ("Palette is one of Henkel's hair brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its hair and body care products on animals, but that animal testing is still mandatory in some countries "
+                 "and it can't rule out that an ingredient was tested at some point. I couldn't find an animal testing policy for Palette itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.")
+            src = [{"label": "Henkel: its position on test methods", "url": "https://www.henkel.com/sustainability/positions/test-methods"}, ABOUT]
+        else:
+            src = [POL, ABOUT]
+        bl.append({"slug": slug, "name": name, "tier": "bad", "note": n, "parentCompany": "Henkel", "vegan": "unknown", "evidence": "", "products": [], "alternatives": [], "links": [],
+                   "category": cat, "veganConfidence": "low", "region": "UK", "claim": "", "lastVerified": today, "dateChecked": today, "sources": src})
+        add += 1
+    json.dump(raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    return add
+print("Section 85 applied: Bloo updated, %d Henkel brands added" % _s85())
+
+# 86. More from Ash (16 Oct): Bloo's own Henkel page added as a source; Oust is an SC Johnson (and SC Johnson Professional) brand; LIVE is a Schwarzkopf haircare range owned by Henkel.
+#     "Oust Descaler" (listed on Henkel's UK site) stays a separate entry from "Oust" (PETA's list, SC Johnson): the names are not merged without checking they are the same product.
+def _s86():
+    raw = json.load(open("data/brands.json")); bl = raw if isinstance(raw, list) else raw.get("brands", raw)
+    by = {b["slug"]: b for b in bl}
+    BL = {"label": "Henkel Consumer Brands UK: Bloo", "url": "https://www.allyoucare-byhenkel.com/gb/en/brands/laundry-and-home/bloo.html"}
+    b = by.get("bloo")
+    if b and not any(s.get("url") == BL["url"] for s in b.get("sources", [])): b.setdefault("sources", []).append(BL)
+    o = by.get("oust")
+    if o:
+        o.update({"parentCompany": "SC Johnson", "tier": "bad", "lastVerified": today,
+                  "note": "Listed by PETA as a company that tests on animals. Oust is an SC Johnson brand (SC Johnson Professional sells it). SC Johnson says it chooses non-animal testing methods wherever possible, but that it must comply with legal requirements in countries that require testing for certain products."})
+        for s in ({"label": "SC Johnson Professional: Oust product page", "url": "https://www.scjp.com/en-au/products/oust-3-1-outdoor-scent-hard-surface-disinfectant-soft-surface-deodoriser-and-fights-tough"},
+                  {"label": "SC Johnson: point of view on animal testing", "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"}):
+            if not any(x.get("url") == s["url"] for x in o.setdefault("sources", [])): o["sources"].append(s)
+    add = 0
+    if "live" not in by:
+        bl.append({"slug": "live", "name": "LIVE", "tier": "bad", "parentCompany": "Henkel", "vegan": "unknown", "evidence": "", "products": [], "alternatives": [], "links": [], "category": ["haircare"],
+                   "veganConfidence": "low", "region": "UK", "claim": "", "lastVerified": today, "dateChecked": today,
+                   "note": "LIVE is a Schwarzkopf haircare range, owned by Henkel (Henkel's UK consumer brands site names it). Henkel says it doesn't test its hair and body care products on animals, but that animal testing is still mandatory in some countries and it can't rule out that an ingredient was tested at some point. I couldn't find an animal testing policy for LIVE itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+                   "sources": [{"label": "Henkel: its position on test methods", "url": "https://www.henkel.com/sustainability/positions/test-methods"},
+                               {"label": "Henkel Consumer Brands UK: about us (names its brands)", "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"}]})
+        add = 1
+    json.dump(raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    return add
+print("Section 86 applied: Bloo source, Oust owner, %d brand added" % _s86())

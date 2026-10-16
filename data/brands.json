@@ -459,9 +459,9 @@
   {
     "slug": "alberto-balsam",
     "name": "Alberto Balsam",
-    "tier": "unverified",
-    "note": "Owned by McBride plc, same parent as Bloo. As of 2026-09-02, no animal-testing policy or certification was found either way.",
-    "parentCompany": "McBride plc",
+    "tier": "bad",
+    "note": "Alberto Balsam says on its own website that it is part of Unilever's portfolio, under Elida Beauty. I couldn't find an animal testing policy for it, and it isn't certified. Owned by Unilever, who sell into markets requiring animal testing.",
+    "parentCompany": "Unilever",
     "vegan": "unclear",
     "evidence": "",
     "products": [],
@@ -472,8 +472,15 @@
       "haircare"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02",
-    "region": "Europe"
+    "dateChecked": "2026-10-16",
+    "region": "Europe",
+    "lastVerified": "2026-10-16",
+    "sources": [
+      {
+        "label": "Alberto Balsam: About (says it is part of Unilever, under Elida Beauty)",
+        "url": "https://alberto-balsam.com/about/"
+      }
+    ]
   },
   {
     "slug": "aldi",
@@ -3078,9 +3085,9 @@
   {
     "slug": "bloo",
     "name": "Bloo",
-    "tier": "unverified",
-    "note": "Owned by Robert McBride / McBride plc. As of 2026-09-02, no animal-testing policy, certification, or evidence either way was found for this brand or its parent.",
-    "parentCompany": "McBride plc",
+    "tier": "bad",
+    "note": "Bloo is one of Henkel's laundry and home care brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its detergents and cleaning products on animals or ask others to, but that animal testing is still mandatory for registration in some countries, and it commissions testing of an ingredient where the law specifically requires it. I couldn't find an animal testing policy for Bloo itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Henkel",
     "vegan": "unclear",
     "evidence": "",
     "products": [],
@@ -3091,8 +3098,23 @@
       "household-cleaning"
     ],
     "veganConfidence": "low",
-    "dateChecked": "2026-09-02",
-    "region": "Europe"
+    "dateChecked": "2026-10-16",
+    "region": "Europe",
+    "lastVerified": "2026-10-16",
+    "sources": [
+      {
+        "label": "Henkel: animal testing, detergents and cleaning products",
+        "url": "https://www.henkel.com/our-businesses/henkel-consumer-brands/animal-testing-detergents-and-cleaning-products"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: Bloo",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/brands/laundry-and-home/bloo.html"
+      }
+    ]
   },
   {
     "slug": "blue-buffalo",
@@ -14696,7 +14718,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -18219,8 +18241,8 @@
     "slug": "oust",
     "name": "Oust",
     "tier": "bad",
-    "note": "Listed by PETA as a company that tests on animals.",
-    "parentCompany": null,
+    "note": "Listed by PETA as a company that tests on animals. Oust is an SC Johnson brand (SC Johnson Professional sells it). SC Johnson says it chooses non-animal testing methods wherever possible, but that it must comply with legal requirements in countries that require testing for certain products.",
+    "parentCompany": "SC Johnson",
     "vegan": "unknown",
     "evidence": "https://crueltyfree.peta.org/companies-do-test/",
     "products": [],
@@ -18232,11 +18254,19 @@
     ],
     "veganConfidence": "low",
     "region": "",
-    "lastVerified": "2026-09-13",
+    "lastVerified": "2026-10-16",
     "sources": [
       {
         "label": "PETA: companies that test on animals",
         "url": "https://crueltyfree.peta.org/companies-do-test/"
+      },
+      {
+        "label": "SC Johnson Professional: Oust product page",
+        "url": "https://www.scjp.com/en-au/products/oust-3-1-outdoor-scent-hard-surface-disinfectant-soft-surface-deodoriser-and-fights-tough"
+      },
+      {
+        "label": "SC Johnson: point of view on animal testing",
+        "url": "https://scjohnson.com/en/news-stories/official-communications/sc-johnson-point-of-view-on-animal-testing"
       }
     ]
   },
@@ -20596,7 +20626,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -35452,5 +35482,155 @@
     "veganBasis": "certified",
     "veganCert": "The Vegan Society",
     "uncheckedOn": "16 October 2026"
+  },
+  {
+    "slug": "palette",
+    "name": "Palette",
+    "tier": "bad",
+    "note": "Palette is one of Henkel's hair brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its hair and body care products on animals, but that animal testing is still mandatory in some countries and it can't rule out that an ingredient was tested at some point. I couldn't find an animal testing policy for Palette itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "region": "UK",
+    "claim": "",
+    "lastVerified": "2026-10-16",
+    "dateChecked": "2026-10-16",
+    "sources": [
+      {
+        "label": "Henkel: its position on test methods",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      }
+    ]
+  },
+  {
+    "slug": "dylon",
+    "name": "Dylon",
+    "tier": "bad",
+    "note": "Dylon is one of Henkel's laundry and home care brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its detergents and cleaning products on animals or ask others to, but that animal testing is still mandatory for registration in some countries, and it commissions testing of an ingredient where the law specifically requires it. I couldn't find an animal testing policy for Dylon itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "laundry"
+    ],
+    "veganConfidence": "low",
+    "region": "UK",
+    "claim": "",
+    "lastVerified": "2026-10-16",
+    "dateChecked": "2026-10-16",
+    "sources": [
+      {
+        "label": "Henkel: animal testing, detergents and cleaning products",
+        "url": "https://www.henkel.com/our-businesses/henkel-consumer-brands/animal-testing-detergents-and-cleaning-products"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      }
+    ]
+  },
+  {
+    "slug": "colour-catcher",
+    "name": "Colour Catcher",
+    "tier": "bad",
+    "note": "Colour Catcher is one of Henkel's laundry and home care brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its detergents and cleaning products on animals or ask others to, but that animal testing is still mandatory for registration in some countries, and it commissions testing of an ingredient where the law specifically requires it. I couldn't find an animal testing policy for Colour Catcher itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "laundry"
+    ],
+    "veganConfidence": "low",
+    "region": "UK",
+    "claim": "",
+    "lastVerified": "2026-10-16",
+    "dateChecked": "2026-10-16",
+    "sources": [
+      {
+        "label": "Henkel: animal testing, detergents and cleaning products",
+        "url": "https://www.henkel.com/our-businesses/henkel-consumer-brands/animal-testing-detergents-and-cleaning-products"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      }
+    ]
+  },
+  {
+    "slug": "oust-descaler",
+    "name": "Oust Descaler",
+    "tier": "bad",
+    "note": "Oust Descaler is one of Henkel's laundry and home care brands, according to Henkel's own UK consumer brands site. Henkel says it doesn't test its detergents and cleaning products on animals or ask others to, but that animal testing is still mandatory for registration in some countries, and it commissions testing of an ingredient where the law specifically requires it. I couldn't find an animal testing policy for Oust Descaler itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "household"
+    ],
+    "veganConfidence": "low",
+    "region": "UK",
+    "claim": "",
+    "lastVerified": "2026-10-16",
+    "dateChecked": "2026-10-16",
+    "sources": [
+      {
+        "label": "Henkel: animal testing, detergents and cleaning products",
+        "url": "https://www.henkel.com/our-businesses/henkel-consumer-brands/animal-testing-detergents-and-cleaning-products"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      }
+    ]
+  },
+  {
+    "slug": "live",
+    "name": "LIVE",
+    "tier": "bad",
+    "parentCompany": "Henkel",
+    "vegan": "unknown",
+    "evidence": "",
+    "products": [],
+    "alternatives": [],
+    "links": [],
+    "category": [
+      "haircare"
+    ],
+    "veganConfidence": "low",
+    "region": "UK",
+    "claim": "",
+    "lastVerified": "2026-10-16",
+    "dateChecked": "2026-10-16",
+    "note": "LIVE is a Schwarzkopf haircare range, owned by Henkel (Henkel's UK consumer brands site names it). Henkel says it doesn't test its hair and body care products on animals, but that animal testing is still mandatory in some countries and it can't rule out that an ingredient was tested at some point. I couldn't find an animal testing policy for LIVE itself, and it isn't certified by Leaping Bunny / Cruelty Free International or PETA.",
+    "sources": [
+      {
+        "label": "Henkel: its position on test methods",
+        "url": "https://www.henkel.com/sustainability/positions/test-methods"
+      },
+      {
+        "label": "Henkel Consumer Brands UK: about us (names its brands)",
+        "url": "https://www.allyoucare-byhenkel.com/gb/en/about-us.html"
+      }
+    ]
   }
 ]
