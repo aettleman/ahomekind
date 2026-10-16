@@ -2649,3 +2649,80 @@ def _p76(t):
     return t
 _rw("brand-check.html", _p76)
 print("Section 76 applied: price menu works with the Budget categories")
+
+# 77. Home page (Ash, 16 Oct): the quiz teaser is a wide strip on laptop and desktop screens (phones unchanged).
+def _p77(t):
+    if "k-duo-quiz" in t: return t
+    t = t.replace('<div class="k-duo solo">\n<a href="quiz.html"', '<div class="k-duo solo k-duo-quiz">\n<a href="quiz.html"', 1)
+    css = ("<style>@media (min-width:900px){ .k-duo.solo.k-duo-quiz { max-width:1240px; }"
+           " .k-duo-quiz .k-quiz-teaser { gap:44px; padding:52px 64px; border-radius:40px; }"
+           " .k-duo-quiz .k-quiz-teaser-mark { width:120px; height:120px; font-size:52px; }"
+           " .k-duo-quiz .k-quiz-teaser h3 { font-size:40px !important; margin-bottom:12px !important; }"
+           " .k-duo-quiz .k-quiz-teaser p { font-size:20px; max-width:62ch; }"
+           " .k-duo-quiz .k-quiz-teaser span.k-quiz-teaser-kick { font-size:12.5px; }"
+           " .k-duo-quiz .k-quiz-teaser b { font-size:15px; margin-top:16px; } }</style>\n")
+    return t.replace("</head>", css + "</head>", 1)
+_rw("index.html", _p77)
+print("Section 77 applied: wide quiz strip on desktop")
+
+# 78. Home page, "Someone, not something" (Ash, 16 Oct): one true, sourced, heartfelt line per animal, each with its source link, in a slow looping carousel that stops the moment it is touched (or hovered, or focused)
+#     and starts again a moment after you let go. Arrow buttons for laptops. With reduced-motion settings it doesn't move by itself.
+_A78 = [
+ ("animal-rabbit.jpg", "A rabbit", "50% 32%", "Rabbit", "Leaps and twists in mid-air, called a binky, when it feels safe, happy and full of life.", "Toronto Humane Society", "https://www.torontohumanesociety.com/why-do-rabbits-binky/"),
+ ("animal-beagle.jpg", "A beagle", "", "Beagle", "Dogs tear up when they're reunited with the person they love. Their eyes filled with more tears after a reunion than after meeting other people.", "Azabu University, Current Biology, 2022", "https://www.fox32chicago.com/news/dogs-can-cry-tears-of-joy-when-reunited-with-owner-study-finds"),
+ ("animal-rat.jpg", "A rat", "50% 35%", "Rat", "Can learn to play hide and seek with a person, swapping between hiding and seeking, and squeals with joy when it finds them.", "Science, 2019 (Reinhold et al.)", "https://neurocure.de/118/rats-play-hide-and-seek.html"),
+ ("animal-piglet.jpg", "A piglet", "40% center", "Pig", "With space, straw and toys, a pig walks up to something new hopefully. A pig in a bare pen holds back.", "Newcastle University, 2010", "https://www.sciencedaily.com/releases/2010/07/100727201515.htm"),
+ ("animal-lamb.jpg", "A lamb", "", "Lamb", "Never forgets a face. Sheep can remember 50 other sheep faces for more than two years.", "Nature, 2001 (Kendrick et al.)", "https://www.nature.com/articles/35102669"),
+ ("animal-cow.jpg", "A cow", "", "Cow", "Makes close friends in the herd, and is less stressed when she's with her favourite companion.", "University of Northampton, 2011, reported by VegNews", "https://vegnews.com/2011/7/cows-stress-when-separated"),
+ ("animal-chick.jpg", "A chick", "50% 55%", "Chick", "When her chicks are upset, a mother hen's heart beats faster and she calls to them more.", "Proc. Royal Society B, 2011 (Edgar et al.)", "https://www.bristol.ac.uk/news/2011/7525.html"),
+ ("animal-tuna.jpg", "A bluefin tuna", "50% 55%", "Tuna", "Swims right across entire oceans. Tagged Atlantic bluefin have been tracked making journeys across the Atlantic.", "Science (Block et al.), via Scientific American", "https://www.scientificamerican.com/article/tagging-reveals-details-o"),
+]
+def _fig78(a, clone=False):
+    img, alt, pos, name, fact, srcname, url = a
+    st = (' style="object-position:%s;"' % pos) if pos else ""
+    if clone:
+        return '<figure aria-hidden="true"><img src="images/%s" alt=""%s loading="lazy"><figcaption>%s<span>%s</span><a class="k-src" href="%s" target="_blank" rel="noopener" tabindex="-1">Source: %s</a></figcaption></figure>' % (img, st, name, fact, url, srcname)
+    return '<figure><img src="images/%s" alt="%s"%s><figcaption>%s<span>%s</span><a class="k-src" href="%s" target="_blank" rel="noopener">Source: %s</a></figcaption></figure>' % (img, alt, st, name, fact, url, srcname)
+def _p78(t):
+    if "k-strip-wrap" in t: return t
+    figs = "\n".join(_fig78(a) for a in _A78) + "\n" + "\n".join(_fig78(a, True) for a in _A78)
+    new = ('<div class="k-strip-wrap">\n<button type="button" class="k-strip-btn prev" aria-label="Previous animal">&#8249;</button>\n'
+           '<div class="k-strip" id="animalStrip" tabindex="0" role="region" aria-label="Animal facts, scroll sideways for more">\n' + figs + '\n</div>\n'
+           '<button type="button" class="k-strip-btn next" aria-label="Next animal">&#8250;</button>\n</div>\n')
+    t2 = re.sub(r'<div class="k-strip" tabindex="0" role="region" aria-label="Animal facts">.*?</div>\n(?=\n<div class="k-duo solo">\n<a href="impact\.html")', lambda m: new, t, count=1, flags=re.S)
+    if t2 == t: return t
+    css = ("<style>.k-strip-wrap{position:relative}.k-strip figure{width:200px!important}.k-strip img{height:210px!important}.k-strip figcaption span{font-size:13px!important}"
+           ".k-src{display:block;margin-top:8px;font:500 11px/1.35 'Hanken Grotesk',sans-serif;color:var(--ahk-text-muted);text-decoration:underline;text-underline-offset:2px}"
+           ".k-strip-btn{display:none}"
+           "@media (min-width:900px){.k-strip figure{width:250px!important}.k-strip img{height:270px!important}.k-strip figcaption span{font-size:14px!important}.k-src{font-size:12px}"
+           ".k-strip-btn{display:grid;place-items:center;position:absolute;top:150px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#2A1630;font:400 30px/1 'Gloock',serif;box-shadow:0 3px 14px rgba(42,22,48,.22);cursor:pointer;z-index:2}"
+           ".k-strip-btn.prev{left:max(14px,calc(50% - 650px))}.k-strip-btn.next{right:max(14px,calc(50% - 650px))}.k-strip-btn:hover{background:#FBE3D3}.k-strip-btn:focus-visible{outline:3px solid #E8804C;outline-offset:2px}}"
+           "</style>\n")
+    js = """<script>
+(function(){
+var s=document.getElementById('animalStrip'); if(!s) return;
+var figs=s.querySelectorAll('figure'), half=figs.length/2, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pos=s.scrollLeft, held=false, timer=null, vis=true, last=0, SPEED=28;
+function span(){ return figs[half].offsetLeft-figs[0].offsetLeft; }
+function pause(){ held=true; clearTimeout(timer); }
+function resume(ms){ clearTimeout(timer); timer=setTimeout(function(){ pos=s.scrollLeft; held=false; }, ms==null?1400:ms); }
+['pointerdown','touchstart','focusin'].forEach(function(e){ s.addEventListener(e,pause,{passive:true}); });
+['pointerup','pointercancel','touchend','touchcancel','focusout'].forEach(function(e){ s.addEventListener(e,function(){ resume(1400); },{passive:true}); });
+s.addEventListener('pointerenter',function(ev){ if(ev.pointerType==='mouse') pause(); });
+s.addEventListener('pointerleave',function(ev){ if(ev.pointerType==='mouse') resume(900); });
+s.addEventListener('wheel',function(){ pause(); resume(1800); },{passive:true});
+s.addEventListener('scroll',function(){ var sp=span(); if(!sp) return; if(s.scrollLeft>=sp){ s.scrollLeft-=sp; pos=s.scrollLeft; } else if(s.scrollLeft<=0 && held){ s.scrollLeft+=sp; pos=s.scrollLeft; } },{passive:true});
+function step(n){ var f=figs[0], w=f.getBoundingClientRect().width+parseFloat(getComputedStyle(s).columnGap||12); pause(); s.scrollBy({left:n*w,behavior:'smooth'}); resume(2600); }
+var b1=document.querySelector('.k-strip-btn.prev'), b2=document.querySelector('.k-strip-btn.next');
+if(b1) b1.addEventListener('click',function(){ step(-1); }); if(b2) b2.addEventListener('click',function(){ step(1); });
+if('IntersectionObserver' in window) new IntersectionObserver(function(en){ vis=en[0].isIntersecting; },{threshold:0.05}).observe(s);
+function tick(ts){ if(last){ var dt=Math.min(ts-last,64)/1000; if(!held && vis && !reduce && !document.hidden){ pos+=SPEED*dt; var sp=span(); if(sp&&pos>=sp) pos-=sp; s.scrollLeft=pos; } } last=ts; requestAnimationFrame(tick); }
+if(!reduce) requestAnimationFrame(tick);
+})();
+</script>
+"""
+    t2 = t2.replace("</head>", css + "</head>", 1)
+    t2 = t2.replace("<!-- Begin TradeTracker SuperTag Code -->", js + "<!-- Begin TradeTracker SuperTag Code -->", 1)
+    return t2
+_rw("index.html", _p78)
+print("Section 78 applied: animal carousel with sources")
