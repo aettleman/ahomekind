@@ -148,6 +148,8 @@ const CATEGORY_MAP = {
   'hygiene': 'hygiene',
   'paper-hygiene': 'hygiene',
   'hygiene': 'hygiene',
+  'paper-hygiene': 'hygiene',
+  'hygiene': 'hygiene',
   'period-menstrual': 'hygiene',
   'food-kitchen': null,
   'stationery': 'stationery'
@@ -161,7 +163,7 @@ const CATEGORY_MAP = {
 // from. If more supermarket own-brand entries are added to brands.json in
 // future, add their exact `name` to this list too.
 const SUPERMARKET_NAMES = new Set([
-  'Aldi', 'Lidl', 'Tesco', 'Asda', 'Tesco Kind & Pure', 'Safeway', 'Lidl GB', 'Lidl Ireland & Lidl Northern Ireland', "Trader Joe's Company", 'Whole Foods Market 365', 'Cien', 'Lupilu', 'Lacura', 'Kirkland Signature', "Member's Mark", 'Signature Select', 'up&up', 'Beauty 360', 'Equate', 'Solimo', 'Pop-arazzi', 'Everspring', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer'
+  'Aldi', 'Lidl', 'Tesco', 'Asda', 'Tesco Kind & Pure', 'Safeway', 'Lidl GB', 'Lidl Ireland & Lidl Northern Ireland', "Trader Joe's Company", 'Whole Foods Market 365', 'Cien', 'Lupilu', 'Lacura', 'Kirkland Signature', "Member's Mark", 'Signature Select', 'up&up', 'Beauty 360', 'Equate', 'Solimo', 'Pop-arazzi', 'Everspring', 'Co-op', "Sainsbury's", 'Morrisons', 'Waitrose', 'Marks & Spencer', 'Boots', 'Botanics', '17', 'No7', 'Superdrug', 'B. by Superdrug', 'Superdrug own brand (wider range)', 'Superdrug own-brand (dental range)', 'Superdrug Pro Care', 'Solait (Superdrug)', 'Kmart', 'Anko', 'Primark', 'Penneys', 'John Lewis & Partners', 'Ulta Beauty Collection'
 ]);
 
 const BEAUTY_CATS = new Set(['makeup-beauty', 'skincare', 'haircare', 'body-shower', 'period-menstrual']);
@@ -184,6 +186,7 @@ function dataCategoryAttr(brand) {
     if (mapped && seen.indexOf(mapped) === -1) seen.push(mapped);
   });
   if (SUPERMARKET_NAMES.has(brand.name) && seen.indexOf('supermarket') === -1) seen.push('supermarket');
+  if (brand.price === '£' && (brand.tier === 'good' || brand.tier === 'check')) { seen.push('budget'); if (brand.tier === 'good') seen.push('budget-vegan'); }
   return seen.join(' ');
 }
 
@@ -313,7 +316,7 @@ function buildCardsMarkup(brands) {
   out.push('</div>');
   buckets.dental.forEach(function (b) { out.push(renderCard(b)); });
 
-  out.push('<p class="section-label">supermarket own brand</p>');
+  out.push('<p class="section-label">supermarket &amp; drugstore own brand</p>');
   buckets.supermarket.forEach(function (b) { out.push(renderCard(b)); });
 
   out.push('<p class="section-label" style="color:#A8324E;">tested on animals</p>');

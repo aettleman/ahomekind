@@ -1963,21 +1963,21 @@ print("Section 64 applied: researched brands added", _n1)
 
 # 64b. Humble Brands (Ash, 16 Oct): the Leaping Bunny certified body care brand (Humble deodorant). NOT the same company as The Humble Co. (oral care, PETA-listed).
 _new("humble-brands", "Humble Brands", "check",
-     "Humble Brands, the maker of Humble deodorant and other natural body care, is certified by Leaping Bunny (its Leaping Bunny listing is linked below). It isn't the same company as The Humble Co., which makes oral care. Its deodorants are vegan, but not everything the brand makes is, so vegan status varies by product. I haven't checked the parent company yet (as of 16 October 2026).",
+     "Certified by Leaping Bunny. Makes Humble deodorant and other natural body care. Its deodorants are vegan, but not everything the brand makes is. It isn't the same company as The Humble Co., which makes oral care.",
      vegan="partial", category=["body-shower"],
      sources=[{"label": "Leaping Bunny: Humble Brands listing", "url": "https://www.leapingbunny.org/ShopBrandDetail?BrandId=1993"}, {"label": "Humble Brands: its FAQ (what its products are made of)", "url": "https://humblebrands.com/pages/faq#what-were-made-of"}])
 by["humble-brands"]["uncheckedOn"] = "16 October 2026"
-by["humble-brands"].update(vegan="partial", vegan_note=None, note="Humble Brands, the maker of Humble deodorant and other natural body care, is certified by Leaping Bunny (its Leaping Bunny listing is linked below). It isn't the same company as The Humble Co., which makes oral care. Its deodorants are vegan, but not everything the brand makes is, so vegan status varies by product. I haven't checked the parent company yet (as of 16 October 2026).")
+by["humble-brands"].update(vegan="partial", vegan_note=None, note="Certified by Leaping Bunny. Makes Humble deodorant and other natural body care. Its deodorants are vegan, but not everything the brand makes is. It isn't the same company as The Humble Co., which makes oral care.")
 del by["humble-brands"]["vegan_note"]
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 
 # 64c. The Humble Co. (Ash, 16 Oct): oral care. Cruelty-free per PETA (NOT Leaping Bunny). Vegan per The Vegan Society, as stated on its own FAQ.
 _new("the-humble-co", "The Humble Co.", "good",
-     "Listed by PETA as cruelty-free. It isn't the same company as Humble Brands, which makes deodorant. Its FAQ says its products are verified by The Vegan Society and that its toothpastes are COSMOS Natural certified. I haven't checked the parent company yet (as of 16 October 2026).",
+     "Listed by PETA as cruelty-free. Makes oral care, including toothpaste. Its FAQ says its products are verified by The Vegan Society and that its toothpastes are COSMOS Natural certified. It isn't the same company as Humble Brands, which makes deodorant.",
      vegan="full", vc="high", category=["dental"],
      sources=[{"label": "PETA: The Humble Co. company page", "url": "https://crueltyfree.peta.org/company/the-humble-co/"},
               {"label": "The Humble Co.: its FAQ (verified by The Vegan Society, COSMOS Natural toothpastes)", "url": "https://www.thehumble.co/pages/faq"}])
-by["the-humble-co"].update(veganBasis="certified", veganCert="The Vegan Society", uncheckedOn="16 October 2026")
+by["the-humble-co"].update(veganBasis="certified", veganCert="The Vegan Society", uncheckedOn="16 October 2026", note="Listed by PETA as cruelty-free. Makes oral care, including toothpaste. Its FAQ says its products are verified by The Vegan Society and that its toothpastes are COSMOS Natural certified. It isn't the same company as Humble Brands, which makes deodorant.")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 if os.path.exists("data/search-extra.json"):
     _sx = json.load(open("data/search-extra.json"))
@@ -2423,3 +2423,93 @@ def _g68(t):
     return t.replace("brand.uncheckedOn && brand.tier === 'check' ?", "brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ?")
 _rw("scripts/generate-brand-pages.js", _g68)
 print("Section 68 applied: The Humble Co. page (PETA cruelty-free, Vegan Society vegan)")
+
+# 69. Brand page layout (Ash, 16 Oct): the green strip only gives the headline (cruelty-free + vegan status). The brand's own facts move into a short
+#     "about" section above the sources. Only sentences that say something about the brand are kept: the certification boilerplate ("Listed by PETA as
+#     cruelty-free", "Added from PETA's list", "I haven't checked...") is dropped because the strip, the facts row and the sources already say it.
+#     Nothing is invented: a brand with no facts beyond its listing gets no about section. Warn, bad and unverified pages keep their explanation in the strip.
+_ABOUT_FN = r"""
+function aboutText(brand) {
+  if (brand.tier !== 'good' && brand.tier !== 'check') return '';
+  const sents = String(brand.note || '').split(/(?<=[.!?])\s+/).map(function (s) { return s.trim(); }).filter(Boolean);
+  const keep = [];
+  sents.forEach(function (s) {
+    if (/I haven.t (researched|checked)|Added from PETA|\(as of \d|^(Vegan status|Owner)\b/i.test(s)) return;
+    if (/cruelty[- ]free approved by Cruelty Free International|Cruelty Free International approved brand/i.test(s)) return;
+    if (/^(Listed|Certified|Approved)\b[^,;(]*\b(Leaping Bunny|Cruelty Free International|PETA)\b[^,;(]*\.?$/i.test(s) && !/updated|owned|bought|acquired|\bbut\b/i.test(s)) return;
+    if (/^Listed by both Leaping Bunny and PETA/i.test(s)) return;
+    keep.push(s);
+  });
+  return keep.slice(0, 3).join(' ');
+}
+"""
+def _p69(t):
+    t = re.sub(r"\nfunction aboutText\(brand\) \{.*?\n\}\n", "\n", t, flags=re.S)
+    t = t.replace("function buildSitemap(brands) {", _ABOUT_FN + "\nfunction buildSitemap(brands) {", 1)
+    t = t.replace("  lines.push('<p>' + escapeHtml(brand.note) + '</p>');\n  if (parentTestFlag)",
+                  "  if (brand.tier !== 'good' && brand.tier !== 'check') lines.push('<p>' + escapeHtml(brand.note) + '</p>');\n  if (parentTestFlag)", 1)
+    if "const _ab = aboutText(brand)" not in t:
+        t = t.replace("  lines.push('</div><div class=\"k-bp-r\">');\n",
+                      "  lines.push('</div><div class=\"k-bp-r\">');\n  const _ab = aboutText(brand);\n  if (_ab) lines.push('<div class=\"k-sec\"><p class=\"section-label\">about ' + escapeHtml(brand.name) + '</p><p style=\"font-size:14px;margin:0 0 6px\">' + escapeHtml(_ab) + '</p></div>');\n", 1)
+    return t
+_rw("scripts/generate-brand-pages.js", _p69)
+print("Section 69 applied: brand page strip is headline only, brand facts are in an about section")
+
+# 70. Checker categories (Ash, 16 Oct): "supermarket" becomes "supermarket / drugstore" (own-brand ranges of supermarkets, drugstores and chemists, and big
+#     discount stores), and two new categories: "budget friendly" (cruelty-free brands in the lowest price band, £) and "budget & fully vegan"
+#     (the same, only where the brand is cruelty-free AND fully vegan). Budget uses the price field, so a brand only appears once it has a price.
+for _b in brands:
+    if _b["name"] == "17" and not _b.get("price"): _b["price"] = "£"   # Ash: 17 is Boots' budget make-up range; its listing says "accessible prices" and "affordable make-up essentials"
+json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
+_DRUG = ["Boots", "Botanics", "17", "No7", "Superdrug", "B. by Superdrug", "Superdrug own brand (wider range)", "Superdrug own-brand (dental range)", "Superdrug Pro Care", "Solait (Superdrug)",
+         "Kmart", "Anko", "Primark", "Penneys", "John Lewis & Partners", "Ulta Beauty Collection"]
+def _p70gen(t):
+    m = re.search(r"const SUPERMARKET_NAMES = new Set\(\[(.*?)\]\);", t, re.S)
+    if m:
+        have = re.findall(r"'((?:[^'\\]|\\.)*)'|\"([^\"]*)\"", m.group(1))
+        names = [a or b for a, b in have]
+        for d in _DRUG:
+            if d not in names: names.append(d)
+        body = ", ".join(("'%s'" % n if "'" not in n else '"%s"' % n) for n in names)
+        t = t[:m.start()] + "const SUPERMARKET_NAMES = new Set([\n  " + body + "\n]);" + t[m.end():]
+    if "budget-vegan" not in t:
+        t = t.replace("  return seen.join(' ');\n}", "  if (brand.price === '£' && (brand.tier === 'good' || brand.tier === 'check')) { seen.push('budget'); if (brand.tier === 'good') seen.push('budget-vegan'); }\n  return seen.join(' ');\n}", 1)
+    t = t.replace("supermarket own brand", "supermarket &amp; drugstore own brand")
+    return t
+_rw("scripts/generate-brand-check.js", _p70gen)
+def _p70html(t):
+    t = t.replace('data-cat="supermarket">Supermarket</button>', 'data-cat="supermarket">Supermarket / drugstore</button>')
+    if 'data-cat="budget"' not in t:
+        t = t.replace('data-cat="supermarket">Supermarket / drugstore</button>', 'data-cat="supermarket">Supermarket / drugstore</button><button type="button" class="k-tag" data-cat="budget">Budget</button><button type="button" class="k-tag" data-cat="budget-vegan">Budget &amp; fully vegan</button>', 1)
+    t = t.replace('<option value="supermarket">supermarket own-brand</option>', '<option value="supermarket">supermarket / drugstore own-brand</option>')
+    if '<option value="budget">' not in t:
+        t = t.replace('<option value="supermarket">supermarket / drugstore own-brand</option>', '<option value="supermarket">supermarket / drugstore own-brand</option>\n<option value="budget">budget friendly</option>\n<option value="budget-vegan">budget friendly &amp; fully vegan</option>', 1)
+    t = t.replace("label: 'supermarket own-brand'", "label: 'supermarket / drugstore'")
+    if "key: 'budget'" not in t:
+        t = t.replace("{ key: 'food',", "{ key: 'budget', icon: '\U0001F4B7', label: 'budget friendly' },\n{ key: 'budget-vegan', icon: '\U0001F331', label: 'budget &amp; fully vegan' },\n{ key: 'food',", 1)
+    if 'id="budgetNote"' not in t:
+        t = t.replace('<p id="categoryBack"', '<p id="budgetNote" style="display:none;max-width:640px;margin:0 0 16px;font-size:14px;line-height:1.5;">Budget friendly means the brand\'s everyday products sit in the lowest price band I use (£). Only brands I\'ve priced are listed, and prices change, so check the shelf. The fully vegan list is only brands that are cruelty-free and 100% vegan.</p>\n<p id="categoryBack"', 1)
+    _bn = "var budgetNote = document.getElementById('budgetNote');\nif (budgetNote) budgetNote.style.display = ((activeCategory === 'budget' || activeCategory === 'budget-vegan') && !azMode) ? 'block' : 'none';\n"
+    t = t.replace(_bn, "")
+    t = t.replace("var dentalDisclaimer = document.getElementById('dentalDisclaimer');\nif (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care'", _bn + "var dentalDisclaimer = document.getElementById('dentalDisclaimer');\nif (dentalDisclaimer) dentalDisclaimer.style.display = (activeCategory === 'mouth-care'", 1)
+    t = t.replace("var dentalDisclaimer = document.getElementById('dentalDisclaimer');\nif (dentalDisclaimer) dentalDisclaimer.style.display = 'none';", "var budgetNote0 = document.getElementById('budgetNote');\nif (budgetNote0) budgetNote0.style.display = 'none';\nvar dentalDisclaimer = document.getElementById('dentalDisclaimer');\nif (dentalDisclaimer) dentalDisclaimer.style.display = 'none';") if "budgetNote0" not in t else t
+    t = t.replace('<p class="section-label">supermarket own brand</p>', '<p class="section-label">supermarket &amp; drugstore own brand</p>')
+    t = t.replace("img: 'cat-all.jpg' },\n{ key: 'budget-vegan'", " },\n{ key: 'budget-vegan'").replace("label: 'budget &amp; fully vegan', img: 'cat-all.jpg' }", "label: 'budget &amp; fully vegan' }")
+    t = t.replace("html += '<img src=\"images/' + cat.img + '\" alt=\"\" loading=\"lazy\" onerror=\"this.remove()\">';", "if (cat.img) html += '<img src=\"images/' + cat.img + '\" alt=\"\" loading=\"lazy\" onerror=\"this.remove()\">';")
+    return t
+_rw("brand-check.html", _p70html)
+print("Section 70 applied: supermarket / drugstore category and budget friendly categories")
+
+# 71. Take action: Ash's own UK Parliament petition (live 16 Oct 2026).
+def _p71(t):
+    if "petitions/782811" in t: return t
+    card = ('<h3 class="ta-sub">UK Parliament petitions</h3>\n<div class="letter-cards one">\n'
+            '<a class="letter-card" href="https://petition.parliament.uk/petitions/782811" target="_blank" rel="noopener noreferrer">\n'
+            '<p class="letter-kicker">food labels</p>\n'
+            '<h3>Require food labels to disclose painful procedures done without pain relief</h3>\n'
+            '<p>Switzerland requires food labels to state when animals underwent painful procedures, such as castration or dehorning, without pain relief. This asks the UK Government to bring in similar mandatory labelling for meat, milk and dairy, so shoppers can make an informed choice. I started this petition. It is open until 16 April 2027.</p>\n'
+            '<span class="letter-card-cta">sign on UK Parliament petitions &#8599;</span>\n</a>\n</div>\n')
+    new = re.sub(r"<!-- UK Parliament petitions: add a section here.*?-->\n", lambda m: card, t, count=1, flags=re.S)
+    return new
+_rw("take-action.html", _p71)
+print("Section 71 applied: UK Parliament petition added to the take action page")
