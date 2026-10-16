@@ -2417,5 +2417,9 @@ _rw("index.html", _kl)
 print("Section 67 applied: kind list card shows %d brands" % _kn)
 
 # 68. Headline "Vegan status not checked yet" only when the vegan status really is unchecked.
-_rw("scripts/generate-brand-pages.js", lambda t: t.replace("brand.uncheckedOn && brand.tier === 'check' ?", "brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ?"))
+def _g68(t):
+    t = t.replace("brand.uncheckedOn && brand.tier === 'check' && brand.vegan !== 'full' ?", "brand.uncheckedOn && brand.tier === 'check' ?")
+    t = t.replace("brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ?", "brand.uncheckedOn && brand.tier === 'check' ?")
+    return t.replace("brand.uncheckedOn && brand.tier === 'check' ?", "brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ?")
+_rw("scripts/generate-brand-pages.js", _g68)
 print("Section 68 applied: The Humble Co. page (PETA cruelty-free, Vegan Society vegan)")
