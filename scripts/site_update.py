@@ -261,8 +261,29 @@ for ps, kids in groups.items():
     body = PCSS + "<p><strong>%s</strong></p><p>A brand can be cruelty-free while the company that owns it isn't, so I show both.</p>%s%s<div class=\"pc-grid\">%s</div>" % (E(st), polhtml, H2 % "Brands I list from this company", li)
     page("parent-%s.html" % ps, "%s - a home kind" % name, "parent company", name, body, "Animal testing policy of %s and the brands I list from it." % name)
     made += 1
-idx = "".join('<li><a href="/parent-%s">%s</a></li>' % (ps, E(max({b["parentCompany"] for b in kids}, key=len))) for ps, kids in sorted(groups.items()))
-page("parent-companies.html", "Parent companies - a home kind", "who owns who", "Parent companies", "<p>A brand can be cruelty-free while the company that owns it isn't. Each company below has its own page with the brands I list from it.</p><ul>%s</ul>" % idx, "Every parent company on a home kind and its animal testing policy.")
+PCL_CSS = ('<style>.ahk-info{max-width:1040px!important}main.wrap,main.page-shell{max-width:1100px!important}.pcl-find{width:100%;max-width:420px;box-sizing:border-box;padding:12px 16px;border:1.5px solid #E5CFC4;border-radius:999px;background:#FBF4EF;color:#2A1630;font:500 16px/1.2 inherit;margin:6px 0 12px}'
+ '.pcl-key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#6A535D;margin:0 0 16px}.pcl-key span,.pcl-dots span{display:inline-flex;align-items:center;gap:5px}'
+ '.pcl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin:8px 0 28px}'
+ '.pcl-card{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:96px;padding:14px 15px;border:1.5px solid #E5CFC4;border-radius:18px;background:#FBF4EF;text-decoration:none;color:#2A1630;line-height:1.25;transition:border-color .15s,transform .15s}'
+ '.pcl-card:hover,.pcl-card:focus-visible{border-color:#E8804C;transform:translateY(-2px)}.pcl-card:focus-visible{outline:3px solid #E8804C;outline-offset:2px}'
+ '.pcl-name{font-weight:600;font-size:16px;overflow-wrap:anywhere}.pcl-count{font-size:12.5px;color:#6A535D}.pcl-dots{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;font-weight:600}'
+ '.pcl-d{width:10px;height:10px;border-radius:50%;display:inline-block}.d-bad{background:#9C3A3A}.d-warn{background:#D98B2B}.d-good{background:#4C7A3A}.d-un{background:#A8979D}.pcl-none{display:none;color:#6A535D}</style>')
+def pcl_card(ps, kids):
+    nm = max({b["parentCompany"] for b in kids}, key=len)
+    c = {"bad": 0, "warn": 0, "good": 0, "un": 0}
+    for b in kids:
+        k = b.get("tier"); c["good" if k in ("good", "check") else "bad" if k == "bad" else "warn" if k == "warn" else "un"] += 1
+    dots = "".join('<span title="%s"><i class="pcl-d d-%s"></i>%d</span>' % (lab, k, c[k]) for k, lab in (("bad", "tests on animals"), ("warn", "cruelty-free itself, owner isn't"), ("good", "cruelty-free"), ("un", "not certified")) if c[k])
+    return '<a class="pcl-card" href="/parent-%s" data-name="%s"><span class="pcl-name">%s</span><span class="pcl-count">%d brand%s</span><span class="pcl-dots">%s</span></a>' % (ps, E(nm.lower()), E(nm), len(kids), "" if len(kids) == 1 else "s", dots)
+idx = "".join(pcl_card(ps, kids) for ps, kids in sorted(groups.items()))
+PCL_JS = ('<script>(function(){var i=document.getElementById("pcFind"),c=document.querySelectorAll(".pcl-card"),n=document.getElementById("pcNone");if(!i)return;'
+ 'i.addEventListener("input",function(){var q=i.value.trim().toLowerCase(),s=0;c.forEach(function(a){var m=!q||a.dataset.name.indexOf(q)!==-1;a.style.display=m?"":"none";if(m)s++;});n.style.display=s?"none":"block";});})();</script>')
+page("parent-companies.html", "Parent companies - a home kind", "who owns who", "Parent companies",
+     PCL_CSS + "<p>A brand can be cruelty-free while the company that owns it isn't. Tap a company to see its animal testing policy and the brands I list from it.</p>"
+     '<input id="pcFind" class="pcl-find" type="search" placeholder="Find a company" aria-label="Find a company">'
+     '<p class="pcl-key"><span><i class="pcl-d d-bad"></i>tests on animals</span><span><i class="pcl-d d-warn"></i>cruelty-free itself, owner isn\'t</span><span><i class="pcl-d d-good"></i>cruelty-free</span><span><i class="pcl-d d-un"></i>not certified</span></p>'
+     '<div class="pcl-grid">%s</div><p id="pcNone" class="pcl-none">No company matches that.</p>%s' % (idx, PCL_JS),
+     "Every parent company on a home kind and its animal testing policy.")
 if os.path.exists("sitemap.xml"):
     sm = open("sitemap.xml", encoding="utf-8").read()
     mm = re.search(r"<loc>(https?://[^/<]+)", sm)
@@ -271,5 +292,13 @@ if os.path.exists("sitemap.xml"):
         new = ["how-i-decide", "how-this-site-is-funded", "parent-companies"] + ["parent-" + ps for ps in groups]
         add_ = "".join("<url><loc>%s/%s</loc></url>" % (base, u) for u in new if "/%s</loc>" % u not in sm)
         if add_: open("sitemap.xml", "w", encoding="utf-8").write(sm.replace("</urlset>", add_ + "</urlset>"))
+
+# every page gets "parent companies" in its footer (runs last so generated pages are covered too)
+_PF = re.compile(r'(<a href="((?:\.\./)*)how-i-decide\.html">how I decide</a>)(?! &middot; <a href="[^"]*parent-companies)')
+for _f in glob.glob("**/*.html", recursive=True):
+    _h = open(_f, encoding="utf-8").read()
+    if "site-footer" not in _h or "parent-companies.html\">parent companies" in _h: continue
+    _n = _PF.sub(lambda m: m.group(1) + ' &middot; <a href="%sparent-companies.html">parent companies</a>' % m.group(2), _h, count=1)
+    if _n != _h: open(_f, "w", encoding="utf-8").write(_n)
 print("Parent pages:", made)
 run('git add -A . && git commit -m "Add How I decide, funding page, parent company pages, last checked dates and alternatives"')

@@ -106,7 +106,6 @@ tests on animals with no source: Oomph!
 tests on animals with no source: Orange Glo
 tests on animals with no source: Oriflame
 tests on animals with no source: Osiao
-tests on animals with no source: Oust
 tests on animals with no source: OxiClean
 tests on animals with no source: Paco Rabanne
 tests on animals with no source: Pearl Drops
