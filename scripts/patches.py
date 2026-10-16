@@ -2600,3 +2600,30 @@ _np2 = sum(_addprice(r) for r in _pi)
 json.dump(_pi, open("data/peta-import.json", "w"), ensure_ascii=False, separators=(",", ":")); open("data/peta-import.json", "a").write("\n")
 _rw("brand-check.html", lambda t: t.replace("lowest price band I use (\u00a3). Only", "lowest price band I use (\u00a3): a typical everyday product costs about \u00a38 / $10 or less. Only"))
 print("Section 74 applied: prices added to %d library brands and %d brand pages" % (_np, _np2))
+
+# 75. Affiliate links removed (Ash, 16 Oct): all Amazon affiliate links, the shop's "Cruelty-free picks" tab and the funding page wording about Amazon links.
+#     Amazon is on the boycott list, so the site no longer earns from it. products.json is emptied (the file stays so nothing breaks).
+def _s75():
+    _raw = json.load(open("data/brands.json")); _bl = _raw if isinstance(_raw, list) else _raw.get("brands", _raw)
+    n = 0
+    for b in _bl:
+        l = b.get("links") or []
+        k = [x for x in l if not (x.get("affiliate") or x.get("network") == "amazon-associates" or "amazon." in (x.get("url") or "") or "amzn.to" in (x.get("url") or ""))]
+        if len(k) != len(l): b["links"] = k; n += 1
+    json.dump(_raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    open("data/products.json", "w").write("[]\n")
+    def shop(t):
+        t = re.sub(r'<button type="button" role="tab" class="cf" data-panel="picks".*?</button>\n', "", t, count=1, flags=re.S)
+        t = re.sub(r'<div class="k-spanel" id="panel-picks".*?</main>', "</main>", t, count=1, flags=re.S)
+        t = re.sub(r"<script>\n\(function\(\)\{\nfunction esc\(t\).*?\}\)\(\);\n</script>\n", "", t, count=1, flags=re.S)
+        t = t.replace("['hk','lou','picks']", "['hk','lou']").replace("  if(/[?&]category=/.test(location.search)) h='picks';\n", "").replace("if(h==='lou'||h==='picks') show(h);", "if(h==='lou') show(h);")
+        return t
+    _rw("shop.html", shop)
+    def fund(t):
+        return re.sub(r"Some links are Amazon affiliate links.*?never change what a brand is shown as\.", "The site has no affiliate links and earns no commission from any link.", t, count=1, flags=re.S)
+    _rw("how-this-site-is-funded.html", fund)
+    for f in ("js/swap.js", "brand-check.html"):
+        pass
+    return n
+_n75 = _s75()
+print("Section 75 applied: affiliate links removed from %d brands, picks tab removed from the shop" % _n75)
