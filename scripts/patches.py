@@ -2513,3 +2513,45 @@ def _p71(t):
     return new
 _rw("take-action.html", _p71)
 print("Section 71 applied: UK Parliament petition added to the take action page")
+
+# 72. Check list (Ash, 16 Oct): the two long ethical pills made each row busy. In the LIST only (js/checker-stamps.js), each ethical rating is now one small round stamp
+#     with the score and a tiny "ethical" label: Good On You as n/5, Good Shopping Guide as n/100. A brand with both shows both side by side. Tapping a stamp still opens the
+#     full explanation. Brand pages keep the full pills (they call AHKStamps.row without the compact flag).
+def _p72js(t):
+    if "ratingC" in t: return t
+    helper = '''  function ratingC(g) {
+    if (!g || !LABELS[g.score]) return "";
+    return '<button type="button" class="ahk-eth ahk-r' + g.score + '" data-stamp="goy" data-score="' + g.score + '" data-url="' + esc(g.url || "https://directory.goodonyou.eco") + '" aria-label="Ethical rating: ' + LABELS[g.score] + ', tap for details">' +
+      '<span class="ahk-eth-c"><b>' + g.score + '</b><i>/5</i></span><span class="ahk-eth-l">ethical</span></button>';
+  }
+  function gsgC(g) {
+    if (!g || g.score == null) return "";
+    var c = g.score >= 80 ? "ahk-g" : g.score >= 60 ? "ahk-g ahk-g-mid" : "ahk-g ahk-g-lo";
+    return '<button type="button" class="ahk-eth ' + c + '" data-stamp="gsg" data-score="' + g.score + '" data-url="' + esc(g.url || "https://thegoodshoppingguide.com") + '" aria-label="Ethical score: ' + g.score + ' out of 100, tap for details">' +
+      '<span class="ahk-eth-c"><b>' + g.score + '</b><i>/100</i></span><span class="ahk-eth-l">ethical</span></button>';
+  }
+  function row(o, compact) {
+    var h = ["unk", "ncf", "vegan", "vegcert", "vegsays", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
+    if (compact) return '<div class="ahk-stamps ahk-stamps-c">' + h + ratingC(o.goy) + gsgC(o.gsg) + "</div>";
+    return '<div class="ahk-stamps">' + h + rating(o.goy) + gsg(o.gsg) + "</div>";
+  }
+'''
+    i = t.index("  function row(o) {"); j = t.index("  var dlg;")
+    t = t[:i] + helper + t[j:]
+    return t
+_rw("js/stamps.js", _p72js)
+_rw("scripts/add_stamps.py", _p72js)  # add_stamps.py rewrites js/stamps.js on every site_update, so the change has to live in its JS text too
+def _p72css(t):
+    if ".ahk-eth" in t: return t
+    return t.rstrip("\n") + '''
+.ahk-stamps-c{align-items:flex-start}
+.ahk-eth{display:inline-flex;flex-direction:column;align-items:center;gap:3px;background:none;border:0;padding:0;cursor:pointer;color:#2A1630;font-family:"Hanken Grotesk",system-ui,sans-serif}
+.ahk-eth-c{width:44px;height:44px;border-radius:50%;background:var(--rc,#3A1F3D);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.ahk-eth-c b{font-size:16px;font-weight:700}.ahk-eth-c i{font-style:normal;font-size:9px;font-weight:500;opacity:.85;margin-top:1px}
+.ahk-eth-l{font-size:9px;text-transform:uppercase;letter-spacing:.08em;opacity:.75;font-weight:600}
+.ahk-eth:focus-visible{outline:3px solid #E8804C;outline-offset:2px;border-radius:8px}
+'''
+_rw("css/stamps.css", _p72css)
+_rw("js/checker-stamps.js", lambda t: t.replace("AHKStamps.row(rules(f.b))", "AHKStamps.row(rules(f.b), true)"))
+_rw("brand-check.html", lambda t: t.replace('<script src="js/stamps.js"></script><script src="js/checker-stamps.js"></script>', '<script src="js/stamps.js?v=2"></script><script src="js/checker-stamps.js?v=2"></script>').replace('href="css/stamps.css"', 'href="css/stamps.css?v=2"'))
+print("Section 72 applied: compact ethical stamps in the Check list")

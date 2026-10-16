@@ -12,7 +12,7 @@
     return null;}
   function deco(c){
     if(c.getAttribute("data-ahk"))return; var f=find(c); if(!f)return; c.setAttribute("data-ahk","1");
-    var d=document.createElement("div"); d.innerHTML=AHKStamps.row(rules(f.b));
+    var d=document.createElement("div"); d.innerHTML=AHKStamps.row(rules(f.b), true);
     var t=f.el.closest("a")||f.el,r=d.firstChild;r.style.margin="0 16px 12px";t.parentNode.insertBefore(r,t.nextSibling);}
   var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);deco(e.target);}});},{rootMargin:"300px"}):null;
   function run(){

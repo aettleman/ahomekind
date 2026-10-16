@@ -46,8 +46,20 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
     return '<button type="button" class="ahk-rating ' + c + '" data-stamp="gsg" data-score="' + g.score + '" data-url="' + esc(g.url || "https://thegoodshoppingguide.com") + '" aria-label="Ethical score: ' + g.score + ' out of 100, tap for details">' +
       '<span class="ahk-rating-n">' + g.score + '</span><span class="ahk-rating-t"><b>Ethical score &middot; Good Shopping Guide</b>' + g.score + " out of 100</span></button>";
   }
-  function row(o) {
+  function ratingC(g) {
+    if (!g || !LABELS[g.score]) return "";
+    return '<button type="button" class="ahk-eth ahk-r' + g.score + '" data-stamp="goy" data-score="' + g.score + '" data-url="' + esc(g.url || "https://directory.goodonyou.eco") + '" aria-label="Ethical rating: ' + LABELS[g.score] + ', tap for details">' +
+      '<span class="ahk-eth-c"><b>' + g.score + '</b><i>/5</i></span><span class="ahk-eth-l">ethical</span></button>';
+  }
+  function gsgC(g) {
+    if (!g || g.score == null) return "";
+    var c = g.score >= 80 ? "ahk-g" : g.score >= 60 ? "ahk-g ahk-g-mid" : "ahk-g ahk-g-lo";
+    return '<button type="button" class="ahk-eth ' + c + '" data-stamp="gsg" data-score="' + g.score + '" data-url="' + esc(g.url || "https://thegoodshoppingguide.com") + '" aria-label="Ethical score: ' + g.score + ' out of 100, tap for details">' +
+      '<span class="ahk-eth-c"><b>' + g.score + '</b><i>/100</i></span><span class="ahk-eth-l">ethical</span></button>';
+  }
+  function row(o, compact) {
     var h = ["unk", "ncf", "vegan", "vegcert", "vegsays", "lb", "peta"].filter(function (k) { return o[k]; }).map(stamp).join("");
+    if (compact) return '<div class="ahk-stamps ahk-stamps-c">' + h + ratingC(o.goy) + gsgC(o.gsg) + "</div>";
     return '<div class="ahk-stamps">' + h + rating(o.goy) + gsg(o.gsg) + "</div>";
   }
   var dlg;
