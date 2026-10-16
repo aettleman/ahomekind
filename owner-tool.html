@@ -190,7 +190,7 @@ textarea { min-height: 76px; resize: vertical; }
   function renderHead() {
     var n = BRANDS.length, d = 0, nf = 0, sk = 0;
     BRANDS.forEach(function (b) { var g = group(b.s); if (g === 'done') d++; else if (g === 'notfound') nf++; else if (g === 'skip') sk++; });
-    $('count').textContent = d + ' done · ' + nf + " couldn't find · " + sk + ' skipped · ' + (n - d - nf - sk) + ' to go';
+    $('count').textContent = d + ' done \u00b7 ' + nf + " couldn't find \u00b7 " + sk + ' skipped \u00b7 ' + (n - d - nf - sk) + ' to go';
     var kids = $('bar').children;
     kids[0].style.width = (d / n * 100) + '%'; kids[1].style.width = (nf / n * 100) + '%'; kids[2].style.width = (sk / n * 100) + '%';
     $('bar').setAttribute('aria-label', d + ' of ' + n + ' done');
@@ -223,7 +223,7 @@ textarea { min-height: 76px; resize: vertical; }
     var el = function (tag, cls, txt) { var x = document.createElement(tag); if (cls) x.className = cls; if (txt != null) x.textContent = txt; return x; };
 
     var row = el('div', 'namerow'); row.appendChild(el('h2', '', b.n)); row.appendChild(el('span', 'chip t-' + b.t, TIERS[b.t] || b.t)); card.appendChild(row);
-    if (b.c.length) card.appendChild(el('div', 'cats', b.c.join(' · ')));
+    if (b.c.length) card.appendChild(el('div', 'cats', b.c.join(' \u00b7 ')));
     if (b.d) card.appendChild(el('div', 'cur', 'On the site now: ' + b.d));
 
     var sv = el('div', 'saved'); sv.id = 'saved'; card.appendChild(sv);
@@ -249,7 +249,7 @@ textarea { min-height: 76px; resize: vertical; }
     w2.appendChild(l2); w2.appendChild(i2);
     var w3 = el('div'); var l3 = el('label', 'label', 'Anything else you found (optional)'); l3.htmlFor = 'fNote';
     var i3 = document.createElement('textarea'); i3.id = 'fNote'; i3.value = a.note || '';
-    w3.appendChild(l3); w3.appendChild(i3); w3.appendChild(el('div', 'hint', 'For example: who owns the rest, what it says about animal testing, or "I couldn’t find a policy".'));
+    w3.appendChild(l3); w3.appendChild(i3); w3.appendChild(el('div', 'hint', 'For example: who owns the rest, what it says about animal testing, or "I couldn\u2019t find a policy".'));
     fields.appendChild(w1); fields.appendChild(w2); fields.appendChild(w3); card.appendChild(fields);
 
     var act = el('div', 'actions');
@@ -261,9 +261,9 @@ textarea { min-height: 76px; resize: vertical; }
     card.appendChild(el('div', 'note', '"Independent" means founder-owned or family-owned. Put who owns it in the note if you know. Ctrl or Cmd + Enter saves.'));
 
     var nav = el('div', 'nav');
-    var pv = el('button', '', '← Previous'); pv.type = 'button'; pv.id = 'bPrev';
+    var pv = el('button', '', '\u2190 Previous'); pv.type = 'button'; pv.id = 'bPrev';
     var cl = el('button', '', 'Clear my answer'); cl.type = 'button'; cl.id = 'bClear'; cl.hidden = !answers[b.s];
-    var nx = el('button', '', 'Next →'); nx.type = 'button'; nx.id = 'bNext';
+    var nx = el('button', '', 'Next \u2192'); nx.type = 'button'; nx.id = 'bNext';
     nav.appendChild(pv); nav.appendChild(cl); nav.appendChild(nx); card.appendChild(nav);
     paintSaved();
   }

@@ -3,7 +3,7 @@
 var box=document.createElement('div');box.className='ahk-sg';box.id=id+'Sg';box.setAttribute('role','listbox');box.hidden=true;wrap.appendChild(box);
 inp.setAttribute('role','combobox');inp.setAttribute('aria-autocomplete','list');inp.setAttribute('aria-controls',box.id);inp.setAttribute('aria-expanded','false');
 var L={good:'cruelty-free & vegan',check:'cruelty-free',warn:'owner tests',bad:'tests on animals',unverified:'not certified'};
-function nz(s){s=(s||'').toLowerCase();try{s=s.normalize('NFKD').replace(/[̀-ͯ]/g,'')}catch(e){}return s.replace(/&/g,'and').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim()}
+function nz(s){s=(s||'').toLowerCase();try{s=s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'')}catch(e){}return s.replace(/&/g,'and').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim()}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 var list=[],seen={},p=null;
 function add(x,own){var k=nz(x[0]);var sk=own?k:k+(x[5]?'|lb':'');if(!k||seen[k]===2||seen[sk])return;seen[sk]=own?2:1;if(own)list.push({n:x[0],k:k,h:'/brands/'+x[1]+'/',t:x[2]});else list.push({n:x[0],k:k,h:x[1]?'/brands/'+x[1]+'/':(x[5]||'https://crueltyfree.peta.org/company/'+x[3]+'/'),t:x[2],ext:!x[1],lb:!!x[5],v:x[4]||0})}

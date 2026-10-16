@@ -93,8 +93,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: The Lipstick, EUR 16.95 (about £14), 3INA UK shop",
+        "url": "https://uk.3ina.com/collections/lipstick.oembed?page=2"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "7th-heaven",
@@ -189,8 +194,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Ocean Magnesium Pain Relief Gel 100ml, A$17.99 (RRP A$23.70), Cincotta Chemist Australia",
+        "url": "https://cincottachemist.com.au/shop/abundant-natural-health-ocean-magnesium-pain-relief-100ml-gel"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "academy-of-colour",
@@ -237,8 +247,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Radically Rejuvenating Argan Oil 30ml, $14.25 (was $18.99), acure.com US",
+        "url": "https://acure.com/products/radically-rejuvenating-rose-argan-oil"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "acuvue",
@@ -858,8 +873,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: 1000 Roses Fortifying Night Cream 1.7oz, $29.99, Walmart US",
+        "url": "https://www.walmart.com/ip/seort/3068495047"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "anko",
@@ -1396,18 +1416,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B004RUHWOG?tag=ahomekind-21",
-        "label": "Shop: Kitchen Cleaner, Zesty Lemon (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "household-cleaning"
@@ -1551,8 +1560,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Floor Cleaner Vinegar Wash 32oz, $11.60, Walmart US",
+        "url": "https://www.walmart.com/ip/Aunt-Fannie-s-Floor-Cleaner-Vinegar-Wash-Multi-Surface-Cleaner-32-oz-Single-Bottle-Bright-Lemon/792682800"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "aurelia-london",
@@ -1627,8 +1641,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: General Protection Lotion SPF 50 8oz, $10.99, Walmart US",
+        "url": "https://walmart.com/ip/seort/382062361"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "avalon-organics",
@@ -1793,8 +1812,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Shampoo Powder £22; Super Balm £39; deodorant £13.99, brand shop UK",
+        "url": "https://awakeorganics.co.uk/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "axe",
@@ -1950,8 +1974,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: COL-3D Treatment EUR58; AHA Solution EUR42; Cool-Eyes EUR98; refills EUR149, brand shop Italy",
+        "url": "https://www.bakel.it"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "balenciaga",
@@ -2101,28 +2130,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0FM4JY5DC?tag=ahomekind-21",
-        "label": "Shop: Glow Blur 4 in 1 Tinted Moisturiser (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      },
-      {
-        "url": "https://www.amazon.co.uk/dp/B00WS9PKC4?tag=ahomekind-21",
-        "label": "Shop: Flawless Concealer, Nude (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "makeup-beauty"
@@ -2546,8 +2554,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Banana Setting Powder $14.99, Waterproof Mascara $19, Concealer from $25, Mineral Foundation $44.98, Bellapierre US",
+        "url": "https://www.bellapierre.com"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "benecos",
@@ -2570,8 +2583,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Natural Lipstick 4.5g, EUR 4.99, Shop Apotheke",
+        "url": "https://www.shop-apotheke.com/beauty/upmRLLXUZ/benecos-natural-lipstick-just-red.htm"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "benefit",
@@ -3377,8 +3395,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: All Bright Glow Day Cream SPF15 50ml, £7.99, Boots UK",
+        "url": "https://boots.com/botanics-all-bright-glow-day-cream-spf15-50ml-10348073"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "boucleme",
@@ -3785,8 +3808,13 @@
       {
         "label": "Clorox: its own animal testing policy",
         "url": "https://www.thecloroxcompany.com/company/policies-and-practices/animal-testing/"
+      },
+      {
+        "label": "Price check: Lip balm 4-pack gift set, $5.99, Target/Amazon US (singles cheaper)",
+        "url": "https://slickdeals.net/f/17939940-4-pack-burt-s-bees-lip-balms-peppermint-salted-caramel-cranberry-spritz-shortbread-cookie-5-69-free-shipping-w-prime-or-on-35"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "butter-london",
@@ -3809,8 +3837,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Patent Shine 10X Nail Lacquer, $18, Walmart US (out of stock)",
+        "url": "https://www.walmart.com/ip/butter-LONDON-Patent-Shine-Nail-Lacquer-Brolly/143453490"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "buxom",
@@ -3947,28 +3980,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0C7C88ZSK?tag=ahomekind-21",
-        "label": "Shop: Hydrating Serum (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      },
-      {
-        "url": "https://www.amazon.co.uk/dp/B0BJ74DJXG?tag=ahomekind-21",
-        "label": "Shop: Moisturising Gel Cream (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "skincare"
@@ -4293,8 +4305,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Number Six Bar Soap from $16 (cologne $80), brand site US",
+        "url": "https://www.caswellmassey.com/collections/number-six"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "catrice",
@@ -6027,8 +6044,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Quick-Fix Concealer $30; CC Cream SPF50 $43; Brilliant Base primer $36, brand shop US",
+        "url": "https://www.dermablend.com"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "dermacare",
@@ -6541,18 +6563,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B001A15MI8?tag=ahomekind-21",
-        "label": "Shop: 18-in-1 Citrus Orange Castile Soap (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "body-shower",
@@ -6792,8 +6803,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Foaming Bath with Epsom Salt 34 fl oz, regular $5.87, Walmart US",
+        "url": "https://slickdeals.net/f/18956392-dr-teal-s-foaming-bath-with-pure-epsom-salt-soothe-sleep-with-lavender-34-fl-oz-2-48"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "drano",
@@ -6920,8 +6936,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Quick-Set Strip Lash Adhesive 0.18oz, $5.24, Walmart US",
+        "url": "https://www.walmart.com/ip/seort/975674697"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "durex",
@@ -6958,28 +6979,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B09XMXCXG2?tag=ahomekind-21",
-        "label": "Shop: Big Mood Mega Volume Mascara (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      },
-      {
-        "url": "https://www.amazon.co.uk/dp/B09XMYFTB7?tag=ahomekind-21",
-        "label": "Shop: Power Grip Primer (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "makeup-beauty"
@@ -7077,8 +7077,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: ECOS Dish Soap Grapefruit 25oz, $3.28, Walmart US",
+        "url": "https://www.walmart.com/ip/Earth-Friendly-Products-Ultra-Dishmate-Natural-Grapefruit-Liquid-Dishwashing-Cleaner-25-fl-oz/21433473"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "earth-sense",
@@ -7222,8 +7227,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Everyday Starter Collection Makeup Brush Set 6pc, $13.85, Walmart US",
+        "url": "https://www.walmart.com/ip/Ecotools-Starter-Collection-Brush-5-count/14934810"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "ecover",
@@ -7276,8 +7286,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: BIOActive Laundry Liquid 1.5L 42 washes, £12.60, Ethical Superstore UK",
+        "url": "https://www.ethicalsuperstore.com/products/ecozone/ecozone-bioactive-laundry-liquid---1-5l---42-washes/"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "eisenberg-paris",
@@ -7554,8 +7569,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Body Lotion $10.99, Body Wash $11.99 (lip balm price not seen), evolutionofsmooth.com US",
+        "url": "https://evolutionofsmooth.com/"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "epiderma",
@@ -7934,8 +7954,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Body Wash $9.49, everymanjack.com US",
+        "url": "https://www.everymanjack.com/"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "everyandone",
@@ -8069,18 +8094,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B09X1PCRLT?tag=ahomekind-21",
-        "label": "Shop: 4 in 1 Concentrated Disinfectant (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "household-cleaning"
@@ -8155,28 +8169,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0DGQK4XZN?tag=ahomekind-21",
-        "label": "Shop: Rosemary Shampoo 1L (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      },
-      {
-        "url": "https://www.amazon.co.uk/dp/B00GY7D13G?tag=ahomekind-21",
-        "label": "Shop: Organic Coconut Conditioner (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "haircare",
@@ -8336,8 +8329,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Tanning Mousse Extra Dark, £14.70 (RRP £21), LookFantastic UK",
+        "url": "https://lookfantastic.com/p/filter-by-molly-mae-tanning-mousse-extra-dark/13482795"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "finice",
@@ -8408,8 +8406,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Ultra Repair Cream 170g, £26.25 (RRP £35), LookFantastic UK",
+        "url": "https://www.lookfantastic.com/p/12309476/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "fixodent",
@@ -8505,8 +8508,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Typical range $14-25 e.g. Dreamy Drops Serum $25, Lip Oil Tint $16, Ulta US",
+        "url": "https://www.ulta.com/brand/florence-by-mills"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "florentine",
@@ -8553,8 +8561,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Solid shampoo bar €4.95; shower bar €4.45; conditioner concentrate €5.95, brand shop DE",
+        "url": "https://www.foamie.com"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "for-beloved-one",
@@ -8724,8 +8737,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Tri Body Balm Mini 60g, EUR 23.40 (RRP EUR 39), Cloud 10 Beauty",
+        "url": "https://www.cloud10beauty.com/collections/formulae-prescott"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "frank-body",
@@ -8748,8 +8766,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Original Coffee Scrub 200g, A$28 (approx £14), frankbody.com AU",
+        "url": "https://www.frankbody.com/products/original-coffee-scrub"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "freeman-beauty",
@@ -9485,8 +9508,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Cocoa Cutie Peptide Lip Balm £5.99; eyeshadow palette £14.99; lashes £4.99-9.99; girlswithattitude.co.uk UK",
+        "url": "http://www.girlswithattitude.co.uk/"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "givenchy-inc",
@@ -9656,8 +9684,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Lash Growth Serum 3ml, EUR 34.95 (about £30), Cloud10 Beauty",
+        "url": "https://www.cloud10beauty.com/products/glow-for-it-lash-growth-serum"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "glow-hub",
@@ -9680,8 +9713,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Glow Hub Glow Giver serum, £13.99 (reduced to £7), Superdrug UK",
+        "url": "https://www.superdrug.com/skin/face-skin-care/face-serums/glow-hub-glow-giver/p/830280"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "go-to-skincare",
@@ -9704,8 +9742,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Face Hero 30ml, US$34, dermapproved (US)",
+        "url": "https://dermapproved.com/products/go-to-face-hero/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "goats-of-the-gorge",
@@ -10217,8 +10260,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Easy Up-Do Texture Spray, £29, Space NK UK",
+        "url": "https://www.spacenk.com/uk/haircare/hair-styling-products/hairspray/easy-up-do-texture-spray-UK200035719.html"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "hair-food",
@@ -10668,8 +10716,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: V34 Colour Corrector Serum 30ml, £19.00, Boots UK",
+        "url": "https://boots.com/hismile-v34-colour-corrector-serum-30ml-10329285"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "holo-taco",
@@ -10716,8 +10769,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Truly Natural Lipstick Risque, $16.99, Walmart US",
+        "url": "https://www.walmart.com/ip/Honeybee-Gardens-Truly-Natural-Lipstick-Risque/28774109"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "hourglass-cosmetics",
@@ -10919,8 +10977,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Illuminator, £32, Beauty Bay",
+        "url": "https://www.beautybay.com/it/p/iconic-london/illuminator/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "idun-minerals",
@@ -11188,8 +11251,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Original Black Hair Ties 3 pack, £5.50, Boots UK",
+        "url": "https://boots.com/invisibobble-traceless-hair-ring-black-10165749"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "iren-shizen",
@@ -11362,8 +11430,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Platinum Purity Shampoo 3.4oz $18; Addbody Conditioner 12oz $22.79; Men's shampoo $9.99, Walmart US",
+        "url": "https://www.walmart.com/browse/j-beverly-hills/YnJhbmQ6SiiBCZXZlcmx5IEhpbGxz"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "jr-watkins",
@@ -11435,8 +11508,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: PurePressed Base Mineral Foundation Refill 0.35oz, $36, Walmart US",
+        "url": "https://www.walmart.com/ip/2544343459"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "je-suis-vert",
@@ -11687,8 +11765,13 @@
       {
         "label": "Paul Mitchell: its own animal testing policy",
         "url": "https://www.paulmitchell.com/pages/faq"
+      },
+      {
+        "label": "Price check: Paul Mitchell Tea Tree Special Shampoo 300ml, £19.29 (RRP £22.69), Beautyflash UK",
+        "url": "https://www.beautyflash.co.uk/paul-mitchell-tea-tree-special-shampoo.html"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "johnson-and-johnson",
@@ -11794,8 +11877,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: The Original 100% Pure Organic Argan Oil, $39, Josie Maran US",
+        "url": "https://www.josiemaran.com/collections/argan-oil"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "juice-beauty",
@@ -11818,8 +11906,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Stem Cellular Anti-Wrinkle Moisturizer 50ml, $95, Sephora Canada (price shown as $)",
+        "url": "https://sephora.com/ca/en/product/stem-cellular-anti-wrinkle-moisturizer-P408941"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "julep-beauty",
@@ -12218,8 +12311,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: MAXI.WASH shampoo 250ml, $37 (likely USD), kevinmurphy.com US site",
+        "url": "https://www.kevinmurphy.com.au/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "keys-soulcare",
@@ -12320,8 +12418,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Azor Warp razor, £5.00, Tesco UK",
+        "url": "https://www.tesco.com/shop/en-GB/products/259664978"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "kingfisher",
@@ -12389,8 +12492,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Kiss Core French press-on nails 32pc $8.97 (Luxe range $13.97), Walmart US",
+        "url": "https://www.walmart.com/brand/kiss/10004024"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "kmart",
@@ -12559,8 +12667,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Great Barrier Relief Serum 45ml £29 (15ml £14), Cult Beauty UK",
+        "url": "https://www.cultbeauty.co.uk/kravebeauty-great-barrier-relief-serum-45ml/14897320.html"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "kristin-ess-hair",
@@ -13077,8 +13190,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: The Original 101 Ointment, RRP £10.99 (on sale £7.69), LookFantastic UK",
+        "url": "https://www.lookfantastic.com/p/lanolips-the-original-101-ointment/11121832"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "lanvin",
@@ -13199,8 +13317,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: For The Love Of Curls Mask 200ml, £9.99, Boots UK",
+        "url": "https://boots.com/lee-stafford-for-the-love-of-curls-mask-for-curls-and-coils-200ml-10302236"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "leeukopf-laboratories",
@@ -13443,8 +13566,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Matte Velvetine Lipstick, $15, Ulta US",
+        "url": "https://www.ulta.com/p/matte-velvetine-lipstick-xlsImpprod17081411"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "lip-smacker",
@@ -13467,8 +13595,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Lip balms $4.99-$10.74 each (e.g. Pink Lemonade $7.85), Walmart US",
+        "url": "https://www.walmart.com/browse/lip-smacker/lip-smacker-lip-balm-conditioner/1085666_3316357_6852893_1263151"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "lipstains-gold",
@@ -14000,8 +14133,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Extra Virgin Raw Organic Coconut Oil 500ml, £9.50, Lucy Bee own shop UK",
+        "url": "https://lucybee.com/products/organic-coconut-oil-500ml"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "luminess-air",
@@ -14295,18 +14433,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B00S8Q2O2A?tag=ahomekind-21",
-        "label": "Shop: Super A Retinol Serum (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "skincare"
@@ -14485,8 +14612,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Vitamin E Face Moisturiser 118ml, £49, Cult Beauty UK",
+        "url": "https://cultbeauty.co.uk/p/malin-goetz-vitamin-e-face-moisturiser-118ml/10362992"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "mama-mio",
@@ -14564,7 +14696,7 @@
     "slug": "manhattan",
     "name": "Manhattan",
     "tier": "warn",
-    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "Cosmetics for more than 50 years, trends and diversity important to the brand. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -14638,8 +14770,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Lawn Mower 5.0 Ultra trimmer, $109.99, Walmart US",
+        "url": "https://www.walmart.com/ip/MANSCAPED-The-Lawn-Mower-5-0-ULTRA-Groin-Body-Hair-Groomer-Dual-Head-SkinSafe-Trimmer-Foil-Blades-Waterproof-with-Travel-Pouch-Black/5313391505"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "manufaktura",
@@ -14768,8 +14905,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Mid-range e.g. BB Cream $27.95 CAD (approx £15), range $14-37 CAD, marcelle.com Canada",
+        "url": "https://marcelle.com/en/collections/bestsellers-makeup"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "maria-nila",
@@ -15647,8 +15789,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Leave-In Conditioner 6.7oz, $15.50, Frends Beauty US",
+        "url": "https://frendsbeauty.com/products/mixed-chicks-leave-in-conditioner"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "mizani",
@@ -15696,8 +15843,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Lip Lacquer Fire Red 3g, £10.00 (RRP £16), LookFantastic UK",
+        "url": "https://www.lookfantastic.com/p/modelco-lip-lacquer-fire-red-3g/11380210"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "modere",
@@ -15768,8 +15920,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Coastal Cypress & Sea Fennel Bath & Shower Gel 300ml, £29.99, Superdrug UK",
+        "url": "https://www.superdrug.com/toiletries/washing-bathing/shower-gels-body-wash/molton-brown-coastal-cypress-sea-fennel-bath-and-shower-gel-300ml/p/mp-00505648"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "monange",
@@ -15816,8 +15973,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Smooth Shampoo 12oz, list price $7.99, Amazon US",
+        "url": "https://slickdeals.net/f/17092180-12-oz-monday-haircare-smooth-shampoo-for-frizzy-coarse-curly-hair-3-65-w-s-s-free-s-h-w-prime-or-35"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "mont-blanc",
@@ -16048,18 +16210,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0F8C3XLJM?tag=ahomekind-21",
-        "label": "Shop: 5 Shade Eyeshadow Palette, Bronzed (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "makeup-beauty"
@@ -16171,8 +16322,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Cloudberry Replenishing Soft Cream $37.99; Sun Shield $27.99, brand shop US",
+        "url": "https://www.mychelle.com"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "nads",
@@ -16195,8 +16351,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Natural Hair Removal Sugar Wax Kit, $15.29, Walmart US",
+        "url": "https://www.walmart.com/ip/Nads-Natural-Hair-Removal-Sugar-Wax-Kit-1-Ea/5349678977"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "nails-inc",
@@ -16301,8 +16462,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: 200ml body butter £6.75 (bundles £33.95-47), brand shop UK",
+        "url": "https://www.nalasbaby.com"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "nars",
@@ -16628,8 +16794,13 @@
       {
         "label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)",
         "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
+      },
+      {
+        "label": "Price check: Niacinamide Serum 12% + Zinc 2% 30ml, £18.00, Boots UK",
+        "url": "https://boots.com/naturium-niacinamide-serum-12percent-plus-zinc-2percent-30-ml-10352807"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "neal-and-wolf",
@@ -16652,8 +16823,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: MIRACLE Rapid Blow-dry Mist 200ml £23; Hydrate duo gift set £30.32, brand shop UK",
+        "url": "https://www.nealandwolf.com"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "neals-yard-remedies",
@@ -17044,18 +17220,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B073P9VN6C?tag=ahomekind-21",
-        "label": "Shop: To The Rescue Shampoo (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "haircare"
@@ -17465,18 +17630,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0GXC2NQW2?tag=ahomekind-21",
-        "label": "Shop: Laundry Detergent Capsules (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "household-cleaning"
@@ -17878,8 +18032,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Oribe Signature Shampoo 250ml, £42.00, Cult Beauty UK (other shampoos £44-58)",
+        "url": "https://cultbeauty.co.uk/c/brands/oribe/hair-care/shampoo"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "oriflame",
@@ -17999,8 +18158,13 @@
       {
         "label": "OSEA Malibu: its own animal testing policy",
         "url": "https://oseamalibu.com/pages/cruelty-free-skincare"
+      },
+      {
+        "label": "Price check: Undaria Algae Body Oil 150ml $52 (30ml $16, 284ml $84), Credo Beauty US",
+        "url": "https://credobeauty.com/products/undaria-algae-oil"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "osiao",
@@ -18146,8 +18310,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Cry Baby Conditioning Mascara £15, Stack Em Up palette £17, lip scrub £13, P.Louise UK shop",
+        "url": "https://plouise.co.uk/collections/under-20?page=16"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "pacific-wax-co",
@@ -19784,8 +19953,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Matte Lipstick $19, Plumping Lip Gloss $17 (2022 article, Ulta US)",
+        "url": "https://www.newbeauty.com/view/ariana-grande-rem-beauty-ulta"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "radox",
@@ -19880,18 +20054,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0C1CHNC53?tag=ahomekind-21",
-        "label": "Shop: Tinted Lip Oil (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£££",
     "category": [
       "makeup-beauty"
@@ -19976,8 +20139,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Everyday Essentials Kit 5 piece, $18.92, Walmart US",
+        "url": "https://www.walmart.com/ip/229747348"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "rebul",
@@ -20277,8 +20445,13 @@
       {
         "label": "e.l.f. Beauty: its annual report (10-K, year to 31 March 2026)",
         "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000020/elf-20260331.htm"
+      },
+      {
+        "label": "Price check: Peptide Lip Treatment, $20, rhodeskin.com US",
+        "url": "https://www.rhodeskin.com/products/peptide-lip-treatment"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "rhug-wild-beauty",
@@ -20423,7 +20596,7 @@
     "slug": "risque",
     "name": "Risque",
     "tier": "warn",
-    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
+    "note": "A leading nail polish brand in Brazil with more than half a century of history. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals. Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals.",
     "parentCompany": "Coty",
     "vegan": "unknown",
     "evidence": "",
@@ -20472,8 +20645,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Un Cover-Up concealer, £30.00, LookFantastic UK",
+        "url": "https://www.lookfantastic.com/p/rms-beauty-un-cover-up/11276052"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "roberto-cavalli",
@@ -20620,8 +20798,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Organic Juniper Berry Face Wash 100ml, INR 230 (about £2), Nykaa India",
+        "url": "https://nykaa.com/rustic-art-organic-juniper-berry-face-wash-100ml/p/476629"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "sable-labs",
@@ -21034,8 +21217,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Originals Aloe Vera Gel Pure 100ml, £17.95, Ecco Verde UK",
+        "url": "https://www.ecco-verde.co.uk/santaverde/originals-aloe-vera-gel-pure"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "sarafumi",
@@ -21408,8 +21596,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Brighten Up Concealer €19; Cream Luxe Blush €22; Second Skin Foundation €30, brand shop EUR",
+        "url": "https://www.sculptedbyaimee.com"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "sebastian-international",
@@ -21556,8 +21749,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Cica & Mugwort Facial Moisturizer $15; Toner $13; Hibiscus Papaya shampoo $32, brand shop US",
+        "url": "https://www.sensatia.com"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "sensilait",
@@ -22065,8 +22263,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Rose and Neroli Day Facial Oil 30ml £42; Elixir Night Treatment Oil 30ml £38, brand shop UK",
+        "url": "https://www.siskyn.co.uk/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "siveno",
@@ -22212,8 +22415,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Barrier+ Triple Lipid-Peptide Cream refill size, $46, Big Apple Buddy US",
+        "url": "https://www.bigapplebuddy.com/product/84/barrier-triple-lipid-peptide-face-cream/P442840"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "skinvitals",
@@ -22558,8 +22766,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Face Cream £60, Cream Cleanser £55, Eye Cream £55, Soho Skin UK",
+        "url": "https://www.sohoskin.com"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "sol-de-janeiro",
@@ -22582,8 +22795,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Brazilian Bum Bum Cream 240ml, £48, Cult Beauty UK",
+        "url": "https://www.cultbeauty.co.uk/p/sol-de-janeiro-brazilian-bum-bum-cream-240ml/13297945"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "solait-by-superdrug",
@@ -23135,8 +23353,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Pressed Eyeshadow $14-16, Lip Gloss $20, Beautylish US",
+        "url": "https://www.beautylish.com/b/sugarpill-cosmetics"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "suki",
@@ -23211,8 +23434,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: SPF 50 Original Sunscreen Lotion 177ml, $19 USD, Solefeed",
+        "url": "https://solefeed.com/shop/sun-bum/sun-bum-spf-50-original-sunscreen-35pi55"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "sundae",
@@ -23236,8 +23464,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Whipped Shower Foam Coconut Cream 265ml, £12.95, Boots UK",
+        "url": "https://boots.com/sundae-coconut-cream-whipped-shower-foam-10347151"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "sunday-riley-modern-skincare",
@@ -23630,8 +23863,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Micellution cleanser, RRP A$59 (approx £30), BeautyCrew Australia",
+        "url": "https://www.beautycrew.com.au/product/synergie-skin-micellution-8445"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "syorell",
@@ -23777,8 +24015,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: The Gradual $38; The Butter $42; The Face $55, brand shop US",
+        "url": "https://www.tan-luxe.com"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "tangle-teezer",
@@ -23801,8 +24044,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: The Original Detangling Hairbrush, £14.00 (reduced £9.33), Boots UK",
+        "url": "https://boots.com/tangle-teezer-original-fresh-blossom-detangling-hairbrush-10248118"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "tanologist",
@@ -23901,8 +24149,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Resurfacing Serum 30ml, £84 (reduced £58.80), Space NK UK",
+        "url": "https://www.spacenk.com/uk/skincare/treatment/serums/resurfacing-serum-UK300052100.html"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "tatcha",
@@ -24073,8 +24326,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Tea Tree Solid Soap 100g A$7.15; Dish & Laundry Soap Bar 200g A$14.95 (approx £4-8), The Well Store Australia",
+        "url": "https://www.thewellstore.com.au/collections/The-Australian-Natural-Soap-Company"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "the-barberia",
@@ -24110,18 +24368,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0BWF68GN1?tag=ahomekind-21",
-        "label": "Shop: Camomile Makeup Cleansing Butter (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "skincare",
@@ -24522,18 +24769,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B09T9DVDD5?tag=ahomekind-21",
-        "label": "Shop: Miracle Cleaning Paste (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "household-cleaning"
@@ -24576,8 +24812,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Exfoliating & Balancing Shampoo 100g, EUR 27.60, LookFantastic FR",
+        "url": "https://www.lookfantastic.fr/p/the-powder-shampoo-exfoliating-balancing-shampoo-100g-thyme-tea-tree/13758894/"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "the-skin-edition",
@@ -25256,8 +25497,13 @@
       {
         "label": "PETA Beauty Without Bunnies (search for the brand)",
         "url": "https://crueltyfree.peta.org/"
+      },
+      {
+        "label": "Price check: Instant Eye Lift $48; Easy Lip Color $35; Mascara $36, brand shop US",
+        "url": "https://www.trishmcevoy.com"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "trojan",
@@ -25558,18 +25804,7 @@
     "evidence": "PETA Beauty Without Bunnies",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B0FK5QGKY1?tag=ahomekind-21",
-        "label": "Shop: Curl Jelly (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "££",
     "category": [
       "haircare"
@@ -26581,8 +26816,13 @@
       {
         "label": "Cruelty Free International",
         "url": "https://crueltyfreeinternational.org"
+      },
+      {
+        "label": "Price check: Hydrating Light Cream £90; Hand and Body Wash £34; cleansing balm from £18 (brand site UK)",
+        "url": "https://wildsmithskin.com/collections/moisturisers"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "wildwash",
@@ -26988,18 +27228,7 @@
     "evidence": "",
     "products": [],
     "alternatives": [],
-    "links": [
-      {
-        "url": "https://www.amazon.co.uk/dp/B07SBZ3L81?tag=ahomekind-21",
-        "label": "Shop: Linen Fresh Disinfectant Spray (paid link)",
-        "affiliate": true,
-        "network": "amazon-associates",
-        "retailer": "Amazon UK",
-        "dateAdded": "2026-09-01",
-        "dateChecked": "2026-09-01",
-        "active": true
-      }
-    ],
+    "links": [],
     "price": "£",
     "category": [
       "household-cleaning"
@@ -28542,9 +28771,14 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Price check: Classic Lotion SPF 30 100ml, pack of 5 $72 (value $90, ~$14-18 each), vacation.inc US",
+        "url": "https://vacation.inc/products/classic-lotion-spf-30-pack-of-5"
       }
     ],
-    "veganBasis": "brand"
+    "veganBasis": "brand",
+    "price": "££"
   },
   {
     "slug": "zum",
@@ -28842,9 +29076,14 @@
       {
         "label": "ECOS: its FAQ",
         "url": "https://www.ecos.com/faq/"
+      },
+      {
+        "label": "Price check: Free & Clear Laundry Detergent 100oz, regular $9.97 Target US",
+        "url": "https://hip2save.com/?p=8887841"
       }
     ],
-    "veganBasis": "brand"
+    "veganBasis": "brand",
+    "price": "£"
   },
   {
     "slug": "mollys-suds",
@@ -28920,9 +29159,14 @@
       {
         "label": "Cruelty Free International: AspenClean listing (no parent company)",
         "url": "https://crueltyfreeinternational.org/node/4181"
+      },
+      {
+        "label": "Price check: Natural All Purpose Cleaner $11.99; Unscented Laundry Powder $25.99, brand shop US",
+        "url": "https://aspenclean.com"
       }
     ],
-    "veganBasis": "brand"
+    "veganBasis": "brand",
+    "price": "££"
   },
   {
     "slug": "orly",
@@ -29019,8 +29263,13 @@
       {
         "label": "Leaping Bunny: Cleancult brand page",
         "url": "https://www.leapingbunny.org/ShopBrandDetail?BrandId=1677"
+      },
+      {
+        "label": "Price check: Dish Soap Liquid Refill 32oz, regular $7.48, Amazon US",
+        "url": "https://slickdeals.net/f/17810499-32-oz-cleancult-dish-soap-liquid-refill-lemon-verbena-or-wild-lavender-4-19-w-s-s-free-shipping-w-prime-or-on-35"
       }
-    ]
+    ],
+    "price": "£"
   },
   {
     "slug": "lovery",
@@ -30375,8 +30624,13 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Price check: Master Mattes Eyeshadow Palette, £55.00, Sephora UK",
+        "url": "https://www.sephora.co.uk/p/makeup-by-mario-master-mattes-palette"
       }
-    ]
+    ],
+    "price": "££££"
   },
   {
     "slug": "kimchi-chic-beauty",
@@ -30404,8 +30658,13 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Price check: Almost Catfished setting powder $19, lip gloss $12, shadow palette $16, kimchichicbeauty.com US",
+        "url": "https://www.kimchichicbeauty.com/"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "artnaturals",
@@ -30467,8 +30726,13 @@
       {
         "label": "Leaping Bunny: approved brands (search for the brand)",
         "url": "https://www.leapingbunny.org/shopping-guide"
+      },
+      {
+        "label": "Price check: Madagascar Centella Ampoule 100ml, EUR 22.13, LookFantastic NL",
+        "url": "https://www.lookfantastic.nl/p/skin1004-madagascar-centella-ampoule-100ml/15555881/?rctxt=fbt"
       }
-    ]
+    ],
+    "price": "££"
   },
   {
     "slug": "raw-sugar",
@@ -30534,8 +30798,13 @@
       {
         "label": "Business Wire: Summer Fridays announces strategic growth investment from TSG Consumer (25 July 2024)",
         "url": "https://www.businesswire.com/news/home/20240725229112/en/summer-fridays-announces-strategic-growth-investment-from-tsg-consumer"
+      },
+      {
+        "label": "Price check: Lip Butter Balm 15g, £23, Sephora UK",
+        "url": "https://www.sephora.co.uk/p/summer-fridays-lip-butter-balm-pink-sugar-15g"
       }
-    ]
+    ],
+    "price": "£££"
   },
   {
     "slug": "olivella",
@@ -31557,6 +31826,10 @@
       {
         "label": "Ethical Elephant: Is Bliss cruelty-free and vegan? (27 Jan 2023)",
         "url": "https://ethicalelephant.com/bliss-cruelty-free-vegan/"
+      },
+      {
+        "label": "Price check: Vitamin C + Tri-Peptide Facial Moisturizer 1.7oz $30.24; Body Butter 6.7oz $21.98, Walmart US",
+        "url": "https://www.walmart.com/browse/beauty/skin-care/bliss/1085666_1007039/YnJhbmQ6Qmxpc3Mie"
       }
     ],
     "evidence": "",
@@ -31565,7 +31838,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "amika",
@@ -32001,6 +32275,10 @@
       {
         "label": "Licensing Source: Halsey launches her own beauty brand about-face (5 Jan 2021)",
         "url": "https://licensingsource.net/?p=85829"
+      },
+      {
+        "label": "Price check: Matte Fluid Eye Paint, from $16 (skinsort listing, USD assumed)",
+        "url": "https://skinsort.com/products/about-face/matte-fluid-eye-paint/everything-now/dupes"
       }
     ],
     "veganBasis": "certified",
@@ -32011,7 +32289,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "alleyoop",
@@ -32041,6 +32320,10 @@
       {
         "label": "PitchBook: Alleyoop profile (privately held, VC-backed, minority investors)",
         "url": "https://pitchbook.com/profiles/company/231668-11"
+      },
+      {
+        "label": "Price check: Lip Goals 0.35oz, $15, Pure Spa Direct US",
+        "url": "https://purespadirect.com/products/alleyoop-lip-goals-0-35-oz-rose-and-shine-pb-355611"
       }
     ],
     "veganBasis": "certified",
@@ -32051,7 +32334,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "allies-of-skin",
@@ -32275,6 +32559,10 @@
       {
         "label": "Cruelty-Free Kitty: Bite Beauty (different brand, LVMH-owned) - for name clash",
         "url": "https://www.crueltyfreekitty.com/brands/bite/"
+      },
+      {
+        "label": "Price check: Toothpaste Bits with Fluoride 124 bits, $24, Sleekshop",
+        "url": "https://sleekshop.com/products/bite-toothpaste-bits-with-fluoride.html"
       }
     ],
     "veganBasis": "certified",
@@ -32285,7 +32573,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "waterwipes",
@@ -32311,6 +32600,10 @@
       {
         "label": "WaterWipes UK: About us (founder Edward McCloskey, est. 2008, Drogheda, Ireland)",
         "url": "https://www.waterwipes.com/uk/en/about-us"
+      },
+      {
+        "label": "Price check: Original baby wipes 60 pack, £2.15-£3.25 UK supermarkets/Boots",
+        "url": "https://www.trolley.co.uk/product/waterwipes-original-plastic-free-baby-wipes-single-pack-textured-60-wipes/GJD062"
       }
     ],
     "veganBasis": "certified",
@@ -32321,7 +32614,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£"
   },
   {
     "slug": "wet-brush",
@@ -32746,6 +33040,10 @@
       {
         "label": "Tints of Nature USA: home page (100% vegan and cruelty-free, Vegan Society Approved logo)",
         "url": "https://www.tintsofnature.com/"
+      },
+      {
+        "label": "Price check: Permanent hair colour, £12.99, Superdrug UK",
+        "url": "https://www.superdrug.com/tints-of-nature/b/9999837"
       }
     ],
     "veganBasis": "certified",
@@ -32756,7 +33054,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "ellis-brooklyn",
@@ -32820,6 +33119,10 @@
       {
         "label": "DedCool: About us (founder Carina Chaz)",
         "url": "https://dedcool.com/pages/about-us"
+      },
+      {
+        "label": "Price check: Mineral Milk Eau de Parfum 50ml, $90, Sephora US",
+        "url": "https://www.sephora.com/product/mineral-milk-eau-de-parfum-P520287"
       }
     ],
     "veganBasis": "certified",
@@ -32830,7 +33133,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££££"
   },
   {
     "slug": "djerf-avenue",
@@ -32903,6 +33207,10 @@
       {
         "label": "Caplight: Ceremonia private company, funding rounds incl. Jan 2026 round",
         "url": "https://www.caplight.com/company/ceremonia"
+      },
+      {
+        "label": "Price check: Guava Gloss Drops 30ml, £33, Cult Beauty UK",
+        "url": "https://www.cultbeauty.co.uk/p/ceremonia-guava-gloss-drops-30ml/17752531/"
       }
     ],
     "veganBasis": "certified",
@@ -32913,7 +33221,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "fourth-ray",
@@ -32947,6 +33256,10 @@
       {
         "label": "Cruelty-Free Kitty: ColourPop (Seed Beauty sister brand) PETA certified cruelty-free (updated 31 Mar 2026)",
         "url": "https://www.crueltyfreekitty.com/brand/colourpop/"
+      },
+      {
+        "label": "Price check: Hydration Station hyaluronic acid duo, $28 (Baby Face duo $24), brand shop US",
+        "url": "https://fourthraybeauty.com"
       }
     ],
     "veganBasis": "certified",
@@ -32957,7 +33270,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "kaja-beauty",
@@ -33063,6 +33377,10 @@
       {
         "label": "Forbes: Unilever Ventures led Beauty Bakerie's $3m seed round (3 Dec 2017)",
         "url": "https://www.forbes.com/sites/amyfeldman/2017/12/03/how-a-single-mom-battling-breast-cancer-built-beauty-bakerie-to-a-5m-brand-got-unilever-to-invest/?sh=9f7092c43f82"
+      },
+      {
+        "label": "Price check: Matte Lip Whip $22; Breakfast In Bed palette $28, brand shop US",
+        "url": "https://www.beautybakerie.com"
       }
     ],
     "veganBasis": "brand",
@@ -33072,7 +33390,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "black-radiance",
@@ -33309,6 +33628,10 @@
       {
         "label": "Cruelty-Free Kitty: Being Frenshe launch article, brand says vegan and no animal testing (Aug 2022)",
         "url": "https://www.crueltyfreekitty.com/?p=29790"
+      },
+      {
+        "label": "Price check: Hydrating Milky Serum Body Lotion $14.99 (mists $9.99-16.99), Ulta US",
+        "url": "https://www.ulta.com/brand/being-frenshe"
       }
     ],
     "veganBasis": "certified",
@@ -33319,7 +33642,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "bondiboost",
@@ -33348,6 +33672,10 @@
       {
         "label": "Ethical Elephant: BondiBoost confirmed all products vegan, not sold in mainland China (Jan 2022)",
         "url": "https://ethicalelephant.com/is-bondiboost-cruelty-free-vegan/"
+      },
+      {
+        "label": "Price check: Hair Growth Shampoo, approx £23 ($29.95), Woman&Home article quoting BondiBoost site",
+        "url": "https://www.womanandhome.com/beauty/growth-shampoo-conditioner-hair-thinning-bondi-boost-306021/"
       }
     ],
     "veganBasis": "certified",
@@ -33358,7 +33686,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "bomba-curls",
@@ -33428,6 +33757,10 @@
       {
         "label": "Glossy: The Mane Choice rebrand, owned via MAV by Nexus Capital (Jan 2025)",
         "url": "https://www.glossy.co/beauty/the-mane-choice-gets-a-rebrand-and-names-first-global-ambassador"
+      },
+      {
+        "label": "Price check: Ancient Egyptian Antidote Shampoo 237ml, EUR 17.49 (Manetabolism Conditioner 8oz $15.78 Walmart US)",
+        "url": "https://megorgeous.nl/products/the-mane-choice-ancient-egyptian-anti-breakage-repair-antidote-shampoo-8oz"
       }
     ],
     "evidence": "",
@@ -33436,7 +33769,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "keracare",
@@ -33490,6 +33824,10 @@
       {
         "label": "Glossy: Good Dye Young co-founders Hayley Williams and Brian O'Connor (Nov 2025)",
         "url": "https://www.glossy.co/beauty/good-dye-young-co-founders-on-linking-hayley-williamss-music-career-to-the-hair-dye-business"
+      },
+      {
+        "label": "Price check: Semi-Permanent Hair Dye 5oz, $19.00 regular ($11.40 sale), Ulta US",
+        "url": "https://www.ulta.com/p/semi-permanent-hair-dye-pimprod2039252"
       }
     ],
     "veganBasis": "certified",
@@ -33500,7 +33838,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "overtone-haircare",
@@ -33525,6 +33864,10 @@
       {
         "label": "Inside Retail US: Barbara Roll named CEO of Overtone and Boom! Beauty (Jan 2024)",
         "url": "https://insideretail.us/barbara-roll-to-take-the-helm-of-beauty-brands-overtone-and-boom-as-ceo/"
+      },
+      {
+        "label": "Price check: Coloring Conditioner Chocolate Brown 8oz, $32.00, Walmart US",
+        "url": "https://www.walmart.com/ip/3332984367"
       }
     ],
     "veganBasis": "certified",
@@ -33535,7 +33878,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "color-oops",
@@ -33560,6 +33904,10 @@
       {
         "label": "Color Oops: homepage, contact via Developlus",
         "url": "https://www.coloroops.com/"
+      },
+      {
+        "label": "Price check: Color Oops Bold Color Remover 2 applications, $14.97, Walmart US",
+        "url": "https://www.walmart.com/ip/Color-Oops-Bold-Remover-6-75-fl-oz/13030973674"
       }
     ],
     "evidence": "",
@@ -33568,7 +33916,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "kms-hair",
@@ -33817,6 +34166,10 @@
       {
         "label": "Premium Beauty News: Inflexion takes minority stake in Manucurist (Oct 2026)",
         "url": "https://www.premiumbeautynews.com/en/inflexion-takes-minority-stake-in,28325"
+      },
+      {
+        "label": "Price check: Green Natural Nail Polish 15ml, CAD 20 (about £11), Manucurist Canada",
+        "url": "https://us.manucurist.com/en-ca/products/green-petit-pois"
       }
     ],
     "veganBasis": "certified",
@@ -33827,7 +34180,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "ncla",
@@ -33861,6 +34215,10 @@
       {
         "label": "Ethical Elephant: Is NCLA cruelty-free and vegan (updated Jan 2022)",
         "url": "https://ethicalelephant.com/is-ncla-cruelty-free-vegan/"
+      },
+      {
+        "label": "Price check: Nail Lacquer 13.3ml, £15, LookFantastic UK",
+        "url": "https://lookfantastic.com/p/ncla-beauty-nail-lacquer-13.3ml-various-shades/12612803"
       }
     ],
     "veganBasis": "certified",
@@ -33871,7 +34229,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "wibo",
@@ -33900,6 +34259,10 @@
       {
         "label": "Wiadomości Kosmetyczne: Jadwiga Adamczak (Wibo owner) on Wprost rich list (Oct 2019)",
         "url": "https://www.wiadomoscikosmetyczne.pl/producent-kosmetykow/lista-najbogatszych-polek-poszerzyla-sie-o-trzy-nazwiska-z-kosmetycznego-swiata-2360768"
+      },
+      {
+        "label": "Price check: Million Dollar Lips lipstick, 16.50 PLN (about £3), Notino Poland",
+        "url": "https://www.notino.pl/wibo/lipstick-million-dollar-lips-szminka-matujaca/"
       }
     ],
     "evidence": "",
@@ -33908,7 +34271,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£"
   },
   {
     "slug": "eveline-cosmetics",
@@ -34020,6 +34384,10 @@
       {
         "label": "Inside Retail: MCoBeauty parent DBG Health sells ~25% stake to BDT & MSD Partners fund (6 Aug 2025)",
         "url": "https://insideretail.com.au/?p=67344"
+      },
+      {
+        "label": "Price check: Hair & Brow Magic Wand A$15, Eye Cream A$22.40, mascara A$28.90 (AUD), Oz Hair and Beauty",
+        "url": "https://www.ozhairandbeauty.com/collections/mcobeauty-eyes"
       }
     ],
     "veganBasis": "certified",
@@ -34030,7 +34398,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "the-fox-tan",
@@ -34276,6 +34645,10 @@
       {
         "label": "Wikipedia: Frontier Natural Products Co-op (cooperatively owned, sells Aura Cacia brand)",
         "url": "https://en.wikipedia.org/wiki/Frontier_Natural_Products_Co-op"
+      },
+      {
+        "label": "Price check: Lavender Harvest Essential Oil Blend 0.5 fl oz, $11.99, Aura Cacia US",
+        "url": "https://www.auracacia.com/products/aura-cacia-lavender-harvest-essential-oil-blend-0-5-fl-oz"
       }
     ],
     "evidence": "",
@@ -34284,7 +34657,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "eo-products",
@@ -34499,6 +34873,10 @@
       {
         "label": "BeautyMatter: Peace Out Skincare lands $20 million growth investment from 5th Century Partners (8 Nov 2022)",
         "url": "https://beautymatter.com/articles/peace-out-skincare-lands-20-million-growth-investment"
+      },
+      {
+        "label": "Price check: Salicylic Acid Acne Healing Dots $19 (small $11), Early Stage Acne Dot $20, Ulta US",
+        "url": "https://www.ulta.com/brand/peace-out?price=0-25"
       }
     ],
     "veganBasis": "brand",
@@ -34508,7 +34886,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "rovectin",
@@ -34533,6 +34912,10 @@
       {
         "label": "Skinsider UK: interview with Rovectin CEO Sungsoo Lee - all products vegan and cruelty free (14 Mar 2023)",
         "url": "https://skinsider.co.uk/blog/behind-the-beauty-an-exclusive-interview-with-rovectins-ceo-sungsoo-lee/"
+      },
+      {
+        "label": "Price check: Aqua Cleansing Gel Conditioning Cleanser 175ml, $19 (sale), sentisenti USD",
+        "url": "https://sentisenti.com/zh/products/rovectin-skin-essentials-conditioning-cleanser"
       }
     ],
     "veganBasis": "brand",
@@ -34542,7 +34925,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "££"
   },
   {
     "slug": "haruharu-wonder",
@@ -34689,6 +35073,10 @@
       {
         "label": "Verlinvest: portfolio page for Yepoda",
         "url": "https://www.verlinvest.com/brands/yepoda/"
+      },
+      {
+        "label": "Price check: The Porefect Pad toner pads $34; Skinject Effect essence $29, brand shop US",
+        "url": "https://yepoda.com"
       }
     ],
     "veganBasis": "certified",
@@ -34699,7 +35087,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "naked-sundays",
@@ -34818,6 +35207,10 @@
       {
         "label": "Compassionate Shopping Guide: Designer Brands (Total Beauty Network) with Approved Vegan badge",
         "url": "https://compassionateshoppingguide.org/csg_brand/designer-brands/"
+      },
+      {
+        "label": "Price check: Baked Mineral Foundation 8g, £43.50, Notino UK",
+        "url": "https://www.notino.co.uk/inika-organic/baked-mineral-foundation-mineral-pressed-powder/"
       }
     ],
     "veganBasis": "certified",
@@ -34828,7 +35221,8 @@
     "links": [],
     "region": "",
     "claim": "",
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-15",
+    "price": "£££"
   },
   {
     "slug": "bybi",
@@ -35018,9 +35412,14 @@
       {
         "label": "Humble Brands: its FAQ (what its products are made of)",
         "url": "https://humblebrands.com/pages/faq#what-were-made-of"
+      },
+      {
+        "label": "Price check: Humble Original deodorant 5oz $10.99, plastic-free $12.99, brand shop US",
+        "url": "https://www.humblebrands.com"
       }
     ],
-    "uncheckedOn": "16 October 2026"
+    "uncheckedOn": "16 October 2026",
+    "price": "££"
   },
   {
     "slug": "the-humble-co",

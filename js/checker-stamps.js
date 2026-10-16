@@ -1,5 +1,5 @@
 (function(){
-  function norm(s){return (s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]/g,"");}
+  function norm(s){return (s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]/g,"");}
   var brands=null,goy={},gsgd={};
   function rules(b){var t=b.tier,n=(b.note||"")+" "+(b.claim||""),o={};
     if(t==="unverified")o.unk=1; if(t==="bad")o.ncf=1; if(b.vegan==="full"){if(b.veganBasis==="brand")o.vegsays=1;else if(b.veganBasis==="certified")o.vegcert=1;else o.vegan=1;}
