@@ -2750,3 +2750,21 @@ def _p81(t):
     return t
 _rw("index.html", _p81)
 print("Section 81 applied: dog line uses the original paper")
+
+# 82. Ingredient check page (Ash, 16 Oct): the heading said "Scan a product" (same as the barcode page). It now says what this page does.
+def _p82(t):
+    return t.replace('<h1 class="scan-h1 k-h1">Scan a product</h1>', '<h1 class="scan-h1 k-h1">Is it vegan? Check the ingredients</h1>', 1)
+_rw("ingredient-check.html", _p82)
+print("Section 82 applied: ingredient check heading")
+
+# 83. Beta labels removed (Ash, 16 Oct): the "beta" pill and "Still testing this" note are gone from the Scan, Ingredient check and Check pages.
+#     Scan and Ingredient check keep a plain line with the email address. The Check page already has "Suggest a brand" and "spotted something wrong?" at the bottom.
+_BETA = re.compile(r'<p class="beta-note"><span class="beta-pill">beta</span><span>Still testing this\. Something wrong or not working\? <a href="mailto:hello@ahomekind\.com">hello@ahomekind\.com</a></span></p>')
+_PLAIN = '<p style="margin:8px 0 14px;font-size:13px;line-height:1.45;color:#5A4550;">Something wrong, or a brand missing? <a href="mailto:hello@ahomekind.com" style="color:inherit;text-decoration:underline;font-weight:600;">hello@ahomekind.com</a></p>'
+def _p83(keep):
+    def f(t):
+        t = _BETA.sub(lambda m: _PLAIN if keep else "", t)
+        return t.replace('<link rel="stylesheet" href="css/beta.css?v=1">\n', "")
+    return f
+_rw("scan.html", _p83(True)); _rw("ingredient-check.html", _p83(True)); _rw("brand-check.html", _p83(False))
+print("Section 83 applied: beta labels removed")
