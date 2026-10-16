@@ -1963,8 +1963,8 @@ print("Section 64 applied: researched brands added", _n1)
 
 # 64b. Humble Brands (Ash, 16 Oct): the Leaping Bunny certified body care brand (Humble deodorant). NOT the same company as The Humble Co. (oral care, PETA-listed).
 _new("humble-brands", "Humble Brands", "check",
-     "Humble Brands, the maker of Humble deodorant and other natural body care, is certified by Leaping Bunny (its Leaping Bunny listing is linked below). It isn't the same company as The Humble Co., which makes oral care. I haven't checked the parent company or whether its products are vegan yet (as of 16 October 2026).",
-     category=["body-shower"],
+     "Humble Brands, the maker of Humble deodorant and other natural body care, is certified by Leaping Bunny (its Leaping Bunny listing is linked below). It isn't the same company as The Humble Co., which makes oral care. Its deodorants are vegan, but not everything the brand makes is, so vegan status varies by product. I haven't checked the parent company yet (as of 16 October 2026).",
+     vegan="partial", category=["body-shower"],
      sources=[{"label": "Leaping Bunny: Humble Brands listing", "url": "https://www.leapingbunny.org/ShopBrandDetail?BrandId=1993"}, {"label": "Humble Brands: its FAQ (what its products are made of)", "url": "https://humblebrands.com/pages/faq#what-were-made-of"}])
 by["humble-brands"]["uncheckedOn"] = "16 October 2026"
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
@@ -2415,5 +2415,5 @@ _rw("index.html", _kl)
 print("Section 67 applied: kind list card shows %d brands" % _kn)
 
 # 68. Headline "Vegan status not checked yet" only when the vegan status really is unchecked.
-_rw("scripts/generate-brand-pages.js", lambda t: t.replace("brand.uncheckedOn && brand.tier === 'check' ?", "brand.uncheckedOn && brand.tier === 'check' && brand.vegan !== 'full' ?"))
+_rw("scripts/generate-brand-pages.js", lambda t: t.replace("brand.uncheckedOn && brand.tier === 'check' ?", "brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ?"))
 print("Section 68 applied: The Humble Co. page (PETA cruelty-free, Vegan Society vegan)")
