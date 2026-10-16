@@ -6,7 +6,7 @@ var L={good:'cruelty-free & vegan',check:'cruelty-free',warn:'owner tests',bad:'
 function nz(s){s=(s||'').toLowerCase();try{s=s.normalize('NFKD').replace(/[̀-ͯ]/g,'')}catch(e){}return s.replace(/&/g,'and').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim()}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 var list=[],seen={},p=null;
-function add(x,own){var k=nz(x[0]);if(!k||seen[k])return;seen[k]=1;if(own)list.push({n:x[0],k:k,h:'/brands/'+x[1]+'/',t:x[2]});else list.push({n:x[0],k:k,h:x[1]?'/brands/'+x[1]+'/':(x[5]||'https://crueltyfree.peta.org/company/'+x[3]+'/'),t:x[2],ext:!x[1],lb:!!x[5],v:x[4]||0})}
+function add(x,own){var k=nz(x[0]);var sk=own?k:k+(x[5]?'|lb':'');if(!k||seen[k]===2||seen[sk])return;seen[sk]=own?2:1;if(own)list.push({n:x[0],k:k,h:'/brands/'+x[1]+'/',t:x[2]});else list.push({n:x[0],k:k,h:x[1]?'/brands/'+x[1]+'/':(x[5]||'https://crueltyfree.peta.org/company/'+x[3]+'/'),t:x[2],ext:!x[1],lb:!!x[5],v:x[4]||0})}
 function load(){if(!p)p=fetch('/data/search-own.json').then(function(r){return r.json()}).then(function(d){d.forEach(function(x){add(x,1)})}).catch(function(){}).then(function(){return fetch('/data/search-extra.json')}).then(function(r){return r.json()}).then(function(d){d.forEach(function(x){add(x,0)})}).catch(function(){});return p}
 var cur=-1,items=[];
 function hl(n,q){if(!q||nz(n).indexOf(q)!==0)return esc(n);var c=0,j=0;while(j<n.length&&c<q.length){c+=nz(n.charAt(j)).length;j++}return '<b>'+esc(n.slice(0,j))+'</b>'+esc(n.slice(j))}
