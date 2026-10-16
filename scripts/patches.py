@@ -1967,6 +1967,8 @@ _new("humble-brands", "Humble Brands", "check",
      vegan="partial", category=["body-shower"],
      sources=[{"label": "Leaping Bunny: Humble Brands listing", "url": "https://www.leapingbunny.org/ShopBrandDetail?BrandId=1993"}, {"label": "Humble Brands: its FAQ (what its products are made of)", "url": "https://humblebrands.com/pages/faq#what-were-made-of"}])
 by["humble-brands"]["uncheckedOn"] = "16 October 2026"
+by["humble-brands"].update(vegan="partial", vegan_note=None, note="Humble Brands, the maker of Humble deodorant and other natural body care, is certified by Leaping Bunny (its Leaping Bunny listing is linked below). It isn't the same company as The Humble Co., which makes oral care. Its deodorants are vegan, but not everything the brand makes is, so vegan status varies by product. I haven't checked the parent company yet (as of 16 October 2026).")
+del by["humble-brands"]["vegan_note"]
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 
 # 64c. The Humble Co. (Ash, 16 Oct): oral care. Cruelty-free per PETA (NOT Leaping Bunny). Vegan per The Vegan Society, as stated on its own FAQ.
