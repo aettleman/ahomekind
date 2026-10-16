@@ -189,3 +189,7 @@ no category (only shows under 'other'): Ariana Grande Fragrances
 no category (only shows under 'other'): Stella McCartney fragrances
 no category (only shows under 'other'): Ted Baker Beauty and Fragrance
 tests on animals with no source: Nécessaire
+vegan full but tier check: Grace Cole
+vegan full but tier check: SOSU by Suzanne Jackson
+vegan full but tier check: Beauty Bakerie Cosmetics
+vegan full but tier check: Morrocco Method
