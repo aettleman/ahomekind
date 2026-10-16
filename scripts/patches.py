@@ -2367,3 +2367,11 @@ def _gen66(t):
     return t
 _rw("scripts/generate-brand-pages.js", _gen66)
 print("Section 66 applied: %d brands listed by both Leaping Bunny and PETA now have full pages" % len(_dual))
+
+# 67. Homepage "The kind list" card used a hard-coded 677. It now shows the real number of certified cruelty-free brands
+#     in the kind list PDF (tier good or check in data/brands.json), updated every time this runs.
+_kn = len([b for b in brands if b.get("tier") in ("good", "check")])
+def _kl(t):
+    return re.sub(r'(<div class="k-kl-arch"[^>]*><b>)[\d,]+(</b><span>brands</span>)', lambda m: m.group(1) + format(_kn, ",") + m.group(2), t, count=1)
+_rw("index.html", _kl)
+print("Section 67 applied: kind list card shows %d brands" % _kn)
