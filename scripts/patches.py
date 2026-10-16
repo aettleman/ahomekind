@@ -2673,7 +2673,7 @@ _A78 = [
  ("animal-rat.jpg", "A rat", "50% 35%", "Rat", "Can learn to play hide and seek with a person, swapping between hiding and seeking, and squeals with joy when it finds them.", "Science, 2019 (Reinhold et al.)", "https://neurocure.de/118/rats-play-hide-and-seek.html"),
  ("animal-piglet.jpg", "A piglet", "40% center", "Pig", "With space, straw and toys, a pig walks up to something new hopefully. A pig in a bare pen holds back.", "Newcastle University, 2010", "https://www.sciencedaily.com/releases/2010/07/100727201515.htm"),
  ("animal-lamb.jpg", "A lamb", "", "Lamb", "Never forgets a face. Sheep can remember 50 other sheep faces for more than two years.", "Nature, 2001 (Kendrick et al.)", "https://www.nature.com/articles/35102669"),
- ("animal-cow.jpg", "A cow", "", "Cow", "Makes close friends in the herd, and is less stressed when she's with her favourite companion.", "University of Northampton, 2011, reported by VegNews", "https://vegnews.com/2011/7/cows-stress-when-separated"),
+ ("animal-cow.jpg", "A cow", "", "Cow", "Has favourite friends in the herd. Researchers found cows pick preferred companions, and the bonds are strongest in young cows.", "University of Northampton, doctoral thesis, 2013", "https://pure.northampton.ac.uk/en/studentTheses/85b46e67-8f98-48de-b9c0-5824c5a068ee"),
  ("animal-chick.jpg", "A chick", "50% 55%", "Chick", "When her chicks are upset, a mother hen's heart beats faster and she calls to them more.", "Proc. Royal Society B, 2011 (Edgar et al.)", "https://www.bristol.ac.uk/news/2011/7525.html"),
  ("animal-tuna.jpg", "A bluefin tuna", "50% 55%", "Tuna", "Swims right across entire oceans. Tagged Atlantic bluefin have been tracked making journeys across the Atlantic.", "Science (Block et al.), via Scientific American", "https://www.scientificamerican.com/article/tagging-reveals-details-o"),
 ]
@@ -2726,3 +2726,17 @@ if(!reduce) requestAnimationFrame(tick);
     return t2
 _rw("index.html", _p78)
 print("Section 78 applied: animal carousel with sources")
+
+# 79. Cow line (Ash, 16 Oct): moved to the original source (Krista McLennan's University of Northampton doctoral thesis, 2013) and reworded to what its abstract says. Also fixes a site that already has section 78.
+def _p79(t):
+    for a, b in (("Makes close friends in the herd, and is less stressed when she's with her favourite companion.", "Has favourite friends in the herd. Researchers found cows pick preferred companions, and the bonds are strongest in young cows."), ("University of Northampton, 2011, reported by VegNews", "University of Northampton, doctoral thesis, 2013"), ("https://vegnews.com/2011/7/cows-stress-when-separated", "https://pure.northampton.ac.uk/en/studentTheses/85b46e67-8f98-48de-b9c0-5824c5a068ee")):
+        t = t.replace(a, b)
+    return t
+_rw("index.html", _p79)
+print("Section 79 applied: cow line uses the original source")
+
+# 80. Home page (Ash, 16 Oct): removed the TradeTracker script (an affiliate-network tracking tag).
+def _p80(t):
+    return re.sub(r"<!-- Begin TradeTracker SuperTag Code -->.*?<!-- End TradeTracker SuperTag Code -->\n?", "", t, flags=re.S)
+_rw("index.html", _p80)
+print("Section 80 applied: TradeTracker script removed")
