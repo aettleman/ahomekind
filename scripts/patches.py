@@ -2628,3 +2628,24 @@ def _s75():
     return n
 _n75 = _s75()
 print("Section 75 applied: affiliate links removed from %d brands, picks tab removed from the shop" % _n75)
+
+# 76. Price menu and the Budget categories (Ash, 16 Oct): "Budget" and "Budget & fully vegan" are already the lowest price band, so picking them greys out the other prices
+#     (and resets a price that was already chosen) and says to pick another category to use them. Every other category still works with every price.
+def _p76(t):
+    if "syncPriceMenu" in t: return t
+    fn = ("function syncPriceMenu() {\n"
+          "  var lock = (activeCategory === 'budget' || activeCategory === 'budget-vegan');\n"
+          "  if (priceSelect) {\n"
+          "    if (lock && activePrice !== 'all' && activePrice !== '1') { activePrice = 'all'; priceSelect.value = 'all'; }\n"
+          "    Array.prototype.forEach.call(priceSelect.options, function(o){ o.disabled = lock && o.value !== 'all' && o.value !== '1'; });\n"
+          "  }\n"
+          "  var h = document.getElementById('priceHint');\n"
+          "  if (h) h.style.display = lock ? 'block' : 'none';\n"
+          "}\n")
+    t = t.replace("function cardMatchesPrice(card)", fn + "function cardMatchesPrice(card)", 1)
+    t = t.replace("var budgetNote = document.getElementById('budgetNote');\nif (budgetNote)", "syncPriceMenu();\nvar budgetNote = document.getElementById('budgetNote');\nif (budgetNote)", 1)
+    t = t.replace("<p style=\"font-size:12.5px;opacity:.75;margin:0 0 8px;\">Only brands I've priced show up when you pick a price.</p>\n",
+                  "<p style=\"font-size:12.5px;opacity:.75;margin:0 0 8px;\">Only brands I've priced show up when you pick a price.</p>\n<p id=\"priceHint\" style=\"display:none;font-size:12.5px;margin:0 0 8px;\">Budget is already the lowest price band, so the other prices are greyed out. Pick another category to use them.</p>\n", 1)
+    return t
+_rw("brand-check.html", _p76)
+print("Section 76 applied: price menu works with the Budget categories")
