@@ -300,7 +300,7 @@ g = "scripts/generate-brand-pages.js"; gs = open(g, encoding="utf-8").read(); c0
 gs = gs.replace("const CLAIM_HEADLINE = 'Says it\\'s cruelty-free. Not certified.';", "const CLAIM_HEADLINE = 'Says it\\'s cruelty-free. Not certified yet.';")
 gs = re.sub(r"\+ '<p style=\"margin:0;\"><strong style=\"color:#2A1630;\">The reality:</strong>.*?</p>'", 
   "+ '<p style=\"margin:0;\"><strong style=\"color:#2A1630;\">What that means:</strong> ' + escapeHtml(brand.name) + ' isn\\'t certified by Leaping Bunny, Cruelty Free International or PETA yet, so nobody independent has checked this. Plenty of honest brands haven\\'t applied, and some products, like paper goods, don\\'t fit the main schemes well. It\\'s the brand\\'s word, so the choice is yours.</p>'", gs, count=1, flags=re.S)
-gs = gs.replace("(STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)", "(brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))", 1)
+if "'<b>says</b>CF'" not in gs: gs = gs.replace("(STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)", "(brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))", 1)
 gs = gs.replace("if (b.tier !== 'good' && b.tier !== 'check') return false;\n    if (cat", "if (b.tier !== 'good' && b.tier !== 'check' && !(b.tier === 'unverified' && b.claim)) return false;\n    if (cat", 1)
 gs = gs.replace("(y.tier === 'good' ? 1 : 0)) - ((x.price", "(y.tier === 'good' ? 1 : 0) - (y.tier === 'unverified' ? 5 : 0)) - ((x.price", 1)
 gs = gs.replace("(x.tier === 'good' ? 1 : 0)); });", "(x.tier === 'good' ? 1 : 0) - (x.tier === 'unverified' ? 5 : 0)); });", 1)
@@ -1566,7 +1566,8 @@ for _s in ("manhattan", "risque"):
     if not _b: continue
     _b.update(parentCompany="Coty", tier="warn", lastVerified=today)
     if "parentTestsOnAnimals" in _cg: _b["parentTestsOnAnimals"] = _cg["parentTestsOnAnimals"]
-    _b["note"] = _b["note"].replace(" Cruelty-free approved by Cruelty Free International.", "").rstrip() + " Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals."
+    _LBC = " Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals."
+    _b["note"] = _b["note"].replace(" Cruelty-free approved by Cruelty Free International.", "").replace(_LBC, "").rstrip() + _LBC
     _addsrc(_b, "Coty: Rimmel, Manhattan and Risqu\u00e9 receive Leaping Bunny approval (26 September 2022)", "https://www.businesswire.com/news/home/20220926005006/en")
 json.dump(raw, open(P, "w"), indent=2, ensure_ascii=False); open(P, "a").write("\n")
 print("Section 49 applied")
@@ -2900,3 +2901,951 @@ for _f in glob.glob("**/*.html", recursive=True):
     t = t.replace('print("Parent pages:", made)', foot + 'print("Parent pages:", made)', 1)
     open(f, "w", encoding="utf-8").write(t); return 1
 print("Section 88 applied: parent companies cards and footer link (%d)" % _s88())
+
+# 89. Sources audit, stage 1 (Ash, 18 Oct): every brand page's Sources must be relevant and prove what the page says.
+#     - "Price check" lines are no longer shown as sources (the price evidence is kept in data/price-sources.json).
+#     - Brands that only linked to the certifier's homepage now link to the brand's own listing: Cruelty Free International Approved Brands page (checked 18 Oct)
+#       or PETA company page. Where no brand page could be confirmed the old link stays until it is sorted (listed in claude/sources-audit-18-oct.md).
+#     - A PETA vegan icon is not a vegan certification: those brands now say "brand's word, no vegan certification" and link PETA's vegan listing plus the brand's own page.
+#     - Brands' own pages saying "vegan" (with a short quote) are added as sources; real certifiers named on the brand's own page are kept as certified.
+#     - Alleyoop: brand's word (no vegan certification); also listed in Leaping Bunny's Compassionate Shopping Guide.
+_B89 = "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"
+def _s89():
+    import gzip, base64
+    from urllib.parse import urlparse
+    D = json.loads(gzip.decompress(base64.b64decode(_B89)).decode("utf-8"))
+    raw = json.load(open("data/brands.json")); bl = raw if isinstance(raw, list) else raw.get("brands", raw)
+    pi = json.load(open("data/peta-import.json"))
+    by = {b["slug"]: b for b in bl}
+    try: PS = json.load(open("data/price-sources.json"))
+    except Exception: PS = {}
+    st = {"price": 0, "cfi": 0, "peta": 0, "vegan": 0, "own": 0, "rootgone": 0}
+    def host(u): return urlparse(u).netloc.replace("www.", "")
+    def isroot(u, h):
+        p = urlparse(u); return host(u) == h and p.path in ("", "/")
+    def addsrc(rec, label, url, first=False):
+        S = rec.setdefault("sources", [])
+        if any(s.get("url") == url for s in S): return False
+        (S.insert if first else (lambda i, x: S.append(x)))(0, {"label": label, "url": url}); return True
+    def swap_root(rec, h, label, url):
+        S = rec.get("sources") or []
+        k = [s for s in S if not isroot(s.get("url", ""), h)]
+        if len(k) == len(S): return False
+        rec["sources"] = k
+        addsrc(rec, label, url, first=True); return True
+    for rec in bl + pi:
+        S = rec.get("sources") or []
+        k = []
+        for s in S:
+            if str(s.get("label", "")).startswith("Price check"):
+                PS[rec["slug"]] = {"label": s["label"], "url": s["url"]}; st["price"] += 1
+            else: k.append(s)
+        if len(k) != len(S): rec["sources"] = k
+    json.dump(PS, open("data/price-sources.json", "w"), ensure_ascii=False, indent=1); open("data/price-sources.json", "a").write("\n")
+    for slug, (nm, url) in D["cfi"].items():
+        r = by.get(slug)
+        if r and swap_root(r, "crueltyfreeinternational.org", "Cruelty Free International: %s in its Approved Brands directory" % nm, url): st["cfi"] += 1
+    for slug, (nm, url) in D["peta"].items():
+        r = by.get(slug)
+        if r and swap_root(r, "crueltyfree.peta.org", "PETA: %s company page" % nm, url): st["peta"] += 1
+    # old homepage links on brands that aren't certified (nothing for them to prove): drop them
+    for r in bl:
+        if r.get("tier") in ("unverified", "bad"):
+            S = r.get("sources") or []
+            k = [s for s in S if not (isroot(s.get("url", ""), "crueltyfree.peta.org") or isroot(s.get("url", ""), "crueltyfreeinternational.org"))]
+            if len(k) != len(S): r["sources"] = k; st["rootgone"] += 1
+    for slug, basis in D["vbasis"].items():
+        r = by.get(slug)
+        if not r or r.get("vegan") != "full": continue
+        if basis == "brand":
+            if r.get("veganBasis") != "brand" or r.get("veganCert"):
+                r["veganBasis"] = "brand"; r.pop("veganCert", None); st["vegan"] += 1
+        elif basis == "certified" and slug in D["vcert"]:
+            if r.get("veganBasis") != "certified": r["veganBasis"] = "certified"; st["vegan"] += 1
+            if not r.get("veganCert"): r["veganCert"] = D["vcert"][slug][0]
+    for slug, v in D["petaveg"].items():
+        r = by.get(slug)
+        if r and v and addsrc(r, "PETA: %s listed as a vegan company (the brand's own claim, not a vegan certification)" % v[0], v[1]): st["own"] += 1
+    for slug, (url, quote) in D["own"].items():
+        r = by.get(slug)
+        if not r: continue
+        lab = "%s: its own page on being vegan (\"%s\")" % (r["name"], quote.strip().strip('"'))
+        ex = [s for s in r.get("sources", []) if s.get("url") == url]
+        if ex:
+            if "vegan" not in str(ex[0].get("label", "")).lower(): ex[0]["label"] = lab; st["own"] += 1
+        elif addsrc(r, lab, url): st["own"] += 1
+    for slug, v in D["vcert"].items():
+        r = by.get(slug)
+        u = (v[1] or (D["own"].get(slug) or [None])[0]) if r else None
+        if r and u and v[2]:
+            lab = "%s: %s (\"%s\")" % (v[0], r["name"], v[2].strip().strip('"'))
+            ex = [s for s in r.get("sources", []) if s.get("url") == u]
+            if ex: ex[0]["label"] = lab
+            else: addsrc(r, lab, u)
+            st["own"] += 1
+    e = by.get("e-l-f-cosmetics")
+    if e: e["note"] = e["note"].replace("and certified vegan by PETA (Beauty Without Bunnies).", "and PETA lists it as a vegan company (not a vegan certification).")
+    a = by.get("alleyoop")
+    if a:
+        a["note"] = ("PETA lists Alleyoop as cruelty-free and as a vegan company, and it is listed in Leaping Bunny's Compassionate Shopping Guide. "
+                     "The brand says it is vegan and swaps animal ingredients for plant-derived alternatives, but I couldn't find a vegan certification. "
+                     "Independent and privately held, led by its founder and CEO Leila Kashani, with minority venture investors.")
+        a["veganBasis"] = "brand"; a.pop("veganCert", None); a["lastVerified"] = today
+        addsrc(a, "Leaping Bunny: Compassionate Shopping Guide (lists Alleyoop)", "https://www.leapingbunny.org/shopping-guide")
+    json.dump(raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    json.dump(pi, open("data/peta-import.json", "w"), ensure_ascii=False, separators=(",", ":")); open("data/peta-import.json", "a").write("\n")
+    return st
+print("Section 89 applied: sources audit stage 1 %s" % _s89())
+
+# 90. Vegan stamps and wording made consistent (Ash, 18 Oct).
+#     Filled V = certified vegan (certifier named, proof linked in Sources). Blank dashed V = the brand says it's vegan, not certified (Sources link the brand's own page or PETA's vegan listing).
+#     The old generic "listed as 100% vegan / certifier not yet confirmed" state is gone: a brand with no proof of either kind shows vegan as "not yet confirmed" until checked.
+#     Page line: "Vegan, certified by X" / "Says it's vegan, not certified". Astonish: Vegan Society (Vegan Society's own blog + Astonish's FAQ).
+def _s90():
+    import re
+    from urllib.parse import urlparse
+    n = 0
+    n += _rw("scripts/generate-brand-pages.js", lambda t: t if "Says it's vegan, not certified" in t else re.sub(
+        r"const veganLine = brand\.vegan === 'full' \? \(brand\.veganBasis === 'certified' \? '100% vegan \(certified by ' \+ escapeHtml\(brand\.veganCert \|\| 'a vegan certifier'\) \+ '\)' : brand\.veganBasis === 'brand' \? \"100% vegan \(brand's word, no vegan certification\)\" : '100% vegan \(certifier not yet confirmed\)'\)",
+        lambda m: "const veganLine = brand.vegan === 'full' ? (brand.veganBasis === 'certified' ? 'Vegan, certified by ' + escapeHtml(brand.veganCert || 'a vegan certifier') : brand.veganBasis === 'brand' ? \"Says it's vegan, not certified\" : 'not yet confirmed')", t, count=1))
+    vc_old = "A vegan certifier, such as the Vegan Society or V-Label, has certified this brand's products. The certifier is named on the brand page."
+    vc_new = "A vegan certifier, such as the Vegan Society or V-Label, has certified this brand's products. The certifier is named on the brand page and the proof is linked in Sources."
+    gen_old = "This brand's products are listed as 100% vegan. The source is on the brand page."
+    gen_new = "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure."
+    for f in ("js/stamps.js", "scripts/add_stamps.py"):
+        n += _rw(f, lambda t: t.replace(vc_old, vc_new).replace(gen_old, gen_new))
+    n += _rw("scripts/add_stamps.py", lambda t: t.replace(
+        'if b.get("vegan") == "full": s.append("vegcert" if b.get("veganBasis") == "certified" else "vegsays" if b.get("veganBasis") == "brand" else "vegan")',
+        'if b.get("vegan") == "full" and b.get("veganBasis") in ("certified", "brand"): s.append("vegcert" if b.get("veganBasis") == "certified" else "vegsays")'))
+    n += _rw("js/checker-stamps.js", lambda t: t.replace('else if(b.veganBasis==="certified")o.vegcert=1;else o.vegan=1;}', 'else if(b.veganBasis==="certified")o.vegcert=1;}'))
+    raw = json.load(open("data/brands.json")); bl = raw if isinstance(raw, list) else raw.get("brands", raw)
+    by = {b["slug"]: b for b in bl}
+    def add(rec, label, url):
+        S = rec.setdefault("sources", [])
+        if not any(s.get("url") == url for s in S): S.append({"label": label, "url": url})
+    a = by.get("astonish")
+    if a:
+        a.update(vegan="full", veganBasis="certified", veganCert="Vegan Society")
+        add(a, "The Vegan Society: Astonish, \"All products are registered with the Vegan Trademark\" (30 years of cleaning with a clear conscience, 20 May 2020)", "https://www.vegansociety.com/node/129124")
+        add(a, "Astonish: its FAQ, \"We're proud to be approved by Cruelty Free International and the Vegan Society\"", "https://www.astonish.co.uk/pages/faqs")
+    al = by.get("alleyoop")
+    if al:
+        for s in al.get("sources", []):
+            if s.get("url") == "https://meetalleyoop.com/pages/clean-philosophy":
+                s["label"] = "Alleyoop: its own page on being vegan, \"Proud to swap out animal ingredients for plant-derived alternates\""
+    for _ps in ['bulldog', 'hurraw', 'rare-beauty', 'schmidts-naturals', 'the-ordinary']:
+        _r = by.get(_ps)
+        if _r and _r.get("vegan") == "full" and not _r.get("veganCert") and _r.get("veganBasis") != "certified":
+            _r["vegan"] = "partial"; _r.pop("veganBasis", None)
+    CERTDOM = ("vegansociety.com", "v-label.eu", "v-label.com", "vegetarian-society.org", "vegan-action.org", "beveg.com")
+    moved = {"to_brand": [], "to_unconfirmed": []}
+    _once90 = os.path.exists("data/vegan-check-90-done.txt")   # run the reclassification once only, so reruns don't flip vegan values
+    for r in ([] if _once90 else bl):
+        if r.get("vegan") != "full" or r.get("slug") in ['avon', 'kingfisher', 'tesco-kind-pure', 'fuwa3e']: continue   # Ash's own findings (email, her links): kept, flagged in claude/sources-audit-18-oct.md
+        S = r.get("sources") or []
+        labs = " ".join(str(s.get("label", "")) for s in S).lower()
+        hosts = [urlparse(s.get("url", "")).netloc.replace("www.", "") for s in S]
+        cert = (r.get("veganCert") or "").lower().replace("the ", "")
+        claim_proof = "vegan" in labs
+        cert_proof = r.get("veganBasis") == "certified" and cert and (cert in labs or any(h.endswith(CERTDOM) for h in hosts))
+        if r.get("veganBasis") == "certified" and cert_proof: continue
+        if r.get("veganBasis") == "brand" and claim_proof: continue
+        was_cert = r.get("veganBasis") == "certified"
+        if claim_proof:
+            r["veganBasis"] = "brand"; r.pop("veganCert", None); moved["to_brand"].append(r["name"])
+        else:
+            r["vegan"] = "unclear"; r.pop("veganBasis", None); r.pop("veganCert", None); moved["to_unconfirmed"].append(r["name"])
+        if was_cert or moved["to_unconfirmed"][-1:] == [r["name"]]:
+            r["note"] = re.sub(r"\s*Certified vegan by [^.]*\.", "", r.get("note") or "")
+    json.dump(raw, open("data/brands.json", "w"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    open("data/vegan-check-90-done.txt", "w").write("Section 90 vegan reclassification ran on " + today + "\n")
+    return n, len(moved["to_brand"]), len(moved["to_unconfirmed"]), moved
+_r90 = _s90()
+print("Section 90 applied: vegan stamps and wording (%d files, %d moved to 'says it's vegan', %d moved to 'not yet confirmed')" % _r90[:3])
+if _r90[1] or _r90[2]: open("data/vegan-needs-check.json", "w").write(json.dumps(_r90[3], indent=1)) 
+
+# ---- Section 91: sources stage 1 (unwanted sources off, three headed groups, mislabelled sources fixed) ----
+def _s91():
+    import re
+    from urllib.parse import urlparse
+    BLOCK = ("crueltyfreekitty.com","ethicalelephant.com","wikipedia.org","wikidata.org","beautymatter.com","beautyindependent.com","cosmeticsbusiness.com","glossy.co","happi.com","mergr.com","pitchbook.com","forbes.com","forbes.pl","forbes.com.au","cnbc.com","axios.com","preqin.com","mannpublications.com","wiadomoscikosmetyczne.pl","oaklins.com","cosmeticsandtoiletries.com","cosmeticsdesign.com","cosmeticsdesign-asia.com","skinsider.co.uk","behindthechair.com","insideretail.us","insideretail.com.au","insidefmcg.com.au","fashionnetwork.com","modaes.com","thegrio.com","blackenterprise.com","njbiz.com","dcatvci.org","sgbonline.com","progressivegrocer.com","peprofessional.com","rangeme.com","chaindrugreview.com","success.com","buybeautykorea.com","sweetcare.com","thevc.kr","privateequitywire.co.uk","beautypackaging.com","ktla.com","licensingsource.net","irishbeauty.ie","breakingnews.ie","moodiedavittreport.com","thebusinessdesk.com","vmagazine.com","caplight.com","gcimagazine.com","drugstorenews.com","dmagazine.com","afrotech.com","goodsalonguide.com","arcj.org","faire.com","fashionista.com","scoutmagazine.com.au","ui.awin.com","greekherald.com.au","pharmacydaily.com.au","cewuk.co.uk","premiumbeautynews.com","dealroom.co","renaissancecapital.com","skinsort.com","thrivemarket.com","sephora.com","medihealhq.shop","kbeautyhouse.de","franchise-uk.co.uk","okofamily.com","alza.cz","cosh.eco","buywomenbuilt.com","sidley.com","lsvp.com","cdn.shopify.com_x","allure.com","vogue.com","reddit.com","trustpilot.com","skinsafeproducts.com","think-dirty.com","ewg.org","incidecoder.com","yuka.io","cruelty-freekitty.com","logicalharmony.net","ethicalconsumer.org")
+    CERT = {"cf":("leapingbunny.org","crueltyfreeinternational.org","compassionateshoppingguide.org","peta.org","crueltyfree.peta.org"),"vegan":("vegansociety.com","v-label.eu","v-label.com","vegetarian-society.org","vegan-action.org")}
+    def host(u): return urlparse(u).netloc.lower().replace("www.","")
+    def blocked(u):
+        h=host(u); return any(h==b or h.endswith("."+b) for b in BLOCK)
+    def isdom(h,ds): return any(h==d or h.endswith("."+d) for d in ds)
+    OWN = re.compile(r"owner|owned|parent|acqui|shareholder|stake|brands page|its brands|investor|press release|annual|sec filing|funding|sale of|purchase|part of|subsidiary|group|portfolio|corporate|announcement|company details|names its|trademark|legal notice|investment|completes|bought|buys|governance|holding|incorporated|companies house|psc|ownership|founded|founder|about us|about:|our story|story|profile|homepage|footer|its website|brand page|brand site|company page")
+    CF = re.compile(r"animal testing|animal-testing|animal welfare|animal well|cruelty|tested|testing|leaping bunny|peta|buav|test on animals|test method")
+    VG = re.compile(r"vegan|vegetarian society")
+    def kinds(label,url):
+        h=host(url); l=label.lower()
+        if isdom(h,CERT["cf"]) and "peta.org" not in h: return ["cf"]
+        if isdom(h,CERT["vegan"]): return ["vegan"]
+        if "peta.org" in h: return ["vegan"] if "vegan" in l else ["cf"]
+        o=bool(OWN.search(l)); c=bool(CF.search(l)); v=bool(VG.search(l))
+        out=[]
+        if c: out.append("cf")
+        if v: out.append("vegan")
+        if o and not (c or v): out.append("owner")
+        elif o and re.search(r"owner|owned|parent|acqui|shareholder|stake|brands page|its brands|sale of|purchase|part of|subsidiary|group|portfolio|holding|completes|bought|buys|investor|funding|incorporated|companies house|psc|ownership|names its|trademark|legal notice",l): out.append("owner")
+        if not out: out=["cf","vegan"] if re.search(r"faq|help|policy|q&a|certif",l) else ["owner"]
+        return out
+
+    stats = {"removed": 0, "relabelled": 0, "peta_relabel": 0, "kinded": 0}
+    taken = []
+    PRE = re.compile(r"^(PETA Beauty Without Bunnies|PETA|Vegan Society|Vegetarian Society|Leaping Bunny|Cruelty Free International|V-Label): (.*)$", re.S)
+    def fix_rows(rows):
+        for r in rows:
+            S = r.get("sources")
+            if not S: continue
+            new = []
+            for s in S:
+                u = s.get("url", "")
+                if blocked(u):
+                    stats["removed"] += 1; taken.append([r.get("name"), s.get("label"), u]); continue
+                h = host(u); lab = s.get("label", "")
+                m = PRE.match(lab)
+                if m and "peta" in m.group(1).lower() and "peta.org" in h:
+                    if "vegan company" not in lab and "vegan" not in lab.lower().split("(")[0].replace("vegan icon", ""):
+                        pass
+                    if "listed as a vegan company" not in lab:
+                        nl = "PETA: " + r.get("name", "") + " company page"
+                        if nl != lab: s["label"] = nl; stats["peta_relabel"] += 1
+                elif m and not isdom(h, CERT["cf"] + CERT["vegan"]):
+                    rest = m.group(2)
+                    nm = r.get("name", "")
+                    if rest.startswith(nm): rest = rest[len(nm):].lstrip()
+                    rest = rest.lstrip(": ")
+                    s["label"] = nm + ": its own page " + (rest if rest.startswith("(") else ("- " + rest if rest else ""))
+                    s["label"] = s["label"].strip(" -"); stats["relabelled"] += 1
+                if s.get("label", "").strip().lower() == "source":
+                    s["label"] = r.get("name", "") + ": its website"; s["kind"] = ["cf", "vegan"]
+                if "kind" not in s:
+                    s["kind"] = kinds(s["label"], u); stats["kinded"] += 1
+                new.append(s)
+            r["sources"] = new
+    # The five brands whose notes said PETA lists them as vegan, though PETA's vegan list doesn't show them.
+    FIX = {
+      "crazy-color": [("PETA lists Crazy Color as cruelty-free and vegan.", "PETA lists Crazy Color as cruelty-free. Its own FAQ says it holds PETA's cruelty-free and vegan seal, but PETA's vegan company list doesn't show it, so its vegan status is the brand's word only.")],
+      "cake-beauty": [("Listed as cruelty-free by PETA, which also lists it as a vegan company.", "Listed as cruelty-free by PETA. Its own site says it is certified as both cruelty-free and vegan by PETA's Beauty Without Bunnies, but PETA's vegan company list doesn't show it, so its vegan status is the brand's word only.")],
+      "being-frenshe": [("PETA lists Being Frenshe as cruelty-free and vegan.", "PETA lists Being Frenshe as cruelty-free, but it isn't on PETA's vegan company list, and I haven't found a vegan statement on the brand's own site, so its vegan status isn't confirmed.")],
+      "edens-garden": [("PETA lists Edens Garden as cruelty-free and marks it as a vegan company.", "PETA lists Edens Garden as cruelty-free. PETA's vegan company list doesn't show it, but its own FAQ and about page say its products are vegan.")],
+      "made-by-dentists": [("PETA lists Made By Dentists (Spotlight Oral Care) as cruelty-free and shows it as a vegan company.", "PETA lists Made By Dentists (Spotlight Oral Care) as cruelty-free, but it isn't on PETA's vegan company list.")],
+    }
+    for fn in ("data/brands.json", "data/peta-import.json"):
+        raw = json.load(open(fn, encoding="utf-8"))
+        rows = raw if isinstance(raw, list) else raw.get("brands", raw)
+        fix_rows(rows)
+        for r in rows:
+            for old, new_ in FIX.get(r.get("slug"), []):
+                if old in (r.get("note") or ""): r["note"] = r["note"].replace(old, new_)
+            if r.get("slug") in ("being-frenshe", "made-by-dentists") and r.get("vegan") == "full":
+                r["vegan"] = "unclear"; r.pop("veganBasis", None); r.pop("veganCert", None)
+        json.dump(raw, open(fn, "w", encoding="utf-8"), ensure_ascii=False, **({"separators": (",", ":")} if fn.endswith("peta-import.json") else {"indent": 2})); open(fn, "a").write("\n")
+    for fn in ("data/brands.json",):
+        raw = json.load(open(fn, encoding="utf-8"))
+        for r in raw:
+            n_ = r.get("note") or ""
+            _x = " Leaping Bunny / Cruelty Free International certified itself, but owned by Coty, who do test on animals."
+            if n_.count(_x) > 1: r["note"] = n_.replace(_x, "").rstrip() + _x
+        json.dump(raw, open(fn, "w", encoding="utf-8"), indent=2, ensure_ascii=False); open(fn, "a").write("\n")
+    try: _prev = json.load(open("data/sources-taken-off.json", encoding="utf-8"))
+    except Exception: _prev = []
+    _seen = set((a[0], a[2]) for a in _prev)
+    taken = _prev + [a for a in taken if (a[0], a[2]) not in _seen]
+    json.dump(taken, open("data/sources-taken-off.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    # Renderer: three headed groups.
+    NEWR = r"""function renderSources(b) {
+  const s = b.sources || [];
+  function link(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label) + '</a>'; }
+  function group(title, kind, emptyMsg) {
+    const items = s.filter(function(l){ return (l.kind || ['cf','vegan']).indexOf(kind) !== -1; });
+    const body = items.length ? items.map(link).join(' &middot; ') : emptyMsg;
+    return '<p style="font-size:12.5px;font-weight:600;margin:12px 0 3px;letter-spacing:.02em;">' + title + '</p><p style="font-size:13.5px;margin:0;">' + body + '</p>';
+  }
+  const none = '<span style="opacity:.75;">No source found.</span>';
+  let out = '<p class="section-label">sources</p>';
+  out += group('Cruelty-free', 'cf', none);
+  if (b.vegan && b.vegan !== 'unknown' || s.some(function(l){ return (l.kind || []).indexOf('vegan') !== -1; })) out += group('Vegan', 'vegan', none);
+  if (b.parentCompany || s.some(function(l){ return (l.kind || []).indexOf('owner') !== -1; })) out += group('Owner', 'owner', none);
+  out += '<p style="font-size:13.5px;margin:12px 0 0;">Know of a source? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
+  return out;
+}
+"""
+    def swap(t):
+        a = t.index("function renderSources(b) {"); z = t.index("function renderLinks(links) {")
+        return t[:a] + NEWR + t[z:]
+    _rw("scripts/generate-brand-pages.js", swap)
+    return stats, len(taken)
+_r91 = _s91()
+print("Section 91 applied: sources stage 1 %s, %d taken off (list in data/sources-taken-off.json)" % _r91)
+
+# ---- Section 92: sources stage 2 (cruelty-free proof; stamps from verified certifications only) ----
+_B92 = (
+    "H4sIABbT1GoC/9y9S5MjOZIm+FfQKTKVnlJp4VmZXZW9ffNXeHiGv9rpEVHRN9AMJBE0MzDtQTp9ZETqsP9gLtsie9k9rGxd5rSy"
+    "pz1N/pP6JauKlz1oBMPg8KrZFanKcBpUv08Bg+GpUPznb9j6m38l//mbnG3mLJd/xjMO/36zqKpV+a/Hx5vN5k1c1CyttrOCMZ5X"
+    "rMhpxUVO0zeimB/T1aoQa5ZE04LmSXmc8rLi+fxYQR5/81++J9/84YcfolVdMEmwYhVtM7TQ32CaRI1FtqL59thoHn8DMKuyQsV4"
+    "Jn/kNENABP9P5B7RJdXPQXPxh59VDn7iOR1vPWo5LP/p6vZEov9cLaIFo+vAr6CBVZmgUcqrKmVRKTJWLUAkKN0uvKadTkVVjS89"
+    "pecovxMFrDjqPKF5FYGldUFTzHdaLcLmb5hDZzKmCcu2kZhFsUhFXYSl7qMbUvNRpdO5LJGzDw8XsoxGFTTCRFNWgTnRKqU5q4wB"
+    "jsJHJXJ0KrXIvdQip1LrO2PcutaffCLGGANq0RexyEuRm3+lIYlokYMQOfpFpZLfEf2Xpk7oqoJymm/DvgULq4s/STiqRWVVJ1wE"
+    "5upga0JWilVYGkTU4Dwb/7J4FsWLuogXUbLh80XVf088I0dnUgDe0bkU0a+IF9GGx0sPSqUYFSxeQnsD9TaHP0pW7HAX5BMIkqMH"
+    "JUlOjaQ2IZ3SCFoQmvNYN+5Z/vV2tLWjBeV5FLOUQbHS9Njgs6IS0ZSmJZVlq54mPOwrBMCoXhpO6HR5WY0vVq3YL0SDp8AzUfSK"
+    "LFwuOtjH4xuxIYDhlktKklOTDZU1waJ65dFJKUUnnWDkw0rTVDTKaMFCF56BNbUAW3JUXUO7vo3KOgtOuENgqOuY0wiUsXDLwKwd"
+    "bEO4odvSo76jWgREMWZlTrNpynYqP8qQo3slBC3YpRTTzQcUOA2cQQmp85VN+fhcgdKhrhNE9necqL9Sgxf1mxXwiUAvRGes2kYF"
+    "fRaFx0cyBOP6ZLQ8mUh58iBplUHbgpc+FqCek1ICS44c3kJULnkeUz28CvaCO9DHhq6saAkVe8rWrEi30YKnqU8eh4FcmTYa0DVK"
+    "DfJOUiuzEmjbajPYLTvDTJVGbk3a6Ma6B+60sceljFsGHm4BoHkdOTZnUANL+xXkOby02uNz1Ir9TxAekwngSfBfaxpBD76ihW6k"
+    "RzG0tfs0kEYSTu4lsuXSZR62+FrAHl33jvZwTcD86GpgswOI5cKr2KRmNE/pkygzXi2WKc/ZQBFKOXJ0iYITFHyPgrq9LCIRMxp2"
+    "2m5AdX0saMY9+jepFsF4lLEopXWyOz6WEuToAkXItRQxuZqKPGdRx2SP9mgIJpoXol6xCLrUBXP2AUqbXLW14TVIdfIg1Y25ccXj"
+    "aCaeOm2UfEreiifyDuYM5AwmbsX4qmmxcYhfyNm32+ohVmUlqyP8T+D5WwGo8B+Pr84Y5MwOqwn+R2dhzqvQLYfC9DG/pbjHeGWu"
+    "Mp2z1LbnBXzFmQg8dtOg5qtdwtA4MAFCGvgsgkSok9hReTQOmVZ1z96LDAaI76Tgvml8ITJawadIV9uIlqWAAXrFQpfsIIcpiYIn"
+    "HgUAWgfyDhL7Ml2uWKFbm2CZVJjHbYKohG79VWgUsiGrBEzxA6+ValCP71prRnEKfSBg4RwtqePKOUjUSuRMK5F7raSyWLGUM9V6"
+    "z3OPNcmufr+qqFTZ1iN6m7Fg0zpwg9lG1m+w4stF4Am+hDTwFa9gdOAxAtCa0ZQLqHIsrgrnwszj49Xjh/MLcnQK8hMlrz+5Oq+i"
+    "GYynOevOROA5eSuff+sxDWmhuuxqSP72l//QVaou4D3QKBU51ISwZa+hIRXKDYcfvQljXZbc521IvaElj+FsGzJ4CWBOHs1Fmnix"
+    "tgEO8q1htpd314/G8XUBDvOxJPCng4jHBpzlYnxzI9UOreNIof0rOevQtXItzIxkQ5fslVb4OtCa7omZgdv0dVZlpr0PbKqWNKGn"
+    "TIo67B6pRdVMYho2J7QoI0gocB28Ss0gaYq7EwluzKaMp6PrY1c9mtLtzmTyFERIwshEMSjSJUujskgD51CjmpylLIfx4Jx65Mqo"
+    "7uTFYmoKDsWZbAPnQ6OOHyH1VAfbNsgDJ6dotM5ChttQWegsKFTzKmBCQj0G40bxQIN3imInOCjf0+RB5WcZz5ldrRxZqo12hD8i"
+    "VsYsr2r38iRK3hhSbUWxjTIvA1DR9VJPHh4+kxtNU8WLwK8TEM2rRM8RUZdh21mYw0UNtKWC1KaFh+ECTMlSkU096pHVjWAQwNBV"
+    "Y7XAxc+Y1TCMMi+yXaVQg/yeXIMOOfqolMh9V8nUri3kQ8+6i8Q4z4x8xRJD6zs/XxSUk29FJS1gFCya1dACF2KjTElpuQg83e7T"
+    "KIrjxoQt9gAembe6roxLIQL5b/PNYPBRF6+QTQvdyd6Sw5cQ2BerC92h2/AKPogq0rivQdujkC9Az6B0iX9SEuRMGzG6Uxokiupl"
+    "xOpC4IIvKyv0X9qIwjkLGLaHHH14/z25kFDfw3fxAGhEzMgnRNMfKOQeCybHYgldV9rQ5uUlC0YT23AxtsxgjvOHf/nhx/YE9VQ9"
+    "J/L5+EJtQJ1F1uJQxnBWlIkoZuMbUavabysbTE0R2H1QIpqyTXF9gwUeOhpUS5LSFWQKuvpYlBmrQs9mBhkMec5i4TNMUYoST+QJ"
+    "d66AnyphcnRmpb+z9DNeBc6txLT5m5tOYlTtQ7VDA8GL28uTz/uHgTwez8tjKNFiJQqZ0z4hj8lZk2pY2hp/F0YRwd8md6MqjVGN"
+    "plPuqi9ckCuUI0enp1ffWdokbEVBxGMDvtjOOctZcAaNa3lSOg9OgpgNAQu84qIxWwRVePyqgRdzHhwfMC1BxprekouypHnccV4+"
+    "tQ9H95NG0123Nbo2oGIeOwFa74DbwKmS2uM0gBgLVmRe5KgIU5yC6Ya/S4qp5Oj6b3/5jzuUMHwVenfjsMqn6bDKzsKtGFEjN0WZ"
+    "0ngZzXmRRmWdlzFA5x7cAyguI1CcXII4mVhSZQ2jcmJol+pHmtFSd/KjHMwlJY0iFsJW+bSGgqxnM5qOXxFuK/dfOySRU42riYrX"
+    "2JZo4XqsWUllDl8Ccw7+QaxTgFngJi+r7MJrCYPBJMp46uHa0lF35UdMvy1hspKQG+TRzFMup9Yeg4ZG1+XZc4pi5BTFhtx7pnof"
+    "R/0No8KoxELyKQWr7CwDkCITSaEoRRV4nI2I5r2WKdtmiU9mlKYzJyhyc66ZtOt/mdJ1aG/4Pvhxm1JEa568koPqMEWHvnwNQvv6"
+    "6jhlWeg8KVBLYcYd4z49VHP7i59KmX3+4oiQ0GIbOm8StMlbtfXKW7U9nDdchtmbt+KL4GXTrDxtY1xF9fkOtarzQ3zankl4SbZi"
+    "xYzFVW8WP451B8NFf6+EyZkllHbgq0lZ6UNvVF2sFl6T1R4dCGodeNEosvc9F3ialG2kL6T5Eb4RQuAIkJXP5Y+6csOIFncQCnTE"
+    "8sh5S/vQ8F3JkgeU3TeIr9M0EYFXwAAzAlCd3xrLXa7yqz89qlUfYnfUsKeuSWkCikT/OTSOqIspKwqP9kYr9ovd4GnwqoSJR9fd"
+    "B0QqGFCd4uPRQ1CLGMUwgUJfO0f+LQ85OpPSJs/ykKz3VKKt7tpVlHLk+u72/O5WEz8Jn9YU1ZwZRVhJsE7ntJAnCWZ1Nt7hvKff"
+    "f7cfry9PHq6IQZeMWxg7FnTxKpOVLrb+orYsTTkLTSRBDcOyPdMOR7K0c3BFIzKPcARSzVUZJKwiKESOW3WvNMrcgfeYUe7B2JMz"
+    "EMZdRTIx+cFsxhRHGmy8R4xRHF6JOdOpOysxMU3nPs2G0nPk70wBNxzRhmJDU4oZLkQVHhkcQDl45FqZQT6hFplorb3nr4EjZXkk"
+    "0tCe8m3gY0O15nm0TBke0+4OE8eVygDMbiGAEHmPQr0RYkzzqvZ5/aB2eBHuDMXaq3BYz5/MkBx+ZJ1fIi2jhNYwxGGFj00dAKdZ"
+    "IIl+s+TcsCkLyg20nFFGy5JtfQxo6zv5leCNIlLcVcFj5kMqFZ1sClrR1AmFviGqS+pR1xrlCNqsnVqmksmHycn35CqP3yhK7IzC"
+    "ztAV5LGBrzl6R8KcHcwqxZclDU1Wc8OVw6ySqtErNN/PgRsJAVNew6HwDS9OP+yHAu9ltTBOkyPiQxhFDbqgUF984l1YzWg148+7"
+    "Ta5JhimbTP/O8BUwV0RvCxmJp1LdjkpiPh0Carlnjmcosm/miMf1Qh8y0ZimhHmalNHMLDqEI7G4higVzKP8QGunwBBJYRaSDmr7"
+    "vOYp1MAIFyTqjHl0UvuxDr0/rUhOtCK514r736o8QYWfqDpF5WFt6wxW1BxM27Gtcw6LHLXPpmlbeGCXLQTUr5zP7NfDoTWEERBV"
+    "3i/qUVWwqITPzKNaNLrRguVLtjOWRAEyQQFy9E5K6Ox+UQOcaCtqH1/Erj6MZlyd2i/kDmXJZ5SFQY2yIKUcuvbxeVZ6EbbA/dyq"
+    "JHRYqbbfGZaC56UPC+qhyxlMOnm5y4TJ6EN2T03kh77O34+0bBw7xtJJ1SEihakoGM3lV4p/eTT+Ul/qHvDNkefv4MPEf4u9LjoS"
+    "iZY89bJEah6eixjJ/fMP3BTARf1XOcqyg66bkpTn/FePuGhG0bXxd6Zlhlbr1JqXB61dKmvzSCwNWzaRk8YBS0XnKdwzLbTnIG4s"
+    "osDx0HCJWKLqtyXgh/SzFmnggW4b2ZClc9q4wsPPlMXGucw8AXWfD9ho9svXImp8GA2vxOolOykDIK6eRUrfi1V/powhJD2yCVoH"
+    "Bjkosnc4I7IZDJib8s4yeEU+ZqBe9FO2S44J5OinG0OYQ4fnU8io5yxXCaw54oJVLPI/G7MD4WaWsqRzKgYQEpbDt+zZr3bUd0pV"
+    "Jbb7VLGCMa+aOqJXUOBPtwt+3KKEeZZH025VB8/WnTXIiqgoRbJNm1oKE1mee4wetOIOXbVtLSjI04SzJ7nKGtmV4JHVp4/hrD8g"
+    "TN7+Wa7UkjO7VIuP0RUs8KvUqOYdbsoFSwJTSExD8MzrwPNTCanhIQm34gPPgwyqJdlCn+XtUdjVd9UEJdhZ0cRTJOMrujx74u4W"
+    "UGRvt4DzYgpjK2odHOI6raAm58n2lc4ODBHo8ocUvqaVKGwgYhMhI7gFe3gaQ+oi9OeiQQ1FkUZfaBGYQoFqim2cBl5ZREQD/izy"
+    "0OgIqeCTNHAASnmgUGPTae0xMpFqjo/6XMIqAh74fKlENNZndiCd0DVPxGz8WSij2Gsrzg2eAn+2PCxdLTDmWiyaRzk0HHXYGD4G"
+    "VOeUFRmNmP1G8WC4Xze9D8nxNrWKiconT5zb3VWZCI1onnjaInVddakhsHzB96otaqu4E+glfOKgtpRd2bp4uDnRFJYST1JoJ1Pt"
+    "C3Peejx287wFGdU5TzH656GCVuLk6IOW/04bV8LYNGJlyXrHOc5lCrnQKeNNbAM7jevwaKP4PFe6GI+79HlVPQi3BSCrLFB0yoiq"
+    "EmnTEqwxzH7aLaE1PcNn48tGgTltUtjdRWM8ARj267AHEMe0q1xenjCw2n3O6a7FGEMyprhCbmMJhc7DAIX+3DnUrvHLlEptJ3MS"
+    "S8GKwgNUFDuQpo3glYo0nwUeEDS4ukBEGiuPwjmdTmnuPw9QSAbFdb75HCXlmFzKticEichg4C7suByKBsCWtKDjnWNbuq5F1nMU"
+    "I+9RbGidNREYZcunc1CKznJQ0IqmLsuwXmYK0rzmtc8IArS+qj8BuZ2OBA+1QF1jtAh8b0sH+diSbT0qCGi555HnKLJvHpkU0tEg"
+    "16GlbTdQvMHDOvjcI4ZdCzTK6ByjxQm6cnZXbT5ygzpkgjrGSLzXJuyszoAeG4ovNF6WocM0tHAtkd598ajLVvdAUd5pBk24ohv4"
+    "nxefUj1Ad3/yCf5n2EqaBS9DxLTlB5ONHOY08wLanq4z6NjcDSIdyOy51CGXqNN13cQaJaP3LOlLliYHYQ4Y9U4r9FYoZe2DEesq"
+    "rccvcGvlfmsCbL/AY4NfMb+xrNY8kK9HkLHxLROoFsIjG6AVlfGe3eFzTCZHkzdnb7obwklR58uIpWy1oHnVbRwhhVyYlPGtYxvY"
+    "WQAdHmlUVYxfa0Slfq4fHx4VYJ3jjQzRrKDzAo+ie9STHYgD/ZGSJ2+t/N7OqQ57owLg6Uak1l6oIzMKWgc3+c9Rau8GPwzgollv"
+    "fVZXK/YmfTN702w6ahfKsdWLpbOv2ua8eHP95u2b3h4n++c/mmGrHJoAUl7GXNRhW/Qe9nhP+0GA4WyiJOTSZKPJ2qzgLE/SbXep"
+    "2sOMHaCD5rzVGt2Q0AqtxH3DVyhtiXvcEG2jnPI0Wok0tA/kLryhLfG6wPGLnkbx4Ld3gYJ3s9n+zy8W2OlXA/dI6K/wAiSgi6+6"
+    "lzyMr6CDRK6KoXgfe7za6JTR2avcmtXDPjaElRA+3brRdGf0UYJrprWemDblj088yhs3dHvd/F4LcD/3aHLW7fEBI/jWiMY89skQ"
+    "KjoXIS60wdJ4qOT5lBVzT3eGnn7/wzKpLYcGGMHMbbycYOWlQY8NRdac4MYg8zAToOPDcFrNfrbwtMIEETX+M50yaCtpkbDch6Wt"
+    "v8ulUsmJRFeMkF3jQDCOSin2Oa6vLySeAl/z5tCADCTb8v17yQxlP5arsmolMzntTVVYllEVhTRwhWpwdZ0SnVHXxd1k/Lcpyq/q"
+    "6+8mvQ6+pedR6r6sKy73VsIWqwbVZVqMP0wkDwG45gkXBd03MWBlTBP6kknLDsKQ6/eFFOpMVBoncFbywAeNJKIu0Nbe1bhKcnBv"
+    "irU2peDvFQ+8OakxPXo8pfgVIZkulCS5VpI6K83quEdt2Lu0flFWv/3VLKcrJlkS6escQ+6D6+pQLayDdjgmienxntqKw+9HmytN"
+    "rxNRBP5OJKQumXqOse9WtoEbl5WWtis/9fy3/zNnePRIH0ZXAYQpnkZ+whN7XudVB0CcRihp8ok+kTNFKU1ZJ5RnIg+8A9nA6oLG"
+    "4bU8dDH+67Kq0aDr/gWOxtUpjU5gC9TbRhhs+Ivxlx1Xvh19V9GiILkB/l+QyHJTjNMQ+KuTNuFepfWYYmuRrpux1CvEahhkMOSh"
+    "G7C1bbS2ae01upR6rtelgJFjRqcqJHzQPFjUY0NSp0Kdl1a/Y2gDmQgcN6uBHd8m93UHy+1tY7fKBlc50D9g3gKjeOlpxQJnrINt"
+    "CjWvKKSPP31sNfcv6r81IkML+zNaYXEFzqLE1Flj04I9j/e513ruUfFbJbRvZDxjecI9mEFrhwiRJCau7hdM/hOHXZHvQh8bOsz9"
+    "FJpukabYgLPQnH18Q5zz0PVCQjbwHvcCK7WDS59vpdjehc8ZL8pK3mjj6xvTR3A1NChK8F6cllvMjD8JXBH1KACleOC70FJ7Pwy8"
+    "M8S2djDKoOk2cK+hQfXbxjA8uEaC9czv8vQdCFeRa1lyupVxXcuWERUPPIhpYHVeBc18bv9Teq5cKWDFAZ8sS6U5Pgeaevr92iMK"
+    "qKsyldzllhHPaOBYrVyI0H1iD/y4TfkSJ9EMg2Li5WhrjDi0jcpVAXzOqiNJW66i5OhGg5CPEoRMFMh3xsiMp6FLIzNhSfDvOqXR"
+    "P//wP/m8ZKM7PNV4qwQICHTnGkbzyacWa1V3GUveP7fJsKdnZSyqsAGlZ3YTXoHrYoWny+bOuHE5tLquLKJQc78bIuHUy7u76eg7"
+    "eaVgp6uBnOsIIKHH6G3k4xZZWbHx580b1T21FdPJBNJ7lbUIPNlHwGMLHf3hhx9+iOZcFDkPTtMGb1HiFm94LkRtkZiIhTAXkQuI"
+    "SXjGHQpLr1wE0BEyNGuDbMhqLu+1wsgBje/qyM+vj+H8BEEYI4hghFrp4aDsqGmBPdGrLJT2wXXW62TuMxBBNVcGJawiyGX8Aywa"
+    "76ZtB8NJrYSxeNtNXF3IGW4cuFA1qinNchG4BUBECx76k298xeeUv1I0+g6yJRu/KIpK7hnNJQ7A9sxm5nKHGStQymceFb6r76h+"
+    "l1IQK981Emnu3JwmCFeqEtOUJ04taB2YQYFqCpbyql7hzGrO67AtMmBH0HbWq4aq9GiBlZ7r1ShgxZEnUI1yVuNBocC5aUObLOXz"
+    "VISmmad6AWi+KKME+s447Li4gdU0ME1mVRPcxvw2a1yjvuZG1/1NazlyJt7s+7TBVvgfC3y3KGBGGtdkH8S5wPh2NOceOW6rDwcd"
+    "vlQy5ETK7IQeRk+VUl7PGdGqgu8xCdxU7+KbrK9ZHi/8QpS0lXfyq5KaUCXzlI6P1YNKwxOCS0jpTgVQlnkxsP3L50jDhpbOQS+D"
+    "z3TjQygV+0TXJzeX13efDPizT1eGaq5mUsIqAqE8lXwHbj0AJ6lQ/k2tIRvmP8JlqMCXXLZwjxuiRT0NzwKgmkLg6TX/szddfVdB"
+    "iuhRdI/ZzAWtSjM1mQNq4FZjB95kOU0waLPtLkTKoxx6Rd5ctjmuCNr6ziJIObm1RIpb4PUZ02kaOu8W97ghCr0HjgW7gbfZunJ9"
+    "Lkp051+xfEHnzKs0OwCu4rybvIPu11Ip+urH8V6lUmv40Pj8t/8b0rrHxtGHLGEviWPXR3DlUor2TnfM8frBaMXEyufmFvk9tBAi"
+    "k7DfiscFI5eoQu6lCtgjVVrWbGjgSPsN7HGbRhTL8V6CLd09HbLM3CcU6PXLmFCiU08ZPncK12SPl9ynKoGas/4grCLAs8o0jRfo"
+    "i135UHUAnKR4PeCJpVL0tYpOJn/UcewxVEWtA66elyizx9Ozr/8PMIAVqdcig1bc4dJ4CrzCO3GtJ8iCTnnzN5cb5SXNoixe5jac"
+    "dqjqPESg6rVMmUH3M77CWdWh9ZXhmvcOVMhbUNm34LIAszMcNOtIRGXgYuihmzLA6A+lDO8tWGjGFnSLbmFsCE9noQ3daoWucHno"
+    "nBlYQ1Os1DKp+rWhnNM8qgqx8jmD3wOIVindVuzpazzz32lV8qi4pT0M5np6F7hOEzPrH/ORSwir7l5TfAeyULMnRnpvdWcpDRux"
+    "USIeG3AGla+opzwvK+bRru0gDK8/vJNi5MGK7SxBABDM6fzPZHT1Xe8eBbvnMhasmNIUD4LTwCVtcY87RMrx3yuXHQBnNlHSBL5q"
+    "8snX8H4ic4Vs2jmB886kk9MmfawD5BDJATt3OLWx5YIFDwPSwOpXwvkq/EtvLgRZ8MznPfPMWWhc35K34GXGfaYQWtHJMZHQkgbG"
+    "JVFFzXLsKCKj6qICGfKI8IosZ9spw+hPuOPRraE6jVzqtNG1swfutKrHpYyri3lKy/Ils8cBkK8JjPTOqDWTyX6cpAUM28PupUvE"
+    "Y49y3jijM767+3R7rk3e1uO7HVDqdzGIIwHruYC2p/Tov43m0LTgHSRCG1V25gOLuih84vkoPRk6zVVIUuqfyCmISToeZWrktlQV"
+    "AH0cipSHHR/sIxlfCfgwUDTPpq7tNP77jNyePH54eH83ubl4vHpPTi8erq9uyWU2fafKIRZh42Qj4LGBxpMZvne4dtQdebyScuRa"
+    "0UjipM5fEIW/o+4iPv9w242+DzMPmtHy19rj2Faj66JsCCRfRufsBSvWXX3nsfwrFO2uWfNsxQoMMZnKa5wLMx0BkcCuXBJRV6rc"
+    "nHUOBw6IBnyeihfdb95HcJWoFO2tZvJ8gVEaX8XLo4dtspzKG8G0hxfO2nBDIDfXq4cj7/AYDmNEiVuZ6CQMFQnPYI/ucHYhep3O"
+    "lRaAcbzhUNRrXvKpmHpd/N3Wdr7qFolkLViOt5E9B75KrYWrS7bE/QDu4QFsNF3ZMuCKKWX6Pi6amIjjIxm7CE7mlJE7ebuXIlMW"
+    "lAwPFWzpcvzucVu5X3MwCRp6iSuJKry4Hr+jsC/Pwup3txYel75LLfeCyRWK7Fsl+QKfKAyC02208Dvh0QNwvMVfyKmSJO/s6Y4v"
+    "BV6GvOTdycovbx7e4HXH8vnYsVMDaf+FFlAUK1FQ95n8Ni05Mn9ctZR1mdF42boAZ5x1VtdlCCST09Qc5P1CcxahIy71abTa2nJD"
+    "2EY6iTKo4ujjtdcQ1CVal/ztL/+VPL67IJP3MKI8O3m4IDcn7y8+3CsbAbfmZQQvOOzyehv4WFPNECJqruwaVRwtbdcrUGJkYm7x"
+    "+oJLR2WEDjkvGTEMwjjtAHl5zfMlqPSGD19YDaOZwKEJDKgubJ5l2yheiPEOZY1qr0H6BRPIGWJKChFhGHyPA1FW0xVY+hdBbqTQ"
+    "UFhpdB6Swe8SjzF8S9n1BkFKRstLaEOZsg3UaRx+QfdX5aE95RqO44YTZhIVrq537mUcn+E+zKGs3yh5EzOpbAxa0TqFPriKcQk6"
+    "Krcg57PkNwhzyKp7UIJOXimRieY2puFNnPhy9N8eFdN1m+fO9Z0d3tKXrYy+ilY2JvuuEP0iuM9apVRzFjmkd11JvoiSYw+EYeFf"
+    "0p4OwTgtAXmokxhmvteY1hzPqTZ+dWYwgs+NE9zowUgL1Hpb7rGsxdO6ev5LnbLVoFnw3N+sBtRpUotDGwOljffjLpm8RitlgRuu"
+    "AQLdhNVFKi9qXdUF60d+G/OxDOP0vxUtRe7rgvXCvH2p1wwyw15n2r6DrrK/jMbPDZbbAy3C+zef3+xtCpZ0KsT4mblSc14/+16K"
+    "7Ll8dkmT4MfaNaYuSSqiuqQeGZN6O3kR5MPkRCOXi9eIfdPCNVnA+iEyVqzRGX98q9kDcDQB70GSTBoqTc/XNHAWEdLmTtD+RmtA"
+    "og64pmR54TEAlGquwpOwmuBZ4FhvVmfjO/iOdr8CYhqujEhkxVXAkIuWzINHaw77Irw3yTs+CEu25nlWF6vF1qcUrbKrLC8+Xt2+"
+    "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"
+    "MsN2IZJ79+4fnS31wwiSAgA="
+)
+def _s92():
+    import gzip as _gz2, base64 as _b2
+    D = json.loads(_gz2.decompress(_b2.b64decode(_B92)).decode("utf-8"))
+    EV = D["ev"]
+    def nu(u): return re.sub(r"^https?://(www\.)?", "", (u or "").strip()).rstrip("/").lower()
+    ROOTS = {"crueltyfree.peta.org", "peta.org", "crueltyfree.peta.org/companies-do-test", "crueltyfree.peta.org/companies-dont-test",
+             "leapingbunny.org", "leapingbunny.org/shopping-guide", "leapingbunny.org/web/shopping-guide/brands.aspx",
+             "crueltyfreeinternational.org", "crueltyfreeinternational.org/approved-brands", "crueltyfreeinternational.org/our-approved-brands"}
+    def nk(s):
+        return re.sub(r"[^a-z0-9]", "", s.lower().replace("&", "and"))
+    stats = {"demoted": [], "certs_lb": 0, "certs_peta": 0}
+    def fix(rows):
+        for r in rows:
+            sl = r.get("slug"); ev = EV.get(sl, {}); nm = r.get("name", "")
+            keep = set(nu(u) for u in D["keep"].get(sl, []))
+            drop = set(nu(u) for u in D["drop"].get(sl, []))
+            out = []
+            for s in r.get("sources") or []:
+                u = nu(s.get("url")); lab = s.get("label", "")
+                if u in keep: out.append(s); continue
+                if u in drop or u in ROOTS: continue
+                if u.startswith("crueltyfree.peta.org/company/") and "listed as a vegan company" not in lab: continue
+                if u.startswith("crueltyfreeinternational.org/approved-brands/listing/") or u.startswith("crueltyfreeinternational.org/cruelty-free-company/") or u.startswith("crueltyfreeinternational.org/node/"): continue
+                if u.startswith("leapingbunny.org/") and not ev.get("lbg"): continue
+                out.append(s)
+            new = []
+            if ev.get("cfi"):
+                lab = "Cruelty Free International: " + nm + " in its Approved Brands directory (Leaping Bunny)"
+                if "/listing/superdrug" in ev["cfi"] and sl != "superdrug": lab = "Cruelty Free International: Superdrug's own-brand listing (covers all Superdrug own-brand toiletries and beauty)"
+                new.append({"label": lab, "url": ev["cfi"], "kind": ["cf"]})
+            if ev.get("lbg"):
+                lab = "Leaping Bunny: Compassionate Shopping Guide (lists " + ev["lbg"] + ")"
+                if not any(nu(x.get("url")) == "leapingbunny.org/shopping-guide" for x in new): new.append({"label": lab, "url": "https://www.leapingbunny.org/shopping-guide", "kind": ["cf"]})
+            if ev.get("peta"):
+                pn = ev.get("pname") or ""
+                extra = (" (listed as \"" + pn + "\")") if pn and nk(pn) != nk(nm) else ""
+                new.append({"label": "PETA: lists " + nm + " as cruelty-free" + extra, "url": ev["peta"], "kind": ["cf"]})
+            if ev.get("pdo"):
+                pn = ev.get("doname") or ""
+                extra = (" (listed as \"" + pn + "\")") if pn and nk(pn) != nk(nm) else ""
+                new.append({"label": "PETA: lists " + nm + " as a company that tests on animals" + extra, "url": ev["pdo"], "kind": ["cf"]})
+            if ev.get("pmn"):
+                new.append({"label": "PETA: " + nm + " isn't on its cruelty-free list (its page says it may not be cruelty-free)", "url": ev["pmn"], "kind": ["cf"]})
+            seen = set(nu(x["url"]) for x in new)
+            out = new + [x for x in out if nu(x.get("url")) not in seen or "listed as a vegan company" in x.get("label", "")]
+            for lab, url, kind in D["add"].get(sl, []):
+                if nu(url) not in set(nu(x.get("url")) for x in out): out.append({"label": lab, "url": url, "kind": kind})
+            r["sources"] = out
+            r["certs"] = {"lb": bool(ev.get("cfi") or ev.get("lbg")), "peta": bool(ev.get("peta"))}
+            if sl in D["tier"]: r["tier"] = D["tier"][sl]
+            if r.get("tier") in ("good", "check", "warn") and not (r["certs"]["lb"] or r["certs"]["peta"]):
+                r["tier"] = "unverified"; stats["demoted"].append(nm)
+            if r.get("tier") not in ("good", "check", "warn"): r["certs"] = {"lb": False, "peta": False}
+            if sl in D["notes"]: r["note"] = D["notes"][sl]
+            if sl in D["parent"]: r["parentCompany"] = D["parent"][sl]
+            if sl in D["cats"]: r["category"] = D["cats"][sl]
+            if sl in D["notes"] or sl in D["tier"]: r["lastVerified"] = today
+            if "peta" in (r.get("veganCert") or "").lower():   # reset here; section 93 sets PETA vegan certification again only where PETA's cruelty-free and vegan listing is proven
+                r.pop("veganCert", None)
+                if r.get("vegan") == "full": r["veganBasis"] = "brand"
+                else: r.pop("veganBasis", None)
+            stats["certs_lb"] += r["certs"]["lb"]; stats["certs_peta"] += r["certs"]["peta"]
+    for fn in ("data/brands.json", "data/peta-import.json"):
+        raw = json.load(open(fn, encoding="utf-8"))
+        rows = raw if isinstance(raw, list) else raw.get("brands", raw)
+        fix(rows)
+        json.dump(raw, open(fn, "w", encoding="utf-8"), ensure_ascii=False, **({"separators": (",", ":")} if fn.endswith("peta-import.json") else {"indent": 2})); open(fn, "a").write("\n")
+    # Stamps and cert line read the verified "certs" field, never the note text.
+    def f_pages(t):
+        a = t.index("function certLine(brand) {"); z = t.index("  let line = out.length", a)
+        new = """function certLine(brand) {
+  const c = brand.certs || {};
+  const out = [];
+  if (brand.tier === 'bad') out.push('Tests, or sells where required');
+  else if (brand.tier !== 'unverified') {
+    if (c.lb) out.push('Leaping Bunny');
+    if (c.peta) out.push('PETA');
+    if (brand.vegan === 'full' && brand.veganBasis === 'certified' && /vegan society/i.test(brand.veganCert || '')) out.push('Vegan Society');
+  }
+"""
+        return t[:a] + new + t[z:]
+    _rw("scripts/generate-brand-pages.js", f_pages)
+    _rw("js/checker-stamps.js", lambda t: t.replace('if((t==="good"||t==="check"||t==="warn")&&/Leaping Bunny|Cruelty Free International/.test(n))o.lb=1;', 'if((t==="good"||t==="check"||t==="warn")&&b.certs&&b.certs.lb)o.lb=1;').replace('if((t==="good"||t==="check"||t==="warn")&&/PETA/.test(n))o.peta=1;', 'if((t==="good"||t==="check"||t==="warn")&&b.certs&&b.certs.peta)o.peta=1;'))
+    _rw("scripts/add_stamps.py", lambda t: t.replace('if t in ("good","check","warn") and re.search("Leaping Bunny|Cruelty Free International", n): s.append("lb")', 'if t in ("good","check","warn") and (b.get("certs") or {}).get("lb"): s.append("lb")').replace('if t in ("good","check","warn") and "PETA" in n: s.append("peta")', 'if t in ("good","check","warn") and (b.get("certs") or {}).get("peta"): s.append("peta")'))
+    return stats
+_r92 = _s92()
+print("Section 92 applied: cruelty-free proof (%d brands with Leaping Bunny proof, %d with PETA proof, %d moved to not verified: %s)" % (_r92["certs_lb"], _r92["certs_peta"], len(_r92["demoted"]), ", ".join(_r92["demoted"][:40])))
+
+# ---- Section 93: deep check of not-verified brands (their own statements as sources) + PETA "cruelty-free and vegan" counts as vegan certification (Ash, 18 Oct) ----
+_B93 = (
+    "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"
+    "BoEAAA=="
+)
+def _s93():
+    import gzip as _gz3, base64 as _b3
+    D = json.loads(_gz3.decompress(_b3.b64decode(_B93)).decode("utf-8"))
+    PV = set(D["pv"])
+    import re
+    PART={'byoma','hurraw','facetheory','beauty-without-cruelty','rare-beauty','schmidts-naturals','technic-cosmetics','the-ordinary','one-with-nature','dose-of-colors'}
+    KILL=re.compile(r"(no vegan certification|not a vegan certification|isn't certified vegan|not certified vegan|brand's word only|brand's own claim|doesn't show it|isn't on PETA's vegan|not on PETA's vegan|couldn't find a vegan certification|vegan status isn't confirmed|I couldn't confirm whether its (products|range) (are|is) vegan|^PETA also lists it as a vegan company\.?$)",re.I)
+    REPL=[(r" and (shows|marks|lists) it as a vegan company"," and vegan"),(r" and as a vegan company"," and vegan"),
+          (r"Listed as cruelty-free by PETA, which also lists it as a vegan company","Listed as cruelty-free and vegan by PETA"),
+          (r"PETA also lists it as a vegan company, and its","Its"),(r"PETA lists it as a vegan company","PETA lists it as cruelty-free and vegan"),
+          (r"\s*\((not a vegan certification|the brand's own claim, not a vegan certification)\)","")]
+    def scrub(note,name):
+        note=note.replace(" That PETA listing means its whole range is free of animal-derived ingredients.","").replace("That PETA listing means its whole range is free of animal-derived ingredients.","")
+        note=note.replace("PETA lists %s as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients." % name,"").strip()
+        for a,b in REPL: note=re.sub(a,b,note)
+        sents=re.split(r'(?<=[.!?])\s+',note.strip())
+        keep=[s for s in sents if s and not KILL.search(s)]
+        has=any('PETA' in s and re.search(r'\bvegan\b',s) for s in keep)
+        if has: keep.append("That PETA listing means its whole range is free of animal-derived ingredients.")
+        else:
+            keep=[s for s in keep if s.strip() not in ("Listed by PETA as not testing on animals.", "PETA lists %s as cruelty-free." % name)]
+            keep.insert(0,"PETA lists %s as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients." % name)
+        return ' '.join(keep)
+
+    def nu(u): return re.sub(r"^https?://(www\.)?", "", (u or "").strip()).rstrip("/").lower()
+    st = {"vegan_cert": 0, "statements": 0}
+    def fix(rows):
+        for r in rows:
+            sl = r.get("slug"); nm = r.get("name", "")
+            S = r.get("sources") or []
+            for s in S:
+                lab = D["relabel"].get(sl, {}).get(s.get("url"))
+                if lab: s["label"] = lab; s["kind"] = ["cf"]
+            if sl in D["st"]:
+                lab, url = D["st"][sl]
+                hit = [s for s in S if nu(s.get("url")) == nu(url)]
+                if hit:
+                    hit[0]["label"] = lab; k = hit[0].get("kind") or []
+                    if "cf" not in k: hit[0]["kind"] = ["cf"] + k
+                else:
+                    S.append({"label": lab, "url": url, "kind": ["cf"]})
+                st["statements"] += 1
+            for lab, url, kind in D["add"].get(sl, []):
+                if nu(url) not in set(nu(x.get("url")) for x in S): S.append({"label": lab, "url": url, "kind": kind})
+            if sl in D["notes"]: r["note"] = D["notes"][sl]; r["lastVerified"] = today
+            if sl in D.get("claim", {}) and r.get("tier") == "unverified": r["claim"] = D["claim"][sl]
+            if sl == "charles-worthington": r["parentCompany"] = "PZ Cussons"
+            if sl == "kirkland-signature" and r.get("vegan") == "no": r["vegan"] = "unclear"
+            if sl in PV:
+                S = [s for s in S if "listed as a vegan company" not in s.get("label", "")]
+                for s in S:
+                    if s.get("label", "").startswith("PETA: lists " + nm + " as cruelty-free"):
+                        s["label"] = s["label"].replace(" as cruelty-free", " as cruelty-free and vegan", 1); s["kind"] = ["cf", "vegan"]
+                r["vegan"] = "full"
+                if not (r.get("veganBasis") == "certified" and r.get("veganCert") and "peta" not in r["veganCert"].lower()):
+                    r["veganBasis"] = "certified"; r["veganCert"] = "PETA"
+                if sl not in D["notes"]: r["note"] = scrub(r.get("note") or "", nm)
+                st["vegan_cert"] += 1
+            r["sources"] = S
+    for fn in ("data/brands.json", "data/peta-import.json"):
+        raw = json.load(open(fn, encoding="utf-8"))
+        rows = raw if isinstance(raw, list) else raw.get("brands", raw)
+        fix(rows)
+        json.dump(raw, open(fn, "w", encoding="utf-8"), ensure_ascii=False, **({"separators": (",", ":")} if fn.endswith("peta-import.json") else {"indent": 2})); open(fn, "a").write("\n")
+    def f_big(t):
+        a = t.find("<div class=\"bigst\"><span>' + ")
+        if a < 0: return t
+        z = t.find(" + '</span></div>'", a)
+        return t[:a] + "<div class=\"bigst\"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified))" + t[z:]
+    _rw("scripts/generate-brand-pages.js", f_big)
+    return st
+_r93 = _s93()
+print("Section 93 applied: %d brands certified vegan by PETA (cruelty-free and vegan listing), %d brand statements added as sources" % (_r93["vegan_cert"], _r93["statements"]))

@@ -69,11 +69,19 @@ function renderChecked(hasLinks) {
 }
 function renderSources(b) {
   const s = b.sources || [];
-  if (!s.length) {
-    const msg = b.tier === 'unverified' ? 'No certification or animal-testing statement could be found for this brand, so its status can\'t be verified.' : 'No source link has been added for this brand yet.';
-    return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + msg + ' Know of one? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
+  function link(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label) + '</a>'; }
+  function group(title, kind, emptyMsg) {
+    const items = s.filter(function(l){ return (l.kind || ['cf','vegan']).indexOf(kind) !== -1; });
+    const body = items.length ? items.map(link).join(' &middot; ') : emptyMsg;
+    return '<p style="font-size:12.5px;font-weight:600;margin:12px 0 3px;letter-spacing:.02em;">' + title + '</p><p style="font-size:13.5px;margin:0;">' + body + '</p>';
   }
-  return '<p class="section-label">sources</p><p style="font-size:13.5px;">' + s.map(function(l){ return '<a href="' + escapeHtml(l.url) + '" target="_blank" rel="noopener">' + escapeHtml(l.label) + '</a>'; }).join(' &middot; ') + '</p>';
+  const none = '<span style="opacity:.75;">No source found.</span>';
+  let out = '<p class="section-label">sources</p>';
+  out += group('Cruelty-free', 'cf', none);
+  if (b.vegan && b.vegan !== 'unknown' || s.some(function(l){ return (l.kind || []).indexOf('vegan') !== -1; })) out += group('Vegan', 'vegan', none);
+  if (b.parentCompany || s.some(function(l){ return (l.kind || []).indexOf('owner') !== -1; })) out += group('Owner', 'owner', none);
+  out += '<p style="font-size:13.5px;margin:12px 0 0;">Know of a source? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
+  return out;
 }
 function renderLinks(links) {
   if (!links || links.length === 0) return '';
@@ -138,14 +146,13 @@ function pkHtml(brand) {
   return '<div class="pk ' + shape + '" style="--c:' + col + ';--cap:#3A1F3D"></div>';
 }
 function certLine(brand) {
-  const n = String(brand.note || '').toLowerCase();
+  const c = brand.certs || {};
   const out = [];
   if (brand.tier === 'bad') out.push('Tests, or sells where required');
   else if (brand.tier !== 'unverified') {
-    if (/leaping bunny/.test(n)) out.push('Leaping Bunny');
-    else if (/cruelty free international/.test(n)) out.push('Cruelty Free International');
-    if (/\bpeta\b/.test(n) && !/company that tests/.test(n)) out.push('PETA');
-    if (/vegan society/.test(n)) out.push('Vegan Society');
+    if (c.lb) out.push('Leaping Bunny');
+    if (c.peta) out.push('PETA');
+    if (brand.vegan === 'full' && brand.veganBasis === 'certified' && /vegan society/i.test(brand.veganCert || '')) out.push('Vegan Society');
   }
   let line = out.length ? (out.length === 1 && brand.tier !== 'bad' ? out[0] + ' certified' : out.join(' &middot; ')) : TIER_SHORT[brand.tier] || '';
   if (!brand.parentCompany && brand.tier !== 'bad' && brand.tier !== 'unverified') line += ' &middot; ' + (ownerWord(brand) === 'Independent' ? 'Independent' : brand.uncheckedOn ? 'owner not checked yet' : 'owner unknown');
@@ -205,7 +212,7 @@ function renderBrandPage(brand) {
   const title = pageTitle(brand);
   const description = pageDescription(brand);
   const canonical = SITE_URL + '/brands/' + brand.slug;
-  const veganLine = brand.vegan === 'full' ? (brand.veganBasis === 'certified' ? '100% vegan (certified by ' + escapeHtml(brand.veganCert || 'a vegan certifier') + ')' : brand.veganBasis === 'brand' ? "100% vegan (brand's word, no vegan certification)" : '100% vegan (certifier not yet confirmed)')
+  const veganLine = brand.vegan === 'full' ? (brand.veganBasis === 'certified' ? 'Vegan, certified by ' + escapeHtml(brand.veganCert || 'a vegan certifier') : brand.veganBasis === 'brand' ? "Says it's vegan, not certified" : 'not yet confirmed')
     : brand.vegan === 'partial' ? (brand.veganCert ? 'varies by product (some certified by ' + escapeHtml(brand.veganCert) + ')' : 'varies by product')
     : brand.vegan === 'no' ? 'not vegan'
     : (brand.uncheckedOn ? 'not checked yet (as of ' + brand.uncheckedOn + ')' : 'not yet confirmed');
@@ -287,7 +294,7 @@ function renderBrandPage(brand) {
   const catLabel = (brand.category && brand.category.length) ? brand.category.map(function(c){ return escapeHtml(c.replace(/-/g, ' ').replace('makeup beauty', 'makeup').replace('paper hygiene', 'toilet paper and tissues').replace('period menstrual', 'period care').replace('household cleaning', 'household')); }).join(' &middot; ') : '';
   lines.push('<div class="k-bp-grid"><div class="k-bp-l">');
   lines.push('<div class="bp">' + (hasLogo ? '<div class="k-arch-box has-logo"><img src="../../images/brand-logos/' + brand.slug + '.png" alt="' + escapeHtml(brand.name) + ' logo" width="132" height="96" loading="lazy"></div>' : '<div class="k-arch-box" style="background:' + TIER_WASH[brand.tier === 'unknown' ? 'unverified' : brand.tier] + '">' + pkHtml(brand) + '</div>') + '<div><p class="k-kick bp-k">' + catLabel + '</p><h1>' + escapeHtml(brand.name) + '</h1><p>' + certLine(brand) + '</p></div></div>');
-  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)))))))))))))))))))))))))))))))))))))))))))))))))))))))))) + '</span></div>');
+  lines.push('<div class="vcard tier-' + tier.className + '"><div class="bigst"><span>' + (brand.tier === 'unverified' && brand.claim ? '<b>says</b>CF' : (STAMP_TEXT[brand.tier] || STAMP_TEXT.unverified)) + '</span></div>');
   lines.push('<h2>' + (brand.tier === 'unverified' && brand.claim ? CLAIM_HEADLINE : (brand.uncheckedOn && brand.tier === 'check' && (!brand.vegan || brand.vegan === 'unknown') ? 'Cruelty-free. Vegan status not checked yet.' : (VERDICT_HEADLINE[brand.tier] || VERDICT_HEADLINE.unverified))) + '</h2>');
   if (brand.tier !== 'good' && brand.tier !== 'check') lines.push('<p>' + escapeHtml(brand.note) + '</p>');
   if (parentTestFlag) lines.push(parentTestFlag);
@@ -318,6 +325,8 @@ function renderBrandPage(brand) {
 
   return lines.join('\n');
 }
+
+
 
 
 

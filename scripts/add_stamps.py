@@ -7,7 +7,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
 (function () {
   var S = {
     vegan: { short: "V",     img: null, title: "Vegan", who: null,
-             means: "This brand's products are listed as 100% vegan. The source is on the brand page.", url: null },
+             means: "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure.", url: null },
     vegsays: { short: "V", img: null, title: "Says it's vegan", who: null,
              means: "The brand says all of its products are vegan, but no vegan certification (such as the Vegan Society) has been found. Check the label if you need to be sure.", url: null },
     unk:   { short: "?",    img: null, title: "Not certified", who: null,
@@ -15,7 +15,7 @@ JS = r'''/* A Home Kind: certification + ethical rating stamps. Plain JS, no dep
     ncf:   { short: "X",     img: null, title: "Tests on animals", who: null,
              means: "This brand, or the company behind it, tests on animals or sells where animal testing is required by law. The source is on the brand page.", url: null },
     vegcert: { short: "V", img: null, title: "Certified vegan", who: null,
-             means: "A vegan certifier, such as the Vegan Society or V-Label, has certified this brand's products. The certifier is named on the brand page.", url: null },
+             means: "A vegan certifier, such as the Vegan Society or V-Label, has certified this brand's products. The certifier is named on the brand page and the proof is linked in Sources.", url: null },
     lb:    { short: "LB",    img: null, title: "Leaping Bunny", who: "Cruelty Free International (CCIC in the US and Canada)",
              means: "Certified by Leaping Bunny: no animal testing of ingredients or finished products, anywhere in the world, backed by supplier checks and regular audits.", url: "https://www.leapingbunny.org" },
     peta:  { short: "PETA",  img: null, title: "PETA cruelty-free", who: "PETA (Beauty Without Bunnies)",
@@ -109,9 +109,9 @@ for b in brands:
     s = []
     if t == "unverified": s.append("unk")
     if t == "bad": s.append("ncf")
-    if b.get("vegan") == "full": s.append("vegcert" if b.get("veganBasis") == "certified" else "vegsays" if b.get("veganBasis") == "brand" else "vegan")
-    if t in ("good","check","warn") and re.search("Leaping Bunny|Cruelty Free International", n): s.append("lb")
-    if t in ("good","check","warn") and "PETA" in n: s.append("peta")
+    if b.get("vegan") == "full" and b.get("veganBasis") in ("certified", "brand"): s.append("vegcert" if b.get("veganBasis") == "certified" else "vegsays")
+    if t in ("good","check","warn") and (b.get("certs") or {}).get("lb"): s.append("lb")
+    if t in ("good","check","warn") and (b.get("certs") or {}).get("peta"): s.append("peta")
     g = GOY.get(b["slug"]); ga = (' data-g="%d" data-u="%s"' % g) if g else ""
     div = '%s<div class="ahk-stamps-mount" data-s="%s"%s></div>' % (MARK, ",".join(s), ga)
     h = h.replace("</h1>", "</h1>" + div, 1)
