@@ -80,6 +80,7 @@ function renderSources(b) {
   out += group('Cruelty-free', 'cf', none);
   if (b.vegan && b.vegan !== 'unknown' || s.some(function(l){ return (l.kind || []).indexOf('vegan') !== -1; })) out += group('Vegan', 'vegan', none);
   if (b.parentCompany || s.some(function(l){ return (l.kind || []).indexOf('owner') !== -1; })) out += group('Owner', 'owner', none);
+  if (b.aliases && b.aliases.length) out += '<p style="font-size:13.5px;margin:12px 0 0;">Also known as: ' + b.aliases.map(escapeHtml).join(', ') + '.</p>';
   out += '<p style="font-size:13.5px;margin:12px 0 0;">Know of a source? <a href="mailto:hello@ahomekind.com?subject=source%20for%20' + encodeURIComponent(b.name) + '">Let me know</a>.</p>';
   return out;
 }
@@ -325,6 +326,8 @@ function renderBrandPage(brand) {
 
   return lines.join('\n');
 }
+
+
 
 
 

@@ -131,10 +131,10 @@
   {
     "slug": "7th-heaven",
     "name": "7th Heaven",
-    "tier": "check",
-    "note": "For over 30 years stood against animal testing, a founding CICAW member, approved by Cruelty Free International. Cruelty-free approved by Cruelty Free International.",
+    "tier": "good",
+    "note": "7th Heaven is the new name of Montagne Jeunesse, and Montagne Jeunesse's old website redirects here, so this is the same brand as Montagne Jeunesse. Cruelty Free International lists it as approved under the name 7th Heaven (Leaping Bunny), and PETA lists it as cruelty-free under the name Montagne Jeunesse. It says its products are always vegan and mentions membership of the Vegetarian Society. A UK brand making its products in Britain since 1985.",
     "parentCompany": null,
-    "vegan": "unknown",
+    "vegan": "full",
     "evidence": "",
     "products": [],
     "alternatives": [],
@@ -144,20 +144,49 @@
     ],
     "region": "Europe",
     "veganConfidence": "low",
-    "lastVerified": "2026-09-09",
+    "lastVerified": "2026-10-18",
     "sources": [
       {
-        "label": "Cruelty Free International: 7th Heaven in its Approved Brands directory (Leaping Bunny)",
+        "label": "Cruelty Free International: 7th Heaven (formerly Montagne Jeunesse) in its Approved Brands directory (Leaping Bunny)",
         "url": "https://www.crueltyfreeinternational.org/approved-brands/listing/7th-heaven/",
         "kind": [
           "cf"
+        ]
+      },
+      {
+        "label": "PETA: lists Montagne Jeunesse (now 7th Heaven) as cruelty-free",
+        "url": "https://crueltyfree.peta.org/company/montagne-jeunesse/",
+        "kind": [
+          "cf"
+        ]
+      },
+      {
+        "label": "7th Heaven: homepage ('always vegan & cruelty-free'; montagnejeunesse.com redirects here, checked 15 Oct 2026)",
+        "url": "https://my7thheaven.com/",
+        "kind": [
+          "cf",
+          "vegan"
+        ]
+      },
+      {
+        "label": "7th Heaven: Our Story (Cruelty Free International, PETA and Vegetarian Society memberships)",
+        "url": "https://my7thheaven.com/pages/our-story",
+        "kind": [
+          "cf",
+          "vegan"
         ]
       }
     ],
     "certs": {
       "lb": true,
-      "peta": false
-    }
+      "peta": true
+    },
+    "veganBasis": "brand",
+    "aliases": [
+      "Montagne Jeunesse",
+      "Seventh Heaven",
+      "Jeunesse"
+    ]
   },
   {
     "slug": "a-little-something",
@@ -291,7 +320,7 @@
     "slug": "acure",
     "name": "Acure",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": "Better Planet Brands",
     "vegan": "unknown",
     "evidence": "",
@@ -1165,7 +1194,7 @@
     "slug": "andalou-naturals",
     "name": "Andalou Naturals",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -1922,7 +1951,7 @@
     "slug": "astonish",
     "name": "Astonish",
     "tier": "good",
-    "note": "UK-manufactured, Leaping Bunny and PETA certified cruelty-free, and states its full range is vegan. That PETA listing means its whole range is free of animal-derived ingredients.",
+    "note": "UK-manufactured, Leaping Bunny and PETA certified cruelty-free, and states its full range is vegan. Certified vegan by Vegan Society. That PETA listing means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -2128,7 +2157,7 @@
     "slug": "aunt-fannies",
     "name": "Aunt Fannie's",
     "tier": "check",
-    "note": "PETA lists Aunt Fannie's as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Aunt Fannie's as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -3178,7 +3207,7 @@
     "slug": "beauty-kitchen",
     "name": "Beauty Kitchen",
     "tier": "check",
-    "note": "Cruelty-free and B-Corp certified, but only some products are vegan-certified -- check the individual product.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Cruelty-free and B-Corp certified, but only some products are vegan-certified -- check the individual product.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -3319,7 +3348,7 @@
     "slug": "beekman-1802",
     "name": "Beekman 1802",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -3957,7 +3986,7 @@
     "slug": "biossance",
     "name": "Biossance",
     "tier": "check",
-    "note": "PETA lists Biossance as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Biossance as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -5171,7 +5200,7 @@
     "slug": "burts-bees",
     "name": "Burt's Bees",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": "Clorox",
     "vegan": "unknown",
     "evidence": "",
@@ -5611,7 +5640,7 @@
     "slug": "callen-olive",
     "name": "Callen Olive",
     "tier": "good",
-    "note": "100% vegan skincare targeting the specific needs of legs and feet, developed by a podiatrist. Cruelty-free approved by Cruelty Free International.",
+    "note": "100% vegan skincare targeting the specific needs of legs and feet, developed by a podiatrist. Cruelty-free approved by Cruelty Free International. Certified vegan by Vegan Society.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -5751,15 +5780,15 @@
     "region": "Europe",
     "sources": [
       {
-        "label": "PETA: lists PZ Cussons (Carex's owner) as cruelty-free; the listing doesn't name Carex",
-        "url": "https://crueltyfree.peta.org/company/pz-cussions/",
+        "label": "PZ Cussons (owner): its Code of Ethical Conduct on animal testing (\"We are against all forms of animal testing in the development or marketing of our products.\")",
+        "url": "https://www.pzcussons.com/wp-content/uploads/2021/04/Code-of-Ethical-Conduct-V12-English.pdf",
         "kind": [
           "cf"
         ]
       },
       {
-        "label": "PZ Cussons (owner): its Code of Ethical Conduct on animal testing (\"We are against all forms of animal testing in the development or marketing of our products.\")",
-        "url": "https://www.pzcussons.com/wp-content/uploads/2021/04/Code-of-Ethical-Conduct-V12-English.pdf",
+        "label": "PETA: lists PZ Cussons (Carex's owner) as cruelty-free; the listing doesn't name Carex",
+        "url": "https://crueltyfree.peta.org/company/pz-cussions/",
         "kind": [
           "cf"
         ]
@@ -8284,7 +8313,7 @@
     "slug": "desert-essence",
     "name": "Desert Essence",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -8384,7 +8413,7 @@
     "slug": "devacurl",
     "name": "DevaCurl",
     "tier": "warn",
-    "note": "PETA certified cruelty-free, owned by Henkel.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA certified cruelty-free, owned by Henkel.",
     "parentCompany": "Henkel",
     "vegan": "unknown",
     "evidence": "",
@@ -9679,7 +9708,7 @@
     "slug": "eco-dent-international",
     "name": "Eco-DenT International",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -13072,15 +13101,15 @@
         ]
       },
       {
-        "label": "PETA: lists Goldwell Dualsenses (Kao Germany) as cruelty-free (this line only, not all of Goldwell)",
-        "url": "https://crueltyfree.peta.org/company/goldwell-dualsenses-kao-germany/",
+        "label": "Goldwell: its own site on PETA certification (\"Our Dualsenses and StyleSign ranges hold official PETA certification\")",
+        "url": "https://www.goldwell.com/en-za/about-goldwell/",
         "kind": [
           "cf"
         ]
       },
       {
-        "label": "Goldwell: its own site on PETA certification (\"Our Dualsenses and StyleSign ranges hold official PETA certification\")",
-        "url": "https://www.goldwell.com/en-za/about-goldwell/",
+        "label": "PETA: lists Goldwell Dualsenses (Kao Germany) as cruelty-free (this line only, not all of Goldwell)",
+        "url": "https://crueltyfree.peta.org/company/goldwell-dualsenses-kao-germany/",
         "kind": [
           "cf"
         ]
@@ -14168,7 +14197,7 @@
     "slug": "herbivore-botanicals",
     "name": "Herbivore Botanicals",
     "tier": "check",
-    "note": "PETA lists Herbivore Botanicals as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Herbivore Botanicals as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -14368,7 +14397,7 @@
     "slug": "honeybee-gardens",
     "name": "Honeybee Gardens",
     "tier": "check",
-    "note": "PETA lists Honeybee Gardens as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Honeybee Gardens as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -14811,15 +14840,15 @@
     "region": "Europe",
     "sources": [
       {
-        "label": "PETA: lists PZ Cussons (Imperial Leather's owner) as cruelty-free; the listing doesn't name Imperial Leather",
-        "url": "https://crueltyfree.peta.org/company/pz-cussions/",
+        "label": "PZ Cussons (owner): its Code of Ethical Conduct on animal testing (\"We are against all forms of animal testing in the development or marketing of our products.\")",
+        "url": "https://www.pzcussons.com/wp-content/uploads/2021/04/Code-of-Ethical-Conduct-V12-English.pdf",
         "kind": [
           "cf"
         ]
       },
       {
-        "label": "PZ Cussons (owner): its Code of Ethical Conduct on animal testing (\"We are against all forms of animal testing in the development or marketing of our products.\")",
-        "url": "https://www.pzcussons.com/wp-content/uploads/2021/04/Code-of-Ethical-Conduct-V12-English.pdf",
+        "label": "PETA: lists PZ Cussons (Imperial Leather's owner) as cruelty-free; the listing doesn't name Imperial Leather",
+        "url": "https://crueltyfree.peta.org/company/pz-cussions/",
         "kind": [
           "cf"
         ]
@@ -15288,7 +15317,7 @@
     "slug": "jr-watkins",
     "name": "J.R. Watkins",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -15878,7 +15907,7 @@
     "slug": "juice-beauty",
     "name": "Juice Beauty",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -15917,7 +15946,7 @@
     "slug": "julep-beauty",
     "name": "Julep Beauty",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -18021,7 +18050,7 @@
     "slug": "lime-crime",
     "name": "Lime Crime",
     "tier": "check",
-    "note": "PETA lists Lime Crime as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Lime Crime as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -19010,7 +19039,7 @@
     "slug": "lys-beauty",
     "name": "LYS Beauty",
     "tier": "check",
-    "note": "PETA lists LYS Beauty as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists LYS Beauty as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -21467,7 +21496,7 @@
     "slug": "mrs-meyers-clean-day",
     "name": "Mrs. Meyers Clean Day",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": "The Caldrea Company",
     "vegan": "unknown",
     "evidence": "",
@@ -22261,7 +22290,7 @@
     "slug": "naturium",
     "name": "Naturium",
     "tier": "check",
-    "note": "PETA lists Naturium as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Owned by e.l.f. Beauty, Inc.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Naturium as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Owned by e.l.f. Beauty, Inc.",
     "parentCompany": "e.l.f. Beauty",
     "vegan": "full",
     "evidence": "",
@@ -24108,7 +24137,7 @@
     "slug": "osea",
     "name": "OSEA",
     "tier": "check",
-    "note": "PETA lists OSEA as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists OSEA as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": "OSEA Malibu",
     "vegan": "full",
     "evidence": "",
@@ -25409,7 +25438,7 @@
     "slug": "pipette",
     "name": "Pipette",
     "tier": "check",
-    "note": "PETA lists Pipette as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Pipette as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -25752,7 +25781,7 @@
     "slug": "prai-beauty",
     "name": "PRAI Beauty",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -28175,6 +28204,13 @@
         "kind": [
           "owner"
         ]
+      },
+      {
+        "label": "Colgate-Palmolive: its own animal testing policy",
+        "url": "https://www.colgatepalmolive.com/en-us/who-we-are/blog/our-commitment-to-animal-welfare",
+        "kind": [
+          "cf"
+        ]
       }
     ],
     "certs": {
@@ -30490,7 +30526,7 @@
     "slug": "sparitual",
     "name": "SpaRitual",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -31113,7 +31149,7 @@
     "slug": "sun-bum",
     "name": "Sun Bum",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -31415,7 +31451,7 @@
     "slug": "supergoop",
     "name": "Supergoop!",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -32445,7 +32481,7 @@
     "slug": "the-cocoon-original-vietnam",
     "name": "The COCOON ORIGINAL VIETNAM",
     "tier": "good",
-    "note": "PETA lists The COCOON ORIGINAL VIETNAM as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. A 100% vegan cosmetics brand from Vietnam reflecting true Vietnamese beauty. Cruelty-free approved by Cruelty Free International.",
+    "note": "PETA lists The COCOON ORIGINAL VIETNAM as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. A 100% vegan cosmetics brand from Vietnam reflecting true Vietnamese beauty. Cruelty-free approved by Cruelty Free International. Certified vegan by Vegan Society.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -33090,7 +33126,7 @@
     "slug": "thrive-causemetics",
     "name": "Thrive Causemetics",
     "tier": "check",
-    "note": "PETA lists Thrive Causemetics as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Thrive Causemetics as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -34019,7 +34055,7 @@
     "slug": "true-botanicals",
     "name": "True Botanicals",
     "tier": "check",
-    "note": "PETA lists True Botanicals as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists True Botanicals as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "evidence": "",
@@ -35569,7 +35605,7 @@
     "slug": "wild",
     "name": "Wild",
     "tier": "warn",
-    "note": "Leaping Bunny certified and vegan itself. Bought by Unilever in April 2025, which isn't cruelty-free.",
+    "note": "Leaping Bunny certified and vegan itself. Bought by Unilever in April 2025, which isn't cruelty-free. Certified vegan by Vegan Society.",
     "parentCompany": "Unilever",
     "vegan": "full",
     "evidence": "",
@@ -36025,7 +36061,7 @@
     "slug": "youngblood-mineral-cosmetics",
     "name": "Youngblood Mineral Cosmetics",
     "tier": "check",
-    "note": "Listed by PETA as not testing on animals.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as not testing on animals.",
     "parentCompany": null,
     "vegan": "unknown",
     "evidence": "",
@@ -36063,7 +36099,7 @@
     "slug": "youth-to-the-people",
     "name": "Youth To The People",
     "tier": "warn",
-    "note": "PETA lists Youth To The People as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Listed by PETA as not testing on animals, but owned by L'Oréal, which announced the purchase in December 2021. L'Oréal sells in mainland China, where animal testing can still be required, so its parent isn't cruelty-free.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Youth To The People as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Listed by PETA as not testing on animals, but owned by L'Oréal, which announced the purchase in December 2021. L'Oréal sells in mainland China, where animal testing can still be required, so its parent isn't cruelty-free.",
     "parentCompany": "L'Oréal",
     "vegan": "full",
     "evidence": "",
@@ -36409,7 +36445,7 @@
     "slug": "margaret-dabbs-london",
     "name": "Margaret Dabbs London",
     "tier": "warn",
-    "note": "UK podiatry-led beauty brand. States it does not test on animals, but its separate “PURE Vegan” line suggests the wider range isn't fully vegan.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. UK podiatry-led beauty brand. States it does not test on animals, but its separate “PURE Vegan” line suggests the wider range isn't fully vegan.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "Cruelty Free International listing",
@@ -39043,7 +39079,8 @@
     "certs": {
       "lb": false,
       "peta": false
-    }
+    },
+    "veganBasis": "brand"
   },
   {
     "slug": "sympli-beautiful",
@@ -40208,7 +40245,7 @@
     "slug": "makeup-by-mario",
     "name": "Makeup by Mario",
     "tier": "check",
-    "note": "Listed by PETA as cruelty-free. Not every product is vegan, and no vegan certification is named. Founded by Mario Dedivanovic, with minority investment from Provenance and Silas Capital in 2023. It was reported to be exploring a sale in 2024, but I found no completed sale.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Listed by PETA as cruelty-free. Not every product is vegan, and no vegan certification is named. Founded by Mario Dedivanovic, with minority investment from Provenance and Silas Capital in 2023. It was reported to be exploring a sale in 2024, but I found no completed sale.",
     "parentCompany": null,
     "vegan": "partial",
     "evidence": "",
@@ -41433,7 +41470,8 @@
     "certs": {
       "lb": false,
       "peta": false
-    }
+    },
+    "veganBasis": "brand"
   },
   {
     "slug": "beauty-pie",
@@ -41481,7 +41519,7 @@
     "slug": "bliss",
     "name": "Bliss",
     "tier": "check",
-    "note": "Bliss is listed as cruelty-free by PETA, and its own website says it is cruelty-free. Owned by AS Beauty Group, which bought the brand in January 2023. Some Bliss products are vegan, but I couldn't find a vegan certification for the range. I couldn't find Bliss on the Leaping Bunny / Cruelty Free International programme.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. Bliss is listed as cruelty-free by PETA, and its own website says it is cruelty-free. Owned by AS Beauty Group, which bought the brand in January 2023. Some Bliss products are vegan, but I couldn't find a vegan certification for the range.",
     "parentCompany": "AS Beauty Group",
     "vegan": "partial",
     "veganConfidence": "medium",
@@ -41804,7 +41842,7 @@
     "slug": "montagne-jeunesse",
     "name": "Montagne Jeunesse",
     "tier": "good",
-    "note": "Montagne Jeunesse now trades as 7th Heaven, and its old website redirects to the 7th Heaven site. Cruelty Free International lists it under its new name, 7th Heaven, and PETA lists it as cruelty-free. It says its products are always vegan and mentions membership of the Vegetarian Society. A UK brand making its products in Britain since 1985.",
+    "note": "Montagne Jeunesse now trades as 7th Heaven, and its old website redirects to the 7th Heaven site, so this is the same brand as 7th Heaven. Cruelty Free International lists it as approved under the name 7th Heaven (Leaping Bunny), and PETA lists it as cruelty-free under the name Montagne Jeunesse. It says its products are always vegan and mentions membership of the Vegetarian Society. A UK brand making its products in Britain since 1985.",
     "parentCompany": null,
     "vegan": "full",
     "veganConfidence": "medium",
@@ -41815,14 +41853,14 @@
     ],
     "sources": [
       {
-        "label": "Cruelty Free International: Montagne Jeunesse in its Approved Brands directory (Leaping Bunny)",
+        "label": "Cruelty Free International: 7th Heaven (formerly Montagne Jeunesse) in its Approved Brands directory (Leaping Bunny)",
         "url": "https://www.crueltyfreeinternational.org/approved-brands/listing/7th-heaven/",
         "kind": [
           "cf"
         ]
       },
       {
-        "label": "PETA: lists Montagne Jeunesse as cruelty-free",
+        "label": "PETA: lists Montagne Jeunesse (now 7th Heaven) as cruelty-free",
         "url": "https://crueltyfree.peta.org/company/montagne-jeunesse/",
         "kind": [
           "cf"
@@ -41851,12 +41889,16 @@
     "alternatives": [],
     "links": [],
     "region": "",
-    "claim": "",
     "lastVerified": "2026-10-18",
     "certs": {
       "lb": true,
       "peta": true
-    }
+    },
+    "aliases": [
+      "7th Heaven",
+      "Seventh Heaven",
+      "Jeunesse"
+    ]
   },
   {
     "slug": "natio",
@@ -41976,7 +42018,7 @@
     "slug": "dose-of-colors",
     "name": "Dose of Colors",
     "tier": "check",
-    "note": "PETA lists Dose of Colors as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Dose of Colors says it is Leaping Bunny / Cruelty Free International certified, but I couldn't confirm this on the certifier's own site. Founded by Anna Petrosian in California; I couldn't find any sale to a larger company.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Dose of Colors as cruelty-free and vegan, which means its whole range is free of animal-derived ingredients. Founded by Anna Petrosian in California; I couldn't find any sale to a larger company.",
     "parentCompany": null,
     "vegan": "full",
     "veganConfidence": "medium",
@@ -43997,7 +44039,7 @@
     "slug": "overtone-haircare",
     "name": "oVertone Haircare",
     "tier": "good",
-    "note": "PETA lists oVertone as cruelty-free and vegan. Its About page describes a 100% vegan, cruelty-free formula with no animal trials. Founded by Maegan Scarlett and Liora Dudar; I couldn't find who owns it now. I couldn't find oVertone on the Leaping Bunny / Cruelty Free International list. That PETA listing means its whole range is free of animal-derived ingredients.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists oVertone as cruelty-free and vegan. Its About page describes a 100% vegan, cruelty-free formula with no animal trials. Founded by Maegan Scarlett and Liora Dudar; I couldn't find who owns it now. That PETA listing means its whole range is free of animal-derived ingredients.",
     "parentCompany": null,
     "vegan": "full",
     "veganConfidence": "high",
@@ -44878,7 +44920,7 @@
     "slug": "babo-botanicals",
     "name": "Babo Botanicals",
     "tier": "check",
-    "note": "PETA lists Babo Botanicals as cruelty-free, but not as vegan. It says it does not test products or ingredients on animals, and that many of its products are vegan, but has no vegan certification. I couldn't find a Leaping Bunny / Cruelty Free International certification. Founded in 2010 by Kate Solomon and describes itself as family-owned.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Babo Botanicals as cruelty-free, but not as vegan. It says it does not test products or ingredients on animals, and that many of its products are vegan, but has no vegan certification. Founded in 2010 by Kate Solomon and describes itself as family-owned.",
     "parentCompany": null,
     "vegan": "partial",
     "veganConfidence": "medium",
@@ -45273,7 +45315,7 @@
     "slug": "peace-out-skincare",
     "name": "Peace Out Skincare",
     "tier": "good",
-    "note": "PETA lists Peace Out Skincare as cruelty-free. Its FAQ says all its products are vegan, but it has no vegan certification. It was founded by Enrico Frezza in 2017, and in 2022 took a $20 million growth investment from 5th Century Partners. I couldn't find any sale of the brand since.",
+    "note": "Certified cruelty-free by Leaping Bunny / Cruelty Free International. PETA lists Peace Out Skincare as cruelty-free. Its FAQ says all its products are vegan, but it has no vegan certification. It was founded by Enrico Frezza in 2017, and in 2022 took a $20 million growth investment from 5th Century Partners. I couldn't find any sale of the brand since.",
     "parentCompany": null,
     "vegan": "full",
     "veganConfidence": "medium",

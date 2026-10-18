@@ -3849,3 +3849,71 @@ def _s93():
     return st
 _r93 = _s93()
 print("Section 93 applied: %d brands certified vegan by PETA (cruelty-free and vegan listing), %d brand statements added as sources" % (_r93["vegan_cert"], _r93["statements"]))
+
+# ---- Section 94: Leaping Bunny wording fix, 7th Heaven = Montagne Jeunesse, search aliases (Ash, 18 Oct) ----
+def _s94():
+    st = {"notes_cleaned": 0}
+    LBBAD = re.compile(r"[^.!?]*\b(couldn't|could not|can't|cannot|unable to)\b[^.!?]*\b(confirm|find|verify)\b[^.!?]*(Leaping Bunny|Cruelty Free International|certifier)[^.!?]*[.!?]\s*", re.I)
+    PETABAD = re.compile(r"[^.!?]*(PETA doesn't list it|isn't (listed )?on PETA|not (listed )?on PETA|couldn't find it on PETA|isn't listed by PETA)[^.!?]*[.!?]\s*", re.I)
+    MJ = "montagne-jeunesse"; SH = "7th-heaven"
+    raw = json.load(open("data/brands.json", encoding="utf-8"))
+    by = {r["slug"]: r for r in raw}
+    for r in raw:
+        c = r.get("certs") or {}
+        n = r.get("note") or ""
+        n0 = n
+        if c.get("lb"):
+            n = LBBAD.sub(" ", n)
+            if not re.search(r"Leaping Bunny|Cruelty Free International", n):
+                n = ("Certified cruelty-free by Leaping Bunny / Cruelty Free International. " + n).strip()
+        if c.get("peta"):
+            n = PETABAD.sub(" ", n)
+        n = re.sub(r"\s{2,}", " ", n).strip()
+        if n != n0: r["note"] = n; st["notes_cleaned"] += 1
+    m, s = by.get(MJ), by.get(SH)
+    if m and s:
+        src = []
+        for x in m.get("sources") or []:
+            y = dict(x)
+            if y["label"].startswith("Cruelty Free International: Montagne Jeunesse"):
+                y["label"] = "Cruelty Free International: 7th Heaven (formerly Montagne Jeunesse) in its Approved Brands directory (Leaping Bunny)"
+            if y["label"].startswith("PETA: lists Montagne Jeunesse"):
+                y["label"] = "PETA: lists Montagne Jeunesse (now 7th Heaven) as cruelty-free"
+            src.append(y)
+        for rec in (m, s):
+            rec["sources"] = [dict(x) for x in src]
+            rec["certs"] = {"lb": True, "peta": True}
+            rec["tier"] = "good"
+            rec["vegan"] = "full"; rec["veganBasis"] = "brand"; rec.pop("veganCert", None)
+            rec["lastVerified"] = today
+        m["aliases"] = ["7th Heaven", "Seventh Heaven", "Jeunesse"]
+        s["aliases"] = ["Montagne Jeunesse", "Seventh Heaven", "Jeunesse"]
+        base = ("Cruelty Free International lists it as approved under the name 7th Heaven (Leaping Bunny), and PETA lists it as cruelty-free under the name Montagne Jeunesse. "
+                "It says its products are always vegan and mentions membership of the Vegetarian Society. A UK brand making its products in Britain since 1985.")
+        m["note"] = "Montagne Jeunesse now trades as 7th Heaven, and its old website redirects to the 7th Heaven site, so this is the same brand as 7th Heaven. " + base
+        s["note"] = "7th Heaven is the new name of Montagne Jeunesse, and Montagne Jeunesse's old website redirects here, so this is the same brand as Montagne Jeunesse. " + base
+        for rec in (m, s):
+            rec.pop("claim", None)
+    json.dump(raw, open("data/brands.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False); open("data/brands.json", "a").write("\n")
+    # Search: let aliases find a brand on the brand checker.
+    def f_gen(t):
+        old = "(brand.veganBasis === 'brand' ? ' data-vegsays=\"1\"' : '') + '>' +"
+        new = "(brand.veganBasis === 'brand' ? ' data-vegsays=\"1\"' : '') + (brand.aliases && brand.aliases.length ? ' data-aliases=\"' + String(brand.aliases.join(' ')).replace(/[\"<>&]/g, '') + '\"' : '') + '>' +"
+        if "data-aliases" in t: return t
+        return t.replace(old, new, 1)
+    _rw("scripts/generate-brand-check.js", f_gen)
+    def f_bc(t):
+        old = "card.dataset.searchName = normalizeSearch(name);"
+        new = "card.dataset.searchName = normalizeSearch(name) + '|' + normalizeSearch(card.dataset.aliases || '');"
+        return t.replace(old, new, 1) if old in t else t
+    _rw("brand-check.html", f_bc)
+    # Brand pages: show "Also known as" under the sources when a brand has aliases.
+    def f_pg(t):
+        if "Also known as" in t: return t
+        old = "  out += '<p style=\"font-size:13.5px;margin:12px 0 0;\">Know of a source?"
+        new = "  if (b.aliases && b.aliases.length) out += '<p style=\"font-size:13.5px;margin:12px 0 0;\">Also known as: ' + b.aliases.map(escapeHtml).join(', ') + '.</p>';\n" + old
+        return t.replace(old, new, 1)
+    _rw("scripts/generate-brand-pages.js", f_pg)
+    return st
+_r94 = _s94()
+print("Section 94 applied: Leaping Bunny wording fixed on %d notes; 7th Heaven and Montagne Jeunesse linked" % _r94["notes_cleaned"])
