@@ -352,6 +352,8 @@ function renderBrandPage(brand) {
 
 
 
+
+
 function aboutText(brand) {
   if (brand.tier !== 'good' && brand.tier !== 'check') return '';
   const sents = String(brand.note || '').split(/(?<=[.!?])\s+/).map(function (s) { return s.trim(); }).filter(Boolean);

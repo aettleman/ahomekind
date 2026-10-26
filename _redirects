@@ -35,3 +35,23 @@
 /food /learn.html 301
 /fashion.html /learn.html 301
 /fashion /learn.html 301
+
+# 26 Oct 2026: duplicate brand pages merged; Ciate London removed (brand gone)
+/brands/nyx-professional-makeup/ /brands/nyx/ 301
+/brands/nyx-professional-makeup /brands/nyx/ 301
+/brands/bic-corporation/ /brands/bic/ 301
+/brands/bic-corporation /brands/bic/ 301
+/brands/clarins-of-paris/ /brands/clarins/ 301
+/brands/clarins-of-paris /brands/clarins/ 301
+/brands/eos-products/ /brands/eos/ 301
+/brands/eos-products /brands/eos/ 301
+/brands/gucci-fragrances/ /brands/gucci/ 301
+/brands/gucci-fragrances /brands/gucci/ 301
+/brands/milani-cosmetics/ /brands/milani/ 301
+/brands/milani-cosmetics /brands/milani/ 301
+/brands/mitchum-deodorant/ /brands/mitchum/ 301
+/brands/mitchum-deodorant /brands/mitchum/ 301
+/brands/nars-cosmetics/ /brands/nars/ 301
+/brands/nars-cosmetics /brands/nars/ 301
+/brands/ciate-london/ /brand-check.html 301
+/brands/ciate-london /brand-check.html 301
