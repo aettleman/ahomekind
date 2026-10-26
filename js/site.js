@@ -901,8 +901,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // Footer: two tidy columns instead of one long line of links. Runs on every page
 // (the footer markup is the same everywhere), so nothing else needs editing.
-(function(){
+(function ahkFooter(){
 var f = document.querySelector('footer.site-footer');
+if (!f && document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', ahkFooter); return; }
 if (!f || f.querySelector('.foot-cols')) return;
 var links = {};
 Array.prototype.forEach.call(f.querySelectorAll('a'), function(a){

@@ -25,7 +25,6 @@ tests on animals with no source: Christina Aguilera Perfumes
 tests on animals with no source: Church & Dwight
 tests on animals with no source: Citre Shine
 tests on animals with no source: Clarins
-tests on animals with no source: Clarins of Paris
 tests on animals with no source: Clarisonic
 tests on animals with no source: Clorox
 tests on animals with no source: Close-up
@@ -76,7 +75,6 @@ tests on animals with no source: Givenchy Inc.
 tests on animals with no source: Glad
 tests on animals with no source: GLAMGLOW
 tests on animals with no source: Green Works
-tests on animals with no source: Gucci Fragrances
 tests on animals with no source: Guerlain
 vegan full but tier check: Hello Products
 vegan full but tier check: Herbivore Botanicals
@@ -129,7 +127,6 @@ tests on animals with no source: Mentadent
 tests on animals with no source: Merck
 tests on animals with no source: Michael Kors
 tests on animals with no source: Missoni
-tests on animals with no source: Mitchum Deodorant
 tests on animals with no source: miu miu
 vegan full but tier check: Mixed Chicks
 tests on animals with no source: Mizani
@@ -137,7 +134,6 @@ tests on animals with no source: Mont Blanc
 tests on animals with no source: Mr. Clean
 tests on animals with no source: My Trendy Kit
 vegan full but tier check: Nails Inc.
-tests on animals with no source: Nars Cosmetics
 tests on animals with no source: Natural Balance Pet Foods Inc.
 tests on animals with no source: Natural Instincts
 vegan full but tier check: Nature's Gate
@@ -271,3 +267,10 @@ vegan full but tier check: Grace Cole
 vegan full but tier check: SOSU by Suzanne Jackson
 vegan full but tier check: Beauty Bakerie Cosmetics
 vegan full but tier check: Morrocco Method
+vegan full but tier check: Truly Beauty
+tests on animals with no source: Too Cool For School
+tests on animals with no source: Blistex
+tests on animals with no source: CLIO
+tests on animals with no source: Diptyque
+tests on animals with no source: Judydoll
+tests on animals with no source: Nature Republic

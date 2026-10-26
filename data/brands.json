@@ -48958,7 +48958,7 @@
   {
     "slug": "too-cool-for-school",
     "name": "Too Cool For School",
-    "tier": "bad",
+    "tier": "unverified",
     "parentCompany": null,
     "evidence": "",
     "products": [],
@@ -48970,10 +48970,10 @@
     "region": "",
     "vegan": "unknown",
     "veganConfidence": "low",
-    "note": "Too Cool For School's US FAQ says it doesn't do animal testing before or after products go on sale, but then says China requires a hygiene permit for any products entering the country, which suggests it sells in mainland China. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules.",
+    "note": "Too Cool For School's US FAQ says it does no animal testing before or after products go on sale, but it isn't certified by Leaping Bunny or PETA, so that's the brand's word only. The same FAQ mentions that China requires a hygiene permit for products entering the country, so it may sell there.",
     "sources": [
       {
-        "label": "Too Cool For School: its own FAQ (mentions China) (\"We do not perform any pre-market animal testing and absolutely no animal testing at any stages of post-market ... However, the Chinese government requires a hygiene...\")",
+        "label": "Too Cool For School: its own FAQ (\"We do not perform any pre-market animal testing and absolutely no animal testing at any stages of post-market ... However, the Chinese government requires a hygiene...\")",
         "url": "https://toocoolforschool.us/pages/faq",
         "kind": [
           "cf"
@@ -48984,7 +48984,8 @@
       "lb": false,
       "peta": false
     },
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "claim": "Its own site says: \"We do not perform any pre-market animal testing and absolutely no animal testing at any stages of post-market.\""
   },
   {
     "slug": "is-clinical",
@@ -49291,7 +49292,7 @@
     "region": "",
     "vegan": "partial",
     "veganConfidence": "medium",
-    "note": "CLIO isn't certified cruelty-free and has no animal testing statement I could find, but its own company history says it opened a Shanghai branch as 'a core hub for the Chinese market' and set up a joint venture in Guangzhou. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
+    "note": "Likely tests on animals (my judgement). CLIO isn't certified cruelty-free and has no animal testing statement I could find, but its own company history says it opened a Shanghai branch as 'a core hub for the Chinese market' and set up a joint venture in Guangzhou. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
     "sources": [
       {
         "label": "CLIO: its own words on vegan products (\"Released “Vegan Wear Cushion,” CLIO’s first vegan line\")",
@@ -49364,7 +49365,7 @@
     "region": "",
     "vegan": "unknown",
     "veganConfidence": "low",
-    "note": "Diptyque isn't certified cruelty-free and has no animal testing statement I could find, but its own store finder lists boutiques in mainland China (e.g. Shanghai) selling its perfumes and bath & body products. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
+    "note": "Likely tests on animals (my judgement). Diptyque isn't certified cruelty-free and has no animal testing statement I could find, but its own store finder lists boutiques in mainland China (e.g. Shanghai) selling its perfumes and bath & body products. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
     "sources": [
       {
         "label": "Diptyque: its own store page for a boutique in Shanghai (mainland China)",
@@ -49509,7 +49510,7 @@
     "region": "",
     "vegan": "unknown",
     "veganConfidence": "low",
-    "note": "Judydoll isn't certified cruelty-free and has no animal testing statement I could find, but its own store page says it has '100+ boutiques across China'. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
+    "note": "Likely tests on animals (my judgement). Judydoll isn't certified cruelty-free and has no animal testing statement I could find, but its own store page says it has '100+ boutiques across China'. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
     "sources": [
       {
         "label": "Judydoll: its own store finder ('100+ boutiques across China')",
@@ -49580,7 +49581,7 @@
     "region": "",
     "vegan": "partial",
     "veganConfidence": "medium",
-    "note": "Nature Republic isn't certified cruelty-free and has no animal testing statement I could find, but its own brand history says it got a Chinese hygiene permit for a cream in 2016 (when that meant animal tests) and has stores in China. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
+    "note": "Likely tests on animals (my judgement). Nature Republic isn't certified cruelty-free and has no animal testing statement I could find, but its own brand history says it got a Chinese hygiene permit for a cream in 2016 (when that meant animal tests) and has stores in China. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said.",
     "sources": [
       {
         "label": "Nature Republic: its own words on vegan products (\"2020.07: 알로에 수딩젤 이브비건 (EVE VEGAN)인증 ... 2022.11: 비건 스킨케어 브랜드 '허브올로지' 론칭\")",
@@ -51806,7 +51807,7 @@
     "region": "",
     "vegan": "partial",
     "veganConfidence": "medium",
-    "note": "AGE20'S isn't certified cruelty-free and has no animal testing statement I could find, but its owner Aekyung's own sustainability report says it sells AGE20'S in mainland China, online and in shops. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said. One product, the Vegan Signature Essence Pact, is described as Vegan Society registered.",
+    "note": "Likely tests on animals (my judgement). AGE20'S isn't certified cruelty-free and has no animal testing statement I could find, but its owner Aekyung's own sustainability report says it sells AGE20'S in mainland China, online and in shops. China's rules can require animal testing for cosmetics sold there. In my view that makes it more likely than not that its products are tested on animals, so I list it as 'tests'. This is my judgement based on China's rules, not something the brand has said. One product, the Vegan Signature Essence Pact, is described as Vegan Society registered.",
     "sources": [
       {
         "label": "AGE20'S: its own words on vegan products (\"Proudly registered with The Vegan Society, our foundation is 100% vegan and cruelty-free.\")",
