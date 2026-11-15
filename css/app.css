@@ -2992,7 +2992,7 @@ main.wrap#main { max-width: 760px; }
 .k-lou-ig { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #6E4E78; color: #6E4E78; display: inline-flex; align-items: center; justify-content: center; flex: none; }
 .k-lou-ig:hover { background: #6E4E78; color: #FBF4EF; }
 
-.k-stabs { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px !important; background: none !important; padding: 0 !important; }
+.k-stabs { display: grid !important; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px !important; background: none !important; padding: 0 !important; }
 .k-stabs button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 82px; border-radius: 18px !important; padding: 12px 6px 11px !important; }
 .k-stabs button small { display: block; font: 800 9px 'Hanken Grotesk', sans-serif; letter-spacing: .18em; text-transform: uppercase; margin-top: 5px; }
 .k-stabs button[data-panel="hk"] { background: #EAD5CB; color: #3A1F3D; }
