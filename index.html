@@ -138,6 +138,12 @@
 .k-quiz-teaser p { font-size:14px; color:#5A4550; margin:0; line-height:1.45; }
 .k-quiz-teaser span.k-quiz-teaser-kick { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#B0501D; font-weight:600; margin-bottom:4px; }
 .k-quiz-teaser h3 { font:400 19px/1.15 'Gloock',serif !important; margin:0 0 6px !important; color:#2A1630 !important; text-transform:none !important; letter-spacing:-0.01em !important; }
+.k-games { display:flex; flex-direction:column; gap:6px; background:#3A1F3D; color:#FBF4EF; border-radius:26px; padding:20px 20px 0; text-decoration:none; overflow:hidden; }
+.k-games-kick { display:block; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#F6C6A8; font-weight:600; margin-bottom:4px; }
+.k-games h3 { font:400 22px/1.15 'Gloock',serif !important; margin:0 0 6px !important; color:#FBF4EF !important; text-transform:none !important; letter-spacing:-0.01em !important; }
+.k-games p { font-size:14px; color:#D9C3CF; margin:0; line-height:1.45; }
+.k-games b { display:block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; margin-top:10px; color:#F6C6A8; }
+.k-games img { display:block; width:100%; max-width:320px; height:auto; margin:4px auto 0; }
 .k-quiz-teaser b { display:block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; margin-top:8px; color:#B0501D; }
 
 .k-kl-wrap { padding:24px 22px 0; }
@@ -234,6 +240,7 @@
 }
 </style>
 <style>.k-four > .k-five { grid-column: 1 / -1; } @media (min-width:900px){ .k-four { grid-template-columns: repeat(5,1fr) !important; } .k-four > .k-five { grid-column: auto; } }</style>
+<style>@media (min-width:900px){ .k-duo.solo.k-duo-games { max-width:1240px; padding-top:24px; } .k-games { flex-direction:row; align-items:center; gap:40px; padding:44px 0 0 64px; border-radius:40px; } .k-games-tx { flex:1; padding-bottom:44px; } .k-games h3 { font-size:40px !important; margin-bottom:12px !important; } .k-games p { font-size:19px; max-width:52ch; } .k-games-kick { font-size:12.5px !important; } .k-games b { font-size:15px; margin-top:16px; } .k-games img { flex:none; width:420px; max-width:none; margin:0 30px 0 0; align-self:flex-end; } }</style>
 <style>@media (min-width:900px){ .k-duo.solo.k-duo-quiz { max-width:1240px; } .k-duo-quiz .k-quiz-teaser { gap:44px; padding:52px 64px; border-radius:40px; } .k-duo-quiz .k-quiz-teaser-mark { width:120px; height:120px; font-size:52px; } .k-duo-quiz .k-quiz-teaser h3 { font-size:40px !important; margin-bottom:12px !important; } .k-duo-quiz .k-quiz-teaser p { font-size:20px; max-width:62ch; } .k-duo-quiz .k-quiz-teaser span.k-quiz-teaser-kick { font-size:12.5px; } .k-duo-quiz .k-quiz-teaser b { font-size:15px; margin-top:16px; } }</style>
 <style>.k-strip-wrap{position:relative}.k-strip figure{width:200px!important}.k-strip img{height:210px!important}.k-strip figcaption span{font-size:13px!important}.k-src{display:block;margin-top:8px;font:500 11px/1.35 'Hanken Grotesk',sans-serif;color:var(--ahk-text-muted);text-decoration:underline;text-underline-offset:2px}.k-strip-btn{display:none}@media (min-width:900px){.k-strip figure{width:250px!important}.k-strip img{height:270px!important}.k-strip figcaption span{font-size:14px!important}.k-src{font-size:12px}.k-strip-btn{display:grid;place-items:center;position:absolute;top:150px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#2A1630;font:400 30px/1 'Gloock',serif;box-shadow:0 3px 14px rgba(42,22,48,.22);cursor:pointer;z-index:2}.k-strip-btn.prev{left:max(14px,calc(50% - 650px))}.k-strip-btn.next{right:max(14px,calc(50% - 650px))}.k-strip-btn:hover{background:#FBE3D3}.k-strip-btn:focus-visible{outline:3px solid #E8804C;outline-offset:2px}}</style>
 </head>
@@ -370,6 +377,17 @@
 <p>Some quick questions about right, wrong, and the everyday choices in between. Just for you, nothing saved or sent.</p>
 <b>take the quiz &rarr;</b>
 </div>
+</a>
+</div>
+<div class="k-duo solo k-duo-games">
+<a href="/games" class="k-games ahk-reveal">
+<div class="k-games-tx">
+<span class="k-games-kick">two free games</span>
+<h3>Peggy needs a straw bed.</h3>
+<p>Build a sanctuary for rescued animals in Sanctuary Keeper, or work out where everyone slept in Sanctuary Cases. No sign-up, and every animal fact is real.</p>
+<b>play now &rarr;</b>
+</div>
+<img src="images/games-trio.webp" width="360" height="200" alt="Cartoon Peggy the pig, Callie the cow, Rubie the rabbit and Rosie the rat" loading="lazy">
 </a>
 </div>
 
