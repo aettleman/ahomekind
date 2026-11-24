@@ -1112,11 +1112,11 @@ h += "<h3>help me add this one</h3>";
 h += "<p style=\"margin-bottom:10px;\">Tell me what this is and I'll check it. Nothing goes on the list until I've looked.</p>";
 h += "<label class=\"report-foot\" for=\"sb-code\" style=\"display:block;margin:0 0 2px;\">barcode number</label>";
 h += "<input type=\"text\" inputmode=\"numeric\" class=\"report-field\" id=\"sb-code\" value=\"" + escapeAttr(code || "") + "\">";
-h += "<label class=\"report-foot\" for=\"sb-brand\" style=\"display:block;margin:0 0 2px;\">brand name (or the shop, if it's their own brand, e.g. Lidl)</label>";
+h += "<label class=\"report-foot\" for=\"sb-brand\" style=\"display:block;margin:0 0 2px;\">brand name, exactly as it's printed on the pack (or the shop, if it's their own brand, e.g. Lidl)</label>";
 h += "<input type=\"text\" class=\"report-field\" id=\"sb-brand\" placeholder=\"brand name\" value=\"" + escapeAttr(brandText) + "\">";
 h += "<label class=\"report-check\" style=\"margin:-4px 0 10px;padding:2px 0;justify-content:flex-start;text-align:left;gap:8px;\"><input type=\"checkbox\" id=\"sb-nobrand\"><span style=\"flex:none;\">I can't see a brand name on it</span></label>";
-h += "<label class=\"report-foot\" for=\"sb-product\" id=\"sb-product-label\" style=\"display:block;margin:0 0 2px;\">product (e.g. air freshener)</label>";
-h += "<input type=\"text\" class=\"report-field\" id=\"sb-product\" placeholder=\"what is it?\" value=\"" + escapeAttr(name) + "\">";
+h += "<label class=\"report-foot\" for=\"sb-product\" id=\"sb-product-label\" style=\"display:block;margin:0 0 2px;\">what is it? Type the product name from the front of the pack</label>";
+h += "<input type=\"text\" class=\"report-field\" id=\"sb-product\" placeholder=\"e.g. Elvive Dream Lengths shampoo 400ml\" value=\"" + escapeAttr(name) + "\">";
 h += "<input type=\"text\" id=\"sb-web\" name=\"website\" tabindex=\"-1\" autocomplete=\"off\" aria-hidden=\"true\" style=\"position:absolute;left:-9999px;opacity:0;height:0;width:0;\">";
 h += "<p class=\"report-foot\" id=\"sb-msg\" style=\"color:#A8324E;min-height:16px;margin:0 0 6px;\"></p>";
 h += "<button class=\"btn-pri report-send\" id=\"sb-btn\">send to me</button>";
@@ -1130,7 +1130,7 @@ var nb = el("sb-nobrand");
 nb.addEventListener("change", function(){
 el("sb-brand").disabled = nb.checked;
 if(nb.checked) el("sb-brand").value = "";
-el("sb-product-label").textContent = nb.checked ? "describe it (required)" : "product (e.g. air freshener)";
+el("sb-product-label").textContent = nb.checked ? "describe it, and any company name or address on the back" : "what is it? Type the product name from the front of the pack";
 });
 btn.addEventListener("click", function(){
 var code = el("sb-code").value.replace(/\D/g, "");
@@ -1139,7 +1139,8 @@ var prod = el("sb-product").value.trim();
 var msg = el("sb-msg");
 if(code.length < 6 || code.length > 14){ msg.textContent = "A barcode has 6 to 14 digits. Please check the number."; return; }
 if(!nb.checked && !brand){ msg.textContent = "Please type the brand name, or tick \"I can't see a brand name on it\"."; return; }
-if(nb.checked && !prod){ msg.textContent = "Please describe what it is."; return; }
+if(prod.replace(/[^a-z0-9]/gi, "").length < 6 || prod.split(/\s+/).length < 2){ msg.textContent = "Please type what the product is (at least two words, e.g. \"micellar water\"). Without it I can't check it."; return; }
+if(brand && prod.toLowerCase() === brand.toLowerCase()){ msg.textContent = "Please type the product as well as the brand, e.g. \"" + brand + " shampoo\"."; return; }
 msg.textContent = ""; btn.disabled = true; btn.textContent = "sending...";
 var hit = brand ? findBrand(brand) : null;
 submitToInbox({ barcode: code, brand: brand, product: prod, noBrand: nb.checked, brandOnList: !!hit, matchedBrand: hit ? hit.name : "", website: el("sb-web").value }).then(function(ok){
