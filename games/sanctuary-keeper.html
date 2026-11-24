@@ -123,10 +123,21 @@ input{font:inherit}
 .hearts{display:flex;align-items:center;gap:7px;background:var(--paper);border-radius:999px;padding:8px 14px 8px 10px;
   box-shadow:0 2px 0 rgba(58,31,61,.08);font:800 17px var(--body);font-variant-numeric:tabular-nums}
 .hearts svg{width:20px;height:20px}
+.purse2{display:flex;gap:6px}
+.hearts.coins{padding-left:8px}
 .day{font:700 11.5px var(--body);color:var(--muted);letter-spacing:.02em;text-align:right}
+.dayrow{display:flex;align-items:center;gap:8px}
 .helpbtn{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;border:0;background:var(--plum);color:var(--paper);border-radius:999px;padding:5px 11px 5px 5px;font:800 11.5px var(--body);cursor:pointer;transition:transform .12s}
 .helpbtn:active{transform:scale(.95)}
 .helpbtn span{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#F6D77A;color:var(--plum);font:400 13px/1 var(--display)}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:8px -4px 0;-webkit-overflow-scrolling:touch}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;padding:4px 6px 2px;box-sizing:border-box}
+.slide .spics{display:flex;justify-content:center;align-items:flex-end;gap:14px;height:96px;background:linear-gradient(#E6F1DA,#C9DFBC);border-radius:20px;padding:10px}
+.slide .spics span{width:68px;display:block}.slide .spics svg{width:100%;height:auto;display:block;max-height:76px}
+.slide h2{font:400 26px/1.1 var(--display);margin:14px 0 6px}
+.slide p{font:600 14.5px/1.55 var(--body);color:var(--muted);margin:0}.slide p b{color:var(--ink)}
+.sdots{display:flex;justify-content:center;gap:6px;margin:14px 0 2px}.sdots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:width .2s}.sdots i.on{width:22px;border-radius:9px;background:var(--apricot)}
 .howto{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
 .howto li{display:flex;gap:12px;align-items:center;background:var(--blush);border-radius:16px;padding:10px 12px}
 .howto .ic{flex:none;width:44px;height:44px;display:grid;place-items:center}
@@ -134,13 +145,13 @@ input{font:inherit}
 .howto b{display:block;font:800 14px var(--body);color:var(--ink)}
 .howto span.t{display:block;font:600 12.5px/1.4 var(--body);color:var(--muted)}
 .howto .tip{background:none;border:2px dashed var(--line)}
-.perks{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.perks{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .chip{display:inline-flex;align-items:center;gap:5px;background:rgba(251,244,239,.8);border-radius:999px;padding:5px 10px;font:700 11.5px var(--body);color:var(--muted)}
 .chip b{color:var(--ink)}
 .chip.rush{background:var(--apricot);color:var(--ink);animation:pulse 1.2s ease-in-out infinite}
 
 /* field */
-.fieldwrap{margin-top:12px;border-radius:26px;padding:10px 10px 0;background:linear-gradient(#8FB583,#7FA672);
+.fieldwrap{margin-top:12px;border-radius:30px;padding:26px;background:linear-gradient(#8FB583,#7FA672);
   box-shadow:0 14px 30px -18px rgba(42,22,48,.55), inset 0 0 0 2px rgba(255,255,255,.18)}
 .field{position:relative;width:100%;border-radius:18px;overflow:hidden;touch-action:manipulation;cursor:pointer;
   background-color:var(--grass);
@@ -149,16 +160,20 @@ input{font:inherit}
   background-size:var(--t2) var(--t2);background-position:0 0, var(--t) var(--t)}
 .building .field{outline:3px dashed rgba(255,255,255,.65);outline-offset:-6px}
 .layer{position:absolute;inset:0;pointer-events:none}
-.footpath{position:relative;height:48px;margin:6px -10px 0;border-radius:0 0 26px 26px;overflow:hidden;
-  background:linear-gradient(#E9D2B0,#DEC29B);box-shadow:inset 0 3px 0 rgba(255,255,255,.35)}
-.footpath::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background-image:linear-gradient(90deg,rgba(176,128,80,.35) 50%,transparent 50%);background-size:18px 2px}
-.walker{position:absolute;bottom:6%;height:86%;aspect-ratio:.62;will-change:transform}
+.fieldwrap{background:#E3CBA1 !important;box-shadow:0 14px 30px -18px rgba(42,22,48,.55), inset 0 0 0 5px #8FB583, inset 0 0 0 7px rgba(255,255,255,.25) !important}
+.fieldwrap::before{content:"";position:absolute;inset:13px;border-radius:22px;border:2px dashed rgba(176,128,80,.35);pointer-events:none}
+.walkers{position:absolute;inset:0;pointer-events:none;z-index:80}
+.walker{position:absolute;left:0;top:0;height:30px;width:19px;will-change:transform}
+.walker .prop{position:absolute;right:-7px;top:13px;width:11px;height:11px}
+.walker .prop svg{width:100%;height:100%}
+.walker.reach .arm{opacity:1}
+.walker .arm{opacity:0}
 .walker svg{width:100%;height:100%;overflow:visible;display:block}
 .walker .lg{animation:stride .5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
 .walker .lg2{animation-delay:-.25s}
 .walker .bd{animation:wbob .5s ease-in-out infinite}
 .walker.stop .lg,.walker.stop .bd{animation:none}
-.walker .vsay{position:absolute;bottom:104%;left:50%;transform:translateX(-50%);width:max-content;max-width:180px;background:var(--paper);color:var(--ink);border-radius:12px;padding:5px 9px;font:600 11.5px/1.3 var(--body);box-shadow:0 4px 10px -4px rgba(42,22,48,.4);animation:pop .3s ease-out}
+.walker .vsay{position:absolute;bottom:108%;z-index:5;left:50%;transform:translateX(-50%);width:max-content;max-width:180px;background:var(--paper);color:var(--ink);border-radius:12px;padding:5px 9px;font:600 11.5px/1.3 var(--body);box-shadow:0 4px 10px -4px rgba(42,22,48,.4);animation:pop .3s ease-out}
 .fieldwrap{position:relative}
 @keyframes stride{0%,100%{transform:rotate(14deg)}50%{transform:rotate(-14deg)}}
 @keyframes wbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3%)}}
@@ -204,6 +219,18 @@ input{font:inherit}
 .tile.lift{opacity:.45}
 .ghost{position:absolute;width:var(--t);height:var(--t);border-radius:12px;background:rgba(255,255,255,.4);pointer-events:none;opacity:0;transition:opacity .15s;z-index:1}
 .ghost.on{opacity:1}
+.gt{position:absolute;pointer-events:none}
+.g-path{background:#E3CBA1;background-image:radial-gradient(circle at 30% 35%,#CDAE7E 0 2px,transparent 3px),radial-gradient(circle at 70% 70%,#CDAE7E 0 2px,transparent 3px)}
+.g-meadow{background:#8FB583;background-image:radial-gradient(circle at 25% 40%,#6E9A62 0 2px,transparent 3px),radial-gradient(circle at 65% 70%,#6E9A62 0 2px,transparent 3px),radial-gradient(circle at 80% 25%,#F6C6A8 0 1.5px,transparent 2.5px)}
+.g-mud{background:#8B6A4E;background-image:radial-gradient(ellipse at 35% 40%,#73553D 0 18%,transparent 19%),radial-gradient(ellipse at 70% 72%,#73553D 0 15%,transparent 16%);border-radius:4px}
+.g-sand{background:#EBD5A6;background-image:radial-gradient(circle at 30% 30%,#D9BC86 0 1.5px,transparent 2.5px),radial-gradient(circle at 70% 60%,#D9BC86 0 1.5px,transparent 2.5px)}
+.fence{position:absolute;pointer-events:none;overflow:visible;z-index:1}
+.secnote{font:600 11px var(--body);letter-spacing:0;text-transform:none;color:var(--muted);margin-left:4px}
+.ghost.bad{background:rgba(232,128,76,.45)}
+.dghost{position:fixed;left:0;top:0;width:64px;height:64px;z-index:700;pointer-events:none;filter:drop-shadow(0 12px 12px rgba(42,22,48,.35))}
+.dghost svg{width:100%;height:100%}
+body.dragging{user-select:none;-webkit-user-select:none;cursor:grabbing}
+.shopitem{touch-action:pan-y;-webkit-touch-callout:none;user-select:none}
 
 .mob{position:absolute;left:0;top:0;width:calc(var(--t) * var(--s,1));pointer-events:auto;cursor:pointer;will-change:transform;
   transition:transform var(--walk,2.6s) cubic-bezier(.42,0,.58,1), opacity .3s;z-index:2;
@@ -247,6 +274,19 @@ input{font:inherit}
   font:600 13.5px/1.4 var(--body);color:var(--ink)}
 .nudge .who{flex:none;width:34px}
 .nudge b{color:var(--apricot-deep)}
+.hsbanner{position:absolute;left:50%;top:10px;transform:translateX(-50%);z-index:95;display:flex;align-items:center;gap:10px;background:var(--plum);color:var(--paper);border-radius:18px;padding:8px 10px 8px 8px;width:max-content;max-width:calc(100% - 30px);box-shadow:0 12px 24px -10px rgba(42,22,48,.6);animation:pop .35s cubic-bezier(.3,1.5,.5,1)}
+.hsbanner .hsr{flex:none;width:34px}
+.hsbanner b{display:block;font:400 18px/1 var(--display);color:#F6D77A}
+.hsbanner span#hsText{display:block;font:700 12px/1.3 var(--body);margin-top:2px}
+.hsring{position:relative;flex:none;width:36px;height:36px;font-style:normal}
+.hsring svg{width:100%;height:100%}
+.hsring em{position:absolute;inset:0;display:grid;place-items:center;font:800 12px var(--body);font-style:normal;color:#F6D77A}
+.field.seeking .tile:not(.fixed){animation:seekglow 1.4s ease-in-out infinite}
+.field.seeking .tile:not(.fixed)::after{content:"";position:absolute;inset:6%;border-radius:12px;border:2px dashed rgba(246,215,122,.95);pointer-events:none}
+.tile.nope svg{animation:nope .45s ease-in-out}
+@keyframes seekglow{0%,100%{filter:drop-shadow(0 0 0 rgba(246,215,122,0))}50%{filter:drop-shadow(0 0 6px rgba(246,215,122,.95))}}
+@keyframes nope{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.stopplay{border:0;background:var(--plum);color:var(--paper);border-radius:99px;padding:4px 10px;font:800 11.5px var(--body);cursor:pointer;margin-left:4px}
 .factcard{margin-top:10px;display:flex;gap:11px;align-items:flex-start;background:var(--plum);color:var(--paper);border-radius:18px;padding:13px 13px 13px 12px;animation:pop .4s ease-out}
 .factcard[hidden]{display:none}
 .factcard .who{flex:none;width:44px}
@@ -456,6 +496,73 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes campulse{0%,100%{scale:1}50%{scale:1.12}}
 @keyframes flash{from{opacity:.9}to{opacity:0}}
+
+/* rescue types */
+.carebar{margin-top:10px;background:var(--paper);border-radius:20px;padding:10px 10px 12px;box-shadow:0 2px 0 rgba(58,31,61,.06)}
+.carebar[hidden]{display:none}
+.carebar h3{display:flex;justify-content:space-between;align-items:baseline;margin:0 4px 8px;font:800 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--apricot-deep)}
+.carebar h3 span{letter-spacing:0;text-transform:none;font:700 11.5px var(--body);color:var(--muted)}
+.cbl{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.cbl::-webkit-scrollbar{display:none}
+.cb{flex:none;width:148px;display:flex;gap:8px;align-items:center;border:0;background:var(--blush);border-radius:14px;padding:8px;text-align:left;cursor:pointer;font:inherit;color:var(--ink)}
+.cb .cpic{flex:none;width:38px}
+.cb b{display:block;font:800 12.5px/1.1 var(--body)}
+.cb em{display:block;font:700 10.5px/1.2 var(--body);font-style:normal;margin-top:2px}
+.cb em.s0{color:#B5552E}.cb em.s1{color:var(--apricot-deep)}.cb em.s2{color:#8C7A2E}.cb em.s3{color:var(--sage-ink)}.cb em.s4{color:var(--lilac)}
+.cb .hbar{display:block;height:6px;border-radius:9px;background:rgba(58,31,61,.1);margin-top:5px;overflow:hidden}
+.cb .hbar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#F6C6A8,#9DBF98)}
+.cb small{display:block;font:600 10px/1.2 var(--body);color:var(--muted);margin-top:3px}
+.resi{position:absolute;width:13%;z-index:1;animation:float 3s ease-in-out infinite}
+.scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}
+.scenetab{display:flex;flex-direction:column;align-items:center;gap:4px;border:0;border-radius:16px;padding:9px 4px 8px;background:rgba(251,244,239,.75);font:800 12px/1.15 var(--body);color:var(--muted);cursor:pointer;transition:transform .12s}
+.scenetab:active{transform:scale(.96)}
+.scenetab i{width:28px;height:18px;border-radius:9px}
+.sc-farm{background:linear-gradient(#CFE6F3 45%,#A9C99A 46%)}.sc-wild{background:linear-gradient(#CFE6F3 40%,#7FA672 41%)}.sc-sea{background:linear-gradient(#CFE6F3 30%,#7FB3D9 31%,#7FB3D9 60%,#F1DDB8 61%)}
+.scenetab[aria-selected="true"]{background:var(--plum);color:var(--paper);box-shadow:0 8px 16px -10px rgba(42,22,48,.7)}
+#rescue[hidden]{display:none}
+.rhead{margin:14px 2px 10px}.rhead h2{font:400 28px/1 var(--display);margin:0}.rhead p{font:600 13.5px/1.45 var(--body);color:var(--muted);margin:5px 0 0}
+.rscene{position:relative;aspect-ratio:4/3;border-radius:26px;overflow:hidden;box-shadow:0 14px 30px -18px rgba(42,22,48,.55), inset 0 0 0 2px rgba(255,255,255,.3)}
+.rscene>svg{position:absolute;inset:0;width:100%;height:100%}
+.pen{position:absolute;width:30%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center}
+.pbed{position:absolute;left:8%;right:8%;bottom:20%;height:22%;border-radius:50%}
+.pbed.wild{background:radial-gradient(ellipse at 50% 40%,#F3D27A,#D9A94A 70%);box-shadow:0 4px 0 rgba(90,60,30,.25)}
+.pbed.sea{background:radial-gradient(ellipse at 50% 40%,#B5D6EE,#7FB3D9 70%);box-shadow:0 0 0 4px #E9E2D2}
+.pat{position:relative;width:72%;border:0;background:none;padding:0;cursor:pointer;z-index:2;margin-bottom:-4%}
+.pat .char{width:100%}
+.pat.ready .char .bob{animation:hop 1.1s ease-in-out infinite}
+.ptag{position:relative;z-index:3;margin-top:4px;background:rgba(255,255,255,.95);color:var(--ink);border-radius:99px;padding:4px 9px;font:800 10.5px var(--body);white-space:nowrap;box-shadow:0 3px 8px -4px rgba(42,22,48,.4)}
+.ptag.empty{background:rgba(255,255,255,.6);color:var(--muted);margin-top:44%}
+.ptag.ok{background:#E6F0DE;color:var(--sage-ink)}
+.ptag.go{background:var(--apricot);color:var(--ink);animation:pulse 1.2s ease-in-out infinite}
+.rflower{position:absolute;bottom:3%;width:12px;height:12px;border-radius:50%;background:#F6C6A8;box-shadow:0 0 0 3px #FBF4EF inset;z-index:1}
+.rflower:nth-child(3n){background:#F6D77A}.rflower:nth-child(3n+1){background:#E9A9C3}
+.sight{position:absolute;left:58%;top:20%;width:20%;border:0;background:none;padding:0;cursor:pointer;animation:float 2.2s ease-in-out infinite;z-index:2}
+.sight .char{width:100%}
+.rcall{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border-radius:20px;padding:14px;margin-top:12px;box-shadow:0 2px 0 rgba(58,31,61,.06)}
+.rcall .rpic{flex:none;width:64px}
+.rcall small{font:800 10.5px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--apricot-deep)}
+.rcall b{display:block;font:400 21px/1.15 var(--display);margin:3px 0 4px}
+.rcall p{font:600 13.5px/1.45 var(--body);color:var(--muted);margin:0}
+.rcall .rdone{margin-top:8px;color:var(--sage-ink);font-weight:700}
+.racts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.racts .btn{padding:12px 10px;font-size:13.5px}
+.rstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
+.rstats div{background:var(--paper);border-radius:16px;padding:10px 12px}.rstats b{display:block;font:400 24px var(--display)}.rstats span{font:700 11px var(--body);color:var(--muted)}
+.rhome{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rhome .sub{grid-column:1/-1}
+.rh{border:0;background:var(--paper);border-radius:16px;padding:8px 6px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+.rh span{width:58px}.rh b{font:800 12.5px var(--body)}.rh i{font:600 10.5px var(--body);font-style:normal;color:var(--muted)}
+.rsharebtn{width:100%;margin-top:14px}
+.cdots{display:flex;gap:5px;margin-top:7px}.cdots i{width:18px;height:7px;border-radius:9px;background:var(--line)}.cdots i.on{background:var(--sage)}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px}
+.tool{display:flex;flex-direction:column;align-items:center;gap:3px;border:0;background:var(--blush);border-radius:16px;padding:10px 6px;cursor:grab;touch-action:none;font:inherit;color:var(--ink)}
+.tool svg{width:44px;height:44px}.tool b{font:800 12px var(--body)}.tool i{font:800 11px var(--body);font-style:normal;color:var(--apricot-deep)}
+.tool.used{opacity:.45;cursor:default}.tool.used i{color:var(--sage-ink)}
+.dragghost{position:fixed;left:0;top:0;z-index:600;pointer-events:none;box-shadow:0 16px 30px -12px rgba(42,22,48,.55);background:var(--paper)}
+.care-drop{transition:transform .2s;border-radius:50%}
+.care-drop.over{transform:scale(1.12);box-shadow:0 0 0 4px rgba(232,128,76,.45)}
+.care-drop.cared .char{animation:squish .5s cubic-bezier(.3,1.4,.5,1)}
+.dragtip{margin-top:12px}
+.copytext{width:100%;margin-top:12px;border:2px solid var(--line);border-radius:12px;padding:10px;font:600 13px/1.4 var(--body);resize:none}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
 }
@@ -466,12 +573,17 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
   <div class="top">
     <div class="brand"><div class="wm">a home kind<em>.</em></div><h1>Sanctuary Keeper</h1><button type="button" class="sname" id="snameBtn"><span id="snameText">Name your sanctuary</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5V13h1.5l7-7L10 4.5zM11 3.5l1.5 1.5 1-1L12 2.5z" fill="currentColor"/></svg></button></div>
     <div class="purse">
-      <div class="hearts" aria-label="Hearts"><span id="heartIcon"></span><span id="heartCount">0</span></div>
-      <div class="day" id="dayLabel">Day 1</div>
-      <button type="button" class="helpbtn" id="helpBtn"><span aria-hidden="true">?</span>How to play</button>
+      <div class="purse2"><div class="hearts" aria-label="Hearts from visitors" title="Hearts: donations from visitors"><span id="heartIcon"></span><span id="heartCount">0</span></div>
+      <div class="hearts coins" aria-label="Coins to spend" title="Coins: every 2 hearts become 1 coin"><span id="coinIcon"></span><span id="coinCount">0</span></div></div>
+      <div class="dayrow"><span class="day" id="dayLabel">Day 1</span><button type="button" class="helpbtn" id="helpBtn" aria-label="How to play"><span aria-hidden="true">?</span>Help</button></div>
     </div>
   </div>
-  <div class="perks" id="perks"></div>
+  <div class="scenes" role="tablist" aria-label="Rescue types">
+    <button type="button" role="tab" class="scenetab" data-scene="farm" aria-selected="true"><i class="sc-farm" aria-hidden="true"></i>Farm sanctuary</button>
+    <button type="button" role="tab" class="scenetab" data-scene="wild" aria-selected="false"><i class="sc-wild" aria-hidden="true"></i>Wildlife rescue</button>
+    <button type="button" role="tab" class="scenetab" data-scene="sea" aria-selected="false"><i class="sc-sea" aria-hidden="true"></i>Sea rescue</button>
+  </div>
+  <aside class="carebar" id="carebar" aria-label="Animals in care" hidden></aside>
 
   <div class="fieldwrap"><div class="field" id="field" role="application" aria-label="Your sanctuary">
     <div class="layer" id="itemLayer"></div>
@@ -480,10 +592,20 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
     <div class="layer amb" id="ambLayer" aria-hidden="true"></div>
     <div class="layer" id="fxLayer"></div>
     <div class="tint" aria-hidden="true"></div>
-  </div><div class="footpath" id="footpath" aria-hidden="true"></div></div>
+  </div><div class="walkers" id="walkers" aria-hidden="true"></div></div>
 
   <div class="nudge" id="nudge" role="status" aria-live="polite"></div>
+  <div class="perks" id="perks"></div>
   <div class="factcard" id="factcard" hidden></div>
+  <section id="rescue" hidden>
+    <div class="rhead"><h2 id="rTitle">Wildlife Rescue</h2><p id="rSub"></p></div>
+    <div class="rscene" id="rscene"></div>
+    <div id="rcallbox"></div>
+    <div class="rstats" id="rstats"></div>
+    <h3 class="sec">Back home</h3>
+    <div class="rhome" id="rhome"></div>
+    <button type="button" class="btn dark rsharebtn" id="rshare" hidden>Share today’s rescue</button>
+  </section>
 
   <div class="tabs" role="tablist">
     <button type="button" role="tab" id="tab-animals" aria-selected="true" aria-controls="panel-animals">Animals</button>
@@ -494,8 +616,9 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
   <section class="panel" id="panel-animals" role="tabpanel"><div class="alist" id="alist"></div></section>
   <section class="panel" id="panel-build" role="tabpanel" hidden>
     <div id="landbox"></div>
+    <h3 class="sec">Spaces <span class="secnote">pick one, then drag across the field to paint</span></h3><div class="shop gshop" id="groundbox"></div>
     <div id="shopbox"></div>
-    <p class="shophint">Pick something, then tap a spot on the field. Tap anything you've placed to move it or let it go.</p>
+    <p class="shophint">Drag something onto the field, or tap it and then tap a spot. Drag anything you've placed to move it. Tap it to let it go.</p>
   </section>
   <section class="panel" id="panel-album" role="tabpanel" hidden><div id="albumbox"></div></section>
   <section class="panel" id="panel-visitors" role="tabpanel" hidden>
@@ -517,6 +640,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
 /* ======================================================================
    DRAWINGS - original simple-shape characters, shared with Sanctuary Cases
    ====================================================================== */
+var COIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="#F2C14E" stroke="#C9922E" stroke-width="2"/><circle cx="12" cy="12" r="5.8" fill="none" stroke="#E0A93A" stroke-width="1.6"/><path d="M9 8.6a4 4 0 0 1 3-1.4" stroke="#FBE3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
 var HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.2-4.4-9.6-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.6 12c-2.4 4.6-9.6 9-9.6 9z" fill="#E8804C"/><path d="M7.2 8.6a2.4 2.4 0 0 1 2.6-.9" stroke="#FBE3D3" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
 
 function eyes(x, y, gap, r){
@@ -731,7 +855,85 @@ var DRAW = {
     '<g fill="#B8854A" opacity=".7"><circle cx="44" cy="80" r="1.4"/><circle cx="56" cy="84" r="1.4"/><circle cx="50" cy="90" r="1.4"/><circle cx="58" cy="76" r="1.2"/></g>' +
     '<path d="M50 66C30 60 26 34 39 29C45 27 50 32 50 35C50 32 55 27 61 29C74 34 70 60 50 66Z" fill="#FBF6EF" stroke="#E9D6BC" stroke-width="1.6"/>' +
     eyes(42, 46, 16) +
-    '<path d="M48 52h4l-2 4.6z" fill="#E6B8B0"/>'); }
+    '<path d="M48 52h4l-2 4.6z" fill="#E6B8B0"/>'); },
+  hedgehog: function(){ var sp = ''; for (var i = 0; i < 22; i++){ var a = Math.PI * (1.02 + i / 21 * .96) , r1 = 30, r2 = 42; sp += (i ? 'L' : 'M') + (50 + Math.cos(a) * r1).toFixed(1) + ' ' + (66 + Math.sin(a) * r1).toFixed(1) + 'L' + (50 + Math.cos(a + .07) * r2).toFixed(1) + ' ' + (66 + Math.sin(a + .07) * r2).toFixed(1); }
+    return csvg(
+    '<path d="' + sp + 'L82 70L18 70Z" fill="#7C5B47"/>' +
+    '<ellipse cx="50" cy="66" rx="32" ry="26" fill="#93705A"/>' +
+    '<g stroke="#B79478" stroke-width="2" stroke-linecap="round"><path d="M28 52l-5-7M36 46l-3-8M46 43l-1-8M56 43l1-8M65 46l3-8M73 52l5-7M24 62l-7-3M77 62l7-3"/></g>' +
+    '<ellipse cx="40" cy="98" rx="6" ry="3" fill="#C9A385"/><ellipse cx="60" cy="98" rx="6" ry="3" fill="#C9A385"/>' +
+    '<ellipse cx="50" cy="74" rx="22" ry="20" fill="#F1DCC4"/>' +
+    eyes(42, 68, 16, .9) +
+    '<ellipse cx="50" cy="82" rx="7" ry="5" fill="#EBCBAE"/><circle cx="50" cy="79.5" r="3.2" fill="#2A1630"/>'); },
+  fox: function(){ return csvg(
+    '<path class="tail" d="M68 86q24-4 24-24q-8 10-20 12z" fill="#E07A3E"/><path d="M86 66q6-2 6-6q-4 6-9 7z" fill="#FBF4EF"/>' +
+    '<ellipse cx="50" cy="84" rx="20" ry="15" fill="#E8874A"/><ellipse cx="50" cy="88" rx="11" ry="9" fill="#FBF4EF"/>' +
+    '<ellipse cx="41" cy="99" rx="5" ry="3" fill="#5A3A30"/><ellipse cx="59" cy="99" rx="5" ry="3" fill="#5A3A30"/>' +
+    '<path class="ear-l" d="M30 40L26 12L46 30Z" fill="#E07A3E"/><path class="ear-r" d="M70 40L74 12L54 30Z" fill="#E07A3E"/>' +
+    '<path d="M31 36L29 20L41 31Z" fill="#5A3A30"/><path d="M69 36L71 20L59 31Z" fill="#5A3A30"/>' +
+    '<path d="M50 72C30 72 22 56 26 44C30 32 42 28 50 28S70 32 74 44C78 56 70 72 50 72Z" fill="#EE8D4E"/>' +
+    '<path d="M50 72C38 72 28 64 28 56C36 60 44 58 50 66C56 58 64 60 72 56C72 64 62 72 50 72Z" fill="#FBF4EF"/>' +
+    eyes(41, 49, 18, .9) + '<ellipse cx="50" cy="64" rx="3.6" ry="2.8" fill="#2A1630"/>'); },
+  badger: function(){ return csvg(
+    '<ellipse cx="50" cy="84" rx="25" ry="16" fill="#8E8A90"/>' +
+    '<ellipse cx="38" cy="99" rx="6" ry="3" fill="#3A3438"/><ellipse cx="62" cy="99" rx="6" ry="3" fill="#3A3438"/>' +
+    '<g class="ear-l"><circle cx="30" cy="34" r="7" fill="#3A3438"/><circle cx="30" cy="34" r="4" fill="#FBF4EF"/></g><g class="ear-r"><circle cx="70" cy="34" r="7" fill="#3A3438"/><circle cx="70" cy="34" r="4" fill="#FBF4EF"/></g>' +
+    '<ellipse cx="50" cy="52" rx="24" ry="24" fill="#FBF4EF"/>' +
+    '<path d="M38 30q-6 14 0 30q4 6 8 2q-4-16 0-31q-4-4-8-1z" fill="#3A3438"/><path d="M62 30q6 14 0 30q-4 6-8 2q4-16 0-31q4-4 8-1z" fill="#3A3438"/>' +
+    eyes(41, 50, 18, .85) + '<ellipse cx="50" cy="66" rx="4" ry="3" fill="#2A1630"/>'); },
+  squirrel: function(){ return csvg(
+    '<path class="tail" d="M64 92C96 88 96 40 76 30C66 26 60 34 66 42C80 52 78 76 62 80Z" fill="#C4683A"/><path d="M72 40C84 50 84 72 70 80" stroke="#DD8A58" stroke-width="3" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="46" cy="82" rx="18" ry="16" fill="#CF7445"/><ellipse cx="46" cy="86" rx="10" ry="10" fill="#F6DCC4"/>' +
+    '<ellipse cx="38" cy="99" rx="5" ry="3" fill="#A65530"/><ellipse cx="54" cy="99" rx="5" ry="3" fill="#A65530"/>' +
+    '<path class="ear-l" d="M30 36L28 16L40 28Z" fill="#CF7445"/><path class="ear-r" d="M62 36L64 16L52 28Z" fill="#CF7445"/>' +
+    '<path d="M29 20l-2-6M63 20l2-6" stroke="#A65530" stroke-width="3" stroke-linecap="round"/>' +
+    '<ellipse cx="46" cy="50" rx="20" ry="19" fill="#D67B4A"/><ellipse cx="46" cy="58" rx="11" ry="8" fill="#F6DCC4"/>' +
+    eyes(38, 48, 16, .85) + '<circle cx="46" cy="57" r="2.4" fill="#2A1630"/>' +
+    '<ellipse cx="46" cy="72" rx="5" ry="4" fill="#B98A5A"/>'); },
+  fawn: function(){ return csvg(
+    '<ellipse cx="50" cy="80" rx="22" ry="14" fill="#C98E5C"/>' +
+    '<g fill="#FBF4EF"><circle cx="40" cy="76" r="2.4"/><circle cx="50" cy="72" r="2.4"/><circle cx="60" cy="76" r="2.4"/><circle cx="45" cy="84" r="2"/><circle cx="56" cy="84" r="2"/></g>' +
+    '<path d="M36 90v10M44 92v8M56 92v8M64 90v10" stroke="#8E5E3C" stroke-width="4.4" stroke-linecap="round"/>' +
+    '<ellipse class="ear-l" cx="26" cy="38" rx="13" ry="6.5" fill="#C98E5C" transform="rotate(-24 26 38)"/><ellipse cx="26" cy="38" rx="8" ry="3.4" fill="#F2C2B0" transform="rotate(-24 26 38)"/>' +
+    '<ellipse class="ear-r" cx="74" cy="38" rx="13" ry="6.5" fill="#C98E5C" transform="rotate(24 74 38)"/><ellipse cx="74" cy="38" rx="8" ry="3.4" fill="#F2C2B0" transform="rotate(24 74 38)"/>' +
+    '<ellipse cx="50" cy="48" rx="18" ry="20" fill="#D29A66"/><ellipse cx="50" cy="60" rx="9" ry="7" fill="#F4DCC6"/>' +
+    eyes(42, 45, 16, .95) + '<ellipse cx="50" cy="57" rx="3.4" ry="2.6" fill="#2A1630"/>'); },
+  seal: function(){ return csvg(
+    '<path d="M24 92q-10 2-12-6q8 0 14 2z" fill="#E9E4EA"/><path d="M76 92q10 2 12-6q-8 0-14 2z" fill="#E9E4EA"/>' +
+    '<ellipse cx="50" cy="80" rx="30" ry="20" fill="#F7F5F8"/>' +
+    '<circle cx="50" cy="50" r="24" fill="#FBFAFC"/>' +
+    '<g fill="#FFFFFF" opacity=".9"><circle cx="30" cy="66" r="6"/><circle cx="70" cy="66" r="6"/><circle cx="36" cy="34" r="5"/><circle cx="64" cy="34" r="5"/></g>' +
+    eyes(40, 48, 20, 1.25) +
+    '<ellipse cx="50" cy="60" rx="7" ry="5" fill="#EDE6EE"/><ellipse cx="50" cy="58" rx="3.4" ry="2.4" fill="#2A1630"/>' +
+    '<path d="M42 61l-12-1M42 63.5l-11 3M58 61l12-1M58 63.5l11 3" stroke="#B9AEB9" stroke-width="1" stroke-linecap="round"/>'); },
+  puffin: function(){ return csvg(
+    '<path d="M42 96l-3 5M58 96l3 5" stroke="#F08A3C" stroke-width="4" stroke-linecap="round"/>' +
+    '<ellipse cx="50" cy="74" rx="22" ry="25" fill="#2E2A33"/><ellipse cx="50" cy="80" rx="15" ry="18" fill="#FBF8F4"/>' +
+    '<ellipse class="ear-l" cx="29" cy="76" rx="7" ry="16" fill="#26222A" transform="rotate(12 29 76)"/><ellipse class="ear-r" cx="71" cy="76" rx="7" ry="16" fill="#26222A" transform="rotate(-12 71 76)"/>' +
+    '<circle cx="50" cy="42" r="20" fill="#2E2A33"/><ellipse cx="50" cy="46" rx="15" ry="13" fill="#ECE8EE"/>' +
+    eyes(43, 42, 14, .8) +
+    '<path d="M50 50q12 2 12 10q-8 4-12 2z" fill="#F08A3C"/><path d="M50 50q-12 2-12 10q8 4 12 2z" fill="#F08A3C"/><path d="M42 56q8 3 16 0" stroke="#F6D77A" stroke-width="2" fill="none"/>'); },
+  turtle: function(){ return csvg(
+    '<ellipse cx="24" cy="86" rx="12" ry="5" fill="#7FB07A" transform="rotate(-20 24 86)"/><ellipse cx="76" cy="86" rx="12" ry="5" fill="#7FB07A" transform="rotate(20 76 86)"/>' +
+    '<circle cx="50" cy="44" r="15" fill="#8DBE86"/>' +
+    '<ellipse cx="50" cy="76" rx="30" ry="22" fill="#5E8E58"/><ellipse cx="50" cy="74" rx="26" ry="18" fill="#76A66E"/>' +
+    '<path d="M50 58l8 6v10l-8 6-8-6V64zM34 66l8-2v10l-8 4-6-6zM66 66l-8-2v10l8 4 6-6z" fill="#5E8E58" opacity=".7"/>' +
+    eyes(43, 42, 14, .8) + '<path d="M46 51q4 3 8 0" stroke="#3E6A3A" stroke-width="1.6" fill="none" stroke-linecap="round"/>'); },
+  starfish: function(){ var p = ''; for (var i = 0; i < 10; i++){ var a = -Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? 16 : 40; p += (i ? 'L' : 'M') + (50 + Math.cos(a) * r).toFixed(1) + ' ' + (62 + Math.sin(a) * r).toFixed(1); }
+    return csvg('<path d="' + p + 'Z" fill="#F08A5C" stroke="#F08A5C" stroke-width="8" stroke-linejoin="round"/>' +
+    '<g fill="#F6B48C"><circle cx="50" cy="34" r="2"/><circle cx="28" cy="54" r="2"/><circle cx="72" cy="54" r="2"/><circle cx="36" cy="82" r="2"/><circle cx="64" cy="82" r="2"/></g>' +
+    eyes(43, 60, 14, .85) + smile(68, '#B5552E')); },
+  dolphin: function(){ return csvg(
+    '<path d="M14 72C20 44 48 32 74 40C86 44 92 52 94 60C84 58 78 60 72 64C60 72 40 78 24 80Z" fill="#8FA9C4"/>' +
+    '<path d="M48 40l6-14q4 8 2 16z" fill="#7D98B4"/><path d="M14 72l-8 8q10 2 16-2z" fill="#7D98B4"/>' +
+    '<path d="M30 74C46 72 62 66 72 64C66 70 50 76 30 78Z" fill="#D9E4EE"/>' +
+    '<ellipse cx="76" cy="50" rx="3.2" ry="4" fill="#2A1630"/><circle cx="77" cy="48.6" r="1.2" fill="#fff"/>' +
+    '<path d="M84 58q4 2 8 0" stroke="#5E7894" stroke-width="1.6" fill="none" stroke-linecap="round"/>'); },
+  jelly: function(){ return csvg(
+    '<g class="tail"><path d="M34 60q-4 14 2 26M44 62q-2 16 2 30M56 62q2 16-2 30M66 60q4 14-2 26" stroke="#E9A9C3" stroke-width="3" fill="none" stroke-linecap="round"/></g>' +
+    '<path d="M22 60C22 30 78 30 78 60q-6 6-14 2q-7 5-14 0q-7 5-14 0q-8 4-14-2z" fill="#F2BCD2"/>' +
+    '<path d="M32 44q18-14 36 0" stroke="#FBE3EC" stroke-width="3" fill="none" stroke-linecap="round"/>' +
+    eyes(42, 50, 16, .8) + smile(56, '#B5557E')); }
 };
 
 /* ======================================================================
@@ -843,6 +1045,24 @@ var ITEMS = [
   {g:'Stalls', id:'beautystall', name:'Beauty stall', cost:40, kind:'build', stall:'beauty'}
 ];
 var ITEM = {}; ITEMS.forEach(function(i){ ITEM[i.id] = i; });
+var GROUND = [
+  {id:'path', name:'Path', cost:1, d:'Somewhere to stroll'},
+  {id:'meadow', name:'Long grass', cost:1, d:'For grazing and nibbling'},
+  {id:'mud', name:'Mud wallow', cost:2, d:'Pigs love a mud bath'},
+  {id:'sand', name:'Sandy patch', cost:1, d:'For rolling and dust baths'},
+  {id:'fence', name:'Fence', cost:2, d:'Make paddocks and spaces'},
+  {id:'clear', name:'Clear', cost:0, d:'Back to grass'}
+];
+var GART = {
+  path:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#E3CBA1"/><circle cx="14" cy="15" r="2" fill="#CDAE7E"/><circle cx="25" cy="24" r="2.4" fill="#CDAE7E"/><circle cx="18" cy="27" r="1.6" fill="#CDAE7E"/>',
+  meadow:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#8FB583"/><path d="M11 30l2-10 2 10M18 30l2-12 2 12M25 30l2-9 2 9" stroke="#5E8E54" stroke-width="2" fill="none" stroke-linecap="round"/>',
+  mud:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#8B6A4E"/><ellipse cx="16" cy="16" rx="5" ry="3" fill="#73553D"/><ellipse cx="25" cy="25" rx="6" ry="3.4" fill="#73553D"/><circle cx="24" cy="14" r="1.6" fill="#A58466"/>',
+  sand:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#EBD5A6"/><path d="M10 16q5-3 10 0t10 0M10 25q5-3 10 0t10 0" stroke="#D9BC86" stroke-width="1.6" fill="none"/>',
+  fence:'<path d="M4 17h32M4 25h32" stroke="#A9714E" stroke-width="3"/><rect x="9" y="9" width="6" height="22" rx="2" fill="#8B5E4A"/><rect x="25" y="9" width="6" height="22" rx="2" fill="#8B5E4A"/>',
+  clear:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#A9C99A"/><path d="M14 14l12 12M26 14L14 26" stroke="#FBF4EF" stroke-width="3" stroke-linecap="round"/>'
+};
+var GBY = {}; GROUND.forEach(function(g){ GBY[g.id] = g; });
+
 
 /* ======================================================================
    ANIMALS. Facts only from Ash's checked list, each one sourced and live.
@@ -923,6 +1143,7 @@ var LIKES = {
   tilly:['roost','flowers','trough','tree'], olive:['owlbox','tree','roost']
 };
 /* what doing something looks and sounds like */
+var GLIKES = {peggy:['mud'], callie:['meadow'], shellie:['meadow'], lulu:['meadow'], rubie:['meadow'], gigi:['meadow'], hector:['sand','meadow'], dolly:['sand'], holly:['sand'], chloe:['sand'], tilly:['meadow'], digby:['path'], cleo:['path']};
 var ACT = {
   strawbed:{cls:'sleep', lines:['zzz','snug as anything']}, toybox:{cls:'play', lines:['boing!','again!','this is MY ball']},
   hutch:{cls:'sleep', lines:['zzz','so soft','nap time']}, clover:{cls:'eat', lines:['nibble nibble','clover o’clock']},
@@ -933,6 +1154,7 @@ var ACT = {
   dogbed:{cls:'sleep', lines:['zzz','*tail thump*']}, cattree:{cls:'perch', lines:['surveying my kingdom','purr']},
   duckhouse:{cls:'sleep', lines:['zzz']}, haynet:{cls:'eat', lines:['munch munch','crunch crunch']},
   roost:{cls:'perch', lines:['nice view up here']}, owlbox:{cls:'sleep', lines:['zzz','do not disturb']},
+  mud:{cls:'roll', lines:['mud bath!','squelch squelch','so cool and squishy']}, sand:{cls:'roll', lines:['wheee','dust bath!']}, meadow:{cls:'eat', lines:['munch munch','long grass, yum']}, path:{cls:'sniff', lines:['*sniff sniff*','out for a stroll']},
   bench:{cls:'perch', lines:['lovely spot, this']}, pond:{cls:'swim', lines:['splish!','paddle paddle','quack']}
 };
 
@@ -994,7 +1216,7 @@ var KEY = 'ahk-sanctuary-keeper-v1';
 var S = null;
 
 function fresh(){
-  return {v:2, hearts:20, earned:0, items:{}, animals:['peggy'], played:-1, start:Date.now(), last:Date.now(), seen:{peggy:true},
+  return {v:2, hearts:0, coins:15, coinFrac:0, earned:0, items:{}, animals:['peggy'], played:-1, start:Date.now(), last:Date.now(), seen:{peggy:true},
     names:{}, named:{}, sponsors:{}, land:0, cuddles:0, cuddleAt:{}, cuddleDay:{}, kindness:0, book:[], rushNext:0, lastDaily:0, shopSeen:{}, sname:'', moments:{}, jobsDone:0, camHint:false, jobHint:false};
 }
 function load(){
@@ -1008,6 +1230,7 @@ function load(){
   }
   if (d.v !== 2) return fresh();
   var f2 = fresh(); for (var k2 in f2) if (!(k2 in d)) d[k2] = f2[k2];
+  if (d.coins === undefined){ d.coins = Math.max(15, Math.floor((d.hearts || 0) / 2)); d.coinFrac = 0; }   // hearts are donations now; coins buy things
   /* the always-there water trough and shelter need their tiles: move anything built there */
   for (var fk in FIXED){
     if (!d.items[fk]) continue;
@@ -1052,7 +1275,7 @@ function sponsorCount(){ return Object.keys(S.sponsors).length; }
    ====================================================================== */
 var field = document.getElementById('field'), T = 40;
 var $ = function(id){ return document.getElementById(id); };
-$('heartIcon').innerHTML = HEART;
+$('heartIcon').innerHTML = HEART; $('coinIcon').innerHTML = COIN;
 
 function size(){
   T = field.clientWidth / COLS;
@@ -1065,6 +1288,17 @@ function size(){
 var lifted = null;
 function drawItems(popKey){
   var html = '', R = rows();
+  S.ground = S.ground || {};
+  for (var gk in S.ground){
+    var gp = gk.split(','). map(Number), gt = S.ground[gk];
+    if (gt === 'fence'){
+      var nb = function(dx, dy){ return S.ground[(gp[0] + dx) + ',' + (gp[1] + dy)] === 'fence'; };
+      html += '<svg class="fence" style="left:' + (gp[0] * T) + 'px;top:' + (gp[1] * T) + 'px;width:' + T + 'px;height:' + T + 'px" viewBox="0 0 40 40" aria-hidden="true">' +
+        (nb(-1,0) ? '<path d="M0 17h20M0 25h20" stroke="#A9714E" stroke-width="3"/>' : '') + (nb(1,0) ? '<path d="M20 17h20M20 25h20" stroke="#A9714E" stroke-width="3"/>' : '') +
+        (nb(0,-1) ? '<path d="M18 0v20M22 0v20" stroke="#A9714E" stroke-width="3"/>' : '') + (nb(0,1) ? '<path d="M18 20v20M22 20v20" stroke="#A9714E" stroke-width="3"/>' : '') +
+        '<rect x="16" y="9" width="8" height="22" rx="2" fill="#8B5E4A"/><rect x="16" y="9" width="8" height="4" rx="2" fill="#B07A57"/></svg>';
+    } else html += '<div class="gt g-' + gt + '" style="left:' + (gp[0] * T) + 'px;top:' + (gp[1] * T) + 'px;width:' + T + 'px;height:' + T + 'px"></div>';
+  }
   var DECO = [[.3,.6],[1.6,.2],[2.7,1.5],[3.4,.7],[5.2,1.2],[6.4,.4],[.5,2.8],[1.8,3.6],[3.6,3.2],[4.7,4.4],[6.2,3.6],[7.4,2.2],
               [.8,5.3],[2.4,4.6],[3.9,5.5],[5.6,5.8],[6.9,4.9],[7.2,6.3],[1.3,6.4],[4.4,6.6],[5.3,2.9],[2.1,1.2]];
   for (var band = 0; band * 7 < R; band++){
@@ -1096,7 +1330,7 @@ function applyPhase(){
    PANELS
    ====================================================================== */
 function hud(){
-  $('heartCount').textContent = S.hearts;
+  $('heartCount').textContent = S.earned; $('coinCount').textContent = S.coins;
   var p = phase();
   $('dayLabel').textContent = 'Day ' + (dayIndex() + 1) + (p === 'night' ? ' · night' : p === 'evening' ? ' · evening' : '');
   var chips = '<span class="chip">Animals <b>' + S.animals.length + ' of ' + ANIMALS.length + '</b></span><span class="chip">Cosy <b>' + Math.round(cosy() * 100) + '%</b></span>';
@@ -1128,18 +1362,51 @@ function itemVisible(id){
   if (it.cosy || it.stall || id === 'trough') return true;
   return S.animals.some(function(a){ return needs(a).some(function(n){ return n.item === id; }) || (LIKES[a] || []).indexOf(id) !== -1; });
 }
+function renderGround(){
+  $('groundbox').innerHTML = GROUND.map(function(g){
+    var sel = selected === 'g:' + g.id;
+    return '<button type="button" class="shopitem' + (sel ? ' sel' : '') + (S.coins < g.cost ? ' poor' : '') + '" data-ground="' + g.id + '" aria-pressed="' + sel + '" title="' + g.d + '"><svg class="icon" viewBox="0 0 40 40" aria-hidden="true">' + GART[g.id] + '</svg><b>' + g.name + '</b><span>' + (g.cost ? COIN + g.cost : 'free') + '</span></button>';
+  }).join('');
+}
+$('groundbox').addEventListener('click', function(e){
+  var b = e.target.closest('[data-ground]'); if (!b) return;
+  if (hideSeek){ toast(nm('rosie') + '\u2019s playing hide and seek! Find them first.'); return; }
+  var id = 'g:' + b.dataset.ground; selected = selected === id ? null : id; renderShop();
+  if (selected){ toast(GBY[b.dataset.ground].d + '. Drag across the field to paint ' + (b.dataset.ground === 'clear' ? 'it back to grass.' : 'it.')); field.scrollIntoView({behavior:'smooth', block:'center'}); }
+});
+function paintAt(key){
+  var g = selected.slice(2), p = key.split(',').map(Number), cur = (S.ground || {})[key];
+  if (FIXED[key]) return;
+  if (g === 'clear'){ if (cur){ delete S.ground[key]; return true; } return; }
+  if (cur === g) return;
+  if (g === 'fence' && (S.items[key] || occupied(p[0], p[1], null) || (p[0] === 1 && p[1] === 6))) return;
+  if (S.coins < GBY[g].cost){ toast('Not enough coins for more ' + GBY[g].name.toLowerCase() + '.'); selected = null; renderShop(); return; }
+  S.ground = S.ground || {}; S.ground[key] = g; S.coins -= GBY[g].cost; return true;
+}
+var painting = false;
+field.addEventListener('pointerdown', function(e){
+  if (!selected || selected.indexOf('g:') !== 0 || hideSeek) return;
+  painting = true; field._painted = true;
+  var t = tileAt(e); if (t && paintAt(t.join(','))){ drawItems(); hud(); }
+});
+document.addEventListener('pointermove', function(e){
+  if (!painting) return; var t = tileAt(e); if (t && paintAt(t.join(','))){ drawItems(); hud(); }
+});
+document.addEventListener('pointerup', function(){ if (painting){ painting = false; save(); refresh(); } });
+document.addEventListener('touchmove', function(e){ if (painting){ e.preventDefault(); var t = e.touches[0], tt = t && tileAt(t); if (tt && paintAt(tt.join(','))){ drawItems(); hud(); } } }, {passive:false});
 function renderShop(){
+  renderGround();
   var land = LAND[S.land + 1];
   $('landbox').innerHTML = land
-    ? '<div class="land"><div><b>More land</b><span>Three more rows of field for everyone. ' + (rows()) + ' rows now.</span></div><button type="button" id="buyLand"' + (S.hearts < land.cost ? ' disabled' : '') + '>' + HEART + land.cost + '</button></div>'
+    ? '<div class="land"><div><b>More land</b><span>Three more rows of field for everyone. ' + (rows()) + ' rows now.</span></div><button type="button" id="buyLand"' + (S.coins < land.cost ? ' disabled' : '') + '>' + COIN + land.cost + '</button></div>'
     : '<div class="land"><div><b>All the land</b><span>The sanctuary is as big as it gets. For now.</span></div></div>';
   var html = '', group = '';
   ITEMS.forEach(function(i){
     if (!itemVisible(i.id)) return;
     if (i.g !== group){ if (group) html += '</div>'; group = i.g; html += '<h3 class="sec">' + group + '</h3><div class="shop">'; }
     var isNew = !S.shopSeen[i.id];
-    html += '<button type="button" class="shopitem' + (selected === i.id ? ' sel' : '') + (S.hearts < i.cost ? ' poor' : '') + (isNew ? ' new' : '') + '" data-item="'+i.id+'" aria-pressed="'+(selected===i.id)+'">' +
-      isvg(ART[i.id], 'icon') + '<b>' + i.name + '</b><span>' + HEART + i.cost + '</span></button>';
+    html += '<button type="button" class="shopitem' + (selected === i.id ? ' sel' : '') + (S.coins < i.cost ? ' poor' : '') + (isNew ? ' new' : '') + '" data-item="'+i.id+'" aria-pressed="'+(selected===i.id)+'">' +
+      isvg(ART[i.id], 'icon') + '<b>' + i.name + '</b><span>' + COIN + i.cost + '</span></button>';
   });
   if (group) html += '</div>';
   $('shopbox').innerHTML = html;
@@ -1150,6 +1417,7 @@ function markShopSeen(){ ITEMS.forEach(function(i){ if (itemVisible(i.id)) S.sho
 function renderVisitors(){
   $('stats').innerHTML =
     '<div><b>' + S.earned + '</b><span>Hearts from visitors</span></div>' +
+    '<div><b>' + S.coins + '</b><span>Coins to spend</span></div>' +
     '<div><b>' + S.cuddles + '</b><span>Cuddles given</span></div>' +
     '<div><b>' + S.kindness + '</b><span>Things passed on to other sanctuaries</span></div>' +
     '<div><b>' + sponsorCount() + '</b><span>Animals with sponsors</span></div>' +
@@ -1163,7 +1431,7 @@ function renderVisitors(){
 
 function nudge(){
   var el = $('nudge');
-  if (hideSeek){ el.innerHTML = '<span class="who">' + DRAW.rat() + '</span><span><b>' + esc(nm('rosie')) + '’s hiding.</b> Tap the thing you think they’re behind. ' + (3 - hideSeek.tries) + ' guesses left.</span>'; return; }
+  if (hideSeek){ el.innerHTML = '<span class="who">' + DRAW.rat() + '</span><span><b>' + esc(nm('rosie')) + '’s playing hide and seek!</b> Tap the thing you think they’re behind. ' + (3 - hideSeek.tries) + ' guesses left. <button type="button" class="stopplay" id="stopPlay">Stop playing</button></span>'; $('stopPlay').onclick = stopHideSeek; return; }
   if (moving){ el.innerHTML = '<span class="who">' + isvg(ART[S.items[moving]]) + '</span><span><b>Moving the ' + ITEM[S.items[moving]].name.toLowerCase() + '.</b> Tap an empty spot. Tap it again to put it back.</span>'; return; }
   for (var i = 0; i < S.animals.length; i++){
     var id = S.animals[i], miss = needs(id).filter(function(n){ return !n.met; })[0];
@@ -1178,12 +1446,12 @@ function nudge(){
   var free = COLS * rows() - Object.keys(S.items).length - Object.keys(FIXED).length;
   if (next && free < 6 && LAND[S.land + 1]){ el.innerHTML = '<span class="who">' + HEART + '</span><span>It’s getting busy. <b>More land</b> is in Build when you’re ready.</span>'; return; }
   el.innerHTML = next
-    ? '<span class="who">' + HEART + '</span><span>Everyone’s happy. Someone new arrives at <b>' + next.at + '</b> hearts earned, just <b>' + (next.at - S.earned) + '</b> to go. Little jobs and camera moments speed things up.</span>'
+    ? '<span class="who">' + HEART + '</span><span>' + (S.earned >= next.at ? 'Everyone\u2019s happy. <b>Someone new is on their way!</b>' : 'Everyone\u2019s happy. Someone new arrives at <b>' + next.at + '</b> hearts, just <b>' + (next.at - S.earned) + '</b> to go. Little jobs and camera moments speed things up.') + '</span>'
     : '<span class="who">' + HEART + '</span><span>Everyone’s home and happy. The wildlife rescue is coming next.</span>';
 }
 
 var _inRefresh = false;
-function refresh(){ if (!_inRefresh){ _inRefresh = true; try { checkArrivals(); } finally { _inRefresh = false; } } checkSponsors(); hud(); renderAnimals(); renderShop(); renderVisitors(); nudge(); moodAll(); }
+function refresh(){ if (typeof renderCareBar === 'function' && S.rescue) renderCareBar(); if (!_inRefresh){ _inRefresh = true; try { checkArrivals(); } finally { _inRefresh = false; } } checkSponsors(); hud(); renderAnimals(); renderShop(); renderVisitors(); nudge(); moodAll(); }
 
 /* ======================================================================
    ANIMALS ON THE FIELD
@@ -1194,6 +1462,7 @@ function walkable(x, y, id){
   var f = FIXED[x+','+y];
   if (f === 'gate') return false;
   if (f === 'pond') return id === 'dilly';
+  if (S.ground && S.ground[x+','+y] === 'fence') return false;
   return true;
 }
 function spawn(id, x, y){
@@ -1240,6 +1509,7 @@ function pickActivity(id){
   var likes = LIKES[id] || [], opts = [];
   for (var k in S.items) if (likes.indexOf(S.items[k]) !== -1 && k !== lifted){ var q = k.split(',').map(Number); if (!occupied(q[0], q[1], id)) opts.push(k); }
   if (likes.indexOf('pond') !== -1) { opts.push(PONDKEY); opts.push(PONDKEY); }
+  for (var gk2 in (S.ground || {})){ var gt2 = S.ground[gk2]; if ((GLIKES[id] || []).indexOf(gt2) !== -1 && !S.items[gk2]){ var gq = gk2.split(',').map(Number); if (!occupied(gq[0], gq[1], id)) opts.push(gk2); } }
   for (var fx in FIXED){ if (fx !== PONDKEY && likes.indexOf(FIXED[fx]) !== -1){ var fq = fx.split(',').map(Number); if (!occupied(fq[0], fq[1], id)) opts.push(fx); } }
   if (!opts.length) return null;
   var sleepy = opts.filter(function(k){ return ACT[itemAt(k)] && ACT[itemAt(k)].cls === 'sleep'; });
@@ -1249,7 +1519,7 @@ function pickActivity(id){
   return opts[Math.floor(Math.random() * opts.length)];
 }
 function startActivity(m){
-  var it = itemAt(m.act); if (!it || (S.items[m.act] === undefined && !FIXED[m.act])) { m.state = 'idle'; return; }
+  var it = itemAt(m.act) || (S.ground && S.ground[m.act]); if (!it || !ACT[it]) { m.state = 'idle'; return; }
   var a = ACT[it]; if (!a) { m.state = 'idle'; return; }
   var cls = a.cls, lines = a.lines;
   if (m.id === 'peggy' && it === 'strawbed' && Math.random() < .5){ cls = 'roll'; lines = ['rolling in the straw','wheee']; }
@@ -1263,7 +1533,7 @@ function startActivity(m){
   m.state = 'act';
   m.until = Date.now() + (cls === 'sleep' ? 9000 + Math.random() * 6000 : 4000 + Math.random() * 3000);
   var mk = m.id + ':' + it;
-  if (!S.moments[mk] && (LIKES[m.id] || []).indexOf(it) !== -1 && Math.random() < .75 && !document.querySelector('.cam')){
+  if (!hideSeek && !S.moments[mk] && (LIKES[m.id] || []).indexOf(it) !== -1 && Math.random() < .75 && !document.querySelector('.cam')){
     m.until = Math.max(m.until, Date.now() + 7500);
     showCam((m.x + .5 + m.jx) * T, (m.y - .35) * T, mk, m);
   }
@@ -1376,7 +1646,7 @@ field.addEventListener('pointerdown', function(){ sweeping = true; });
 window.addEventListener('pointerup', function(){ sweeping = false; });
 field.addEventListener('pointermove', function(ev){ if (sweeping && ev.pointerType === 'mouse') sweepAt(ev.clientX, ev.clientY); });
 field.addEventListener('touchmove', function(ev){ var t = ev.touches[0]; if (t) sweepAt(t.clientX, t.clientY); }, {passive:true});
-function gain(n){ S.hearts += n; S.earned += n; checkArrivals(); save(); refresh(); }
+function gain(n){ S.earned += n; S.hearts = S.earned; S.coinFrac = (S.coinFrac || 0) + n / 2; var c = Math.floor(S.coinFrac); S.coins += c; S.coinFrac -= c; checkArrivals(); save(); refresh(); }
 
 var vqTimer = null;
 function visitorSays(stall, x, y){
@@ -1386,6 +1656,7 @@ function visitorSays(stall, x, y){
   var q = pool[Math.floor(Math.random() * pool.length)]; if (!q) return;
   var text = fill(q.t);
   S.book.push({t:text, at:stall || 'field', d:dayIndex()}); if (S.book.length > 40) S.book.shift();
+  return;   /* comments now come from the people walking the path */
   var el = document.createElement('div'); el.className = 'vq';
   el.innerHTML = '<small>' + (stall === 'bake' ? 'At the bake stall' : stall === 'beauty' ? 'At the beauty stall' : 'A visitor') + '</small>' + esc(text);
   var px = Math.min((x + .3) * T, field.clientWidth * .3), py = Math.max(y * T, T * 1.4);
@@ -1561,18 +1832,18 @@ function letGo(key){
     var b = e.target.closest('button[data-do]'); if (!b) return;
     var how = b.dataset.do, got = how === 'sell' ? half : how === 'give' ? quarter : 0;
     delete S.items[key];
-    S.hearts += got;
+    S.coins += got;
     if (how === 'give') S.kindness++;
     save(); drawItems(); closeSheet(); refresh();
     toast(how === 'sell' ? 'Sold the ' + it.name.toLowerCase() + '. +' + got
-        : how === 'give' ? 'Passed on. The other sanctuary sent a thank-you card and ' + got + (got === 1 ? ' heart.' : ' hearts.')
+        : how === 'give' ? 'Passed on. The other sanctuary sent a thank-you card and ' + got + (got === 1 ? ' coin.' : ' coins.')
         : (it.kind === 'build' ? 'Binned.' : 'Composted. The flowers will thank you.'));
   };
 }
 
 function buyLand(){
-  var land = LAND[S.land + 1]; if (!land || S.hearts < land.cost) return;
-  S.hearts -= land.cost; S.land++;
+  var land = LAND[S.land + 1]; if (!land || S.coins < land.cost) return;
+  S.coins -= land.cost; S.land++;
   save(); size(); refresh();
   toast('Three more rows of field. Everyone’s already exploring.');
   S.animals.forEach(function(id){ var m = mobs[id]; if (m && Math.random() < .6){ var y = rows() - 1 - Math.floor(Math.random() * 3); if (walkable(m.x, y, id)) walkTo(m, m.x, y); } });
@@ -1599,10 +1870,33 @@ function randomFact(){
 var hideSeek = null;
 function startHideSeek(){
   var spots = Object.keys(S.items); if (spots.length < 2) return;
-  hideSeek = {spot:spots[Math.floor(Math.random() * spots.length)], tries:0};
-  var m = mobs.rosie; if (m.cls) endActivity(m); m.el.classList.add('hiding');
+  hideSeek = {spot:spots[Math.floor(Math.random() * spots.length)], tries:0, until:Date.now() + 33000};
+  var m = mobs.rosie; if (m.cls) endActivity(m);
+  speak('rosie', 'count to three!');
+  var b = document.createElement('div'); b.className = 'hsbanner'; b.id = 'hsBanner';
+  b.innerHTML = '<span class="hsr">' + DRAW.rat() + '</span><div><b>Hide and seek!</b><span id="hsText">' + esc(nm('rosie')) + ' is hiding\u2026 3</span></div><i class="hsring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="4"/><circle id="hsArc" cx="18" cy="18" r="15" fill="none" stroke="#F6D77A" stroke-width="4" stroke-linecap="round" stroke-dasharray="94.2" stroke-dashoffset="0" transform="rotate(-90 18 18)"/></svg><em id="hsSecs">30</em></i>';
+  field.parentNode.appendChild(b);
+  var n = 3; var cd = setInterval(function(){ n--; if (n > 0){ $('hsText').textContent = nm('rosie') + ' is hiding\u2026 ' + n; } else { clearInterval(cd); m.el.classList.add('hiding'); field.classList.add('seeking'); $('hsText').textContent = 'Tap the thing you think ' + nm('rosie') + '\u2019s behind!'; nudge(); } }, 1000);
   nudge(); field.scrollIntoView({behavior:'smooth', block:'center'});
-  toast(nm('rosie') + '’s hiding behind one of your things. Ready or not...');
+}
+function endSeek(){ field.classList.remove('seeking'); var b = $('hsBanner'); if (b) b.remove(); }
+function tickSeek(now){
+  if (!hideSeek || !hideSeek.until) return;
+  var left = Math.max(0, Math.ceil((hideSeek.until - now) / 1000)), shown = Math.min(30, left);
+  if ($('hsSecs')) $('hsSecs').textContent = shown;
+  if ($('hsArc')) $('hsArc').setAttribute('stroke-dashoffset', (94.2 * (1 - shown / 30)).toFixed(1));
+  if (left <= 0){
+    var m = mobs.rosie, p = hideSeek.spot.split(',').map(Number), where = ITEM[S.items[hideSeek.spot]].name.toLowerCase();
+    m.x = p[0]; m.y = p[1]; position(m, true); m.el.classList.remove('hiding'); m.state = 'idle'; m.next = Date.now() + 4000;
+    hideSeek = null; S.played = dayIndex(); endSeek(); celebrate('rosie'); speak('rosie', 'here I am!'); gain(2);
+    toast('Time\u2019s up! ' + nm('rosie') + ' was behind the ' + where + '. +2 for playing.');
+  }
+}
+function stopHideSeek(){
+  if (!hideSeek) return; endSeek();
+  var m = mobs.rosie, p = hideSeek.spot.split(',').map(Number);
+  m.x = p[0]; m.y = p[1]; position(m, true); m.el.classList.remove('hiding'); m.state = 'idle'; m.next = Date.now() + 4000;
+  hideSeek = null; speak('rosie', 'aww, okay!'); nudge(); toast('Game over. You can build again.');
 }
 function guess(key){
   hideSeek.tries++;
@@ -1610,13 +1904,15 @@ function guess(key){
   if (key === hideSeek.spot || hideSeek.tries >= 3){
     var found = key === hideSeek.spot, p = hideSeek.spot.split(',').map(Number), where = ITEM[S.items[hideSeek.spot]].name.toLowerCase();
     m.x = p[0]; m.y = p[1]; position(m, true); m.el.classList.remove('hiding'); m.state = 'idle'; m.next = Date.now() + 4000;
-    hideSeek = null; S.played = dayIndex();
+    hideSeek = null; S.played = dayIndex(); endSeek();
     celebrate('rosie'); loveBurst('rosie'); speak('rosie', found ? 'eeeek!' : 'here I am!');
     gain(found ? 5 : 2);
     toast(found ? 'Found them! Rats really do squeal with joy when they’re found. +5' : 'They were behind the ' + where + '. +2 for trying.');
     return;
   }
-  toast('Not there. ' + (3 - hideSeek.tries) + (3 - hideSeek.tries === 1 ? ' guess' : ' guesses') + ' left.'); nudge();
+  var tile = [].filter.call(document.querySelectorAll('#itemLayer .tile'), function(t){ return t.style.left === (+key.split(',')[0] * T) + 'px' && t.style.top === (+key.split(',')[1] * T) + 'px'; })[0];
+  if (tile){ tile.classList.remove('nope'); void tile.offsetWidth; tile.classList.add('nope'); }
+  toast('Not there! ' + (3 - hideSeek.tries) + (3 - hideSeek.tries === 1 ? ' guess' : ' guesses') + ' left.'); nudge();
 }
 
 function startMove(key){
@@ -1644,14 +1940,78 @@ TABS.forEach(function(t){ $('tab-' + t).onclick = function(){ setTab(t); }; });
 
 $('shopbox').addEventListener('click', function(e){
   var b = e.target.closest('.shopitem'); if (!b) return;
+  if (b._dragged){ b._dragged = false; return; }
+  if (hideSeek){ toast(nm('rosie') + '\u2019s playing hide and seek! Find them first, or tap \u201cStop playing\u201d.'); return; }
   var id = b.dataset.item;
-  if (S.hearts < ITEM[id].cost && selected !== id){ toast('A ' + ITEM[id].name.toLowerCase() + ' costs ' + ITEM[id].cost + ' hearts. You’ve got ' + S.hearts + '.'); return; }
+  if (S.coins < ITEM[id].cost && selected !== id){ toast('A ' + ITEM[id].name.toLowerCase() + ' costs ' + ITEM[id].cost + ' coins. You\u2019ve got ' + S.coins + '. Every 2 hearts from visitors make a coin.'); return; }
   selected = selected === id ? null : id;
   renderShop();
   if (selected){ toast('Tap a spot on the field for the ' + ITEM[id].name.toLowerCase() + '.'); field.scrollIntoView({behavior:'smooth', block:'center'}); }
 });
 $('alist').addEventListener('click', function(e){ var b = e.target.closest('.acard[data-who]'); if (b) showAnimal(b.dataset.who); });
 
+function placeItem(key, id){
+  if (FIXED[key]){ toast('That spot\u2019s taken.'); return false; }
+  if (S.items[key]){ toast('Something\u2019s already there. Pick an empty spot.'); return false; }
+  var cost = ITEM[id].cost;
+  if (S.coins < cost){ toast('Not enough coins yet. Every 2 hearts from visitors make a coin.'); selected = null; renderShop(); return false; }
+  var before = S.animals.filter(happy);
+  S.coins -= cost; S.items[key] = id;
+  save(); drawItems(key); dust(key);
+  if (selected === id){ selected = null; renderShop(); }
+  refresh();
+  S.animals.forEach(function(a){ if (before.indexOf(a) === -1 && happy(a)){ celebrate(a); speak(a, 'thank you!'); } });
+  checkRush();
+  return true;
+}
+/* ---------- click and drag: pick things up and put them down ---------- */
+var drag = null;
+function dragGhost(svg){ var g = document.createElement('div'); g.className = 'dghost'; g.innerHTML = svg; document.body.appendChild(g); return g; }
+function dragMove(x, y){
+  if (!drag) return;
+  drag.g.style.transform = 'translate(' + (x - 32) + 'px,' + (y - 40) + 'px) rotate(-6deg) scale(1.1)';
+  var t = tileAt({clientX:x, clientY:y}), gh = $('ghost');
+  if (t){ var k = t.join(','), bad = FIXED[k] || (S.items[k] && k !== drag.from);
+    gh.style.left = (t[0] * T) + 'px'; gh.style.top = (t[1] * T) + 'px'; gh.classList.add('on'); gh.classList.toggle('bad', !!bad); }
+  else gh.classList.remove('on','bad');
+}
+function dragEnd(x, y){
+  if (!drag) return;
+  var d = drag; drag = null; d.g.remove(); $('ghost').classList.remove('on','bad'); document.body.classList.remove('dragging');
+  var t = tileAt({clientX:x, clientY:y}); if (!t) { if (d.from){ lifted = null; drawItems(); } return; }
+  var k = t.join(',');
+  if (d.from){
+    lifted = null;
+    if (k === d.from || FIXED[k] || S.items[k]){ drawItems(); if (k !== d.from) toast('That spot\u2019s taken.'); return; }
+    S.items[k] = S.items[d.from]; delete S.items[d.from];
+    save(); drawItems(k); dust(k); refresh(); toast('Moved the ' + ITEM[S.items[k]].name.toLowerCase() + '.');
+  } else placeItem(k, d.item);
+}
+document.addEventListener('pointermove', function(e){ if (drag) dragMove(e.clientX, e.clientY); });
+document.addEventListener('pointerup', function(e){ if (drag) dragEnd(e.clientX, e.clientY); });
+document.addEventListener('touchmove', function(e){ if (drag) e.preventDefault(); }, {passive:false});
+/* drag from the Build list */
+$('shopbox').addEventListener('pointerdown', function(e){
+  var b = e.target.closest('.shopitem'); if (!b || hideSeek) return;
+  var id = b.dataset.item, sx = e.clientX, sy = e.clientY, timer = null, started = false;
+  if (S.coins < ITEM[id].cost) return;
+  function start(){ if (started) return; started = true; b._dragged = true; drag = {item:id, g:dragGhost(isvg(ART[id]))}; document.body.classList.add('dragging'); dragMove(sx, sy); }
+  if (e.pointerType !== 'mouse') timer = setTimeout(start, 260);
+  function mv(ev){ if (!started && Math.hypot(ev.clientX - sx, ev.clientY - sy) > 8){ if (e.pointerType === 'mouse') start(); else { clearTimeout(timer); cleanup(); } } }
+  function cleanup(){ clearTimeout(timer); document.removeEventListener('pointermove', mv); document.removeEventListener('pointerup', cleanup); document.removeEventListener('pointercancel', cleanup); }
+  document.addEventListener('pointermove', mv); document.addEventListener('pointerup', cleanup); document.addEventListener('pointercancel', cleanup);
+});
+/* drag things already on the field to move them */
+field.addEventListener('pointerdown', function(e){
+  if (selected || moving || hideSeek || e.target.closest('.heart,.cam,.job,.mob')) return;
+  var t = tileAt(e); if (!t) return; var k = t.join(','); if (!S.items[k]) return;
+  var sx = e.clientX, sy = e.clientY, timer = null, started = false;
+  function start(){ if (started) return; started = true; field._dragged = true; lifted = k; drawItems(); drag = {from:k, g:dragGhost(isvg(ART[S.items[k]]))}; document.body.classList.add('dragging'); dragMove(sx, sy); }
+  if (e.pointerType !== 'mouse') timer = setTimeout(start, 300);
+  function mv(ev){ if (!started && Math.hypot(ev.clientX - sx, ev.clientY - sy) > 8){ if (e.pointerType === 'mouse') start(); else { clearTimeout(timer); cleanup(); } } }
+  function cleanup(){ clearTimeout(timer); document.removeEventListener('pointermove', mv); document.removeEventListener('pointerup', cleanup); document.removeEventListener('pointercancel', cleanup); }
+  document.addEventListener('pointermove', mv); document.addEventListener('pointerup', cleanup); document.addEventListener('pointercancel', cleanup);
+});
 function tileAt(ev){
   var r = field.getBoundingClientRect();
   var x = Math.floor((ev.clientX - r.left) / T), y = Math.floor((ev.clientY - r.top) / T);
@@ -1666,6 +2026,8 @@ field.addEventListener('pointermove', function(ev){
 field.addEventListener('pointerleave', function(){ $('ghost').classList.remove('on'); });
 
 field.addEventListener('click', function(ev){
+  if (field._dragged){ field._dragged = false; return; }
+  if (field._painted){ field._painted = false; return; }
   var heart = ev.target.closest('.heart'); if (heart){ collect(heart); return; }
   var camb = ev.target.closest('.cam'); if (camb){ snap(camb); return; }
   var qb = ev.target.closest('.quizq'); if (qb){ openQuiz(); return; }
@@ -1673,7 +2035,10 @@ field.addEventListener('click', function(ev){
   var mob = ev.target.closest('.mob');
   var t = tileAt(ev), key = t ? t.join(',') : null;
 
-  if (hideSeek){ if (key && S.items[key]) guess(key); else toast('Tap one of your things. They’re hiding behind something.'); return; }
+  if (hideSeek){
+    if (selected){ toast(nm('rosie') + '\u2019s playing hide and seek! Find them first, then you can build. Or tap \u201cStop playing\u201d.'); return; }
+    if (!mobs.rosie.el.classList.contains('hiding')){ toast('Shh, ' + nm('rosie') + '\u2019s still finding a spot\u2026'); return; }
+    if (key && S.items[key]) guess(key); else toast(nm('rosie') + '\u2019s hiding behind one of your things. Tap the one you think they\u2019re behind.'); return; }
 
   if (moving){
     if (!key || key === moving){ endMove(); toast('Put back where it was.'); return; }
@@ -1684,18 +2049,10 @@ field.addEventListener('click', function(ev){
     return;
   }
 
+  if (selected && selected.indexOf('g:') === 0) return;
   if (selected && key){
-    if (FIXED[key]){ toast('That spot’s taken by the ' + FIXED[key] + '.'); return; }
-    if (S.items[key]){ showItem(key); return; }
-    var cost = ITEM[selected].cost;
-    if (S.hearts < cost){ toast('Not enough hearts yet.'); selected = null; renderShop(); return; }
-    var before = S.animals.filter(happy);
-    S.hearts -= cost; S.items[key] = selected;
-    save(); drawItems(key); dust(key);
-    if (S.hearts < cost) selected = null;
-    refresh();
-    S.animals.forEach(function(id){ if (before.indexOf(id) === -1 && happy(id)){ celebrate(id); speak(id, 'thank you!'); } });
-    checkRush();
+    if (S.items[key] && !FIXED[key]){ showItem(key); return; }
+    placeItem(key, selected);
     return;
   }
   if (mob){ mob.classList.remove('squish'); void mob.offsetWidth; mob.classList.add('squish'); var who = mob.dataset.who; speak(who, SOUND[A[who].species] || '!'); setTimeout(function(){ mob.classList.remove('squish'); showAnimal(who); }, 260); return; }
@@ -2261,19 +2618,21 @@ function tickQuiz(now){
 function showHelp(){
   var cam = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FBF4EF" stroke="#E8804C" stroke-width="2"/><rect x="5.5" y="8.5" width="13" height="9.5" rx="2.2" fill="#3A1F3D"/><path d="M9.3 8.5l1.1-1.8h3.2l1.1 1.8z" fill="#3A1F3D"/><circle cx="12" cy="13.2" r="2.8" fill="#F6C6A8"/></svg>';
   var qq = '<svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="#F6D77A" stroke="#E8A93C" stroke-width="2.5"/><text x="20" y="27.5" text-anchor="middle" font-family="Gloock, Georgia, serif" font-size="22" fill="#3A1F3D">?</text></svg>';
-  var rows = [
-    [DRAW.pig(), 'Make everyone happy', 'Each animal needs a couple of things. The little bubble above them shows what. Find it in <b style="display:inline;font-size:inherit">Build</b>, then tap an empty spot on the field.'],
-    [isvg(HEART), 'Collect hearts', 'Happy animals bring visitors, and visitors leave hearts. Tap them, or swipe across a few at once.'],
-    ['<svg viewBox="0 0 40 40">' + JOB_ART.litter + '</svg>', 'Do little jobs', 'Litter, a lost hat, a runaway ball. Tap them for a heart or two.'],
-    [qq, 'Answer animal questions', 'A gold question mark pops up now and then. Get it right for 10 hearts. Get it wrong and you’ll have to wait for the next one.'],
-    [cam, 'Snap moments', 'When a camera appears next to an animal, tap it quickly. Snaps go in your <b style="display:inline;font-size:inherit">Album</b>, and any snap can become a postcard.'],
-    [DRAW.rabbit(), 'Give cuddles', 'Tap any animal to say hello. Cuddles are lovely, but not too often. Everyone needs their space.'],
-    [isvg(ART.gate), 'Welcome new friends', 'The more hearts you earn, the more animals arrive at the gate. There are 17 to meet.']
+  var slides = [
+    {pics:[DRAW.pig(), isvg(HEART), COIN], h:'Make everyone happy', p:'Each animal needs a couple of things. The bubble above them shows what. Drag it from <b>Build</b> onto the field.<br><br>Happy animals bring visitors, and visitors leave <b>hearts</b>. Every 2 hearts become 1 <b>coin</b> to spend.'},
+    {pics:['<svg viewBox="0 0 40 40">' + JOB_ART.litter + '</svg>', qq, cam], h:'Little things to do', p:'Tap the litter and lost hats that turn up. Answer the gold <b>?</b> questions for bonus hearts. When a camera pops up next to an animal, tap it quickly to snap the moment for your <b>Album</b>.'},
+    {pics:[DRAW.rabbit(), DRAW.rat(), isvg(ART.gate)], h:'Cuddles, treats and games', p:'Tap any animal to say hello, give a cuddle or a treat. Not too often, mind!<br><br>Once ' + esc(nm('rosie')) + ' arrives, they’ll ask to play <b>hide and seek</b>. You get 30 seconds to find them.'},
+    {pics:[DRAW.hedgehog(), DRAW.seal(), DRAW.fox()], h:'Rescues', p:'In <b>Wildlife rescue</b> and <b>Sea rescue</b>, a new animal in need calls in every day. Care for them once a day and they get better in real time. Then help them home, and make a postcard to share.'}
   ];
-  openSheet('<small class="k">How to play</small><h2>Looking after the sanctuary</h2>' +
-    '<ul class="howto">' + rows.map(function(r){ return '<li><span class="ic">' + r[0] + '</span><span><b>' + r[1] + '</b><span class="t">' + r[2] + '</span></span></li>'; }).join('') +
-    '<li class="tip"><span class="ic">' + isvg(ART.lantern) + '</span><span><b>Speed things up</b><span class="t">Cosy things like lanterns, benches and flowers make hearts come faster. Name an animal and they might get a sponsor who sends hearts every day. When everyone’s happy at once, visitors rush in.</span></span></li>' +
-    '</ul><div class="acts"><button type="button" class="btn main" id="closeBtn">Got it</button></div>', 'How to play');
+  openSheet('<small class="k">How to play</small><div class="slides" id="slides">' + slides.map(function(sl){
+      return '<section class="slide"><div class="spics">' + sl.pics.map(function(x){ return '<span>' + x + '</span>'; }).join('') + '</div><h2>' + sl.h + '</h2><p>' + sl.p + '</p></section>';
+    }).join('') + '</div><div class="sdots" id="sdots">' + slides.map(function(_, i){ return '<i class="' + (i ? '' : 'on') + '"></i>'; }).join('') + '</div>' +
+    '<div class="acts"><button type="button" class="btn soft" id="closeBtn">Skip</button><button type="button" class="btn main" id="nextSlide">Next</button></div>', 'How to play');
+  var box = $('slides'), cur = 0;
+  function go(i){ cur = Math.max(0, Math.min(slides.length - 1, i)); box.scrollTo({left:cur * box.clientWidth, behavior:'smooth'}); }
+  function mark(){ cur = Math.round(box.scrollLeft / box.clientWidth); [].forEach.call($('sdots').children, function(d, i){ d.className = i === cur ? 'on' : ''; }); $('nextSlide').textContent = cur === slides.length - 1 ? 'Let’s play' : 'Next'; $('closeBtn').textContent = cur === slides.length - 1 ? 'Close' : 'Skip'; }
+  box.addEventListener('scroll', function(){ clearTimeout(box._t); box._t = setTimeout(mark, 60); });
+  $('nextSlide').onclick = function(){ if (cur === slides.length - 1) closeSheet(); else go(cur + 1); };
   $('closeBtn').onclick = closeSheet;
   S.helpSeen = true; save();
 }
@@ -2281,52 +2640,441 @@ $('helpBtn').onclick = showHelp;
 
 
 /* ======================================================================
-   PASSERS-BY - the odd couple strolling along the footpath
+   VISITORS - one path loops right round the sanctuary. People wander it
+   slowly: some walk straight round, some stop to look, have a drink or a
+   snack, or reach over to say hello to someone.
    ====================================================================== */
 var SKIN = ['#F3D2B8','#E2B08C','#C68B62','#9A6646','#6E4630'], HAIR = ['#3A2A24','#6E4A2E','#C99A5A','#2A1E1A','#B5552E','#8E8E96'],
     TOP = ['#E8804C','#7FA672','#6E4E78','#7FB3D9','#F6C6A8','#E9A9C3','#3A1F3D'];
 function pick(a){ return a[Math.floor(Math.random() * a.length)]; }
-function personSVG(){
-  var sk = pick(SKIN), hr = pick(HAIR), tp = pick(TOP), long = Math.random() < .5, legs = '#5A4550';
-  return '<svg viewBox="0 0 31 50"><g class="lg"><rect x="10" y="33" width="4.5" height="15" rx="2.2" fill="' + legs + '"/></g><g class="lg lg2"><rect x="16.5" y="33" width="4.5" height="15" rx="2.2" fill="' + legs + '"/></g>' +
+function personSVG(sk, hr, tp, long){
+  return '<svg viewBox="0 0 31 50"><g class="lg"><rect x="10" y="33" width="4.5" height="15" rx="2.2" fill="#5A4550"/></g><g class="lg lg2"><rect x="16.5" y="33" width="4.5" height="15" rx="2.2" fill="#5A4550"/></g>' +
     '<g class="bd">' + (long ? '<path d="M7 12q8.5-12 17 0v12H7z" fill="' + hr + '"/>' : '') +
-    '<rect x="7" y="18" width="17" height="18" rx="7" fill="' + tp + '"/>' +
+    '<rect x="7" y="18" width="17" height="18" rx="7" fill="' + tp + '"/><path class="arm" d="M22 22l9-4" stroke="' + sk + '" stroke-width="3.5" stroke-linecap="round"/>' +
     '<circle cx="15.5" cy="11" r="7.5" fill="' + sk + '"/><path d="M8 10q7.5-10 15 0q-3-4-7.5-4T8 10z" fill="' + hr + '"/>' +
     '<circle cx="12.8" cy="12" r=".9" fill="#2A1630"/><circle cx="18.2" cy="12" r=".9" fill="#2A1630"/><path d="M13.6 14.6q1.9 1.4 3.8 0" stroke="#2A1630" stroke-width=".8" fill="none" stroke-linecap="round"/></g></svg>';
 }
-var nextWalk = 0;
-function stroll(){
-  var path = $('footpath'); if (!path || REDUCED || !path.animate) return;
-  var W = path.clientWidth, ltr = Math.random() < .5, pair = Math.random() < .55, dur = 14000 + Math.random() * 6000;
-  var group = [], n = pair ? 2 : 1;
-  for (var i = 0; i < n; i++){
-    var w = document.createElement('div'); w.className = 'walker'; w.innerHTML = personSVG();
-    w.style.left = '0px'; path.appendChild(w); group.push(w);
+var PROP = {
+  drink:'<svg viewBox="0 0 12 12"><path d="M2 3h8l-1 8H3z" fill="#FBF4EF" stroke="#B07A57" stroke-width="1"/><path d="M3 5h6" stroke="#C98A58" stroke-width="2"/></svg>',
+  eat:'<svg viewBox="0 0 12 12"><path d="M1 9L11 4v5z" fill="#8B5E4A"/><path d="M1 9L11 4v1.5L1 10z" fill="#F6C6A8"/></svg>'
+};
+var walkers = [], nextWalk = 0, lastFrame = 0;
+function ring(){
+  var w = document.querySelector('.fieldwrap'), W = w.clientWidth, H = w.clientHeight, m = 13;
+  return {x0:m, y0:m, x1:W - m, y1:H - m, P:2 * ((W - 2 * m) + (H - 2 * m))};
+}
+function pointAt(d, rg){
+  var w = rg.x1 - rg.x0, h = rg.y1 - rg.y0; d = ((d % rg.P) + rg.P) % rg.P;
+  if (d < w) return [rg.x0 + d, rg.y1];               // bottom, left to right
+  d -= w; if (d < h) return [rg.x1, rg.y1 - d];      // right side, going up
+  d -= h; if (d < w) return [rg.x1 - d, rg.y0];      // top, right to left
+  d -= w; return [rg.x0, rg.y0 + d];                 // left side, going down
+}
+function nearestAnimal(x, y){
+  var fr = field.getBoundingClientRect(), wr = document.querySelector('.fieldwrap').getBoundingClientRect(), best = null, bd = 1e9;
+  for (var id in mobs){ var m = mobs[id]; if (m.el.classList.contains('hiding')) continue;
+    var ax = fr.left - wr.left + (m.x + .5) * T, ay = fr.top - wr.top + (m.y + .5) * T, d = Math.hypot(ax - x, ay - y);
+    if (d < bd){ bd = d; best = id; } }
+  return bd < T * 2.6 ? best : null;
+}
+function spawnWalkers(){
+  var rg = ring(), dir = Math.random() < .5 ? 1 : -1, pair = Math.random() < .5, speed = 16 + Math.random() * 8;
+  var start = Math.random() * rg.P, kinds = ['look','drink','eat','stroke','hey'];
+  var straight = Math.random() < .3, stops = [];
+  if (!straight){ var n = 1 + Math.floor(Math.random() * 2); for (var i = 0; i < n; i++) stops.push({at:rg.P * (.15 + Math.random() * .7), what:pick(kinds), dur:3500 + Math.random() * 3000}); stops.sort(function(a, b){ return a.at - b.at; }); }
+  for (var k = 0; k < (pair ? 2 : 1); k++){
+    var el = document.createElement('div'); el.className = 'walker';
+    el.innerHTML = personSVG(pick(SKIN), pick(HAIR), pick(TOP), Math.random() < .5);
+    $('walkers').appendChild(el);
+    walkers.push({el:el, d:start - k * 20 * dir, go:0, dir:dir, speed:speed, stops:stops.map(function(s){ return {at:s.at + k * 20, what:s.what, dur:s.dur}; }), wait:0, lead:k === 0});
   }
-  var x0 = ltr ? -60 : W + 20, x1 = ltr ? W + 20 : -60, flip = ltr ? '' : ' scaleX(-1)';
-  /* stop at a stall (or to look at the animals) half way along */
-  var stallKey = Object.keys(S.items).filter(function(k){ return ITEM[S.items[k]].stall; })[0];
-  var stopAt = .35 + Math.random() * .3, said = false;
-  group.forEach(function(w, i){
-    var off = i * (ltr ? -26 : 26);
-    var a = w.animate([
-      {transform:'translateX(' + (x0 + off) + 'px)' + flip, offset:0},
-      {transform:'translateX(' + (x0 + (x1 - x0) * stopAt + off) + 'px)' + flip, offset:.45},
-      {transform:'translateX(' + (x0 + (x1 - x0) * stopAt + off) + 'px)' + flip, offset:.6},
-      {transform:'translateX(' + (x1 + off) + 'px)' + flip, offset:1}
-    ], {duration:dur, easing:'linear', fill:'forwards'});
-    setTimeout(function(){ w.classList.add('stop'); if (i === 0 && !said){ said = true; var q = document.createElement('span'); q.className = 'vsay';
-      var lines = stallKey && Math.random() < .6 ? STALL_QUOTES[ITEM[S.items[stallKey]].stall] : ['Aww, look at them!', 'I could watch them all day.', 'Can we come back tomorrow?', 'They all look so happy.', 'Hello, ' + nm(pick(S.animals)) + '!'];
-      q.textContent = fill(pick(lines)).replace('{peggy}', nm('peggy')); w.appendChild(q); setTimeout(function(){ q.remove(); }, 2600); } }, dur * .45);
-    setTimeout(function(){ w.classList.remove('stop'); }, dur * .6);
-    a.onfinish = function(){ w.remove(); };
-  });
+}
+function doStop(w, st){
+  w.el.classList.add('stop');
+  var rg = ring(), pt = pointAt(w.d, rg), line = null;
+  if (st.what === 'drink' || st.what === 'eat'){ var pr = document.createElement('span'); pr.className = 'prop'; pr.innerHTML = PROP[st.what]; w.el.appendChild(pr); w.prop = pr;
+    if (w.lead && Math.random() < .5){ var sk = Object.keys(S.items).filter(function(k){ return ITEM[S.items[k]].stall === 'bake'; })[0]; line = st.what === 'eat' && sk ? pick(STALL_QUOTES.bake) : (st.what === 'drink' ? 'Lovely spot for a cuppa.' : 'Best picnic spot ever.'); } }
+  if (st.what === 'stroke' || st.what === 'hey'){
+    var who = nearestAnimal(pt[0], pt[1]);
+    if (who){ if (st.what === 'stroke'){ w.el.classList.add('reach'); setTimeout(function(){ celebrate(who); speak(who, SOUND[A[who].species] || '!'); }, 600); }
+      if (w.lead) line = (st.what === 'stroke' ? 'Aww, hello ' : 'Hey, ') + nm(who) + '!'; }
+    else if (w.lead) line = pick(['They all look so happy.','I could watch them all day.']);
+  }
+  if (st.what === 'look' && w.lead) line = pick(['Aww, look at them!','Can we come back tomorrow?','This place is lovely.']);
+  if (line && !isNight()){ var q = document.createElement('span'); q.className = 'vsay'; q.textContent = fill(line); w.el.appendChild(q); setTimeout(function(){ q.remove(); }, 2800); }
+}
+function endStop(w){ w.el.classList.remove('stop','reach'); if (w.prop){ w.prop.remove(); w.prop = null; } }
+function walkFrame(t){
+  var dt = Math.min(100, t - (lastFrame || t)); lastFrame = t;
+  if (walkers.length){
+    var rg = ring();
+    walkers = walkers.filter(function(w){
+      if (w.wait > 0){ w.wait -= dt; if (w.wait <= 0) endStop(w); }
+      else {
+        var step = w.speed * dt / 1000; w.d += step * w.dir; w.go += step;
+        var st = w.stops[0]; if (st && w.go >= st.at){ w.stops.shift(); w.wait = st.dur; doStop(w, st); }
+      }
+      var pt = pointAt(w.d, rg), ahead = pointAt(w.d + w.dir * 4, rg), flip = ahead[0] < pt[0] ? -1 : ahead[0] > pt[0] ? 1 : (w.flip || 1);
+      w.flip = flip;
+      w.el.style.transform = 'translate(' + (pt[0] - 9.5) + 'px,' + (pt[1] - 19) + 'px) scaleX(' + flip + ')';
+      var vs = w.el.querySelector('.vsay'); if (vs) vs.style.transform = 'translateX(-50%) scaleX(' + flip + ')';
+      if (w.go > rg.P + 30){ w.el.remove(); return false; }
+      return true;
+    });
+  }
+  requestAnimationFrame(walkFrame);
+}
+var inviteAt = 0;
+function tickInvite(now){
+  if (now < inviteAt || hideSeek || !here('rosie') || S.played === dayIndex() || !countItem('hidey') || Object.keys(S.items).length < 2) return;
+  inviteAt = now + 45000; speak('rosie', 'play hide and seek?');
 }
 function tickWalkers(now){
   if (now < nextWalk) return;
-  nextWalk = now + (stalls() ? 16000 : 24000) + Math.random() * 16000;
-  if (isNight() || !S.animals.some(happy)) return;
-  stroll();
+  nextWalk = now + 18000 + Math.random() * 16000;
+  if (REDUCED || isNight() || walkers.length > 3 || !S.animals.some(happy)) return;
+  spawnWalkers();
+}
+requestAnimationFrame(walkFrame);
+
+/* ======================================================================
+   RESCUE SCENES - Wildlife Rescue and Sea Rescue.
+   Patients recover in real time: one full day of care = one day closer
+   to going home. Missing a day only pauses things. Nobody dies.
+   Every fact is sourced and was checked before going in.
+   ====================================================================== */
+var RSP = {
+  hedgehog:{scene:'wild', name:'Hazel', kind:'hedgehog', days:3, months:[8,9,10,11], emoji:'🦔',
+    story:'A small hedgehog was spotted wobbling about a garden in daylight. Too small to make it through winter alone.',
+    fact:'Hedgehogs travel 1 to 2 km a night, and have around 6,000 spines.', src:'People’s Trust for Endangered Species', url:'https://ptes.org/get-informed/facts-figures/hedgehog/',
+    home:'Back out through a gap in the fence. A 13cm hole in your fence makes a hedgehog highway.', homeSrc:'Cornwall Wildlife Trust', homeUrl:'https://www.cornwallwildlifetrust.org.uk/hedgehogs'},
+  fox:{scene:'wild', name:'Finn', kind:'fox cub', days:3, months:[3,4,5,6,7], emoji:'🦊',
+    story:'A fox cub got tangled in some garden netting. Free now, but a bit sore.',
+    fact:'Researchers watching wild red foxes found they mostly pounce facing north-east.', src:'National Geographic, 2011', url:'https://www.nationalgeographic.com/science/article/foxes-use-the-earths-magnetic-field-as-a-targeting-system'},
+  badger:{scene:'wild', name:'Bramble', kind:'badger', days:3, emoji:'🦡',
+    story:'A badger was found by the side of a road, dazed but in one piece.',
+    fact:'Badgers live in family groups of 4 to 8 in underground homes called setts.', src:'The Mammal Society', url:'https://mammal.org.uk/british-mammals/badger'},
+  squirrel:{scene:'wild', name:'Pip', kind:'squirrel', days:2, months:[2,3,4,5,6,7,8,9], emoji:'🐿️',
+    story:'A young squirrel tumbled out of their nest in a storm.',
+    fact:'Squirrels can organise the nuts they bury by type, a bit like folders.', src:'UC Berkeley study, via ScienceDaily, 2017', url:'https://www.sciencedaily.com/releases/2017/09/170913192952.htm'},
+  seal:{scene:'sea', name:'Skye', kind:'seal pup', days:4, months:[9,10,11,0], emoji:'🦭',
+    story:'A grey seal pup was found alone on the beach, thin and very tired.',
+    fact:'Grey seal pups are born with a fluffy white coat called lanugo. Their scientific name means “hook-nosed sea pig”.', src:'Marine Conservation Society', url:'https://www.mcsuk.org/ocean-learning/wildlife-a-z/grey-seal/'},
+  puffin:{scene:'sea', name:'Poppy', kind:'puffin', days:3, months:[3,4,5,6,7], emoji:'🐧',
+    story:'A puffin was found on the sand, too tired to fly back out to sea.',
+    fact:'Puffins usually stay with the same partner year after year, and often return to the same nesting spot.', src:'RSPB', url:'https://www.rspb.org.uk/helping-nature/what-we-do/protecting-species-and-habitats/species-spotlight/species-spotlight-puffin'},
+  turtle:{scene:'sea', name:'Tula', kind:'sea turtle', days:4, emoji:'🐢',
+    story:'A sea turtle was found tangled in an old fishing net. The net’s gone in the bin now.'},
+  starfish:{scene:'sea', name:'Stella', kind:'starfish', days:1, emoji:'⭐',
+    story:'A starfish got stranded high up the beach when the tide went out.',
+    fact:'Starfish aren’t fish at all. If they lose an arm, they can grow it back.', src:'NOAA Ocean Service', url:'https://oceanservice.noaa.gov/facts/starfish.html'}
+};
+var LEAVE = {fawn:{scene:'wild', months:[4,5,6], kind:'fawn',
+  story:'Someone has found a fawn lying all alone in long grass, and wants to bring them in.',
+  fact:'It’s normal for newborn deer to be left alone while mum feeds nearby. Touching them can make her abandon them.', src:'British Deer Society', url:'https://bds.org.uk/2023/06/01/ask-bds-baby-deer/'}};
+var SIGHT = [
+  {draw:'dolphin', title:'Dolphins passing!', text:'A pod of dolphins swam past the beach. Each one has their own signature whistle, and they answer to it, like a name.', src:'University of St Andrews, 2013', url:'https://news.st-andrews.ac.uk/archive/dolphins-respond-to-individual-names/'},
+  {draw:'jelly', title:'A jellyfish washed up', text:'Look, don’t touch. Jellyfish have no brain, blood or heart. A simple net of nerves lets them sense light and smells.', src:'NOAA Ocean Service', url:'https://oceanservice.noaa.gov/facts/jellyfish.html'}
+];
+var PENS = {wild:['Cosy pen','Quiet corner','Outdoor run'], sea:['Rehab pool','Rock pool','Recovery pen']};
+var TASKS = {wild:[['dinner','Dinner time'],['check','Health check'],['bed','Fresh bedding']], sea:[['dinner','Dinner time'],['check','Health check'],['swim','Swim in the pool']]};
+var TOOL = {
+  dinner:'<svg viewBox="0 0 40 40"><ellipse cx="20" cy="27" rx="15" ry="6" fill="#B07A57"/><path d="M5 25h30l-3 8H8z" fill="#E8804C"/><ellipse cx="20" cy="25" rx="15" ry="4" fill="#C9996C"/></svg>',
+  check:'<svg viewBox="0 0 40 40"><path d="M12 6v12a8 8 0 0 0 16 0V6" stroke="#6E4E78" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M20 26v4a6 6 0 0 0 12 0v-4" stroke="#6E4E78" stroke-width="3" fill="none"/><circle cx="32" cy="24" r="4" fill="#7FB3D9" stroke="#6E4E78" stroke-width="2"/></svg>',
+  bed:'<svg viewBox="0 0 40 40"><ellipse cx="20" cy="26" rx="16" ry="8" fill="#D9A94A"/><path d="M8 24l6-4M14 27l7-5M22 24l6-4M26 28l6-4M12 30l5-3" stroke="#F3D27A" stroke-width="2" stroke-linecap="round"/></svg>',
+  swim:'<svg viewBox="0 0 40 40"><path d="M4 22q4-4 8 0t8 0 8 0 8 0M4 30q4-4 8 0t8 0 8 0 8 0" stroke="#7FB3D9" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="26" cy="11" r="4" fill="#B5D6EE"/><circle cx="16" cy="8" r="2.5" fill="#B5D6EE"/></svg>'
+};
+
+function dateKey(d){ d = d || new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+function hashStr(s){ var h = 2166136261; for (var i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+function R(){ if (!S.rescue) S.rescue = {patients:[], released:[], careDays:0, careDay:'', calls:{}, sight:'', seen:{}}; return S.rescue; }
+function inSeason(o){ return !o.months || o.months.indexOf(new Date().getMonth()) !== -1; }
+/* today's call is the same for every player: picked from the date */
+function todaysCall(scene){
+  var opts = [];
+  for (var k in RSP) if (RSP[k].scene === scene && inSeason(RSP[k])) opts.push({type:'patient', sp:k});
+  for (var l in LEAVE) if (LEAVE[l].scene === scene && inSeason(LEAVE[l])) opts.push({type:'leave', sp:l});
+  if (!opts.length) for (var k2 in RSP) if (RSP[k2].scene === scene) opts.push({type:'patient', sp:k2});
+  return opts[hashStr(dateKey() + scene) % opts.length];
+}
+var STAY_WHY = {
+  fox:'{n} got too used to people to be safe in the wild, so they\u2019re staying with you for good.',
+  badger:'{n} can\u2019t safely go back to the wild, so they\u2019re staying with you for good.',
+  hedgehog:'{n} can\u2019t safely go back to the wild, so they\u2019re staying with you for good.',
+  seal:'{n} can\u2019t safely go back to the open sea, so they\u2019re staying with you for good.',
+  turtle:'{n} can\u2019t safely go back to the open sea, so they\u2019re staying with you for good.'
+};
+function healthOf(p){
+  if (p.forever && readyToGo(p)) return {t:'Ready for their forever home', c:'s4'};
+  var f = p.careDone / RSP[p.sp].days;
+  if (f >= 1) return {t:'Ready to go home', c:'s3'};
+  if (f >= .5) return {t:'Nearly there', c:'s2'};
+  if (f > 0) return {t:'Recovering', c:'s1'};
+  return {t:'Poorly', c:'s0'};
+}
+function renderCareBar(){
+  var r = R(), bar = $('carebar'), list = r.patients.slice().sort(function(a, b){ return readyToGo(b) - readyToGo(a); });
+  var res = (r.residents || []);
+  if (!list.length && !res.length){ bar.hidden = true; return; }
+  bar.hidden = false;
+  var html = '<h3>In care<span>' + list.length + (list.length === 1 ? ' patient' : ' patients') + (res.length ? ' \u00b7 ' + res.length + ' forever' : '') + '</span></h3><div class="cbl">';
+  list.forEach(function(p){
+    var P = RSP[p.sp], h = healthOf(p), togo = Math.max(0, P.days - p.careDone), jobs = careLeftToday(p);
+    html += '<button type="button" class="cb" data-goto="' + p.id + '"><span class="cpic">' + DRAW[p.sp]() + '</span><span><b>' + esc(p.name) + '</b><em class="' + h.c + '">' + h.t + '</em>' +
+      '<span class="hbar"><i style="width:' + Math.round(Math.min(1, p.careDone / P.days) * 100) + '%"></i></span>' +
+      '<small>' + (togo ? togo + (togo === 1 ? ' day' : ' days') + ' to go \u00b7 ' + (jobs ? jobs + ' jobs today' : 'done today') : (p.scene === 'sea' ? 'Sea rescue' : 'Wildlife rescue')) + '</small></span></button>';
+  });
+  res.forEach(function(x){
+    html += '<button type="button" class="cb" data-scene="' + x.scene + '"><span class="cpic">' + DRAW[x.sp]() + '</span><span><b>' + esc(x.name) + '</b><em class="s4">Forever resident</em><small>Happy and settled</small></span></button>';
+  });
+  bar.innerHTML = html + '</div>';
+}
+$('carebar').addEventListener('click', function(e){
+  var b = e.target.closest('.cb'); if (!b) return;
+  if (b.dataset.goto){ var p = R().patients.filter(function(q){ return q.id === +b.dataset.goto; })[0]; if (!p) return; setScene(p.scene); showPatient(p.id); }
+  else setScene(b.dataset.scene);
+});
+function patientsIn(scene){ return R().patients.filter(function(p){ return p.scene === scene; }); }
+function tasksToday(p){ if (p.taskDay !== dateKey()){ p.taskDay = dateKey(); p.done = {}; } return p.done; }
+function readyToGo(p){ return p.careDone >= RSP[p.sp].days; }
+function careLeftToday(p){ var d = tasksToday(p); return TASKS[p.scene].filter(function(t){ return !d[t[0]]; }).length; }
+
+/* ---------- scene switching ---------- */
+var scene = 'farm';
+var FARM_ONLY = ['.fieldwrap', '#nudge', '.tabs', '#panel-animals', '#panel-build', '#panel-album', '#panel-visitors', '#perks'];
+function setScene(sc){
+  scene = sc;
+  [].forEach.call(document.querySelectorAll('.scenetab'), function(b){ b.setAttribute('aria-selected', String(b.dataset.scene === sc)); });
+  FARM_ONLY.forEach(function(q){ var el = document.querySelector(q); if (!el) return;
+    if (sc === 'farm'){ if (el._wasHidden === undefined || !el._wasHidden) el.hidden = false; delete el._wasHidden; }
+    else { if (el._wasHidden === undefined) el._wasHidden = el.hidden; el.hidden = true; } });
+  if (sc === 'farm'){ setTab(TABS.filter(function(t){ return $('tab-' + t).getAttribute('aria-selected') === 'true'; })[0] || 'animals'); }
+  $('rescue').hidden = sc === 'farm';
+  if (sc !== 'farm') renderRescue();
+}
+[].forEach.call(document.querySelectorAll('.scenetab'), function(b){ b.onclick = function(){ setScene(b.dataset.scene); }; });
+
+/* ---------- drawing the rescue scene ---------- */
+var BACK = {
+  wild:'<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D6ECF7"/><stop offset="1" stop-color="#EEF5E4"/></linearGradient></defs>' +
+    '<rect width="400" height="300" fill="url(#wsky)"/><path d="M0 120q60-30 120-8t140-10 140 6v192H0z" fill="#B5D3A5"/><path d="M0 150q80-20 200 0t200-6v156H0z" fill="#A3C793"/>' +
+    '<g fill="#7FA672"><circle cx="30" cy="88" r="34"/><circle cx="70" cy="70" r="40"/><circle cx="350" cy="80" r="38"/><circle cx="385" cy="100" r="30"/></g><g fill="#6E9A62"><circle cx="50" cy="96" r="28"/><circle cx="370" cy="96" r="26"/></g>' +
+    '<rect x="64" y="100" width="10" height="40" fill="#8B5E4A"/><rect x="360" y="104" width="10" height="36" fill="#8B5E4A"/>' +
+    '<path d="M170 60h80l14 26H156z" fill="#8E6A9A"/><rect x="162" y="86" width="96" height="54" rx="4" fill="#E9CFA8"/><rect x="198" y="104" width="24" height="36" rx="3" fill="#B07A57"/><rect x="172" y="96" width="18" height="16" rx="2" fill="#CFE6F3"/><rect x="230" y="96" width="18" height="16" rx="2" fill="#CFE6F3"/>' +
+    '<path d="M300 236q30-12 60 0" stroke="#8B5E4A" stroke-width="14" stroke-linecap="round"/><g fill="#C98E5C"><ellipse cx="40" cy="250" rx="22" ry="8"/></g><g fill="#E2B566" opacity=".8"><circle cx="34" cy="246" r="3"/><circle cx="44" cy="250" r="3"/><circle cx="52" cy="244" r="3"/></g></svg>',
+  sea:'<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#D6ECF7"/>' +
+    '<rect y="70" width="400" height="70" fill="#7FB3D9"/><path d="M0 70q25-8 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke="#B5D6EE" stroke-width="5" fill="none"/>' +
+    '<path d="M0 132q50-10 100 0t100 0 100 0 100 0v168H0z" fill="#F1DDB8"/><path d="M0 132q50-10 100 0t100 0 100 0 100 0" stroke="#FBF4EF" stroke-width="6" fill="none"/>' +
+    '<ellipse cx="320" cy="250" rx="60" ry="24" fill="#9C9A9E"/><ellipse cx="320" cy="246" rx="44" ry="15" fill="#8EC4E4"/><circle cx="300" cy="246" r="4" fill="#F08A5C"/>' +
+    '<g fill="#B9B4B8"><ellipse cx="60" cy="270" rx="20" ry="9"/><ellipse cx="90" cy="276" rx="12" ry="6"/></g>' +
+    '<path d="M150 210l8-8 8 8M240 270l6-6 6 6" stroke="#E2C79A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>'
+};
+var PENPOS = [[18, 66], [50, 74], [82, 66]];
+function renderRescue(){
+  var r = R(), sc = scene, pats = patientsIn(sc);
+  $('rTitle').textContent = sc === 'wild' ? 'Wildlife Rescue' : 'Sea Rescue';
+  $('rSub').textContent = sc === 'wild' ? 'Poorly wild animals come in, get well, and go home.' : 'Seals, seabirds and sea creatures in need, back to the sea when they’re ready.';
+  var html = BACK[sc];
+  var flowers = Math.min(14, r.careDays);
+  for (var f = 0; f < flowers; f++) html += '<span class="rflower" style="left:' + (3 + f * 7) + '%"></span>';
+  PENS[sc].forEach(function(name, i){
+    var p = pats.filter(function(q){ return q.pen === i; })[0], pos = PENPOS[i];
+    html += '<div class="pen' + (p ? ' full' : '') + '" style="left:' + pos[0] + '%;top:' + pos[1] + '%" data-pen="' + i + '"><span class="pbed ' + sc + '"></span>';
+    if (p){
+      var left = careLeftToday(p), ready = readyToGo(p);
+      html += '<button type="button" class="pat' + (ready ? ' ready' : '') + '" data-pid="' + p.id + '" aria-label="' + esc(p.name) + ', ' + (ready ? 'ready to go home' : left + ' care jobs left today') + '">' + DRAW[p.sp]() + '</button>' +
+        '<span class="ptag ' + (ready ? 'go' : left ? '' : 'ok') + '">' + (ready ? 'Ready to go home!' : left ? esc(p.name) + ' · ' + left + ' to do' : esc(p.name) + ' · all done today') + '</span>';
+    } else html += '<span class="ptag empty">' + name + '</span>';
+    html += '</div>';
+  });
+  if (sc === 'sea' && r.sight !== dateKey()){
+    var s = SIGHT[hashStr(dateKey()) % SIGHT.length];
+    html += '<button type="button" class="sight" id="sightBtn" aria-label="' + s.title + '">' + DRAW[s.draw]() + '</button>';
+  }
+  (r.residents || []).filter(function(x){ return x.scene === sc; }).forEach(function(x, i){
+    html += '<span class="resi" style="left:' + (8 + i * 16) + '%;top:' + (sc === 'sea' ? 46 : 38) + '%;animation-delay:-' + i * .7 + 's" title="' + esc(x.name) + '">' + DRAW[x.sp]() + '</span>';
+  });
+  $('rscene').innerHTML = html;
+  /* today's call */
+  var call = todaysCall(sc), taken = r.calls[sc] === dateKey(), box = '';
+  if (call.type === 'leave'){
+    var L = LEAVE[call.sp];
+    box = '<div class="rcall"><span class="rpic">' + DRAW.fawn() + '</span><div><small>Today’s rescue call</small><b>A fawn in the long grass</b><p>' + L.story + '</p>' +
+      (taken ? '<p class="rdone">Answered. A new call comes in tomorrow.</p>' : '<div class="racts"><button type="button" class="btn main" data-leave="bring">Bring them in</button><button type="button" class="btn dark" data-leave="leave">Leave them be</button></div>') + '</div></div>';
+  } else {
+    var P = RSP[call.sp], full = pats.length >= 3, already = pats.some(function(q){ return q.callKey === dateKey() + sc; });
+    box = '<div class="rcall"><span class="rpic">' + DRAW[call.sp]() + '</span><div><small>Today’s rescue call</small><b>' + P.name + ' the ' + P.kind + '</b><p>' + P.story + '</p>' +
+      (taken || already ? '<p class="rdone">' + P.name + ' is in your care. A new call comes in tomorrow.</p>'
+        : full ? '<p class="rdone">All the pens are full. Help someone go home to make space.</p>'
+        : '<div class="racts"><button type="button" class="btn main" id="takeCall">Take ' + P.name + ' in</button></div>') + '</div></div>';
+  }
+  $('rcallbox').innerHTML = box;
+  $('rstats').innerHTML = '<div><b>' + r.careDays + '</b><span>days of care</span></div><div><b>' + r.released.length + '</b><span>back in the wild</span></div><div><b>' + pats.length + '/3</b><span>in your care</span></div>';
+  $('rhome').innerHTML = r.released.length
+    ? r.released.slice().reverse().map(function(x, i){ return '<button type="button" class="rh" data-rel="' + (r.released.length - 1 - i) + '"><span>' + DRAW[x.sp]() + '</span><b>' + esc(x.name) + '</b><i>' + x.days + (x.days === 1 ? ' day' : ' days') + ' of care</i></button>'; }).join('')
+    : '<p class="sub">Everyone you help home shows up here. Tap them for a postcard.</p>';
+  $('rshare').hidden = false;
+  renderCareBar();
+}
+$('rescue').addEventListener('click', function(e){
+  var t = e.target;
+  var pat = t.closest('.pat'); if (pat){ showPatient(+pat.dataset.pid); return; }
+  if (t.closest('#takeCall')){ takeCall(); return; }
+  var lv = t.closest('[data-leave]'); if (lv){ answerLeave(lv.dataset.leave); return; }
+  if (t.closest('#sightBtn')){ showSighting(); return; }
+  var rh = t.closest('.rh'); if (rh){ rescuePostcard(R().released[+rh.dataset.rel]); return; }
+  if (t.closest('#rshare')){ shareRescue(); return; }
+});
+
+function takeCall(){
+  var r = R(), sc = scene, call = todaysCall(sc), P = RSP[call.sp], used = patientsIn(sc).map(function(p){ return p.pen; });
+  var pen = [0, 1, 2].filter(function(i){ return used.indexOf(i) === -1; })[0];
+  if (pen === undefined) return;
+  var pid = Date.now();
+  r.patients.push({id:pid, forever:!!STAY_WHY[call.sp] && hashStr(String(pid)) % 4 === 0, sp:call.sp, name:P.name, scene:sc, pen:pen, careDone:0, rescued:dateKey(), rescuedAt:Date.now(), callKey:dateKey() + sc, done:{}, taskDay:dateKey()});
+  r.calls[sc] = dateKey(); save(); renderRescue();
+  toast(P.name + ' is in safe hands now.');
+  setTimeout(function(){ var b = document.querySelector('.pat[data-pid]:last-of-type'); }, 50);
+}
+function answerLeave(choice){
+  var r = R(), L = LEAVE.fawn; r.calls[scene] = dateKey();
+  var right = choice === 'leave';
+  openSheet('<div class="head"><span class="pic">' + DRAW.fawn() + '</span><div><small class="k">' + (right ? 'Exactly right' : 'Good heart, wrong call') + '</small><h2>' + (right ? 'Mum’s nearby' : 'Best to leave them') + '</h2></div></div>' +
+    '<div class="fact"><small>True story</small><p>' + L.fact + '</p><a href="' + L.url + '" target="_blank" rel="noopener">' + L.src + '</a></div>' +
+    '<p class="sub">' + (right ? 'Plus 5 hearts for knowing when not to step in.' : 'If a fawn is injured or crying for hours, call a wildlife rescue for advice first.') + '</p>' +
+    '<div class="acts"><button type="button" class="btn main" id="closeBtn">Okay</button></div>', 'Fawn');
+  $('closeBtn').onclick = closeSheet;
+  if (right) gain(5); else save();
+  renderRescue();
+}
+function showSighting(){
+  var s = SIGHT[hashStr(dateKey()) % SIGHT.length]; R().sight = dateKey();
+  openSheet('<div class="head"><span class="pic">' + DRAW[s.draw]() + '</span><div><small class="k">Spotted today &middot; +3 hearts</small><h2>' + s.title + '</h2></div></div>' +
+    '<div class="fact"><small>True story</small><p>' + s.text + '</p><a href="' + s.url + '" target="_blank" rel="noopener">' + s.src + '</a></div>' +
+    '<div class="acts"><button type="button" class="btn main" id="closeBtn">Lovely</button></div>', s.title);
+  $('closeBtn').onclick = closeSheet;
+  gain(3); renderRescue();
+}
+
+/* ---------- caring: drag the care things onto the patient (or tap them) ---------- */
+function showPatient(pid){
+  var p = R().patients.filter(function(q){ return q.id === pid; })[0]; if (!p) return;
+  var P = RSP[p.sp], d = tasksToday(p), ready = readyToGo(p), total = P.days;
+  var dots = ''; for (var i = 0; i < total; i++) dots += '<i class="' + (i < p.careDone ? 'on' : '') + '"></i>';
+  var html = '<div class="head"><span class="pic care-drop" id="careTarget">' + DRAW[p.sp]() + '</span><div><small class="k">' + P.kind + ' &middot; rescued ' + p.rescued.split('-').slice(1).reverse().join('/') + '</small><h2>' + esc(p.name) + '</h2>' +
+    '<div class="mood">' + (ready ? 'Strong and well. Ready to go home!' : 'Getting better. ' + (total - p.careDone) + (total - p.careDone === 1 ? ' more day' : ' more days') + ' of care to go.') + '</div><div class="cdots">' + dots + '</div></div></div>';
+  if (ready && p.forever){
+    html += '<p class="sub">' + STAY_WHY[p.sp].replace('{n}', esc(p.name)) + '</p><div class="acts"><button type="button" class="btn main" id="foreverBtn">Welcome ' + esc(p.name) + ' home for good</button></div>';
+  } else if (ready){
+    html += '<div class="acts"><button type="button" class="btn main" id="releaseBtn">' + (p.scene === 'sea' ? 'Back to the sea' : 'Back to the wild') + '</button></div>';
+  } else {
+    html += '<p class="sub dragtip">Drag each thing onto ' + esc(p.name) + ', or tap it.</p><div class="tools">' + TASKS[p.scene].map(function(t){
+      return '<button type="button" class="tool' + (d[t[0]] ? ' used' : '') + '" data-task="' + t[0] + '"' + (d[t[0]] ? ' disabled' : '') + '>' + TOOL[t[0]] + '<b>' + t[1] + '</b><i>' + (d[t[0]] ? 'Done' : '+2') + '</i></button>';
+    }).join('') + '</div>' + (careLeftToday(p) ? '' : '<p class="sub">All done for today. Come back tomorrow for the next day of care.</p>');
+  }
+  if (P.fact) html += '<div class="fact"><small>True story</small><p>' + P.fact + '</p><a href="' + P.url + '" target="_blank" rel="noopener">' + P.src + '</a></div>';
+  html += '<div class="acts"><button type="button" class="btn soft" id="closeBtn">Close</button></div>';
+  openSheet(html, p.name);
+  $('closeBtn').onclick = closeSheet;
+  if ($('releaseBtn')) $('releaseBtn').onclick = function(){ release(p); };
+  if ($('foreverBtn')) $('foreverBtn').onclick = function(){ stayForever(p); };
+  [].forEach.call(document.querySelectorAll('.tool:not(.used)'), function(b){ dragTool(b, p); });
+}
+function doTask(p, task){
+  var d = tasksToday(p); if (d[task]) return;
+  d[task] = true; gain(2);
+  var tgt = $('careTarget'); if (tgt){ tgt.classList.remove('cared'); void tgt.offsetWidth; tgt.classList.add('cared'); }
+  if (!careLeftToday(p)){
+    p.careDone++;
+    var r = R(); if (r.careDay !== dateKey()){ r.careDay = dateKey(); r.careDays++; }
+    toast(readyToGo(p) ? p.name + ' is ready to go home!' : p.name + ' is one day closer to going home.');
+    if (!REDUCED) confetti();
+  }
+  save(); hud(); checkArrivals();
+  setTimeout(function(){ showPatient(p.id); renderRescue(); }, 420);
+}
+function dragTool(b, p){
+  b.onclick = function(){ if (!b._dragged) doTask(p, b.dataset.task); b._dragged = false; };
+  b.addEventListener('pointerdown', function(ev){
+    var r0 = b.getBoundingClientRect(), ghost = null, sx = ev.clientX, sy = ev.clientY, moved = false;
+    b.setPointerCapture(ev.pointerId);
+    function mv(e){
+      if (!moved && Math.hypot(e.clientX - sx, e.clientY - sy) < 6) return;
+      if (!moved){ moved = true; ghost = b.cloneNode(true); ghost.className = 'tool dragghost'; ghost.style.width = r0.width + 'px'; document.body.appendChild(ghost); }
+      ghost.style.transform = 'translate(' + (e.clientX - r0.width / 2) + 'px,' + (e.clientY - r0.height / 2) + 'px) rotate(-4deg) scale(1.06)';
+      var t = $('careTarget'), tr = t.getBoundingClientRect(), over = e.clientX > tr.left && e.clientX < tr.right && e.clientY > tr.top && e.clientY < tr.bottom;
+      t.classList.toggle('over', over);
+    }
+    function up(e){
+      b.removeEventListener('pointermove', mv); b.removeEventListener('pointerup', up); b.removeEventListener('pointercancel', up);
+      if (!moved) return;
+      b._dragged = true; if (ghost) ghost.remove();
+      var t = $('careTarget'), tr = t.getBoundingClientRect(); t.classList.remove('over');
+      if (e.clientX > tr.left - 20 && e.clientX < tr.right + 20 && e.clientY > tr.top - 20 && e.clientY < tr.bottom + 20) doTask(p, b.dataset.task);
+    }
+    b.addEventListener('pointermove', mv); b.addEventListener('pointerup', up); b.addEventListener('pointercancel', up);
+  });
+}
+
+/* ---------- forever residents: some can't go back, so they stay ---------- */
+function stayForever(p){
+  closeSheet();
+  var r = R(); r.residents = r.residents || [];
+  r.patients = r.patients.filter(function(q){ return q.id !== p.id; });
+  r.residents.push({sp:p.sp, name:p.name, scene:p.scene, since:dateKey()});
+  gain(15); hud(); renderRescue(); if (!REDUCED) confetti();
+  toast(p.name + ' has a forever home with you now.');
+}
+/* ---------- release day ---------- */
+function release(p){
+  closeSheet();
+  var r = R(), P = RSP[p.sp];
+  r.patients = r.patients.filter(function(q){ return q.id !== p.id; });
+  var rec = {sp:p.sp, name:p.name, scene:p.scene, rescued:p.rescued, home:dateKey(), days:p.careDone};
+  r.released.push(rec);
+  var el = document.querySelector('.pat[data-pid="' + p.id + '"]');
+  if (el && el.animate && !REDUCED){ el.animate([{transform:'translate(0,0)'},{transform:'translate(0,-14px)', offset:.15},{transform:'translate(' + (p.scene === 'sea' ? '0,-160px' : '220px,-20px') + ') scale(.5)', opacity:0}], {duration:1600, easing:'ease-in', fill:'forwards'}); }
+  gain(15); hud();
+  setTimeout(function(){
+    renderRescue();
+    openSheet('<div class="head"><span class="pic">' + DRAW[p.sp]() + '</span><div><small class="k">Release day &middot; +15 hearts</small><h2>' + esc(p.name) + (p.scene === 'sea' ? ' is back in the sea' : ' is back in the wild') + '</h2>' +
+      '<div class="mood">After ' + rec.days + (rec.days === 1 ? ' day' : ' days') + ' of care.</div></div></div>' +
+      (P.home ? '<div class="fact"><small>Help at home</small><p>' + P.home + '</p><a href="' + P.homeUrl + '" target="_blank" rel="noopener">' + P.homeSrc + '</a></div>' : '') +
+      '<div class="acts"><button type="button" class="btn main" id="pcBtn">Make a postcard</button><button type="button" class="btn soft" id="closeBtn">Close</button></div>', 'Release day');
+    $('closeBtn').onclick = closeSheet; $('pcBtn').onclick = function(){ rescuePostcard(rec); };
+    if (!REDUCED) confetti();
+  }, REDUCED ? 0 : 1500);
+}
+function fmtDate(k){ var p = k.split('-'), M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return (+p[2]) + ' ' + M[+p[1] - 1]; }
+function rescuePostcard(rec){
+  var W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H; var ctx = c.getContext('2d');
+  Promise.all([fontsReady(), svgImage(DRAW[rec.sp]()), svgImage(BACK[rec.scene])]).then(function(r){
+    var a = r[1], bg = r[2];
+    cardFrame(ctx, W, H);
+    ctx.save(); ctx.translate(W / 2, 690); ctx.rotate(2 * Math.PI / 180);
+    ctx.shadowColor = 'rgba(42,22,48,.28)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 18;
+    ctx.fillStyle = '#FFFFFF'; rrect(ctx, -400, -480, 800, 960, 14); ctx.fill(); ctx.shadowColor = 'transparent';
+    ctx.save(); rrect(ctx, -360, -440, 720, 700, 8); ctx.clip();
+    if (bg) ctx.drawImage(bg, -560, -440, 1120, 840); else { ctx.fillStyle = '#A9C99A'; ctx.fillRect(-360, -440, 720, 700); }
+    ctx.restore();
+    if (a) ctx.drawImage(a, -190, -260, 380, 395);
+    ctx.textAlign = 'center'; ctx.fillStyle = '#3A1F3D'; ctx.font = '600 64px Caveat, "Segoe Print", cursive';
+    ctx.fillText(rec.name + (rec.scene === 'sea' ? ' is back in the sea' : ' is back in the wild'), 0, 340);
+    ctx.font = '700 30px "Hanken Grotesk", system-ui, sans-serif'; ctx.fillStyle = '#6A535D';
+    ctx.fillText('Rescued ' + fmtDate(rec.rescued) + ' · home after ' + rec.days + (rec.days === 1 ? ' day' : ' days') + ' of care', 0, 400);
+    ctx.restore(); ctx.textAlign = 'left';
+    cardFoot(ctx, W, H, (S.sname ? S.sname + ' · ' : '') + R().released.length + ' back home so far');
+    showPostcard(c, 'Release day', rec.name + ' is home', rec.name.toLowerCase() + '-is-home.png');
+  });
+}
+function shareRescue(){
+  var call = todaysCall(scene), r = R(), lines = ['a home kind · Sanctuary Keeper'];
+  if (call.type === 'leave') lines.push('Today’s ' + (scene === 'sea' ? 'sea' : 'wildlife') + ' rescue: a fawn in the long grass. Did you know to leave them be?');
+  else { var P = RSP[call.sp]; lines.push('Today’s ' + (scene === 'sea' ? 'sea' : 'wildlife') + ' rescue: ' + P.name + ' the ' + P.kind + ' ' + P.emoji); }
+  lines.push(r.released.length + ' back home · ' + r.careDays + ' days of care'); lines.push('ahomekind.com/games');
+  var text = lines.join('\n'), btn = $('rshare');
+  function fallback(){ openSheet('<small class="k">Share today’s rescue</small><h2>Copy this</h2><textarea class="copytext" rows="4" readonly>' + esc(text) + '</textarea><div class="acts"><button type="button" class="btn soft" id="closeBtn">Close</button></div>', 'Share'); $('closeBtn').onclick = closeSheet; var ta = document.querySelector('.copytext'); ta.focus(); ta.select(); }
+  try { navigator.clipboard.writeText(text).then(function(){ btn.textContent = 'Copied! Paste it anywhere'; setTimeout(function(){ btn.textContent = 'Share today’s rescue'; }, 2500); }, fallback); } catch(e){ fallback(); }
 }
 
 /* ======================================================================
@@ -2346,7 +3094,7 @@ function tick(){
 
     if (happy(id) && now > m.beat){
       dropHeart(id);
-      m.beat = now + (5000 + Math.random() * 2500) * pace();
+      m.beat = now + (7000 + Math.random() * 3500) * pace();
       if (m.state === 'idle' && Math.random() < .3) celebrate(id);
     }
   });
@@ -2358,11 +3106,11 @@ function tick(){
         var p = k.split(',').map(Number);
         sb.pending++; dropHeartAt((p[0] + .5) * T, Math.max(T * .32, (p[1] + .1) * T), k);
         if (Math.random() < .45) visitorSays(it.stall, p[0], p[1]);
-        sb.next = now + 9000 * pace();
+        sb.next = now + 12000 * pace();
       }
     }
   }
-  tickJobs(now); tickPairs(now); tickLife(now); tickQuiz(now); tickWalkers(now);
+  tickJobs(now); tickPairs(now); tickLife(now); tickQuiz(now); tickWalkers(now); tickSeek(now); tickInvite(now);
   var ph = phase(); if (ph !== lastPhase){ lastPhase = ph; applyPhase(); hud(); }
   checkRush();
   if (!rushing() && $('perks').querySelector('.rush')) hud();
@@ -2399,7 +3147,7 @@ boot();
 <h2 id="aboutKeeper">About Sanctuary Keeper</h2>
 <p>Sanctuary Keeper is a free, cosy animal game you play right here in your browser, on your phone or laptop. You start with Peggy the pig and an empty field. Give her a straw bed and something to play with, and she's happy. Happy animals bring visitors, visitors leave hearts, and hearts build more of the sanctuary.</p>
 <h3>How to play</h3>
-<p>Seventeen animals arrive over time, from Rubie the rabbit and Rosie the rat to Hector the horse and Olive the barn owl. Each one needs a couple of things to feel at home. Tap the little jobs that pop up around the field, answer animal questions for bonus hearts, cuddle everyone, and when a camera appears, snap the moment for your album. Any snap can become a postcard to save and share.</p>
+<p>Seventeen animals arrive over time, from Rubie the rabbit and Rosie the rat to Hector the horse and Olive the barn owl. Each one needs a couple of things to feel at home. Take in a new wildlife or sea rescue each day and nurse them back to health. Tap the little jobs that pop up around the field, answer animal questions for bonus hearts, cuddle everyone, and when a camera appears, snap the moment for your album. Any snap can become a postcard to save and share.</p>
 <h3>Real facts, no sign-up</h3>
 <p>Every animal fact in the game is true and links to its source. Your sanctuary saves on your device, so there's no account to make. Fancy something quicker? Try <a href="/games/sanctuary-cases">Sanctuary Cases</a>, a short logic puzzle with the same animals, or <a href="/brand-check.html">check whether a brand tests on animals</a>.</p>
 </section>
