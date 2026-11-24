@@ -140,7 +140,7 @@ input{font:inherit}
 .chip.rush{background:var(--apricot);color:var(--ink);animation:pulse 1.2s ease-in-out infinite}
 
 /* field */
-.fieldwrap{margin-top:12px;border-radius:26px;padding:10px;background:linear-gradient(#8FB583,#7FA672);
+.fieldwrap{margin-top:12px;border-radius:26px;padding:10px 10px 0;background:linear-gradient(#8FB583,#7FA672);
   box-shadow:0 14px 30px -18px rgba(42,22,48,.55), inset 0 0 0 2px rgba(255,255,255,.18)}
 .field{position:relative;width:100%;border-radius:18px;overflow:hidden;touch-action:manipulation;cursor:pointer;
   background-color:var(--grass);
@@ -149,6 +149,19 @@ input{font:inherit}
   background-size:var(--t2) var(--t2);background-position:0 0, var(--t) var(--t)}
 .building .field{outline:3px dashed rgba(255,255,255,.65);outline-offset:-6px}
 .layer{position:absolute;inset:0;pointer-events:none}
+.footpath{position:relative;height:48px;margin:6px -10px 0;border-radius:0 0 26px 26px;overflow:hidden;
+  background:linear-gradient(#E9D2B0,#DEC29B);box-shadow:inset 0 3px 0 rgba(255,255,255,.35)}
+.footpath::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background-image:linear-gradient(90deg,rgba(176,128,80,.35) 50%,transparent 50%);background-size:18px 2px}
+.walker{position:absolute;bottom:6%;height:86%;aspect-ratio:.62;will-change:transform}
+.walker svg{width:100%;height:100%;overflow:visible;display:block}
+.walker .lg{animation:stride .5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+.walker .lg2{animation-delay:-.25s}
+.walker .bd{animation:wbob .5s ease-in-out infinite}
+.walker.stop .lg,.walker.stop .bd{animation:none}
+.walker .vsay{position:absolute;bottom:104%;left:50%;transform:translateX(-50%);width:max-content;max-width:180px;background:var(--paper);color:var(--ink);border-radius:12px;padding:5px 9px;font:600 11.5px/1.3 var(--body);box-shadow:0 4px 10px -4px rgba(42,22,48,.4);animation:pop .3s ease-out}
+.fieldwrap{position:relative}
+@keyframes stride{0%,100%{transform:rotate(14deg)}50%{transform:rotate(-14deg)}}
+@keyframes wbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3%)}}
 .amb{overflow:hidden;z-index:55}
 .cloudsh{position:absolute;top:0;left:0;width:70%;height:38%;border-radius:50%;background:rgba(42,22,48,.07);filter:blur(14px);animation:cloud linear infinite}
 .field.night .cloudsh{display:none}
@@ -329,6 +342,7 @@ h3.sec:first-child{margin-top:2px}
 .btn.main{background:var(--apricot);color:var(--ink)}
 .btn.dark{background:var(--plum);color:var(--paper)}
 .btn.soft{background:var(--blush);color:var(--ink)}
+.btn.treat{background:#F6D77A;color:var(--ink)}
 .btn[disabled]{opacity:.45;cursor:default}
 .opt{display:flex;flex-direction:column;gap:7px;margin-top:14px}
 .opt button{display:flex;align-items:center;gap:12px;text-align:left;border:0;background:var(--blush);border-radius:15px;padding:13px 14px;cursor:pointer}
@@ -466,7 +480,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
     <div class="layer amb" id="ambLayer" aria-hidden="true"></div>
     <div class="layer" id="fxLayer"></div>
     <div class="tint" aria-hidden="true"></div>
-  </div></div>
+  </div><div class="footpath" id="footpath" aria-hidden="true"></div></div>
 
   <div class="nudge" id="nudge" role="status" aria-live="polite"></div>
   <div class="factcard" id="factcard" hidden></div>
@@ -725,20 +739,23 @@ var DRAW = {
    ====================================================================== */
 function isvg(inner, cls){ return '<svg class="'+(cls||'')+'" viewBox="0 0 100 100" aria-hidden="true">'+inner+'</svg>'; }
 var ART = {
-  strawbed: '<ellipse cx="50" cy="72" rx="42" ry="20" fill="#C99A4E"/><ellipse cx="50" cy="66" rx="40" ry="18" fill="#E6BD6A"/>' +
-            '<path d="M16 66l10-6M24 72l12-8M38 64l10-7M50 72l11-8M62 64l10-6M72 70l10-7M30 58l8-5M58 58l9-5" stroke="#B98A3E" stroke-width="2.4" stroke-linecap="round"/>',
-  toybox:   '<rect x="16" y="46" width="56" height="36" rx="6" fill="#B07A57"/><path d="M16 58h56M16 70h56" stroke="#8E5E42" stroke-width="2"/>' +
-            '<circle cx="70" cy="44" r="16" fill="#E8804C"/><path d="M56 40q14 6 28 0" stroke="#FBF4EF" stroke-width="3" fill="none"/><circle cx="34" cy="42" r="9" fill="#9DBF98"/>',
+  strawbed: '<ellipse cx="50" cy="74" rx="44" ry="12" fill="rgba(90,60,30,.18)"/>' +
+            '<path d="M10 70q2-16 22-20q18-6 36 0q22 4 22 20q-2 10-40 12t-40-12z" fill="#D9A94A"/><path d="M16 64q4-12 20-14q14-4 28 0q18 3 20 14q-6 8-34 9t-34-9z" fill="#EFC96E"/>' +
+            '<path d="M36.4 69.9L43.4 72.6M67.5 59.4L73.3 66.4M21.4 62.7L30.4 70.6M63.1 55.0L73.0 60.1M57.9 76.3L63.7 65.4M56.6 74.9L64.9 68.6M25.7 74.8L32.2 65.4M30.9 64.7L40.1 75.2M67.1 57.8L75.1 52.5M69.5 68.9L79.4 62.3" stroke="#F3D27A" stroke-width="2.2" stroke-linecap="round"/><path d="M21.8 66.5L26.8 57.2M57.8 73.1L69.2 67.4M44.6 74.5L57.7 75.3M20.9 54.1L30.0 64.2M60.4 72.1L73.0 68.6M27.5 63.9L31.0 54.6M66.3 69.5L72.5 64.2M20.1 69.5L24.2 62.9M60.6 74.1L73.0 75.0" stroke="#E9BE5E" stroke-width="2.2" stroke-linecap="round"/><path d="M74.9 69.6L78.7 63.0M58.2 72.3L67.3 75.5M45.3 51.4L48.3 58.7M15.8 71.1L21.5 60.6M67.8 68.1L80.9 69.7M26.9 66.6L32.2 77.2M37.5 74.1L40.3 66.5M33.7 68.5L39.3 74.3M33.5 66.8L43.6 76.3" stroke="#D9A94A" stroke-width="2.2" stroke-linecap="round"/><path d="M16.5 73.1L21.7 66.3M28.0 65.5L32.0 58.1M17.5 73.9L24.3 66.0M24.1 50.0L30.5 56.3M60.7 55.0L69.2 49.9M15.9 61.4L22.6 64.5M68.5 75.7L73.8 63.6M82.5 65.7L90.5 66.2M66.3 49.8L75.0 58.4" stroke="#F7DE95" stroke-width="2.2" stroke-linecap="round"/><path d="M19.5 53.5L29.1 55.4M33.4 57.4L43.3 52.6M76.5 63.5L85.3 70.1M24.0 76.3L28.0 66.9M25.7 70.4L29.2 77.6M73.5 51.8L81.2 61.8M29.2 61.4L36.9 56.0M23.5 61.6L37.4 62.5M50.9 75.6L57.6 73.2" stroke="#C99540" stroke-width="2.2" stroke-linecap="round"/>',
+  toybox:   '<ellipse cx="50" cy="80" rx="38" ry="9" fill="rgba(42,22,48,.16)"/>' +
+            '<path d="M14 72q14-10 30-2t30-4" stroke="#E9D6B8" stroke-width="9" fill="none" stroke-linecap="round"/>' +
+            '<path d="M18 70l4 5M26 66l4 6M34 66l3 6M42 69l3 6M50 72l3 5M58 71l3 6M66 67l3 6" stroke="#7FB3D9" stroke-width="3" stroke-linecap="round"/>' +
+            '<circle cx="13" cy="73" r="6" fill="#E9D6B8"/><circle cx="76" cy="65" r="6" fill="#E9D6B8"/>' +
+            '<circle cx="62" cy="52" r="19" fill="#E25D4A"/><path d="M44 47q18 9 36 0" stroke="#FBF4EF" stroke-width="4" fill="none"/><path d="M47 60q15 7 30 0" stroke="#F6D77A" stroke-width="3" fill="none"/>' +
+            '<ellipse cx="55" cy="42" rx="6" ry="3.5" fill="#fff" opacity=".55" transform="rotate(-25 55 42)"/>',
   hutch:    '<path d="M10 62q0-22 40-22t40 22v8q0 16-40 16t-40-16z" fill="#E39BA6"/>' +
             '<ellipse cx="50" cy="62" rx="30" ry="12" fill="#F7D3D8"/><ellipse cx="50" cy="64" rx="24" ry="8" fill="#FBF4EF"/>' +
             '<path d="M30 60q20 10 40 0" stroke="#F2B6B9" stroke-width="5" fill="none" stroke-linecap="round"/>' +
             '<path d="M12 70q38 20 76 0" stroke="#C97D8A" stroke-width="2" fill="none"/>' +
             '<ellipse cx="38" cy="40" rx="4" ry="11" fill="#E39BA6" transform="rotate(-14 38 40)"/><ellipse cx="62" cy="40" rx="4" ry="11" fill="#E39BA6" transform="rotate(14 62 40)"/>',
-  clover:   '<ellipse cx="50" cy="70" rx="40" ry="18" fill="#7FA672"/>' +
-            '<g fill="#5E8E54"><circle cx="30" cy="62" r="7"/><circle cx="38" cy="62" r="7"/><circle cx="34" cy="55" r="7"/>' +
-            '<circle cx="62" cy="66" r="7"/><circle cx="70" cy="66" r="7"/><circle cx="66" cy="59" r="7"/>' +
-            '<circle cx="48" cy="74" r="6"/><circle cx="55" cy="74" r="6"/><circle cx="51" cy="68" r="6"/></g>' +
-            '<circle cx="76" cy="54" r="4" fill="#FBF4EF"/><circle cx="24" cy="74" r="4" fill="#F6C6A8"/>',
+  clover:   '<ellipse cx="50" cy="70" rx="42" ry="18" fill="#8CB57E"/>' +
+            '<path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(28 62) rotate(0) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(28 62) rotate(120) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(28 62) rotate(240) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(46 72) rotate(0) scale(1.05)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(46 72) rotate(120) scale(1.05)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(46 72) rotate(240) scale(1.05)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(66 60) rotate(0) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(66 60) rotate(120) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(66 60) rotate(240) scale(1)" fill="#5E9A54"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(78 74) rotate(0) scale(0.85)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(78 74) rotate(120) scale(0.85)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(78 74) rotate(240) scale(0.85)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(20 76) rotate(0) scale(0.8)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(20 76) rotate(120) scale(0.8)" fill="#6AA65E"/><path d="M0 0c-6-3-9-9-6-12s7-1 6 3c1-4 5-6 6-3s0 9-6 12z" transform="translate(20 76) rotate(240) scale(0.8)" fill="#6AA65E"/>' +
+            '<g fill="#FBF4EF"><circle cx="38" cy="52" r="3.5"/><circle cx="58" cy="70" r="3"/></g><g fill="#F2B6C8"><circle cx="38" cy="52" r="1.4"/><circle cx="58" cy="70" r="1.2"/></g>',
   hidey:    '<ellipse cx="50" cy="66" rx="40" ry="20" fill="#8B5E4A"/><ellipse cx="22" cy="66" rx="12" ry="18" fill="#B0805F"/>' +
             '<ellipse cx="22" cy="66" rx="7" ry="11" fill="#3E2A24"/><path d="M40 52q20-6 44 4" stroke="#A9714E" stroke-width="2.4" fill="none"/>',
   trough:   '<path d="M12 50h76l-8 30H20z" fill="#9C7155"/><path d="M16 54h68l-3 10H19z" fill="#7FB3D9"/>' +
@@ -813,7 +830,7 @@ var ITEMS = [
   {g:'Food & water', id:'trough', name:'Water trough', cost:8, kind:'build'},
   {g:'Food & water', id:'clover', name:'Clover patch', cost:5, kind:'plant', cosy:1},
   {g:'Food & water', id:'haynet', name:'Hay net', cost:6, kind:'soft'},
-  {g:'Play', id:'toybox', name:'Toy box', cost:8, kind:'build'},
+  {g:'Play', id:'toybox', name:'Toys', cost:8, kind:'build'},
   {g:'Play', id:'hidey', name:'Hidey log', cost:6, kind:'build'},
   {g:'Play', id:'sandpit', name:'Dust bath', cost:6, kind:'soft'},
   {g:'Play', id:'cattree', name:'Cat tree', cost:12, kind:'build'},
@@ -873,14 +890,14 @@ var SOUND = {pig:'oink', rat:'squeak', cow:'moo', sheep:'baa', mouse:'squeak', g
 
 /* what each animal needs to be happy - game design, not claims (the facts above are the claims) */
 function needs(id){
-  var has = function(t){ return countItem(t) > 0; };
+  var has = function(t){ return countItem(t) > 0 || fixedHas(t); };
   var today = dayIndex();
   switch(id){
     case 'peggy':  return [{item:'strawbed', label:'A straw bed', met:has('strawbed')}, {item:'toybox', label:'Something to play with', met:has('toybox')}];
     case 'rubie':  return [{item:'hutch', label:'A soft bed to sleep in', met:has('hutch')}, {item:'clover', label:'A clover patch', met:has('clover')}];
     case 'rosie':  return [{item:'hidey', label:'A hidey log', met:has('hidey')}, {item:null, icon:'hidey', label:'A game of hide and seek today', met:S.played === today}];
-    case 'callie': return [{item:'trough', label:'A water trough', met:has('trough')}, {item:null, label:'Their best friend ' + nm('peggy') + ' happy', met:happy('peggy')}];
-    case 'shellie':return [{item:'shelter', label:'A field shelter', met:has('shelter')}, {item:null, label:'Three happy friends around', met:happyCount('shellie') >= 3}];
+    case 'callie': return [{item:'haynet', label:'Hay to munch on', met:has('haynet')}, {item:null, label:'Their best friend ' + nm('peggy') + ' happy', met:happy('peggy')}];
+    case 'shellie':return [{item:'clover', label:'Fresh grass to graze', met:has('clover')}, {item:null, label:'Three happy friends around', met:happyCount('shellie') >= 3}];
     case 'mellie': return [{item:'nest', label:'A cosy nest', met:has('nest')}, {item:'tree', label:'A tree to hide under', met:has('tree')}];
     case 'gigi':   return [{item:'haynet', label:'A hay net', met:has('haynet')}, {item:'hidey', label:'Somewhere to hide', met:has('hidey')}];
     case 'holly':  return [{item:'coop', label:'A coop', met:has('coop')}, {item:'sandpit', label:'A dust bath', met:has('sandpit')}];
@@ -888,8 +905,8 @@ function needs(id){
     case 'digby':  return [{item:'dogbed', label:'A dog bed', met:has('dogbed')}, {item:'toybox', label:'A ball to chase', met:has('toybox')}];
     case 'cleo':   return [{item:'cattree', label:'A cat tree', met:has('cattree')}, {item:null, label:'A cuddle today (on their terms)', met:S.cuddleDay.cleo === today}];
     case 'dilly':  return [{item:'duckhouse', label:'A duck house', met:has('duckhouse')}, {item:null, icon:'pond', label:'The pond to swim in', met:true}];
-    case 'lulu':   return [{item:'shelter', label:'A field shelter', met:has('shelter')}, {item:null, label:nm('shellie') + ' happy', met:happy('shellie')}];
-    case 'hector': return [{item:'haynet', label:'A hay net', met:has('haynet')}, {item:'shelter', label:'A field shelter', met:has('shelter')}];
+    case 'lulu':   return [{item:'flowers', label:'Flowers to frolic in', met:has('flowers')}, {item:null, label:nm('shellie') + ' happy', met:happy('shellie')}];
+    case 'hector': return [{item:'haynet', label:'A hay net', met:has('haynet')}, {item:'sandpit', label:'Somewhere to roll', met:has('sandpit')}];
     case 'dolly':  return [{item:'sandpit', label:'Somewhere to roll', met:has('sandpit')}, {item:null, label:'Their best friend ' + nm('hector') + ' happy', met:happy('hector')}];
     case 'tilly':  return [{item:'roost', label:'A perch', met:has('roost')}, {item:'flowers', label:'Flowers to forage in', met:has('flowers')}];
     case 'olive':  return [{item:'owlbox', label:'An owl box', met:has('owlbox')}, {item:'tree', label:'A quiet tree', met:has('tree')}];
@@ -970,7 +987,7 @@ var CUDDLE = {
    STATE
    ====================================================================== */
 var COLS = 8;
-var FIXED = {'7,0':'pond', '0,6':'gate'};
+var FIXED = {'7,0':'pond', '0,6':'gate', '6,0':'trough', '0,0':'shelter'};   // water and shelter are always there
 var PONDKEY = '7,0', GATEKEY = '0,6';
 var LAND = [{rows:7}, {rows:10, cost:40}, {rows:13, cost:90}, {rows:16, cost:160}];
 var KEY = 'ahk-sanctuary-keeper-v1';
@@ -991,6 +1008,12 @@ function load(){
   }
   if (d.v !== 2) return fresh();
   var f2 = fresh(); for (var k2 in f2) if (!(k2 in d)) d[k2] = f2[k2];
+  /* the always-there water trough and shelter need their tiles: move anything built there */
+  for (var fk in FIXED){
+    if (!d.items[fk]) continue;
+    var it0 = d.items[fk]; delete d.items[fk];
+    outer: for (var yy = 0; yy < LAND[d.land || 0].rows; yy++) for (var xx = 0; xx < COLS; xx++){ var kk = xx + ',' + yy; if (!d.items[kk] && !FIXED[kk]){ d.items[kk] = it0; break outer; } }
+  }
   return d;
 }
 function save(){ S.last = Date.now(); try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
@@ -1000,6 +1023,7 @@ function dayIndex(){
   return Math.round((b - a) / 86400000);
 }
 function rows(){ return LAND[S.land].rows; }
+function fixedHas(t){ for (var k in FIXED) if (FIXED[k] === t) return true; return false; }
 function countItem(t){ var n = 0; for (var k in S.items) if (S.items[k] === t) n++; return n; }
 function itemAt(k){ return S.items[k] || FIXED[k] || null; }
 function nm(id){ return S.names[id] || A[id].name; }
@@ -1056,7 +1080,7 @@ function drawItems(popKey){
     var p = k.split(',').map(Number);
     html += '<div class="tile'+(fixed?' fixed':'')+(art==='pond'?' pond':'')+(k===popKey?' pop':'')+(k===lifted?' lift':'')+'" style="left:'+(p[0]*T)+'px;top:'+(p[1]*T)+'px;z-index:'+(p[1]+1)+'">' + isvg(ART[art]) + '</div>';
   }
-  for (var f in FIXED) tile(f, FIXED[f], true);
+  for (var f in FIXED) tile(f, FIXED[f], f === PONDKEY || f === GATEKEY);
   for (var k in S.items) tile(k, S.items[k], false);
   $('itemLayer').innerHTML = html;
 }
@@ -1145,7 +1169,8 @@ function nudge(){
     var id = S.animals[i], miss = needs(id).filter(function(n){ return !n.met; })[0];
     if (miss){
       var how = miss.item ? ' Find it in <b>Build</b>.' : (id === 'rosie' && miss.icon === 'hidey' ? ' Tap them to play.' : (id === 'cleo' ? ' Tap them for a cuddle.' : ''));
-      el.innerHTML = '<span class="who">' + DRAW[A[id].species]() + '</span><span><b>' + esc(nm(id)) + '</b> wants ' + esc(miss.label.charAt(0).toLowerCase() + miss.label.slice(1)) + '.' + how + '</span>';
+      var waiting = ANIMALS.filter(function(a){ return !here(a.id); })[0], gate = waiting && S.earned >= waiting.at && arrivalBlocked() ? ' <b>Someone new is waiting at the gate</b> until ' + esc(nm(arrivalBlocked())) + '\u2019s happy.' : '';
+      el.innerHTML = '<span class="who">' + DRAW[A[id].species]() + '</span><span><b>' + esc(nm(id)) + '</b> wants ' + esc(miss.label.charAt(0).toLowerCase() + miss.label.slice(1)) + '.' + how + gate + '</span>';
       return;
     }
   }
@@ -1157,7 +1182,8 @@ function nudge(){
     : '<span class="who">' + HEART + '</span><span>Everyone’s home and happy. The wildlife rescue is coming next.</span>';
 }
 
-function refresh(){ checkSponsors(); hud(); renderAnimals(); renderShop(); renderVisitors(); nudge(); moodAll(); }
+var _inRefresh = false;
+function refresh(){ if (!_inRefresh){ _inRefresh = true; try { checkArrivals(); } finally { _inRefresh = false; } } checkSponsors(); hud(); renderAnimals(); renderShop(); renderVisitors(); nudge(); moodAll(); }
 
 /* ======================================================================
    ANIMALS ON THE FIELD
@@ -1214,6 +1240,7 @@ function pickActivity(id){
   var likes = LIKES[id] || [], opts = [];
   for (var k in S.items) if (likes.indexOf(S.items[k]) !== -1 && k !== lifted){ var q = k.split(',').map(Number); if (!occupied(q[0], q[1], id)) opts.push(k); }
   if (likes.indexOf('pond') !== -1) { opts.push(PONDKEY); opts.push(PONDKEY); }
+  for (var fx in FIXED){ if (fx !== PONDKEY && likes.indexOf(FIXED[fx]) !== -1){ var fq = fx.split(',').map(Number); if (!occupied(fq[0], fq[1], id)) opts.push(fx); } }
   if (!opts.length) return null;
   var sleepy = opts.filter(function(k){ return ACT[itemAt(k)] && ACT[itemAt(k)].cls === 'sleep'; });
   var owl = id === 'olive', nightNow = isNight();
@@ -1371,9 +1398,13 @@ function visitorSays(stall, x, y){
 /* ======================================================================
    ARRIVALS, SPONSORS, RUSHES
    ====================================================================== */
+function arrivalBlocked(){ var last = S.animals[S.animals.length - 1]; return last && !happy(last) ? last : null; }
 function checkArrivals(){
+  var arrived = false;
   ANIMALS.forEach(function(a){
-    if (!here(a.id) && S.earned >= a.at){
+    if (arrived || here(a.id) || S.earned < a.at || arrivalBlocked()) return;
+    arrived = true;
+    {
       S.animals.push(a.id);
       var p = randomFree(a.id), m = spawn(a.id, 1, 6 < rows() ? 6 : rows() - 1);
       m.el.style.opacity = '0'; m.state = 'walk'; m.until = Date.now() + 99999;
@@ -1386,7 +1417,7 @@ function checkArrivals(){
 function randomFree(id){
   for (var i = 0; i < 60; i++){
     var x = Math.floor(Math.random() * COLS), y = Math.floor(Math.random() * rows());
-    if (walkable(x, y, id) && FIXED[x+','+y] !== 'pond' && !S.items[x+','+y] && !occupied(x, y, id)) return [x, y];
+    if (walkable(x, y, id) && !FIXED[x+','+y] && !S.items[x+','+y] && !occupied(x, y, id)) return [x, y];
   }
   return [3, 3];
 }
@@ -1447,12 +1478,17 @@ function showAnimal(id, arriving){
     (a.fact ? '<div class="fact"><small>True story</small><p>' + a.fact + '</p><a href="' + a.url + '" target="_blank" rel="noopener">' + a.src + '</a></div>' : '');
   var canPlay = id === 'rosie' && countItem('hidey') > 0 && S.played !== today && Object.keys(S.items).length >= 2;
   var left = Math.max(1, Math.ceil((3 * 60000 - (Date.now() - (S.cuddleAt[id] || 0))) / 60000));
+  S.treatAt = S.treatAt || {};
+  var full = Date.now() - (S.treatAt[id] || 0) < 5 * 60000, fullLeft = Math.max(1, Math.ceil((5 * 60000 - (Date.now() - (S.treatAt[id] || 0))) / 60000));
   html += '<div class="acts">' +
     (arriving ? '' : '<button type="button" class="btn main" id="cuddleBtn"' + (cool ? ' disabled' : '') + '>' + (cool ? 'Needs a little space' : 'Cuddle') + '</button>') +
+    (arriving || !TREAT[id] ? '' : '<button type="button" class="btn treat" id="treatBtn"' + (full ? ' disabled' : '') + '>' + (full ? 'Full up for now' : 'Give ' + TREAT[id]) + '</button>') +
     (id === 'rosie' ? '<button type="button" class="btn dark" id="playBtn"' + (canPlay ? '' : ' disabled') + '>' + (S.played === today ? 'Played today' : 'Hide and seek') + '</button>' : '') +
     '<button type="button" class="btn ' + (arriving ? 'main' : 'soft') + '" id="closeBtn">' + (arriving ? 'Welcome, ' + esc(nm(id)) : 'Close') + '</button></div>' +
     (cool && !arriving ? '<p class="sub">' + (id === 'cleo' ? esc(nm(id)) + ' has decided: no more cuddles. For now. Try again in ' + left + ' min.' : esc(nm(id)) + '\u2019s had plenty of cuddles for now. Give them ' + left + ' min, or they\u2019ll get grumpy.') + '</p>' : '') +
-    (arriving ? '<p class="sub">You can give ' + esc(nm(id)) + ' cuddles any time. Just tap them in the field. Not too many, mind.</p>' : '') +
+    (full && !arriving && TREAT[id] ? '<p class="sub">' + esc(nm(id)) + '\u2019s full of ' + TREAT[id].replace(/^(a|an|some) /, '') + ' for now. Another treat in ' + fullLeft + ' min.</p>' : '') +
+    (!arriving && id === 'olive' ? '<p class="sub">Owls find their own food, so no treats for ' + esc(nm(id)) + '. A quiet hello is plenty.</p>' : '') +
+    (arriving ? '<p class="sub">You can give ' + esc(nm(id)) + ' cuddles and treats any time. Just tap them in the field. Not too many, mind.</p>' : '') +
     (id === 'rosie' && !canPlay && S.played !== today ? '<p class="sub">' + (countItem('hidey') ? 'Place at least two things first, so they have somewhere to hide.' : 'They need a hidey log first.') + '</p>' : '');
   openSheet(html, nm(id));
   $('closeBtn').onclick = closeSheet;
@@ -1466,9 +1502,22 @@ function showAnimal(id, arriving){
   };
   $('nameIn').onkeydown = function(e){ if (e.key === 'Enter'){ e.preventDefault(); $('nameSave').click(); } };
   if ($('cuddleBtn')) $('cuddleBtn').onclick = function(){ closeSheet(); cuddle(id); };
+  if ($('treatBtn')) $('treatBtn').onclick = function(){ closeSheet(); giveTreat(id); };
   if ($('playBtn')) $('playBtn').onclick = function(){ closeSheet(); startHideSeek(); };
 }
 
+var TREAT = {peggy:'a slice of apple', rubie:'a sprig of fresh herbs', rosie:'a pea', callie:'a slice of apple', shellie:'a handful of greens',
+  mellie:'a sunflower seed', gigi:'a slice of red pepper', holly:'a handful of seeds', chloe:'some chopped greens', digby:'a biscuit',
+  cleo:'a cat treat', dilly:'some peas', lulu:'a handful of greens', hector:'a slice of carrot', dolly:'a slice of carrot', tilly:'a handful of seeds'};
+var TREAT_LINES = ['{n} loved {t}!', '{n} wolfed down {t}, then looked at you hopefully.', '{n} took {t} very gently. Such manners.', '{n} crunched {t} with great enthusiasm.'];
+function giveTreat(id){
+  S.treatAt = S.treatAt || {}; S.treatAt[id] = Date.now(); S.treats = (S.treats || 0) + 1;
+  var m = mobs[id];
+  if (m){ m.el.classList.add('act-eat'); setTimeout(function(){ m.el.classList.remove('act-eat'); celebrate(id); }, 1800); }
+  speak(id, 'nom nom');
+  toast(TREAT_LINES[Math.floor(Math.random() * TREAT_LINES.length)].replace('{n}', nm(id)).replace('{t}', TREAT[id]));
+  save(); refresh();
+}
 function cuddle(id){
   S.cuddleAt[id] = Date.now(); S.cuddleDay[id] = dayIndex(); S.cuddles++;
   var first = !S['cuddledOnce_' + id]; S['cuddledOnce_' + id] = true;
@@ -1729,13 +1778,13 @@ function freeTiles(){
 }
 function spawnJob(){
   var pool = JOBS.filter(function(j){
-    if (j.need && !countItem(j.need)) return false;
+    if (j.need && !countItem(j.need) && !fixedHas(j.need)) return false;
     if (j.needAnimal && !j.needAnimal.some(here)) return false;
     return true;
   });
   var j = pool[Math.floor(Math.random() * pool.length)], spot;
   if (j.need){
-    var keys = Object.keys(S.items).filter(function(k){ var q = k.split(',').map(Number); return S.items[k] === j.need && !occupied(q[0], q[1], null); });
+    var keys = Object.keys(S.items).concat(Object.keys(FIXED)).filter(function(k){ var q = k.split(',').map(Number); return itemAt(k) === j.need && !occupied(q[0], q[1], null); });
     if (!keys.length) return;
     var p = keys[Math.floor(Math.random() * keys.length)].split(',').map(Number);
     spot = [p[0] + .5 + (Math.random() - .5) * .5, p[1] + .25];
@@ -2230,6 +2279,56 @@ function showHelp(){
 }
 $('helpBtn').onclick = showHelp;
 
+
+/* ======================================================================
+   PASSERS-BY - the odd couple strolling along the footpath
+   ====================================================================== */
+var SKIN = ['#F3D2B8','#E2B08C','#C68B62','#9A6646','#6E4630'], HAIR = ['#3A2A24','#6E4A2E','#C99A5A','#2A1E1A','#B5552E','#8E8E96'],
+    TOP = ['#E8804C','#7FA672','#6E4E78','#7FB3D9','#F6C6A8','#E9A9C3','#3A1F3D'];
+function pick(a){ return a[Math.floor(Math.random() * a.length)]; }
+function personSVG(){
+  var sk = pick(SKIN), hr = pick(HAIR), tp = pick(TOP), long = Math.random() < .5, legs = '#5A4550';
+  return '<svg viewBox="0 0 31 50"><g class="lg"><rect x="10" y="33" width="4.5" height="15" rx="2.2" fill="' + legs + '"/></g><g class="lg lg2"><rect x="16.5" y="33" width="4.5" height="15" rx="2.2" fill="' + legs + '"/></g>' +
+    '<g class="bd">' + (long ? '<path d="M7 12q8.5-12 17 0v12H7z" fill="' + hr + '"/>' : '') +
+    '<rect x="7" y="18" width="17" height="18" rx="7" fill="' + tp + '"/>' +
+    '<circle cx="15.5" cy="11" r="7.5" fill="' + sk + '"/><path d="M8 10q7.5-10 15 0q-3-4-7.5-4T8 10z" fill="' + hr + '"/>' +
+    '<circle cx="12.8" cy="12" r=".9" fill="#2A1630"/><circle cx="18.2" cy="12" r=".9" fill="#2A1630"/><path d="M13.6 14.6q1.9 1.4 3.8 0" stroke="#2A1630" stroke-width=".8" fill="none" stroke-linecap="round"/></g></svg>';
+}
+var nextWalk = 0;
+function stroll(){
+  var path = $('footpath'); if (!path || REDUCED || !path.animate) return;
+  var W = path.clientWidth, ltr = Math.random() < .5, pair = Math.random() < .55, dur = 14000 + Math.random() * 6000;
+  var group = [], n = pair ? 2 : 1;
+  for (var i = 0; i < n; i++){
+    var w = document.createElement('div'); w.className = 'walker'; w.innerHTML = personSVG();
+    w.style.left = '0px'; path.appendChild(w); group.push(w);
+  }
+  var x0 = ltr ? -60 : W + 20, x1 = ltr ? W + 20 : -60, flip = ltr ? '' : ' scaleX(-1)';
+  /* stop at a stall (or to look at the animals) half way along */
+  var stallKey = Object.keys(S.items).filter(function(k){ return ITEM[S.items[k]].stall; })[0];
+  var stopAt = .35 + Math.random() * .3, said = false;
+  group.forEach(function(w, i){
+    var off = i * (ltr ? -26 : 26);
+    var a = w.animate([
+      {transform:'translateX(' + (x0 + off) + 'px)' + flip, offset:0},
+      {transform:'translateX(' + (x0 + (x1 - x0) * stopAt + off) + 'px)' + flip, offset:.45},
+      {transform:'translateX(' + (x0 + (x1 - x0) * stopAt + off) + 'px)' + flip, offset:.6},
+      {transform:'translateX(' + (x1 + off) + 'px)' + flip, offset:1}
+    ], {duration:dur, easing:'linear', fill:'forwards'});
+    setTimeout(function(){ w.classList.add('stop'); if (i === 0 && !said){ said = true; var q = document.createElement('span'); q.className = 'vsay';
+      var lines = stallKey && Math.random() < .6 ? STALL_QUOTES[ITEM[S.items[stallKey]].stall] : ['Aww, look at them!', 'I could watch them all day.', 'Can we come back tomorrow?', 'They all look so happy.', 'Hello, ' + nm(pick(S.animals)) + '!'];
+      q.textContent = fill(pick(lines)).replace('{peggy}', nm('peggy')); w.appendChild(q); setTimeout(function(){ q.remove(); }, 2600); } }, dur * .45);
+    setTimeout(function(){ w.classList.remove('stop'); }, dur * .6);
+    a.onfinish = function(){ w.remove(); };
+  });
+}
+function tickWalkers(now){
+  if (now < nextWalk) return;
+  nextWalk = now + (stalls() ? 16000 : 24000) + Math.random() * 16000;
+  if (isNight() || !S.animals.some(happy)) return;
+  stroll();
+}
+
 /* ======================================================================
    LOOP
    ====================================================================== */
@@ -2263,7 +2362,7 @@ function tick(){
       }
     }
   }
-  tickJobs(now); tickPairs(now); tickLife(now); tickQuiz(now);
+  tickJobs(now); tickPairs(now); tickLife(now); tickQuiz(now); tickWalkers(now);
   var ph = phase(); if (ph !== lastPhase){ lastPhase = ph; applyPhase(); hud(); }
   checkRush();
   if (!rushing() && $('perks').querySelector('.rush')) hud();
@@ -2278,7 +2377,7 @@ function boot(){
   var away = Date.now() - (S.last || Date.now());
   S.animals.forEach(function(id){ var p = randomFree(id); spawn(id, p[0], p[1]); });
   size(); applyPhase(); refresh(); renderName();
-  setTimeout(checkArrivals, 300); startAmbient();
+  setTimeout(checkArrivals, 300); startAmbient(); nextWalk = Date.now() + 6000;
   if (!S.sname && !S.nameAsked){ S.nameAsked = true; setTimeout(function(){ queueSheet(renameSanctuary); }, 1800); }
   if (!S.helpSeen){ setTimeout(function(){ queueSheet(showHelp); }, 2000); }
   jobNext = Date.now() + 4000;
