@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sanctuary Cases - a home kind</title>
+<meta name="description" content="A daily logic puzzle. Work out where every animal at the sanctuary spent the night, and learn a true animal fact.">
+<meta name="theme-color" content="#3A1F3D">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon-v2.png">
+<style>body{margin:0}[hidden]{display:none!important}.ahk-back{display:inline-block;margin:12px 0 0 max(16px, env(safe-area-inset-left, 0px));font:700 13px 'Hanken Grotesk',system-ui,sans-serif;color:#6A535D;text-decoration:none}.ahk-back:hover{text-decoration:underline}</style>
+</head>
+<body>
+<a class="ahk-back" href="/games.html">&larr; all games</a>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Gloock&family=Hanken+Grotesk:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: one centred column - case header, a night-time sanctuary board of six spots, the animal tray, clue cards, then actions. A single night look by design. */
+:root{
+  --night:#1C0F22; --night-2:#2A1630; --plum:#3A1F3D;
+  --blush:#F4E6DE; --blush-dim:rgba(244,230,222,.68); --blush-faint:rgba(244,230,222,.10);
+  --apricot:#E8804C; --apricot-soft:#F6C6A8; --sage:#9DBF98; --wrong:#F08A9A;
+  --display:'Gloock', Georgia, 'Times New Roman', serif;
+  --body:'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --hand:'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{background:var(--night);color:var(--blush);font-family:var(--body);overflow-x:hidden;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 48px}
+
+/* sky */
+.sky{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(circle 420px at 85% 4%, rgba(232,128,76,.14), transparent 70%),
+             linear-gradient(180deg,#2A1630 0%,#1C0F22 55%,#160B1B 100%)}
+.moon{position:absolute;top:84px;right:7%;width:46px;height:46px;border-radius:50%;
+  background:radial-gradient(circle at 38% 38%,#FFF4E8,#F6D9C0 60%,#E9C3A6);
+  box-shadow:0 0 40px 10px rgba(246,198,168,.25)}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#FBF4EF;animation:twinkle var(--t,3s) ease-in-out infinite;animation-delay:var(--d,0s)}
+
+.wrap{position:relative;z-index:1;max-width:480px;margin:0 auto;padding-top:18px}
+
+.top{display:flex;justify-content:space-between;align-items:center}
+.wm{font:400 19px/1 var(--display);color:var(--blush)}
+.wm em{font-style:normal;color:var(--apricot)}
+.timer{font:700 13px var(--body);color:var(--blush-dim);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+
+.case{margin:22px 0 16px}
+.case small{display:block;font:800 10.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--apricot)}
+.case h1{font:400 clamp(30px,8vw,38px)/1.04 var(--display);margin:7px 0 0;text-wrap:balance}
+.case p{font:600 14px/1.5 var(--body);color:var(--blush-dim);margin:9px 0 0;max-width:36ch}
+
+/* board */
+.boardwrap{position:relative}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.spot{position:relative;aspect-ratio:1/1.18;border-radius:22px;overflow:hidden;border:0;padding:0;cursor:pointer;
+  background:#2A1A2E;color:inherit;font:inherit;outline:none;transition:transform .2s ease, box-shadow .2s ease;
+  box-shadow:inset 0 0 0 1px var(--blush-faint)}
+.spot:focus-visible{box-shadow:inset 0 0 0 2px var(--apricot)}
+.spot svg.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.picking .spot.free{box-shadow:inset 0 0 0 2px rgba(232,128,76,.55);animation:ready 1.6s ease-in-out infinite}
+.spot .lbl{position:absolute;left:0;right:0;bottom:0;padding:16px 8px 7px;text-align:left;
+  background:linear-gradient(transparent,rgba(20,10,24,.82) 55%)}
+.spot .lbl b{display:block;font:700 12px/1.15 var(--body);color:var(--blush)}
+.spot .lbl span{display:block;font:600 9.5px/1.3 var(--body);color:var(--blush-dim);margin-top:2px}
+.seat{position:absolute;left:50%;top:44%;width:66%;transform:translate(-50%,-50%);pointer-events:none}
+.seat .char{animation:land .5s cubic-bezier(.3,1.5,.5,1) both}
+
+.fly{position:absolute;width:5px;height:5px;border-radius:50%;background:#FFE7A8;box-shadow:0 0 10px 3px rgba(255,220,140,.55);
+  pointer-events:none;animation:drift var(--t,9s) ease-in-out infinite, glow 2.2s ease-in-out infinite;animation-delay:var(--d,0s)}
+
+/* tray */
+.trayhd{display:flex;justify-content:space-between;align-items:baseline;margin:20px 0 9px}
+.trayhd h2,.clueshd h2{font:400 21px var(--display);margin:0}
+.trayhd span,.clueshd span{font:700 11.5px var(--body);color:var(--blush-dim)}
+.tray{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;min-height:92px}
+.pet{border:0;background:var(--blush-faint);border-radius:18px;padding:6px 2px 7px;cursor:pointer;color:inherit;font:inherit;
+  display:flex;flex-direction:column;align-items:center;gap:1px;transition:transform .18s ease, background .18s ease}
+.pet:focus-visible{outline:2px solid var(--apricot);outline-offset:2px}
+.pet .char{width:100%;max-width:58px}
+.pet b{font:700 11.5px/1.1 var(--body)}
+.pet i{font:600 9.5px/1.1 var(--body);font-style:normal;color:var(--blush-dim)}
+.pet.sel{background:rgba(232,128,76,.22);transform:translateY(-6px);box-shadow:0 0 0 2px var(--apricot)}
+.pet.gone{opacity:.28}
+.pet.gone.sel{opacity:1}
+
+/* characters */
+.char{display:block;width:100%;height:auto;overflow:visible}
+.char .bob{animation:bob 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.char .eyes{animation:blink 4.6s infinite;transform-box:fill-box;transform-origin:center}
+.char .ear-l{animation:earl 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.char .ear-r{animation:earr 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.char .tail{animation:wag 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:0% 50%}
+.wobble{animation:wobble .5s ease-in-out 2 !important}
+.happy .bob{animation:hop .6s ease-in-out 3}
+.binky .bob{animation:binky .9s ease-in-out 3}
+
+/* clues */
+.clueshd{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 9px}
+.clues{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.clue{display:flex;gap:11px;align-items:flex-start;background:var(--blush-faint);border-radius:16px;padding:11px 13px;cursor:pointer;
+  font:600 13.5px/1.5 var(--body);color:rgba(244,230,222,.9);transition:opacity .2s ease}
+.clue .face{flex:none;width:34px;margin-top:-2px}
+.clue b{color:var(--apricot-soft);font-weight:700}
+.clue.done{opacity:.4}
+.clue.done p{text-decoration:line-through;text-decoration-color:rgba(232,128,76,.8)}
+.clue p{margin:0}
+.tip{font:600 11.5px var(--body);color:var(--blush-dim);margin:9px 2px 0}
+
+/* actions */
+.msg{min-height:22px;margin:16px 0 0;font:700 13.5px var(--body);color:var(--apricot-soft);text-align:center}
+.acts{display:flex;gap:9px;margin-top:8px}
+.btn{flex:1;border:0;border-radius:16px;padding:16px 10px;font:800 14.5px var(--body);cursor:pointer}
+.btn:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+.btn.ghost{background:var(--blush-faint);color:var(--blush)}
+.btn.main{background:var(--apricot);color:#2A1630}
+
+/* solved sheet */
+.sheet{position:fixed;inset:0;z-index:5;background:rgba(14,7,17,.72);display:flex;align-items:flex-end;justify-content:center;
+  padding-left:max(12px, env(safe-area-inset-left, 0px));padding-right:max(12px, env(safe-area-inset-right, 0px))}
+.sheet[hidden],.copybox[hidden]{display:none}
+.sheet .in{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:linear-gradient(#2E1834,#22122A);
+  border-radius:28px 28px 0 0;padding:26px 20px calc(24px + env(safe-area-inset-bottom, 0px));animation:rise .45s cubic-bezier(.2,.9,.3,1)}
+.stamp{display:inline-block;border:2px solid var(--apricot);color:var(--apricot);border-radius:10px;padding:6px 12px;
+  font:800 12px var(--body);letter-spacing:.2em;transform:rotate(-4deg)}
+.sheet h2{font:400 34px/1.05 var(--display);margin:16px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0}
+.stats div{background:var(--blush-faint);border-radius:16px;padding:12px}
+.stats b{display:block;font:400 26px var(--display);color:var(--apricot-soft);font-variant-numeric:tabular-nums}
+.stats span{font:700 10.5px var(--body);letter-spacing:.05em;color:var(--blush-dim);text-transform:uppercase}
+.true{background:var(--blush);color:#2A1630;border-radius:22px;padding:18px 16px}
+.true small{font:800 10px var(--body);letter-spacing:.18em;text-transform:uppercase;color:#B0501D}
+.true h3{font:400 22px/1.15 var(--display);margin:6px 0 10px}
+.true ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.true li{display:flex;gap:10px;align-items:flex-start;font:600 13px/1.45 var(--body);color:#4A3540}
+.true li .face{flex:none;width:30px}
+.true a{display:block;font:700 11px var(--body);color:#B0501D;margin-top:2px;text-decoration:none}
+.true a:hover{text-decoration:underline}
+.copybox{margin-top:10px;width:100%;border:1px solid var(--blush-faint);background:transparent;color:var(--blush);border-radius:12px;padding:10px;font:600 12px var(--body);resize:none}
+.hand{font:600 24px var(--hand);color:var(--blush-dim);display:inline-block;transform:rotate(-1.5deg);margin:18px 0 4px}
+
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+@keyframes earl{0%,100%{transform:rotate(0)}50%{transform:rotate(-6deg)}}
+@keyframes earr{0%,100%{transform:rotate(0)}50%{transform:rotate(6deg)}}
+@keyframes wag{0%,100%{transform:rotate(0)}50%{transform:rotate(12deg)}}
+@keyframes land{0%{transform:translateY(-18px) scale(.8);opacity:0}70%{transform:translateY(2px) scale(1.05);opacity:1}100%{transform:none;opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px)}}
+@keyframes binky{0%{transform:translateY(0) rotate(0)}30%{transform:translateY(-24px) rotate(-16deg)}55%{transform:translateY(-8px) rotate(12deg)}100%{transform:translateY(0) rotate(0)}}
+@keyframes wobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-9deg)}75%{transform:rotate(9deg)}}
+@keyframes ready{0%,100%{transform:scale(1)}50%{transform:scale(.97)}}
+@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes glow{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes drift{0%{transform:translate(0,0)}25%{transform:translate(18px,-14px)}50%{transform:translate(-8px,-26px)}75%{transform:translate(-20px,-6px)}100%{transform:translate(0,0)}}
+@keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .fly,.star{opacity:.6}
+}
+</style>
+
+<div class="sky" aria-hidden="true"><div class="moon"></div><div id="stars"></div></div>
+
+<main class="wrap">
+  <div class="top"><div class="wm">a home kind<em>.</em></div><div class="timer" id="timer" aria-label="Time">0:00</div></div>
+
+  <header class="case">
+    <small>Sanctuary case 01 &middot; Medium</small>
+    <h1>Who moved in the night?</h1>
+    <p>Everyone wandered off after dark. Read the clues and put each animal back where they spent the night.</p>
+  </header>
+
+  <div class="boardwrap" id="boardwrap"><div class="board" id="board"></div></div>
+
+  <div class="trayhd"><h2>The gang</h2><span id="traycount">6 to place</span></div>
+  <div class="tray" id="tray"></div>
+
+  <div class="clueshd"><h2>Clues</h2><span>Tap one to cross it off</span></div>
+  <ul class="clues" id="clues"></ul>
+  <p class="tip">Tap an animal, then tap the spot. Tap a placed animal to send it back.</p>
+
+  <p class="msg" id="msg" role="status" aria-live="polite"></p>
+  <div class="acts">
+    <button type="button" class="btn ghost" id="hint">Hint</button>
+    <button type="button" class="btn main" id="check">Check</button>
+  </div>
+</main>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="in" role="dialog" aria-modal="true" aria-labelledby="solvedTitle">
+    <span class="stamp">Case closed</span>
+    <h2 id="solvedTitle">Everyone's home.</h2>
+    <div class="stats">
+      <div><b id="sTime">0:00</b><span>Time</span></div>
+      <div><b id="sHints">0</b><span>Hints</span></div>
+      <div><b id="sTries">1</b><span>Checks</span></div>
+    </div>
+    <div class="true">
+      <small>Case notes</small>
+      <h3>The clues were true.</h3>
+      <ul id="facts"></ul>
+    </div>
+    <span class="hand">next case tomorrow.</span>
+    <div class="acts">
+      <button type="button" class="btn ghost" id="again">Play again</button>
+      <button type="button" class="btn main" id="copy">Copy my result</button>
+    </div>
+    <textarea class="copybox" id="copybox" rows="3" readonly hidden aria-label="Your result"></textarea>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- characters (original drawings, simple shapes) ---------- */
+function eyes(x, y, gap){
+  return '<g class="eyes">' +
+    '<ellipse cx="'+x+'" cy="'+y+'" rx="3.6" ry="4.6" fill="#2A1630"/>' +
+    '<ellipse cx="'+(x+gap)+'" cy="'+y+'" rx="3.6" ry="4.6" fill="#2A1630"/>' +
+    '<circle cx="'+(x+1.3)+'" cy="'+(y-1.7)+'" r="1.4" fill="#fff"/>' +
+    '<circle cx="'+(x+gap+1.3)+'" cy="'+(y-1.7)+'" r="1.4" fill="#fff"/></g>' +
+    '<ellipse cx="'+(x-6)+'" cy="'+(y+8)+'" rx="4.6" ry="2.6" fill="#F08A9A" opacity=".5"/>' +
+    '<ellipse cx="'+(x+gap+6)+'" cy="'+(y+8)+'" rx="4.6" ry="2.6" fill="#F08A9A" opacity=".5"/>';
+}
+function svg(inner){ return '<svg class="char" viewBox="0 0 100 104" aria-hidden="true"><g class="bob">'+inner+'</g></svg>'; }
+
+var DRAW = {
+  sheep: function(){ return svg(
+    '<ellipse cx="38" cy="99" rx="5" ry="3" fill="#6E5A64"/><ellipse cx="62" cy="99" rx="5" ry="3" fill="#6E5A64"/>' +
+    '<circle cx="33" cy="82" r="12" fill="#F7EFE6"/><circle cx="67" cy="82" r="12" fill="#F7EFE6"/><circle cx="50" cy="87" r="14" fill="#F7EFE6"/>' +
+    '<circle cx="41" cy="74" r="11" fill="#FBF6EF"/><circle cx="59" cy="74" r="11" fill="#FBF6EF"/>' +
+    '<ellipse class="ear-l" cx="27" cy="48" rx="9" ry="4.5" fill="#D8C1B3" transform="rotate(-18 27 48)"/>' +
+    '<ellipse class="ear-r" cx="73" cy="48" rx="9" ry="4.5" fill="#D8C1B3" transform="rotate(18 73 48)"/>' +
+    '<ellipse cx="50" cy="51" rx="19" ry="22" fill="#EAD7C7"/>' +
+    '<circle cx="40" cy="31" r="8" fill="#FBF6EF"/><circle cx="50" cy="27" r="9" fill="#FBF6EF"/><circle cx="60" cy="31" r="8" fill="#FBF6EF"/>' +
+    eyes(42, 51, 16) +
+    '<path d="M46.5 61.5q3.5 3.2 7 0" stroke="#7A5A62" stroke-width="1.8" fill="none" stroke-linecap="round"/>'); },
+
+  cow: function(){ return svg(
+    '<ellipse cx="50" cy="84" rx="24" ry="17" fill="#FBF4EF"/><ellipse cx="38" cy="82" rx="8" ry="6" fill="#6E4A5C"/>' +
+    '<ellipse cx="38" cy="99" rx="6" ry="3.4" fill="#5A4550"/><ellipse cx="62" cy="99" rx="6" ry="3.4" fill="#5A4550"/>' +
+    '<path class="ear-l" d="M31 26q-6-9 2-12q3 6-2 12z" fill="#EBD3A8"/><path class="ear-r" d="M69 26q6-9-2-12q-3 6 2 12z" fill="#EBD3A8"/>' +
+    '<ellipse cx="24" cy="42" rx="10" ry="5" fill="#FBF4EF" transform="rotate(-16 24 42)"/><ellipse cx="24" cy="42" rx="6" ry="2.6" fill="#F2B6B9" transform="rotate(-16 24 42)"/>' +
+    '<ellipse cx="76" cy="42" rx="10" ry="5" fill="#FBF4EF" transform="rotate(16 76 42)"/><ellipse cx="76" cy="42" rx="6" ry="2.6" fill="#F2B6B9" transform="rotate(16 76 42)"/>' +
+    '<ellipse cx="50" cy="48" rx="23" ry="25" fill="#FBF4EF"/>' +
+    '<ellipse cx="39" cy="34" rx="9" ry="7" fill="#6E4A5C" transform="rotate(-24 39 34)"/><ellipse cx="66" cy="44" rx="5" ry="4" fill="#6E4A5C"/>' +
+    eyes(41, 46, 18) +
+    '<ellipse cx="50" cy="63" rx="15" ry="10" fill="#F2BFB8"/>' +
+    '<ellipse cx="44.5" cy="62.5" rx="2" ry="2.8" fill="#C67F86"/><ellipse cx="55.5" cy="62.5" rx="2" ry="2.8" fill="#C67F86"/>'); },
+
+  pig: function(){ return svg(
+    '<path class="tail" d="M71 82q9-3 6-9q-4-3-4 3" stroke="#E39394" stroke-width="2.6" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="50" cy="82" rx="23" ry="17" fill="#EFA7A6"/>' +
+    '<ellipse cx="39" cy="99" rx="6" ry="3.4" fill="#D98B8C"/><ellipse cx="61" cy="99" rx="6" ry="3.4" fill="#D98B8C"/>' +
+    '<path class="ear-l" d="M31 32L26 13L44 24Z" fill="#E39394" stroke="#E39394" stroke-width="3" stroke-linejoin="round"/>' +
+    '<path class="ear-r" d="M69 32L74 13L56 24Z" fill="#E39394" stroke="#E39394" stroke-width="3" stroke-linejoin="round"/>' +
+    '<circle cx="50" cy="48" r="24" fill="#F4B6B4"/>' +
+    eyes(41, 43, 18) +
+    '<ellipse cx="50" cy="57" rx="10.5" ry="7.5" fill="#E8908F"/>' +
+    '<ellipse cx="46" cy="57" rx="1.9" ry="2.8" fill="#B9616A"/><ellipse cx="54" cy="57" rx="1.9" ry="2.8" fill="#B9616A"/>'); },
+
+  rabbit: function(){ return svg(
+    '<g class="ear-l"><ellipse cx="40" cy="22" rx="6.5" ry="18" fill="#E9D8C8" transform="rotate(-10 40 22)"/><ellipse cx="40" cy="23" rx="3.2" ry="13" fill="#F2B6B9" transform="rotate(-10 40 23)"/></g>' +
+    '<g class="ear-r"><ellipse cx="60" cy="22" rx="6.5" ry="18" fill="#E9D8C8" transform="rotate(10 60 22)"/><ellipse cx="60" cy="23" rx="3.2" ry="13" fill="#F2B6B9" transform="rotate(10 60 23)"/></g>' +
+    '<circle cx="70" cy="88" r="6.5" fill="#FBF6EF"/>' +
+    '<ellipse cx="50" cy="84" rx="20" ry="15" fill="#E9D8C8"/>' +
+    '<ellipse cx="41" cy="99" rx="6.5" ry="3.2" fill="#DCC6B4"/><ellipse cx="59" cy="99" rx="6.5" ry="3.2" fill="#DCC6B4"/>' +
+    '<circle cx="50" cy="53" r="21" fill="#E9D8C8"/>' +
+    eyes(42, 51, 16) +
+    '<path d="M47.4 59.2h5.2l-2.6 3z" fill="#E88E9B"/>' +
+    '<path d="M50 62.2v2.4M50 64.6q-2.4 2-4.4.6M50 64.6q2.4 2 4.4.6" stroke="#9A7A80" stroke-width="1.4" fill="none" stroke-linecap="round"/>'); },
+
+  rat: function(){ return svg(
+    '<path class="tail" d="M68 92C86 96 96 82 88 72" stroke="#D7A9B3" stroke-width="3" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="50" cy="83" rx="19" ry="15" fill="#C4B2C4"/><ellipse cx="50" cy="87" rx="11" ry="9" fill="#D8CBD8"/>' +
+    '<ellipse cx="41" cy="99" rx="5.5" ry="3" fill="#E7B3BC"/><ellipse cx="59" cy="99" rx="5.5" ry="3" fill="#E7B3BC"/>' +
+    '<g class="ear-l"><circle cx="31" cy="33" r="11" fill="#B9A6B8"/><circle cx="31" cy="33" r="7" fill="#EFB2BC"/></g>' +
+    '<g class="ear-r"><circle cx="69" cy="33" r="11" fill="#B9A6B8"/><circle cx="69" cy="33" r="7" fill="#EFB2BC"/></g>' +
+    '<ellipse cx="50" cy="50" rx="20" ry="19" fill="#C4B2C4"/>' +
+    '<ellipse cx="50" cy="60" rx="10" ry="7.5" fill="#D8CBD8"/>' +
+    eyes(42, 47, 16) +
+    '<circle cx="50" cy="57" r="2.6" fill="#E88E9B"/>' +
+    '<path d="M42 60l-12-2M42 62.5l-11 2.5M58 60l12-2M58 62.5l11 2.5" stroke="#8C7A8C" stroke-width="1" stroke-linecap="round"/>'); },
+
+  mouse: function(){ return svg(
+    '<path class="tail" d="M64 92C80 98 90 92 86 84" stroke="#D7A9B3" stroke-width="2" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="50" cy="85" rx="16" ry="13" fill="#D9C8B6"/>' +
+    '<ellipse cx="43" cy="99" rx="5" ry="2.8" fill="#E7B3BC"/><ellipse cx="57" cy="99" rx="5" ry="2.8" fill="#E7B3BC"/>' +
+    '<g class="ear-l"><circle cx="29" cy="34" r="14" fill="#CDBBA9"/><circle cx="29" cy="34" r="9.5" fill="#EFB2BC"/></g>' +
+    '<g class="ear-r"><circle cx="71" cy="34" r="14" fill="#CDBBA9"/><circle cx="71" cy="34" r="9.5" fill="#EFB2BC"/></g>' +
+    '<circle cx="50" cy="55" r="18" fill="#D9C8B6"/>' +
+    eyes(43, 53, 14) +
+    '<circle cx="50" cy="61" r="2.3" fill="#E88E9B"/>' +
+    '<path d="M43 62l-10-1.5M43 64l-9 2.5M57 62l10-1.5M57 64l9 2.5" stroke="#9C8A7A" stroke-width="1" stroke-linecap="round"/>'); }
+};
+
+/* ---------- the case ---------- */
+var ANIMALS = [
+  {id:'shellie', name:'Shellie', kind:'Sheep',  draw:'sheep'},
+  {id:'callie',  name:'Callie',  kind:'Cow',    draw:'cow'},
+  {id:'peggy',   name:'Peggy',   kind:'Pig',    draw:'pig'},
+  {id:'rubie',   name:'Rubie',   kind:'Rabbit', draw:'rabbit'},
+  {id:'rosie',   name:'Rosie',   kind:'Rat',    draw:'rat'},
+  {id:'mellie',  name:'Mellie',  kind:'Mouse',  draw:'mouse'}
+];
+var BY = {}; ANIMALS.forEach(function(a){ BY[a.id] = a; });
+
+/* Grid, top row then bottom row. "Next to" means sharing a side. */
+var SPOTS = [
+  {id:'loft',     name:'Hay loft', tags:'High up · straw'},
+  {id:'stable',   name:'Stable',   tags:'Straw'},
+  {id:'orchard',  name:'Orchard',  tags:'Outside · grass · trees'},
+  {id:'woodpile', name:'Woodpile', tags:'Outside · under the loft'},
+  {id:'meadow',   name:'Meadow',   tags:'Outside · open grass'},
+  {id:'pond',     name:'Pond',     tags:'Outside · water'}
+];
+
+var ANSWER = {shellie:'loft', rosie:'woodpile', rubie:'orchard', peggy:'stable', callie:'meadow', mellie:'pond'};
+
+var CLUES = [
+  {who:'shellie', html:'<b>Shellie Sheep</b> can remember fifty faces for over two years. She chose the highest spot, so she can see everyone.'},
+  {who:'rosie',   html:'<b>Rosie Rat</b> is playing hide and seek. Rats really do play it. She’s tucked in the spot right under Shellie.'},
+  {who:'rubie',   html:'<b>Rubie Rabbit</b> spent the night binkying, the little jumps rabbits do when they’re happy and feel safe. She’s on grass, with trees overhead.'},
+  {who:'peggy',   html:'<b>Peggy Pig</b> is curled up in straw. Pigs given straw and space are more hopeful about new things.'},
+  {who:'callie',  html:'<b>Callie Cow</b> is right beside her best friend, Peggy. Cows really do have favourite friends.'},
+  {who:'mellie',  html:'<b>Mellie Mouse</b> stayed outside, but not out in the open.'}
+];
+
+/* Facts are sourced; Mellie's clue is logic only, so she has no note. */
+var FACTS = [
+  {who:'shellie', text:'Sheep remember 50 other sheep’s faces for over two years.', src:'Kendrick et al., Nature, 2001', url:'https://www.nature.com/articles/35102669'},
+  {who:'rosie',   text:'Rats learn to play hide and seek with people, swap roles, and squeal with joy when they find you.', src:'Reinhold et al., Science, 2019', url:'https://neurocure.de/118/rats-play-hide-and-seek.html'},
+  {who:'rubie',   text:'Rabbits binky when they feel safe, happy and full of life.', src:'Toronto Humane Society', url:'https://www.torontohumanesociety.com/why-do-rabbits-binky/'},
+  {who:'peggy',   text:'Pigs given space, straw and toys approach new things hopefully. Pigs in bare pens hold back.', src:'Newcastle University, 2010', url:'https://www.sciencedaily.com/releases/2010/07/100727201515.htm'},
+  {who:'callie',  text:'Cows have favourite friends in the herd, with the strongest bonds in young cows.', src:'McLennan, University of Northampton, 2013', url:'https://pure.northampton.ac.uk/en/studentTheses/85b46e67-8f98-48de-b9c0-5824c5a068ee'}
+];
+
+/* ---------- spot scenes ---------- */
+var SCENE = {
+  loft: '<rect width="100" height="118" fill="#4A2A45"/>' +
+        '<path d="M0 20h100M0 42h100M0 64h100M0 86h100" stroke="#3E2239" stroke-width="2"/>' +
+        '<circle cx="78" cy="18" r="8" fill="#F6D9C0" opacity=".85"/><circle cx="78" cy="18" r="8" fill="none" stroke="#3E2239" stroke-width="2"/>' +
+        '<rect x="6" y="84" width="40" height="22" rx="5" fill="#E2B566"/><rect x="40" y="88" width="44" height="22" rx="5" fill="#D8A955"/>' +
+        '<path d="M10 92h32M10 99h32M44 96h36M44 103h36" stroke="#B98A3E" stroke-width="1.5"/>',
+  stable: '<rect width="100" height="118" fill="#3A2036"/>' +
+        '<path d="M20 118V52a30 30 0 0 1 60 0v66z" fill="#2B1729"/>' +
+        '<path d="M50 30v88" stroke="#3A2036" stroke-width="2"/>' +
+        '<path d="M4 108l8-12M14 110l6-14M26 108l9-11M38 110l5-14M52 108l8-13M64 110l6-14M76 108l9-12M88 110l6-13" stroke="#E8C27A" stroke-width="2" stroke-linecap="round"/>' +
+        '<rect x="0" y="106" width="100" height="12" fill="#C9A35A" opacity=".5"/>',
+  orchard: '<rect width="100" height="118" fill="#1F2B1E"/>' +
+        '<rect x="22" y="44" width="6" height="40" fill="#4A3328"/><rect x="70" y="38" width="6" height="46" fill="#4A3328"/>' +
+        '<circle cx="25" cy="38" r="20" fill="#3B5637"/><circle cx="73" cy="32" r="22" fill="#44633F"/>' +
+        '<circle cx="18" cy="34" r="3" fill="#E8804C"/><circle cx="31" cy="44" r="3" fill="#E8804C"/><circle cx="66" cy="26" r="3" fill="#E8804C"/><circle cx="80" cy="38" r="3" fill="#E8804C"/>' +
+        '<rect x="0" y="84" width="100" height="34" fill="#2F4A2C"/>' +
+        '<path d="M8 92l2-6 2 6M30 96l2-6 2 6M62 92l2-6 2 6M84 96l2-6 2 6" stroke="#5E8A57" stroke-width="1.6" fill="none"/>',
+  woodpile: '<rect width="100" height="118" fill="#251826"/>' +
+        '<rect x="0" y="0" width="100" height="16" fill="#4A2A45"/><path d="M0 16h100" stroke="#2B1729" stroke-width="3"/>' +
+        '<g fill="#8B5E4A"><circle cx="22" cy="96" r="12"/><circle cx="48" cy="96" r="12"/><circle cx="74" cy="96" r="12"/><circle cx="35" cy="74" r="12"/><circle cx="61" cy="74" r="12"/></g>' +
+        '<g fill="none" stroke="#B0805F" stroke-width="1.6"><circle cx="22" cy="96" r="6"/><circle cx="48" cy="96" r="6"/><circle cx="74" cy="96" r="6"/><circle cx="35" cy="74" r="6"/><circle cx="61" cy="74" r="6"/></g>',
+  meadow: '<rect width="100" height="118" fill="#22263A"/>' +
+        '<circle cx="20" cy="18" r="1.2" fill="#FBF4EF"/><circle cx="70" cy="12" r="1.2" fill="#FBF4EF"/><circle cx="86" cy="30" r="1" fill="#FBF4EF"/>' +
+        '<path d="M0 72q50-18 100 0v46H0z" fill="#33502F"/>' +
+        '<path d="M10 92l2-8 2 8M24 86l2-8 2 8M44 94l2-8 2 8M66 88l2-8 2 8M84 94l2-8 2 8" stroke="#6E9A66" stroke-width="1.6" fill="none"/>' +
+        '<circle cx="18" cy="100" r="2.2" fill="#F6C6A8"/><circle cx="56" cy="104" r="2.2" fill="#FBF4EF"/><circle cx="80" cy="102" r="2.2" fill="#F6C6A8"/>',
+  pond: '<rect width="100" height="118" fill="#1E2134"/>' +
+        '<path d="M0 64q50-14 100 0v54H0z" fill="#2F4A2C"/>' +
+        '<ellipse cx="50" cy="92" rx="42" ry="18" fill="#3B4E7A"/><ellipse cx="44" cy="88" rx="22" ry="5" fill="#5A72A6" opacity=".5"/>' +
+        '<path d="M70 94a7 4 0 1 0 0.1 0z" fill="#4E6B48"/><circle cx="26" cy="96" r="4" fill="#4E6B48"/>'
+};
+
+/* ---------- state ---------- */
+var state = { place:{}, picked:null, hints:0, checks:0, start:0, done:false, struck:{} };
+var $ = function(id){ return document.getElementById(id); };
+var tickTimer = null;
+
+function fmt(ms){ var s = Math.floor(ms/1000); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+function startClock(){
+  if (state.start) return;
+  state.start = Date.now();
+  tickTimer = setInterval(function(){ if(!state.done) $('timer').textContent = fmt(Date.now()-state.start); }, 500);
+}
+function whoIn(spot){ for (var k in state.place) if (state.place[k] === spot) return k; return null; }
+function say(t){ $('msg').textContent = t || ''; }
+var WORDS = ['No','One','Two','Three','Four','Five','Six'];
+
+/* ---------- render ---------- */
+function render(){
+  var board = $('board'); board.innerHTML = '';
+  SPOTS.forEach(function(s){
+    var who = whoIn(s.id);
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'spot' + (who ? '' : ' free'); b.dataset.spot = s.id;
+    b.setAttribute('aria-label', s.name + (who ? ', ' + BY[who].name + ' is here' : ', empty'));
+    b.innerHTML = '<svg class="scene" viewBox="0 0 100 118" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' + SCENE[s.id] + '</svg>' +
+      (who ? '<div class="seat" data-who="'+who+'">' + DRAW[BY[who].draw]() + '</div>' : '') +
+      '<div class="lbl"><b>' + s.name + '</b><span>' + s.tags + '</span></div>';
+    board.appendChild(b);
+  });
+
+  var tray = $('tray'); tray.innerHTML = '';
+  var left = 0;
+  ANIMALS.forEach(function(a, i){
+    var placed = !!state.place[a.id]; if (!placed) left++;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'pet' + (placed ? ' gone' : '') + (state.picked === a.id ? ' sel' : '');
+    b.dataset.who = a.id; b.setAttribute('aria-pressed', state.picked === a.id ? 'true' : 'false');
+    b.setAttribute('aria-label', a.name + ' the ' + a.kind.toLowerCase());
+    b.innerHTML = DRAW[a.draw]() + '<b>' + a.name + '</b><i>' + a.kind + '</i>';
+    b.querySelector('.bob').style.animationDelay = (i * -0.45) + 's';
+    tray.appendChild(b);
+  });
+  $('traycount').textContent = left ? left + ' to place' : 'All placed';
+  document.body.classList.toggle('picking', !!state.picked);
+}
+
+function renderClues(){
+  var ul = $('clues'); ul.innerHTML = '';
+  CLUES.forEach(function(c, i){
+    var li = document.createElement('li');
+    li.className = 'clue' + (state.struck[i] ? ' done' : ''); li.dataset.i = i; li.tabIndex = 0;
+    li.innerHTML = '<span class="face">' + DRAW[BY[c.who].draw]() + '</span><p>' + c.html + '</p>';
+    ul.appendChild(li);
+  });
+}
+
+/* ---------- interactions ---------- */
+$('tray').addEventListener('click', function(e){
+  var b = e.target.closest('.pet'); if (!b || state.done) return;
+  startClock();
+  state.picked = state.picked === b.dataset.who ? null : b.dataset.who;
+  say(state.picked ? 'Where did ' + BY[state.picked].name + ' go?' : '');
+  render();
+});
+
+$('board').addEventListener('click', function(e){
+  var b = e.target.closest('.spot'); if (!b || state.done) return;
+  startClock();
+  var spot = b.dataset.spot, here = whoIn(spot);
+  if (state.picked){
+    if (here) delete state.place[here];          // whoever was here goes back to the tray
+    state.place[state.picked] = spot;
+    state.picked = null; say('');
+  } else if (here){
+    delete state.place[here]; say(BY[here].name + ' is back with the gang.');
+  } else {
+    say('Pick an animal first.');
+  }
+  render();
+});
+
+function toggleClue(el){
+  var i = el.dataset.i; state.struck[i] = !state.struck[i];
+  el.classList.toggle('done', !!state.struck[i]);
+}
+$('clues').addEventListener('click', function(e){ var li = e.target.closest('.clue'); if (li) toggleClue(li); });
+$('clues').addEventListener('keydown', function(e){
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('clue')){ e.preventDefault(); toggleClue(e.target); }
+});
+
+$('hint').addEventListener('click', function(){
+  if (state.done) return;
+  startClock();
+  var miss = ANIMALS.filter(function(a){ return state.place[a.id] !== ANSWER[a.id]; })[0];
+  if (!miss) { say('Everyone looks right. Press Check.'); return; }
+  var target = ANSWER[miss.id], squatter = whoIn(target);
+  if (squatter) delete state.place[squatter];
+  state.place[miss.id] = target; state.picked = null; state.hints++;
+  say(miss.name + ' was in the ' + SPOTS.filter(function(s){return s.id===target;})[0].name.toLowerCase() + '.');
+  render();
+});
+
+$('check').addEventListener('click', function(){
+  if (state.done) return;
+  var placed = Object.keys(state.place).length;
+  if (placed < ANIMALS.length) { say('Put all six back first. ' + (ANIMALS.length - placed) + ' still to go.'); return; }
+  state.checks++;
+  var wrong = ANIMALS.filter(function(a){ return state.place[a.id] !== ANSWER[a.id]; });
+  if (!wrong.length) return solve();
+  say(WORDS[wrong.length] + (wrong.length === 1 ? ' animal is' : ' animals are') + ' in the wrong place.');
+  wrong.forEach(function(a){
+    var seat = document.querySelector('.seat[data-who="' + a.id + '"] .char');
+    if (seat){ seat.classList.remove('wobble'); void seat.offsetWidth; seat.classList.add('wobble'); }
+  });
+});
+
+function solve(){
+  state.done = true; clearInterval(tickTimer);
+  var t = state.start ? Date.now() - state.start : 0;
+  $('timer').textContent = fmt(t);
+  say('');
+  document.querySelectorAll('.seat').forEach(function(s){
+    s.classList.add(s.dataset.who === 'rubie' ? 'binky' : 'happy');
+  });
+  $('sTime').textContent = fmt(t);
+  $('sHints').textContent = state.hints;
+  $('sTries').textContent = state.checks;
+  var ul = $('facts'); ul.innerHTML = '';
+  FACTS.forEach(function(f){
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="face">' + DRAW[BY[f.who].draw]() + '</span><div>' + f.text +
+      '<a href="' + f.url + '" target="_blank" rel="noopener">' + f.src + '</a></div>';
+    ul.appendChild(li);
+  });
+  state.result = 'a home kind · Sanctuary case 01\nSolved in ' + fmt(t) + ' · ' + state.hints + (state.hints === 1 ? ' hint' : ' hints') + '\nahomekind.com';
+  setTimeout(function(){ $('sheet').hidden = false; $('again').focus(); }, 1500);
+}
+
+$('copy').addEventListener('click', function(){
+  var box = $('copybox'), btn = this;
+  function fallback(){ box.value = state.result; box.hidden = false; box.select(); btn.textContent = 'Select and copy'; }
+  try {
+    navigator.clipboard.writeText(state.result).then(function(){ btn.textContent = 'Copied'; }, fallback);
+  } catch (e) { fallback(); }
+});
+
+$('again').addEventListener('click', function(){
+  state = { place:{}, picked:null, hints:0, checks:0, start:0, done:false, struck:{} };
+  clearInterval(tickTimer); $('timer').textContent = '0:00';
+  $('sheet').hidden = true; $('copybox').hidden = true; $('copy').textContent = 'Copy my result';
+  say(''); render(); renderClues();
+});
+
+/* ---------- ambience ---------- */
+(function(){
+  var s = $('stars'), html = '';
+  for (var i = 0; i < 55; i++){
+    html += '<i class="star" style="left:' + (Math.random()*100).toFixed(1) + '%;top:' + (Math.random()*60).toFixed(1) +
+      '%;--t:' + (2 + Math.random()*3).toFixed(1) + 's;--d:-' + (Math.random()*4).toFixed(1) + 's"></i>';
+  }
+  s.innerHTML = html;
+  var w = $('boardwrap'), f = '';
+  for (var j = 0; j < 7; j++){
+    f += '<i class="fly" style="left:' + (8 + Math.random()*84).toFixed(1) + '%;top:' + (10 + Math.random()*80).toFixed(1) +
+      '%;--t:' + (7 + Math.random()*6).toFixed(1) + 's;--d:-' + (Math.random()*6).toFixed(1) + 's"></i>';
+  }
+  w.insertAdjacentHTML('beforeend', f);
+})();
+
+/* keep a game in progress across page updates */
+function boot(data){
+  if (data && data.place) { state.place = data.place; state.struck = data.struck || {}; }
+  render(); renderClues();
+}
+if (window.claude && window.claude.hot && window.claude.hot.snapshot) {
+  window.claude.hot.snapshot(function(){ return { place: state.place, struck: state.struck }; });
+}
+if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(boot);
+else boot((window.claude && window.claude.hot && window.claude.hot.data) || {});
+})();
+</script>
+
+</body>
+</html>

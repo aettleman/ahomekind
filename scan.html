@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/app.css?v=8">
 <link rel="stylesheet" href="css/brand-logo.css?v=1">
+<link rel="stylesheet" href="css/swaps.css?v=1">
 <link rel="manifest" href="manifest.json?v=2">
 <meta name="theme-color" content="#3A1F3D">
 <link rel="icon" href="favicon.ico?v=2" sizes="any"><link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
@@ -1184,6 +1185,7 @@ head += "</div>";
 try { if(window.posthog) posthog.capture('scan_completed', { scanner: 'barcode', brand_found: !!brand, tier: brand ? brand.tier : null, identified: identified }); } catch(e){}
 if(brand){
 out += verdictHTML(brand);
+out += "<div id=\"instead\" hidden></div>";
 if(brand.tier !== "good" && brand.tier !== "check") out += "<div id=\"swapSection\"></div>";
 out += shareWidget("share1");
 if (window.ahkShowKofiFloat) window.ahkShowKofiFloat();
@@ -1218,6 +1220,8 @@ el("results").innerHTML = "<div class=\"result-in\">" + scanAgainMarkup() + head
 showResultCard();
 resultOnly();
 if(brand && brand.tier !== "good" && brand.tier !== "check" && window.AHKSwap) AHKSwap.render(el("swapSection"), brand);
+// "Instead": product-type swaps (data/swaps.json). Renders nothing unless the product type is recognised.
+if(brand && window.AHK && AHK.swaps){ try { AHK.swaps.load('data/swaps.json').then(function(){ AHK.swaps.render(el("instead"), { product: name, brand: brandText || brand.name, verdict: brand.tier, categories: (product && product.categories_tags) || [] }); }); } catch(e){} }
 if(brand) wireShareWidget("share1", brand);
 if(!brand) wireBrandLookup();
 wireReportWidget();
@@ -1743,6 +1747,7 @@ show();
 }
 })();
 </script>
+<script src="js/swaps.js?v=1"></script>
 <script src="js/swap.js?v=1"></script>
 <script>
 /* The installed app should open on the home page. iOS often saves the page

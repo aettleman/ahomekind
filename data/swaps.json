@@ -1,0 +1,1896 @@
+{
+ "_note": "Swap data for the Instead feature. One entry per product type. picks = the certified products shown as alternatives, best first. Every pick must be a brand already verified on the site. none = shown when picks is empty: the honest 'no good swap yet' state.",
+ "_pick_schema": {
+  "brand": "Brand name exactly as it appears on the site",
+  "slug": "brand page slug, used for the link",
+  "cert": "leaping-bunny | peta | both",
+  "price": "£ | ££ | £££",
+  "note": "one honest line: what is different, including if it is worse",
+  "where": [
+   "shop or site names, in order of how easy they are to get"
+  ]
+ },
+ "updated": "24 Nov 2026",
+ "types": [
+  {
+   "id": "dry-shampoo",
+   "label": "Dry shampoo",
+   "cat": "haircare",
+   "match": [
+    "dry shampoo",
+    "dry shampoo spray"
+   ],
+   "obf": [
+    "dry-shampoos"
+   ],
+   "picks": [
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "shampoo",
+   "label": "Shampoo",
+   "cat": "haircare",
+   "match": [
+    "shampoo",
+    "2in1",
+    "2 in 1"
+   ],
+   "obf": [
+    "shampoos"
+   ],
+   "picks": [
+    {
+     "brand": "Noughty",
+     "slug": "noughty",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Ethique",
+     "slug": "ethique",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Umberto Giannini",
+     "slug": "umberto-giannini",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Faith in Nature",
+     "slug": "faith-in-nature",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Maria Nila",
+     "slug": "maria-nila",
+     "cert": "both",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "conditioner",
+   "label": "Conditioner",
+   "cat": "haircare",
+   "match": [
+    "conditioner",
+    "detangler"
+   ],
+   "obf": [
+    "conditioners"
+   ],
+   "picks": [
+    {
+     "brand": "Noughty",
+     "slug": "noughty",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Ethique",
+     "slug": "ethique",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Umberto Giannini",
+     "slug": "umberto-giannini",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Faith in Nature",
+     "slug": "faith-in-nature",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Maria Nila",
+     "slug": "maria-nila",
+     "cert": "both",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "hair-mask",
+   "label": "Hair mask or treatment",
+   "cat": "haircare",
+   "match": [
+    "hair mask",
+    "hair treatment",
+    "hair perfector",
+    "bond builder",
+    "bond",
+    "deep conditioner",
+    "hair oil"
+   ],
+   "obf": [
+    "hair-masks"
+   ],
+   "picks": [
+    {
+     "brand": "Maria Nila",
+     "slug": "maria-nila",
+     "cert": "both",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Boucleme",
+     "slug": "boucleme",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "hair-styling",
+   "label": "Styling product",
+   "cat": "haircare",
+   "match": [
+    "hairspray",
+    "hair spray",
+    "mousse",
+    "hair gel",
+    "curl cream",
+    "heat protect",
+    "texturising",
+    "texturizing",
+    "pomade",
+    "wax"
+   ],
+   "obf": [
+    "hair-styling"
+   ],
+   "picks": [
+    {
+     "brand": "Umberto Giannini",
+     "slug": "umberto-giannini",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Boucleme",
+     "slug": "boucleme",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Hershesons",
+     "slug": "hershesons",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Maria Nila",
+     "slug": "maria-nila",
+     "cert": "both",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "hair-colour",
+   "label": "Hair colour",
+   "cat": "haircare",
+   "match": [
+    "hair colour",
+    "hair color",
+    "hair dye",
+    "permanent colour",
+    "toner"
+   ],
+   "obf": [
+    "hair-colouring"
+   ],
+   "picks": [
+    {
+     "brand": "Bleach London",
+     "slug": "bleach-london",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Glaze",
+     "slug": "glaze",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Maria Nila",
+     "slug": "maria-nila",
+     "cert": "both",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "micellar",
+   "label": "Micellar water",
+   "cat": "skincare",
+   "match": [
+    "micellar"
+   ],
+   "obf": [
+    "micellar-waters"
+   ],
+   "picks": [
+    {
+     "brand": "Sukin",
+     "slug": "sukin",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "cleanser",
+   "label": "Face cleanser",
+   "cat": "skincare",
+   "match": [
+    "face wash",
+    "facial wash",
+    "cleanser",
+    "cleansing gel",
+    "cleansing balm",
+    "cleansing oil",
+    "face scrub",
+    "exfoliat"
+   ],
+   "obf": [
+    "facial-cleansers"
+   ],
+   "picks": [
+    {
+     "brand": "Tropic Skincare",
+     "slug": "tropic",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Sukin",
+     "slug": "sukin",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "BYOMA",
+     "slug": "byoma",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Liz Earle",
+     "slug": "liz-earle",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "toner",
+   "label": "Toner",
+   "cat": "skincare",
+   "match": [
+    "toner",
+    "toning"
+   ],
+   "obf": [
+    "toners"
+   ],
+   "picks": [
+    {
+     "brand": "BYOMA",
+     "slug": "byoma",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Liz Earle",
+     "slug": "liz-earle",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "serum",
+   "label": "Face serum",
+   "cat": "skincare",
+   "match": [
+    "serum",
+    "hyaluronic",
+    "niacinamide",
+    "vitamin c",
+    "retinol",
+    "ampoule"
+   ],
+   "obf": [
+    "face-serums"
+   ],
+   "picks": [
+    {
+     "brand": "Tropic Skincare",
+     "slug": "tropic",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "BYOMA",
+     "slug": "byoma",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "moisturiser",
+   "label": "Face moisturiser",
+   "cat": "skincare",
+   "match": [
+    "moisturiser",
+    "moisturizer",
+    "moisturising cream",
+    "moisturizing cream",
+    "face cream",
+    "day cream",
+    "night cream",
+    "face gel"
+   ],
+   "obf": [
+    "face-moisturizers"
+   ],
+   "picks": [
+    {
+     "brand": "Tropic Skincare",
+     "slug": "tropic",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Sukin",
+     "slug": "sukin",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "BYOMA",
+     "slug": "byoma",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Liz Earle",
+     "slug": "liz-earle",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "eye-cream",
+   "label": "Eye cream",
+   "cat": "skincare",
+   "match": [
+    "eye cream",
+    "eye gel",
+    "eye serum"
+   ],
+   "obf": [
+    "eye-creams"
+   ],
+   "picks": [
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "face-mask",
+   "label": "Face mask",
+   "cat": "skincare",
+   "match": [
+    "face mask",
+    "sheet mask",
+    "clay mask",
+    "face masque"
+   ],
+   "obf": [
+    "face-masks"
+   ],
+   "picks": [
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "spf",
+   "label": "Sun cream or SPF",
+   "cat": "skincare",
+   "match": [
+    "spf",
+    "sun cream",
+    "suncream",
+    "sunscreen",
+    "after sun",
+    "sun lotion"
+   ],
+   "obf": [
+    "sunscreens"
+   ],
+   "picks": [
+    {
+     "brand": "Green People",
+     "slug": "green-people",
+     "cert": "peta",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Childs Farm",
+     "slug": "childs-farm",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "makeup-remover",
+   "label": "Make-up remover",
+   "cat": "skincare",
+   "match": [
+    "makeup remover",
+    "make-up remover",
+    "eye makeup remover",
+    "cleansing wipes",
+    "face wipes"
+   ],
+   "obf": [
+    "make-up-removers"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Sukin",
+     "slug": "sukin",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "The Inkey List",
+     "slug": "the-inkey-list",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "foundation",
+   "label": "Foundation",
+   "cat": "makeup-beauty",
+   "match": [
+    "foundation",
+    "bb cream",
+    "cc cream",
+    "skin tint"
+   ],
+   "obf": [
+    "foundations"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Rare Beauty",
+     "slug": "rare-beauty",
+     "cert": "both",
+     "price": "£££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "concealer",
+   "label": "Concealer",
+   "cat": "makeup-beauty",
+   "match": [
+    "concealer",
+    "corrector"
+   ],
+   "obf": [
+    "concealers"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Rare Beauty",
+     "slug": "rare-beauty",
+     "cert": "both",
+     "price": "£££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "powder",
+   "label": "Face powder",
+   "cat": "makeup-beauty",
+   "match": [
+    "setting powder",
+    "face powder",
+    "compact powder",
+    "pressed powder",
+    "setting spray"
+   ],
+   "obf": [
+    "face-powders"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Technic Cosmetics",
+     "slug": "technic-cosmetics",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "blush",
+   "label": "Blusher or bronzer",
+   "cat": "makeup-beauty",
+   "match": [
+    "blush",
+    "bronzer",
+    "contour",
+    "highlighter"
+   ],
+   "obf": [
+    "blushes"
+   ],
+   "picks": [
+    {
+     "brand": "Rare Beauty",
+     "slug": "rare-beauty",
+     "cert": "both",
+     "price": "£££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "mascara",
+   "label": "Mascara",
+   "cat": "makeup-beauty",
+   "match": [
+    "mascara",
+    "lash serum"
+   ],
+   "obf": [
+    "mascaras"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "essence",
+     "slug": "essence",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "eyeliner",
+   "label": "Eyeliner",
+   "cat": "makeup-beauty",
+   "match": [
+    "eyeliner",
+    "eye liner",
+    "kohl",
+    "kajal"
+   ],
+   "obf": [
+    "eyeliners"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "essence",
+     "slug": "essence",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "eyeshadow",
+   "label": "Eyeshadow",
+   "cat": "makeup-beauty",
+   "match": [
+    "eyeshadow",
+    "eye shadow",
+    "eye palette"
+   ],
+   "obf": [
+    "eye-shadows"
+   ],
+   "picks": [
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "W7 Cosmetics",
+     "slug": "w7-cosmetics",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "brow",
+   "label": "Brow product",
+   "cat": "makeup-beauty",
+   "match": [
+    "brow",
+    "eyebrow"
+   ],
+   "obf": [
+    "eyebrow-pencils"
+   ],
+   "picks": [
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "essence",
+     "slug": "essence",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "lipstick",
+   "label": "Lipstick or lip gloss",
+   "cat": "makeup-beauty",
+   "match": [
+    "lipstick",
+    "lip gloss",
+    "lip liner",
+    "liquid lip",
+    "lip tint",
+    "lip oil"
+   ],
+   "obf": [
+    "lipsticks"
+   ],
+   "picks": [
+    {
+     "brand": "Rare Beauty",
+     "slug": "rare-beauty",
+     "cert": "both",
+     "price": "£££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "e.l.f. cosmetics",
+     "slug": "e-l-f-cosmetics",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "MUA",
+     "slug": "mua",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Revolution Beauty",
+     "slug": "revolution-beauty",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "lip-balm",
+   "label": "Lip balm",
+   "cat": "makeup-beauty",
+   "match": [
+    "lip balm",
+    "lipbalm",
+    "lip salve",
+    "lip butter"
+   ],
+   "obf": [
+    "lip-balms"
+   ],
+   "picks": [
+    {
+     "brand": "Dr PawPaw",
+     "slug": "dr-pawpaw",
+     "cert": "peta",
+     "price": "",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Avon (outside North America)",
+     "slug": "avon",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "nail",
+   "label": "Nail polish",
+   "cat": "makeup-beauty",
+   "match": [
+    "nail polish",
+    "nail varnish",
+    "nail colour",
+    "nail color",
+    "base coat",
+    "top coat",
+    "nail remover"
+   ],
+   "obf": [
+    "nail-polishes"
+   ],
+   "picks": [
+    {
+     "brand": "Barry M",
+     "slug": "barry-m",
+     "cert": "peta",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "essence",
+     "slug": "essence",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "deodorant",
+   "label": "Deodorant",
+   "cat": "hygiene",
+   "match": [
+    "deodorant",
+    "antiperspirant",
+    "anti-perspirant",
+    "roll-on",
+    "roll on"
+   ],
+   "obf": [
+    "deodorants"
+   ],
+   "picks": [
+    {
+     "brand": "Salt of the Earth",
+     "slug": "salt-of-the-earth",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Fussy",
+     "slug": "fussy",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Ethique",
+     "slug": "ethique",
+     "cert": "both",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Humble Brands",
+     "slug": "humble-brands",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "shower",
+   "label": "Shower gel or body wash",
+   "cat": "body-shower",
+   "match": [
+    "shower gel",
+    "body wash",
+    "shower cream",
+    "bath soak",
+    "bubble bath",
+    "shower oil"
+   ],
+   "obf": [
+    "shower-gels"
+   ],
+   "picks": [
+    {
+     "brand": "Faith in Nature",
+     "slug": "faith-in-nature",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Dr Bronner's",
+     "slug": "dr-bronners",
+     "cert": "both",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Baylis & Harding",
+     "slug": "baylis-and-harding",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Treaclemoon",
+     "slug": "treaclemoon",
+     "cert": "peta",
+     "price": "£",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "soap",
+   "label": "Bar soap or hand wash",
+   "cat": "body-shower",
+   "match": [
+    "hand wash",
+    "handwash",
+    "hand soap",
+    "bar soap",
+    "soap bar",
+    "liquid soap"
+   ],
+   "obf": [
+    "soaps"
+   ],
+   "picks": [
+    {
+     "brand": "Attitude",
+     "slug": "attitude",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Faith in Nature",
+     "slug": "faith-in-nature",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Dr Bronner's",
+     "slug": "dr-bronners",
+     "cert": "both",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Friendly Soap",
+     "slug": "friendly-soap",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "body-lotion",
+   "label": "Body lotion or moisturiser",
+   "cat": "body-shower",
+   "match": [
+    "body lotion",
+    "body cream",
+    "body butter",
+    "body milk",
+    "body oil",
+    "hand cream"
+   ],
+   "obf": [
+    "body-lotions"
+   ],
+   "picks": [
+    {
+     "brand": "Sukin",
+     "slug": "sukin",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Dr Organic",
+     "slug": "dr-organic",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Baylis & Harding",
+     "slug": "baylis-and-harding",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "body-scrub",
+   "label": "Body scrub",
+   "cat": "body-shower",
+   "match": [
+    "body scrub",
+    "body polish",
+    "body exfoliant"
+   ],
+   "obf": [
+    "body-scrubs"
+   ],
+   "picks": [
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "fake-tan",
+   "label": "Fake tan",
+   "cat": "body-shower",
+   "match": [
+    "fake tan",
+    "self tan",
+    "self-tan",
+    "tanning mousse",
+    "gradual tan"
+   ],
+   "obf": [
+    "self-tanners"
+   ],
+   "picks": [
+    {
+     "brand": "Tanologist",
+     "slug": "tanologist",
+     "cert": "peta",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Isle Of Paradise",
+     "slug": "isle-of-paradise",
+     "cert": "peta",
+     "price": "",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "toothpaste",
+   "label": "Toothpaste",
+   "cat": "dental",
+   "match": [
+    "toothpaste",
+    "tooth paste"
+   ],
+   "obf": [
+    "toothpastes"
+   ],
+   "picks": [
+    {
+     "brand": "PARLA",
+     "slug": "parla",
+     "cert": "leaping-bunny",
+     "price": "",
+     "note": "",
+     "where": []
+    },
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "mouthwash",
+   "label": "Mouthwash",
+   "cat": "dental",
+   "match": [
+    "mouthwash",
+    "mouth rinse",
+    "mouth wash"
+   ],
+   "obf": [
+    "mouthwashes"
+   ],
+   "picks": [],
+   "none": {
+    "nearest": "",
+    "note": "I haven't found a certified mouthwash I can recommend with confidence yet."
+   }
+  },
+  {
+   "id": "toothbrush",
+   "label": "Toothbrush or floss",
+   "cat": "dental",
+   "match": [
+    "toothbrush",
+    "tooth brush",
+    "floss",
+    "interdental"
+   ],
+   "obf": [
+    "toothbrushes"
+   ],
+   "picks": [
+    {
+     "brand": "The Cheeky Panda",
+     "slug": "the-cheeky-panda",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "razor",
+   "label": "Razor or shaving",
+   "cat": "hygiene",
+   "match": [
+    "razor",
+    "shaving foam",
+    "shaving gel",
+    "shave cream",
+    "hair removal",
+    "epilator",
+    "wax strips"
+   ],
+   "obf": [
+    "shaving"
+   ],
+   "picks": [
+    {
+     "brand": "King of Shaves",
+     "slug": "king-of-shaves",
+     "cert": "peta",
+     "price": "£",
+     "note": "",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "period",
+   "label": "Period products",
+   "cat": "hygiene",
+   "match": [
+    "tampon",
+    "sanitary",
+    "period pad",
+    "menstrual",
+    "panty liner",
+    "pantyliner"
+   ],
+   "obf": [
+    "feminine-hygiene"
+   ],
+   "picks": [
+    {
+     "brand": "Natracare",
+     "slug": "natracare",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "TOTM",
+     "slug": "totm",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "fragrance",
+   "label": "Perfume or body spray",
+   "cat": "makeup-beauty",
+   "match": [
+    "eau de parfum",
+    "eau de toilette",
+    "perfume",
+    "body spray",
+    "body mist",
+    "aftershave",
+    "cologne",
+    "fragrance"
+   ],
+   "obf": [
+    "perfumes"
+   ],
+   "picks": [
+    {
+     "brand": "Billie Eilish Fragrances",
+     "slug": "billie-eilish-fragrances",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Ariana Grande Fragrances",
+     "slug": "ariana-grande-fragrances",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    },
+    {
+     "brand": "Lush",
+     "slug": "lush",
+     "cert": "peta",
+     "price": "£",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "laundry",
+   "label": "Laundry detergent",
+   "cat": "laundry",
+   "match": [
+    "laundry",
+    "washing liquid",
+    "washing powder",
+    "detergent",
+    "fabric conditioner",
+    "fabric softener"
+   ],
+   "obf": [
+    "laundry-detergents"
+   ],
+   "picks": [
+    {
+     "brand": "Bio-D",
+     "slug": "bio-d",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Miniml",
+     "slug": "miniml",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Smol",
+     "slug": "smol",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Sonett",
+     "slug": "sonett",
+     "cert": "peta",
+     "price": "",
+     "note": "Not everything is vegan, so check the label.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  },
+  {
+   "id": "cleaning",
+   "label": "Household cleaner",
+   "cat": "household-cleaning",
+   "match": [
+    "surface spray",
+    "multi purpose",
+    "multi-purpose",
+    "bathroom cleaner",
+    "kitchen cleaner",
+    "bleach",
+    "disinfectant",
+    "washing up",
+    "dish soap",
+    "toilet cleaner",
+    "floor cleaner"
+   ],
+   "obf": [
+    "cleaning-products"
+   ],
+   "picks": [
+    {
+     "brand": "Astonish",
+     "slug": "astonish",
+     "cert": "both",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "The Pink Stuff",
+     "slug": "the-pink-stuff",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Bio-D",
+     "slug": "bio-d",
+     "cert": "leaping-bunny",
+     "price": "£",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Miniml",
+     "slug": "miniml",
+     "cert": "leaping-bunny",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    },
+    {
+     "brand": "Attitude",
+     "slug": "attitude",
+     "cert": "peta",
+     "price": "££",
+     "note": "Everything they make is vegan.",
+     "where": []
+    }
+   ],
+   "none": {
+    "nearest": "",
+    "note": ""
+   }
+  }
+ ]
+}

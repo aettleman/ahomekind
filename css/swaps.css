@@ -1,0 +1,60 @@
+/* a home kind - "Instead" swap panel.
+   Append to css/app.css and bump the ?v= on scan.html. Uses the site's
+   existing tokens so it inherits any palette change. */
+
+#instead[hidden] { display: none; }
+
+.ahk-ihd { display: flex; align-items: baseline; gap: 10px; margin: 26px 0 3px; }
+.ahk-ihd h2 { font-family: 'Gloock', serif; font-weight: 400; font-size: 31px; line-height: 1;
+  color: var(--ahk-heading); margin: 0; }
+.ahk-ihd span { font: 800 10px 'Hanken Grotesk', sans-serif; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ahk-text-muted); opacity: .8; }
+
+.ahk-isub { font: 600 13.5px/1.45 'Hanken Grotesk', sans-serif; color: var(--ahk-text-muted);
+  margin: 0 0 13px; }
+
+.ahk-swl { list-style: none; margin: 0; padding: 0; }
+.ahk-sw { background: var(--ahk-card); border: 1px solid var(--ahk-border-soft);
+  border-radius: 20px; padding: 14px 15px; margin-bottom: 9px; }
+.ahk-sw-top { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.ahk-sw-nm { font: 700 15.5px 'Hanken Grotesk', sans-serif; color: var(--ahk-heading);
+  text-decoration: none; }
+.ahk-sw-nm:hover { text-decoration: underline; }
+.ahk-cert { display: inline-flex; align-items: center; background: var(--ahk-kind);
+  color: var(--ahk-kind-ink); border-radius: 999px; padding: 4px 9px;
+  font: 800 9.5px 'Hanken Grotesk', sans-serif; letter-spacing: .04em; text-transform: uppercase; }
+.ahk-sw-pr { margin-left: auto; font: 800 13px 'Hanken Grotesk', sans-serif;
+  color: var(--ahk-kind-ink); font-variant-numeric: tabular-nums; }
+.ahk-sw-d { font: 600 12.5px/1.45 'Hanken Grotesk', sans-serif; color: var(--ahk-text-muted);
+  margin: 7px 0 0; }
+.ahk-sw-where { font: 700 11.5px 'Hanken Grotesk', sans-serif; color: var(--ahk-clay-deep);
+  margin: 8px 0 0; }
+
+.ahk-ifoot { font: 600 11px/1.5 'Hanken Grotesk', sans-serif; color: var(--ahk-text-muted);
+  opacity: .8; margin: 12px 0 0; }
+
+.ahk-none { background: var(--ahk-surface); border: 1px dashed var(--ahk-border);
+  border-radius: 20px; padding: 17px; }
+.ahk-none h3 { font-family: 'Gloock', serif; font-weight: 400; font-size: 24px; line-height: 1.15;
+  color: var(--ahk-heading); margin: 0 0 7px; }
+.ahk-none p { font: 600 13px/1.5 'Hanken Grotesk', sans-serif; color: var(--ahk-text-muted); margin: 0; }
+.ahk-hand { font: 600 24px 'Caveat', cursive; color: var(--ahk-text-muted);
+  display: inline-block; margin: 13px 0 0; transform: rotate(-1.2deg); }
+.ahk-tell { display: block; width: 100%; margin: 13px 0 0; border: 0; cursor: pointer;
+  background: var(--ahk-forest); color: var(--ahk-on-dark); border-radius: 16px; padding: 14px;
+  font: 800 13.5px 'Hanken Grotesk', sans-serif; }
+.ahk-tell:hover { background: var(--ahk-forest-deep); }
+.ahk-tell:focus-visible { outline: 2px solid var(--ahk-gold); outline-offset: 2px; }
+
+@media (min-width: 700px) {
+  .ahk-ihd h2 { font-size: 36px; }
+  .ahk-swl { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; }
+  .ahk-sw { margin-bottom: 0; }
+}
+
+.ahk-tellbox { margin-top: 12px; }
+.ahk-tellin { width: 100%; border: 1px solid var(--ahk-border); background: var(--ahk-card);
+  color: var(--ahk-heading); border-radius: 14px; padding: 13px 14px;
+  font: 600 14px 'Hanken Grotesk', sans-serif; }
+.ahk-tellin:focus-visible { outline: 2px solid var(--ahk-gold); outline-offset: 1px; }
+.ahk-tell[disabled] { opacity: .7; cursor: default; }
