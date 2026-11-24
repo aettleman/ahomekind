@@ -228,6 +228,10 @@ input{font:inherit}
 .g-path{background:#E3CBA1;background-image:radial-gradient(circle at 30% 35%,#CDAE7E 0 2px,transparent 3px),radial-gradient(circle at 70% 70%,#CDAE7E 0 2px,transparent 3px)}
 .g-meadow{background:#8FB583;background-image:radial-gradient(circle at 25% 40%,#6E9A62 0 2px,transparent 3px),radial-gradient(circle at 65% 70%,#6E9A62 0 2px,transparent 3px),radial-gradient(circle at 80% 25%,#F6C6A8 0 1.5px,transparent 2.5px)}
 .g-mud{background:#8B6A4E;background-image:radial-gradient(ellipse at 35% 40%,#73553D 0 18%,transparent 19%),radial-gradient(ellipse at 70% 72%,#73553D 0 15%,transparent 16%);border-radius:4px}
+.g-leaves{background:#C98E5C;background-image:radial-gradient(ellipse at 30% 30%,#E8804C 0 12%,transparent 13%),radial-gradient(ellipse at 70% 65%,#E9A23C 0 12%,transparent 13%),radial-gradient(ellipse at 40% 75%,#B5552E 0 9%,transparent 10%)}
+.g-wpond{background:#7FB3D9;border-radius:30%;box-shadow:inset 0 0 0 3px rgba(255,255,255,.35)}
+.g-shingle{background:#CFC8C6;background-image:radial-gradient(ellipse at 30% 35%,#A9A2A6 0 10%,transparent 11%),radial-gradient(ellipse at 70% 60%,#A9A2A6 0 12%,transparent 13%),radial-gradient(ellipse at 40% 80%,#B9B2B6 0 9%,transparent 10%)}
+.g-dune{background:#E9D2A4;background-image:linear-gradient(80deg,transparent 46%,#9CB46A 47% 50%,transparent 51%),linear-gradient(100deg,transparent 66%,#9CB46A 67% 70%,transparent 71%)}
 .g-sand{background:#EBD5A6;background-image:radial-gradient(circle at 30% 30%,#D9BC86 0 1.5px,transparent 2.5px),radial-gradient(circle at 70% 60%,#D9BC86 0 1.5px,transparent 2.5px)}
 .fence{position:absolute;pointer-events:none;overflow:visible;z-index:1}
 .secnote{font:600 11px var(--body);letter-spacing:0;text-transform:none;color:var(--muted);margin-left:4px}
@@ -235,6 +239,11 @@ input{font:inherit}
 .dghost{position:fixed;left:0;top:0;width:64px;height:64px;z-index:700;pointer-events:none;filter:drop-shadow(0 12px 12px rgba(42,22,48,.35))}
 .dghost svg{width:100%;height:100%}
 body.dragging{user-select:none;-webkit-user-select:none;cursor:grabbing}
+.shopitem{cursor:grab}
+.shopitem:active{cursor:grabbing}
+.shopitem.wiggle{animation:wiggle .5s ease-in-out}
+@keyframes wiggle{0%,100%{rotate:0deg}25%{rotate:-6deg}75%{rotate:6deg}}
+.field .tile:not(.fixed){cursor:grab}
 .shopitem{touch-action:pan-y;-webkit-touch-callout:none;user-select:none}
 
 .mob{position:absolute;left:0;top:0;width:calc(var(--t) * var(--s,1));pointer-events:auto;cursor:pointer;will-change:transform;
@@ -569,6 +578,18 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
 .care-drop.cared .char{animation:squish .5s cubic-bezier(.3,1.4,.5,1)}
 .dragtip{margin-top:12px}
 .copytext{width:100%;margin-top:12px;border:2px solid var(--line);border-radius:12px;padding:10px;font:600 13px/1.4 var(--body);resize:none}
+
+/* laptop and wider: the game on the left, everything you do with it on the right */
+@media (min-width: 900px){
+  .wrap{max-width:1180px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.8fr);column-gap:28px;align-items:start}
+  .top,.foot{grid-column:1/-1}
+  .colmain{grid-column:1;min-width:0}
+  .colside{grid-column:2;min-width:0;position:sticky;top:14px;max-height:calc(100vh - 28px);overflow-y:auto;overscroll-behavior:contain;
+    background:rgba(251,244,239,.55);border-radius:26px;padding:6px 12px 16px;margin-top:12px;scrollbar-width:thin}
+  .colside .tabs{position:sticky;top:0;z-index:5;margin-top:8px;box-shadow:0 6px 12px -8px rgba(42,22,48,.25);background:#EADBD3}
+  .colside #rescue .rhead{margin-top:8px}
+  .alist{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
 }
@@ -584,6 +605,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
       <div class="dayrow"><span class="day" id="dayLabel">Day 1</span><button type="button" class="helpbtn" id="helpBtn" aria-label="How to play"><span aria-hidden="true">?</span>Help</button></div>
     </div>
   </div>
+  <div class="colmain">
   <div class="scenes" role="tablist" aria-label="Rescue types">
     <button type="button" role="tab" class="scenetab" data-scene="farm" aria-selected="true"><i class="sc-farm" aria-hidden="true"></i>Farm sanctuary</button>
     <button type="button" role="tab" class="scenetab" data-scene="wild" aria-selected="false"><i class="sc-wild" aria-hidden="true"></i>Wildlife rescue</button>
@@ -603,6 +625,8 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
   <div class="nudge" id="nudge" role="status" aria-live="polite"></div>
   <div class="perks" id="perks"></div>
   <div class="factcard" id="factcard" hidden></div>
+  </div>
+  <div class="colside">
   <section id="rescue" hidden>
     <div class="rhead"><h2 id="rTitle">Wildlife Rescue</h2><p id="rSub"></p></div>
     <div id="rcallbox"></div>
@@ -623,7 +647,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
     <div id="landbox"></div>
     <h3 class="sec">Spaces <span class="secnote">pick one, then drag across the field to paint</span></h3><div class="shop gshop" id="groundbox"></div>
     <div id="shopbox"></div>
-    <p class="shophint">Drag something onto the field, or tap it and then tap a spot. Drag anything you've placed to move it. Tap it to let it go.</p>
+    <p class="shophint"><b>Drag</b> anything onto the field to place it. Drag things already on the field to move them. On a phone, press and hold, then drag. Tap something you've placed to let it go.</p>
   </section>
   <section class="panel" id="panel-album" role="tabpanel" hidden><div id="albumbox"></div></section>
   <section class="panel" id="panel-visitors" role="tabpanel" hidden>
@@ -632,6 +656,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
     <ul class="book" id="book"></ul>
   </section>
 
+  </div>
   <div class="foot"><span>Your sanctuary saves on this device.</span><button type="button" id="resetBtn">Start over</button></div>
 </main>
 
@@ -643,7 +668,7 @@ body.night .sname{background:rgba(251,244,239,.16);color:#FBF4EF}
 'use strict';
 
 /* ======================================================================
-   DRAWINGS - original simple-shape characters, shared with Kind Clues
+   DRAWINGS - original simple-shape characters, shared with Sanctuary Cases
    ====================================================================== */
 var COIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="#F2C14E" stroke="#C9922E" stroke-width="2"/><circle cx="12" cy="12" r="5.8" fill="none" stroke="#E0A93A" stroke-width="1.6"/><path d="M9 8.6a4 4 0 0 1 3-1.4" stroke="#FBE3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
 var HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.2-4.4-9.6-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.6 12c-2.4 4.6-9.6 9-9.6 9z" fill="#E8804C"/><path d="M7.2 8.6a2.4 2.4 0 0 1 2.6-.9" stroke="#FBE3D3" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
@@ -1026,6 +1051,18 @@ var ART = {
   rockpool: '<g fill="#9C9A9E"><ellipse cx="22" cy="64" rx="14" ry="11"/><ellipse cx="78" cy="62" rx="15" ry="12"/><ellipse cx="50" cy="80" rx="20" ry="10"/><ellipse cx="50" cy="44" rx="16" ry="9"/></g>' +
             '<ellipse cx="50" cy="62" rx="26" ry="14" fill="#8EC4E4"/><ellipse cx="44" cy="58" rx="10" ry="3.4" fill="#B5D6EE"/><path d="M62 66q2-4 5 0z" fill="#E9A9C3"/><circle cx="36" cy="66" r="2.4" fill="#7FA672"/>',
   care:     '<path d="M50 84s-28-17-37-35A21 21 0 0 1 50 30a21 21 0 0 1 37 19c-9 18-37 35-37 35z" fill="#FBF4EF" stroke="#E25D4A" stroke-width="5"/><path d="M50 44v24M38 56h24" stroke="#E25D4A" stroke-width="7" stroke-linecap="round"/>',
+  bughotel: '<ellipse cx="50" cy="88" rx="30" ry="6" fill="rgba(42,22,48,.15)"/><path d="M22 34L50 14l28 20z" fill="#8B5E4A"/><rect x="24" y="32" width="52" height="54" rx="3" fill="#C99A6C"/>' +
+            '<g fill="#8B5E4A"><circle cx="34" cy="44" r="5"/><circle cx="46" cy="44" r="5"/><circle cx="58" cy="44" r="5"/><circle cx="68" cy="44" r="4"/></g><rect x="28" y="54" width="44" height="12" fill="#E2B566"/><path d="M28 58h44M28 62h44" stroke="#C99540" stroke-width="1.4"/>' +
+            '<g fill="#7FA672"><circle cx="34" cy="76" r="5"/><circle cx="46" cy="78" r="5"/><circle cx="60" cy="76" r="6"/></g>',
+  birdbath: '<ellipse cx="50" cy="88" rx="22" ry="5" fill="rgba(42,22,48,.15)"/><rect x="44" y="52" width="12" height="34" rx="3" fill="#C9C2C6"/><ellipse cx="50" cy="86" rx="16" ry="5" fill="#B9B2B8"/>' +
+            '<ellipse cx="50" cy="48" rx="32" ry="10" fill="#C9C2C6"/><ellipse cx="50" cy="46" rx="26" ry="6" fill="#8EC4E4"/><path d="M40 44q5-2 10 0" stroke="#D6ECF7" stroke-width="2" fill="none"/>',
+  windbreak:'<path d="M14 82V38M38 84V34M62 82V36M86 84V40" stroke="#8B5E4A" stroke-width="3"/><path d="M14 40L38 36V80L14 78z" fill="#E8804C"/><path d="M38 36L62 38V78L38 80z" fill="#FBF4EF"/><path d="M62 38L86 42V80L62 78z" fill="#7FB3D9"/>',
+  beachhut: '<ellipse cx="50" cy="88" rx="32" ry="6" fill="rgba(42,22,48,.15)"/><path d="M18 40L50 16l32 24z" fill="#E25D4A"/><rect x="22" y="38" width="56" height="48" fill="#FBF4EF"/>' +
+            '<path d="M30 38v48M42 38v48M54 38v48M66 38v48" stroke="#7FB3D9" stroke-width="5"/><rect x="40" y="56" width="20" height="30" rx="2" fill="#F6D77A"/>',
+  shells:   '<ellipse cx="50" cy="72" rx="40" ry="14" fill="#F1DDB8"/><path d="M28 70q4-14 12 0z" fill="#F6C6A8"/><path d="M30 70l4-9M34 70v-10M38 70l-3-9" stroke="#E2A07E" stroke-width="1"/>' +
+            '<path d="M56 66l5-8 5 8 3 8-8-2-8 2z" fill="#F08A5C"/><ellipse cx="72" cy="76" rx="6" ry="4" fill="#FBF4EF" stroke="#E2C79A"/><circle cx="46" cy="80" r="3.4" fill="#E9A9C3"/><circle cx="22" cy="78" r="2.6" fill="#FBF4EF"/>',
+  netbin:   '<ellipse cx="50" cy="88" rx="24" ry="5" fill="rgba(42,22,48,.15)"/><path d="M28 40h44l-4 46H32z" fill="#6E9A62"/><rect x="24" y="34" width="52" height="8" rx="3" fill="#5E8A52"/>' +
+            '<path d="M36 44l28 20M64 44L36 64M40 60l20 14M60 60L40 74" stroke="#7FB3D9" stroke-width="2"/><path d="M44 52a6 6 0 1 1 12 0" stroke="#FBF4EF" stroke-width="3" fill="none"/>',
   bench:    '<rect x="14" y="50" width="72" height="8" rx="3" fill="#A9714E"/><rect x="14" y="36" width="72" height="8" rx="3" fill="#B98A63"/>' +
             '<rect x="20" y="58" width="6" height="22" fill="#7A5240"/><rect x="74" y="58" width="6" height="22" fill="#7A5240"/>' +
             '<rect x="20" y="30" width="5" height="22" fill="#7A5240"/><rect x="75" y="30" width="5" height="22" fill="#7A5240"/>',
@@ -1064,10 +1101,10 @@ var ITEMS = [
   {g:'Play', id:'sandpit', name:'Dust bath', cost:6, kind:'soft'},
   {g:'Play', id:'cattree', name:'Cat tree', cost:12, kind:'build'},
   {g:'Play', id:'roost', name:'Perch', cost:9, kind:'build'},
-  {sc:'all', g:'Garden & cosy', id:'flowers', name:'Flower bed', cost:3, kind:'plant', cosy:1},
-  {sc:'all', g:'Garden & cosy', id:'tree', name:'Tree', cost:7, kind:'plant', cosy:2},
-  {sc:'all', g:'Garden & cosy', id:'lantern', name:'Lantern', cost:4, kind:'build', cosy:2},
-  {sc:'all', g:'Garden & cosy', id:'bench', name:'Bench', cost:6, kind:'build', cosy:2},
+  {sc:['farm','wild'], g:'Garden & cosy', id:'flowers', name:'Flower bed', cost:3, kind:'plant', cosy:1},
+  {sc:['farm','wild'], g:'Garden & cosy', id:'tree', name:'Tree', cost:7, kind:'plant', cosy:2},
+  {sc:'farm', g:'Garden & cosy', id:'lantern', name:'Lantern', cost:4, kind:'build', cosy:2},
+  {sc:'farm', g:'Garden & cosy', id:'bench', name:'Bench', cost:6, kind:'build', cosy:2},
   {g:'Stalls', id:'bakestall', name:'Bake stall', cost:30, kind:'build', stall:'bake'},
   {g:'Stalls', id:'beautystall', name:'Beauty stall', cost:40, kind:'build', stall:'beauty'},
   {sc:'wild', g:'Recovery', id:'hogbox', name:'Hedgehog house', cost:8, kind:'build'},
@@ -1078,16 +1115,26 @@ var ITEMS = [
   {sc:'sea', g:'Recovery', id:'rehabpool', name:'Rehab pool', cost:12, kind:'build'},
   {sc:'sea', g:'Recovery', id:'towelbed', name:'Warm towel bed', cost:6, kind:'soft'},
   {sc:'sea', g:'Recovery', id:'burrow', name:'Burrow', cost:7, kind:'build'},
-  {sc:'sea', g:'Recovery', id:'rockpool', name:'Rock pool', cost:8, kind:'build'}
+  {sc:'sea', g:'Recovery', id:'rockpool', name:'Rock pool', cost:8, kind:'build'},
+  {sc:'wild', g:'Woodland', id:'bughotel', name:'Bug hotel', cost:4, kind:'build', cosy:2},
+  {sc:'wild', g:'Woodland', id:'birdbath', name:'Bird bath', cost:5, kind:'build', cosy:2},
+  {sc:'sea', g:'Beach', id:'windbreak', name:'Windbreak', cost:4, kind:'soft', cosy:2},
+  {sc:'sea', g:'Beach', id:'beachhut', name:'Beach hut', cost:8, kind:'build', cosy:2},
+  {sc:'sea', g:'Beach', id:'shells', name:'Shell garden', cost:3, kind:'plant', cosy:1},
+  {sc:'sea', g:'Beach', id:'netbin', name:'Old net bin', cost:5, kind:'build', cosy:1}
 ];
 var ITEM = {}; ITEMS.forEach(function(i){ ITEM[i.id] = i; });
 var GROUND = [
   {id:'path', name:'Path', cost:1, d:'Somewhere to stroll'},
-  {id:'meadow', name:'Long grass', cost:1, d:'For grazing and nibbling'},
-  {id:'mud', name:'Mud wallow', cost:2, d:'Pigs love a mud bath'},
-  {id:'sand', name:'Sandy patch', cost:1, d:'For rolling and dust baths'},
+  {sc:['farm','wild'], id:'meadow', name:'Long grass', cost:1, d:'For grazing and nibbling'},
+  {sc:'farm', id:'mud', name:'Mud wallow', cost:2, d:'Pigs love a mud bath'},
+  {sc:'farm', id:'sand', name:'Sandy patch', cost:1, d:'For rolling and dust baths'},
+  {sc:'wild', id:'leaves', name:'Leaf litter', cost:1, d:'Crunchy leaves to snuffle through'},
+  {sc:'wild', id:'wpond', name:'Shallow pond', cost:3, d:'Fresh water for wild visitors'},
+  {sc:'sea', id:'shingle', name:'Shingle', cost:1, d:'Pebbly beach'},
+  {sc:'sea', id:'dune', name:'Dune grass', cost:1, d:'Sandy dunes with grass'},
   {id:'fence', name:'Fence', cost:2, d:'Make paddocks and spaces'},
-  {id:'clear', name:'Clear', cost:0, d:'Back to grass'}
+  {id:'clear', name:'Clear', cost:0, d:'Back to how it was'}
 ];
 var GART = {
   path:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#E3CBA1"/><circle cx="14" cy="15" r="2" fill="#CDAE7E"/><circle cx="25" cy="24" r="2.4" fill="#CDAE7E"/><circle cx="18" cy="27" r="1.6" fill="#CDAE7E"/>',
@@ -1095,6 +1142,10 @@ var GART = {
   mud:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#8B6A4E"/><ellipse cx="16" cy="16" rx="5" ry="3" fill="#73553D"/><ellipse cx="25" cy="25" rx="6" ry="3.4" fill="#73553D"/><circle cx="24" cy="14" r="1.6" fill="#A58466"/>',
   sand:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#EBD5A6"/><path d="M10 16q5-3 10 0t10 0M10 25q5-3 10 0t10 0" stroke="#D9BC86" stroke-width="1.6" fill="none"/>',
   fence:'<path d="M4 17h32M4 25h32" stroke="#A9714E" stroke-width="3"/><rect x="9" y="9" width="6" height="22" rx="2" fill="#8B5E4A"/><rect x="25" y="9" width="6" height="22" rx="2" fill="#8B5E4A"/>',
+  leaves:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#C98E5C"/><ellipse cx="14" cy="15" rx="4" ry="2.4" fill="#E8804C"/><ellipse cx="25" cy="24" rx="4" ry="2.4" fill="#E9A23C"/><ellipse cx="16" cy="27" rx="3.4" ry="2" fill="#B5552E"/>',
+  wpond:'<rect x="6" y="6" width="28" height="28" rx="10" fill="#7FB3D9"/><path d="M12 18q4-3 8 0M20 26q4-3 8 0" stroke="#B5D6EE" stroke-width="2" fill="none"/>',
+  shingle:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#CFC8C6"/><g fill="#A9A2A6"><ellipse cx="13" cy="14" rx="3" ry="2"/><ellipse cx="24" cy="18" rx="3.4" ry="2.2"/><ellipse cx="16" cy="26" rx="3" ry="2"/><ellipse cx="27" cy="28" rx="2.4" ry="1.6"/></g>',
+  dune:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#E9D2A4"/><path d="M12 28l2-10 2 10M20 28l2-12 2 12M27 28l2-8 2 8" stroke="#9CB46A" stroke-width="2" fill="none" stroke-linecap="round"/>',
   clear:'<rect x="6" y="6" width="28" height="28" rx="6" fill="#A9C99A"/><path d="M14 14l12 12M26 14L14 26" stroke="#FBF4EF" stroke-width="3" stroke-linecap="round"/>'
 };
 var GBY = {}; GROUND.forEach(function(g){ GBY[g.id] = g; });
@@ -1185,8 +1236,8 @@ function needs(id){
 }
 /* where each animal likes to spend time (any placed item from this list can be visited) */
 var LIKES = {
-  hedgehog:['hogbox','leafpile','logpile'], fox:['denbox','logpile','tree'], badger:['sett','leafpile','logpile'], squirrel:['tree','logpile','leafpile'],
-  seal:['rehabpool','towelbed','sea'], puffin:['burrow','rehabpool','sea'], turtle:['rehabpool','rockpool','sea'], starfish:['rockpool','sea'],
+  hedgehog:['hogbox','leafpile','logpile','bughotel'], fox:['denbox','logpile','tree','birdbath'], badger:['sett','leafpile','logpile','birdbath'], squirrel:['tree','logpile','leafpile','birdbath'],
+  seal:['rehabpool','towelbed','sea','windbreak'], puffin:['burrow','rehabpool','sea','beachhut'], turtle:['rehabpool','rockpool','sea','shells'], starfish:['rockpool','sea','shells'],
   peggy:['strawbed','toybox','trough','flowers'], rubie:['hutch','clover','flowers'], rosie:['hidey','nest','toybox'],
   callie:['trough','haynet','clover','tree','strawbed'], shellie:['shelter','clover','trough','tree'], mellie:['nest','tree','flowers','hidey'],
   gigi:['haynet','hidey','clover','hutch'], holly:['coop','sandpit','flowers','roost'], chloe:['coop','sandpit','flowers'],
@@ -1198,7 +1249,7 @@ var LIKES = {
 var RESCUE_A = {hedgehog:.66, fox:.9, badger:.92, squirrel:.7, seal:1, puffin:.72, turtle:.86, starfish:.58};
 for (var ra in RESCUE_A) A[ra] = {id:ra, name:'', species:ra, s:RESCUE_A[ra], rescue:true};
 var SEA_SWIM = {seal:1, turtle:1, puffin:1, starfish:1};
-var GLIKES = {peggy:['mud'], callie:['meadow'], shellie:['meadow'], lulu:['meadow'], rubie:['meadow'], gigi:['meadow'], hector:['sand','meadow'], dolly:['sand'], holly:['sand'], chloe:['sand'], tilly:['meadow'], digby:['path'], cleo:['path']};
+var GLIKES = {hedgehog:['leaves','meadow'], fox:['meadow','leaves'], badger:['leaves'], squirrel:['leaves'], seal:['shingle'], puffin:['dune'], turtle:['shingle'], peggy:['mud'], callie:['meadow'], shellie:['meadow'], lulu:['meadow'], rubie:['meadow'], gigi:['meadow'], hector:['sand','meadow'], dolly:['sand'], holly:['sand'], chloe:['sand'], tilly:['meadow'], digby:['path'], cleo:['path']};
 var ACT = {
   strawbed:{cls:'sleep', lines:['zzz','snug as anything']}, toybox:{cls:'play', lines:['boing!','again!','this is MY ball']},
   hutch:{cls:'sleep', lines:['zzz','so soft','nap time']}, clover:{cls:'eat', lines:['nibble nibble','clover o’clock']},
@@ -1209,7 +1260,9 @@ var ACT = {
   dogbed:{cls:'sleep', lines:['zzz','*tail thump*']}, cattree:{cls:'perch', lines:['surveying my kingdom','purr']},
   duckhouse:{cls:'sleep', lines:['zzz']}, haynet:{cls:'eat', lines:['munch munch','crunch crunch']},
   roost:{cls:'perch', lines:['nice view up here']}, owlbox:{cls:'sleep', lines:['zzz','do not disturb']},
+  leaves:{cls:'sniff', lines:['crunch crunch','*snuffle*']}, wpond:{cls:'drink', lines:['slurp','lovely water']}, shingle:{cls:'sleep', lines:['zzz','warm pebbles']}, dune:{cls:'sniff', lines:['*sniff*','nice spot']},
   mud:{cls:'roll', lines:['mud bath!','squelch squelch','so cool and squishy']}, sand:{cls:'roll', lines:['wheee','dust bath!']}, meadow:{cls:'eat', lines:['munch munch','long grass, yum']}, path:{cls:'sniff', lines:['*sniff sniff*','out for a stroll']},
+  bughotel:{cls:'sniff', lines:['ooh, a beetle','*sniff*']}, birdbath:{cls:'drink', lines:['slurp','fresh water']}, windbreak:{cls:'sleep', lines:['zzz','out of the wind']}, beachhut:{cls:'perch', lines:['nice view','shady']}, shells:{cls:'sniff', lines:['ooh, shiny','*sniff*']}, netbin:{cls:'sniff', lines:['good riddance, nets','tidy beach']},
   hogbox:{cls:'sleep', lines:['zzz','snug in here']}, leafpile:{cls:'sniff', lines:['*snuffle snuffle*','rustle rustle']}, logpile:{cls:'sniff', lines:['ooh, bugs live here','*sniff*']},
   denbox:{cls:'sleep', lines:['zzz','quiet at last']}, sett:{cls:'sleep', lines:['zzz','home sweet sett']}, rehabpool:{cls:'swim', lines:['splash!','paddle paddle']},
   towelbed:{cls:'sleep', lines:['zzz','toasty']}, burrow:{cls:'sleep', lines:['zzz','cosy burrow']}, rockpool:{cls:'swim', lines:['blub','ahh, water']}, sea:{cls:'swim', lines:['splish!','waves!']},
@@ -1277,7 +1330,7 @@ var PONDKEY = '7,0', GATEKEY = '0,6';
 var SKEYS = ['items','animals','ground','land','seen','names','named','sponsors','cuddleAt','cuddleDay','treatAt','moments','pt','played'];
 function emptyScene(){ return {items:{}, animals:[], ground:{}, land:0, seen:{}, names:{}, named:{}, sponsors:{}, cuddleAt:{}, cuddleDay:{}, treatAt:{}, moments:{}, pt:{}, played:-1}; }
 var LAND = [{rows:7}, {rows:10, cost:40}, {rows:13, cost:90}, {rows:16, cost:160}];
-var KEY = 'ahk-kind-acres-v1';
+var KEY = 'ahk-sanctuary-keeper-v1';
 var S = null;
 
 function fresh(){
@@ -1416,7 +1469,7 @@ function renderAnimals(){
       html += '<button type="button" class="acard" data-who="' + id + '"><span class="pic">' + DRAW[id]() + '</span><span><b>' + esc(nm(id)) + '</b><em>' + SPECIES[id] + (p.resident ? ' \u00b7 forever' : ' \u00b7 ' + Math.max(0, tg - (p.careDone || 0)) + ' days to go') + '</em>' +
         (h ? '<i class="ok">' + (readyToGo(id) && !p.resident ? 'Ready to go home!' : 'Happy') + '</i>' : '<i class="no">Wants ' + esc(miss.label.charAt(0).toLowerCase() + miss.label.slice(1)) + '</i>') + '</span></button>';
     });
-    if (!S.animals.length) html = '<p class="sub">Nobody here yet. Take in today\u2019s rescue call below.</p>';
+    if (!S.animals.length) html = '<p class="sub">Nobody here yet. Take in today\u2019s rescue call to get started.</p>';
     $('alist').innerHTML = html; return;
   }
   ANIMALS.forEach(function(a){
@@ -1436,13 +1489,13 @@ function renderAnimals(){
 var selected = null, moving = null;
 function itemVisible(id){
   var it = ITEM[id], sc = S.cur || 'farm';
-  if ((it.sc || 'farm') !== 'all' && (it.sc || 'farm') !== sc) return false;
+  var isc = it.sc || 'farm'; if (isc !== 'all' && (Array.isArray(isc) ? isc.indexOf(sc) === -1 : isc !== sc)) return false;
   if (sc !== 'farm') return true;
   if (it.cosy || it.stall || id === 'trough') return true;
   return S.animals.some(function(a){ return needs(a).some(function(n){ return n.item === id; }) || (LIKES[a] || []).indexOf(id) !== -1; });
 }
 function renderGround(){
-  $('groundbox').innerHTML = GROUND.map(function(g){
+  $('groundbox').innerHTML = GROUND.filter(function(g){ var c = g.sc || 'all'; return c === 'all' || (Array.isArray(c) ? c.indexOf(S.cur || 'farm') !== -1 : c === (S.cur || 'farm')); }).map(function(g){
     var sel = selected === 'g:' + g.id;
     return '<button type="button" class="shopitem' + (sel ? ' sel' : '') + (S.coins < g.cost ? ' poor' : '') + '" data-ground="' + g.id + '" aria-pressed="' + sel + '" title="' + g.d + '"><svg class="icon" viewBox="0 0 40 40" aria-hidden="true">' + GART[g.id] + '</svg><b>' + g.name + '</b><span>' + (g.cost ? COIN + g.cost : 'free') + '</span></button>';
   }).join('');
@@ -1515,7 +1568,7 @@ function nudge(){
     var want = S.animals.map(function(id){ return [id, needs(id).filter(function(n){ return !n.met; })[0]]; }).filter(function(x){ return x[1]; })[0];
     if (due) el.innerHTML = '<span class="who">' + DRAW[due]() + '</span><span><b>' + esc(nm(due)) + ' is ready to go home!</b> Tap them to say goodbye.</span>';
     else if (want) el.innerHTML = '<span class="who">' + DRAW[want[0]]() + '</span><span><b>' + esc(nm(want[0])) + '</b> needs ' + esc(want[1].label.charAt(0).toLowerCase() + want[1].label.slice(1)) + '.' + (want[1].item ? ' Find it in <b>Build</b>.' : ' Tap them to care for them.') + '</span>';
-    else el.innerHTML = '<span class="who">' + HEART + '</span><span>' + (S.animals.length ? 'Everyone\u2019s cared for today. Come back tomorrow for the next day of care.' : 'Take in today\u2019s rescue call below.') + '</span>';
+    else el.innerHTML = '<span class="who">' + HEART + '</span><span>' + (S.animals.length ? 'Everyone\u2019s cared for today. Come back tomorrow for the next day of care.' : 'Take in today\u2019s rescue call to get started.') + '</span>';
     return;
   }
   if (hideSeek){ el.innerHTML = '<span class="who">' + DRAW.rat() + '</span><span><b>' + esc(nm('rosie')) + '’s playing hide and seek!</b> Tap the thing you think they’re behind. ' + (3 - hideSeek.tries) + ' guesses left. <button type="button" class="stopplay" id="stopPlay">Stop playing</button></span>'; $('stopPlay').onclick = stopHideSeek; return; }
@@ -2033,11 +2086,18 @@ $('shopbox').addEventListener('click', function(e){
   var b = e.target.closest('.shopitem'); if (!b) return;
   if (b._dragged){ b._dragged = false; return; }
   if (hideSeek){ toast(nm('rosie') + '\u2019s playing hide and seek! Find them first, or tap \u201cStop playing\u201d.'); return; }
+  var viaMouse = lastShopPointer === 'mouse'; lastShopPointer = null;
+  if (viaMouse){
+    var idm = b.dataset.item;
+    if (S.coins < ITEM[idm].cost){ toast('A ' + ITEM[idm].name.toLowerCase() + ' costs ' + ITEM[idm].cost + ' coins. You\u2019ve got ' + S.coins + '.'); return; }
+    b.classList.remove('wiggle'); void b.offsetWidth; b.classList.add('wiggle');
+    toast('Drag the ' + ITEM[idm].name.toLowerCase() + ' onto the field.'); return;
+  }
   var id = b.dataset.item;
   if (S.coins < ITEM[id].cost && selected !== id){ toast('A ' + ITEM[id].name.toLowerCase() + ' costs ' + ITEM[id].cost + ' coins. You\u2019ve got ' + S.coins + '. Every 2 hearts from visitors make a coin.'); return; }
   selected = selected === id ? null : id;
   renderShop();
-  if (selected){ toast('Tap a spot on the field for the ' + ITEM[id].name.toLowerCase() + '.'); field.scrollIntoView({behavior:'smooth', block:'center'}); }
+  if (selected){ toast('Now tap a spot on the field for the ' + ITEM[id].name.toLowerCase() + '. Or press, hold and drag it there.'); field.scrollIntoView({behavior:'smooth', block:'center'}); }
 });
 $('alist').addEventListener('click', function(e){ var b = e.target.closest('.acard[data-who]'); if (b) showAnimal(b.dataset.who); });
 
@@ -2082,7 +2142,8 @@ document.addEventListener('pointermove', function(e){ if (drag) dragMove(e.clien
 document.addEventListener('pointerup', function(e){ if (drag) dragEnd(e.clientX, e.clientY); });
 document.addEventListener('touchmove', function(e){ if (drag) e.preventDefault(); }, {passive:false});
 /* drag from the Build list */
-$('shopbox').addEventListener('pointerdown', function(e){
+var lastShopPointer = null;
+$('shopbox').addEventListener('pointerdown', function(e){ lastShopPointer = e.pointerType;
   var b = e.target.closest('.shopitem'); if (!b || hideSeek) return;
   var id = b.dataset.item, sx = e.clientX, sy = e.clientY, timer = null, started = false;
   if (S.coins < ITEM[id].cost) return;
@@ -2275,6 +2336,7 @@ function placeJobsNow(){ jobs.forEach(function(r){ r.el.style.left = (r.x * T) +
    MOMENTS - snap animals doing their thing; collect them in the album
    ====================================================================== */
 var CAPTION = {
+  bughotel:'{n}, checking in at the bug hotel', birdbath:'{n}, having a drink', windbreak:'{n}, snoozing out of the wind', beachhut:'{n}, by the beach hut', shells:'{n}, in the shell garden',
   hogbox:'{n}, tucked up in the hedgehog house', leafpile:'{n}, snuffling in the leaves', logpile:'{n}, exploring the logs', denbox:'{n}, curled up in the den',
   sett:'{n}, snug in the sett', rehabpool:'{n}, having a swim', towelbed:'{n}, wrapped up warm', burrow:'{n}, peeking out of the burrow', rockpool:'{n}, in the rock pool', sea:'{n}, out in the waves',
   strawbed:'{n}, snoozing in the straw', toybox:'{n} vs. the ball', hutch:'{n}, snug in bed', clover:'{n}, at the clover buffet',
@@ -2492,7 +2554,7 @@ function makePostcard(key){
       lines.forEach(function(l, i){ ctx.fillText(l, 0, 350 + i * 66 - (lines.length - 1) * 20); });
       ctx.restore(); ctx.textAlign = 'left';
       cardFoot(ctx, W, H, 'Moment ' + momentIndex(key) + ' of ' + TOTAL_MOMENTS + (S.sname ? ' at ' + S.sname : ''));
-      showPostcard(c, 'Moment', momentCaption(key), 'kind-acres-moment.png');
+      showPostcard(c, 'Moment', momentCaption(key), 'sanctuary-keeper-moment.png');
     });
     return;
   }
