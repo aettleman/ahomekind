@@ -158,7 +158,7 @@ input{font:inherit}
 .quizq{width:calc(var(--t) * .62);height:calc(var(--t) * .62);z-index:66;animation:place .4s cubic-bezier(.3,1.6,.5,1), float 2s ease-in-out .4s infinite}
 .quizq::after{border-color:rgba(246,215,122,.9)}
 .quizq .qtag{position:absolute;left:50%;top:-34%;transform:translateX(-50%);background:var(--plum);color:#F6D77A;border-radius:99px;padding:1px 6px;font:800 10px var(--body);white-space:nowrap}
-.sheet h2.qh{font-size:23px;line-height:1.2}
+.sheet h2.qh{font-size:21px;line-height:1.22}
 .quizopts button{justify-content:center;text-align:center}
 .quizopts button b{font-size:15px}
 .quizopts button.right{background:#DCE6D6;box-shadow:inset 0 0 0 2px #7FA672}
@@ -1435,10 +1435,13 @@ function showAnimal(id, arriving){
     }).join('') + '</ul>' +
     (a.fact ? '<div class="fact"><small>True story</small><p>' + a.fact + '</p><a href="' + a.url + '" target="_blank" rel="noopener">' + a.src + '</a></div>' : '');
   var canPlay = id === 'rosie' && countItem('hidey') > 0 && S.played !== today && Object.keys(S.items).length >= 2;
+  var left = Math.max(1, Math.ceil((3 * 60000 - (Date.now() - (S.cuddleAt[id] || 0))) / 60000));
   html += '<div class="acts">' +
-    '<button type="button" class="btn main" id="cuddleBtn"' + (cool ? ' disabled' : '') + '>' + (cool ? 'Cuddled recently' : 'Cuddle') + '</button>' +
+    (arriving ? '' : '<button type="button" class="btn main" id="cuddleBtn"' + (cool ? ' disabled' : '') + '>' + (cool ? 'Needs a little space' : 'Cuddle') + '</button>') +
     (id === 'rosie' ? '<button type="button" class="btn dark" id="playBtn"' + (canPlay ? '' : ' disabled') + '>' + (S.played === today ? 'Played today' : 'Hide and seek') + '</button>' : '') +
-    '<button type="button" class="btn soft" id="closeBtn">' + (arriving ? 'Welcome, ' + esc(nm(id)) : 'Close') + '</button></div>' +
+    '<button type="button" class="btn ' + (arriving ? 'main' : 'soft') + '" id="closeBtn">' + (arriving ? 'Welcome, ' + esc(nm(id)) : 'Close') + '</button></div>' +
+    (cool && !arriving ? '<p class="sub">' + (id === 'cleo' ? esc(nm(id)) + ' has decided: no more cuddles. For now. Try again in ' + left + ' min.' : esc(nm(id)) + '\u2019s had plenty of cuddles for now. Give them ' + left + ' min, or they\u2019ll get grumpy.') + '</p>' : '') +
+    (arriving ? '<p class="sub">You can give ' + esc(nm(id)) + ' cuddles any time. Just tap them in the field. Not too many, mind.</p>' : '') +
     (id === 'rosie' && !canPlay && S.played !== today ? '<p class="sub">' + (countItem('hidey') ? 'Place at least two things first, so they have somewhere to hide.' : 'They need a hidey log first.') + '</p>' : '');
   openSheet(html, nm(id));
   $('closeBtn').onclick = closeSheet;
@@ -1447,11 +1450,11 @@ function showAnimal(id, arriving){
     if (!v) { $('nameIn').focus(); return; }
     S.names[id] = v; S.named[id] = true;
     var m = mobs[id]; if (m) m.el.setAttribute('aria-label', v);
-    save(); refresh(); showAnimal(id);
+    save(); refresh(); showAnimal(id, arriving);
     toast('Hello, ' + v + '.');
   };
   $('nameIn').onkeydown = function(e){ if (e.key === 'Enter'){ e.preventDefault(); $('nameSave').click(); } };
-  $('cuddleBtn').onclick = function(){ closeSheet(); cuddle(id); };
+  if ($('cuddleBtn')) $('cuddleBtn').onclick = function(){ closeSheet(); cuddle(id); };
   if ($('playBtn')) $('playBtn').onclick = function(){ closeSheet(); startHideSeek(); };
 }
 
@@ -2125,7 +2128,7 @@ var QUIZ = [
   {w:'lulu', q:'Sheep were shown photos of famous people. How often did they pick the right face?', a:'Eight times out of ten', x:['Never','Once in a blue moon'], src:'Knolle et al., Royal Society Open Science, 2017', url:'https://www.cam.ac.uk/research/news/sheep-are-able-to-recognise-human-faces-from-photographs'},
   {w:'hector', q:'Horses learned to use symbols to tell people something. What?', a:'Whether they wanted a blanket on', x:['What they wanted for dinner','That it was their birthday'], src:'Applied Animal Behaviour Science, 2016, via ScienceNorway', url:'https://sciencenorway.no/animals-and-plants-norway-videnskabdk/horses-can-communicate-through-symbols/1437837'},
   {w:'olive', q:'What does a barn owl’s heart-shaped face do?', a:'Traps and focuses sound', x:['Keeps their head warm','Scares away bugs'], src:'The Barn Owl Trust', url:'https://barnowltrust.org.uk/owl-facts-for-kids/barn-owl-hearing'},
-  {w:'peggy', q:'Pigs who have space, straw and toys meet something new. How do they react?', a:'They walk up to it hopefully', x:['They hide from it','They ignore it'], more:'Pigs kept in bare pens held back instead.', src:'Newcastle University, 2010', url:'https://www.sciencedaily.com/releases/2010/07/100727201515.htm'},
+  {w:'peggy', q:'A happy pig with straw and toys spots something new. What do they do?', a:'Trot over to check it out', x:['Run and hide','Pretend it isn\u2019t there'], more:'Pigs kept in bare pens held back. Space and toys made pigs more optimistic.', src:'Newcastle University, 2010', url:'https://www.sciencedaily.com/releases/2010/07/100727201515.htm'},
   {w:'dolly', q:'What are donkeys like with their friends?', a:'Highly social, with deep bonds', x:['Happiest completely alone','They forget them quickly'], src:'The Donkey Sanctuary of Canada', url:'https://www.thedonkeysanctuary.ca/socialization-and-mental-stimulation/'},
   {w:'digby', q:'Researchers measured dogs’ tears. When did their eyes fill up the most?', a:'When reunited with the person they love', x:['When they were hungry','When it rained'], src:'Current Biology, 2022 (Azabu University)', url:'https://pubmed.ncbi.nlm.nih.gov/35998592/'}
 ];
